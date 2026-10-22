@@ -59,5 +59,179 @@
       {"sk": "Peč 35 minút, v polovici premiešaj. Kura je hotové, keď má zlatú kôrku a vnútri dosiahne 75 °C – šťava je číra.", "en": "Roast for 35 minutes, stirring halfway. The chicken is done when golden and 75 °C inside, with clear juices.", "timerSeconds": 2100},
       {"sk": "Rozdeľ do krabičiek; v chladničke vydrží 3 dni.", "en": "Divide into containers; keeps in the fridge for 3 days."}
     ]
+  },
+  {
+    "id": "sosovicovy-salat-s-fetou",
+    "title": {"sk": "Šošovicový šalát s fetou a zeleninou", "en": "Lentil salad with feta and vegetables"},
+    "description": {"sk": "Svieži šalát do krabičky, ktorý vydrží v chladničke až tri dni.", "en": "A fresh lunch-box salad that keeps in the fridge for up to three days."},
+    "cuisine": "INTERNATIONAL",
+    "mealTypes": ["LUNCH", "DINNER"],
+    "totalTimeMin": 30,
+    "activeTimeMin": 15,
+    "difficulty": 1,
+    "servings": 3,
+    "equipment": ["STOVE"],
+    "tags": ["MEAL_PREP", "STUDENT"],
+    "ingredients": [
+      {"id": "lentils", "amount": 200, "unit": "G", "role": "MAIN"},
+      {"id": "feta", "amount": 120, "unit": "G", "role": "SECONDARY"},
+      {"id": "cherry-tomato", "amount": 200, "unit": "G", "role": "SECONDARY"},
+      {"id": "cucumber", "amount": 0.5, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "red-onion", "amount": 0.5, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "parsley", "amount": 3, "unit": "TBSP", "role": "SEASONING"},
+      {"id": "olive-oil", "amount": 3, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "vinegar", "amount": 1, "unit": "TBSP", "role": "SEASONING"},
+      {"id": "mustard", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "salt", "amount": 0.5, "unit": "TSP", "role": "SEASONING"}
+    ],
+    "steps": [
+      {"sk": "Šošovicu var v osolenej vode 20 minút, kým nie je mäkká, ale drží tvar. Sceď a nechaj vychladnúť.", "en": "Simmer the lentils in salted water for 20 minutes until tender but holding their shape. Drain and cool.", "timerSeconds": 1200},
+      {"sk": "Dresing: olej vyšľahaj s octom, horčicou a soľou.", "en": "Dressing: whisk the oil with the vinegar, mustard and salt."},
+      {"sk": "Zmiešaj šošovicu s nakrájanou zeleninou, petržlenovou vňaťou a dresingom a navrch rozdrob fetu.", "en": "Toss the lentils with the chopped vegetables, parsley and dressing and crumble the feta on top."}
+    ]
+  },
+  {
+    "id": "quinoa-miska-s-pecenou-zeleninou",
+    "title": {"sk": "Quinoa miska s pečenou zeleninou a tahini", "en": "Quinoa bowl with roasted vegetables and tahini"},
+    "description": {"sk": "Farebná rastlinná miska plná vlákniny a bielkovín.", "en": "A colourful plant-based bowl full of fibre and protein."},
+    "cuisine": "INTERNATIONAL",
+    "mealTypes": ["LUNCH", "DINNER"],
+    "totalTimeMin": 40,
+    "activeTimeMin": 15,
+    "difficulty": 1,
+    "servings": 3,
+    "equipment": ["OVEN", "STOVE"],
+    "tags": ["MEAL_PREP"],
+    "ingredients": [
+      {"id": "quinoa", "amount": 180, "unit": "G", "role": "MAIN"},
+      {"id": "sweet-potato", "amount": 1, "unit": "PCS", "role": "MAIN"},
+      {"id": "chickpeas", "amount": 240, "unit": "G", "role": "MAIN", "note": {"sk": "odkvapkaný", "en": "drained"}},
+      {"id": "broccoli", "amount": 0.5, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "red-onion", "amount": 1, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "olive-oil", "amount": 2, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "smoked-paprika", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "tahini", "amount": 3, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "lemon", "amount": 2, "unit": "TBSP", "role": "SEASONING", "note": {"sk": "šťava", "en": "juice"}},
+      {"id": "garlic", "amount": 1, "unit": "PCS", "role": "SEASONING"},
+      {"id": "salt", "amount": 1, "unit": "TSP", "role": "SEASONING"}
+    ],
+    "steps": [
+      {"sk": "Rúru predhrej na 210 °C. Batát nakrájaj na kocky, brokolicu na ružičky a cibuľu na mesiačiky. Spolu s cícerom premiešaj s olejom, paprikou a polovicou soli.", "en": "Preheat the oven to 210 °C. Dice the sweet potato, cut the broccoli into florets and the onion into wedges. Toss with the chickpeas, oil, paprika and half the salt."},
+      {"sk": "Peč 25 minút, v polovici premiešaj.", "en": "Roast for 25 minutes, stirring halfway.", "timerSeconds": 1500},
+      {"sk": "Quinou prepláchni a var v 360 ml osolenej vody 15 minút, kým nevsiakne vodu.", "en": "Rinse the quinoa and simmer in 360 ml salted water for 15 minutes until absorbed.", "timerSeconds": 900},
+      {"sk": "Tahini rozmiešaj s citrónovou šťavou, cesnakom, zvyšnou soľou a 3 lyžicami vody. Do misiek daj quinou, zeleninu a polej omáčkou.", "en": "Whisk the tahini with the lemon juice, garlic, remaining salt and 3 tablespoons of water. Fill bowls with quinoa and vegetables and drizzle with the sauce."}
+    ]
+  },
+  {
+    "id": "tekvicovy-krem",
+    "title": {"sk": "Krémová tekvicová polievka so zázvorom", "en": "Creamy pumpkin soup with ginger"},
+    "description": {"sk": "Zamatová jesenná polievka s kokosovým mliekom a pražnými semienkami.", "en": "A velvety autumn soup with coconut milk and toasted seeds."},
+    "cuisine": "INTERNATIONAL",
+    "mealTypes": ["LUNCH", "DINNER"],
+    "totalTimeMin": 35,
+    "activeTimeMin": 10,
+    "difficulty": 1,
+    "servings": 4,
+    "equipment": ["STOVE", "BLENDER"],
+    "tags": ["MEAL_PREP", "ONE_POT", "FREEZER_FRIENDLY"],
+    "ingredients": [
+      {"id": "pumpkin", "amount": 1, "unit": "PCS", "role": "MAIN", "note": {"sk": "hokkaido, asi 1 kg", "en": "hokkaido, about 1 kg"}},
+      {"id": "onion", "amount": 1, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "garlic", "amount": 2, "unit": "PCS", "role": "SEASONING"},
+      {"id": "ginger", "amount": 15, "unit": "G", "role": "SEASONING"},
+      {"id": "coconut-milk", "amount": 200, "unit": "ML", "role": "SECONDARY"},
+      {"id": "stock-vegetable", "amount": 1, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "olive-oil", "amount": 1, "unit": "TBSP", "role": "SEASONING"},
+      {"id": "pumpkin-seeds", "amount": 30, "unit": "G", "role": "SECONDARY"},
+      {"id": "salt", "amount": 0.5, "unit": "TSP", "role": "SEASONING"}
+    ],
+    "steps": [
+      {"sk": "Na oleji speň cibuľu, cesnak a nastrúhaný zázvor.", "en": "Soften the onion, garlic and grated ginger in the oil."},
+      {"sk": "Pridaj tekvicu nakrájanú na kocky (hokkaido sa nemusí šúpať), bujón a 800 ml vody a var 20 minút doměkka.", "en": "Add the diced pumpkin (no need to peel hokkaido), the stock cube and 800 ml water and simmer for 20 minutes until soft.", "timerSeconds": 1200},
+      {"sk": "Vmiešaj kokosové mlieko, rozmixuj dohladka a dochuť soľou.", "en": "Stir in the coconut milk, blend until smooth and season with salt."},
+      {"sk": "Semienka opraž na suchej panvici a posyp nimi polievku.", "en": "Toast the seeds in a dry pan and sprinkle them over the soup."}
+    ]
+  },
+  {
+    "id": "proteinova-ovsena-kasa",
+    "title": {"sk": "Proteínová ovsená kaša s banánom", "en": "Protein porridge with banana"},
+    "description": {"sk": "Sýte raňajky pred tréningom – 40 g bielkovín v miske.", "en": "A filling pre-workout breakfast with 40 g of protein in a bowl."},
+    "cuisine": "INTERNATIONAL",
+    "mealTypes": ["BREAKFAST"],
+    "totalTimeMin": 10,
+    "activeTimeMin": 10,
+    "difficulty": 1,
+    "servings": 1,
+    "equipment": ["STOVE"],
+    "tags": ["STUDENT"],
+    "ingredients": [
+      {"id": "oats", "amount": 70, "unit": "G", "role": "MAIN"},
+      {"id": "milk", "amount": 250, "unit": "ML", "role": "MAIN"},
+      {"id": "whey-protein", "amount": 30, "unit": "G", "role": "MAIN"},
+      {"id": "banana", "amount": 1, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "peanut-butter", "amount": 1, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "cinnamon", "amount": 1, "unit": "PINCH", "role": "SEASONING"}
+    ],
+    "steps": [
+      {"sk": "Vločky s mliekom var za stáleho miešania 4 minúty, kým kaša nezhustne.", "en": "Simmer the oats in the milk for 4 minutes, stirring, until thick.", "timerSeconds": 240},
+      {"sk": "Odstav a vmiešaj proteín – až mimo ohňa, inak by sa zrazil. Ak je kaša hustá, pridaj lyžicu vody.", "en": "Take off the heat and stir in the protein powder; adding it off the heat stops it clumping. Loosen with a spoonful of water if needed."},
+      {"sk": "Navrch daj nakrájaný banán, arašidové maslo a škoricu.", "en": "Top with sliced banana, peanut butter and cinnamon."}
+    ]
+  },
+  {
+    "id": "tuniakovy-salat-s-fazulou",
+    "title": {"sk": "Tuniakový šalát s fazuľou", "en": "Tuna and bean salad"},
+    "description": {"sk": "Hotový za 10 minút bez varenia, plný bielkovín a vlákniny.", "en": "Ready in 10 minutes with no cooking, full of protein and fibre."},
+    "cuisine": "INTERNATIONAL",
+    "mealTypes": ["LUNCH", "DINNER"],
+    "totalTimeMin": 10,
+    "activeTimeMin": 10,
+    "difficulty": 1,
+    "servings": 2,
+    "tags": ["NO_COOK", "STUDENT", "MEAL_PREP"],
+    "ingredients": [
+      {"id": "tuna-canned", "amount": 240, "unit": "G", "role": "MAIN"},
+      {"id": "white-beans", "amount": 240, "unit": "G", "role": "MAIN", "note": {"sk": "odkvapkaná", "en": "drained"}},
+      {"id": "cherry-tomato", "amount": 150, "unit": "G", "role": "SECONDARY"},
+      {"id": "red-onion", "amount": 0.5, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "parsley", "amount": 2, "unit": "TBSP", "role": "SEASONING"},
+      {"id": "olive-oil", "amount": 2, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "lemon", "amount": 2, "unit": "TBSP", "role": "SEASONING", "note": {"sk": "šťava", "en": "juice"}},
+      {"id": "salt", "amount": 0.25, "unit": "TSP", "role": "SEASONING"},
+      {"id": "black-pepper", "amount": 0.25, "unit": "TSP", "role": "SEASONING"}
+    ],
+    "steps": [
+      {"sk": "Fazuľu prepláchni a odkvapkaj, paradajky rozpoľ a cibuľu nakrájaj na tenké krúžky.", "en": "Rinse and drain the beans, halve the tomatoes and slice the onion into thin rings."},
+      {"sk": "Zmiešaj s odkvapkaným tuniakom a petržlenovou vňaťou.", "en": "Mix with the drained tuna and parsley."},
+      {"sk": "Zalej olejom a citrónovou šťavou, osoľ, okoreň a premiešaj.", "en": "Dress with the oil and lemon juice, season and toss."}
+    ]
+  },
+  {
+    "id": "hrnckovy-cokoladovy-kolac",
+    "title": {"sk": "Čokoládový koláč z hrnčeka v mikrovlnke", "en": "Chocolate mug cake in the microwave"},
+    "description": {"sk": "Teplý dezert pre jedného za päť minút.", "en": "A warm dessert for one in five minutes."},
+    "cuisine": "INTERNATIONAL",
+    "mealTypes": ["DESSERT"],
+    "totalTimeMin": 5,
+    "activeTimeMin": 4,
+    "difficulty": 1,
+    "servings": 1,
+    "equipment": ["MICROWAVE"],
+    "tags": ["STUDENT"],
+    "ingredients": [
+      {"id": "wheat-flour", "amount": 4, "unit": "TBSP", "role": "MAIN"},
+      {"id": "cocoa", "amount": 1, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "sugar", "amount": 2, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "baking-powder", "amount": 0.25, "unit": "TSP", "role": "SEASONING"},
+      {"id": "salt", "amount": 1, "unit": "PINCH", "role": "SEASONING"},
+      {"id": "milk", "amount": 50, "unit": "ML", "role": "SECONDARY"},
+      {"id": "sunflower-oil", "amount": 1, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "dark-chocolate", "amount": 15, "unit": "G", "role": "SECONDARY"}
+    ],
+    "steps": [
+      {"sk": "Vo veľkom hrnčeku zmiešaj múku, kakao, cukor, prášok do pečiva a soľ.", "en": "Mix the flour, cocoa, sugar, baking powder and salt in a large mug."},
+      {"sk": "Vmiešaj mlieko a olej dohladka a do stredu zapichni kúsky čokolády.", "en": "Stir in the milk and oil until smooth and push the chocolate pieces into the middle."},
+      {"sk": "Ohrievaj na plný výkon 70 až 90 sekúnd, kým koláč nevykysne a povrch nestuhne. Nechaj minútu postáť.", "en": "Microwave on full power for 70–90 seconds until risen and set on top. Let it stand for a minute.", "timerSeconds": 80}
+    ]
   }
 ]

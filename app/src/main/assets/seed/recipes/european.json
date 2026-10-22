@@ -245,5 +245,348 @@
       {"sk": "Hranolky otoč, rybu polož na plech vedľa nich a peč 12 až 15 minút, kým obal nie je zlatistý a ryba sa ľahko rozdeľuje na lupienky.", "en": "Turn the chips, put the fish on the tray next to them and bake for 12–15 minutes until the coating is golden and the fish flakes easily.", "timerSeconds": 810},
       {"sk": "Podávaj s citrónom a hráškom.", "en": "Serve with lemon and peas."}
     ]
+  },
+  {
+    "id": "kaiserschmarrn",
+    "title": {"sk": "Trhanec (Kaiserschmarrn)", "en": "Kaiserschmarrn"},
+    "description": {"sk": "Nadýchaná trhaná palacinka s hrozienkami a lekvárom.", "en": "A fluffy torn pancake with raisins and plum jam."},
+    "cuisine": "CENTRAL_EUROPEAN",
+    "mealTypes": ["DESSERT", "BREAKFAST", "LUNCH"],
+    "totalTimeMin": 25,
+    "activeTimeMin": 25,
+    "difficulty": 2,
+    "servings": 2,
+    "equipment": ["STOVE"],
+    "tags": ["COMFORT"],
+    "ingredients": [
+      {"id": "wheat-flour", "amount": 120, "unit": "G", "role": "MAIN"},
+      {"id": "milk", "amount": 200, "unit": "ML", "role": "MAIN"},
+      {"id": "egg", "amount": 4, "unit": "PCS", "role": "MAIN"},
+      {"id": "sugar", "amount": 2, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "salt", "amount": 1, "unit": "PINCH", "role": "SEASONING"},
+      {"id": "butter", "amount": 30, "unit": "G", "role": "SECONDARY"},
+      {"id": "raisins", "amount": 30, "unit": "G", "role": "SECONDARY", "optional": true},
+      {"id": "powdered-sugar", "amount": 2, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "jam", "amount": 80, "unit": "G", "role": "SECONDARY", "note": {"sk": "slivkový lekvár", "en": "plum jam"}}
+    ],
+    "steps": [
+      {"sk": "Žĺtky vyšľahaj s mliekom, múkou a soľou. Bielky s cukrom vyšľahaj na tuhý sneh a zľahka vmiešaj.", "en": "Whisk the yolks with the milk, flour and salt. Beat the whites with the sugar to stiff peaks and fold in gently."},
+      {"sk": "Na veľkej panvici rozpusti polovicu masla, vlej cesto, posyp hrozienkami a peč na miernom ohni 5 minút, kým spodok nezhnedne.", "en": "Melt half the butter in a large pan, pour in the batter, scatter the raisins and cook over low heat for 5 minutes until the base is golden.", "timerSeconds": 300},
+      {"sk": "Rozdeľ na štvrtiny, otoč, pridaj zvyšné maslo a dopeč 3 minúty. Potom dvoma vidličkami roztrhaj na kúsky a krátko opeč.", "en": "Cut into quarters, flip, add the remaining butter and cook for 3 minutes. Then tear into pieces with two forks and toss briefly.", "timerSeconds": 180},
+      {"sk": "Posyp práškovým cukrom a podávaj s lekvárom.", "en": "Dust with powdered sugar and serve with the plum jam."}
+    ]
+  },
+  {
+    "id": "nemecky-zemiakovy-salat",
+    "title": {"sk": "Nemecký zemiakový šalát s octom a cibuľou", "en": "German potato salad with vinegar and onion"},
+    "description": {"sk": "Ľahký šalát bez majonézy, zaliaty teplým vývarom s octom.", "en": "A light salad without mayonnaise, dressed with warm broth and vinegar."},
+    "cuisine": "CENTRAL_EUROPEAN",
+    "mealTypes": ["LUNCH", "DINNER", "SNACK"],
+    "totalTimeMin": 40,
+    "activeTimeMin": 15,
+    "difficulty": 1,
+    "servings": 4,
+    "equipment": ["STOVE"],
+    "tags": ["MEAL_PREP"],
+    "ingredients": [
+      {"id": "potato", "amount": 800, "unit": "G", "role": "MAIN"},
+      {"id": "onion", "amount": 1, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "stock-vegetable", "amount": 1, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "vinegar", "amount": 3, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "mustard", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "sunflower-oil", "amount": 3, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "sugar", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "chives", "amount": 2, "unit": "TBSP", "role": "SEASONING"},
+      {"id": "black-pepper", "amount": 0.5, "unit": "TSP", "role": "SEASONING"}
+    ],
+    "steps": [
+      {"sk": "Zemiaky uvar v šupke doměkka, asi 25 minút, ošúp a ešte teplé nakrájaj na tenké plátky.", "en": "Boil the potatoes in their skins until tender, about 25 minutes, peel and slice thinly while still warm.", "timerSeconds": 1500},
+      {"sk": "Bujón rozpusti v 200 ml horúcej vody, pridaj nadrobno nakrájanú cibuľu, ocot, horčicu a cukor a priveď do varu.", "en": "Dissolve the stock cube in 200 ml hot water, add the finely chopped onion, vinegar, mustard and sugar and bring to the boil."},
+      {"sk": "Zalej zemiaky horúcim nálevom, premiešaj a nechaj 15 minút nasiaknuť.", "en": "Pour the hot dressing over the potatoes, toss and leave to soak for 15 minutes.", "timerSeconds": 900},
+      {"sk": "Vmiešaj olej, korenie a pažítku. Podávaj vlažný alebo studený.", "en": "Stir in the oil, pepper and chives. Serve lukewarm or cold."}
+    ]
+  },
+  {
+    "id": "quiche-lorraine",
+    "title": {"sk": "Quiche lorraine so slaninou", "en": "Quiche lorraine"},
+    "description": {"sk": "Krehký koláč s vaječno-smotanovou plnkou a slaninou.", "en": "A crisp pastry case with a creamy egg and bacon filling."},
+    "cuisine": "FRENCH",
+    "mealTypes": ["LUNCH", "DINNER", "SNACK"],
+    "totalTimeMin": 80,
+    "activeTimeMin": 30,
+    "difficulty": 2,
+    "servings": 6,
+    "equipment": ["OVEN", "STOVE"],
+    "ingredients": [
+      {"id": "wheat-flour", "amount": 200, "unit": "G", "role": "MAIN"},
+      {"id": "butter", "amount": 100, "unit": "G", "role": "MAIN"},
+      {"id": "egg", "amount": 4, "unit": "PCS", "role": "MAIN"},
+      {"id": "whipping-cream", "amount": 200, "unit": "ML", "role": "SECONDARY"},
+      {"id": "milk", "amount": 100, "unit": "ML", "role": "SECONDARY"},
+      {"id": "bacon", "amount": 150, "unit": "G", "role": "MAIN"},
+      {"id": "edam", "amount": 80, "unit": "G", "role": "SECONDARY"},
+      {"id": "nutmeg", "amount": 1, "unit": "PINCH", "role": "SEASONING"},
+      {"id": "salt", "amount": 0.75, "unit": "TSP", "role": "SEASONING"},
+      {"id": "black-pepper", "amount": 0.25, "unit": "TSP", "role": "SEASONING"}
+    ],
+    "steps": [
+      {"sk": "Múku so štipkou soli rozdrob so studeným maslom, pridaj 1 vajce a 2 lyžice studenej vody a rýchlo vypracuj cesto. Daj ho na 20 minút do chladničky.", "en": "Rub the flour and a pinch of salt with the cold butter, add 1 egg and 2 tablespoons of cold water and quickly bring together into a dough. Chill for 20 minutes.", "timerSeconds": 1200},
+      {"sk": "Rúru predhrej na 190 °C. Cesto rozvaľkaj, vylož ním formu, prepichaj vidličkou a peč 12 minút.", "en": "Preheat the oven to 190 °C. Roll out the pastry, line a tart tin, prick with a fork and bake for 12 minutes.", "timerSeconds": 720},
+      {"sk": "Slaninu opeč nasucho do chrumkava. Zvyšné vajcia vyšľahaj so smotanou, mliekom, muškátovým orieškom, soľou a korením.", "en": "Fry the bacon until crisp. Whisk the remaining eggs with the cream, milk, nutmeg, salt and pepper."},
+      {"sk": "Na predpečený korpus rozsyp slaninu a syr, zalej vajíčkovou zmesou a peč 30 minút, kým plnka v strede nestuhne.", "en": "Scatter the bacon and cheese over the pastry case, pour in the egg mixture and bake for 30 minutes until the filling is just set in the centre.", "timerSeconds": 1800},
+      {"sk": "Nechaj 10 minút vychladnúť a krájaj.", "en": "Cool for 10 minutes before cutting."}
+    ]
+  },
+  {
+    "id": "kura-s-horcicovou-omackou",
+    "title": {"sk": "Kuracie stehná v horčicovej omáčke", "en": "Chicken thighs in mustard sauce"},
+    "description": {"sk": "Francúzsky poulet à la moutarde: krémová omáčka s dijonskou horčicou.", "en": "French poulet à la moutarde: a creamy Dijon mustard sauce."},
+    "cuisine": "FRENCH",
+    "mealTypes": ["LUNCH", "DINNER"],
+    "totalTimeMin": 40,
+    "activeTimeMin": 20,
+    "difficulty": 2,
+    "servings": 4,
+    "equipment": ["STOVE"],
+    "ingredients": [
+      {"id": "chicken-thigh", "amount": 700, "unit": "G", "role": "MAIN"},
+      {"id": "mustard", "amount": 2, "unit": "TBSP", "role": "SECONDARY", "note": {"sk": "dijonská", "en": "Dijon"}},
+      {"id": "cooking-cream", "amount": 200, "unit": "ML", "role": "SECONDARY"},
+      {"id": "white-wine", "amount": 100, "unit": "ML", "role": "SECONDARY", "optional": true, "note": {"sk": "alebo vývar", "en": "or stock"}},
+      {"id": "onion", "amount": 1, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "garlic", "amount": 2, "unit": "PCS", "role": "SEASONING"},
+      {"id": "thyme", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "butter", "amount": 20, "unit": "G", "role": "SECONDARY"},
+      {"id": "salt", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "black-pepper", "amount": 0.5, "unit": "TSP", "role": "SEASONING"},
+      {"id": "potato", "amount": 800, "unit": "G", "role": "SECONDARY"}
+    ],
+    "steps": [
+      {"sk": "Zemiaky ošúp a var v osolenej vode 20 minút doměkka.", "en": "Peel the potatoes and boil in salted water for 20 minutes until tender.", "timerSeconds": 1200},
+      {"sk": "Stehná osoľ, okoreň a na masle opeč kožou nadol 6 minút, otoč a opeč ešte 4 minúty. Odlož ich.", "en": "Season the thighs and brown them in the butter skin side down for 6 minutes, then turn and cook for 4 more minutes. Set aside.", "timerSeconds": 600},
+      {"sk": "Na výpeku speň cibuľu s cesnakom, podlej vínom a nechaj ho zredukovať na polovicu.", "en": "Soften the onion and garlic in the pan juices, add the wine and reduce by half."},
+      {"sk": "Vmiešaj smotanu, horčicu a tymian, vráť mäso a var prikryté 12 minút, kým nie je vnútri prepečené (75 °C).", "en": "Stir in the cream, mustard and thyme, return the chicken and simmer covered for 12 minutes until cooked through (75 °C).", "timerSeconds": 720},
+      {"sk": "Podávaj so zemiakmi a omáčkou.", "en": "Serve with the potatoes and sauce."}
+    ]
+  },
+  {
+    "id": "francuzska-cibulova-polievka",
+    "title": {"sk": "Francúzska cibuľová polievka so syrovou hrenkou", "en": "French onion soup with cheese toast"},
+    "description": {"sk": "Sladká karamelizovaná cibuľa, vývar a gratinovaný chlieb.", "en": "Sweet caramelised onions, broth and a gratinated cheese toast."},
+    "cuisine": "FRENCH",
+    "mealTypes": ["LUNCH", "DINNER"],
+    "totalTimeMin": 75,
+    "activeTimeMin": 20,
+    "difficulty": 2,
+    "servings": 4,
+    "equipment": ["STOVE", "OVEN"],
+    "tags": ["COMFORT"],
+    "ingredients": [
+      {"id": "onion", "amount": 6, "unit": "PCS", "role": "MAIN"},
+      {"id": "butter", "amount": 40, "unit": "G", "role": "SECONDARY"},
+      {"id": "wheat-flour", "amount": 1, "unit": "TBSP", "role": "SEASONING"},
+      {"id": "white-wine", "amount": 150, "unit": "ML", "role": "SECONDARY", "optional": true},
+      {"id": "stock-vegetable", "amount": 2, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "thyme", "amount": 0.5, "unit": "TSP", "role": "SEASONING"},
+      {"id": "bay-leaf", "amount": 1, "unit": "PCS", "role": "SEASONING"},
+      {"id": "bread", "amount": 4, "unit": "PCS", "role": "SECONDARY", "note": {"sk": "krajce", "en": "slices"}},
+      {"id": "edam", "amount": 100, "unit": "G", "role": "SECONDARY"},
+      {"id": "black-pepper", "amount": 0.5, "unit": "TSP", "role": "SEASONING"}
+    ],
+    "steps": [
+      {"sk": "Cibuľu nakrájaj na tenké polkolieska a na masle ju na miernom ohni 40 minút pomaly karamelizuj do tmavozlata. Občas premiešaj.", "en": "Slice the onions thinly and cook them slowly in the butter over low heat for 40 minutes until deep golden. Stir now and then.", "timerSeconds": 2400},
+      {"sk": "Posyp múkou, minútu opekaj, podlej vínom a zalej 1,2 l vody s bujónmi. Pridaj tymian a bobkový list a var 20 minút.", "en": "Dust with the flour, cook for a minute, add the wine and 1.2 l water with the stock cubes. Add the thyme and bay leaf and simmer for 20 minutes.", "timerSeconds": 1200},
+      {"sk": "Rúru predhrej na 220 °C (gril). Chlieb opeč, polož na polievku v miskách vhodných do rúry a posyp syrom.", "en": "Preheat the oven to 220 °C (grill). Toast the bread, float it on the soup in ovenproof bowls and top with the cheese."},
+      {"sk": "Zapekaj 5 minút, kým syr nebublá.", "en": "Grill for 5 minutes until the cheese bubbles.", "timerSeconds": 300}
+    ]
+  },
+  {
+    "id": "salat-nicoise",
+    "title": {"sk": "Šalát Niçoise s tuniakom", "en": "Salade Niçoise with tuna"},
+    "description": {"sk": "Sýty šalát s tuniakom, vajíčkom, zemiakmi a fazuľkou.", "en": "A filling salad with tuna, egg, potatoes and green beans."},
+    "cuisine": "FRENCH",
+    "mealTypes": ["LUNCH", "DINNER"],
+    "totalTimeMin": 30,
+    "activeTimeMin": 20,
+    "difficulty": 1,
+    "servings": 2,
+    "equipment": ["STOVE"],
+    "tags": ["MEAL_PREP"],
+    "ingredients": [
+      {"id": "tuna-canned", "amount": 160, "unit": "G", "role": "MAIN"},
+      {"id": "egg", "amount": 2, "unit": "PCS", "role": "MAIN"},
+      {"id": "potato", "amount": 300, "unit": "G", "role": "SECONDARY"},
+      {"id": "green-beans", "amount": 150, "unit": "G", "role": "SECONDARY"},
+      {"id": "lettuce", "amount": 0.5, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "cherry-tomato", "amount": 150, "unit": "G", "role": "SECONDARY"},
+      {"id": "olives", "amount": 40, "unit": "G", "role": "SECONDARY"},
+      {"id": "red-onion", "amount": 0.25, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "olive-oil", "amount": 3, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "vinegar", "amount": 1, "unit": "TBSP", "role": "SEASONING"},
+      {"id": "mustard", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "salt", "amount": 0.5, "unit": "TSP", "role": "SEASONING"}
+    ],
+    "steps": [
+      {"sk": "Zemiaky var 15 minút doměkka, posledné 4 minúty k nim pridaj fazuľku. Vajcia var 8 minút.", "en": "Boil the potatoes for 15 minutes until tender, adding the green beans for the last 4 minutes. Boil the eggs for 8 minutes.", "timerSeconds": 900},
+      {"sk": "Dresing: olej vyšľahaj s octom, horčicou a soľou.", "en": "Dressing: whisk the oil with the vinegar, mustard and salt."},
+      {"sk": "Na tanier rozlož šalát, nakrájané zemiaky, fazuľku, paradajky, cibuľu a olivy, navrch tuniaka a rozpolené vajíčka.", "en": "Arrange the lettuce, sliced potatoes, beans, tomatoes, onion and olives on plates and top with the tuna and halved eggs."},
+      {"sk": "Polej dresingom a podávaj.", "en": "Drizzle with the dressing and serve."}
+    ]
+  },
+  {
+    "id": "patatas-bravas",
+    "title": {"sk": "Patatas bravas s pikantnou omáčkou", "en": "Patatas bravas with spicy sauce"},
+    "description": {"sk": "Chrumkavé pečené zemiaky s paradajkovou omáčkou a cesnakovým dipom.", "en": "Crispy roast potatoes with a spicy tomato sauce and garlic dip."},
+    "cuisine": "SPANISH",
+    "mealTypes": ["SNACK", "LUNCH", "DINNER"],
+    "totalTimeMin": 50,
+    "activeTimeMin": 15,
+    "difficulty": 1,
+    "servings": 4,
+    "equipment": ["OVEN", "STOVE"],
+    "ingredients": [
+      {"id": "potato", "amount": 800, "unit": "G", "role": "MAIN"},
+      {"id": "olive-oil", "amount": 3, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "smoked-paprika", "amount": 2, "unit": "TSP", "role": "SEASONING"},
+      {"id": "chili-powder", "amount": 0.5, "unit": "TSP", "role": "SEASONING"},
+      {"id": "canned-tomatoes", "amount": 200, "unit": "G", "role": "SECONDARY"},
+      {"id": "garlic", "amount": 2, "unit": "PCS", "role": "SEASONING"},
+      {"id": "mayonnaise", "amount": 60, "unit": "G", "role": "SECONDARY"},
+      {"id": "salt", "amount": 1, "unit": "TSP", "role": "SEASONING"}
+    ],
+    "steps": [
+      {"sk": "Rúru predhrej na 220 °C. Zemiaky nakrájaj na kocky, premiešaj s 2 lyžicami oleja, polovicou soli a údenej papriky.", "en": "Preheat the oven to 220 °C. Dice the potatoes and toss with 2 tablespoons of oil, half the salt and half the smoked paprika."},
+      {"sk": "Peč 35 až 40 minút do chrumkava, v polovici premiešaj.", "en": "Roast for 35–40 minutes until crisp, stirring halfway.", "timerSeconds": 2250},
+      {"sk": "Omáčka: na zvyšnom oleji opeč 1 strúčik cesnaku, zvyšnú papriku a čili, pridaj paradajky a soľ a var 10 minút.", "en": "Sauce: fry 1 garlic clove with the remaining paprika and the chili in the rest of the oil, add the tomatoes and salt and simmer for 10 minutes.", "timerSeconds": 600},
+      {"sk": "Majonézu zmiešaj s druhým prelisovaným strúčikom cesnaku. Zemiaky polej omáčkou a podávaj s dipom.", "en": "Mix the mayonnaise with the second crushed garlic clove. Top the potatoes with the sauce and serve with the dip."}
+    ]
+  },
+  {
+    "id": "cicer-so-spenatom",
+    "title": {"sk": "Cícer so špenátom na španielsky spôsob", "en": "Spanish chickpeas with spinach"},
+    "description": {"sk": "Garbanzos con espinacas: rastlinné tapas s údenou paprikou a opečeným chlebom.", "en": "Garbanzos con espinacas: plant-based tapas with smoked paprika and fried bread."},
+    "cuisine": "SPANISH",
+    "mealTypes": ["LUNCH", "DINNER"],
+    "totalTimeMin": 25,
+    "activeTimeMin": 20,
+    "difficulty": 1,
+    "servings": 3,
+    "equipment": ["STOVE"],
+    "tags": ["STUDENT", "ONE_POT"],
+    "ingredients": [
+      {"id": "chickpeas", "amount": 480, "unit": "G", "role": "MAIN", "note": {"sk": "odkvapkaný", "en": "drained"}},
+      {"id": "spinach", "amount": 300, "unit": "G", "role": "MAIN"},
+      {"id": "garlic", "amount": 3, "unit": "PCS", "role": "SEASONING"},
+      {"id": "bread", "amount": 2, "unit": "PCS", "role": "SECONDARY", "note": {"sk": "krajce", "en": "slices"}},
+      {"id": "smoked-paprika", "amount": 1.5, "unit": "TSP", "role": "SEASONING"},
+      {"id": "cumin", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "vinegar", "amount": 1, "unit": "TBSP", "role": "SEASONING"},
+      {"id": "olive-oil", "amount": 4, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "salt", "amount": 1, "unit": "TSP", "role": "SEASONING"}
+    ],
+    "steps": [
+      {"sk": "Na polovici oleja opeč chlieb nakrájaný na kocky s cesnakom dozlatista. Rozmixuj alebo roztlač s octom a paprikou na hrubú pastu.", "en": "Fry the cubed bread with the garlic in half the oil until golden. Blend or mash with the vinegar and paprika into a coarse paste."},
+      {"sk": "Na zvyšnom oleji nechaj zavädnúť špenát s rímskym kmínom.", "en": "Wilt the spinach with the cumin in the remaining oil."},
+      {"sk": "Pridaj cícer, chlebovú pastu, soľ a 150 ml vody a var 8 minút, kým omáčka nezhustne.", "en": "Add the chickpeas, bread paste, salt and 150 ml water and simmer for 8 minutes until thick.", "timerSeconds": 480}
+    ]
+  },
+  {
+    "id": "kura-s-chorizom-a-fazulou",
+    "title": {"sk": "Kura s chorizom a fazuľou z jedného hrnca", "en": "One-pot chicken with chorizo and beans"},
+    "description": {"sk": "Dymové kura s fazuľou a paradajkami – málo riadu, veľa chuti.", "en": "Smoky chicken with beans and tomatoes: few dishes, lots of flavour."},
+    "cuisine": "SPANISH",
+    "mealTypes": ["LUNCH", "DINNER"],
+    "totalTimeMin": 45,
+    "activeTimeMin": 15,
+    "difficulty": 1,
+    "servings": 4,
+    "equipment": ["STOVE"],
+    "tags": ["ONE_POT", "MEAL_PREP"],
+    "ingredients": [
+      {"id": "chicken-thigh", "amount": 600, "unit": "G", "role": "MAIN"},
+      {"id": "chorizo", "amount": 100, "unit": "G", "role": "SECONDARY"},
+      {"id": "white-beans", "amount": 480, "unit": "G", "role": "MAIN", "note": {"sk": "odkvapkaná", "en": "drained"}},
+      {"id": "canned-tomatoes", "amount": 400, "unit": "G", "role": "SECONDARY"},
+      {"id": "onion", "amount": 1, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "bell-pepper", "amount": 1, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "garlic", "amount": 3, "unit": "PCS", "role": "SEASONING"},
+      {"id": "smoked-paprika", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "olive-oil", "amount": 1, "unit": "TBSP", "role": "SEASONING"},
+      {"id": "salt", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "parsley", "amount": 2, "unit": "TBSP", "role": "SEASONING", "optional": true}
+    ],
+    "steps": [
+      {"sk": "Na oleji opeč chorizo nakrájané na kolieska, kým nepustí červený tuk. Pridaj mäso a opeč ho zo všetkých strán.", "en": "Fry the sliced chorizo in the oil until it releases its red fat. Add the chicken and brown it on all sides."},
+      {"sk": "Pridaj cibuľu, papriku, cesnak a údenú papriku a opekaj 3 minúty.", "en": "Add the onion, pepper, garlic and smoked paprika and fry for 3 minutes.", "timerSeconds": 180},
+      {"sk": "Prilej paradajky a 150 ml vody, osoľ a nechaj prikryté dusiť 20 minút.", "en": "Add the tomatoes and 150 ml water, season with salt and simmer covered for 20 minutes.", "timerSeconds": 1200},
+      {"sk": "Pridaj fazuľu a var ešte 5 minút, kým kura nie je vnútri prepečené (75 °C). Posyp petržlenovou vňaťou.", "en": "Add the beans and simmer for 5 more minutes until the chicken is cooked through (75 °C). Sprinkle with parsley.", "timerSeconds": 300}
+    ]
+  },
+  {
+    "id": "cottage-pie",
+    "title": {"sk": "Cottage pie – mäso pod zemiakovou kašou", "en": "Cottage pie"},
+    "description": {"sk": "Britská zapekaná klasika: hovädzie so zeleninou pod chrumkavou kašou.", "en": "A British bake: beef and vegetables under a crispy mash."},
+    "cuisine": "BRITISH",
+    "mealTypes": ["LUNCH", "DINNER"],
+    "totalTimeMin": 80,
+    "activeTimeMin": 30,
+    "difficulty": 2,
+    "servings": 5,
+    "equipment": ["STOVE", "OVEN"],
+    "tags": ["MEAL_PREP", "FREEZER_FRIENDLY", "COMFORT"],
+    "ingredients": [
+      {"id": "ground-beef", "amount": 500, "unit": "G", "role": "MAIN"},
+      {"id": "onion", "amount": 1, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "carrot", "amount": 2, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "peas", "amount": 150, "unit": "G", "role": "SECONDARY"},
+      {"id": "tomato-paste", "amount": 2, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "wheat-flour", "amount": 1, "unit": "TBSP", "role": "SEASONING"},
+      {"id": "stock-vegetable", "amount": 1, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "thyme", "amount": 0.5, "unit": "TSP", "role": "SEASONING"},
+      {"id": "potato", "amount": 1000, "unit": "G", "role": "MAIN"},
+      {"id": "butter", "amount": 40, "unit": "G", "role": "SECONDARY"},
+      {"id": "milk", "amount": 150, "unit": "ML", "role": "SECONDARY"},
+      {"id": "cheddar", "amount": 60, "unit": "G", "role": "SECONDARY"},
+      {"id": "sunflower-oil", "amount": 1, "unit": "TBSP", "role": "SEASONING"},
+      {"id": "salt", "amount": 1.5, "unit": "TSP", "role": "SEASONING"},
+      {"id": "black-pepper", "amount": 0.5, "unit": "TSP", "role": "SEASONING"}
+    ],
+    "steps": [
+      {"sk": "Zemiaky ošúp a var v osolenej vode 20 minút doměkka. Roztlač ich s maslom, mliekom a polovicou soli na kašu.", "en": "Peel the potatoes and boil in salted water for 20 minutes until tender. Mash with the butter, milk and half the salt.", "timerSeconds": 1200},
+      {"sk": "Na oleji speň cibuľu a mrkvu nakrájanú na kocky, pridaj mäso a opekaj, kým nie je bez ružovej farby.", "en": "Soften the diced onion and carrots in the oil, add the beef and brown until no pink remains."},
+      {"sk": "Vmiešaj múku a pretlak, prilej 300 ml vody s bujónom, pridaj tymian a zvyšnú soľ a var 15 minút. Vmiešaj hrášok.", "en": "Stir in the flour and tomato paste, add 300 ml water with the stock cube, the thyme and remaining salt and simmer for 15 minutes. Stir in the peas.", "timerSeconds": 900},
+      {"sk": "Rúru predhrej na 200 °C. Mäso daj do misy, navrch rozotri kašu, vidličkou urob ryhy a posyp syrom.", "en": "Preheat the oven to 200 °C. Put the meat in a dish, spread the mash on top, rough it up with a fork and sprinkle with the cheese."},
+      {"sk": "Peč 25 minút, kým povrch nie je zlatohnedý a okraje nebublajú.", "en": "Bake for 25 minutes until golden brown and bubbling at the edges.", "timerSeconds": 1500}
+    ]
+  },
+  {
+    "id": "fazula-na-toaste",
+    "title": {"sk": "Fazuľa v paradajkovej omáčke na toaste", "en": "Beans on toast"},
+    "description": {"sk": "Britské študentské raňajky aj večera – domáca a lacná.", "en": "A British student breakfast or supper, homemade and cheap."},
+    "cuisine": "BRITISH",
+    "mealTypes": ["BREAKFAST", "LUNCH", "DINNER"],
+    "totalTimeMin": 15,
+    "activeTimeMin": 10,
+    "difficulty": 1,
+    "servings": 2,
+    "equipment": ["STOVE"],
+    "tags": ["STUDENT"],
+    "ingredients": [
+      {"id": "white-beans", "amount": 240, "unit": "G", "role": "MAIN", "note": {"sk": "odkvapkaná", "en": "drained"}},
+      {"id": "passata", "amount": 200, "unit": "G", "role": "SECONDARY"},
+      {"id": "onion", "amount": 0.5, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "smoked-paprika", "amount": 0.5, "unit": "TSP", "role": "SEASONING"},
+      {"id": "sugar", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "vinegar", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "salt", "amount": 0.25, "unit": "TSP", "role": "SEASONING"},
+      {"id": "sunflower-oil", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "toast-bread", "amount": 4, "unit": "PCS", "role": "MAIN", "note": {"sk": "plátky", "en": "slices"}},
+      {"id": "cheddar", "amount": 30, "unit": "G", "role": "SECONDARY", "optional": true}
+    ],
+    "steps": [
+      {"sk": "Na oleji speň nadrobno nakrájanú cibuľu, pridaj passatu, papriku, cukor, ocot a soľ a var 5 minút.", "en": "Soften the finely chopped onion in the oil, add the passata, paprika, sugar, vinegar and salt and simmer for 5 minutes.", "timerSeconds": 300},
+      {"sk": "Pridaj fazuľu a povar ešte 3 minúty.", "en": "Add the beans and simmer for 3 more minutes.", "timerSeconds": 180},
+      {"sk": "Chlieb opeč, polož naň fazuľu a podľa chuti posyp strúhaným čedarom.", "en": "Toast the bread, spoon the beans on top and sprinkle with grated cheddar if you like."}
+    ]
   }
 ]

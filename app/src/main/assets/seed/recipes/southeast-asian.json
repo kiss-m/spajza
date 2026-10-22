@@ -201,5 +201,133 @@
       {"sk": "Mäso opekaj na rozpálenom oleji 5 až 6 minút, kým nie je skaramelizované a prepečené.", "en": "Fry the pork in hot oil for 5–6 minutes until caramelised and cooked through.", "timerSeconds": 330},
       {"sk": "Do misiek daj rezance, zeleninu, bylinky a mäso, posyp arašidmi a polej dresingom.", "en": "Fill bowls with noodles, vegetables, herbs and pork, sprinkle with peanuts and pour over the dressing."}
     ]
+  },
+  {
+    "id": "larb-z-morcacieho",
+    "title": {"sk": "Larb – thajský šalát z mletého morčacieho", "en": "Larb: Thai ground turkey salad"},
+    "description": {"sk": "Ľahký a svieži šalát s limetkou, bylinkami a pražnou ryžou, podávaný v listoch šalátu.", "en": "A light, zesty salad with lime, herbs and toasted rice, served in lettuce cups."},
+    "cuisine": "THAI",
+    "mealTypes": ["LUNCH", "DINNER"],
+    "totalTimeMin": 25,
+    "activeTimeMin": 20,
+    "difficulty": 1,
+    "servings": 3,
+    "equipment": ["STOVE"],
+    "ingredients": [
+      {"id": "ground-turkey", "amount": 500, "unit": "G", "role": "MAIN"},
+      {"id": "rice", "amount": 2, "unit": "TBSP", "role": "SEASONING", "note": {"sk": "na pražnú ryžu", "en": "for toasted rice"}},
+      {"id": "red-onion", "amount": 0.5, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "spring-onion", "amount": 2, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "mint", "amount": 3, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "coriander-leaves", "amount": 2, "unit": "TBSP", "role": "SEASONING", "optional": true},
+      {"id": "lime", "amount": 3, "unit": "TBSP", "role": "SEASONING", "note": {"sk": "šťava", "en": "juice"}},
+      {"id": "fish-sauce", "amount": 2, "unit": "TBSP", "role": "SEASONING"},
+      {"id": "chili-flakes", "amount": 0.5, "unit": "TSP", "role": "SEASONING"},
+      {"id": "sugar", "amount": 0.5, "unit": "TSP", "role": "SEASONING"},
+      {"id": "lettuce", "amount": 0.5, "unit": "PCS", "role": "SECONDARY"}
+    ],
+    "steps": [
+      {"sk": "Ryžu opraž na suchej panvici dozlatista a rozdrv ju v mažiari alebo valčekom.", "en": "Toast the rice in a dry pan until golden and crush it with a pestle or rolling pin."},
+      {"sk": "Mäso daj na panvicu s 3 lyžicami vody a za stáleho rozbíjania ho var 6 až 7 minút, kým nie je úplne bez ružovej farby.", "en": "Put the turkey in a pan with 3 tablespoons of water and cook, breaking it up, for 6–7 minutes until no pink remains.", "timerSeconds": 390},
+      {"sk": "Odstav a vmiešaj rybaciu omáčku, limetkovú šťavu, cukor, čili, cibuľu a bylinky.", "en": "Take off the heat and stir in the fish sauce, lime juice, sugar, chili, onions and herbs."},
+      {"sk": "Posyp pražnou ryžou a podávaj v listoch šalátu.", "en": "Sprinkle with the toasted rice and serve in lettuce leaves."}
+    ]
+  },
+  {
+    "id": "thajske-tofu-s-kesu",
+    "title": {"sk": "Thajské tofu s kešu orechmi a zeleninou", "en": "Thai cashew tofu with vegetables"},
+    "description": {"sk": "Rýchle restovanie s chrumkavými orechmi, limetkou a čili.", "en": "A quick stir-fry with crunchy nuts, lime and chili."},
+    "cuisine": "THAI",
+    "mealTypes": ["LUNCH", "DINNER"],
+    "totalTimeMin": 30,
+    "activeTimeMin": 25,
+    "difficulty": 1,
+    "servings": 3,
+    "equipment": ["STOVE"],
+    "ingredients": [
+      {"id": "tofu", "amount": 400, "unit": "G", "role": "MAIN"},
+      {"id": "cashews", "amount": 60, "unit": "G", "role": "SECONDARY"},
+      {"id": "bell-pepper", "amount": 1, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "broccoli", "amount": 0.5, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "onion", "amount": 1, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "garlic", "amount": 3, "unit": "PCS", "role": "SEASONING"},
+      {"id": "soy-sauce", "amount": 3, "unit": "TBSP", "role": "SEASONING"},
+      {"id": "brown-sugar", "amount": 1, "unit": "TBSP", "role": "SEASONING"},
+      {"id": "lime", "amount": 2, "unit": "TBSP", "role": "SEASONING", "note": {"sk": "šťava", "en": "juice"}},
+      {"id": "chili-flakes", "amount": 0.5, "unit": "TSP", "role": "SEASONING"},
+      {"id": "corn-starch", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "sunflower-oil", "amount": 2, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "rice", "amount": 225, "unit": "G", "role": "MAIN"}
+    ],
+    "steps": [
+      {"sk": "Uvar ryžu. Tofu osuš, nakrájaj na kocky a opeč na polovici oleja dozlatista. Odlož ho.", "en": "Cook the rice. Pat the tofu dry, cube it and fry in half the oil until golden. Set aside."},
+      {"sk": "Kešu opraž na suchej panvici, kým nezhnednú.", "en": "Toast the cashews in a dry pan until browned."},
+      {"sk": "Na zvyšnom oleji opekaj cibuľu, papriku a brokolicu s cesnakom 4 minúty.", "en": "Stir-fry the onion, pepper and broccoli with the garlic in the remaining oil for 4 minutes.", "timerSeconds": 240},
+      {"sk": "Zmiešaj sójovú omáčku, cukor, limetkovú šťavu, čili, škrob a 4 lyžice vody, vlej do panvice, pridaj tofu a kešu a premiešaj, kým omáčka nezhustne.", "en": "Mix the soy sauce, sugar, lime juice, chili, starch and 4 tablespoons of water, pour into the pan, add the tofu and cashews and toss until the sauce thickens."},
+      {"sk": "Podávaj s ryžou.", "en": "Serve with the rice."}
+    ]
+  },
+  {
+    "id": "banh-mi-s-kuracim",
+    "title": {"sk": "Banh mi s kuracím mäsom", "en": "Chicken banh mi"},
+    "description": {"sk": "Vietnamská bageta s rýchlo nakladanou zeleninou, koriandrom a pikantnou majonézou.", "en": "A Vietnamese baguette with quick-pickled vegetables, coriander and spicy mayo."},
+    "cuisine": "VIETNAMESE",
+    "mealTypes": ["LUNCH", "DINNER"],
+    "totalTimeMin": 30,
+    "activeTimeMin": 25,
+    "difficulty": 1,
+    "servings": 2,
+    "equipment": ["STOVE"],
+    "ingredients": [
+      {"id": "bread-roll", "amount": 2, "unit": "PCS", "role": "MAIN", "note": {"sk": "ideálne bagetky", "en": "ideally small baguettes"}},
+      {"id": "chicken-breast", "amount": 250, "unit": "G", "role": "MAIN"},
+      {"id": "carrot", "amount": 1, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "cucumber", "amount": 0.25, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "rice-vinegar", "amount": 3, "unit": "TBSP", "role": "SEASONING"},
+      {"id": "sugar", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "soy-sauce", "amount": 1, "unit": "TBSP", "role": "SEASONING"},
+      {"id": "garlic", "amount": 1, "unit": "PCS", "role": "SEASONING"},
+      {"id": "mayonnaise", "amount": 2, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "chili-sauce", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "coriander-leaves", "amount": 2, "unit": "TBSP", "role": "SEASONING"},
+      {"id": "sunflower-oil", "amount": 1, "unit": "TSP", "role": "SEASONING"}
+    ],
+    "steps": [
+      {"sk": "Mrkvu nakrájaj na tenké prúžky a zalej octom s cukrom a štipkou soli. Nechaj 15 minút nakladať.", "en": "Cut the carrot into matchsticks and cover with the vinegar, sugar and a pinch of salt. Pickle for 15 minutes.", "timerSeconds": 900},
+      {"sk": "Mäso nakrájaj na tenké plátky, premiešaj so sójovou omáčkou a cesnakom a na oleji opekaj 5 až 6 minút, kým nie je prepečené.", "en": "Slice the chicken thinly, toss with the soy sauce and garlic and fry in the oil for 5–6 minutes until cooked through.", "timerSeconds": 330},
+      {"sk": "Majonézu zmiešaj s čili omáčkou.", "en": "Mix the mayonnaise with the chili sauce."},
+      {"sk": "Bagetky rozkroj, natri majonézou a naplň mäsom, nakladanou mrkvou, plátkami uhorky a koriandrom.", "en": "Split the rolls, spread with the mayo and fill with the chicken, pickled carrot, cucumber slices and coriander."}
+    ]
+  },
+  {
+    "id": "karamelizovany-losos",
+    "title": {"sk": "Karamelizovaný losos na vietnamský spôsob", "en": "Vietnamese caramelised salmon"},
+    "description": {"sk": "Losos dusený v karamelovej omáčke s rybacou omáčkou a korením – cá kho.", "en": "Salmon braised in a caramel and fish sauce glaze with pepper: cá kho."},
+    "cuisine": "VIETNAMESE",
+    "mealTypes": ["LUNCH", "DINNER"],
+    "totalTimeMin": 30,
+    "activeTimeMin": 15,
+    "difficulty": 2,
+    "servings": 3,
+    "equipment": ["STOVE"],
+    "ingredients": [
+      {"id": "salmon", "amount": 450, "unit": "G", "role": "MAIN"},
+      {"id": "brown-sugar", "amount": 2, "unit": "TBSP", "role": "SEASONING"},
+      {"id": "fish-sauce", "amount": 2, "unit": "TBSP", "role": "SEASONING"},
+      {"id": "garlic", "amount": 3, "unit": "PCS", "role": "SEASONING"},
+      {"id": "spring-onion", "amount": 3, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "black-pepper", "amount": 0.5, "unit": "TSP", "role": "SEASONING"},
+      {"id": "chili-pepper", "amount": 1, "unit": "PCS", "role": "SEASONING", "optional": true},
+      {"id": "sunflower-oil", "amount": 1, "unit": "TBSP", "role": "SEASONING"},
+      {"id": "rice", "amount": 225, "unit": "G", "role": "MAIN"},
+      {"id": "cucumber", "amount": 0.5, "unit": "PCS", "role": "SECONDARY"}
+    ],
+    "steps": [
+      {"sk": "Uvar ryžu. Lososa nakrájaj na väčšie kocky.", "en": "Cook the rice. Cut the salmon into large cubes."},
+      {"sk": "Na panvici roztop cukor s olejom a var na strednom ohni, kým nezmení farbu na jantárovú. Pozor, aby nezhorkol.", "en": "Melt the sugar with the oil in a pan and cook over medium heat until amber. Take care not to let it burn."},
+      {"sk": "Opatrne prilej rybaciu omáčku a 100 ml vody, pridaj cesnak a priveď do varu.", "en": "Carefully add the fish sauce and 100 ml water, add the garlic and bring to the boil."},
+      {"sk": "Vlož lososa a var 8 minút, občas ho polej omáčkou, kým sa nezmení na lesklú glazúru a losos sa ľahko rozpadáva.", "en": "Add the salmon and simmer for 8 minutes, basting now and then, until the sauce turns glossy and the salmon flakes easily.", "timerSeconds": 480},
+      {"sk": "Posyp korením, cibuľkou a čili a podávaj s ryžou a uhorkou.", "en": "Sprinkle with pepper, spring onion and chili and serve with the rice and cucumber."}
+    ]
   }
 ]

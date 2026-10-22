@@ -374,5 +374,225 @@
       {"sk": "Na rozpálenej panvici s olejom opekaj mäso s nakrájanou cibuľou v dvoch dávkach 3 až 4 minúty, kým nie je skaramelizované.", "en": "Stir-fry the beef with the sliced onion in a hot oiled pan in two batches for 3–4 minutes until caramelised.", "timerSeconds": 210},
       {"sk": "Posyp jarnou cibuľkou a sezamom a podávaj s ryžou.", "en": "Sprinkle with spring onion and sesame seeds and serve with the rice."}
     ]
+  },
+  {
+    "id": "dan-dan-rezance",
+    "title": {"sk": "Dan dan rezance s mletým bravčovým", "en": "Dan dan noodles with ground pork"},
+    "description": {"sk": "Pikantné sečuánske rezance s orieškovou omáčkou.", "en": "Spicy Sichuan noodles with a nutty sauce."},
+    "cuisine": "CHINESE",
+    "mealTypes": ["LUNCH", "DINNER"],
+    "totalTimeMin": 25,
+    "activeTimeMin": 20,
+    "difficulty": 2,
+    "servings": 3,
+    "equipment": ["STOVE"],
+    "ingredients": [
+      {"id": "egg-noodles", "amount": 250, "unit": "G", "role": "MAIN"},
+      {"id": "ground-pork", "amount": 300, "unit": "G", "role": "MAIN"},
+      {"id": "bok-choy", "amount": 200, "unit": "G", "role": "SECONDARY"},
+      {"id": "garlic", "amount": 3, "unit": "PCS", "role": "SEASONING"},
+      {"id": "ginger", "amount": 10, "unit": "G", "role": "SEASONING"},
+      {"id": "soy-sauce", "amount": 3, "unit": "TBSP", "role": "SEASONING"},
+      {"id": "peanut-butter", "amount": 2, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "rice-vinegar", "amount": 1, "unit": "TBSP", "role": "SEASONING"},
+      {"id": "sugar", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "chili-sauce", "amount": 1, "unit": "TBSP", "role": "SEASONING"},
+      {"id": "spring-onion", "amount": 2, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "sunflower-oil", "amount": 1, "unit": "TBSP", "role": "SEASONING"}
+    ],
+    "steps": [
+      {"sk": "Omáčka: arašidové maslo rozmiešaj s 2 lyžicami sójovej omáčky, octom, cukrom, čili omáčkou a 4 lyžicami horúcej vody.", "en": "Sauce: whisk the peanut butter with 2 tablespoons of soy sauce, the vinegar, sugar, chili sauce and 4 tablespoons of hot water."},
+      {"sk": "Na oleji opekaj mäso s cesnakom a zázvorom 6 až 7 minút, kým nie je chrumkavé a bez ružovej farby. Pridaj zvyšnú sójovú omáčku.", "en": "Fry the pork with the garlic and ginger in the oil for 6–7 minutes until crisp with no pink left. Add the remaining soy sauce.", "timerSeconds": 390},
+      {"sk": "Rezance uvar podľa návodu, posledné 2 minúty pridaj pak choi. Sceď.", "en": "Cook the noodles according to the packet, adding the bok choy for the last 2 minutes. Drain.", "timerSeconds": 120},
+      {"sk": "Do misiek daj omáčku, rezance a pak choi, navrch mäso a cibuľku. Pred jedlom premiešaj.", "en": "Put the sauce in bowls, add the noodles and bok choy and top with the pork and spring onion. Mix before eating."}
+    ]
+  },
+  {
+    "id": "cinsky-uhorkovy-salat",
+    "title": {"sk": "Čínsky uhorkový šalát s cesnakom", "en": "Chinese smashed cucumber salad"},
+    "description": {"sk": "Chrumkavá uhorka rozbitá valčekom, s cesnakom, octom a sezamom.", "en": "Crunchy cucumber smashed with a rolling pin, with garlic, vinegar and sesame."},
+    "cuisine": "CHINESE",
+    "mealTypes": ["SNACK", "LUNCH", "DINNER"],
+    "totalTimeMin": 15,
+    "activeTimeMin": 10,
+    "difficulty": 1,
+    "servings": 2,
+    "tags": ["NO_COOK"],
+    "ingredients": [
+      {"id": "cucumber", "amount": 1, "unit": "PCS", "role": "MAIN"},
+      {"id": "garlic", "amount": 2, "unit": "PCS", "role": "SEASONING"},
+      {"id": "soy-sauce", "amount": 1, "unit": "TBSP", "role": "SEASONING"},
+      {"id": "rice-vinegar", "amount": 1, "unit": "TBSP", "role": "SEASONING"},
+      {"id": "sesame-oil", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "sugar", "amount": 0.5, "unit": "TSP", "role": "SEASONING"},
+      {"id": "salt", "amount": 0.5, "unit": "TSP", "role": "SEASONING"},
+      {"id": "chili-flakes", "amount": 0.25, "unit": "TSP", "role": "SEASONING", "optional": true},
+      {"id": "sesame-seeds", "amount": 1, "unit": "TSP", "role": "SEASONING", "optional": true}
+    ],
+    "steps": [
+      {"sk": "Uhorku polož na dosku a valčekom ju rozbi, potom nakrájaj na kúsky. Osoľ a nechaj 10 minút odkvapkať.", "en": "Lay the cucumber on a board, smash it with a rolling pin and cut into bite-sized pieces. Salt and leave to drain for 10 minutes.", "timerSeconds": 600},
+      {"sk": "Zmiešaj prelisovaný cesnak, sójovú omáčku, ocot, sezamový olej, cukor a čili.", "en": "Mix the crushed garlic, soy sauce, vinegar, sesame oil, sugar and chili."},
+      {"sk": "Uhorku sceď, zalej dresingom a posyp sezamom.", "en": "Drain the cucumber, toss with the dressing and sprinkle with sesame seeds."}
+    ]
+  },
+  {
+    "id": "rychly-ramen",
+    "title": {"sk": "Rýchly ramen s vajíčkom a bravčovým", "en": "Quick ramen with egg and pork"},
+    "description": {"sk": "Voňavý miso vývar s rezancami, mäsom a vajíčkom so žĺtkom, ktorý tečie, za 30 minút.", "en": "A fragrant miso broth with noodles, pork and a runny-yolk egg in 30 minutes."},
+    "cuisine": "JAPANESE",
+    "mealTypes": ["LUNCH", "DINNER"],
+    "totalTimeMin": 30,
+    "activeTimeMin": 25,
+    "difficulty": 2,
+    "servings": 2,
+    "equipment": ["STOVE"],
+    "ingredients": [
+      {"id": "egg-noodles", "amount": 160, "unit": "G", "role": "MAIN", "note": {"sk": "ramen rezance", "en": "ramen noodles"}},
+      {"id": "pork-loin", "amount": 250, "unit": "G", "role": "MAIN"},
+      {"id": "egg", "amount": 2, "unit": "PCS", "role": "MAIN"},
+      {"id": "stock-chicken", "amount": 2, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "miso", "amount": 2, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "soy-sauce", "amount": 2, "unit": "TBSP", "role": "SEASONING"},
+      {"id": "garlic", "amount": 2, "unit": "PCS", "role": "SEASONING"},
+      {"id": "ginger", "amount": 10, "unit": "G", "role": "SEASONING"},
+      {"id": "mushroom", "amount": 100, "unit": "G", "role": "SECONDARY"},
+      {"id": "spring-onion", "amount": 2, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "nori", "amount": 1, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "sesame-oil", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "sunflower-oil", "amount": 1, "unit": "TSP", "role": "SEASONING"}
+    ],
+    "steps": [
+      {"sk": "Vajcia var presne 6,5 minúty, schlaď v ľadovej vode a ošúp.", "en": "Boil the eggs for exactly 6½ minutes, cool in iced water and peel.", "timerSeconds": 390},
+      {"sk": "V hrnci krátko opeč cesnak a zázvor na sezamovom oleji, pridaj 900 ml vody, bujóny, sójovú omáčku a huby a var 10 minút.", "en": "Briefly fry the garlic and ginger in the sesame oil, add 900 ml water, the stock cubes, soy sauce and mushrooms and simmer for 10 minutes.", "timerSeconds": 600},
+      {"sk": "Karé nakrájaj na tenké plátky a opeč na rozpálenom oleji 2 minúty z každej strany, kým nie je prepečené.", "en": "Slice the pork thinly and fry in hot oil for 2 minutes per side until cooked through.", "timerSeconds": 240},
+      {"sk": "Rezance uvar podľa návodu. Vývar odstav a vmiešaj miso.", "en": "Cook the noodles according to the packet. Take the broth off the heat and stir in the miso."},
+      {"sk": "Do misiek daj rezance, zalej vývarom a navrch polož mäso, rozpolené vajcia, cibuľku a nori.", "en": "Put the noodles in bowls, ladle over the broth and top with the pork, halved eggs, spring onion and nori."}
+    ]
+  },
+  {
+    "id": "teriyaki-tofu",
+    "title": {"sk": "Chrumkavé tofu v teriyaki glazúre", "en": "Crispy tofu in teriyaki glaze"},
+    "description": {"sk": "Chrumkavé tofu v lesklej sladkosolenej glazúre – rastlinná večera za pol hodiny.", "en": "Crispy tofu in a glossy sweet-salty glaze: a plant-based dinner in half an hour."},
+    "cuisine": "JAPANESE",
+    "mealTypes": ["LUNCH", "DINNER"],
+    "totalTimeMin": 30,
+    "activeTimeMin": 20,
+    "difficulty": 1,
+    "servings": 3,
+    "equipment": ["STOVE"],
+    "tags": ["MEAL_PREP"],
+    "ingredients": [
+      {"id": "tofu", "amount": 400, "unit": "G", "role": "MAIN"},
+      {"id": "corn-starch", "amount": 2, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "broccoli", "amount": 1, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "soy-sauce", "amount": 4, "unit": "TBSP", "role": "SEASONING"},
+      {"id": "brown-sugar", "amount": 2, "unit": "TBSP", "role": "SEASONING"},
+      {"id": "rice-vinegar", "amount": 1, "unit": "TBSP", "role": "SEASONING"},
+      {"id": "ginger", "amount": 10, "unit": "G", "role": "SEASONING"},
+      {"id": "garlic", "amount": 2, "unit": "PCS", "role": "SEASONING"},
+      {"id": "sunflower-oil", "amount": 2, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "rice", "amount": 225, "unit": "G", "role": "MAIN"},
+      {"id": "sesame-seeds", "amount": 1, "unit": "TBSP", "role": "SEASONING", "optional": true}
+    ],
+    "steps": [
+      {"sk": "Uvar ryžu. Tofu osuš, nakrájaj na kocky a obaľ v škrobe.", "en": "Cook the rice. Pat the tofu dry, cube it and coat in the starch."},
+      {"sk": "Na oleji ho opekaj 8 minút, kým nie je zo všetkých strán chrumkavé.", "en": "Fry in the oil for 8 minutes until crisp on all sides.", "timerSeconds": 480},
+      {"sk": "Brokolicu var 3 minúty. Omáčka: zmiešaj sójovú omáčku, cukor, ocot, nastrúhaný zázvor, cesnak a 3 lyžice vody.", "en": "Boil the broccoli for 3 minutes. Sauce: mix the soy sauce, sugar, vinegar, grated ginger, garlic and 3 tablespoons of water.", "timerSeconds": 180},
+      {"sk": "Omáčku vlej k tofu a povar minútu, kým nezhustne do glazúry. Podávaj s ryžou a brokolicou, posypané sezamom.", "en": "Pour the sauce over the tofu and simmer for a minute until it turns into a glaze. Serve with the rice and broccoli, sprinkled with sesame seeds."}
+    ]
+  },
+  {
+    "id": "oyakodon",
+    "title": {"sk": "Oyakodon – ryža s kuracím mäsom a vajíčkom", "en": "Oyakodon: chicken and egg rice bowl"},
+    "description": {"sk": "Japonské domáce jedlo z jednej panvice: kura a vajce v sladkosolenom vývare na ryži.", "en": "Japanese home cooking from one pan: chicken and egg in a sweet-salty broth over rice."},
+    "cuisine": "JAPANESE",
+    "mealTypes": ["LUNCH", "DINNER"],
+    "totalTimeMin": 30,
+    "activeTimeMin": 20,
+    "difficulty": 1,
+    "servings": 2,
+    "equipment": ["STOVE"],
+    "ingredients": [
+      {"id": "chicken-thigh", "amount": 300, "unit": "G", "role": "MAIN"},
+      {"id": "egg", "amount": 3, "unit": "PCS", "role": "MAIN"},
+      {"id": "onion", "amount": 1, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "rice", "amount": 150, "unit": "G", "role": "MAIN"},
+      {"id": "soy-sauce", "amount": 2, "unit": "TBSP", "role": "SEASONING"},
+      {"id": "sugar", "amount": 1, "unit": "TBSP", "role": "SEASONING"},
+      {"id": "stock-chicken", "amount": 0.5, "unit": "PCS", "role": "SEASONING"},
+      {"id": "spring-onion", "amount": 2, "unit": "PCS", "role": "SECONDARY"}
+    ],
+    "steps": [
+      {"sk": "Uvar ryžu podľa návodu.", "en": "Cook the rice according to the packet."},
+      {"sk": "V malej panvici zmiešaj 150 ml vody, bujón, sójovú omáčku a cukor a priveď do varu. Pridaj cibuľu nakrájanú na tenké pásiky a var 3 minúty.", "en": "In a small pan, bring 150 ml water, the stock cube, soy sauce and sugar to the boil. Add the thinly sliced onion and simmer for 3 minutes.", "timerSeconds": 180},
+      {"sk": "Pridaj mäso nakrájané na malé kúsky a var 6 minút, kým nie je vnútri biele.", "en": "Add the chicken cut into small pieces and simmer for 6 minutes until white inside.", "timerSeconds": 360},
+      {"sk": "Vajcia len zľahka rozšľahaj, vlej ich na mäso, prikry a var 1 až 2 minúty, kým nie sú polostuhnuté.", "en": "Lightly beat the eggs, pour them over the chicken, cover and cook for 1–2 minutes until just half set.", "timerSeconds": 90},
+      {"sk": "Zošmykni na ryžu v miskách a posyp cibuľkou.", "en": "Slide onto the rice in bowls and sprinkle with spring onion."}
+    ]
+  },
+  {
+    "id": "japchae",
+    "title": {"sk": "Japchae – kórejské rezance so zeleninou a hovädzím", "en": "Japchae: Korean noodles with vegetables and beef"},
+    "description": {"sk": "Lesklé rezance so sezamom, farebnou zeleninou a prúžkami mäsa.", "en": "Glossy noodles with sesame, colourful vegetables and strips of beef."},
+    "cuisine": "KOREAN",
+    "mealTypes": ["LUNCH", "DINNER"],
+    "totalTimeMin": 40,
+    "activeTimeMin": 30,
+    "difficulty": 2,
+    "servings": 3,
+    "equipment": ["STOVE"],
+    "ingredients": [
+      {"id": "rice-noodles", "amount": 200, "unit": "G", "role": "MAIN", "note": {"sk": "alebo batátové sklenené rezance", "en": "or sweet potato glass noodles"}},
+      {"id": "beef-steak", "amount": 200, "unit": "G", "role": "MAIN"},
+      {"id": "carrot", "amount": 1, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "spinach", "amount": 150, "unit": "G", "role": "SECONDARY"},
+      {"id": "mushroom", "amount": 150, "unit": "G", "role": "SECONDARY"},
+      {"id": "onion", "amount": 1, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "bell-pepper", "amount": 1, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "soy-sauce", "amount": 4, "unit": "TBSP", "role": "SEASONING"},
+      {"id": "sugar", "amount": 1, "unit": "TBSP", "role": "SEASONING"},
+      {"id": "sesame-oil", "amount": 2, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "garlic", "amount": 2, "unit": "PCS", "role": "SEASONING"},
+      {"id": "sunflower-oil", "amount": 2, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "sesame-seeds", "amount": 1, "unit": "TBSP", "role": "SEASONING"}
+    ],
+    "steps": [
+      {"sk": "Rezance priprav podľa návodu, sceď a premiešaj s lyžicou sezamového oleja.", "en": "Prepare the noodles according to the packet, drain and toss with a tablespoon of sesame oil."},
+      {"sk": "Omáčka: zmiešaj sójovú omáčku, cukor, cesnak a zvyšný sezamový olej.", "en": "Sauce: mix the soy sauce, sugar, garlic and remaining sesame oil."},
+      {"sk": "Mäso nakrájaj na prúžky, premiešaj s lyžicou omáčky a na rozpálenom oleji opekaj 3 minúty. Odlož.", "en": "Slice the beef into strips, toss with a spoonful of the sauce and stir-fry in hot oil for 3 minutes. Set aside.", "timerSeconds": 180},
+      {"sk": "Postupne opeč na prúžky nakrájanú mrkvu, cibuľu, papriku a huby a nakoniec nechaj zavädnúť špenát.", "en": "Stir-fry the sliced carrot, onion, pepper and mushrooms in turn, then wilt the spinach."},
+      {"sk": "Všetko zmiešaj s rezancami a zvyšnou omáčkou a posyp sezamom. Chutí teplé aj studené.", "en": "Toss everything with the noodles and remaining sauce and sprinkle with sesame seeds. Good warm or cold."}
+    ]
+  },
+  {
+    "id": "pajeon",
+    "title": {"sk": "Pajeon – kórejská placka s jarnou cibuľkou", "en": "Pajeon: Korean spring onion pancake"},
+    "description": {"sk": "Chrumkavá placka s dipom zo sójovej omáčky a octu.", "en": "A crispy pancake with a soy and vinegar dip."},
+    "cuisine": "KOREAN",
+    "mealTypes": ["SNACK", "LUNCH", "DINNER"],
+    "totalTimeMin": 25,
+    "activeTimeMin": 20,
+    "difficulty": 1,
+    "servings": 2,
+    "equipment": ["STOVE"],
+    "tags": ["STUDENT"],
+    "ingredients": [
+      {"id": "wheat-flour", "amount": 120, "unit": "G", "role": "MAIN"},
+      {"id": "corn-starch", "amount": 2, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "egg", "amount": 1, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "spring-onion", "amount": 8, "unit": "PCS", "role": "MAIN"},
+      {"id": "zucchini", "amount": 0.5, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "salt", "amount": 0.5, "unit": "TSP", "role": "SEASONING"},
+      {"id": "sunflower-oil", "amount": 3, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "soy-sauce", "amount": 2, "unit": "TBSP", "role": "SEASONING"},
+      {"id": "rice-vinegar", "amount": 1, "unit": "TBSP", "role": "SEASONING"},
+      {"id": "chili-flakes", "amount": 0.25, "unit": "TSP", "role": "SEASONING", "optional": true}
+    ],
+    "steps": [
+      {"sk": "Múku, škrob, vajce, soľ a 180 ml studenej vody vymiešaj na riedke cesto.", "en": "Whisk the flour, starch, egg, salt and 180 ml cold water into a thin batter."},
+      {"sk": "Cibuľku nakrájaj na 5 cm kúsky a cuketu na tenké prúžky a vmiešaj do cesta.", "en": "Cut the spring onions into 5 cm lengths and the zucchini into thin strips and stir into the batter."},
+      {"sk": "Na rozpálenom oleji rozlej polovicu cesta na tenkú placku a peč 4 minúty, otoč a dopeč 3 minúty do chrumkava. Opakuj.", "en": "Spread half the batter thinly in hot oil and fry for 4 minutes, flip and fry for 3 more minutes until crisp. Repeat.", "timerSeconds": 420},
+      {"sk": "Dip: zmiešaj sójovú omáčku, ocot a čili. Placku nakrájaj na kúsky a podávaj.", "en": "Dip: mix the soy sauce, vinegar and chili. Cut the pancake into pieces and serve."}
+    ]
   }
 ]

@@ -317,5 +317,261 @@
       {"sk": "Dresing: jogurt zmiešaj s prelisovaným cesnakom a citrónovou šťavou.", "en": "Dressing: mix the yogurt with the crushed garlic and lemon juice."},
       {"sk": "Tortilly krátko zohrej, natri dresingom, pridaj šalát, nakrájanú zeleninu a mäso a pevne zroluj.", "en": "Warm the tortillas briefly, spread with the dressing, add lettuce, sliced vegetables and chicken and roll up tightly."}
     ]
+  },
+  {
+    "id": "kuracie-enchiladas",
+    "title": {"sk": "Zapekané kuracie enchiladas", "en": "Baked chicken enchiladas"},
+    "description": {"sk": "Tortilly plnené kuracím a fazuľou, zapečené v omáčke so syrom.", "en": "Tortillas filled with chicken and beans, baked in sauce with cheese."},
+    "cuisine": "MEXICAN",
+    "mealTypes": ["LUNCH", "DINNER"],
+    "totalTimeMin": 50,
+    "activeTimeMin": 25,
+    "difficulty": 2,
+    "servings": 4,
+    "equipment": ["STOVE", "OVEN"],
+    "tags": ["MEAL_PREP", "FREEZER_FRIENDLY"],
+    "ingredients": [
+      {"id": "tortilla", "amount": 6, "unit": "PCS", "role": "MAIN"},
+      {"id": "chicken-breast", "amount": 400, "unit": "G", "role": "MAIN"},
+      {"id": "black-beans", "amount": 240, "unit": "G", "role": "SECONDARY", "note": {"sk": "odkvapkaná", "en": "drained"}},
+      {"id": "passata", "amount": 500, "unit": "G", "role": "SECONDARY"},
+      {"id": "onion", "amount": 1, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "garlic", "amount": 2, "unit": "PCS", "role": "SEASONING"},
+      {"id": "cumin", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "chili-powder", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "oregano", "amount": 0.5, "unit": "TSP", "role": "SEASONING"},
+      {"id": "cheddar", "amount": 120, "unit": "G", "role": "SECONDARY"},
+      {"id": "salt", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "sunflower-oil", "amount": 1, "unit": "TBSP", "role": "SEASONING"},
+      {"id": "sour-cream", "amount": 100, "unit": "G", "role": "SECONDARY", "optional": true, "note": {"sk": "na podávanie", "en": "to serve"}}
+    ],
+    "steps": [
+      {"sk": "Mäso var v osolenej vode 15 minút, kým nie je vnútri biele, a natrhaj ho vidličkami.", "en": "Poach the chicken in salted water for 15 minutes until white inside, then shred it with forks.", "timerSeconds": 900},
+      {"sk": "Omáčka: na oleji speň cibuľu s cesnakom a korením, prilej passatu a var 5 minút.", "en": "Sauce: soften the onion with the garlic and spices in the oil, add the passata and simmer for 5 minutes.", "timerSeconds": 300},
+      {"sk": "Rúru predhrej na 200 °C. Mäso zmiešaj s fazuľou a tretinou omáčky.", "en": "Preheat the oven to 200 °C. Mix the chicken with the beans and a third of the sauce."},
+      {"sk": "Tortilly naplň, zroluj a poukladaj do misy. Zalej zvyšnou omáčkou, posyp syrom a peč 20 minút.", "en": "Fill and roll the tortillas and lay them in a dish. Pour over the remaining sauce, sprinkle with cheese and bake for 20 minutes.", "timerSeconds": 1200},
+      {"sk": "Podávaj s kyslou smotanou.", "en": "Serve with sour cream."}
+    ]
+  },
+  {
+    "id": "mexicka-fazulova-polievka",
+    "title": {"sk": "Mexická polievka s fazuľou a kukuricou", "en": "Mexican black bean and corn soup"},
+    "description": {"sk": "Rastlinná korenistá polievka, ktorá zasýti ako hlavné jedlo.", "en": "A spiced plant-based soup as filling as a main course."},
+    "cuisine": "MEXICAN",
+    "mealTypes": ["LUNCH", "DINNER"],
+    "totalTimeMin": 35,
+    "activeTimeMin": 10,
+    "difficulty": 1,
+    "servings": 4,
+    "equipment": ["STOVE"],
+    "tags": ["STUDENT", "MEAL_PREP", "ONE_POT", "FREEZER_FRIENDLY"],
+    "ingredients": [
+      {"id": "black-beans", "amount": 480, "unit": "G", "role": "MAIN", "note": {"sk": "odkvapkaná", "en": "drained"}},
+      {"id": "sweet-corn", "amount": 280, "unit": "G", "role": "MAIN"},
+      {"id": "canned-tomatoes", "amount": 400, "unit": "G", "role": "SECONDARY"},
+      {"id": "onion", "amount": 1, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "bell-pepper", "amount": 1, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "garlic", "amount": 2, "unit": "PCS", "role": "SEASONING"},
+      {"id": "cumin", "amount": 1.5, "unit": "TSP", "role": "SEASONING"},
+      {"id": "smoked-paprika", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "stock-vegetable", "amount": 1, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "olive-oil", "amount": 1, "unit": "TBSP", "role": "SEASONING"},
+      {"id": "lime", "amount": 2, "unit": "TBSP", "role": "SEASONING", "note": {"sk": "šťava", "en": "juice"}},
+      {"id": "coriander-leaves", "amount": 2, "unit": "TBSP", "role": "SEASONING", "optional": true}
+    ],
+    "steps": [
+      {"sk": "Na oleji speň nakrájanú cibuľu a papriku, pridaj cesnak a korenie a minútu opekaj.", "en": "Soften the chopped onion and pepper in the oil, add the garlic and spices and fry for a minute."},
+      {"sk": "Pridaj paradajky, fazuľu, kukuricu, bujón a 700 ml vody a var 20 minút.", "en": "Add the tomatoes, beans, corn, stock cube and 700 ml water and simmer for 20 minutes.", "timerSeconds": 1200},
+      {"sk": "Tretinu polievky rozmixuj a vráť späť, aby zhustla. Dochuť limetkovou šťavou a posyp koriandrom.", "en": "Blend a third of the soup and stir it back in to thicken. Finish with lime juice and coriander."}
+    ]
+  },
+  {
+    "id": "kuracie-fajitas",
+    "title": {"sk": "Kuracie fajitas s paprikou", "en": "Chicken fajitas with peppers"},
+    "description": {"sk": "Pikantné prúžky kuracieho mäsa a papriky zabalené v tortille.", "en": "Spicy strips of chicken and pepper wrapped in tortillas."},
+    "cuisine": "MEXICAN",
+    "mealTypes": ["LUNCH", "DINNER"],
+    "totalTimeMin": 25,
+    "activeTimeMin": 20,
+    "difficulty": 1,
+    "servings": 3,
+    "equipment": ["STOVE"],
+    "ingredients": [
+      {"id": "chicken-breast", "amount": 500, "unit": "G", "role": "MAIN"},
+      {"id": "bell-pepper", "amount": 3, "unit": "PCS", "role": "MAIN"},
+      {"id": "red-onion", "amount": 1, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "tortilla", "amount": 6, "unit": "PCS", "role": "MAIN"},
+      {"id": "smoked-paprika", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "cumin", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "chili-powder", "amount": 0.5, "unit": "TSP", "role": "SEASONING"},
+      {"id": "garlic-powder", "amount": 0.5, "unit": "TSP", "role": "SEASONING"},
+      {"id": "lime", "amount": 2, "unit": "TBSP", "role": "SEASONING", "note": {"sk": "šťava", "en": "juice"}},
+      {"id": "sunflower-oil", "amount": 2, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "salt", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "sour-cream", "amount": 100, "unit": "G", "role": "SECONDARY", "optional": true, "note": {"sk": "na podávanie", "en": "to serve"}}
+    ],
+    "steps": [
+      {"sk": "Mäso nakrájaj na prúžky a premiešaj s korením, soľou, limetkovou šťavou a lyžicou oleja.", "en": "Slice the chicken into strips and toss with the spices, salt, lime juice and a tablespoon of oil."},
+      {"sk": "Na rozpálenej panvici opekaj mäso 6 minút, kým nie je prepečené. Odlož ho.", "en": "Fry the chicken in a hot pan for 6 minutes until cooked through. Set aside.", "timerSeconds": 360},
+      {"sk": "Na zvyšnom oleji opekaj papriku a cibuľu nakrájané na prúžky 5 minút, aby zostali chrumkavé. Vráť mäso.", "en": "Fry the sliced peppers and onion in the remaining oil for 5 minutes so they stay crisp. Return the chicken.", "timerSeconds": 300},
+      {"sk": "Podávaj v zohriatych tortillách s kyslou smotanou.", "en": "Serve in warm tortillas with sour cream."}
+    ]
+  },
+  {
+    "id": "arroz-con-pollo",
+    "title": {"sk": "Arroz con pollo – kura s ryžou", "en": "Arroz con pollo: chicken and rice"},
+    "description": {"sk": "Latinskoamerická klasika z jedného hrnca so zeleninou a korením.", "en": "A Latin American one-pot classic with vegetables and spices."},
+    "cuisine": "LATIN_AMERICAN",
+    "mealTypes": ["LUNCH", "DINNER"],
+    "totalTimeMin": 50,
+    "activeTimeMin": 20,
+    "difficulty": 1,
+    "servings": 4,
+    "equipment": ["STOVE"],
+    "tags": ["ONE_POT", "MEAL_PREP"],
+    "ingredients": [
+      {"id": "chicken-thigh", "amount": 600, "unit": "G", "role": "MAIN"},
+      {"id": "rice", "amount": 300, "unit": "G", "role": "MAIN"},
+      {"id": "onion", "amount": 1, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "bell-pepper", "amount": 1, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "garlic", "amount": 3, "unit": "PCS", "role": "SEASONING"},
+      {"id": "peas", "amount": 150, "unit": "G", "role": "SECONDARY"},
+      {"id": "tomato-paste", "amount": 2, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "cumin", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "turmeric", "amount": 0.5, "unit": "TSP", "role": "SEASONING"},
+      {"id": "oregano", "amount": 0.5, "unit": "TSP", "role": "SEASONING"},
+      {"id": "stock-chicken", "amount": 2, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "olive-oil", "amount": 2, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "coriander-leaves", "amount": 2, "unit": "TBSP", "role": "SEASONING", "optional": true},
+      {"id": "lime", "amount": 1, "unit": "PCS", "role": "SEASONING", "optional": true}
+    ],
+    "steps": [
+      {"sk": "Na oleji opeč mäso zo všetkých strán dozlatista, asi 6 minút. Pridaj cibuľu, papriku a cesnak a opekaj 4 minúty.", "en": "Brown the chicken on all sides in the oil, about 6 minutes. Add the onion, pepper and garlic and fry for 4 minutes.", "timerSeconds": 600},
+      {"sk": "Vmiešaj pretlak, korenie a ryžu a minútu opekaj.", "en": "Stir in the tomato paste, spices and rice and fry for a minute."},
+      {"sk": "Zalej 700 ml vody s bujónmi, prikry a var na miernom ohni 20 minút.", "en": "Add 700 ml water with the stock cubes, cover and simmer over low heat for 20 minutes.", "timerSeconds": 1200},
+      {"sk": "Pridaj hrášok, prikry a nechaj 5 minút dôjsť. Kura má byť vnútri prepečené (75 °C). Podávaj s koriandrom a limetkou.", "en": "Add the peas, cover and leave for 5 minutes to finish. The chicken should be cooked through (75 °C). Serve with coriander and lime.", "timerSeconds": 300}
+    ]
+  },
+  {
+    "id": "steak-s-chimichurri",
+    "title": {"sk": "Steak s chimichurri a pečenými zemiakmi", "en": "Steak with chimichurri and roast potatoes"},
+    "description": {"sk": "Argentínska bylinková omáčka k šťavnatému steaku.", "en": "An Argentine herb sauce for a juicy steak."},
+    "cuisine": "LATIN_AMERICAN",
+    "mealTypes": ["LUNCH", "DINNER"],
+    "totalTimeMin": 45,
+    "activeTimeMin": 20,
+    "difficulty": 2,
+    "servings": 2,
+    "equipment": ["STOVE", "OVEN"],
+    "ingredients": [
+      {"id": "beef-steak", "amount": 400, "unit": "G", "role": "MAIN"},
+      {"id": "potato", "amount": 500, "unit": "G", "role": "SECONDARY"},
+      {"id": "parsley", "amount": 1, "unit": "PCS", "role": "SECONDARY", "note": {"sk": "zväzok", "en": "bunch"}},
+      {"id": "garlic", "amount": 2, "unit": "PCS", "role": "SEASONING"},
+      {"id": "oregano", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "chili-flakes", "amount": 0.5, "unit": "TSP", "role": "SEASONING"},
+      {"id": "vinegar", "amount": 2, "unit": "TBSP", "role": "SEASONING"},
+      {"id": "olive-oil", "amount": 5, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "salt", "amount": 1.5, "unit": "TSP", "role": "SEASONING"},
+      {"id": "black-pepper", "amount": 0.5, "unit": "TSP", "role": "SEASONING"}
+    ],
+    "steps": [
+      {"sk": "Rúru predhrej na 220 °C. Zemiaky nakrájaj na mesiačiky, premiešaj s 2 lyžicami oleja a polovicou soli a peč 30 minút.", "en": "Preheat the oven to 220 °C. Cut the potatoes into wedges, toss with 2 tablespoons of oil and half the salt and roast for 30 minutes.", "timerSeconds": 1800},
+      {"sk": "Chimichurri: nadrobno nasekaj petržlen a cesnak a zmiešaj s oreganom, čili, octom, 2 lyžicami oleja a štipkou soli.", "en": "Chimichurri: finely chop the parsley and garlic and mix with the oregano, chili, vinegar, 2 tablespoons of oil and a pinch of salt."},
+      {"sk": "Steaky nechaj 20 minút temperovať, osuš, osoľ a opeč na rozpálenej panvici so zvyšným olejom 3 minúty z každej strany na medium (55–57 °C v strede).", "en": "Bring the steaks to room temperature for 20 minutes, pat dry, salt and sear in a very hot pan with the remaining oil for 3 minutes per side for medium (55–57 °C in the centre).", "timerSeconds": 360},
+      {"sk": "Nechaj 5 minút odpočinúť, nakrájaj proti vláknam, okoreň a podávaj so zemiakmi a chimichurri.", "en": "Rest for 5 minutes, slice against the grain, season with pepper and serve with the potatoes and chimichurri.", "timerSeconds": 300}
+    ]
+  },
+  {
+    "id": "trhane-bravcove-z-pomaleho-hrnca",
+    "title": {"sk": "Trhané bravčové z pomalého hrnca", "en": "Slow-cooker pulled pork"},
+    "description": {"sk": "Mäso, ktoré sa po ôsmich hodinách samo rozpadá – do žemle s coleslawom.", "en": "Pork that falls apart after eight hours, for buns with coleslaw."},
+    "cuisine": "AMERICAN",
+    "mealTypes": ["LUNCH", "DINNER"],
+    "totalTimeMin": 490,
+    "activeTimeMin": 20,
+    "difficulty": 1,
+    "servings": 8,
+    "equipment": ["SLOW_COOKER"],
+    "tags": ["MEAL_PREP", "FREEZER_FRIENDLY"],
+    "pairsWith": ["coleslaw"],
+    "ingredients": [
+      {"id": "pork-shoulder", "amount": 1200, "unit": "G", "role": "MAIN"},
+      {"id": "onion", "amount": 2, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "smoked-paprika", "amount": 1, "unit": "TBSP", "role": "SEASONING"},
+      {"id": "brown-sugar", "amount": 2, "unit": "TBSP", "role": "SEASONING"},
+      {"id": "garlic-powder", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "cumin", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "salt", "amount": 2, "unit": "TSP", "role": "SEASONING"},
+      {"id": "ketchup", "amount": 4, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "vinegar", "amount": 2, "unit": "TBSP", "role": "SEASONING"},
+      {"id": "mustard", "amount": 1, "unit": "TBSP", "role": "SEASONING"},
+      {"id": "burger-bun", "amount": 8, "unit": "PCS", "role": "MAIN"}
+    ],
+    "steps": [
+      {"sk": "Paprikou, polovicou cukru, cesnakom, rímskym kmínom a soľou potri mäso zo všetkých strán.", "en": "Rub the pork all over with the paprika, half the sugar, the garlic powder, cumin and salt."},
+      {"sk": "Na dno pomalého hrnca daj cibuľu nakrájanú na kolieska, navrch mäso a podlej 100 ml vody.", "en": "Lay the sliced onions in the slow cooker, put the pork on top and add 100 ml water."},
+      {"sk": "Var na stupni LOW 8 hodín, kým sa mäso nedá ľahko roztrhať vidličkou (vnútri aspoň 90 °C).", "en": "Cook on LOW for 8 hours until the pork pulls apart easily with a fork (at least 90 °C inside)."},
+      {"sk": "Mäso vyber, natrhaj vidličkami a premiešaj s kečupom, octom, horčicou, zvyšným cukrom a trochou výpeku.", "en": "Lift out the pork, shred it with forks and mix with the ketchup, vinegar, mustard, remaining sugar and a little of the cooking juices."},
+      {"sk": "Podávaj v opečených žemliach, napríklad s coleslawom.", "en": "Serve in toasted buns, for example with coleslaw."}
+    ]
+  },
+  {
+    "id": "coleslaw",
+    "title": {"sk": "Coleslaw – kapustový šalát", "en": "Coleslaw"},
+    "description": {"sk": "Chrumkavý šalát z kapusty a mrkvy s ľahkým jogurtovým dresingom.", "en": "A crunchy cabbage and carrot salad with a light yogurt dressing."},
+    "cuisine": "AMERICAN",
+    "mealTypes": ["LUNCH", "DINNER", "SNACK"],
+    "totalTimeMin": 15,
+    "activeTimeMin": 15,
+    "difficulty": 1,
+    "servings": 6,
+    "tags": ["NO_COOK", "MEAL_PREP"],
+    "pairsWith": ["trhane-bravcove-z-pomaleho-hrnca"],
+    "ingredients": [
+      {"id": "cabbage", "amount": 0.5, "unit": "PCS", "role": "MAIN"},
+      {"id": "carrot", "amount": 2, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "mayonnaise", "amount": 3, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "yogurt", "amount": 150, "unit": "G", "role": "SECONDARY"},
+      {"id": "vinegar", "amount": 1, "unit": "TBSP", "role": "SEASONING"},
+      {"id": "mustard", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "sugar", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "salt", "amount": 1, "unit": "TSP", "role": "SEASONING"}
+    ],
+    "steps": [
+      {"sk": "Kapustu nakrájaj na tenké rezance a mrkvu nastrúhaj. Osoľ a premiešaj.", "en": "Finely shred the cabbage and grate the carrots. Salt and toss."},
+      {"sk": "Majonézu zmiešaj s jogurtom, octom, horčicou a cukrom.", "en": "Mix the mayonnaise with the yogurt, vinegar, mustard and sugar."},
+      {"sk": "Zmiešaj so zeleninou a nechaj aspoň 30 minút odležať v chladničke.", "en": "Toss with the vegetables and chill for at least 30 minutes."}
+    ]
+  },
+  {
+    "id": "kuracie-stripsy-z-fritezy",
+    "title": {"sk": "Chrumkavé kuracie stripsy z teplovzdušnej fritézy", "en": "Crispy air-fryer chicken strips"},
+    "description": {"sk": "Ako vyprážané, ale len s lyžičkou oleja.", "en": "Like deep-fried, with only a teaspoon of oil."},
+    "cuisine": "AMERICAN",
+    "mealTypes": ["LUNCH", "DINNER"],
+    "totalTimeMin": 25,
+    "activeTimeMin": 15,
+    "difficulty": 1,
+    "servings": 2,
+    "equipment": ["AIR_FRYER"],
+    "tags": ["STUDENT"],
+    "ingredients": [
+      {"id": "chicken-breast", "amount": 400, "unit": "G", "role": "MAIN"},
+      {"id": "breadcrumbs", "amount": 60, "unit": "G", "role": "SECONDARY"},
+      {"id": "egg", "amount": 1, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "wheat-flour", "amount": 2, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "smoked-paprika", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "garlic-powder", "amount": 0.5, "unit": "TSP", "role": "SEASONING"},
+      {"id": "salt", "amount": 0.75, "unit": "TSP", "role": "SEASONING"},
+      {"id": "sunflower-oil", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "ketchup", "amount": 2, "unit": "TBSP", "role": "SEASONING", "optional": true, "note": {"sk": "na podávanie", "en": "to serve"}}
+    ],
+    "steps": [
+      {"sk": "Mäso nakrájaj na prúžky hrubé ako prst a osoľ.", "en": "Cut the chicken into finger-thick strips and salt them."},
+      {"sk": "Strúhanku zmiešaj s paprikou a cesnakom. Prúžky obaľ v múke, rozšľahanom vajci a strúhanke.", "en": "Mix the breadcrumbs with the paprika and garlic powder. Coat the strips in flour, beaten egg and the breadcrumbs."},
+      {"sk": "Košík fritézy potri olejom, poukladaj prúžky v jednej vrstve a peč pri 200 °C 10 až 12 minút, v polovici otoč, kým nie sú zlatisté a vnútri biele (74 °C).", "en": "Oil the air fryer basket, lay the strips in a single layer and cook at 200 °C for 10–12 minutes, turning halfway, until golden and white inside (74 °C).", "timerSeconds": 660},
+      {"sk": "Podávaj s kečupom alebo jogurtovým dipom.", "en": "Serve with ketchup or a yogurt dip."}
+    ]
   }
 ]

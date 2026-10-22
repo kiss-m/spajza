@@ -140,5 +140,101 @@
       {"sk": "Pridaj ružičky karfiolu, nakrájané paradajky, soľ a 100 ml vody, prikry a var na miernom ohni 15 až 20 minút, kým zelenina nezmäkne.", "en": "Add the cauliflower florets, chopped tomatoes, salt and 100 ml water, cover and cook over low heat for 15–20 minutes until tender.", "timerSeconds": 1080},
       {"sk": "Vmiešaj garam masalu a posyp koriandrom.", "en": "Stir in the garam masala and sprinkle with coriander."}
     ]
+  },
+  {
+    "id": "palak-tofu",
+    "title": {"sk": "Palak tofu – špenátové curry s tofu", "en": "Palak tofu: spinach curry with tofu"},
+    "description": {"sk": "Rastlinná obdoba palak paneer: krémový špenát s korením a opečeným tofu.", "en": "A plant-based take on palak paneer: creamy spiced spinach with fried tofu."},
+    "cuisine": "INDIAN",
+    "mealTypes": ["LUNCH", "DINNER"],
+    "totalTimeMin": 35,
+    "activeTimeMin": 20,
+    "difficulty": 1,
+    "servings": 3,
+    "equipment": ["STOVE", "BLENDER"],
+    "tags": ["MEAL_PREP"],
+    "ingredients": [
+      {"id": "tofu", "amount": 400, "unit": "G", "role": "MAIN"},
+      {"id": "spinach", "amount": 500, "unit": "G", "role": "MAIN"},
+      {"id": "onion", "amount": 1, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "garlic", "amount": 3, "unit": "PCS", "role": "SEASONING"},
+      {"id": "ginger", "amount": 15, "unit": "G", "role": "SEASONING"},
+      {"id": "cumin", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "garam-masala", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "turmeric", "amount": 0.5, "unit": "TSP", "role": "SEASONING"},
+      {"id": "chili-powder", "amount": 0.5, "unit": "TSP", "role": "SEASONING"},
+      {"id": "coconut-milk", "amount": 150, "unit": "ML", "role": "SECONDARY"},
+      {"id": "sunflower-oil", "amount": 3, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "salt", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "basmati-rice", "amount": 225, "unit": "G", "role": "MAIN"}
+    ],
+    "steps": [
+      {"sk": "Uvar ryžu. Tofu nakrájaj na kocky a na polovici oleja ho opeč dozlatista. Odlož ho.", "en": "Cook the rice. Cube the tofu and fry it in half the oil until golden. Set aside."},
+      {"sk": "Špenát nechaj v hrnci s lyžicou vody zavädnúť, asi 3 minúty, a rozmixuj ho.", "en": "Wilt the spinach in a pot with a spoonful of water, about 3 minutes, then blend it.", "timerSeconds": 180},
+      {"sk": "Na zvyšnom oleji speň cibuľu, pridaj cesnak, zázvor a korenie a minútu opekaj.", "en": "Soften the onion in the remaining oil, add the garlic, ginger and spices and fry for a minute."},
+      {"sk": "Pridaj špenát, kokosové mlieko a soľ, povar 5 minút, vmiešaj tofu a podávaj s ryžou.", "en": "Add the spinach, coconut milk and salt, simmer for 5 minutes, stir in the tofu and serve with the rice.", "timerSeconds": 300}
+    ]
+  },
+  {
+    "id": "rajma",
+    "title": {"sk": "Rajma – curry z červenej fazule", "en": "Rajma: red kidney bean curry"},
+    "description": {"sk": "Severoindické domáce curry, sýte a lacné.", "en": "A North Indian home-style curry, filling and cheap."},
+    "cuisine": "INDIAN",
+    "mealTypes": ["LUNCH", "DINNER"],
+    "totalTimeMin": 40,
+    "activeTimeMin": 15,
+    "difficulty": 1,
+    "servings": 4,
+    "equipment": ["STOVE"],
+    "tags": ["STUDENT", "MEAL_PREP", "FREEZER_FRIENDLY"],
+    "ingredients": [
+      {"id": "red-beans", "amount": 480, "unit": "G", "role": "MAIN", "note": {"sk": "odkvapkaná", "en": "drained"}},
+      {"id": "onion", "amount": 2, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "garlic", "amount": 3, "unit": "PCS", "role": "SEASONING"},
+      {"id": "ginger", "amount": 15, "unit": "G", "role": "SEASONING"},
+      {"id": "canned-tomatoes", "amount": 400, "unit": "G", "role": "MAIN"},
+      {"id": "cumin", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "coriander-ground", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "garam-masala", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "chili-powder", "amount": 0.5, "unit": "TSP", "role": "SEASONING"},
+      {"id": "sunflower-oil", "amount": 2, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "salt", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "basmati-rice", "amount": 250, "unit": "G", "role": "MAIN"},
+      {"id": "coriander-leaves", "amount": 2, "unit": "TBSP", "role": "SEASONING", "optional": true}
+    ],
+    "steps": [
+      {"sk": "Na oleji pomaly opekaj nadrobno nakrájanú cibuľu do zlatista, asi 8 minút.", "en": "Slowly fry the finely chopped onions in the oil until golden, about 8 minutes.", "timerSeconds": 480},
+      {"sk": "Pridaj cesnak, zázvor a korenie okrem garam masaly a minútu opekaj. Prilej paradajky a var 8 minút.", "en": "Add the garlic, ginger and spices except the garam masala and fry for a minute. Add the tomatoes and simmer for 8 minutes.", "timerSeconds": 480},
+      {"sk": "Pridaj prepláchnutú fazuľu, soľ a 250 ml vody a var 15 minút. Časť fazule roztlač. Medzitým uvar ryžu.", "en": "Add the rinsed beans, salt and 250 ml water and simmer for 15 minutes, mashing some of the beans. Meanwhile, cook the rice.", "timerSeconds": 900},
+      {"sk": "Vmiešaj garam masalu a podávaj s ryžou a koriandrom.", "en": "Stir in the garam masala and serve with the rice and coriander."}
+    ]
+  },
+  {
+    "id": "masala-omeleta",
+    "title": {"sk": "Masala omeleta", "en": "Masala omelette"},
+    "description": {"sk": "Indická omeleta s cibuľou, paradajkou, čili a koriandrom.", "en": "An Indian omelette with onion, tomato, chili and coriander."},
+    "cuisine": "INDIAN",
+    "mealTypes": ["BREAKFAST", "DINNER"],
+    "totalTimeMin": 12,
+    "activeTimeMin": 12,
+    "difficulty": 1,
+    "servings": 1,
+    "equipment": ["STOVE"],
+    "tags": ["STUDENT"],
+    "ingredients": [
+      {"id": "egg", "amount": 3, "unit": "PCS", "role": "MAIN"},
+      {"id": "onion", "amount": 0.25, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "tomato", "amount": 0.5, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "chili-pepper", "amount": 0.5, "unit": "PCS", "role": "SEASONING"},
+      {"id": "coriander-leaves", "amount": 1, "unit": "TBSP", "role": "SEASONING"},
+      {"id": "turmeric", "amount": 1, "unit": "PINCH", "role": "SEASONING"},
+      {"id": "salt", "amount": 1, "unit": "PINCH", "role": "SEASONING"},
+      {"id": "sunflower-oil", "amount": 1, "unit": "TSP", "role": "SEASONING"}
+    ],
+    "steps": [
+      {"sk": "Cibuľu, paradajku a čili nakrájaj nadrobno.", "en": "Finely chop the onion, tomato and chili."},
+      {"sk": "Vajcia rozšľahaj s kurkumou, soľou a koriandrom a vmiešaj zeleninu.", "en": "Beat the eggs with the turmeric, salt and coriander and stir in the vegetables."},
+      {"sk": "Vlej na rozohriaty olej a peč na strednom ohni 2 minúty, otoč a dopeč minútu.", "en": "Pour into the hot oil and cook over medium heat for 2 minutes, flip and cook for another minute.", "timerSeconds": 180}
+    ]
   }
 ]

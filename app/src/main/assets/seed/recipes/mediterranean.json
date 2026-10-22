@@ -292,5 +292,235 @@
       {"sk": "Pridaj cícer a var ďalších 5 minút, kým batát nezmäkne.", "en": "Add the chickpeas and simmer for 5 more minutes until the sweet potato is soft.", "timerSeconds": 300},
       {"sk": "Kuskus zalej 250 ml vriacej osolenej vody, prikry na 5 minút a rozpuč vidličkou. Podávaj s tagine a koriandrom.", "en": "Pour 250 ml boiling salted water over the couscous, cover for 5 minutes and fluff with a fork. Serve with the tagine and coriander.", "timerSeconds": 300}
     ]
+  },
+  {
+    "id": "musaka",
+    "title": {"sk": "Grécka musaka", "en": "Greek moussaka"},
+    "description": {"sk": "Vrstvy baklažánu, korenistého mäsa a bešamelu, zapečené dozlatista.", "en": "Layers of eggplant, spiced meat and béchamel, baked until golden."},
+    "cuisine": "GREEK_MEDITERRANEAN",
+    "mealTypes": ["LUNCH", "DINNER"],
+    "totalTimeMin": 110,
+    "activeTimeMin": 45,
+    "difficulty": 3,
+    "servings": 6,
+    "equipment": ["STOVE", "OVEN"],
+    "tags": ["MEAL_PREP", "COMFORT"],
+    "ingredients": [
+      {"id": "eggplant", "amount": 3, "unit": "PCS", "role": "MAIN"},
+      {"id": "ground-beef", "amount": 500, "unit": "G", "role": "MAIN"},
+      {"id": "onion", "amount": 1, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "garlic", "amount": 2, "unit": "PCS", "role": "SEASONING"},
+      {"id": "canned-tomatoes", "amount": 400, "unit": "G", "role": "SECONDARY"},
+      {"id": "cinnamon", "amount": 0.5, "unit": "TSP", "role": "SEASONING"},
+      {"id": "oregano", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "olive-oil", "amount": 4, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "butter", "amount": 50, "unit": "G", "role": "SECONDARY"},
+      {"id": "wheat-flour", "amount": 50, "unit": "G", "role": "SECONDARY"},
+      {"id": "milk", "amount": 500, "unit": "ML", "role": "SECONDARY"},
+      {"id": "egg", "amount": 1, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "parmesan", "amount": 40, "unit": "G", "role": "SECONDARY"},
+      {"id": "nutmeg", "amount": 1, "unit": "PINCH", "role": "SEASONING"},
+      {"id": "salt", "amount": 1.5, "unit": "TSP", "role": "SEASONING"}
+    ],
+    "steps": [
+      {"sk": "Rúru predhrej na 200 °C. Baklažány nakrájaj na 1 cm plátky, potri 3 lyžicami oleja, osoľ a peč na plechu 20 minút.", "en": "Preheat the oven to 200 °C. Slice the eggplants 1 cm thick, brush with 3 tablespoons of oil, salt and bake on a tray for 20 minutes.", "timerSeconds": 1200},
+      {"sk": "Na zvyšnom oleji speň cibuľu s cesnakom, pridaj mäso a opekaj, kým nie je bez ružovej farby. Pridaj paradajky, škoricu, oregano a soľ a nechaj 20 minút dusiť.", "en": "Soften the onion and garlic in the remaining oil, add the beef and brown until no pink remains. Add the tomatoes, cinnamon, oregano and salt and simmer for 20 minutes.", "timerSeconds": 1200},
+      {"sk": "Bešamel: na masle opraž múku, vmiešaj mlieko a var 5 minút. Stiahni z ohňa a vmiešaj vajce, polovicu syra a muškátový oriešok.", "en": "Béchamel: cook the flour in the butter, whisk in the milk and simmer for 5 minutes. Off the heat, stir in the egg, half the cheese and the nutmeg.", "timerSeconds": 300},
+      {"sk": "Rúru stiahni na 180 °C. Vrstvi baklažán, mäso, baklažán a navrch bešamel, posyp zvyšným syrom.", "en": "Lower the oven to 180 °C. Layer eggplant, meat, eggplant and finish with béchamel; sprinkle with the remaining cheese."},
+      {"sk": "Peč 40 minút dozlatista a pred krájaním nechaj 15 minút odpočinúť.", "en": "Bake for 40 minutes until golden and rest for 15 minutes before cutting.", "timerSeconds": 2400}
+    ]
+  },
+  {
+    "id": "fasolada",
+    "title": {"sk": "Fasolada – grécka fazuľová polievka", "en": "Fasolada: Greek white bean soup"},
+    "description": {"sk": "Hustá rastlinná polievka s olivovým olejom a zeleninou.", "en": "A thick plant-based soup with olive oil and vegetables."},
+    "cuisine": "GREEK_MEDITERRANEAN",
+    "mealTypes": ["LUNCH", "DINNER"],
+    "totalTimeMin": 40,
+    "activeTimeMin": 10,
+    "difficulty": 1,
+    "servings": 4,
+    "equipment": ["STOVE"],
+    "tags": ["STUDENT", "MEAL_PREP", "ONE_POT", "FREEZER_FRIENDLY"],
+    "ingredients": [
+      {"id": "white-beans", "amount": 480, "unit": "G", "role": "MAIN", "note": {"sk": "odkvapkaná", "en": "drained"}},
+      {"id": "carrot", "amount": 2, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "celery", "amount": 2, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "onion", "amount": 1, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "canned-tomatoes", "amount": 400, "unit": "G", "role": "SECONDARY"},
+      {"id": "tomato-paste", "amount": 1, "unit": "TBSP", "role": "SEASONING"},
+      {"id": "olive-oil", "amount": 3, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "oregano", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "bay-leaf", "amount": 1, "unit": "PCS", "role": "SEASONING"},
+      {"id": "salt", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "black-pepper", "amount": 0.5, "unit": "TSP", "role": "SEASONING"}
+    ],
+    "steps": [
+      {"sk": "Na olivovom oleji speň nakrájanú cibuľu, mrkvu a zeler, asi 8 minút.", "en": "Soften the chopped onion, carrots and celery in the olive oil, about 8 minutes.", "timerSeconds": 480},
+      {"sk": "Pridaj pretlak, paradajky, fazuľu, bobkový list, oregano, soľ a 1 l vody a var 25 minút.", "en": "Add the tomato paste, tomatoes, beans, bay leaf, oregano, salt and 1 l water and simmer for 25 minutes.", "timerSeconds": 1500},
+      {"sk": "Okoreň a podávaj pokvapkané olivovým olejom, s chlebom.", "en": "Season with pepper and serve drizzled with olive oil, with bread."}
+    ]
+  },
+  {
+    "id": "gemista",
+    "title": {"sk": "Gemista – zelenina plnená ryžou a bylinkami", "en": "Gemista: vegetables stuffed with herbed rice"},
+    "description": {"sk": "Grécke papriky a paradajky plnené ryžou s mätou a petržlenom, pečené v rúre.", "en": "Greek peppers and tomatoes stuffed with mint and parsley rice, baked in the oven."},
+    "cuisine": "GREEK_MEDITERRANEAN",
+    "mealTypes": ["LUNCH", "DINNER"],
+    "totalTimeMin": 90,
+    "activeTimeMin": 30,
+    "difficulty": 2,
+    "servings": 4,
+    "equipment": ["OVEN"],
+    "tags": ["MEAL_PREP"],
+    "ingredients": [
+      {"id": "bell-pepper", "amount": 4, "unit": "PCS", "role": "MAIN"},
+      {"id": "tomato", "amount": 4, "unit": "PCS", "role": "MAIN"},
+      {"id": "rice", "amount": 200, "unit": "G", "role": "MAIN"},
+      {"id": "onion", "amount": 1, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "garlic", "amount": 2, "unit": "PCS", "role": "SEASONING"},
+      {"id": "parsley", "amount": 1, "unit": "PCS", "role": "SECONDARY", "note": {"sk": "zväzok", "en": "bunch"}},
+      {"id": "mint", "amount": 2, "unit": "TBSP", "role": "SEASONING"},
+      {"id": "olive-oil", "amount": 5, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "passata", "amount": 200, "unit": "G", "role": "SECONDARY"},
+      {"id": "potato", "amount": 400, "unit": "G", "role": "SECONDARY"},
+      {"id": "salt", "amount": 1.5, "unit": "TSP", "role": "SEASONING"},
+      {"id": "black-pepper", "amount": 0.5, "unit": "TSP", "role": "SEASONING"}
+    ],
+    "steps": [
+      {"sk": "Rúru predhrej na 190 °C. Papriky a paradajky zbav vrchnákov, paradajky vydlabaj a dužinu nasekaj.", "en": "Preheat the oven to 190 °C. Cut the tops off the peppers and tomatoes, scoop out the tomatoes and chop the flesh."},
+      {"sk": "Zmiešaj surovú ryžu, paradajkovú dužinu, nadrobno nakrájanú cibuľu, cesnak, bylinky, 3 lyžice oleja, soľ a korenie.", "en": "Mix the raw rice with the tomato flesh, finely chopped onion, garlic, herbs, 3 tablespoons of oil, salt and pepper."},
+      {"sk": "Naplň zeleninu do troch štvrtín, prikry vrchnákmi a poukladaj do misy. Medzi ne daj mesiačiky zemiakov.", "en": "Fill the vegetables three-quarters full, replace the tops and arrange in a dish with potato wedges between them."},
+      {"sk": "Zalej passatou zriedenou 200 ml vody, pokvapkaj zvyšným olejom a peč prikryté 40 minút, potom odkryté ešte 30 minút, kým ryža nie je mäkká.", "en": "Pour over the passata diluted with 200 ml water, drizzle with the remaining oil and bake covered for 40 minutes, then uncovered for 30 more minutes until the rice is tender.", "timerSeconds": 4200}
+    ]
+  },
+  {
+    "id": "kuracia-shawarma-miska",
+    "title": {"sk": "Kuracia shawarma miska s ryžou", "en": "Chicken shawarma rice bowl"},
+    "description": {"sk": "Korenisté kuracie stehná s cesnakovým jogurtom, ryžou a šalátom.", "en": "Spiced chicken thighs with garlic yogurt, rice and salad."},
+    "cuisine": "MIDDLE_EASTERN",
+    "mealTypes": ["LUNCH", "DINNER"],
+    "totalTimeMin": 45,
+    "activeTimeMin": 20,
+    "difficulty": 1,
+    "servings": 4,
+    "equipment": ["STOVE"],
+    "tags": ["MEAL_PREP"],
+    "ingredients": [
+      {"id": "chicken-thigh", "amount": 600, "unit": "G", "role": "MAIN"},
+      {"id": "yogurt", "amount": 250, "unit": "G", "role": "SECONDARY"},
+      {"id": "garlic", "amount": 3, "unit": "PCS", "role": "SEASONING"},
+      {"id": "lemon", "amount": 3, "unit": "TBSP", "role": "SEASONING", "note": {"sk": "šťava", "en": "juice"}},
+      {"id": "cumin", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "smoked-paprika", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "coriander-ground", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "turmeric", "amount": 0.5, "unit": "TSP", "role": "SEASONING"},
+      {"id": "cinnamon", "amount": 0.25, "unit": "TSP", "role": "SEASONING"},
+      {"id": "olive-oil", "amount": 2, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "salt", "amount": 1.5, "unit": "TSP", "role": "SEASONING"},
+      {"id": "rice", "amount": 250, "unit": "G", "role": "MAIN"},
+      {"id": "cucumber", "amount": 0.5, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "tomato", "amount": 2, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "red-onion", "amount": 0.5, "unit": "PCS", "role": "SECONDARY"}
+    ],
+    "steps": [
+      {"sk": "Mäso nakrájaj na prúžky a premiešaj s olejom, 2 lyžicami citrónovej šťavy, korením, 1 lyžičkou soli a 2 lyžicami jogurtu. Nechaj 15 minút marinovať.", "en": "Slice the chicken into strips and mix with the oil, 2 tablespoons of lemon juice, the spices, 1 teaspoon of salt and 2 tablespoons of the yogurt. Marinate for 15 minutes.", "timerSeconds": 900},
+      {"sk": "Uvar ryžu. Zvyšný jogurt zmiešaj s prelisovaným cesnakom, citrónovou šťavou a soľou.", "en": "Cook the rice. Mix the remaining yogurt with the crushed garlic, lemon juice and salt."},
+      {"sk": "Na rozpálenej panvici opekaj mäso 8 až 10 minút, kým nie je na okrajoch chrumkavé a vnútri prepečené (75 °C).", "en": "Fry the chicken in a hot pan for 8–10 minutes until crisp at the edges and cooked through (75 °C).", "timerSeconds": 540},
+      {"sk": "Do misiek daj ryžu, mäso, nakrájanú zeleninu a cesnakový jogurt.", "en": "Fill bowls with rice, chicken, chopped vegetables and garlic yogurt."}
+    ]
+  },
+  {
+    "id": "tabouleh",
+    "title": {"sk": "Tabouleh s bulgurom a bylinkami", "en": "Tabbouleh with bulgur and herbs"},
+    "description": {"sk": "Libanonský šalát, v ktorom hlavnú úlohu hrá petržlen.", "en": "A Lebanese salad where parsley is the star."},
+    "cuisine": "MIDDLE_EASTERN",
+    "mealTypes": ["LUNCH", "DINNER", "SNACK"],
+    "totalTimeMin": 25,
+    "activeTimeMin": 20,
+    "difficulty": 1,
+    "servings": 3,
+    "equipment": ["STOVE"],
+    "tags": ["MEAL_PREP", "NO_COOK"],
+    "ingredients": [
+      {"id": "bulgur", "amount": 100, "unit": "G", "role": "MAIN"},
+      {"id": "parsley", "amount": 2, "unit": "PCS", "role": "MAIN", "note": {"sk": "zväzky", "en": "bunches"}},
+      {"id": "mint", "amount": 3, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "tomato", "amount": 3, "unit": "PCS", "role": "MAIN"},
+      {"id": "cucumber", "amount": 0.5, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "spring-onion", "amount": 3, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "lemon", "amount": 4, "unit": "TBSP", "role": "SEASONING", "note": {"sk": "šťava", "en": "juice"}},
+      {"id": "olive-oil", "amount": 4, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "salt", "amount": 1, "unit": "TSP", "role": "SEASONING"}
+    ],
+    "steps": [
+      {"sk": "Bulgur zalej 200 ml vriacej vody, prikry a nechaj 15 minút napučať. Rozpuč vidličkou a nechaj vychladnúť.", "en": "Pour 200 ml boiling water over the bulgur, cover and leave for 15 minutes. Fluff with a fork and let it cool.", "timerSeconds": 900},
+      {"sk": "Petržlen a mätu nasekaj nadrobno, paradajky a uhorku nakrájaj na malé kocky a cibuľku na kolieska.", "en": "Finely chop the parsley and mint, dice the tomatoes and cucumber and slice the spring onions."},
+      {"sk": "Všetko zmiešaj s bulgurom, citrónovou šťavou, olejom a soľou.", "en": "Mix everything with the bulgur, lemon juice, oil and salt."}
+    ]
+  },
+  {
+    "id": "baba-ganoush",
+    "title": {"sk": "Baba ganoush – dymový baklažánový dip", "en": "Baba ganoush: smoky eggplant dip"},
+    "description": {"sk": "Krémový dip z pečeného baklažánu s tahini a citrónom.", "en": "A creamy dip of roasted eggplant with tahini and lemon."},
+    "cuisine": "MIDDLE_EASTERN",
+    "mealTypes": ["SNACK"],
+    "totalTimeMin": 50,
+    "activeTimeMin": 10,
+    "difficulty": 1,
+    "servings": 4,
+    "equipment": ["OVEN"],
+    "tags": ["MEAL_PREP"],
+    "ingredients": [
+      {"id": "eggplant", "amount": 2, "unit": "PCS", "role": "MAIN"},
+      {"id": "tahini", "amount": 3, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "lemon", "amount": 2, "unit": "TBSP", "role": "SEASONING", "note": {"sk": "šťava", "en": "juice"}},
+      {"id": "garlic", "amount": 1, "unit": "PCS", "role": "SEASONING"},
+      {"id": "olive-oil", "amount": 2, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "cumin", "amount": 0.25, "unit": "TSP", "role": "SEASONING"},
+      {"id": "salt", "amount": 0.5, "unit": "TSP", "role": "SEASONING"},
+      {"id": "pita", "amount": 4, "unit": "PCS", "role": "SECONDARY", "optional": true, "note": {"sk": "na podávanie", "en": "to serve"}}
+    ],
+    "steps": [
+      {"sk": "Rúru predhrej na 220 °C. Baklažány prepichaj vidličkou a peč celé 40 minút, kým úplne nezmäknú a šupka nezuhoľnatie.", "en": "Preheat the oven to 220 °C. Prick the eggplants with a fork and roast them whole for 40 minutes until completely soft and charred.", "timerSeconds": 2400},
+      {"sk": "Nechaj ich vychladnúť, rozkroj a lyžicou vyber dužinu. Nechaj ju 5 minút odkvapkať v sitku.", "en": "Let them cool, halve them and scoop out the flesh. Drain it in a sieve for 5 minutes.", "timerSeconds": 300},
+      {"sk": "Roztlač vidličkou s tahini, citrónovou šťavou, cesnakom, rímskym kmínom a soľou.", "en": "Mash with a fork with the tahini, lemon juice, garlic, cumin and salt."},
+      {"sk": "Pokvapkaj olivovým olejom a podávaj s pitou.", "en": "Drizzle with olive oil and serve with pita."}
+    ]
+  },
+  {
+    "id": "harira",
+    "title": {"sk": "Harira – marocká šošovicovo-cícerová polievka", "en": "Harira: Moroccan lentil and chickpea soup"},
+    "description": {"sk": "Korenistá polievka so zázvorom, škoricou a bylinkami.", "en": "A spiced soup with ginger, cinnamon and herbs."},
+    "cuisine": "NORTH_AFRICAN",
+    "mealTypes": ["LUNCH", "DINNER"],
+    "totalTimeMin": 50,
+    "activeTimeMin": 15,
+    "difficulty": 1,
+    "servings": 6,
+    "equipment": ["STOVE"],
+    "tags": ["MEAL_PREP", "ONE_POT", "FREEZER_FRIENDLY"],
+    "ingredients": [
+      {"id": "red-lentils", "amount": 150, "unit": "G", "role": "MAIN"},
+      {"id": "chickpeas", "amount": 240, "unit": "G", "role": "MAIN", "note": {"sk": "odkvapkaný", "en": "drained"}},
+      {"id": "onion", "amount": 1, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "celery", "amount": 2, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "canned-tomatoes", "amount": 400, "unit": "G", "role": "SECONDARY"},
+      {"id": "tomato-paste", "amount": 1, "unit": "TBSP", "role": "SEASONING"},
+      {"id": "ginger-ground", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "turmeric", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "cinnamon", "amount": 0.5, "unit": "TSP", "role": "SEASONING"},
+      {"id": "stock-vegetable", "amount": 2, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "olive-oil", "amount": 2, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "parsley", "amount": 3, "unit": "TBSP", "role": "SEASONING"},
+      {"id": "coriander-leaves", "amount": 3, "unit": "TBSP", "role": "SEASONING", "optional": true},
+      {"id": "lemon", "amount": 2, "unit": "TBSP", "role": "SEASONING", "note": {"sk": "šťava", "en": "juice"}}
+    ],
+    "steps": [
+      {"sk": "Na oleji speň nakrájanú cibuľu a zeler, pridaj korenie a pretlak a minútu opekaj.", "en": "Soften the chopped onion and celery in the oil, add the spices and tomato paste and fry for a minute."},
+      {"sk": "Pridaj paradajky, prepláchnutú šošovicu, bujóny a 1,5 l vody a var 25 minút.", "en": "Add the tomatoes, rinsed lentils, stock cubes and 1.5 l water and simmer for 25 minutes.", "timerSeconds": 1500},
+      {"sk": "Pridaj cícer a polovicu byliniek a var ešte 10 minút.", "en": "Add the chickpeas and half the herbs and simmer for 10 more minutes.", "timerSeconds": 600},
+      {"sk": "Dochuť citrónovou šťavou a podávaj posypané zvyšnými bylinkami.", "en": "Finish with lemon juice and serve sprinkled with the remaining herbs."}
+    ]
   }
 ]

@@ -476,5 +476,228 @@
       {"sk": "Zmiešaj s krúpami, prelisovaným cesnakom, majoránom, rascou, soľou a korením.", "en": "Mix with the barley, crushed garlic, marjoram, caraway, salt and pepper."},
       {"sk": "Prelož do vymastenej misy a peč 25 minút, kým povrch nezačne chrumkať.", "en": "Transfer to an oiled dish and bake for 25 minutes until the top turns crisp.", "timerSeconds": 1500}
     ]
+  },
+  {
+    "id": "plnena-paprika",
+    "title": {"sk": "Plnená paprika v paradajkovej omáčke", "en": "Stuffed peppers in tomato sauce"},
+    "description": {"sk": "Papriky plnené mäsom a ryžou v sladkokyslej paradajkovej omáčke.", "en": "Peppers stuffed with meat and rice in a sweet-sour tomato sauce."},
+    "cuisine": "SLOVAK_CZECH",
+    "mealTypes": ["LUNCH", "DINNER"],
+    "totalTimeMin": 75,
+    "activeTimeMin": 25,
+    "difficulty": 2,
+    "servings": 4,
+    "equipment": ["STOVE"],
+    "tags": ["MEAL_PREP", "FREEZER_FRIENDLY", "COMFORT"],
+    "ingredients": [
+      {"id": "bell-pepper", "amount": 6, "unit": "PCS", "role": "MAIN", "note": {"sk": "ideálne svetlé, hranaté", "en": "ideally pale, blocky ones"}},
+      {"id": "ground-pork", "amount": 500, "unit": "G", "role": "MAIN"},
+      {"id": "rice", "amount": 100, "unit": "G", "role": "SECONDARY"},
+      {"id": "egg", "amount": 1, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "onion", "amount": 1, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "garlic", "amount": 2, "unit": "PCS", "role": "SEASONING"},
+      {"id": "sweet-paprika", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "passata", "amount": 700, "unit": "G", "role": "MAIN"},
+      {"id": "wheat-flour", "amount": 1, "unit": "TBSP", "role": "SEASONING"},
+      {"id": "sugar", "amount": 2, "unit": "TBSP", "role": "SEASONING"},
+      {"id": "salt", "amount": 1.5, "unit": "TSP", "role": "SEASONING"},
+      {"id": "black-pepper", "amount": 0.5, "unit": "TSP", "role": "SEASONING"},
+      {"id": "potato", "amount": 800, "unit": "G", "role": "SECONDARY", "optional": true, "note": {"sk": "alebo knedľa", "en": "or bread dumplings"}}
+    ],
+    "steps": [
+      {"sk": "Ryžu var 8 minút, sceď a nechaj vychladnúť. Paprikám odrež vrchnáky a vyber jadrovníky.", "en": "Boil the rice for 8 minutes, drain and let it cool. Cut the tops off the peppers and remove the seeds.", "timerSeconds": 480},
+      {"sk": "Mäso zmiešaj s ryžou, vajcom, nastrúhanou cibuľou, cesnakom, paprikou, 1 lyžičkou soli a korením a naplň ním papriky.", "en": "Mix the meat with the rice, egg, grated onion, garlic, paprika, 1 teaspoon of salt and the pepper and fill the peppers."},
+      {"sk": "Passatu zrieď 300 ml vody, pridaj cukor a zvyšnú soľ, vlož papriky a prikryté var na miernom ohni 45 minút.", "en": "Dilute the passata with 300 ml water, add the sugar and remaining salt, put in the peppers and simmer covered over low heat for 45 minutes.", "timerSeconds": 2700},
+      {"sk": "Mäsová plnka musí byť v strede prepečená (75 °C), bez ružovej farby. Múku rozmiešaj v troche vody, zahusti omáčku a povar 5 minút.", "en": "The filling must be cooked through in the centre (75 °C) with no pink. Whisk the flour with a little water, thicken the sauce and simmer for 5 minutes.", "timerSeconds": 300},
+      {"sk": "Podávaj so zemiakmi alebo knedľou.", "en": "Serve with potatoes or bread dumplings."}
+    ]
+  },
+  {
+    "id": "kuracie-prsia-na-prirodno",
+    "title": {"sk": "Kuracie prsia na prírodno s ryžou a hráškom", "en": "Pan-roasted chicken breast with rice and peas"},
+    "description": {"sk": "Jednoduché ľahké jedlo s množstvom bielkovín – klasika školských jedální, ale šťavnatá.", "en": "A simple, light, protein-rich meal: a school canteen classic, only juicy."},
+    "cuisine": "SLOVAK_CZECH",
+    "mealTypes": ["LUNCH", "DINNER"],
+    "totalTimeMin": 30,
+    "activeTimeMin": 20,
+    "difficulty": 1,
+    "servings": 2,
+    "equipment": ["STOVE"],
+    "tags": ["STUDENT", "MEAL_PREP"],
+    "ingredients": [
+      {"id": "chicken-breast", "amount": 350, "unit": "G", "role": "MAIN"},
+      {"id": "rice", "amount": 140, "unit": "G", "role": "MAIN"},
+      {"id": "peas", "amount": 150, "unit": "G", "role": "SECONDARY"},
+      {"id": "butter", "amount": 15, "unit": "G", "role": "SECONDARY"},
+      {"id": "wheat-flour", "amount": 1, "unit": "TBSP", "role": "SEASONING"},
+      {"id": "stock-chicken", "amount": 0.5, "unit": "PCS", "role": "SEASONING"},
+      {"id": "salt", "amount": 0.5, "unit": "TSP", "role": "SEASONING"},
+      {"id": "black-pepper", "amount": 0.25, "unit": "TSP", "role": "SEASONING"},
+      {"id": "parsley", "amount": 1, "unit": "TBSP", "role": "SEASONING", "optional": true}
+    ],
+    "steps": [
+      {"sk": "Uvar ryžu podľa návodu; posledné 3 minúty k nej pridaj hrášok.", "en": "Cook the rice according to the packet, adding the peas for the last 3 minutes."},
+      {"sk": "Prsia rozkroj na tenšie plátky, osoľ, okoreň a z jednej strany poprás múkou.", "en": "Slice the breasts into thinner fillets, season and dust one side with flour."},
+      {"sk": "Na masle ich opeč múkou nadol 4 minúty, otoč a opekaj ďalšie 3 minúty.", "en": "Fry in the butter floured side down for 4 minutes, turn and cook for 3 more minutes.", "timerSeconds": 420},
+      {"sk": "Podlej 150 ml vody s rozpusteným bujónom a povar 3 minúty, kým mäso nie je vnútri biele (74 °C) a šťava nezhustne.", "en": "Add 150 ml water with the dissolved stock cube and simmer for 3 minutes until the chicken is white inside (74 °C) and the juices thicken.", "timerSeconds": 180},
+      {"sk": "Podávaj s ryžou a hráškom, prelej šťavou.", "en": "Serve with the rice and peas and spoon over the juices."}
+    ]
+  },
+  {
+    "id": "kelovy-privarok",
+    "title": {"sk": "Kelový prívarok so zemiakmi", "en": "Savoy cabbage stew with potatoes"},
+    "description": {"sk": "Lacný a jemný prívarok, ktorý chutí ako u starej mamy.", "en": "A cheap, gentle stew that tastes like a grandmother's."},
+    "cuisine": "SLOVAK_CZECH",
+    "mealTypes": ["LUNCH", "DINNER"],
+    "totalTimeMin": 40,
+    "activeTimeMin": 15,
+    "difficulty": 1,
+    "servings": 4,
+    "equipment": ["STOVE"],
+    "tags": ["STUDENT", "MEAL_PREP"],
+    "ingredients": [
+      {"id": "savoy-cabbage", "amount": 0.75, "unit": "PCS", "role": "MAIN"},
+      {"id": "potato", "amount": 400, "unit": "G", "role": "MAIN"},
+      {"id": "garlic", "amount": 3, "unit": "PCS", "role": "SEASONING"},
+      {"id": "sunflower-oil", "amount": 2, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "wheat-flour", "amount": 2, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "milk", "amount": 200, "unit": "ML", "role": "SECONDARY"},
+      {"id": "marjoram", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "caraway", "amount": 0.5, "unit": "TSP", "role": "SEASONING"},
+      {"id": "salt", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "black-pepper", "amount": 0.25, "unit": "TSP", "role": "SEASONING"},
+      {"id": "egg", "amount": 4, "unit": "PCS", "role": "SECONDARY", "optional": true, "note": {"sk": "volské oká na podávanie", "en": "fried, to serve"}}
+    ],
+    "steps": [
+      {"sk": "Kel nakrájaj na rezance a zemiaky na kocky. Var ich v 800 ml osolenej vody s rascou 15 minút doměkka.", "en": "Shred the cabbage and dice the potatoes. Simmer them in 800 ml salted water with the caraway for 15 minutes until soft.", "timerSeconds": 900},
+      {"sk": "Na oleji urob svetlú zápražku z múky a rozmiešaj ju s mliekom.", "en": "Make a pale roux from the flour in the oil and whisk in the milk."},
+      {"sk": "Vmiešaj do kelu, pridaj prelisovaný cesnak, majorán a korenie a povar 5 minút, kým nezhustne.", "en": "Stir it into the cabbage, add the crushed garlic, marjoram and pepper and simmer for 5 minutes until thick.", "timerSeconds": 300},
+      {"sk": "Podávaj samotný alebo s volským okom.", "en": "Serve as it is or with a fried egg."}
+    ]
+  },
+  {
+    "id": "strapacky-s-kapustou",
+    "title": {"sk": "Strapačky s kyslou kapustou a slaninou", "en": "Potato dumplings with sauerkraut and bacon"},
+    "description": {"sk": "Sestra bryndzových halušiek – s dusenou kyslou kapustou.", "en": "The sister of bryndza dumplings, with braised sauerkraut."},
+    "cuisine": "SLOVAK_CZECH",
+    "mealTypes": ["LUNCH", "DINNER"],
+    "totalTimeMin": 45,
+    "activeTimeMin": 35,
+    "difficulty": 2,
+    "servings": 3,
+    "equipment": ["STOVE"],
+    "tags": ["COMFORT"],
+    "ingredients": [
+      {"id": "potato", "amount": 600, "unit": "G", "role": "MAIN"},
+      {"id": "wheat-flour", "amount": 220, "unit": "G", "role": "MAIN"},
+      {"id": "egg", "amount": 1, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "sauerkraut", "amount": 400, "unit": "G", "role": "MAIN"},
+      {"id": "bacon", "amount": 120, "unit": "G", "role": "SECONDARY"},
+      {"id": "onion", "amount": 1, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "caraway", "amount": 0.5, "unit": "TSP", "role": "SEASONING"},
+      {"id": "salt", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "black-pepper", "amount": 0.25, "unit": "TSP", "role": "SEASONING"}
+    ],
+    "steps": [
+      {"sk": "Slaninu nakrájaj na kocky a vyškvar ju, pridaj cibuľu a opekaj 4 minúty.", "en": "Dice the bacon and render it, add the onion and fry for 4 minutes.", "timerSeconds": 240},
+      {"sk": "Pridaj prepláchnutú kyslú kapustu, rascu, korenie a 100 ml vody a nechaj prikryté dusiť 20 minút.", "en": "Add the rinsed sauerkraut, caraway, pepper and 100 ml water and braise covered for 20 minutes.", "timerSeconds": 1200},
+      {"sk": "Medzitým z nastrúhaných zemiakov, vajca, múky a soli vymiešaj cesto a halušky hádž do vriacej osolenej vody.", "en": "Meanwhile, mix the grated potatoes, egg, flour and salt into a dough and drop dumplings into boiling salted water."},
+      {"sk": "Keď vyplávajú, var ich ešte 2 minúty, sceď a zmiešaj s kapustou.", "en": "Once they float, cook for 2 more minutes, drain and toss with the sauerkraut.", "timerSeconds": 120}
+    ]
+  },
+  {
+    "id": "slivkove-knedle",
+    "title": {"sk": "Slivkové knedle so strúhankou", "en": "Plum dumplings with buttered breadcrumbs"},
+    "description": {"sk": "Zemiakové knedle plnené slivkami, obalené v maslovej strúhanke.", "en": "Potato dumplings filled with plums and rolled in buttery breadcrumbs."},
+    "cuisine": "SLOVAK_CZECH",
+    "mealTypes": ["LUNCH", "DESSERT"],
+    "totalTimeMin": 70,
+    "activeTimeMin": 40,
+    "difficulty": 2,
+    "servings": 4,
+    "equipment": ["STOVE"],
+    "tags": ["COMFORT"],
+    "ingredients": [
+      {"id": "potato", "amount": 500, "unit": "G", "role": "MAIN", "note": {"sk": "varené v šupke a vychladnuté", "en": "boiled in their skins and cooled"}},
+      {"id": "wheat-flour", "amount": 180, "unit": "G", "role": "MAIN"},
+      {"id": "egg", "amount": 1, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "plum", "amount": 12, "unit": "PCS", "role": "MAIN"},
+      {"id": "sugar", "amount": 2, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "cinnamon", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "butter", "amount": 50, "unit": "G", "role": "SECONDARY"},
+      {"id": "breadcrumbs", "amount": 60, "unit": "G", "role": "SECONDARY"},
+      {"id": "powdered-sugar", "amount": 3, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "salt", "amount": 1, "unit": "PINCH", "role": "SEASONING"}
+    ],
+    "steps": [
+      {"sk": "Zemiaky uvar v šupke, ošúp, vychladnuté najemno nastrúhaj a s múkou, vajcom a soľou vypracuj vláčne cesto.", "en": "Boil the potatoes in their skins, peel, grate finely once cool and knead with the flour, egg and salt into a soft dough.", "timerSeconds": 1500},
+      {"sk": "Slivkám vyber kôstky a do každej daj trochu cukru so škoricou.", "en": "Stone the plums and put a little sugar with cinnamon into each one."},
+      {"sk": "Cesto rozdeľ na 12 kúskov, každý roztlač, zabaľ doň slivku a uzavri do gule.", "en": "Divide the dough into 12 pieces, flatten each, wrap around a plum and seal into a ball."},
+      {"sk": "Var v osolenej vode 8 až 10 minút od vyplávania.", "en": "Simmer in salted water for 8–10 minutes after they float.", "timerSeconds": 540},
+      {"sk": "Strúhanku opraž na masle dozlatista a obaľ v nej knedle. Podávaj posypané práškovým cukrom.", "en": "Toast the breadcrumbs in the butter until golden and roll the dumplings in them. Serve dusted with powdered sugar."}
+    ]
+  },
+  {
+    "id": "kuraci-rezen-v-struhanke",
+    "title": {"sk": "Kurací rezeň v strúhanke", "en": "Breaded chicken schnitzel"},
+    "description": {"sk": "Chrumkavý rezeň opečený na panvici – najlepší so zemiakovým šalátom.", "en": "A crisp pan-fried schnitzel, best with potato salad."},
+    "cuisine": "SLOVAK_CZECH",
+    "mealTypes": ["LUNCH", "DINNER"],
+    "totalTimeMin": 30,
+    "activeTimeMin": 30,
+    "difficulty": 2,
+    "servings": 4,
+    "equipment": ["STOVE"],
+    "tags": ["COMFORT"],
+    "pairsWith": ["zemiakovy-salat"],
+    "ingredients": [
+      {"id": "chicken-breast", "amount": 600, "unit": "G", "role": "MAIN"},
+      {"id": "wheat-flour", "amount": 50, "unit": "G", "role": "SECONDARY"},
+      {"id": "egg", "amount": 2, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "breadcrumbs", "amount": 100, "unit": "G", "role": "SECONDARY"},
+      {"id": "sunflower-oil", "amount": 6, "unit": "TBSP", "role": "SECONDARY", "note": {"sk": "na vyprážanie", "en": "for frying"}},
+      {"id": "salt", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "lemon", "amount": 1, "unit": "PCS", "role": "SEASONING", "optional": true}
+    ],
+    "steps": [
+      {"sk": "Prsia rozkroj na tenké plátky a medzi fóliou ich naklep na 1 cm. Osoľ.", "en": "Slice the breasts into thin escalopes and pound them to 1 cm between sheets of film. Salt them."},
+      {"sk": "Obaľ ich postupne v múke, rozšľahaných vajciach a strúhanke.", "en": "Coat them in flour, then beaten egg, then breadcrumbs."},
+      {"sk": "Na rozpálenom oleji vyprážaj 3 až 4 minúty z každej strany, kým nie sú zlatohnedé a mäso vnútri biele (74 °C).", "en": "Fry in hot oil for 3–4 minutes per side until golden brown and white inside (74 °C).", "timerSeconds": 210},
+      {"sk": "Nechaj odkvapkať na papierovej utierke a podávaj s citrónom.", "en": "Drain on kitchen paper and serve with lemon."}
+    ]
+  },
+  {
+    "id": "zemiakovy-salat",
+    "title": {"sk": "Zemiakový šalát", "en": "Slovak potato salad"},
+    "description": {"sk": "Vianočný zemiakový šalát so zeleninou, uhorkami a jogurtovo-majonézovým dresingom.", "en": "The Christmas potato salad with vegetables, pickles and a yogurt-mayonnaise dressing."},
+    "cuisine": "SLOVAK_CZECH",
+    "mealTypes": ["LUNCH", "DINNER", "SNACK"],
+    "totalTimeMin": 60,
+    "activeTimeMin": 30,
+    "difficulty": 1,
+    "servings": 6,
+    "equipment": ["STOVE"],
+    "tags": ["MEAL_PREP"],
+    "pairsWith": ["kuraci-rezen-v-struhanke"],
+    "ingredients": [
+      {"id": "potato", "amount": 1000, "unit": "G", "role": "MAIN"},
+      {"id": "carrot", "amount": 2, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "parsley-root", "amount": 1, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "peas", "amount": 100, "unit": "G", "role": "SECONDARY"},
+      {"id": "pickles", "amount": 150, "unit": "G", "role": "SECONDARY"},
+      {"id": "onion", "amount": 1, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "egg", "amount": 3, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "mayonnaise", "amount": 150, "unit": "G", "role": "SECONDARY"},
+      {"id": "yogurt", "amount": 150, "unit": "G", "role": "SECONDARY"},
+      {"id": "mustard", "amount": 1, "unit": "TBSP", "role": "SEASONING"},
+      {"id": "salt", "amount": 1.5, "unit": "TSP", "role": "SEASONING"},
+      {"id": "black-pepper", "amount": 0.5, "unit": "TSP", "role": "SEASONING"}
+    ],
+    "steps": [
+      {"sk": "Zemiaky uvar v šupke doměkka, asi 25 minút. Mrkvu a petržlen var 15 minút a vajcia 9 minút natvrdo.", "en": "Boil the potatoes in their skins until tender, about 25 minutes. Boil the carrots and parsley root for 15 minutes and the eggs for 9 minutes.", "timerSeconds": 1500},
+      {"sk": "Všetko nechaj vychladnúť, ošúp a nakrájaj na drobné kocky spolu s uhorkami a cibuľou. Hrášok krátko spar.", "en": "Let everything cool, peel and dice finely together with the pickles and onion. Blanch the peas briefly."},
+      {"sk": "Majonézu zmiešaj s jogurtom, horčicou, soľou, korením a trochou nálevu z uhoriek.", "en": "Mix the mayonnaise with the yogurt, mustard, salt, pepper and a little pickle brine."},
+      {"sk": "Zmiešaj so zeleninou a nechaj aspoň 2 hodiny v chladničke odležať. Vydrží 3 dni.", "en": "Toss with the vegetables and chill for at least 2 hours. Keeps for 3 days."}
+    ]
   }
 ]
