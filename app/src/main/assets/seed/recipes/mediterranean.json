@@ -1,0 +1,196 @@
+[
+  {
+    "id": "grecky-salat",
+    "title": {"sk": "Grécky šalát s fetou", "en": "Greek salad with feta"},
+    "description": {"sk": "Šťavnatá zelenina, olivy a feta – bez varenia.", "en": "Juicy vegetables, olives and feta, no cooking required."},
+    "cuisine": "GREEK_MEDITERRANEAN",
+    "mealTypes": ["LUNCH", "DINNER", "SNACK"],
+    "totalTimeMin": 15,
+    "activeTimeMin": 15,
+    "difficulty": 1,
+    "servings": 2,
+    "tags": ["NO_COOK"],
+    "pairsWith": ["kuracie-souvlaki"],
+    "ingredients": [
+      {"id": "tomato", "amount": 3, "unit": "PCS", "role": "MAIN"},
+      {"id": "cucumber", "amount": 0.5, "unit": "PCS", "role": "MAIN"},
+      {"id": "red-onion", "amount": 0.5, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "bell-pepper", "amount": 1, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "olives", "amount": 60, "unit": "G", "role": "SECONDARY"},
+      {"id": "feta", "amount": 150, "unit": "G", "role": "MAIN"},
+      {"id": "olive-oil", "amount": 3, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "oregano", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "salt", "amount": 1, "unit": "PINCH", "role": "SEASONING"}
+    ],
+    "steps": [
+      {"sk": "Paradajky nakrájaj na mesiačiky, uhorku na hrubé polkolieska, papriku na prúžky a cibuľu na tenké krúžky.", "en": "Cut the tomatoes into wedges, the cucumber into thick half-moons, the pepper into strips and the onion into thin rings."},
+      {"sk": "Zeleninu zľahka osoľ, pridaj olivy a premiešaj s olivovým olejom.", "en": "Lightly salt the vegetables, add the olives and toss with the olive oil."},
+      {"sk": "Navrch polož fetu v jednom kuse, posyp oreganom a podávaj, podľa chuti s chlebom.", "en": "Place the feta on top in one piece, sprinkle with oregano and serve, with bread if you like."}
+    ]
+  },
+  {
+    "id": "kuracie-souvlaki",
+    "title": {"sk": "Kuracie souvlaki s tzatziki a ryžou", "en": "Chicken souvlaki with tzatziki and rice"},
+    "description": {"sk": "Citrónovo-oreganové kura s chladivým tzatziki – výborné do krabičiek.", "en": "Lemon-oregano chicken with cooling tzatziki, great for lunch boxes."},
+    "cuisine": "GREEK_MEDITERRANEAN",
+    "mealTypes": ["LUNCH", "DINNER"],
+    "totalTimeMin": 45,
+    "activeTimeMin": 30,
+    "difficulty": 2,
+    "servings": 4,
+    "equipment": ["STOVE"],
+    "tags": ["MEAL_PREP"],
+    "pairsWith": ["grecky-salat"],
+    "ingredients": [
+      {"id": "chicken-breast", "amount": 600, "unit": "G", "role": "MAIN"},
+      {"id": "greek-yogurt", "amount": 250, "unit": "G", "role": "SECONDARY"},
+      {"id": "cucumber", "amount": 0.5, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "garlic", "amount": 3, "unit": "PCS", "role": "SEASONING"},
+      {"id": "lemon", "amount": 3, "unit": "TBSP", "role": "SEASONING", "note": {"sk": "šťava", "en": "juice"}},
+      {"id": "olive-oil", "amount": 3, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "oregano", "amount": 2, "unit": "TSP", "role": "SEASONING"},
+      {"id": "sweet-paprika", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "salt", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "black-pepper", "amount": 0.5, "unit": "TSP", "role": "SEASONING"},
+      {"id": "rice", "amount": 250, "unit": "G", "role": "MAIN"},
+      {"id": "dill", "amount": 1, "unit": "TBSP", "role": "SEASONING", "optional": true}
+    ],
+    "steps": [
+      {"sk": "Kuracie prsia nakrájaj na kocky a zmiešaj s 2 lyžicami oleja, 2 lyžicami citrónovej šťavy, 2 prelisovanými strúčikmi cesnaku, oreganom, paprikou, soľou a korením. Nechaj 15 minút marinovať.", "en": "Cut the chicken into cubes and mix with 2 tablespoons of oil, 2 tablespoons of lemon juice, 2 crushed garlic cloves, the oregano, paprika, salt and pepper. Marinate for 15 minutes.", "timerSeconds": 900},
+      {"sk": "Uvar ryžu podľa návodu.", "en": "Cook the rice according to the packet."},
+      {"sk": "Tzatziki: uhorku nastrúhaj, vytlač z nej vodu a zmiešaj s jogurtom, zvyšným cesnakom, citrónovou šťavou a olejom a s kôprom.", "en": "Tzatziki: grate the cucumber, squeeze out the water and mix with the yogurt, the remaining garlic, lemon juice and oil, and the dill."},
+      {"sk": "Mäso opekaj na rozpálenej panvici v dvoch dávkach 8 až 10 minút, kým nie je zo všetkých strán zlaté a vnútri bez ružovej farby (74 °C).", "en": "Fry the chicken in a hot pan in two batches for 8–10 minutes, until golden all over with no pink left inside (74 °C).", "timerSeconds": 540},
+      {"sk": "Podávaj s ryžou a tzatziki. V krabičkách vydrží v chladničke 3 dni.", "en": "Serve with the rice and tzatziki. Keeps in the fridge for 3 days."}
+    ]
+  },
+  {
+    "id": "shakshuka",
+    "title": {"sk": "Shakshuka", "en": "Shakshuka"},
+    "description": {"sk": "Vajcia pošírované v korenistej paradajkovo-paprikovej omáčke.", "en": "Eggs poached in a spiced tomato and pepper sauce."},
+    "cuisine": "NORTH_AFRICAN",
+    "mealTypes": ["BREAKFAST", "LUNCH", "DINNER"],
+    "totalTimeMin": 25,
+    "activeTimeMin": 10,
+    "difficulty": 1,
+    "servings": 2,
+    "equipment": ["STOVE"],
+    "tags": ["ONE_POT", "STUDENT"],
+    "ingredients": [
+      {"id": "egg", "amount": 4, "unit": "PCS", "role": "MAIN"},
+      {"id": "canned-tomatoes", "amount": 400, "unit": "G", "role": "MAIN"},
+      {"id": "bell-pepper", "amount": 1, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "onion", "amount": 1, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "garlic", "amount": 2, "unit": "PCS", "role": "SEASONING"},
+      {"id": "cumin", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "sweet-paprika", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "chili-flakes", "amount": 0.25, "unit": "TSP", "role": "SEASONING", "optional": true},
+      {"id": "olive-oil", "amount": 2, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "salt", "amount": 0.5, "unit": "TSP", "role": "SEASONING"},
+      {"id": "parsley", "amount": 2, "unit": "TBSP", "role": "SEASONING", "optional": true},
+      {"id": "bread", "amount": 2, "unit": "PCS", "role": "SECONDARY", "optional": true, "note": {"sk": "krajce na podávanie", "en": "slices, to serve"}}
+    ],
+    "steps": [
+      {"sk": "Na olivovom oleji speň nakrájanú cibuľu a papriku, asi 6 minút.", "en": "Soften the chopped onion and pepper in the olive oil, about 6 minutes.", "timerSeconds": 360},
+      {"sk": "Pridaj cesnak, rímsky kmín, papriku a čili a minútu opekaj, kým korenie nezavonia.", "en": "Add the garlic, cumin, paprika and chili and cook for a minute until fragrant."},
+      {"sk": "Prilej paradajky, osoľ a var 8 minút, kým omáčka nezhustne.", "en": "Add the tomatoes and salt and simmer for 8 minutes until thickened.", "timerSeconds": 480},
+      {"sk": "Lyžicou urob v omáčke 4 jamky a do každej rozbi vajce. Prikry a var na miernom ohni 5 až 7 minút, kým bielky nestuhnú a žĺtky zostanú mäkké.", "en": "Make 4 hollows in the sauce and crack an egg into each. Cover and cook over low heat for 5–7 minutes, until the whites are set and the yolks are still soft.", "timerSeconds": 360},
+      {"sk": "Posyp petržlenovou vňaťou a podávaj priamo z panvice s chlebom.", "en": "Sprinkle with parsley and serve straight from the pan with bread."}
+    ]
+  },
+  {
+    "id": "hummus",
+    "title": {"sk": "Domáci hummus", "en": "Homemade hummus"},
+    "description": {"sk": "Krémový hummus z cíceru v konzerve za 10 minút.", "en": "Creamy hummus from canned chickpeas in 10 minutes."},
+    "cuisine": "MIDDLE_EASTERN",
+    "mealTypes": ["SNACK", "LUNCH"],
+    "totalTimeMin": 10,
+    "activeTimeMin": 10,
+    "difficulty": 1,
+    "servings": 4,
+    "equipment": ["BLENDER"],
+    "tags": ["NO_COOK", "MEAL_PREP"],
+    "pairsWith": ["kuskusovy-salat-s-cicerom"],
+    "ingredients": [
+      {"id": "chickpeas", "amount": 400, "unit": "G", "role": "MAIN", "note": {"sk": "odkvapkaný", "en": "drained"}},
+      {"id": "tahini", "amount": 60, "unit": "G", "role": "MAIN"},
+      {"id": "lemon", "amount": 3, "unit": "TBSP", "role": "SECONDARY", "note": {"sk": "šťava", "en": "juice"}},
+      {"id": "garlic", "amount": 1, "unit": "PCS", "role": "SEASONING"},
+      {"id": "olive-oil", "amount": 2, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "cumin", "amount": 0.5, "unit": "TSP", "role": "SEASONING"},
+      {"id": "salt", "amount": 0.5, "unit": "TSP", "role": "SEASONING"},
+      {"id": "sweet-paprika", "amount": 1, "unit": "PINCH", "role": "SEASONING", "optional": true},
+      {"id": "pita", "amount": 4, "unit": "PCS", "role": "SECONDARY", "optional": true, "note": {"sk": "na podávanie", "en": "to serve"}}
+    ],
+    "steps": [
+      {"sk": "Cícer sceď, odlož si 4 lyžice nálevu a cícer prepláchni.", "en": "Drain the chickpeas, keeping 4 tablespoons of the liquid, and rinse them."},
+      {"sk": "V mixéri rozmixuj tahini s citrónovou šťavou, cesnakom, rímskym kmínom a soľou na hustú pastu.", "en": "Blend the tahini with the lemon juice, garlic, cumin and salt into a thick paste."},
+      {"sk": "Pridaj cícer a mixuj 2 až 3 minúty, pričom postupne prilievaš nálev, kým nie je hummus úplne hladký.", "en": "Add the chickpeas and blend for 2–3 minutes, gradually adding the reserved liquid, until completely smooth.", "timerSeconds": 150},
+      {"sk": "Pokvapkaj olivovým olejom, posyp paprikou a podávaj s pitou alebo so zeleninou. V chladničke vydrží 4 dni.", "en": "Drizzle with olive oil, sprinkle with paprika and serve with pita or vegetables. Keeps in the fridge for 4 days."}
+    ]
+  },
+  {
+    "id": "turecka-sosovicova-polievka",
+    "title": {"sk": "Turecká polievka z červenej šošovice", "en": "Turkish red lentil soup"},
+    "description": {"sk": "Hodvábne hladká a sýta polievka zo surovín za pár eur.", "en": "A silky smooth, filling soup made from ingredients that cost very little."},
+    "cuisine": "MIDDLE_EASTERN",
+    "mealTypes": ["LUNCH", "DINNER"],
+    "totalTimeMin": 35,
+    "activeTimeMin": 10,
+    "difficulty": 1,
+    "servings": 4,
+    "equipment": ["STOVE", "BLENDER"],
+    "tags": ["STUDENT", "MEAL_PREP", "ONE_POT", "FREEZER_FRIENDLY"],
+    "ingredients": [
+      {"id": "red-lentils", "amount": 250, "unit": "G", "role": "MAIN"},
+      {"id": "onion", "amount": 1, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "carrot", "amount": 1, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "tomato-paste", "amount": 1, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "olive-oil", "amount": 2, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "cumin", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "sweet-paprika", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "stock-vegetable", "amount": 1, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "lemon", "amount": 2, "unit": "TBSP", "role": "SEASONING", "note": {"sk": "šťava", "en": "juice"}},
+      {"id": "salt", "amount": 0.5, "unit": "TSP", "role": "SEASONING"},
+      {"id": "chili-flakes", "amount": 0.25, "unit": "TSP", "role": "SEASONING", "optional": true}
+    ],
+    "steps": [
+      {"sk": "Na olivovom oleji speň nakrájanú cibuľu a nastrúhanú mrkvu, asi 5 minút.", "en": "Soften the chopped onion and grated carrot in the olive oil for about 5 minutes.", "timerSeconds": 300},
+      {"sk": "Vmiešaj pretlak, rímsky kmín a papriku a krátko opeč.", "en": "Stir in the tomato paste, cumin and paprika and fry briefly."},
+      {"sk": "Pridaj prepláchnutú šošovicu, bujón a 1,2 l vody a var 20 minút, kým sa šošovica nerozpadne.", "en": "Add the rinsed lentils, stock cube and 1.2 l water and simmer for 20 minutes until the lentils fall apart.", "timerSeconds": 1200},
+      {"sk": "Polievku rozmixuj dohladka, dochuť soľou a citrónovou šťavou a podávaj posypanú čili vločkami.", "en": "Blend the soup until smooth, season with salt and lemon juice and serve sprinkled with chili flakes."}
+    ]
+  },
+  {
+    "id": "kuskusovy-salat-s-cicerom",
+    "title": {"sk": "Kuskusový šalát s cícerom a bylinkami", "en": "Couscous salad with chickpeas and herbs"},
+    "description": {"sk": "Svieži šalát do krabičky, ktorý zasýti aj bez mäsa.", "en": "A fresh lunch-box salad that fills you up without meat."},
+    "cuisine": "MIDDLE_EASTERN",
+    "mealTypes": ["LUNCH", "DINNER"],
+    "totalTimeMin": 20,
+    "activeTimeMin": 15,
+    "difficulty": 1,
+    "servings": 3,
+    "equipment": ["STOVE"],
+    "tags": ["MEAL_PREP", "STUDENT"],
+    "pairsWith": ["hummus"],
+    "ingredients": [
+      {"id": "couscous", "amount": 200, "unit": "G", "role": "MAIN"},
+      {"id": "chickpeas", "amount": 240, "unit": "G", "role": "MAIN", "note": {"sk": "odkvapkaný", "en": "drained"}},
+      {"id": "cucumber", "amount": 0.5, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "tomato", "amount": 2, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "red-onion", "amount": 0.5, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "parsley", "amount": 1, "unit": "PCS", "role": "SECONDARY", "note": {"sk": "zväzok", "en": "bunch"}},
+      {"id": "mint", "amount": 2, "unit": "TBSP", "role": "SEASONING", "optional": true},
+      {"id": "lemon", "amount": 3, "unit": "TBSP", "role": "SEASONING", "note": {"sk": "šťava", "en": "juice"}},
+      {"id": "olive-oil", "amount": 3, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "cumin", "amount": 0.5, "unit": "TSP", "role": "SEASONING"},
+      {"id": "salt", "amount": 0.75, "unit": "TSP", "role": "SEASONING"}
+    ],
+    "steps": [
+      {"sk": "Kuskus zalej 250 ml vriacej osolenej vody, prikry a nechaj 5 minút napučať. Potom ho rozpuč vidličkou.", "en": "Pour 250 ml boiling salted water over the couscous, cover and leave for 5 minutes. Then fluff it with a fork.", "timerSeconds": 300},
+      {"sk": "Uhorku, paradajky a cibuľu nakrájaj na drobné kocky a bylinky nasekaj.", "en": "Finely dice the cucumber, tomatoes and onion and chop the herbs."},
+      {"sk": "Zmiešaj kuskus so zeleninou, prepláchnutým cícerom a bylinkami.", "en": "Mix the couscous with the vegetables, rinsed chickpeas and herbs."},
+      {"sk": "Zalej citrónovou šťavou a olivovým olejom, pridaj rímsky kmín a premiešaj. V chladničke vydrží 3 dni.", "en": "Dress with the lemon juice, olive oil and cumin and toss. Keeps in the fridge for 3 days."}
+    ]
+  }
+]

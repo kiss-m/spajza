@@ -1,0 +1,86 @@
+[
+  {
+    "id": "tortilla-de-patatas",
+    "title": {"sk": "Španielska tortilla so zemiakmi", "en": "Spanish potato tortilla"},
+    "description": {"sk": "Hrubá zemiakovo-vaječná omeleta, výborná teplá aj studená.", "en": "A thick potato and egg omelette, great warm or cold."},
+    "cuisine": "SPANISH",
+    "mealTypes": ["BREAKFAST", "LUNCH", "DINNER", "SNACK"],
+    "totalTimeMin": 45,
+    "activeTimeMin": 25,
+    "difficulty": 2,
+    "servings": 4,
+    "equipment": ["STOVE"],
+    "tags": ["MEAL_PREP"],
+    "ingredients": [
+      {"id": "potato", "amount": 600, "unit": "G", "role": "MAIN"},
+      {"id": "egg", "amount": 6, "unit": "PCS", "role": "MAIN"},
+      {"id": "onion", "amount": 1, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "olive-oil", "amount": 5, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "salt", "amount": 1, "unit": "TSP", "role": "SEASONING"}
+    ],
+    "steps": [
+      {"sk": "Zemiaky ošúp a nakrájaj na tenké plátky, cibuľu na tenké pásiky.", "en": "Peel the potatoes and slice them thinly; slice the onion into thin strips."},
+      {"sk": "Zemiaky s cibuľou a polovicou soli nechaj na olivovom oleji na miernom ohni prikryté 20 minút dusiť, kým nie sú mäkké, ale nie opečené. Občas premiešaj.", "en": "Cook the potatoes and onion with half the salt in the olive oil over low heat, covered, for 20 minutes until soft but not browned. Stir occasionally.", "timerSeconds": 1200},
+      {"sk": "Vajcia rozšľahaj so zvyšnou soľou, vmiešaj zemiaky a nechaj 5 minút odstáť. Na panvici nechaj asi lyžicu oleja.", "en": "Beat the eggs with the remaining salt, stir in the potatoes and let it stand for 5 minutes. Leave about a tablespoon of oil in the pan.", "timerSeconds": 300},
+      {"sk": "Zmes vlej späť na panvicu a peč na miernom ohni 6 minút, kým okraje nestuhnú.", "en": "Pour the mixture back into the pan and cook over low heat for 6 minutes until the edges are set.", "timerSeconds": 360},
+      {"sk": "Tortillu prevráť pomocou taniera a dopeč druhú stranu 3 až 4 minúty, kým stred nie je pevný. Pred krájaním nechaj chvíľu odpočinúť.", "en": "Flip the tortilla using a plate and cook the other side for 3–4 minutes until the centre is firm. Let it rest briefly before cutting.", "timerSeconds": 210}
+    ]
+  },
+  {
+    "id": "omeleta-s-hubami",
+    "title": {"sk": "Francúzska omeleta s hubami a syrom", "en": "French omelette with mushrooms and cheese"},
+    "description": {"sk": "Hodvábna omeleta za desať minút – rýchle raňajky plné bielkovín.", "en": "A silky omelette in ten minutes: a quick protein-packed breakfast."},
+    "cuisine": "FRENCH",
+    "mealTypes": ["BREAKFAST", "DINNER"],
+    "totalTimeMin": 12,
+    "activeTimeMin": 12,
+    "difficulty": 2,
+    "servings": 1,
+    "equipment": ["STOVE"],
+    "tags": ["STUDENT"],
+    "ingredients": [
+      {"id": "egg", "amount": 3, "unit": "PCS", "role": "MAIN"},
+      {"id": "mushroom", "amount": 100, "unit": "G", "role": "SECONDARY"},
+      {"id": "edam", "amount": 30, "unit": "G", "role": "SECONDARY"},
+      {"id": "butter", "amount": 10, "unit": "G", "role": "SECONDARY"},
+      {"id": "salt", "amount": 1, "unit": "PINCH", "role": "SEASONING"},
+      {"id": "black-pepper", "amount": 1, "unit": "PINCH", "role": "SEASONING"},
+      {"id": "chives", "amount": 1, "unit": "TBSP", "role": "SEASONING", "optional": true}
+    ],
+    "steps": [
+      {"sk": "Huby nakrájaj na plátky a na polovici masla ich opeč dozlatista, asi 4 minúty. Odlož ich.", "en": "Slice the mushrooms and fry them in half the butter until golden, about 4 minutes. Set aside.", "timerSeconds": 240},
+      {"sk": "Vajcia rozšľahaj so soľou a korením.", "en": "Beat the eggs with salt and pepper."},
+      {"sk": "Na strednom ohni rozpusti zvyšné maslo, vlej vajcia a stierkou ich neustále pomaly posúvaj, kým nie sú takmer stuhnuté, ale na povrchu ešte krémové, asi 2 minúty.", "en": "Melt the remaining butter over medium heat, pour in the eggs and keep slowly pushing them with a spatula until almost set but still creamy on top, about 2 minutes.", "timerSeconds": 120},
+      {"sk": "Na jednu polovicu daj huby a strúhaný syr, omeletu preklop a nechaj ju zošmyknúť na tanier. Posyp pažítkou.", "en": "Put the mushrooms and grated cheese on one half, fold the omelette over and slide it onto a plate. Sprinkle with chives."}
+    ]
+  },
+  {
+    "id": "jablkovy-crumble",
+    "title": {"sk": "Jablkový crumble so škoricou", "en": "Apple crumble with cinnamon"},
+    "description": {"sk": "Teplé jablká pod chrumkavou maslovou posýpkou.", "en": "Warm apples under a crunchy buttery topping."},
+    "cuisine": "BRITISH",
+    "mealTypes": ["DESSERT"],
+    "totalTimeMin": 50,
+    "activeTimeMin": 15,
+    "difficulty": 1,
+    "servings": 4,
+    "equipment": ["OVEN"],
+    "tags": ["COMFORT"],
+    "ingredients": [
+      {"id": "apple", "amount": 4, "unit": "PCS", "role": "MAIN"},
+      {"id": "oats", "amount": 60, "unit": "G", "role": "SECONDARY"},
+      {"id": "wheat-flour", "amount": 60, "unit": "G", "role": "SECONDARY"},
+      {"id": "butter", "amount": 60, "unit": "G", "role": "SECONDARY"},
+      {"id": "brown-sugar", "amount": 50, "unit": "G", "role": "SECONDARY"},
+      {"id": "cinnamon", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "lemon", "amount": 1, "unit": "TBSP", "role": "SEASONING", "note": {"sk": "šťava", "en": "juice"}}
+    ],
+    "steps": [
+      {"sk": "Rúru predhrej na 190 °C.", "en": "Preheat the oven to 190 °C."},
+      {"sk": "Jablká ošúp, zbav jadrovníkov, nakrájaj na kúsky a v zapekacej mise ich premiešaj s citrónovou šťavou, polovicou škorice a lyžicou cukru.", "en": "Peel and core the apples, cut into chunks and toss them in a baking dish with the lemon juice, half the cinnamon and a tablespoon of the sugar."},
+      {"sk": "Múku, vločky, zvyšný cukor a škoricu zmiešaj so studeným maslom nakrájaným na kocky a prstami rozdrv na hrudkovitú posýpku.", "en": "Mix the flour, oats, remaining sugar and cinnamon with the cold diced butter and rub with your fingertips into a lumpy crumble."},
+      {"sk": "Posýpku rozsyp na jablká a peč 35 minút, kým nie je zlatistá a jablká na okrajoch nebublajú.", "en": "Scatter the crumble over the apples and bake for 35 minutes until golden and the apples bubble at the edges.", "timerSeconds": 2100},
+      {"sk": "Nechaj 5 minút vychladnúť a podávaj teplé, napríklad s bielym jogurtom.", "en": "Let it cool for 5 minutes and serve warm, for example with plain yogurt."}
+    ]
+  }
+]

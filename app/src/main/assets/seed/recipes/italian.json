@@ -1,0 +1,169 @@
+[
+  {
+    "id": "spaghetti-aglio-olio",
+    "title": {"sk": "Špagety aglio e olio", "en": "Spaghetti aglio e olio"},
+    "description": {"sk": "Cesnak, olivový olej a štipka čili – večera za 15 minút.", "en": "Garlic, olive oil and a pinch of chili: dinner in 15 minutes."},
+    "cuisine": "ITALIAN",
+    "mealTypes": ["LUNCH", "DINNER"],
+    "totalTimeMin": 15,
+    "activeTimeMin": 10,
+    "difficulty": 1,
+    "servings": 2,
+    "equipment": ["STOVE"],
+    "tags": ["STUDENT"],
+    "ingredients": [
+      {"id": "spaghetti", "amount": 200, "unit": "G", "role": "MAIN"},
+      {"id": "garlic", "amount": 4, "unit": "PCS", "role": "MAIN"},
+      {"id": "olive-oil", "amount": 4, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "chili-flakes", "amount": 0.5, "unit": "TSP", "role": "SEASONING"},
+      {"id": "salt", "unit": "TO_TASTE", "role": "SEASONING", "note": {"sk": "do vody na cestoviny", "en": "for the pasta water"}},
+      {"id": "parsley", "amount": 2, "unit": "TBSP", "role": "SEASONING", "optional": true},
+      {"id": "parmesan", "amount": 20, "unit": "G", "role": "SECONDARY", "optional": true}
+    ],
+    "steps": [
+      {"sk": "Špagety uvar v osolenej vode al dente podľa návodu, zvyčajne 9 minút. Odlož si hrnček vody z varenia.", "en": "Cook the spaghetti in salted water until al dente, usually 9 minutes. Save a cup of the cooking water.", "timerSeconds": 540},
+      {"sk": "Medzitým na olivovom oleji na miernom ohni opekaj cesnak nakrájaný na tenké plátky s čili vločkami, kým cesnak nie je svetlozlatý (nie hnedý).", "en": "Meanwhile, gently fry the thinly sliced garlic with the chili flakes in the olive oil until the garlic is pale golden (not brown)."},
+      {"sk": "Špagety prelož do panvice, pridaj trochu vody z varenia a premiešavaj, kým sa olej s vodou nespojí do lesklej omáčky.", "en": "Transfer the spaghetti to the pan, add a splash of cooking water and toss until the oil and water come together into a glossy sauce."},
+      {"sk": "Posyp petržlenovou vňaťou a podľa chuti parmezánom.", "en": "Sprinkle with parsley and, if you like, parmesan."}
+    ]
+  },
+  {
+    "id": "cestoviny-s-tuniakom",
+    "title": {"sk": "Cestoviny s tuniakom a paradajkami", "en": "Pasta with tuna and tomatoes"},
+    "description": {"sk": "Lacné cestoviny zo špajze s množstvom bielkovín.", "en": "Cheap pantry pasta packed with protein."},
+    "cuisine": "ITALIAN",
+    "mealTypes": ["LUNCH", "DINNER"],
+    "totalTimeMin": 25,
+    "activeTimeMin": 15,
+    "difficulty": 1,
+    "servings": 3,
+    "equipment": ["STOVE"],
+    "tags": ["STUDENT", "MEAL_PREP"],
+    "ingredients": [
+      {"id": "pasta", "amount": 300, "unit": "G", "role": "MAIN"},
+      {"id": "tuna-canned", "amount": 240, "unit": "G", "role": "MAIN", "note": {"sk": "2 konzervy, odkvapkané", "en": "2 cans, drained"}},
+      {"id": "canned-tomatoes", "amount": 400, "unit": "G", "role": "MAIN"},
+      {"id": "onion", "amount": 1, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "garlic", "amount": 2, "unit": "PCS", "role": "SEASONING"},
+      {"id": "olive-oil", "amount": 2, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "oregano", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "salt", "amount": 0.5, "unit": "TSP", "role": "SEASONING"},
+      {"id": "black-pepper", "amount": 0.25, "unit": "TSP", "role": "SEASONING"},
+      {"id": "parsley", "amount": 2, "unit": "TBSP", "role": "SEASONING", "optional": true}
+    ],
+    "steps": [
+      {"sk": "Daj variť cestoviny do osolenej vody podľa návodu.", "en": "Put the pasta on to cook in salted water according to the packet."},
+      {"sk": "Na olivovom oleji speň nadrobno nakrájanú cibuľu, asi 5 minút, potom pridaj cesnak na minútu.", "en": "Soften the finely chopped onion in the olive oil for about 5 minutes, then add the garlic for a minute.", "timerSeconds": 300},
+      {"sk": "Prilej paradajky, pridaj oregano, soľ a korenie a nechaj 10 minút prebublávať.", "en": "Add the tomatoes, oregano, salt and pepper and let it bubble for 10 minutes.", "timerSeconds": 600},
+      {"sk": "Vmiešaj odkvapkaného tuniaka, len ho prehrej a zmiešaj s uvarenými cestovinami.", "en": "Stir in the drained tuna, just warm it through and toss with the cooked pasta."},
+      {"sk": "Posyp petržlenovou vňaťou. V chladničke vydrží 3 dni.", "en": "Sprinkle with parsley. Keeps in the fridge for 3 days."}
+    ]
+  },
+  {
+    "id": "hubove-rizoto",
+    "title": {"sk": "Hubové rizoto s parmezánom", "en": "Mushroom risotto with parmesan"},
+    "description": {"sk": "Krémové rizoto bez smotany – stačí trpezlivo miešať.", "en": "A creamy risotto with no cream: just patient stirring."},
+    "cuisine": "ITALIAN",
+    "mealTypes": ["LUNCH", "DINNER"],
+    "totalTimeMin": 40,
+    "activeTimeMin": 35,
+    "difficulty": 2,
+    "servings": 4,
+    "equipment": ["STOVE"],
+    "ingredients": [
+      {"id": "arborio-rice", "amount": 300, "unit": "G", "role": "MAIN"},
+      {"id": "mushroom", "amount": 300, "unit": "G", "role": "MAIN"},
+      {"id": "onion", "amount": 1, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "garlic", "amount": 2, "unit": "PCS", "role": "SEASONING"},
+      {"id": "butter", "amount": 30, "unit": "G", "role": "SECONDARY"},
+      {"id": "olive-oil", "amount": 1, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "white-wine", "amount": 100, "unit": "ML", "role": "SECONDARY", "optional": true, "note": {"sk": "alebo viac vývaru", "en": "or more stock"}},
+      {"id": "stock-vegetable", "amount": 2, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "parmesan", "amount": 50, "unit": "G", "role": "SECONDARY"},
+      {"id": "black-pepper", "amount": 0.25, "unit": "TSP", "role": "SEASONING"},
+      {"id": "parsley", "amount": 2, "unit": "TBSP", "role": "SEASONING", "optional": true}
+    ],
+    "steps": [
+      {"sk": "Bujóny rozpusti v 1,2 l horúcej vody a vývar udržiavaj horúci.", "en": "Dissolve the stock cubes in 1.2 l hot water and keep the stock hot."},
+      {"sk": "Na oleji opeč nakrájané huby na prudkom ohni dozlatista, asi 6 minút, a odlož ich.", "en": "Fry the sliced mushrooms in the oil over high heat until golden, about 6 minutes, and set aside.", "timerSeconds": 360},
+      {"sk": "V tom istom hrnci speň na polovici masla cibuľu, pridaj cesnak a ryžu a 2 minúty opekaj, kým zrnká na okrajoch nesklovatejú.", "en": "In the same pot, soften the onion in half the butter, add the garlic and rice and toast for 2 minutes until the grains turn translucent at the edges.", "timerSeconds": 120},
+      {"sk": "Podlej vínom a nechaj ho odpariť. Potom prilievaj vývar po naberačkách a miešaj, kým ho ryža nevsiakne. Opakuj asi 18 minút, kým ryža nie je krémová a v strede ešte jemne pevná.", "en": "Add the wine and let it evaporate. Then add the stock a ladle at a time, stirring until it is absorbed. Repeat for about 18 minutes, until the rice is creamy but still slightly firm in the centre.", "timerSeconds": 1080},
+      {"sk": "Vmiešaj huby, zvyšné maslo a strúhaný parmezán, okoreň a nechaj 2 minúty prikryté odpočinúť.", "en": "Stir in the mushrooms, the remaining butter and the grated parmesan, season with pepper and let it rest, covered, for 2 minutes.", "timerSeconds": 120}
+    ]
+  },
+  {
+    "id": "lasagne-bolognese",
+    "title": {"sk": "Lasagne bolognese", "en": "Lasagne bolognese"},
+    "description": {"sk": "Poctivé zapekané lasagne s mäsovou omáčkou a bešamelom – ideálne na celý týždeň.", "en": "Proper baked lasagne with meat sauce and béchamel: ideal for the whole week."},
+    "cuisine": "ITALIAN",
+    "mealTypes": ["LUNCH", "DINNER"],
+    "totalTimeMin": 110,
+    "activeTimeMin": 45,
+    "difficulty": 3,
+    "servings": 6,
+    "equipment": ["STOVE", "OVEN"],
+    "tags": ["MEAL_PREP", "FREEZER_FRIENDLY", "COMFORT"],
+    "ingredients": [
+      {"id": "lasagna-sheets", "amount": 250, "unit": "G", "role": "MAIN"},
+      {"id": "ground-beef", "amount": 500, "unit": "G", "role": "MAIN"},
+      {"id": "onion", "amount": 1, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "carrot", "amount": 1, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "garlic", "amount": 2, "unit": "PCS", "role": "SEASONING"},
+      {"id": "passata", "amount": 700, "unit": "G", "role": "MAIN"},
+      {"id": "tomato-paste", "amount": 2, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "olive-oil", "amount": 2, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "oregano", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "salt", "amount": 1.5, "unit": "TSP", "role": "SEASONING"},
+      {"id": "black-pepper", "amount": 0.5, "unit": "TSP", "role": "SEASONING"},
+      {"id": "butter", "amount": 50, "unit": "G", "role": "SECONDARY"},
+      {"id": "wheat-flour", "amount": 50, "unit": "G", "role": "SECONDARY"},
+      {"id": "milk", "amount": 700, "unit": "ML", "role": "SECONDARY"},
+      {"id": "nutmeg", "amount": 1, "unit": "PINCH", "role": "SEASONING"},
+      {"id": "parmesan", "amount": 50, "unit": "G", "role": "SECONDARY"},
+      {"id": "mozzarella", "amount": 125, "unit": "G", "role": "SECONDARY"}
+    ],
+    "steps": [
+      {"sk": "Na olivovom oleji speň nadrobno nakrájanú cibuľu a nastrúhanú mrkvu, asi 5 minút. Pridaj cesnak.", "en": "Soften the finely chopped onion and grated carrot in the olive oil for about 5 minutes. Add the garlic.", "timerSeconds": 300},
+      {"sk": "Pridaj mäso a opekaj ho na prudkom ohni, kým nie je nikde ružové, asi 8 minút. Hrudky rozbíjaj vareškou.", "en": "Add the beef and brown it over high heat until it is no longer pink anywhere, about 8 minutes, breaking up the lumps with a spoon.", "timerSeconds": 480},
+      {"sk": "Vmiešaj pretlak, passatu, oregano, 1 lyžičku soli a korenie a nechaj prikryté dusiť na miernom ohni 30 minút.", "en": "Stir in the tomato paste, passata, oregano, 1 teaspoon of salt and the pepper and simmer covered over low heat for 30 minutes.", "timerSeconds": 1800},
+      {"sk": "Bešamel: na masle krátko opraž múku, postupne vmiešaj studené mlieko a za stáleho miešania var 5 minút, kým nezhustne. Dochuť zvyšnou soľou a muškátovým orieškom.", "en": "Béchamel: cook the flour in the butter briefly, gradually whisk in the cold milk and simmer for 5 minutes, stirring, until thick. Season with the remaining salt and the nutmeg.", "timerSeconds": 300},
+      {"sk": "Rúru predhrej na 180 °C. Do zapekacej misy vrstvi mäsovú omáčku, pláty lasagní a bešamel; posledná vrstva je bešamel.", "en": "Preheat the oven to 180 °C. Layer meat sauce, lasagne sheets and béchamel in a baking dish, finishing with béchamel."},
+      {"sk": "Posyp parmezánom a natrhanou mozzarellou a peč 40 minút dozlatista. Pred krájaním nechaj 10 minút odpočinúť.", "en": "Top with the parmesan and torn mozzarella and bake for 40 minutes until golden. Let it rest for 10 minutes before cutting.", "timerSeconds": 2400}
+    ]
+  },
+  {
+    "id": "minestrone",
+    "title": {"sk": "Minestrone s fazuľou", "en": "Minestrone with beans"},
+    "description": {"sk": "Hustá talianska zeleninová polievka, ktorá vydrží niekoľko dní.", "en": "A thick Italian vegetable soup that keeps for several days."},
+    "cuisine": "ITALIAN",
+    "mealTypes": ["LUNCH", "DINNER"],
+    "totalTimeMin": 45,
+    "activeTimeMin": 20,
+    "difficulty": 1,
+    "servings": 6,
+    "equipment": ["STOVE"],
+    "tags": ["MEAL_PREP", "ONE_POT", "FREEZER_FRIENDLY"],
+    "ingredients": [
+      {"id": "onion", "amount": 1, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "carrot", "amount": 2, "unit": "PCS", "role": "MAIN"},
+      {"id": "celery", "amount": 2, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "zucchini", "amount": 1, "unit": "PCS", "role": "MAIN"},
+      {"id": "potato", "amount": 300, "unit": "G", "role": "SECONDARY"},
+      {"id": "canned-tomatoes", "amount": 400, "unit": "G", "role": "MAIN"},
+      {"id": "white-beans", "amount": 240, "unit": "G", "role": "MAIN"},
+      {"id": "pasta", "amount": 100, "unit": "G", "role": "SECONDARY"},
+      {"id": "garlic", "amount": 2, "unit": "PCS", "role": "SEASONING"},
+      {"id": "olive-oil", "amount": 2, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "stock-vegetable", "amount": 2, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "oregano", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "black-pepper", "amount": 0.25, "unit": "TSP", "role": "SEASONING"},
+      {"id": "basil", "amount": 2, "unit": "TBSP", "role": "SEASONING", "optional": true}
+    ],
+    "steps": [
+      {"sk": "Cibuľu, mrkvu a zeler nakrájaj na drobné kocky a nechaj ich na olivovom oleji 8 minút pomaly dusiť.", "en": "Dice the onion, carrots and celery and cook them gently in the olive oil for 8 minutes.", "timerSeconds": 480},
+      {"sk": "Pridaj cesnak, kocky zemiakov a cukety, paradajky, bujóny, oregano a 1,5 l vody. Var 15 minút.", "en": "Add the garlic, diced potato and zucchini, the tomatoes, stock cubes, oregano and 1.5 l water. Simmer for 15 minutes.", "timerSeconds": 900},
+      {"sk": "Pridaj prepláchnutú fazuľu a cestoviny a var, kým cestoviny nezmäknú, asi 10 minút.", "en": "Add the rinsed beans and the pasta and simmer until the pasta is tender, about 10 minutes.", "timerSeconds": 600},
+      {"sk": "Okoreň, podľa bujónu dochuť soľou a podávaj s natrhanou bazalkou.", "en": "Season with pepper, add salt to taste depending on the stock, and serve with torn basil."}
+    ]
+  }
+]

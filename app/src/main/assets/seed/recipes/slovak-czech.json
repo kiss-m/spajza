@@ -1,0 +1,261 @@
+[
+  {
+    "id": "bryndzove-halusky",
+    "title": {"sk": "Bryndzové halušky so slaninou", "en": "Bryndza dumplings with bacon"},
+    "description": {"sk": "Klasika zo Slovenska: mäkké zemiakové halušky obalené v ovčej bryndzi a chrumkavej slanine.", "en": "A Slovak classic: soft potato dumplings tossed in sheep's cheese and crispy bacon."},
+    "cuisine": "SLOVAK_CZECH",
+    "mealTypes": ["LUNCH", "DINNER"],
+    "totalTimeMin": 40,
+    "activeTimeMin": 30,
+    "difficulty": 2,
+    "servings": 2,
+    "equipment": ["STOVE"],
+    "tags": ["COMFORT"],
+    "ingredients": [
+      {"id": "potato", "amount": 500, "unit": "G", "role": "MAIN", "note": {"sk": "surové, ošúpané", "en": "raw, peeled"}},
+      {"id": "wheat-flour", "amount": 180, "unit": "G", "role": "MAIN", "note": {"sk": "hladká alebo polohrubá", "en": "plain"}},
+      {"id": "egg", "amount": 1, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "salt", "amount": 0.5, "unit": "TSP", "role": "SEASONING"},
+      {"id": "bryndza", "amount": 250, "unit": "G", "role": "MAIN"},
+      {"id": "bacon", "amount": 80, "unit": "G", "role": "SECONDARY"},
+      {"id": "chives", "amount": 1, "unit": "TBSP", "role": "SEASONING", "optional": true}
+    ],
+    "steps": [
+      {"sk": "Daj variť veľký hrniec osolenej vody.", "en": "Bring a large pot of salted water to the boil."},
+      {"sk": "Slaninu nakrájaj na kocky a opeč na suchej panvici do chrumkava, asi 8 minút. Odlož ju aj s výpekom.", "en": "Dice the bacon and fry it in a dry pan until crisp, about 8 minutes. Set it aside with the fat.", "timerSeconds": 480},
+      {"sk": "Zemiaky najemno nastrúhaj a zmiešaj s vajcom, soľou a múkou na husté lepkavé cesto. Ak je riedke, pridaj trochu múky.", "en": "Finely grate the potatoes and mix with the egg, salt and flour into a thick, sticky dough. Add a little more flour if it is runny."},
+      {"sk": "Cesto pretláčaj cez haluškár alebo ho z dosky odrezávaj nožom priamo do vriacej vody. Keď halušky vyplávajú na povrch, var ich ešte 2 minúty.", "en": "Press the dough through a spaetzle maker or scrape small pieces off a board straight into the boiling water. Once the dumplings float, cook them for 2 more minutes.", "timerSeconds": 120},
+      {"sk": "Halušky vyber dierovanou naberačkou a hneď ich zmiešaj s bryndzou a lyžicou vody z varenia.", "en": "Lift the dumplings out with a slotted spoon and immediately mix them with the bryndza and a spoonful of the cooking water."},
+      {"sk": "Posyp slaninou, polej výpekom a podľa chuti pažítkou. Podávaj hneď, tradične s kyslým mliekom.", "en": "Top with the bacon and its fat and, if you like, chives. Serve right away, traditionally with a glass of buttermilk."}
+    ]
+  },
+  {
+    "id": "kapustnica",
+    "title": {"sk": "Kapustnica s klobásou a hríbmi", "en": "Sauerkraut soup with sausage and mushrooms"},
+    "description": {"sk": "Hustá, údená a kyslastá polievka, ktorá na druhý deň chutí ešte lepšie.", "en": "A thick, smoky and tangy soup that tastes even better the next day."},
+    "cuisine": "SLOVAK_CZECH",
+    "mealTypes": ["LUNCH", "DINNER"],
+    "totalTimeMin": 90,
+    "activeTimeMin": 25,
+    "difficulty": 1,
+    "servings": 6,
+    "equipment": ["STOVE"],
+    "tags": ["MEAL_PREP", "FREEZER_FRIENDLY", "COMFORT", "ONE_POT"],
+    "ingredients": [
+      {"id": "sauerkraut", "amount": 600, "unit": "G", "role": "MAIN"},
+      {"id": "sausage", "amount": 250, "unit": "G", "role": "MAIN"},
+      {"id": "pork-shoulder", "amount": 300, "unit": "G", "role": "SECONDARY", "note": {"sk": "na kocky", "en": "diced"}},
+      {"id": "onion", "amount": 1, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "dried-mushrooms", "amount": 15, "unit": "G", "role": "SECONDARY"},
+      {"id": "potato", "amount": 300, "unit": "G", "role": "SECONDARY"},
+      {"id": "sweet-paprika", "amount": 2, "unit": "TSP", "role": "SEASONING"},
+      {"id": "smoked-paprika", "amount": 1, "unit": "TSP", "role": "SEASONING", "optional": true},
+      {"id": "bay-leaf", "amount": 2, "unit": "PCS", "role": "SEASONING"},
+      {"id": "caraway", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "sunflower-oil", "amount": 1, "unit": "TBSP", "role": "SEASONING"},
+      {"id": "wheat-flour", "amount": 1, "unit": "TBSP", "role": "SEASONING"},
+      {"id": "salt", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "black-pepper", "amount": 0.5, "unit": "TSP", "role": "SEASONING"},
+      {"id": "sour-cream", "amount": 120, "unit": "G", "role": "SECONDARY", "optional": true, "note": {"sk": "na podávanie", "en": "to serve"}}
+    ],
+    "steps": [
+      {"sk": "Sušené hríby zalej v miske 200 ml horúcej vody a nechaj ich 15 minút napučať.", "en": "Cover the dried mushrooms with 200 ml hot water and let them soak for 15 minutes.", "timerSeconds": 900},
+      {"sk": "V hrnci rozohrej olej, speň na ňom nadrobno nakrájanú cibuľu a potom opeč mäso zo všetkých strán, asi 6 minút.", "en": "Heat the oil in a large pot, soften the finely chopped onion, then brown the pork on all sides, about 6 minutes.", "timerSeconds": 360},
+      {"sk": "Vmiešaj papriku a rascu, hneď zalej 1,5 l vody a pridaj kyslú kapustu aj so šťavou, bobkové listy a hríby aj s vodou.", "en": "Stir in the paprika and caraway, then immediately add 1.5 l water, the sauerkraut with its juice, the bay leaves and the mushrooms with their soaking water."},
+      {"sk": "Var prikryté 40 minút, kým nie je mäso mäkké a ľahko sa rozpadá.", "en": "Simmer covered for 40 minutes, until the pork is tender and falls apart easily.", "timerSeconds": 2400},
+      {"sk": "Pridaj zemiaky a klobásu nakrájané na kocky a var ďalších 20 minút.", "en": "Add the diced potatoes and sausage and simmer for another 20 minutes.", "timerSeconds": 1200},
+      {"sk": "Múku rozmiešaj v troche studenej vody, vlej do polievky, osoľ, okoreň a povar ešte 5 minút. Podávaj s lyžicou kyslej smotany.", "en": "Whisk the flour into a little cold water, stir it into the soup, season with salt and pepper and simmer for 5 more minutes. Serve with a spoonful of sour cream.", "timerSeconds": 300}
+    ]
+  },
+  {
+    "id": "sosovicovy-privarok",
+    "title": {"sk": "Šošovicový prívarok s volským okom", "en": "Lentil stew with a fried egg"},
+    "description": {"sk": "Lacný a sýty prívarok s jemne sladkokyslou chuťou, doplnený vajíčkom.", "en": "A cheap, filling lentil stew with a gentle sweet-sour note, topped with a fried egg."},
+    "cuisine": "SLOVAK_CZECH",
+    "mealTypes": ["LUNCH", "DINNER"],
+    "totalTimeMin": 45,
+    "activeTimeMin": 15,
+    "difficulty": 1,
+    "servings": 4,
+    "equipment": ["STOVE"],
+    "tags": ["STUDENT", "MEAL_PREP"],
+    "ingredients": [
+      {"id": "lentils", "amount": 250, "unit": "G", "role": "MAIN"},
+      {"id": "onion", "amount": 1, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "garlic", "amount": 2, "unit": "PCS", "role": "SEASONING"},
+      {"id": "sunflower-oil", "amount": 3, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "wheat-flour", "amount": 2, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "bay-leaf", "amount": 2, "unit": "PCS", "role": "SEASONING"},
+      {"id": "marjoram", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "vinegar", "amount": 2, "unit": "TBSP", "role": "SEASONING"},
+      {"id": "sugar", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "salt", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "egg", "amount": 4, "unit": "PCS", "role": "MAIN"},
+      {"id": "bread", "amount": 4, "unit": "PCS", "role": "SECONDARY", "optional": true, "note": {"sk": "krajce na podávanie", "en": "slices, to serve"}}
+    ],
+    "steps": [
+      {"sk": "Šošovicu prepláchni, zalej 1 l vody, pridaj bobkové listy a var 25 minút doměkka.", "en": "Rinse the lentils, cover with 1 l water, add the bay leaves and simmer for 25 minutes until soft.", "timerSeconds": 1500},
+      {"sk": "Medzitým na 2 lyžiciach oleja speň nadrobno nakrájanú cibuľu, pridaj múku a za stáleho miešania praž do svetlohneda, asi 3 minúty.", "en": "Meanwhile, soften the finely chopped onion in 2 tablespoons of oil, add the flour and cook, stirring, until light brown, about 3 minutes.", "timerSeconds": 180},
+      {"sk": "Zápražku vmiešaj do šošovice, pridaj prelisovaný cesnak, majorán, soľ, ocot a cukor. Povar 5 minút, kým prívarok nezhustne.", "en": "Stir the roux into the lentils, add the crushed garlic, marjoram, salt, vinegar and sugar. Simmer for 5 minutes until thick.", "timerSeconds": 300},
+      {"sk": "Na zvyšnom oleji usmaž volské oká, kým bielky nestuhnú a žĺtky sú ešte tekuté, asi 3 minúty.", "en": "Fry the eggs in the remaining oil until the whites are set and the yolks are still runny, about 3 minutes.", "timerSeconds": 180},
+      {"sk": "Prívarok dochuť octom a soľou a podávaj s vajíčkom a chlebom.", "en": "Adjust the vinegar and salt and serve with the egg and bread."}
+    ]
+  },
+  {
+    "id": "zemiakove-placky",
+    "title": {"sk": "Zemiakové placky s cesnakom a majoránom", "en": "Potato pancakes with garlic and marjoram"},
+    "description": {"sk": "Chrumkavé placky z pár surovín, ktoré má doma takmer každý.", "en": "Crispy pancakes made from a handful of things almost everyone has at home."},
+    "cuisine": "SLOVAK_CZECH",
+    "mealTypes": ["LUNCH", "DINNER", "SNACK"],
+    "totalTimeMin": 35,
+    "activeTimeMin": 30,
+    "difficulty": 1,
+    "servings": 3,
+    "equipment": ["STOVE"],
+    "tags": ["STUDENT", "COMFORT"],
+    "ingredients": [
+      {"id": "potato", "amount": 700, "unit": "G", "role": "MAIN"},
+      {"id": "egg", "amount": 2, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "wheat-flour", "amount": 4, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "garlic", "amount": 3, "unit": "PCS", "role": "SEASONING"},
+      {"id": "marjoram", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "salt", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "black-pepper", "amount": 0.25, "unit": "TSP", "role": "SEASONING"},
+      {"id": "sunflower-oil", "amount": 5, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "sour-cream", "amount": 150, "unit": "G", "role": "SECONDARY", "optional": true, "note": {"sk": "na podávanie", "en": "to serve"}}
+    ],
+    "steps": [
+      {"sk": "Zemiaky ošúp, najemno nastrúhaj a v čistej utierke z nich vytlač čo najviac vody.", "en": "Peel and finely grate the potatoes, then squeeze out as much liquid as you can in a clean tea towel."},
+      {"sk": "Primiešaj vajcia, múku, prelisovaný cesnak, majorán, soľ a korenie.", "en": "Mix in the eggs, flour, crushed garlic, marjoram, salt and pepper."},
+      {"sk": "Na panvici rozohrej 2 lyžice oleja, naber cesto lyžicou a roztlač ho na tenké placky.", "en": "Heat 2 tablespoons of oil in a pan, spoon in the batter and spread it into thin pancakes."},
+      {"sk": "Smaž ich na strednom ohni 3 až 4 minúty z každej strany do zlatista a chrumkava. Olej podľa potreby dolievaj.", "en": "Fry over medium heat for 3–4 minutes per side until golden and crisp, adding more oil as needed.", "timerSeconds": 210},
+      {"sk": "Placky nechaj odkvapkať na papierovej utierke a podávaj teplé, napríklad s kyslou smotanou.", "en": "Drain on kitchen paper and serve warm, for example with sour cream."}
+    ]
+  },
+  {
+    "id": "kuraci-paprikas",
+    "title": {"sk": "Kurací paprikáš s cestovinami", "en": "Chicken paprikash with pasta"},
+    "description": {"sk": "Šťavnaté kuracie stehná v krémovej paprikovej omáčke.", "en": "Juicy chicken thighs in a creamy paprika sauce."},
+    "cuisine": "SLOVAK_CZECH",
+    "mealTypes": ["LUNCH", "DINNER"],
+    "totalTimeMin": 50,
+    "activeTimeMin": 20,
+    "difficulty": 1,
+    "servings": 4,
+    "equipment": ["STOVE"],
+    "tags": ["COMFORT", "MEAL_PREP"],
+    "ingredients": [
+      {"id": "chicken-thigh", "amount": 600, "unit": "G", "role": "MAIN"},
+      {"id": "onion", "amount": 2, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "sweet-paprika", "amount": 1, "unit": "TBSP", "role": "SEASONING"},
+      {"id": "bell-pepper", "amount": 1, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "tomato", "amount": 1, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "sunflower-oil", "amount": 2, "unit": "TBSP", "role": "SEASONING"},
+      {"id": "sour-cream", "amount": 200, "unit": "G", "role": "SECONDARY"},
+      {"id": "wheat-flour", "amount": 1, "unit": "TBSP", "role": "SEASONING"},
+      {"id": "salt", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "pasta", "amount": 300, "unit": "G", "role": "MAIN", "note": {"sk": "alebo halušky", "en": "or dumplings"}}
+    ],
+    "steps": [
+      {"sk": "Cibuľu nakrájaj nadrobno a na oleji ju pomaly speň do zlatista, asi 8 minút.", "en": "Finely chop the onions and cook them slowly in the oil until golden, about 8 minutes.", "timerSeconds": 480},
+      {"sk": "Stiahni hrniec z ohňa a vmiešaj papriku – nesmie sa pripáliť, lebo by zhorkla. Pridaj mäso nakrájané na väčšie kusy.", "en": "Take the pot off the heat and stir in the paprika; it turns bitter if it burns. Add the chicken cut into large pieces."},
+      {"sk": "Pridaj nakrájanú papriku a paradajku, osoľ, podlej 200 ml vody a nechaj prikryté dusiť 25 minút, kým mäso nie je mäkké a pri prepichnutí z neho vyteká číra šťava (vnútri 75 °C).", "en": "Add the chopped pepper and tomato, season with salt, pour in 200 ml water and braise covered for 25 minutes, until the chicken is tender and its juices run clear (75 °C inside).", "timerSeconds": 1500},
+      {"sk": "Medzitým uvar cestoviny podľa návodu na obale.", "en": "Meanwhile, cook the pasta according to the packet."},
+      {"sk": "Kyslú smotanu rozmiešaj s múkou, vmiešaj do omáčky a za stáleho miešania povar 3 minúty.", "en": "Whisk the sour cream with the flour, stir it into the sauce and simmer for 3 minutes, stirring.", "timerSeconds": 180},
+      {"sk": "Podávaj paprikáš s cestovinami.", "en": "Serve the paprikash with the pasta."}
+    ]
+  },
+  {
+    "id": "cesnacka",
+    "title": {"sk": "Cesnačka so syrom a krutónmi", "en": "Garlic soup with cheese and croutons"},
+    "description": {"sk": "Rýchla zahrievacia polievka, ktorá postaví na nohy.", "en": "A quick warming soup that perks you right up."},
+    "cuisine": "SLOVAK_CZECH",
+    "mealTypes": ["LUNCH", "DINNER"],
+    "totalTimeMin": 30,
+    "activeTimeMin": 15,
+    "difficulty": 1,
+    "servings": 4,
+    "equipment": ["STOVE"],
+    "tags": ["STUDENT", "COMFORT"],
+    "ingredients": [
+      {"id": "potato", "amount": 400, "unit": "G", "role": "MAIN"},
+      {"id": "garlic", "amount": 6, "unit": "PCS", "role": "MAIN"},
+      {"id": "stock-vegetable", "amount": 1, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "caraway", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "marjoram", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "butter", "amount": 20, "unit": "G", "role": "SECONDARY"},
+      {"id": "bread", "amount": 4, "unit": "PCS", "role": "SECONDARY", "note": {"sk": "krajce", "en": "slices"}},
+      {"id": "edam", "amount": 80, "unit": "G", "role": "SECONDARY"},
+      {"id": "sunflower-oil", "amount": 1, "unit": "TBSP", "role": "SEASONING"},
+      {"id": "salt", "amount": 0.5, "unit": "TSP", "role": "SEASONING"}
+    ],
+    "steps": [
+      {"sk": "Zemiaky nakrájaj na malé kocky, zalej 1,2 l vody, pridaj bujón a rascu a var 15 minút doměkka.", "en": "Dice the potatoes, cover with 1.2 l water, add the stock cube and caraway and simmer for 15 minutes until soft.", "timerSeconds": 900},
+      {"sk": "Chlieb nakrájaj na kocky a opeč na oleji dochrumkava.", "en": "Cut the bread into cubes and toast them in the oil until crisp."},
+      {"sk": "Do polievky pridaj maslo, prelisovaný cesnak a majorán, osoľ a už len krátko prehrej, aby cesnak nestratil arómu.", "en": "Add the butter, crushed garlic and marjoram to the soup, season with salt and only heat it through briefly so the garlic keeps its aroma."},
+      {"sk": "Do tanierov daj strúhaný syr a krutóny a zalej ich horúcou polievkou.", "en": "Put grated cheese and croutons into the bowls and ladle the hot soup over them."}
+    ]
+  },
+  {
+    "id": "lievance",
+    "title": {"sk": "Lievance s džemom", "en": "Slovak yeast pancakes with jam"},
+    "description": {"sk": "Nadýchané kysnuté lievance na víkendové raňajky.", "en": "Fluffy yeasted pancakes for a weekend breakfast."},
+    "cuisine": "SLOVAK_CZECH",
+    "mealTypes": ["BREAKFAST", "DESSERT"],
+    "totalTimeMin": 60,
+    "activeTimeMin": 25,
+    "difficulty": 2,
+    "servings": 4,
+    "equipment": ["STOVE"],
+    "tags": ["COMFORT"],
+    "ingredients": [
+      {"id": "wheat-flour", "amount": 250, "unit": "G", "role": "MAIN"},
+      {"id": "milk", "amount": 300, "unit": "ML", "role": "MAIN"},
+      {"id": "egg", "amount": 2, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "dry-yeast", "amount": 7, "unit": "G", "role": "SECONDARY"},
+      {"id": "sugar", "amount": 2, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "salt", "amount": 1, "unit": "PINCH", "role": "SEASONING"},
+      {"id": "sunflower-oil", "amount": 2, "unit": "TBSP", "role": "SEASONING"},
+      {"id": "jam", "amount": 120, "unit": "G", "role": "SECONDARY"},
+      {"id": "powdered-sugar", "amount": 1, "unit": "TBSP", "role": "SEASONING", "optional": true}
+    ],
+    "steps": [
+      {"sk": "Mlieko zohrej len do vlažna (nie nahorúco) a rozmiešaj v ňom cukor a droždie.", "en": "Warm the milk until just lukewarm (not hot) and stir in the sugar and yeast."},
+      {"sk": "V mise zmiešaj múku so soľou, pridaj vajcia a mlieko a vymiešaj hladké husté cesto.", "en": "Mix the flour with the salt in a bowl, add the eggs and milk and beat into a smooth, thick batter."},
+      {"sk": "Prikry utierkou a nechaj na teplom mieste kysnúť 30 minút, kým nezdvojnásobí objem.", "en": "Cover with a tea towel and leave in a warm place to rise for 30 minutes, until doubled.", "timerSeconds": 1800},
+      {"sk": "Panvicu jemne potri olejom, nalievaj malé kôpky cesta a peč na miernom ohni asi 2 minúty, kým sa na povrchu neurobia bublinky. Otoč a dopeč ešte minútu.", "en": "Lightly oil a pan, drop in small spoonfuls of batter and cook over low heat for about 2 minutes until bubbles appear on top. Flip and cook for one more minute.", "timerSeconds": 120},
+      {"sk": "Lievance natri džemom a podľa chuti posyp práškovým cukrom.", "en": "Spread with jam and dust with powdered sugar if you like."}
+    ]
+  },
+  {
+    "id": "koprova-omacka",
+    "title": {"sk": "Kôprová omáčka s vajíčkom a zemiakmi", "en": "Dill sauce with eggs and potatoes"},
+    "description": {"sk": "Jemná mliečno-kôprová omáčka, aká sa varí u starej mamy.", "en": "A gentle creamy dill sauce like the ones grandmothers make."},
+    "cuisine": "SLOVAK_CZECH",
+    "mealTypes": ["LUNCH", "DINNER"],
+    "totalTimeMin": 35,
+    "activeTimeMin": 20,
+    "difficulty": 1,
+    "servings": 4,
+    "equipment": ["STOVE"],
+    "tags": ["COMFORT"],
+    "ingredients": [
+      {"id": "potato", "amount": 800, "unit": "G", "role": "MAIN"},
+      {"id": "egg", "amount": 4, "unit": "PCS", "role": "MAIN"},
+      {"id": "milk", "amount": 500, "unit": "ML", "role": "MAIN"},
+      {"id": "butter", "amount": 30, "unit": "G", "role": "SECONDARY"},
+      {"id": "wheat-flour", "amount": 3, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "dill", "amount": 1, "unit": "PCS", "role": "SECONDARY", "note": {"sk": "zväzok", "en": "bunch"}},
+      {"id": "vinegar", "amount": 1, "unit": "TBSP", "role": "SEASONING"},
+      {"id": "sugar", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "salt", "amount": 1, "unit": "TSP", "role": "SEASONING"}
+    ],
+    "steps": [
+      {"sk": "Zemiaky ošúp, nakrájaj na väčšie kusy a var v osolenej vode 20 minút doměkka.", "en": "Peel the potatoes, cut into large pieces and boil in salted water for 20 minutes until tender.", "timerSeconds": 1200},
+      {"sk": "Vajcia var 9 minút natvrdo, schlaď ich v studenej vode a ošúp.", "en": "Boil the eggs for 9 minutes until hard, cool them in cold water and peel.", "timerSeconds": 540},
+      {"sk": "Na masle krátko opraž múku, kým nezavonia, ale nezmení farbu. Postupne vlievaj studené mlieko a miešaj metličkou, aby nevznikli hrudky.", "en": "Cook the flour in the butter briefly until fragrant but not coloured. Gradually whisk in the cold milk so no lumps form."},
+      {"sk": "Omáčku za stáleho miešania povar 5 minút, kým nezhustne, a dochuť soľou, cukrom a octom.", "en": "Simmer the sauce for 5 minutes, stirring, until thickened, then season with salt, sugar and vinegar.", "timerSeconds": 300},
+      {"sk": "Odstav, vmiešaj nasekaný kôpor a podávaj so zemiakmi a rozpolenými vajíčkami.", "en": "Take off the heat, stir in the chopped dill and serve with the potatoes and halved eggs."}
+    ]
+  }
+]

@@ -1,0 +1,222 @@
+[
+  {
+    "id": "kuracie-kung-pao",
+    "title": {"sk": "Kuracie kung pao s arašidmi", "en": "Kung pao chicken with peanuts"},
+    "description": {"sk": "Sladko-pikantné kura s chrumkavými arašidmi, rýchlejšie ako donáška.", "en": "Sweet and spicy chicken with crunchy peanuts, faster than takeaway."},
+    "cuisine": "CHINESE",
+    "mealTypes": ["LUNCH", "DINNER"],
+    "totalTimeMin": 35,
+    "activeTimeMin": 25,
+    "difficulty": 2,
+    "servings": 4,
+    "equipment": ["STOVE"],
+    "ingredients": [
+      {"id": "chicken-thigh", "amount": 500, "unit": "G", "role": "MAIN"},
+      {"id": "peanuts", "amount": 50, "unit": "G", "role": "SECONDARY"},
+      {"id": "bell-pepper", "amount": 1, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "spring-onion", "amount": 3, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "garlic", "amount": 3, "unit": "PCS", "role": "SEASONING"},
+      {"id": "ginger", "amount": 10, "unit": "G", "role": "SEASONING"},
+      {"id": "chili-flakes", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "soy-sauce", "amount": 3, "unit": "TBSP", "role": "SEASONING"},
+      {"id": "rice-vinegar", "amount": 1, "unit": "TBSP", "role": "SEASONING"},
+      {"id": "sugar", "amount": 1, "unit": "TBSP", "role": "SEASONING"},
+      {"id": "corn-starch", "amount": 1, "unit": "TBSP", "role": "SEASONING"},
+      {"id": "sunflower-oil", "amount": 2, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "rice", "amount": 250, "unit": "G", "role": "MAIN"}
+    ],
+    "steps": [
+      {"sk": "Uvar ryžu podľa návodu.", "en": "Cook the rice according to the packet."},
+      {"sk": "Mäso nakrájaj na kocky a premiešaj s 1 lyžicou sójovej omáčky a polovicou škrobu.", "en": "Cut the chicken into cubes and toss with 1 tablespoon of soy sauce and half the starch."},
+      {"sk": "Omáčka: zmiešaj zvyšnú sójovú omáčku, ocot, cukor, zvyšný škrob a 4 lyžice vody.", "en": "Sauce: mix the remaining soy sauce, the vinegar, sugar, remaining starch and 4 tablespoons of water."},
+      {"sk": "Vo woku alebo na panvici rozpáľ olej a mäso opekaj 5 až 6 minút, kým nie je dozlatista a prepečené, bez ružovej farby vnútri.", "en": "Heat the oil in a wok or pan and stir-fry the chicken for 5–6 minutes until golden and cooked through, with no pink inside.", "timerSeconds": 330},
+      {"sk": "Pridaj cesnak, zázvor, čili, papriku a bielu časť cibuľky a opekaj 2 minúty.", "en": "Add the garlic, ginger, chili, pepper and the white part of the spring onions and stir-fry for 2 minutes.", "timerSeconds": 120},
+      {"sk": "Vlej omáčku, nechaj ju zhustnúť, vmiešaj arašidy a zelenú časť cibuľky a podávaj s ryžou.", "en": "Pour in the sauce, let it thicken, stir in the peanuts and spring onion greens and serve with the rice."}
+    ]
+  },
+  {
+    "id": "vyprazana-ryza-s-vajcom",
+    "title": {"sk": "Vyprážaná ryža s vajcom a zeleninou", "en": "Egg fried rice with vegetables"},
+    "description": {"sk": "Najlepší spôsob, ako zúžitkovať včerajšiu ryžu.", "en": "The best way to use up yesterday's rice."},
+    "cuisine": "CHINESE",
+    "mealTypes": ["LUNCH", "DINNER"],
+    "totalTimeMin": 20,
+    "activeTimeMin": 15,
+    "difficulty": 1,
+    "servings": 2,
+    "equipment": ["STOVE"],
+    "tags": ["STUDENT"],
+    "ingredients": [
+      {"id": "rice", "amount": 150, "unit": "G", "role": "MAIN", "note": {"sk": "suchá váha; uvarená deň vopred a vychladená", "en": "dry weight; cooked the day before and chilled"}},
+      {"id": "egg", "amount": 3, "unit": "PCS", "role": "MAIN"},
+      {"id": "frozen-vegetables", "amount": 200, "unit": "G", "role": "SECONDARY"},
+      {"id": "spring-onion", "amount": 2, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "garlic", "amount": 2, "unit": "PCS", "role": "SEASONING"},
+      {"id": "soy-sauce", "amount": 2, "unit": "TBSP", "role": "SEASONING"},
+      {"id": "sesame-oil", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "sunflower-oil", "amount": 2, "unit": "TBSP", "role": "SECONDARY"}
+    ],
+    "steps": [
+      {"sk": "Vajcia rozšľahaj a na rozpálenej panvici ich na polovici oleja rýchlo zamiešaj na mäkkú praženicu. Odlož ich.", "en": "Beat the eggs and scramble them quickly in half the oil in a hot pan until just set. Set aside."},
+      {"sk": "Na zvyšnom oleji opekaj cesnak so zeleninou 3 minúty.", "en": "Stir-fry the garlic and vegetables in the remaining oil for 3 minutes.", "timerSeconds": 180},
+      {"sk": "Pridaj vychladnutú ryžu, rozbi hrudky a opekaj na prudkom ohni 4 minúty, kým nie sú zrnká horúce a mierne chrumkavé.", "en": "Add the cold rice, break up any clumps and fry over high heat for 4 minutes until the grains are piping hot and slightly crisp.", "timerSeconds": 240},
+      {"sk": "Vmiešaj vajíčka, sójovú omáčku, sezamový olej a cibuľku a hneď podávaj.", "en": "Stir in the eggs, soy sauce, sesame oil and spring onion and serve immediately."}
+    ]
+  },
+  {
+    "id": "pikantne-tofu-so-sezamom",
+    "title": {"sk": "Pikantné tofu so sezamom a ryžou", "en": "Spicy tofu with sesame and rice"},
+    "description": {"sk": "Rastlinná obdoba mapo tofu: jemné tofu v pálivej omáčke s ryžou.", "en": "A plant-based take on mapo tofu: soft tofu in a fiery sauce with rice."},
+    "cuisine": "CHINESE",
+    "mealTypes": ["LUNCH", "DINNER"],
+    "totalTimeMin": 30,
+    "activeTimeMin": 20,
+    "difficulty": 1,
+    "servings": 3,
+    "equipment": ["STOVE"],
+    "ingredients": [
+      {"id": "tofu", "amount": 400, "unit": "G", "role": "MAIN"},
+      {"id": "rice", "amount": 225, "unit": "G", "role": "MAIN"},
+      {"id": "garlic", "amount": 3, "unit": "PCS", "role": "SEASONING"},
+      {"id": "ginger", "amount": 10, "unit": "G", "role": "SEASONING"},
+      {"id": "spring-onion", "amount": 3, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "chili-flakes", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "soy-sauce", "amount": 3, "unit": "TBSP", "role": "SEASONING"},
+      {"id": "hoisin-sauce", "amount": 2, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "corn-starch", "amount": 2, "unit": "TSP", "role": "SEASONING"},
+      {"id": "sunflower-oil", "amount": 2, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "sesame-oil", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "sesame-seeds", "amount": 1, "unit": "TBSP", "role": "SEASONING", "optional": true}
+    ],
+    "steps": [
+      {"sk": "Uvar ryžu podľa návodu. Tofu nakrájaj na 2 cm kocky.", "en": "Cook the rice according to the packet. Cut the tofu into 2 cm cubes."},
+      {"sk": "Na oleji minútu opekaj cesnak, zázvor, bielu časť cibuľky a čili vločky.", "en": "Fry the garlic, ginger, the white part of the spring onions and the chili flakes in the oil for a minute."},
+      {"sk": "Prilej 200 ml vody, sójovú a hoisin omáčku, pridaj tofu a jemne var 5 minút, aby tofu nasalo chuť.", "en": "Add 200 ml water, the soy and hoisin sauces and the tofu and simmer gently for 5 minutes so the tofu absorbs the flavour.", "timerSeconds": 300},
+      {"sk": "Škrob rozmiešaj v 2 lyžiciach studenej vody, vlej do omáčky a opatrne miešaj, kým nezhustne.", "en": "Mix the starch with 2 tablespoons of cold water, pour it in and stir gently until the sauce thickens."},
+      {"sk": "Pokvapkaj sezamovým olejom, posyp zelenou cibuľkou a sezamom a podávaj s ryžou.", "en": "Drizzle with sesame oil, sprinkle with spring onion greens and sesame seeds and serve with the rice."}
+    ]
+  },
+  {
+    "id": "teriyaki-losos",
+    "title": {"sk": "Teriyaki losos s brokolicou a ryžou", "en": "Teriyaki salmon with broccoli and rice"},
+    "description": {"sk": "Lesklá domáca teriyaki omáčka, šťavnatý losos a brokolica na pare.", "en": "A glossy homemade teriyaki sauce, juicy salmon and steamed broccoli."},
+    "cuisine": "JAPANESE",
+    "mealTypes": ["LUNCH", "DINNER"],
+    "totalTimeMin": 30,
+    "activeTimeMin": 20,
+    "difficulty": 2,
+    "servings": 4,
+    "equipment": ["STOVE"],
+    "pairsWith": ["miso-polievka"],
+    "ingredients": [
+      {"id": "salmon", "amount": 500, "unit": "G", "role": "MAIN"},
+      {"id": "rice", "amount": 250, "unit": "G", "role": "MAIN"},
+      {"id": "broccoli", "amount": 1, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "soy-sauce", "amount": 4, "unit": "TBSP", "role": "SEASONING"},
+      {"id": "honey", "amount": 2, "unit": "TBSP", "role": "SEASONING"},
+      {"id": "rice-vinegar", "amount": 1, "unit": "TBSP", "role": "SEASONING"},
+      {"id": "ginger", "amount": 10, "unit": "G", "role": "SEASONING"},
+      {"id": "garlic", "amount": 1, "unit": "PCS", "role": "SEASONING"},
+      {"id": "sunflower-oil", "amount": 1, "unit": "TBSP", "role": "SEASONING"},
+      {"id": "sesame-seeds", "amount": 1, "unit": "TBSP", "role": "SEASONING", "optional": true}
+    ],
+    "steps": [
+      {"sk": "Uvar ryžu podľa návodu. Brokolicu rozober na ružičky a var ju na pare alebo v troche vody 4 minúty.", "en": "Cook the rice according to the packet. Cut the broccoli into florets and steam or boil in a little water for 4 minutes.", "timerSeconds": 240},
+      {"sk": "Omáčka: zmiešaj sójovú omáčku, med, ocot, nastrúhaný zázvor a cesnak.", "en": "Sauce: mix the soy sauce, honey, vinegar, grated ginger and garlic."},
+      {"sk": "Lososa osuš a na oleji opekaj kožou nadol 4 minúty, potom ho otoč a opekaj ešte 2 minúty.", "en": "Pat the salmon dry and fry skin side down in the oil for 4 minutes, then turn and cook for 2 more minutes.", "timerSeconds": 360},
+      {"sk": "Vlej omáčku a 1 až 2 minúty ňou lososa polievaj, kým nezhustne do lesklej glazúry. Losos je hotový, keď sa v strede ľahko rozdeľuje na lupienky a je ešte šťavnatý (52–55 °C).", "en": "Pour in the sauce and baste the salmon for 1–2 minutes until the sauce reduces to a glossy glaze. The salmon is done when it flakes easily in the centre but is still moist (52–55 °C).", "timerSeconds": 90},
+      {"sk": "Podávaj s ryžou a brokolicou, posypané sezamom.", "en": "Serve with the rice and broccoli, sprinkled with sesame seeds."}
+    ]
+  },
+  {
+    "id": "miso-polievka",
+    "title": {"sk": "Miso polievka s tofu", "en": "Miso soup with tofu"},
+    "description": {"sk": "Ľahká a hrejivá polievka za 15 minút.", "en": "A light, warming soup in 15 minutes."},
+    "cuisine": "JAPANESE",
+    "mealTypes": ["BREAKFAST", "LUNCH", "DINNER"],
+    "totalTimeMin": 15,
+    "activeTimeMin": 10,
+    "difficulty": 1,
+    "servings": 2,
+    "equipment": ["STOVE"],
+    "tags": ["ONE_POT"],
+    "pairsWith": ["teriyaki-losos"],
+    "ingredients": [
+      {"id": "miso", "amount": 50, "unit": "G", "role": "MAIN"},
+      {"id": "tofu", "amount": 150, "unit": "G", "role": "MAIN"},
+      {"id": "spring-onion", "amount": 2, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "nori", "amount": 1, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "mushroom", "amount": 80, "unit": "G", "role": "SECONDARY", "optional": true}
+    ],
+    "steps": [
+      {"sk": "V hrnci priveď 700 ml vody takmer do varu. Pridaj nakrájané huby a var 3 minúty.", "en": "Bring 700 ml water almost to the boil. Add the sliced mushrooms and simmer for 3 minutes.", "timerSeconds": 180},
+      {"sk": "Tofu nakrájaj na malé kocky a nori nastrihaj na prúžky. Pridaj ich do hrnca.", "en": "Cut the tofu into small cubes and snip the nori into strips. Add them to the pot."},
+      {"sk": "Odstav z ohňa. Miso rozmiešaj v naberačke horúcej vody a vmiešaj do polievky. Už ju nevar, inak miso stratí chuť.", "en": "Take the pot off the heat. Dissolve the miso in a ladle of the hot liquid and stir it in. Do not boil it again, or the miso loses its flavour."},
+      {"sk": "Posyp nakrájanou jarnou cibuľkou a podávaj.", "en": "Sprinkle with sliced spring onion and serve."}
+    ]
+  },
+  {
+    "id": "bibimbap",
+    "title": {"sk": "Bibimbap s hovädzím a vajíčkom", "en": "Bibimbap with beef and egg"},
+    "description": {"sk": "Farebná kórejská miska: ryža, zelenina, pikantné hovädzie a volské oko.", "en": "A colourful Korean bowl: rice, vegetables, spicy beef and a fried egg."},
+    "cuisine": "KOREAN",
+    "mealTypes": ["LUNCH", "DINNER"],
+    "totalTimeMin": 40,
+    "activeTimeMin": 30,
+    "difficulty": 2,
+    "servings": 3,
+    "equipment": ["STOVE"],
+    "ingredients": [
+      {"id": "rice", "amount": 225, "unit": "G", "role": "MAIN"},
+      {"id": "ground-beef", "amount": 300, "unit": "G", "role": "MAIN"},
+      {"id": "carrot", "amount": 2, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "zucchini", "amount": 1, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "spinach", "amount": 150, "unit": "G", "role": "SECONDARY"},
+      {"id": "egg", "amount": 3, "unit": "PCS", "role": "MAIN"},
+      {"id": "soy-sauce", "amount": 3, "unit": "TBSP", "role": "SEASONING"},
+      {"id": "gochujang", "amount": 2, "unit": "TBSP", "role": "SEASONING"},
+      {"id": "sesame-oil", "amount": 1, "unit": "TBSP", "role": "SEASONING"},
+      {"id": "garlic", "amount": 2, "unit": "PCS", "role": "SEASONING"},
+      {"id": "sugar", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "sunflower-oil", "amount": 2, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "sesame-seeds", "amount": 1, "unit": "TBSP", "role": "SEASONING", "optional": true}
+    ],
+    "steps": [
+      {"sk": "Uvar ryžu podľa návodu.", "en": "Cook the rice according to the packet."},
+      {"sk": "Mrkvu a cuketu nakrájaj na tenké prúžky a každú zvlášť opeč na troche oleja 2 až 3 minúty. Špenát nechaj na panvici len zavädnúť.", "en": "Cut the carrots and zucchini into thin matchsticks and fry each separately in a little oil for 2–3 minutes. Just wilt the spinach in the pan."},
+      {"sk": "Mäso opekaj s cesnakom, kým nie je bez ružovej farby, asi 6 minút. Pridaj 2 lyžice sójovej omáčky, cukor a polovicu gočudžangu a minútu povar.", "en": "Fry the beef with the garlic until no pink remains, about 6 minutes. Add 2 tablespoons of soy sauce, the sugar and half the gochujang and cook for another minute.", "timerSeconds": 360},
+      {"sk": "Na zvyšnom oleji usmaž volské oká s tekutým žĺtkom.", "en": "Fry the eggs in the remaining oil, keeping the yolks runny."},
+      {"sk": "Do misiek daj ryžu, vedľa seba poukladaj zeleninu a mäso a navrch vajce. Zvyšný gočudžang zmiešaj so zvyšnou sójovou omáčkou a sezamovým olejom a pokvapkaj ním misky.", "en": "Put rice in the bowls, arrange the vegetables and beef side by side and top with an egg. Mix the remaining gochujang with the remaining soy sauce and the sesame oil and drizzle it over."}
+    ]
+  },
+  {
+    "id": "kimci-vyprazana-ryza",
+    "title": {"sk": "Kimči vyprážaná ryža", "en": "Kimchi fried rice"},
+    "description": {"sk": "Pikantná a kyslastá ryža z pár surovín, s vajíčkom navrchu.", "en": "Spicy, tangy rice from a few ingredients, topped with an egg."},
+    "cuisine": "KOREAN",
+    "mealTypes": ["LUNCH", "DINNER"],
+    "totalTimeMin": 20,
+    "activeTimeMin": 15,
+    "difficulty": 1,
+    "servings": 2,
+    "equipment": ["STOVE"],
+    "tags": ["STUDENT"],
+    "ingredients": [
+      {"id": "rice", "amount": 150, "unit": "G", "role": "MAIN", "note": {"sk": "suchá váha; uvarená deň vopred a vychladená", "en": "dry weight; cooked the day before and chilled"}},
+      {"id": "kimchi", "amount": 200, "unit": "G", "role": "MAIN"},
+      {"id": "egg", "amount": 2, "unit": "PCS", "role": "MAIN"},
+      {"id": "spring-onion", "amount": 2, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "gochujang", "amount": 1, "unit": "TBSP", "role": "SEASONING"},
+      {"id": "soy-sauce", "amount": 1, "unit": "TBSP", "role": "SEASONING"},
+      {"id": "sesame-oil", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "sunflower-oil", "amount": 1, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "nori", "amount": 1, "unit": "PCS", "role": "SEASONING", "optional": true}
+    ],
+    "steps": [
+      {"sk": "Kimči nakrájaj nadrobno a na oleji ho opekaj 3 minúty.", "en": "Chop the kimchi and fry it in the oil for 3 minutes.", "timerSeconds": 180},
+      {"sk": "Pridaj vychladnutú ryžu, gočudžang a sójovú omáčku a opekaj na prudkom ohni 4 minúty, kým ryža nie je horúca.", "en": "Add the cold rice, gochujang and soy sauce and fry over high heat for 4 minutes until the rice is piping hot.", "timerSeconds": 240},
+      {"sk": "Na inej panvici usmaž volské oká.", "en": "Fry the eggs in another pan."},
+      {"sk": "Ryžu pokvapkaj sezamovým olejom, posyp cibuľkou a nastrihanou nori a navrch polož vajce.", "en": "Drizzle the rice with sesame oil, sprinkle with spring onion and snipped nori and top with the eggs."}
+    ]
+  }
+]

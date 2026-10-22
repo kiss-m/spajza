@@ -1,0 +1,139 @@
+[
+  {
+    "id": "thajske-cervene-kari",
+    "title": {"sk": "Thajské červené kari s kuracím mäsom", "en": "Thai red curry with chicken"},
+    "description": {"sk": "Voňavé kokosové kari s limetkou a zeleninou.", "en": "A fragrant coconut curry with lime and vegetables."},
+    "cuisine": "THAI",
+    "mealTypes": ["LUNCH", "DINNER"],
+    "totalTimeMin": 35,
+    "activeTimeMin": 20,
+    "difficulty": 1,
+    "servings": 4,
+    "equipment": ["STOVE"],
+    "ingredients": [
+      {"id": "chicken-breast", "amount": 500, "unit": "G", "role": "MAIN"},
+      {"id": "red-curry-paste", "amount": 50, "unit": "G", "role": "SECONDARY"},
+      {"id": "coconut-milk", "amount": 400, "unit": "ML", "role": "MAIN"},
+      {"id": "bell-pepper", "amount": 1, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "zucchini", "amount": 1, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "fish-sauce", "amount": 1, "unit": "TBSP", "role": "SEASONING"},
+      {"id": "brown-sugar", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "lime", "amount": 2, "unit": "TBSP", "role": "SEASONING", "note": {"sk": "šťava", "en": "juice"}},
+      {"id": "sunflower-oil", "amount": 1, "unit": "TBSP", "role": "SEASONING"},
+      {"id": "rice", "amount": 300, "unit": "G", "role": "MAIN"},
+      {"id": "basil", "amount": 2, "unit": "TBSP", "role": "SEASONING", "optional": true}
+    ],
+    "steps": [
+      {"sk": "Uvar ryžu podľa návodu.", "en": "Cook the rice according to the packet."},
+      {"sk": "Na oleji minútu opekaj kari pastu, kým nezavonia. Prilej tretinu kokosového mlieka a var 2 minúty.", "en": "Fry the curry paste in the oil for a minute until fragrant. Add a third of the coconut milk and simmer for 2 minutes.", "timerSeconds": 120},
+      {"sk": "Pridaj mäso nakrájané na tenké plátky a opekaj 3 minúty.", "en": "Add the thinly sliced chicken and cook for 3 minutes.", "timerSeconds": 180},
+      {"sk": "Prilej zvyšné kokosové mlieko a 100 ml vody, pridaj papriku a cuketu a var 8 minút, kým nie je mäso vnútri biele a zelenina ešte jemne chrumkavá.", "en": "Add the remaining coconut milk and 100 ml water, the pepper and zucchini and simmer for 8 minutes, until the chicken is white throughout and the vegetables are still slightly crisp.", "timerSeconds": 480},
+      {"sk": "Dochuť rybacou omáčkou, cukrom a limetkovou šťavou, posyp bazalkou a podávaj s ryžou.", "en": "Season with fish sauce, sugar and lime juice, sprinkle with basil and serve with the rice."}
+    ]
+  },
+  {
+    "id": "pad-thai",
+    "title": {"sk": "Pad thai s kuracím mäsom", "en": "Chicken pad thai"},
+    "description": {"sk": "Ryžové rezance s vajíčkom, klíčkami a arašidmi v sladkokyslej omáčke.", "en": "Rice noodles with egg, bean sprouts and peanuts in a sweet-sour sauce."},
+    "cuisine": "THAI",
+    "mealTypes": ["LUNCH", "DINNER"],
+    "totalTimeMin": 30,
+    "activeTimeMin": 25,
+    "difficulty": 2,
+    "servings": 3,
+    "equipment": ["STOVE"],
+    "ingredients": [
+      {"id": "rice-noodles", "amount": 200, "unit": "G", "role": "MAIN"},
+      {"id": "chicken-breast", "amount": 300, "unit": "G", "role": "MAIN"},
+      {"id": "egg", "amount": 2, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "bean-sprouts", "amount": 100, "unit": "G", "role": "SECONDARY"},
+      {"id": "spring-onion", "amount": 3, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "peanuts", "amount": 40, "unit": "G", "role": "SECONDARY"},
+      {"id": "garlic", "amount": 2, "unit": "PCS", "role": "SEASONING"},
+      {"id": "fish-sauce", "amount": 2, "unit": "TBSP", "role": "SEASONING"},
+      {"id": "soy-sauce", "amount": 1, "unit": "TBSP", "role": "SEASONING"},
+      {"id": "brown-sugar", "amount": 1, "unit": "TBSP", "role": "SEASONING"},
+      {"id": "lime", "amount": 2, "unit": "TBSP", "role": "SEASONING", "note": {"sk": "šťava", "en": "juice"}},
+      {"id": "rice-vinegar", "amount": 1, "unit": "TBSP", "role": "SEASONING"},
+      {"id": "sunflower-oil", "amount": 2, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "chili-flakes", "amount": 0.5, "unit": "TSP", "role": "SEASONING", "optional": true}
+    ],
+    "steps": [
+      {"sk": "Rezance namoč na 10 minút do horúcej vody a sceď.", "en": "Soak the noodles in hot water for 10 minutes and drain.", "timerSeconds": 600},
+      {"sk": "Omáčka: zmiešaj rybaciu a sójovú omáčku, cukor, ocot a polovicu limetkovej šťavy.", "en": "Sauce: mix the fish sauce, soy sauce, sugar, vinegar and half the lime juice."},
+      {"sk": "Na rozpálenom oleji opekaj mäso nakrájané na prúžky s cesnakom 5 minút, kým nie je biele a prepečené.", "en": "Stir-fry the chicken strips with the garlic in the hot oil for 5 minutes until white and cooked through.", "timerSeconds": 300},
+      {"sk": "Mäso posuň na okraj, do stredu rozbi vajcia a zamiešaj ich. Pridaj rezance a omáčku a premiešavaj 2 minúty.", "en": "Push the chicken to one side, crack the eggs into the middle and scramble them. Add the noodles and sauce and toss for 2 minutes.", "timerSeconds": 120},
+      {"sk": "Vmiešaj klíčky a cibuľku a podávaj posypané nasekanými arašidmi, čili a zvyšnou limetkovou šťavou.", "en": "Stir in the bean sprouts and spring onion and serve topped with chopped peanuts, chili and the remaining lime juice."}
+    ]
+  },
+  {
+    "id": "letne-zavitky-s-krevetami",
+    "title": {"sk": "Letné závitky s krevetami", "en": "Fresh spring rolls with shrimp"},
+    "description": {"sk": "Ľahké závitky z ryžového papiera s bylinkami a arašidovou omáčkou.", "en": "Light rice-paper rolls with herbs and a peanut dipping sauce."},
+    "cuisine": "VIETNAMESE",
+    "mealTypes": ["LUNCH", "SNACK"],
+    "totalTimeMin": 35,
+    "activeTimeMin": 35,
+    "difficulty": 2,
+    "servings": 2,
+    "equipment": ["STOVE"],
+    "ingredients": [
+      {"id": "rice-paper", "amount": 8, "unit": "PCS", "role": "MAIN"},
+      {"id": "shrimp", "amount": 200, "unit": "G", "role": "MAIN"},
+      {"id": "rice-noodles", "amount": 80, "unit": "G", "role": "SECONDARY"},
+      {"id": "lettuce", "amount": 0.25, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "cucumber", "amount": 0.5, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "carrot", "amount": 1, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "mint", "amount": 2, "unit": "TBSP", "role": "SEASONING"},
+      {"id": "coriander-leaves", "amount": 2, "unit": "TBSP", "role": "SEASONING", "optional": true},
+      {"id": "peanut-butter", "amount": 3, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "hoisin-sauce", "amount": 2, "unit": "TBSP", "role": "SEASONING"},
+      {"id": "lime", "amount": 1, "unit": "TBSP", "role": "SEASONING", "note": {"sk": "šťava", "en": "juice"}}
+    ],
+    "steps": [
+      {"sk": "Krevety var vo vode 2 až 3 minúty, kým nie sú ružové a nepriehľadné. Schlaď ich a pozdĺžne rozpoľ.", "en": "Simmer the shrimp for 2–3 minutes until pink and opaque. Cool them and halve lengthwise.", "timerSeconds": 150},
+      {"sk": "Rezance zalej vriacou vodou na 5 minút, sceď a prepláchni studenou vodou. Uhorku a mrkvu nakrájaj na tenké prúžky.", "en": "Pour boiling water over the noodles for 5 minutes, drain and rinse in cold water. Cut the cucumber and carrot into thin strips.", "timerSeconds": 300},
+      {"sk": "List ryžového papiera ponor na 10 sekúnd do vlažnej vody a polož ho na vlhkú dosku.", "en": "Dip a sheet of rice paper in lukewarm water for 10 seconds and lay it on a damp board."},
+      {"sk": "Do stredu daj šalát, rezance, zeleninu a bylinky a navrch krevety. Zahni boky a pevne zaroluj. Opakuj so zvyšnými listami.", "en": "Place lettuce, noodles, vegetables and herbs in the centre with shrimp on top. Fold in the sides and roll up tightly. Repeat with the remaining sheets."},
+      {"sk": "Omáčka: rozmiešaj arašidové maslo s hoisin omáčkou, limetkovou šťavou a 3 lyžicami teplej vody.", "en": "Sauce: whisk the peanut butter with the hoisin sauce, lime juice and 3 tablespoons of warm water."}
+    ]
+  },
+  {
+    "id": "rychle-pho",
+    "title": {"sk": "Rýchle pho s hovädzím mäsom", "en": "Quick beef pho"},
+    "description": {"sk": "Aromatický vývar s badiánom a škoricou, tenké plátky hovädzieho a ryžové rezance.", "en": "An aromatic broth with star anise and cinnamon, thin slices of beef and rice noodles."},
+    "cuisine": "VIETNAMESE",
+    "mealTypes": ["LUNCH", "DINNER"],
+    "totalTimeMin": 45,
+    "activeTimeMin": 20,
+    "difficulty": 2,
+    "servings": 4,
+    "equipment": ["STOVE"],
+    "ingredients": [
+      {"id": "beef-steak", "amount": 300, "unit": "G", "role": "MAIN"},
+      {"id": "rice-noodles", "amount": 250, "unit": "G", "role": "MAIN"},
+      {"id": "onion", "amount": 1, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "ginger", "amount": 30, "unit": "G", "role": "SECONDARY"},
+      {"id": "star-anise", "amount": 3, "unit": "PCS", "role": "SEASONING"},
+      {"id": "cinnamon", "amount": 1, "unit": "PCS", "role": "SEASONING", "note": {"sk": "kúsok kôry", "en": "small stick"}},
+      {"id": "cloves", "amount": 3, "unit": "PCS", "role": "SEASONING"},
+      {"id": "stock-chicken", "amount": 2, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "fish-sauce", "amount": 2, "unit": "TBSP", "role": "SEASONING"},
+      {"id": "sugar", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "bean-sprouts", "amount": 150, "unit": "G", "role": "SECONDARY"},
+      {"id": "spring-onion", "amount": 3, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "lime", "amount": 1, "unit": "PCS", "role": "SEASONING"},
+      {"id": "coriander-leaves", "amount": 2, "unit": "TBSP", "role": "SEASONING", "optional": true},
+      {"id": "basil", "amount": 2, "unit": "TBSP", "role": "SEASONING", "optional": true},
+      {"id": "chili-pepper", "amount": 1, "unit": "PCS", "role": "SEASONING", "optional": true}
+    ],
+    "steps": [
+      {"sk": "Cibuľu rozpoľ a zázvor nakrájaj na plátky. Na suchej panvici ich opeč reznou stranou nadol dočierna, asi 5 minút.", "en": "Halve the onion and slice the ginger. Char them cut side down in a dry pan until blackened, about 5 minutes.", "timerSeconds": 300},
+      {"sk": "V hrnci nasucho opraž badián, škoricu a klinčeky, kým nezavoňajú. Pridaj cibuľu, zázvor, bujóny a 1,8 l vody a mierne var 25 minút.", "en": "Toast the star anise, cinnamon and cloves in a dry pot until fragrant. Add the onion, ginger, stock cubes and 1.8 l water and simmer gently for 25 minutes.", "timerSeconds": 1500},
+      {"sk": "Mäso daj na 15 minút do mrazničky a potom ho nakrájaj na čo najtenšie plátky.", "en": "Put the beef in the freezer for 15 minutes, then slice it as thinly as possible.", "timerSeconds": 900},
+      {"sk": "Rezance priprav podľa návodu a rozdeľ do misiek. Vývar preceď, dochuť rybacou omáčkou a cukrom a priveď do varu.", "en": "Prepare the noodles according to the packet and divide between bowls. Strain the broth, season with fish sauce and sugar and bring it back to the boil."},
+      {"sk": "Na rezance poukladaj surové plátky mäsa a zalej ich vriacim vývarom – mäso sa v ňom za minútu uvarí doružova. Ak ho chceš prepečené, povar plátky vo vývare 1 minútu.", "en": "Arrange the raw beef slices on the noodles and ladle the boiling broth over them; the beef cooks to pink within a minute. For well-done beef, simmer the slices in the broth for 1 minute first."},
+      {"sk": "Podávaj s klíčkami, cibuľkou, bylinkami, čili a mesiačikmi limetky.", "en": "Serve with bean sprouts, spring onion, herbs, chili and lime wedges."}
+    ]
+  }
+]

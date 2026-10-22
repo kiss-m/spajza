@@ -1,0 +1,193 @@
+[
+  {
+    "id": "chili-con-carne",
+    "title": {"sk": "Chili con carne s ryžou", "en": "Chili con carne with rice"},
+    "description": {"sk": "Výdatné chili s fazuľou – uvar veľký hrniec a obedy máš na niekoľko dní.", "en": "A hearty chili with beans: cook a big pot and lunch is sorted for days."},
+    "cuisine": "MEXICAN",
+    "mealTypes": ["LUNCH", "DINNER"],
+    "totalTimeMin": 60,
+    "activeTimeMin": 20,
+    "difficulty": 1,
+    "servings": 6,
+    "equipment": ["STOVE"],
+    "tags": ["MEAL_PREP", "FREEZER_FRIENDLY"],
+    "ingredients": [
+      {"id": "ground-beef", "amount": 500, "unit": "G", "role": "MAIN"},
+      {"id": "red-beans", "amount": 480, "unit": "G", "role": "MAIN", "note": {"sk": "odkvapkaná", "en": "drained"}},
+      {"id": "canned-tomatoes", "amount": 400, "unit": "G", "role": "MAIN"},
+      {"id": "onion", "amount": 2, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "bell-pepper", "amount": 1, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "garlic", "amount": 3, "unit": "PCS", "role": "SEASONING"},
+      {"id": "tomato-paste", "amount": 2, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "cumin", "amount": 2, "unit": "TSP", "role": "SEASONING"},
+      {"id": "sweet-paprika", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "chili-powder", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "oregano", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "sunflower-oil", "amount": 1, "unit": "TBSP", "role": "SEASONING"},
+      {"id": "salt", "amount": 1.5, "unit": "TSP", "role": "SEASONING"},
+      {"id": "rice", "amount": 300, "unit": "G", "role": "MAIN"},
+      {"id": "sour-cream", "amount": 120, "unit": "G", "role": "SECONDARY", "optional": true, "note": {"sk": "na podávanie", "en": "to serve"}}
+    ],
+    "steps": [
+      {"sk": "Na oleji speň nakrájanú cibuľu a papriku, asi 6 minút. Pridaj cesnak.", "en": "Soften the chopped onions and pepper in the oil for about 6 minutes. Add the garlic.", "timerSeconds": 360},
+      {"sk": "Pridaj mäso a opekaj ho, kým nie je nikde ružové, asi 8 minút. Vmiešaj pretlak a všetko korenie a minútu opekaj.", "en": "Add the beef and brown until no pink remains, about 8 minutes. Stir in the tomato paste and all the spices and fry for a minute.", "timerSeconds": 480},
+      {"sk": "Prilej paradajky a 200 ml vody, osoľ a var prikryté 30 minút.", "en": "Add the tomatoes and 200 ml water, season with salt and simmer covered for 30 minutes.", "timerSeconds": 1800},
+      {"sk": "Pridaj prepláchnutú fazuľu a var ešte 10 minút. Medzitým uvar ryžu.", "en": "Add the rinsed beans and simmer for 10 more minutes. Meanwhile, cook the rice.", "timerSeconds": 600},
+      {"sk": "Podávaj s ryžou a lyžicou kyslej smotany. V mrazničke vydrží 3 mesiace.", "en": "Serve with rice and a spoonful of sour cream. Freezes well for 3 months."}
+    ]
+  },
+  {
+    "id": "kuracie-quesadilly",
+    "title": {"sk": "Kuracie quesadilly so syrom a kukuricou", "en": "Chicken quesadillas with cheese and corn"},
+    "description": {"sk": "Chrumkavé tortilly plné roztečeného syra – rýchla večera aj jedlo na párty.", "en": "Crispy tortillas filled with melted cheese: a quick dinner or party food."},
+    "cuisine": "MEXICAN",
+    "mealTypes": ["LUNCH", "DINNER", "SNACK"],
+    "totalTimeMin": 25,
+    "activeTimeMin": 25,
+    "difficulty": 1,
+    "servings": 2,
+    "equipment": ["STOVE"],
+    "tags": ["STUDENT"],
+    "ingredients": [
+      {"id": "tortilla", "amount": 4, "unit": "PCS", "role": "MAIN"},
+      {"id": "chicken-breast", "amount": 300, "unit": "G", "role": "MAIN"},
+      {"id": "cheddar", "amount": 120, "unit": "G", "role": "MAIN"},
+      {"id": "bell-pepper", "amount": 1, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "red-onion", "amount": 0.5, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "sweet-corn", "amount": 100, "unit": "G", "role": "SECONDARY"},
+      {"id": "cumin", "amount": 0.5, "unit": "TSP", "role": "SEASONING"},
+      {"id": "sweet-paprika", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "salt", "amount": 0.5, "unit": "TSP", "role": "SEASONING"},
+      {"id": "sunflower-oil", "amount": 1, "unit": "TBSP", "role": "SEASONING"},
+      {"id": "sour-cream", "amount": 100, "unit": "G", "role": "SECONDARY", "optional": true, "note": {"sk": "na podávanie", "en": "to serve"}}
+    ],
+    "steps": [
+      {"sk": "Mäso nakrájaj na drobné kúsky, okoreň rímskym kmínom, paprikou a soľou a na oleji opekaj 6 až 7 minút, kým nie je prepečené a bez ružovej farby.", "en": "Cut the chicken into small pieces, season with cumin, paprika and salt and fry in the oil for 6–7 minutes until cooked through with no pink left.", "timerSeconds": 390},
+      {"sk": "Pridaj nakrájanú papriku a cibuľu a opekaj ešte 3 minúty. Vmiešaj kukuricu.", "en": "Add the chopped pepper and onion and fry for 3 more minutes. Stir in the corn.", "timerSeconds": 180},
+      {"sk": "Na polovicu každej tortilly daj strúhaný syr a plnku a druhú polovicu preklop.", "en": "Put grated cheese and filling on one half of each tortilla and fold over the other half."},
+      {"sk": "Opekaj na suchej panvici 2 minúty z každej strany, kým tortilla nie je chrumkavá a syr sa neroztopí.", "en": "Toast in a dry pan for 2 minutes per side until the tortilla is crisp and the cheese has melted.", "timerSeconds": 120},
+      {"sk": "Nakrájaj na trojuholníky a podávaj s kyslou smotanou.", "en": "Cut into wedges and serve with sour cream."}
+    ]
+  },
+  {
+    "id": "burrito-miska-s-ciernou-fazulou",
+    "title": {"sk": "Burrito miska s čiernou fazuľou", "en": "Black bean burrito bowl"},
+    "description": {"sk": "Ryža s limetkou, korenistá fazuľa, kukurica a avokádo – rastlinné a sýte.", "en": "Lime rice, spiced beans, corn and avocado: plant-based and filling."},
+    "cuisine": "MEXICAN",
+    "mealTypes": ["LUNCH", "DINNER"],
+    "totalTimeMin": 30,
+    "activeTimeMin": 15,
+    "difficulty": 1,
+    "servings": 3,
+    "equipment": ["STOVE"],
+    "tags": ["MEAL_PREP"],
+    "ingredients": [
+      {"id": "black-beans", "amount": 480, "unit": "G", "role": "MAIN", "note": {"sk": "odkvapkaná", "en": "drained"}},
+      {"id": "rice", "amount": 200, "unit": "G", "role": "MAIN"},
+      {"id": "sweet-corn", "amount": 140, "unit": "G", "role": "SECONDARY"},
+      {"id": "tomato", "amount": 2, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "red-onion", "amount": 0.5, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "avocado", "amount": 1, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "lime", "amount": 3, "unit": "TBSP", "role": "SEASONING", "note": {"sk": "šťava", "en": "juice"}},
+      {"id": "cumin", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "smoked-paprika", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "garlic", "amount": 1, "unit": "PCS", "role": "SEASONING"},
+      {"id": "olive-oil", "amount": 1, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "salt", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "coriander-leaves", "amount": 2, "unit": "TBSP", "role": "SEASONING", "optional": true}
+    ],
+    "steps": [
+      {"sk": "Uvar ryžu podľa návodu a vmiešaj do nej polovicu limetkovej šťavy.", "en": "Cook the rice according to the packet and stir in half the lime juice."},
+      {"sk": "Na oleji minútu opekaj cesnak s rímskym kmínom a paprikou, pridaj prepláchnutú fazuľu, 4 lyžice vody a polovicu soli a var 5 minút.", "en": "Fry the garlic with the cumin and paprika in the oil for a minute, add the rinsed beans, 4 tablespoons of water and half the salt and simmer for 5 minutes.", "timerSeconds": 300},
+      {"sk": "Salsa: paradajky a cibuľu nakrájaj nadrobno a zmiešaj s kukuricou, zvyšnou limetkovou šťavou, soľou a koriandrom.", "en": "Salsa: finely chop the tomatoes and onion and mix with the corn, remaining lime juice, salt and coriander."},
+      {"sk": "Do misiek daj ryžu, fazuľu a salsu a navrch plátky avokáda.", "en": "Fill bowls with rice, beans and salsa and top with sliced avocado."}
+    ]
+  },
+  {
+    "id": "domace-hovadzie-burgery",
+    "title": {"sk": "Domáce hovädzie burgery", "en": "Homemade beef burgers"},
+    "description": {"sk": "Šťavnaté burgery s čedarom a kyslou uhorkou ako z bistra.", "en": "Juicy burgers with cheddar and pickles, just like from a diner."},
+    "cuisine": "AMERICAN",
+    "mealTypes": ["LUNCH", "DINNER"],
+    "totalTimeMin": 30,
+    "activeTimeMin": 25,
+    "difficulty": 2,
+    "servings": 4,
+    "equipment": ["STOVE"],
+    "tags": ["COMFORT"],
+    "ingredients": [
+      {"id": "ground-beef", "amount": 500, "unit": "G", "role": "MAIN"},
+      {"id": "burger-bun", "amount": 4, "unit": "PCS", "role": "MAIN"},
+      {"id": "cheddar", "amount": 80, "unit": "G", "role": "SECONDARY", "note": {"sk": "4 plátky", "en": "4 slices"}},
+      {"id": "lettuce", "amount": 0.25, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "tomato", "amount": 1, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "red-onion", "amount": 0.5, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "pickles", "amount": 60, "unit": "G", "role": "SECONDARY"},
+      {"id": "ketchup", "amount": 2, "unit": "TBSP", "role": "SEASONING"},
+      {"id": "mustard", "amount": 1, "unit": "TBSP", "role": "SEASONING"},
+      {"id": "salt", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "black-pepper", "amount": 0.5, "unit": "TSP", "role": "SEASONING"},
+      {"id": "sunflower-oil", "amount": 1, "unit": "TBSP", "role": "SEASONING"}
+    ],
+    "steps": [
+      {"sk": "Mäso rozdeľ na 4 časti a vytvaruj placky o niečo širšie ako žemle. Do stredu každej urob palcom jamku, aby sa pri pečení nevydula.", "en": "Divide the beef into 4 and shape patties slightly wider than the buns. Press a dimple into the centre of each so they stay flat while cooking."},
+      {"sk": "Placky osoľ a okoreň z oboch strán až tesne pred pečením.", "en": "Season both sides with salt and pepper just before cooking."},
+      {"sk": "Na rozpálenej panvici s olejom ich opekaj 4 minúty z každej strany. Mleté mäso má byť prepečené, vnútri bez ružovej farby (71 °C).", "en": "Fry in a hot oiled pan for 4 minutes per side. Ground beef should be cooked through, with no pink inside (71 °C).", "timerSeconds": 480},
+      {"sk": "Poslednú minútu polož na každú placku plátok syra a prikry, aby sa roztopil. Žemle rozkroj a reznou stranou opeč.", "en": "For the last minute, put a slice of cheese on each patty and cover so it melts. Halve the buns and toast them cut side down.", "timerSeconds": 60},
+      {"sk": "Žemle natri kečupom a horčicou a poskladaj burgery so šalátom, paradajkou, cibuľou a uhorkami.", "en": "Spread the buns with ketchup and mustard and build the burgers with lettuce, tomato, onion and pickles."}
+    ]
+  },
+  {
+    "id": "ovsene-vlocky-cez-noc",
+    "title": {"sk": "Ovsené vločky cez noc s jogurtom a čučoriedkami", "en": "Overnight oats with yogurt and blueberries"},
+    "description": {"sk": "Raňajky, ktoré si pripravíš večer za päť minút.", "en": "A breakfast you prepare the night before in five minutes."},
+    "cuisine": "AMERICAN",
+    "mealTypes": ["BREAKFAST"],
+    "totalTimeMin": 485,
+    "activeTimeMin": 5,
+    "difficulty": 1,
+    "servings": 1,
+    "tags": ["NO_COOK", "MEAL_PREP", "STUDENT"],
+    "ingredients": [
+      {"id": "oats", "amount": 50, "unit": "G", "role": "MAIN"},
+      {"id": "milk", "amount": 120, "unit": "ML", "role": "MAIN"},
+      {"id": "greek-yogurt", "amount": 80, "unit": "G", "role": "SECONDARY"},
+      {"id": "chia-seeds", "amount": 1, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "honey", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "blueberry", "amount": 60, "unit": "G", "role": "SECONDARY"},
+      {"id": "cinnamon", "amount": 1, "unit": "PINCH", "role": "SEASONING", "optional": true}
+    ],
+    "steps": [
+      {"sk": "V pohári alebo krabičke zmiešaj vločky, mlieko, jogurt, chia semienka, med a škoricu.", "en": "Mix the oats, milk, yogurt, chia seeds, honey and cinnamon in a jar or container."},
+      {"sk": "Zatvor a nechaj v chladničke aspoň 8 hodín alebo cez noc.", "en": "Close and refrigerate for at least 8 hours or overnight."},
+      {"sk": "Ráno premiešaj, podľa potreby zrieď lyžicou mlieka a navrch pridaj čučoriedky.", "en": "In the morning, stir, loosen with a spoonful of milk if needed and top with the blueberries."}
+    ]
+  },
+  {
+    "id": "proteinove-palacinky",
+    "title": {"sk": "Proteínové palacinky s tvarohom a banánom", "en": "Protein pancakes with quark and banana"},
+    "description": {"sk": "Nadýchané palacinky bez múky s množstvom bielkovín.", "en": "Fluffy flourless pancakes packed with protein."},
+    "cuisine": "AMERICAN",
+    "mealTypes": ["BREAKFAST", "SNACK"],
+    "totalTimeMin": 20,
+    "activeTimeMin": 20,
+    "difficulty": 1,
+    "servings": 2,
+    "equipment": ["STOVE", "BLENDER"],
+    "ingredients": [
+      {"id": "oats", "amount": 60, "unit": "G", "role": "MAIN"},
+      {"id": "egg", "amount": 2, "unit": "PCS", "role": "MAIN"},
+      {"id": "tvaroh", "amount": 250, "unit": "G", "role": "MAIN"},
+      {"id": "banana", "amount": 1, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "baking-powder", "amount": 0.5, "unit": "TSP", "role": "SEASONING"},
+      {"id": "sunflower-oil", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "frozen-berries", "amount": 100, "unit": "G", "role": "SECONDARY", "optional": true, "note": {"sk": "na podávanie", "en": "to serve"}},
+      {"id": "honey", "amount": 1, "unit": "TSP", "role": "SEASONING", "optional": true}
+    ],
+    "steps": [
+      {"sk": "Vločky, vajcia, tvaroh, banán a prášok do pečiva rozmixuj na hladké cesto. Nechaj ho 5 minút odstáť.", "en": "Blend the oats, eggs, quark, banana and baking powder into a smooth batter. Let it rest for 5 minutes.", "timerSeconds": 300},
+      {"sk": "Panvicu jemne potri olejom a na miernom ohni na nej peč malé palacinky asi 2 minúty, kým sa na povrchu neurobia bublinky.", "en": "Lightly oil a pan and cook small pancakes over low heat for about 2 minutes, until bubbles appear on top.", "timerSeconds": 120},
+      {"sk": "Otoč ich a dopeč ešte minútu. Podávaj s ovocím a kvapkou medu.", "en": "Flip and cook for one more minute. Serve with fruit and a drizzle of honey.", "timerSeconds": 60}
+    ]
+  }
+]
