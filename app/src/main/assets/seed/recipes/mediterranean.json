@@ -192,5 +192,105 @@
       {"sk": "Zmiešaj kuskus so zeleninou, prepláchnutým cícerom a bylinkami.", "en": "Mix the couscous with the vegetables, rinsed chickpeas and herbs."},
       {"sk": "Zalej citrónovou šťavou a olivovým olejom, pridaj rímsky kmín a premiešaj. V chladničke vydrží 3 dni.", "en": "Dress with the lemon juice, olive oil and cumin and toss. Keeps in the fridge for 3 days."}
     ]
+  },
+  {
+    "id": "mujadara",
+    "title": {"sk": "Mujadara – šošovica s ryžou a karamelizovanou cibuľou", "en": "Mujadara: lentils and rice with caramelised onions"},
+    "description": {"sk": "Lacná a voňavá klasika Blízkeho východu, úplne rastlinná.", "en": "A cheap, fragrant Middle Eastern classic, fully plant-based."},
+    "cuisine": "MIDDLE_EASTERN",
+    "mealTypes": ["LUNCH", "DINNER"],
+    "totalTimeMin": 50,
+    "activeTimeMin": 20,
+    "difficulty": 1,
+    "servings": 4,
+    "equipment": ["STOVE"],
+    "tags": ["STUDENT", "MEAL_PREP"],
+    "ingredients": [
+      {"id": "lentils", "amount": 200, "unit": "G", "role": "MAIN"},
+      {"id": "rice", "amount": 150, "unit": "G", "role": "MAIN"},
+      {"id": "onion", "amount": 3, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "olive-oil", "amount": 4, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "cumin", "amount": 1.5, "unit": "TSP", "role": "SEASONING"},
+      {"id": "cinnamon", "amount": 0.25, "unit": "TSP", "role": "SEASONING"},
+      {"id": "salt", "amount": 1.5, "unit": "TSP", "role": "SEASONING"},
+      {"id": "black-pepper", "amount": 0.5, "unit": "TSP", "role": "SEASONING"},
+      {"id": "parsley", "amount": 2, "unit": "TBSP", "role": "SEASONING", "optional": true}
+    ],
+    "steps": [
+      {"sk": "Šošovicu prepláchni a var v 800 ml vody 15 minút, kým nie je napoly mäkká. Vodu nesceďuj.", "en": "Rinse the lentils and simmer them in 800 ml water for 15 minutes until half-cooked. Do not drain.", "timerSeconds": 900},
+      {"sk": "Medzitým na oleji na strednom ohni pomaly opekaj cibuľu nakrájanú na tenké polkolieska, kým nie je tmavozlatá a sladká, asi 20 minút. Polovicu odlož.", "en": "Meanwhile, slowly fry the thinly sliced onions in the oil over medium heat until deep golden and sweet, about 20 minutes. Set half aside.", "timerSeconds": 1200},
+      {"sk": "K šošovici pridaj ryžu, rímsky kmín, škoricu, soľ a polovicu cibule, prikry a var na miernom ohni 18 minút, kým ryža nevsiakne vodu.", "en": "Add the rice, cumin, cinnamon, salt and half the onions to the lentils, cover and simmer over low heat for 18 minutes until the rice has absorbed the water.", "timerSeconds": 1080},
+      {"sk": "Nechaj 5 minút odpočinúť, okoreň a podávaj posypané zvyšnou cibuľou a petržlenovou vňaťou.", "en": "Rest for 5 minutes, season with pepper and serve topped with the remaining onions and parsley.", "timerSeconds": 300}
+    ]
+  },
+  {
+    "id": "peceny-falafel-s-tahini",
+    "title": {"sk": "Pečený falafel s tahini omáčkou", "en": "Baked falafel with tahini sauce"},
+    "description": {"sk": "Falafel z rúry, chrumkavý bez fritovania, s citrónovou tahini omáčkou.", "en": "Oven-baked falafel, crisp without frying, with lemony tahini sauce."},
+    "cuisine": "MIDDLE_EASTERN",
+    "mealTypes": ["LUNCH", "DINNER", "SNACK"],
+    "totalTimeMin": 40,
+    "activeTimeMin": 20,
+    "difficulty": 2,
+    "servings": 4,
+    "equipment": ["FOOD_PROCESSOR", "OVEN"],
+    "tags": ["MEAL_PREP"],
+    "ingredients": [
+      {"id": "chickpeas", "amount": 480, "unit": "G", "role": "MAIN", "note": {"sk": "odkvapkaný a dobre osušený", "en": "drained and dried well"}},
+      {"id": "onion", "amount": 1, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "garlic", "amount": 2, "unit": "PCS", "role": "SEASONING"},
+      {"id": "parsley", "amount": 1, "unit": "PCS", "role": "SECONDARY", "note": {"sk": "zväzok", "en": "bunch"}},
+      {"id": "cumin", "amount": 2, "unit": "TSP", "role": "SEASONING"},
+      {"id": "coriander-ground", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "wheat-flour", "amount": 3, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "baking-powder", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "salt", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "olive-oil", "amount": 3, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "tahini", "amount": 60, "unit": "G", "role": "SECONDARY"},
+      {"id": "lemon", "amount": 2, "unit": "TBSP", "role": "SEASONING", "note": {"sk": "šťava", "en": "juice"}},
+      {"id": "pita", "amount": 4, "unit": "PCS", "role": "SECONDARY", "optional": true, "note": {"sk": "na podávanie", "en": "to serve"}}
+    ],
+    "steps": [
+      {"sk": "Rúru predhrej na 200 °C. Cícer, cibuľu, cesnak, petržlen a korenie rozmixuj v sekáčiku nahrubo – nie na pyré.", "en": "Preheat the oven to 200 °C. Pulse the chickpeas, onion, garlic, parsley and spices in a food processor until coarse, not puréed."},
+      {"sk": "Primiešaj múku, prášok do pečiva, soľ a lyžicu oleja a vytvaruj 16 placiek.", "en": "Mix in the flour, baking powder, salt and a tablespoon of oil and shape 16 patties."},
+      {"sk": "Poukladaj ich na plech s papierom, potri zvyšným olejom a peč 25 minút, v polovici otoč.", "en": "Place on a lined tray, brush with the remaining oil and bake for 25 minutes, turning halfway.", "timerSeconds": 1500},
+      {"sk": "Omáčka: tahini rozmiešaj s citrónovou šťavou, štipkou soli a 4 až 5 lyžicami vody do krémova.", "en": "Sauce: whisk the tahini with the lemon juice, a pinch of salt and 4–5 tablespoons of water until creamy."},
+      {"sk": "Podávaj s omáčkou a pitou.", "en": "Serve with the sauce and pita."}
+    ]
+  },
+  {
+    "id": "marocky-tagine-s-cicerom",
+    "title": {"sk": "Marocký tagine s cícerom a batátmi", "en": "Moroccan chickpea and sweet potato tagine"},
+    "description": {"sk": "Sladkokorenistý rastlinný guláš so škoricou a kuskusom.", "en": "A sweet-spiced plant-based stew with cinnamon, served with couscous."},
+    "cuisine": "NORTH_AFRICAN",
+    "mealTypes": ["LUNCH", "DINNER"],
+    "totalTimeMin": 45,
+    "activeTimeMin": 15,
+    "difficulty": 1,
+    "servings": 4,
+    "equipment": ["STOVE"],
+    "tags": ["MEAL_PREP", "FREEZER_FRIENDLY"],
+    "ingredients": [
+      {"id": "chickpeas", "amount": 480, "unit": "G", "role": "MAIN", "note": {"sk": "odkvapkaný", "en": "drained"}},
+      {"id": "sweet-potato", "amount": 1, "unit": "PCS", "role": "MAIN"},
+      {"id": "onion", "amount": 1, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "garlic", "amount": 2, "unit": "PCS", "role": "SEASONING"},
+      {"id": "canned-tomatoes", "amount": 400, "unit": "G", "role": "SECONDARY"},
+      {"id": "dates", "amount": 4, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "cumin", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "cinnamon", "amount": 0.5, "unit": "TSP", "role": "SEASONING"},
+      {"id": "turmeric", "amount": 0.5, "unit": "TSP", "role": "SEASONING"},
+      {"id": "ginger-ground", "amount": 0.5, "unit": "TSP", "role": "SEASONING"},
+      {"id": "stock-vegetable", "amount": 1, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "olive-oil", "amount": 2, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "couscous", "amount": 200, "unit": "G", "role": "MAIN"},
+      {"id": "coriander-leaves", "amount": 2, "unit": "TBSP", "role": "SEASONING", "optional": true}
+    ],
+    "steps": [
+      {"sk": "Na oleji speň cibuľu s cesnakom a korením, asi 5 minút.", "en": "Soften the onion with the garlic and spices in the oil, about 5 minutes.", "timerSeconds": 300},
+      {"sk": "Pridaj batát nakrájaný na kocky, paradajky, nasekané datle, bujón a 300 ml vody a var 20 minút.", "en": "Add the diced sweet potato, tomatoes, chopped dates, stock cube and 300 ml water and simmer for 20 minutes.", "timerSeconds": 1200},
+      {"sk": "Pridaj cícer a var ďalších 5 minút, kým batát nezmäkne.", "en": "Add the chickpeas and simmer for 5 more minutes until the sweet potato is soft.", "timerSeconds": 300},
+      {"sk": "Kuskus zalej 250 ml vriacej osolenej vody, prikry na 5 minút a rozpuč vidličkou. Podávaj s tagine a koriandrom.", "en": "Pour 250 ml boiling salted water over the couscous, cover for 5 minutes and fluff with a fork. Serve with the tagine and coriander.", "timerSeconds": 300}
+    ]
   }
 ]

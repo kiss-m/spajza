@@ -218,5 +218,161 @@
       {"sk": "Na inej panvici usmaž volské oká.", "en": "Fry the eggs in another pan."},
       {"sk": "Ryžu pokvapkaj sezamovým olejom, posyp cibuľkou a nastrihanou nori a navrch polož vajce.", "en": "Drizzle the rice with sesame oil, sprinkle with spring onion and snipped nori and top with the eggs."}
     ]
+  },
+  {
+    "id": "hovadzie-s-brokolicou",
+    "title": {"sk": "Hovädzie s brokolicou na čínsky spôsob", "en": "Chinese-style beef and broccoli"},
+    "description": {"sk": "Tenké plátky hovädzieho v lesklej omáčke s brokolicou a ryžou.", "en": "Thin slices of beef in a glossy sauce with broccoli and rice."},
+    "cuisine": "CHINESE",
+    "mealTypes": ["LUNCH", "DINNER"],
+    "totalTimeMin": 30,
+    "activeTimeMin": 25,
+    "difficulty": 2,
+    "servings": 3,
+    "equipment": ["STOVE"],
+    "ingredients": [
+      {"id": "beef-steak", "amount": 400, "unit": "G", "role": "MAIN"},
+      {"id": "broccoli", "amount": 1, "unit": "PCS", "role": "MAIN"},
+      {"id": "garlic", "amount": 3, "unit": "PCS", "role": "SEASONING"},
+      {"id": "ginger", "amount": 10, "unit": "G", "role": "SEASONING"},
+      {"id": "soy-sauce", "amount": 3, "unit": "TBSP", "role": "SEASONING"},
+      {"id": "oyster-sauce", "amount": 2, "unit": "TBSP", "role": "SEASONING"},
+      {"id": "brown-sugar", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "corn-starch", "amount": 1, "unit": "TBSP", "role": "SEASONING"},
+      {"id": "sunflower-oil", "amount": 2, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "rice", "amount": 225, "unit": "G", "role": "MAIN"}
+    ],
+    "steps": [
+      {"sk": "Uvar ryžu podľa návodu. Mäso nakrájaj proti vláknam na tenké plátky a premiešaj s 1 lyžicou sójovej omáčky a polovicou škrobu.", "en": "Cook the rice according to the packet. Slice the beef thinly against the grain and toss with 1 tablespoon of soy sauce and half the starch."},
+      {"sk": "Brokolicu rozober na ružičky a var 2 minúty, sceď.", "en": "Cut the broccoli into florets, boil for 2 minutes and drain.", "timerSeconds": 120},
+      {"sk": "Omáčka: zmiešaj zvyšnú sójovú omáčku, ustricovú omáčku, cukor, zvyšný škrob a 100 ml vody.", "en": "Sauce: mix the remaining soy sauce, the oyster sauce, sugar, remaining starch and 100 ml water."},
+      {"sk": "Na rozpálenom oleji opekaj mäso v dvoch dávkach po 2 minúty, kým nezhnedne. Odlož ho.", "en": "Stir-fry the beef in hot oil in two batches for 2 minutes each until browned. Set aside.", "timerSeconds": 240},
+      {"sk": "Opeč cesnak a zázvor, vlej omáčku, nechaj zhustnúť, vráť mäso a brokolicu a premiešaj. Podávaj s ryžou.", "en": "Fry the garlic and ginger, pour in the sauce and let it thicken, return the beef and broccoli and toss. Serve with the rice."}
+    ]
+  },
+  {
+    "id": "sladkokysle-kura",
+    "title": {"sk": "Sladkokyslé kura s ananásom", "en": "Sweet and sour chicken with pineapple"},
+    "description": {"sk": "Domáca verzia obľúbeného jedla z bistra, bez fritovania.", "en": "A homemade version of the takeaway favourite, without deep frying."},
+    "cuisine": "CHINESE",
+    "mealTypes": ["LUNCH", "DINNER"],
+    "totalTimeMin": 35,
+    "activeTimeMin": 25,
+    "difficulty": 1,
+    "servings": 4,
+    "equipment": ["STOVE"],
+    "ingredients": [
+      {"id": "chicken-breast", "amount": 500, "unit": "G", "role": "MAIN"},
+      {"id": "bell-pepper", "amount": 2, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "onion", "amount": 1, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "pineapple", "amount": 200, "unit": "G", "role": "SECONDARY"},
+      {"id": "ketchup", "amount": 4, "unit": "TBSP", "role": "SEASONING"},
+      {"id": "rice-vinegar", "amount": 3, "unit": "TBSP", "role": "SEASONING"},
+      {"id": "sugar", "amount": 2, "unit": "TBSP", "role": "SEASONING"},
+      {"id": "soy-sauce", "amount": 2, "unit": "TBSP", "role": "SEASONING"},
+      {"id": "corn-starch", "amount": 2, "unit": "TBSP", "role": "SEASONING"},
+      {"id": "sunflower-oil", "amount": 2, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "rice", "amount": 300, "unit": "G", "role": "MAIN"}
+    ],
+    "steps": [
+      {"sk": "Uvar ryžu podľa návodu. Mäso nakrájaj na kocky a obaľ v polovici škrobu.", "en": "Cook the rice according to the packet. Cut the chicken into cubes and coat in half the starch."},
+      {"sk": "Omáčka: zmiešaj kečup, ocot, cukor, sójovú omáčku, zvyšný škrob a 150 ml vody.", "en": "Sauce: mix the ketchup, vinegar, sugar, soy sauce, remaining starch and 150 ml water."},
+      {"sk": "Na oleji opekaj mäso 5 až 6 minút, kým nie je zlatisté a prepečené. Odlož ho.", "en": "Fry the chicken in the oil for 5–6 minutes until golden and cooked through. Set aside.", "timerSeconds": 330},
+      {"sk": "Opeč papriku a cibuľu nakrájané na kúsky 3 minúty, pridaj ananás a omáčku a povar, kým nezhustne.", "en": "Fry the pepper and onion pieces for 3 minutes, add the pineapple and sauce and simmer until thick.", "timerSeconds": 180},
+      {"sk": "Vráť mäso, premiešaj a podávaj s ryžou.", "en": "Return the chicken, toss and serve with the rice."}
+    ]
+  },
+  {
+    "id": "japonske-kari-s-kuracim",
+    "title": {"sk": "Japonské kari s kuracím mäsom", "en": "Japanese chicken curry"},
+    "description": {"sk": "Jemné, husté a sladkasté kari, ktoré majú radi aj deti.", "en": "A mild, thick and slightly sweet curry that children love too."},
+    "cuisine": "JAPANESE",
+    "mealTypes": ["LUNCH", "DINNER"],
+    "totalTimeMin": 50,
+    "activeTimeMin": 20,
+    "difficulty": 1,
+    "servings": 4,
+    "equipment": ["STOVE"],
+    "tags": ["MEAL_PREP", "COMFORT"],
+    "ingredients": [
+      {"id": "chicken-thigh", "amount": 500, "unit": "G", "role": "MAIN"},
+      {"id": "potato", "amount": 300, "unit": "G", "role": "SECONDARY"},
+      {"id": "carrot", "amount": 2, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "onion", "amount": 2, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "butter", "amount": 30, "unit": "G", "role": "SECONDARY"},
+      {"id": "wheat-flour", "amount": 3, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "curry-powder", "amount": 2, "unit": "TBSP", "role": "SEASONING"},
+      {"id": "soy-sauce", "amount": 1, "unit": "TBSP", "role": "SEASONING"},
+      {"id": "honey", "amount": 1, "unit": "TBSP", "role": "SEASONING"},
+      {"id": "stock-chicken", "amount": 1, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "sunflower-oil", "amount": 1, "unit": "TBSP", "role": "SEASONING"},
+      {"id": "rice", "amount": 300, "unit": "G", "role": "MAIN"}
+    ],
+    "steps": [
+      {"sk": "Na oleji opeč mäso nakrájané na kúsky a cibuľu, asi 6 minút.", "en": "Fry the chicken pieces and onion in the oil, about 6 minutes.", "timerSeconds": 360},
+      {"sk": "Pridaj zemiaky a mrkvu nakrájané na kocky, 700 ml vody a bujón a var 20 minút. Medzitým uvar ryžu.", "en": "Add the diced potatoes and carrots, 700 ml water and the stock cube and simmer for 20 minutes. Meanwhile, cook the rice.", "timerSeconds": 1200},
+      {"sk": "Kari základ: na masle opraž múku 2 minúty, vmiešaj karí korenie a minútu opekaj.", "en": "Curry roux: cook the flour in the butter for 2 minutes, stir in the curry powder and cook for a minute.", "timerSeconds": 180},
+      {"sk": "Základ rozmiešaj v naberačke vývaru, vlej do hrnca a za stáleho miešania var 5 minút, kým omáčka nezhustne. Dochuť sójovou omáčkou a medom.", "en": "Whisk the roux into a ladle of the broth, pour it into the pot and simmer for 5 minutes, stirring, until thick. Season with the soy sauce and honey.", "timerSeconds": 300},
+      {"sk": "Kura je hotové, keď je vnútri biele a mäkké. Podávaj s ryžou.", "en": "The chicken is done when white and tender inside. Serve with the rice."}
+    ]
+  },
+  {
+    "id": "onigiri-s-tuniakom",
+    "title": {"sk": "Onigiri s tuniakom", "en": "Tuna onigiri"},
+    "description": {"sk": "Japonské ryžové trojuholníky – praktická desiata do školy aj práce.", "en": "Japanese rice triangles: a handy snack for school or work."},
+    "cuisine": "JAPANESE",
+    "mealTypes": ["LUNCH", "SNACK"],
+    "totalTimeMin": 45,
+    "activeTimeMin": 20,
+    "difficulty": 2,
+    "servings": 2,
+    "equipment": ["STOVE"],
+    "ingredients": [
+      {"id": "sushi-rice", "amount": 200, "unit": "G", "role": "MAIN"},
+      {"id": "tuna-canned", "amount": 120, "unit": "G", "role": "MAIN"},
+      {"id": "mayonnaise", "amount": 2, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "soy-sauce", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "nori", "amount": 2, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "salt", "amount": 0.5, "unit": "TSP", "role": "SEASONING"}
+    ],
+    "steps": [
+      {"sk": "Ryžu prepláchni, kým voda nie je číra, zalej 240 ml vody, priveď do varu a var prikrytú na miernom ohni 12 minút. Nechaj 10 minút odpočinúť.", "en": "Rinse the rice until the water runs clear, add 240 ml water, bring to the boil and simmer covered over low heat for 12 minutes. Rest for 10 minutes.", "timerSeconds": 1320},
+      {"sk": "Tuniaka zmiešaj s majonézou a sójovou omáčkou.", "en": "Mix the tuna with the mayonnaise and soy sauce."},
+      {"sk": "Ruky namoč vo vode a potri soľou. Naber hrsť teplej ryže, do stredu daj lyžičku plnky a stlač do trojuholníka.", "en": "Wet your hands and rub them with salt. Take a handful of warm rice, put a spoonful of filling in the middle and press into a triangle."},
+      {"sk": "Každé onigiri obaľ prúžkom nori. Zjedz v ten istý deň.", "en": "Wrap each onigiri with a strip of nori. Eat the same day."}
+    ]
+  },
+  {
+    "id": "bulgogi",
+    "title": {"sk": "Kórejské bulgogi s ryžou", "en": "Korean bulgogi with rice"},
+    "description": {"sk": "Tenké plátky hovädzieho marinované v sladkej sójovej omáčke s hruškou.", "en": "Thin slices of beef marinated in a sweet soy sauce with pear."},
+    "cuisine": "KOREAN",
+    "mealTypes": ["LUNCH", "DINNER"],
+    "totalTimeMin": 45,
+    "activeTimeMin": 20,
+    "difficulty": 2,
+    "servings": 3,
+    "equipment": ["STOVE"],
+    "ingredients": [
+      {"id": "beef-steak", "amount": 400, "unit": "G", "role": "MAIN"},
+      {"id": "pear", "amount": 0.5, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "soy-sauce", "amount": 4, "unit": "TBSP", "role": "SEASONING"},
+      {"id": "brown-sugar", "amount": 1, "unit": "TBSP", "role": "SEASONING"},
+      {"id": "garlic", "amount": 3, "unit": "PCS", "role": "SEASONING"},
+      {"id": "ginger", "amount": 10, "unit": "G", "role": "SEASONING"},
+      {"id": "sesame-oil", "amount": 1, "unit": "TBSP", "role": "SEASONING"},
+      {"id": "spring-onion", "amount": 3, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "onion", "amount": 1, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "sunflower-oil", "amount": 1, "unit": "TBSP", "role": "SEASONING"},
+      {"id": "rice", "amount": 225, "unit": "G", "role": "MAIN"},
+      {"id": "sesame-seeds", "amount": 1, "unit": "TBSP", "role": "SEASONING", "optional": true}
+    ],
+    "steps": [
+      {"sk": "Mäso nakrájaj na čo najtenšie plátky (pomôže 15 minút v mrazničke).", "en": "Slice the beef as thinly as possible (15 minutes in the freezer helps)."},
+      {"sk": "Marináda: nastrúhaj hrušku a zmiešaj so sójovou omáčkou, cukrom, cesnakom, zázvorom a sezamovým olejom. Mäso v nej nechaj aspoň 20 minút.", "en": "Marinade: grate the pear and mix with the soy sauce, sugar, garlic, ginger and sesame oil. Marinate the beef for at least 20 minutes.", "timerSeconds": 1200},
+      {"sk": "Medzitým uvar ryžu.", "en": "Meanwhile, cook the rice."},
+      {"sk": "Na rozpálenej panvici s olejom opekaj mäso s nakrájanou cibuľou v dvoch dávkach 3 až 4 minúty, kým nie je skaramelizované.", "en": "Stir-fry the beef with the sliced onion in a hot oiled pan in two batches for 3–4 minutes until caramelised.", "timerSeconds": 210},
+      {"sk": "Posyp jarnou cibuľkou a sezamom a podávaj s ryžou.", "en": "Sprinkle with spring onion and sesame seeds and serve with the rice."}
+    ]
   }
 ]

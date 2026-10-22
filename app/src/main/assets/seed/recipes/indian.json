@@ -106,5 +106,39 @@
       {"sk": "Prilej paradajky, pridaj prepláchnutý cícer, soľ a 150 ml vody a var 15 minút. Niekoľko cícerov roztlač, aby omáčka zhustla.", "en": "Add the tomatoes, rinsed chickpeas, salt and 150 ml water and simmer for 15 minutes. Mash a few chickpeas to thicken the sauce.", "timerSeconds": 900},
       {"sk": "Vmiešaj špenát a garam masalu, nechaj špenát zavädnúť a dochuť citrónovou šťavou.", "en": "Stir in the spinach and garam masala, let the spinach wilt and finish with lemon juice."}
     ]
+  },
+  {
+    "id": "aloo-gobi",
+    "title": {"sk": "Aloo gobi – zemiaky s karfiolom na indický spôsob", "en": "Aloo gobi: Indian-style potatoes and cauliflower"},
+    "description": {"sk": "Suché zeleninové curry s kurkumou a rímskym kmínom.", "en": "A dry vegetable curry with turmeric and cumin."},
+    "cuisine": "INDIAN",
+    "mealTypes": ["LUNCH", "DINNER"],
+    "totalTimeMin": 40,
+    "activeTimeMin": 15,
+    "difficulty": 1,
+    "servings": 4,
+    "equipment": ["STOVE"],
+    "tags": ["MEAL_PREP"],
+    "ingredients": [
+      {"id": "potato", "amount": 500, "unit": "G", "role": "MAIN"},
+      {"id": "cauliflower", "amount": 1, "unit": "PCS", "role": "MAIN"},
+      {"id": "onion", "amount": 1, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "tomato", "amount": 2, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "ginger", "amount": 15, "unit": "G", "role": "SEASONING"},
+      {"id": "garlic", "amount": 3, "unit": "PCS", "role": "SEASONING"},
+      {"id": "turmeric", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "cumin", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "garam-masala", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "chili-powder", "amount": 0.5, "unit": "TSP", "role": "SEASONING"},
+      {"id": "sunflower-oil", "amount": 3, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "salt", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "coriander-leaves", "amount": 2, "unit": "TBSP", "role": "SEASONING", "optional": true}
+    ],
+    "steps": [
+      {"sk": "Na oleji minútu opekaj rímsky kmín, pridaj nakrájanú cibuľu a opekaj 5 minút.", "en": "Fry the cumin in the oil for a minute, add the chopped onion and fry for 5 minutes.", "timerSeconds": 300},
+      {"sk": "Pridaj zázvor, cesnak, kurkumu a čili a potom zemiaky nakrájané na kocky. Opekaj 5 minút.", "en": "Add the ginger, garlic, turmeric and chili, then the diced potatoes. Fry for 5 minutes.", "timerSeconds": 300},
+      {"sk": "Pridaj ružičky karfiolu, nakrájané paradajky, soľ a 100 ml vody, prikry a var na miernom ohni 15 až 20 minút, kým zelenina nezmäkne.", "en": "Add the cauliflower florets, chopped tomatoes, salt and 100 ml water, cover and cook over low heat for 15–20 minutes until tender.", "timerSeconds": 1080},
+      {"sk": "Vmiešaj garam masalu a posyp koriandrom.", "en": "Stir in the garam masala and sprinkle with coriander."}
+    ]
   }
 ]

@@ -82,5 +82,168 @@
       {"sk": "Posýpku rozsyp na jablká a peč 35 minút, kým nie je zlatistá a jablká na okrajoch nebublajú.", "en": "Scatter the crumble over the apples and bake for 35 minutes until golden and the apples bubble at the edges.", "timerSeconds": 2100},
       {"sk": "Nechaj 5 minút vychladnúť a podávaj teplé, napríklad s bielym jogurtom.", "en": "Let it cool for 5 minutes and serve warm, for example with plain yogurt."}
     ]
+  },
+  {
+    "id": "madarsky-gulas",
+    "title": {"sk": "Maďarský hovädzí guláš", "en": "Hungarian beef goulash"},
+    "description": {"sk": "Hustý paprikový guláš so zemiakmi – ešte lepší na druhý deň.", "en": "A thick paprika goulash with potatoes, even better the next day."},
+    "cuisine": "CENTRAL_EUROPEAN",
+    "mealTypes": ["LUNCH", "DINNER"],
+    "totalTimeMin": 120,
+    "activeTimeMin": 25,
+    "difficulty": 2,
+    "servings": 6,
+    "equipment": ["STOVE"],
+    "tags": ["MEAL_PREP", "FREEZER_FRIENDLY", "COMFORT", "ONE_POT"],
+    "ingredients": [
+      {"id": "beef-chuck", "amount": 800, "unit": "G", "role": "MAIN"},
+      {"id": "onion", "amount": 3, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "sweet-paprika", "amount": 2, "unit": "TBSP", "role": "SEASONING"},
+      {"id": "caraway", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "tomato-paste", "amount": 2, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "garlic", "amount": 3, "unit": "PCS", "role": "SEASONING"},
+      {"id": "bell-pepper", "amount": 1, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "potato", "amount": 700, "unit": "G", "role": "MAIN"},
+      {"id": "marjoram", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "lard", "amount": 2, "unit": "TBSP", "role": "SECONDARY", "note": {"sk": "alebo olej", "en": "or oil"}},
+      {"id": "salt", "amount": 2, "unit": "TSP", "role": "SEASONING"},
+      {"id": "black-pepper", "amount": 0.5, "unit": "TSP", "role": "SEASONING"}
+    ],
+    "steps": [
+      {"sk": "Na masti pomaly opekaj nadrobno nakrájanú cibuľu do zlatohneda, asi 12 minút – je základom chuti.", "en": "Slowly fry the finely chopped onions in the lard until golden brown, about 12 minutes; they carry the flavour.", "timerSeconds": 720},
+      {"sk": "Pridaj mäso nakrájané na 3 cm kocky a opeč ho zo všetkých strán.", "en": "Add the beef cut into 3 cm cubes and brown it on all sides."},
+      {"sk": "Stiahni z ohňa, vmiešaj papriku, rascu a pretlak, zalej 1 l vody, osoľ a nechaj prikryté dusiť 60 minút.", "en": "Take off the heat, stir in the paprika, caraway and tomato paste, add 1 l water and the salt and simmer covered for 60 minutes.", "timerSeconds": 3600},
+      {"sk": "Pridaj zemiaky a papriku nakrájané na kocky a var ďalších 25 minút, kým mäso nie je mäkké a dá sa ľahko rozdeliť vidličkou.", "en": "Add the diced potatoes and pepper and simmer for another 25 minutes, until the beef is tender and comes apart easily with a fork.", "timerSeconds": 1500},
+      {"sk": "Dochuť prelisovaným cesnakom, majoránom a korením.", "en": "Finish with crushed garlic, marjoram and pepper."}
+    ]
+  },
+  {
+    "id": "paella-s-kuracim-a-krevetami",
+    "title": {"sk": "Paella s kuracím mäsom a krevetami", "en": "Paella with chicken and shrimp"},
+    "description": {"sk": "Šafránovo žltá ryža z jednej panvice, s údenou paprikou.", "en": "Golden one-pan rice with smoked paprika."},
+    "cuisine": "SPANISH",
+    "mealTypes": ["LUNCH", "DINNER"],
+    "totalTimeMin": 50,
+    "activeTimeMin": 25,
+    "difficulty": 2,
+    "servings": 4,
+    "equipment": ["STOVE"],
+    "tags": ["ONE_POT"],
+    "ingredients": [
+      {"id": "rice", "amount": 300, "unit": "G", "role": "MAIN", "note": {"sk": "ideálne guľatozrnná", "en": "ideally short-grain"}},
+      {"id": "chicken-thigh", "amount": 400, "unit": "G", "role": "MAIN"},
+      {"id": "shrimp", "amount": 200, "unit": "G", "role": "MAIN"},
+      {"id": "bell-pepper", "amount": 1, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "onion", "amount": 1, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "garlic", "amount": 3, "unit": "PCS", "role": "SEASONING"},
+      {"id": "peas", "amount": 100, "unit": "G", "role": "SECONDARY"},
+      {"id": "canned-tomatoes", "amount": 200, "unit": "G", "role": "SECONDARY"},
+      {"id": "smoked-paprika", "amount": 2, "unit": "TSP", "role": "SEASONING"},
+      {"id": "turmeric", "amount": 0.5, "unit": "TSP", "role": "SEASONING"},
+      {"id": "stock-chicken", "amount": 2, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "olive-oil", "amount": 3, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "lemon", "amount": 1, "unit": "PCS", "role": "SEASONING", "note": {"sk": "mesiačiky na podávanie", "en": "wedges, to serve"}}
+    ],
+    "steps": [
+      {"sk": "Bujóny rozpusti v 900 ml horúcej vody.", "en": "Dissolve the stock cubes in 900 ml hot water."},
+      {"sk": "Na olivovom oleji vo veľkej panvici opeč kuracie kúsky dozlatista, asi 6 minút. Pridaj cibuľu, papriku a cesnak a opekaj 4 minúty.", "en": "Brown the chicken pieces in the olive oil in a large pan, about 6 minutes. Add the onion, pepper and garlic and fry for 4 minutes.", "timerSeconds": 600},
+      {"sk": "Vmiešaj údenú papriku, kurkumu, paradajky a ryžu a minútu opekaj.", "en": "Stir in the smoked paprika, turmeric, tomatoes and rice and fry for a minute."},
+      {"sk": "Zalej vývarom, rovnomerne rozlož a už nemiešaj. Var na miernom ohni 15 minút.", "en": "Pour in the stock, spread everything evenly and stop stirring. Simmer for 15 minutes.", "timerSeconds": 900},
+      {"sk": "Navrch poukladaj krevety a hrášok a var ešte 5 až 7 minút, kým krevety nie sú ružové a nepriehľadné a ryža vsiakne tekutinu.", "en": "Arrange the shrimp and peas on top and cook for 5–7 more minutes, until the shrimp are pink and opaque and the rice has absorbed the liquid.", "timerSeconds": 360},
+      {"sk": "Nechaj 5 minút odpočinúť pod utierkou a podávaj s citrónom.", "en": "Rest for 5 minutes under a tea towel and serve with lemon.", "timerSeconds": 300}
+    ]
+  },
+  {
+    "id": "gazpacho",
+    "title": {"sk": "Gazpacho", "en": "Gazpacho"},
+    "description": {"sk": "Studená španielska zeleninová polievka na horúce dni.", "en": "A chilled Spanish vegetable soup for hot days."},
+    "cuisine": "SPANISH",
+    "mealTypes": ["LUNCH", "DINNER"],
+    "totalTimeMin": 15,
+    "activeTimeMin": 15,
+    "difficulty": 1,
+    "servings": 4,
+    "equipment": ["BLENDER"],
+    "tags": ["NO_COOK", "MEAL_PREP"],
+    "ingredients": [
+      {"id": "tomato", "amount": 8, "unit": "PCS", "role": "MAIN"},
+      {"id": "cucumber", "amount": 0.5, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "bell-pepper", "amount": 1, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "red-onion", "amount": 0.25, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "garlic", "amount": 1, "unit": "PCS", "role": "SEASONING"},
+      {"id": "bread", "amount": 1, "unit": "PCS", "role": "SECONDARY", "note": {"sk": "krajec staršieho chleba", "en": "slice of stale bread"}},
+      {"id": "olive-oil", "amount": 3, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "vinegar", "amount": 1, "unit": "TBSP", "role": "SEASONING"},
+      {"id": "salt", "amount": 1, "unit": "TSP", "role": "SEASONING"}
+    ],
+    "steps": [
+      {"sk": "Zeleninu nahrubo nakrájaj a chlieb namoč na minútu do vody.", "en": "Roughly chop the vegetables and soak the bread in water for a minute."},
+      {"sk": "Všetko rozmixuj s olejom, octom a soľou dohladka.", "en": "Blend everything with the oil, vinegar and salt until smooth."},
+      {"sk": "Dochuť a daj aspoň na hodinu vychladiť. Podávaj s pár kockami uhorky.", "en": "Adjust the seasoning and chill for at least an hour. Serve with a few cubes of cucumber."}
+    ]
+  },
+  {
+    "id": "ratatouille",
+    "title": {"sk": "Ratatouille", "en": "Ratatouille"},
+    "description": {"sk": "Provensálska dusená zelenina s tymianom, výborná aj studená.", "en": "Provençal stewed vegetables with thyme, also lovely cold."},
+    "cuisine": "FRENCH",
+    "mealTypes": ["LUNCH", "DINNER"],
+    "totalTimeMin": 60,
+    "activeTimeMin": 20,
+    "difficulty": 1,
+    "servings": 4,
+    "equipment": ["STOVE"],
+    "tags": ["MEAL_PREP", "ONE_POT"],
+    "ingredients": [
+      {"id": "eggplant", "amount": 1, "unit": "PCS", "role": "MAIN"},
+      {"id": "zucchini", "amount": 2, "unit": "PCS", "role": "MAIN"},
+      {"id": "bell-pepper", "amount": 2, "unit": "PCS", "role": "MAIN"},
+      {"id": "onion", "amount": 1, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "garlic", "amount": 3, "unit": "PCS", "role": "SEASONING"},
+      {"id": "canned-tomatoes", "amount": 400, "unit": "G", "role": "MAIN"},
+      {"id": "olive-oil", "amount": 4, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "thyme", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "salt", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "black-pepper", "amount": 0.5, "unit": "TSP", "role": "SEASONING"},
+      {"id": "basil", "amount": 2, "unit": "TBSP", "role": "SEASONING", "optional": true},
+      {"id": "bread", "amount": 4, "unit": "PCS", "role": "SECONDARY", "optional": true, "note": {"sk": "na podávanie", "en": "to serve"}}
+    ],
+    "steps": [
+      {"sk": "Baklažán, cukety a papriky nakrájaj na 2 cm kocky.", "en": "Cut the eggplant, zucchini and peppers into 2 cm cubes."},
+      {"sk": "Na polovici oleja opeč baklažán dozlatista, asi 6 minút, a odlož ho. Na zvyšnom oleji opeč cukety a papriky 5 minút.", "en": "Fry the eggplant in half the oil until golden, about 6 minutes, and set aside. Fry the zucchini and peppers in the rest of the oil for 5 minutes.", "timerSeconds": 660},
+      {"sk": "Pridaj cibuľu a cesnak, potom paradajky, tymian, baklažán, soľ a korenie.", "en": "Add the onion and garlic, then the tomatoes, thyme, eggplant, salt and pepper."},
+      {"sk": "Nechaj prikryté dusiť na miernom ohni 30 minút, kým zelenina nezmäkne. Posyp bazalkou.", "en": "Simmer covered over low heat for 30 minutes until the vegetables are soft. Sprinkle with basil.", "timerSeconds": 1800}
+    ]
+  },
+  {
+    "id": "pecena-ryba-s-hranolkami",
+    "title": {"sk": "Pečená treska v strúhanke s hranolkami", "en": "Oven-baked fish and chips"},
+    "description": {"sk": "Chrumkavá ryba aj hranolky z rúry, bez fritézy.", "en": "Crispy fish and chips from the oven, no deep fryer."},
+    "cuisine": "BRITISH",
+    "mealTypes": ["LUNCH", "DINNER"],
+    "totalTimeMin": 50,
+    "activeTimeMin": 20,
+    "difficulty": 2,
+    "servings": 2,
+    "equipment": ["OVEN"],
+    "ingredients": [
+      {"id": "cod", "amount": 300, "unit": "G", "role": "MAIN"},
+      {"id": "potato", "amount": 600, "unit": "G", "role": "MAIN"},
+      {"id": "breadcrumbs", "amount": 50, "unit": "G", "role": "SECONDARY"},
+      {"id": "egg", "amount": 1, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "wheat-flour", "amount": 2, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "sunflower-oil", "amount": 3, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "lemon", "amount": 1, "unit": "PCS", "role": "SEASONING", "note": {"sk": "mesiačiky", "en": "wedges"}},
+      {"id": "salt", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "black-pepper", "amount": 0.25, "unit": "TSP", "role": "SEASONING"},
+      {"id": "peas", "amount": 150, "unit": "G", "role": "SECONDARY", "optional": true, "note": {"sk": "ako príloha", "en": "as a side"}}
+    ],
+    "steps": [
+      {"sk": "Rúru predhrej na 220 °C. Zemiaky nakrájaj na hrubé hranolky, premiešaj s 2 lyžicami oleja a polovicou soli a rozlož na plech.", "en": "Preheat the oven to 220 °C. Cut the potatoes into thick chips, toss with 2 tablespoons of oil and half the salt and spread on a tray."},
+      {"sk": "Peč 20 minút.", "en": "Bake for 20 minutes.", "timerSeconds": 1200},
+      {"sk": "Rybu osuš, osoľ a okoreň. Obaľ ju v múke, rozšľahanom vajci a strúhanke zmiešanej so zvyšným olejom.", "en": "Pat the fish dry and season. Coat it in flour, beaten egg and the breadcrumbs mixed with the remaining oil."},
+      {"sk": "Hranolky otoč, rybu polož na plech vedľa nich a peč 12 až 15 minút, kým obal nie je zlatistý a ryba sa ľahko rozdeľuje na lupienky.", "en": "Turn the chips, put the fish on the tray next to them and bake for 12–15 minutes until the coating is golden and the fish flakes easily.", "timerSeconds": 810},
+      {"sk": "Podávaj s citrónom a hráškom.", "en": "Serve with lemon and peas."}
+    ]
   }
 ]

@@ -1,0 +1,63 @@
+[
+  {
+    "id": "peceny-losos-so-zemiakmi",
+    "title": {"sk": "Pečený losos so zemiakmi a kôprom", "en": "Baked salmon with potatoes and dill"},
+    "description": {"sk": "Celá večera z jedného plechu, plná bielkovín.", "en": "A whole dinner from one tray, full of protein."},
+    "cuisine": "INTERNATIONAL",
+    "mealTypes": ["LUNCH", "DINNER"],
+    "totalTimeMin": 45,
+    "activeTimeMin": 15,
+    "difficulty": 1,
+    "servings": 2,
+    "equipment": ["OVEN"],
+    "ingredients": [
+      {"id": "salmon", "amount": 300, "unit": "G", "role": "MAIN"},
+      {"id": "potato", "amount": 500, "unit": "G", "role": "MAIN"},
+      {"id": "olive-oil", "amount": 2, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "garlic", "amount": 2, "unit": "PCS", "role": "SEASONING"},
+      {"id": "lemon", "amount": 1, "unit": "PCS", "role": "SEASONING"},
+      {"id": "dill", "amount": 2, "unit": "TBSP", "role": "SEASONING"},
+      {"id": "salt", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "black-pepper", "amount": 0.25, "unit": "TSP", "role": "SEASONING"},
+      {"id": "broccoli", "amount": 0.5, "unit": "PCS", "role": "SECONDARY"}
+    ],
+    "steps": [
+      {"sk": "Rúru predhrej na 200 °C. Zemiaky nakrájaj na mesiačiky, premiešaj s olejom, cesnakom a polovicou soli a peč 20 minút.", "en": "Preheat the oven to 200 °C. Cut the potatoes into wedges, toss with the oil, garlic and half the salt and bake for 20 minutes.", "timerSeconds": 1200},
+      {"sk": "Pridaj na plech ružičky brokolice a lososa, osoľ, okoreň a polož naň plátky citróna.", "en": "Add the broccoli florets and the salmon to the tray, season and top the salmon with lemon slices."},
+      {"sk": "Peč 12 až 15 minút, kým sa losos v strede ľahko rozdeľuje na lupienky a je ešte šťavnatý.", "en": "Bake for 12–15 minutes until the salmon flakes easily in the centre but is still moist.", "timerSeconds": 810},
+      {"sk": "Posyp kôprom a podávaj.", "en": "Sprinkle with dill and serve."}
+    ]
+  },
+  {
+    "id": "pecene-kuracie-stehna-so-zeleninou",
+    "title": {"sk": "Pečené kuracie stehná so zeleninou z plechu", "en": "Sheet-pan chicken thighs with vegetables"},
+    "description": {"sk": "Mäso aj príloha naraz v rúre – ideálne do krabičiek.", "en": "Meat and sides in the oven at once, ideal for lunch boxes."},
+    "cuisine": "INTERNATIONAL",
+    "mealTypes": ["LUNCH", "DINNER"],
+    "totalTimeMin": 50,
+    "activeTimeMin": 15,
+    "difficulty": 1,
+    "servings": 4,
+    "equipment": ["OVEN"],
+    "tags": ["MEAL_PREP"],
+    "ingredients": [
+      {"id": "chicken-thigh", "amount": 700, "unit": "G", "role": "MAIN"},
+      {"id": "potato", "amount": 600, "unit": "G", "role": "MAIN"},
+      {"id": "carrot", "amount": 3, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "red-onion", "amount": 1, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "bell-pepper", "amount": 1, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "olive-oil", "amount": 3, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "smoked-paprika", "amount": 2, "unit": "TSP", "role": "SEASONING"},
+      {"id": "garlic", "amount": 3, "unit": "PCS", "role": "SEASONING"},
+      {"id": "rosemary", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "salt", "amount": 1.5, "unit": "TSP", "role": "SEASONING"},
+      {"id": "black-pepper", "amount": 0.5, "unit": "TSP", "role": "SEASONING"}
+    ],
+    "steps": [
+      {"sk": "Rúru predhrej na 210 °C. Zemiaky, mrkvu, cibuľu a papriku nakrájaj na rovnako veľké kusy.", "en": "Preheat the oven to 210 °C. Cut the potatoes, carrots, onion and pepper into even pieces."},
+      {"sk": "Zeleninu aj mäso premiešaj s olejom, paprikou, cesnakom, rozmarínom, soľou a korením a rozlož na plech v jednej vrstve.", "en": "Toss the vegetables and chicken with the oil, paprika, garlic, rosemary, salt and pepper and spread in a single layer on a tray."},
+      {"sk": "Peč 35 minút, v polovici premiešaj. Kura je hotové, keď má zlatú kôrku a vnútri dosiahne 75 °C – šťava je číra.", "en": "Roast for 35 minutes, stirring halfway. The chicken is done when golden and 75 °C inside, with clear juices.", "timerSeconds": 2100},
+      {"sk": "Rozdeľ do krabičiek; v chladničke vydrží 3 dni.", "en": "Divide into containers; keeps in the fridge for 3 days."}
+    ]
+  }
+]

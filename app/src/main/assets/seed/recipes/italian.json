@@ -165,5 +165,125 @@
       {"sk": "Pridaj prepláchnutú fazuľu a cestoviny a var, kým cestoviny nezmäknú, asi 10 minút.", "en": "Add the rinsed beans and the pasta and simmer until the pasta is tender, about 10 minutes.", "timerSeconds": 600},
       {"sk": "Okoreň, podľa bujónu dochuť soľou a podávaj s natrhanou bazalkou.", "en": "Season with pepper, add salt to taste depending on the stock, and serve with torn basil."}
     ]
+  },
+  {
+    "id": "penne-arrabbiata",
+    "title": {"sk": "Penne all'arrabbiata", "en": "Penne all'arrabbiata"},
+    "description": {"sk": "Ostrá paradajková omáčka s cesnakom – rastlinná a lacná.", "en": "A fiery tomato and garlic sauce: plant-based and cheap."},
+    "cuisine": "ITALIAN",
+    "mealTypes": ["LUNCH", "DINNER"],
+    "totalTimeMin": 25,
+    "activeTimeMin": 10,
+    "difficulty": 1,
+    "servings": 3,
+    "equipment": ["STOVE"],
+    "tags": ["STUDENT"],
+    "ingredients": [
+      {"id": "pasta", "amount": 300, "unit": "G", "role": "MAIN"},
+      {"id": "canned-tomatoes", "amount": 400, "unit": "G", "role": "MAIN"},
+      {"id": "garlic", "amount": 3, "unit": "PCS", "role": "SEASONING"},
+      {"id": "chili-flakes", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "olive-oil", "amount": 3, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "salt", "amount": 0.5, "unit": "TSP", "role": "SEASONING"},
+      {"id": "parsley", "amount": 2, "unit": "TBSP", "role": "SEASONING", "optional": true}
+    ],
+    "steps": [
+      {"sk": "Daj variť cestoviny do osolenej vody.", "en": "Put the pasta on to cook in salted water."},
+      {"sk": "Na olivovom oleji minútu opekaj nakrájaný cesnak s čili vločkami, kým nezavonia.", "en": "Fry the sliced garlic with the chili flakes in the olive oil for a minute until fragrant."},
+      {"sk": "Prilej paradajky, osoľ a var 12 minút, kým omáčka nezhustne.", "en": "Add the tomatoes and salt and simmer for 12 minutes until thick.", "timerSeconds": 720},
+      {"sk": "Zmiešaj s uvarenými cestovinami a trochou vody z varenia a posyp petržlenovou vňaťou.", "en": "Toss with the cooked pasta and a splash of the cooking water and sprinkle with parsley."}
+    ]
+  },
+  {
+    "id": "pizza-margherita",
+    "title": {"sk": "Domáca pizza margherita", "en": "Homemade pizza margherita"},
+    "description": {"sk": "Tenké chrumkavé cesto, paradajky, mozzarella a bazalka.", "en": "A thin crisp base with tomatoes, mozzarella and basil."},
+    "cuisine": "ITALIAN",
+    "mealTypes": ["LUNCH", "DINNER"],
+    "totalTimeMin": 120,
+    "activeTimeMin": 30,
+    "difficulty": 2,
+    "servings": 2,
+    "equipment": ["OVEN"],
+    "ingredients": [
+      {"id": "wheat-flour", "amount": 300, "unit": "G", "role": "MAIN"},
+      {"id": "dry-yeast", "amount": 4, "unit": "G", "role": "SECONDARY"},
+      {"id": "olive-oil", "amount": 2, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "salt", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "sugar", "amount": 1, "unit": "PINCH", "role": "SEASONING"},
+      {"id": "passata", "amount": 200, "unit": "G", "role": "MAIN"},
+      {"id": "mozzarella", "amount": 250, "unit": "G", "role": "MAIN"},
+      {"id": "oregano", "amount": 0.5, "unit": "TSP", "role": "SEASONING"},
+      {"id": "basil", "amount": 2, "unit": "TBSP", "role": "SEASONING"}
+    ],
+    "steps": [
+      {"sk": "Múku zmiešaj s droždím, soľou a cukrom, pridaj 190 ml vlažnej vody a lyžicu oleja a miesením 8 minút vypracuj hladké cesto.", "en": "Mix the flour with the yeast, salt and sugar, add 190 ml lukewarm water and a tablespoon of oil and knead for 8 minutes into a smooth dough.", "timerSeconds": 480},
+      {"sk": "Prikry a nechaj kysnúť na teplom mieste 1 hodinu, kým nezdvojnásobí objem.", "en": "Cover and leave to rise somewhere warm for 1 hour until doubled.", "timerSeconds": 3600},
+      {"sk": "Rúru s plechom predhrej na maximum (250 °C). Cesto rozdeľ na 2 časti a rukami roztiahni na tenké placky.", "en": "Preheat the oven with a baking tray inside to its maximum (250 °C). Divide the dough in two and stretch each into a thin round."},
+      {"sk": "Natri passatou zmiešanou s oreganom, poukladaj natrhanú mozzarellu a pokvapkaj olejom.", "en": "Spread with the passata mixed with the oregano, top with torn mozzarella and drizzle with oil."},
+      {"sk": "Peč na rozpálenom plechu 8 až 10 minút, kým okraje nie sú zlatohnedé a syr bublá. Posyp bazalkou.", "en": "Bake on the hot tray for 8–10 minutes until the crust is golden brown and the cheese bubbles. Scatter with basil.", "timerSeconds": 540}
+    ]
+  },
+  {
+    "id": "spaghetti-carbonara",
+    "title": {"sk": "Špagety carbonara", "en": "Spaghetti carbonara"},
+    "description": {"sk": "Krémová omáčka len z vajec a syra, bez smotany.", "en": "A creamy sauce made only from eggs and cheese, no cream."},
+    "cuisine": "ITALIAN",
+    "mealTypes": ["LUNCH", "DINNER"],
+    "totalTimeMin": 20,
+    "activeTimeMin": 15,
+    "difficulty": 2,
+    "servings": 2,
+    "equipment": ["STOVE"],
+    "ingredients": [
+      {"id": "spaghetti", "amount": 200, "unit": "G", "role": "MAIN"},
+      {"id": "bacon", "amount": 100, "unit": "G", "role": "MAIN", "note": {"sk": "ideálne guanciale alebo pancetta", "en": "ideally guanciale or pancetta"}},
+      {"id": "egg", "amount": 2, "unit": "PCS", "role": "MAIN"},
+      {"id": "parmesan", "amount": 50, "unit": "G", "role": "SECONDARY"},
+      {"id": "black-pepper", "amount": 0.5, "unit": "TSP", "role": "SEASONING"},
+      {"id": "salt", "unit": "TO_TASTE", "role": "SEASONING", "note": {"sk": "do vody na cestoviny", "en": "for the pasta water"}}
+    ],
+    "steps": [
+      {"sk": "Špagety uvar v osolenej vode al dente a odlož si hrnček vody z varenia.", "en": "Cook the spaghetti in salted water until al dente and keep a cup of the cooking water.", "timerSeconds": 540},
+      {"sk": "Slaninu nakrájaj na prúžky a opeč na suchej panvici do chrumkava.", "en": "Cut the bacon into strips and fry in a dry pan until crisp."},
+      {"sk": "Vajcia vyšľahaj so strúhaným parmezánom a veľa korenia.", "en": "Whisk the eggs with the grated parmesan and plenty of pepper."},
+      {"sk": "Panvicu stiahni z ohňa, pridaj sceďené špagety a nechaj ich minútu trochu vychladnúť.", "en": "Take the pan off the heat, add the drained spaghetti and let it cool for a minute."},
+      {"sk": "Vlej vajíčkovú zmes s trochou vody z varenia a rýchlo miešaj, kým sa nevytvorí krémová omáčka. Ak by vajcia začali zrážať, pridaj ďalšiu vodu.", "en": "Pour in the egg mixture with a splash of cooking water and toss quickly until a creamy sauce forms. If the eggs start to scramble, add more water."}
+    ]
+  },
+  {
+    "id": "morcacie-guly-v-paradajkovej-omacke",
+    "title": {"sk": "Morčacie guľky v paradajkovej omáčke", "en": "Turkey meatballs in tomato sauce"},
+    "description": {"sk": "Ľahké, no sýte guľky s množstvom bielkovín.", "en": "Light but filling meatballs packed with protein."},
+    "cuisine": "ITALIAN",
+    "mealTypes": ["LUNCH", "DINNER"],
+    "totalTimeMin": 45,
+    "activeTimeMin": 25,
+    "difficulty": 2,
+    "servings": 4,
+    "equipment": ["STOVE"],
+    "tags": ["MEAL_PREP", "FREEZER_FRIENDLY"],
+    "ingredients": [
+      {"id": "ground-turkey", "amount": 600, "unit": "G", "role": "MAIN"},
+      {"id": "egg", "amount": 1, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "breadcrumbs", "amount": 40, "unit": "G", "role": "SECONDARY"},
+      {"id": "parmesan", "amount": 30, "unit": "G", "role": "SECONDARY"},
+      {"id": "garlic", "amount": 3, "unit": "PCS", "role": "SEASONING"},
+      {"id": "onion", "amount": 1, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "passata", "amount": 700, "unit": "G", "role": "MAIN"},
+      {"id": "olive-oil", "amount": 2, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "oregano", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "salt", "amount": 1.5, "unit": "TSP", "role": "SEASONING"},
+      {"id": "black-pepper", "amount": 0.5, "unit": "TSP", "role": "SEASONING"},
+      {"id": "basil", "amount": 2, "unit": "TBSP", "role": "SEASONING", "optional": true},
+      {"id": "spaghetti", "amount": 300, "unit": "G", "role": "SECONDARY", "optional": true, "note": {"sk": "na podávanie", "en": "to serve"}}
+    ],
+    "steps": [
+      {"sk": "Mäso zmiešaj s vajcom, strúhankou, parmezánom, 1 strúčikom cesnaku, polovicou soli a korením a vytvaruj 20 guliek.", "en": "Mix the turkey with the egg, breadcrumbs, parmesan, 1 garlic clove, half the salt and the pepper and shape into 20 balls."},
+      {"sk": "Na oleji guľky opeč zo všetkých strán dozlatista, asi 6 minút, a odlož ich.", "en": "Brown the meatballs all over in the oil, about 6 minutes, and set aside.", "timerSeconds": 360},
+      {"sk": "Na tom istom oleji speň cibuľu so zvyšným cesnakom, prilej passatu, pridaj oregano a zvyšnú soľ.", "en": "Soften the onion with the remaining garlic in the same pan, add the passata, oregano and remaining salt."},
+      {"sk": "Vráť guľky do omáčky a nechaj prikryté dusiť 15 minút, kým nie sú prepečené a vnútri bez ružovej farby (74 °C).", "en": "Return the meatballs to the sauce and simmer covered for 15 minutes until cooked through with no pink inside (74 °C).", "timerSeconds": 900},
+      {"sk": "Posyp bazalkou a podávaj samotné alebo so špagetami.", "en": "Sprinkle with basil and serve on their own or with spaghetti."}
+    ]
   }
 ]

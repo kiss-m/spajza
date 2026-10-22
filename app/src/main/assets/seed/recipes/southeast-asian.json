@@ -135,5 +135,71 @@
       {"sk": "Na rezance poukladaj surové plátky mäsa a zalej ich vriacim vývarom – mäso sa v ňom za minútu uvarí doružova. Ak ho chceš prepečené, povar plátky vo vývare 1 minútu.", "en": "Arrange the raw beef slices on the noodles and ladle the boiling broth over them; the beef cooks to pink within a minute. For well-done beef, simmer the slices in the broth for 1 minute first."},
       {"sk": "Podávaj s klíčkami, cibuľkou, bylinkami, čili a mesiačikmi limetky.", "en": "Serve with bean sprouts, spring onion, herbs, chili and lime wedges."}
     ]
+  },
+  {
+    "id": "tom-kha-kai",
+    "title": {"sk": "Tom kha kai – kokosová polievka s kuracím", "en": "Tom kha kai: coconut chicken soup"},
+    "description": {"sk": "Krémová, kyslastá a voňavá thajská polievka.", "en": "A creamy, tangy and fragrant Thai soup."},
+    "cuisine": "THAI",
+    "mealTypes": ["LUNCH", "DINNER"],
+    "totalTimeMin": 30,
+    "activeTimeMin": 15,
+    "difficulty": 1,
+    "servings": 4,
+    "equipment": ["STOVE"],
+    "tags": ["ONE_POT"],
+    "ingredients": [
+      {"id": "chicken-breast", "amount": 400, "unit": "G", "role": "MAIN"},
+      {"id": "coconut-milk", "amount": 400, "unit": "ML", "role": "MAIN"},
+      {"id": "mushroom", "amount": 200, "unit": "G", "role": "SECONDARY"},
+      {"id": "ginger", "amount": 30, "unit": "G", "role": "SECONDARY"},
+      {"id": "stock-chicken", "amount": 1, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "fish-sauce", "amount": 2, "unit": "TBSP", "role": "SEASONING"},
+      {"id": "lime", "amount": 3, "unit": "TBSP", "role": "SEASONING", "note": {"sk": "šťava", "en": "juice"}},
+      {"id": "brown-sugar", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "chili-pepper", "amount": 1, "unit": "PCS", "role": "SEASONING"},
+      {"id": "coriander-leaves", "amount": 2, "unit": "TBSP", "role": "SEASONING", "optional": true}
+    ],
+    "steps": [
+      {"sk": "Zázvor nakrájaj na plátky a var ho s bujónom v 600 ml vody 5 minút.", "en": "Slice the ginger and simmer it with the stock cube in 600 ml water for 5 minutes.", "timerSeconds": 300},
+      {"sk": "Pridaj kokosové mlieko, nakrájané huby a mäso nakrájané na tenké plátky a mierne var 8 minút, kým mäso nie je vnútri biele.", "en": "Add the coconut milk, sliced mushrooms and thinly sliced chicken and simmer gently for 8 minutes until the chicken is white throughout.", "timerSeconds": 480},
+      {"sk": "Odstav, dochuť rybacou omáčkou, limetkovou šťavou a cukrom a pridaj nakrájané čili.", "en": "Take off the heat, season with fish sauce, lime juice and sugar and add the sliced chili."},
+      {"sk": "Podávaj posypané koriandrom. Plátky zázvoru sa nejedia.", "en": "Serve sprinkled with coriander. The ginger slices are not eaten."}
+    ]
+  },
+  {
+    "id": "vietnamska-miska-s-bravcovym",
+    "title": {"sk": "Vietnamská rezancová miska s bravčovým", "en": "Vietnamese noodle bowl with pork"},
+    "description": {"sk": "Bún thịt nướng po domácky: karamelizované bravčové, rezance a veľa zeleniny.", "en": "Homestyle bún thịt nướng: caramelised pork, noodles and lots of vegetables."},
+    "cuisine": "VIETNAMESE",
+    "mealTypes": ["LUNCH", "DINNER"],
+    "totalTimeMin": 40,
+    "activeTimeMin": 30,
+    "difficulty": 2,
+    "servings": 3,
+    "equipment": ["STOVE"],
+    "ingredients": [
+      {"id": "pork-shoulder", "amount": 400, "unit": "G", "role": "MAIN"},
+      {"id": "rice-noodles", "amount": 200, "unit": "G", "role": "MAIN"},
+      {"id": "lettuce", "amount": 0.5, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "cucumber", "amount": 0.5, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "carrot", "amount": 1, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "mint", "amount": 2, "unit": "TBSP", "role": "SEASONING"},
+      {"id": "coriander-leaves", "amount": 2, "unit": "TBSP", "role": "SEASONING", "optional": true},
+      {"id": "peanuts", "amount": 30, "unit": "G", "role": "SECONDARY"},
+      {"id": "fish-sauce", "amount": 4, "unit": "TBSP", "role": "SEASONING"},
+      {"id": "brown-sugar", "amount": 2, "unit": "TBSP", "role": "SEASONING"},
+      {"id": "lime", "amount": 3, "unit": "TBSP", "role": "SEASONING", "note": {"sk": "šťava", "en": "juice"}},
+      {"id": "garlic", "amount": 3, "unit": "PCS", "role": "SEASONING"},
+      {"id": "chili-pepper", "amount": 1, "unit": "PCS", "role": "SEASONING", "optional": true},
+      {"id": "sunflower-oil", "amount": 1, "unit": "TBSP", "role": "SEASONING"}
+    ],
+    "steps": [
+      {"sk": "Mäso nakrájaj na tenké plátky a marinuj 15 minút v 2 lyžiciach rybacej omáčky, lyžici cukru a 2 strúčikoch cesnaku.", "en": "Slice the pork thinly and marinate for 15 minutes in 2 tablespoons of fish sauce, a tablespoon of sugar and 2 garlic cloves.", "timerSeconds": 900},
+      {"sk": "Dresing: zmiešaj zvyšnú rybaciu omáčku a cukor, limetkovú šťavu, zvyšný cesnak, čili a 4 lyžice vody.", "en": "Dressing: mix the remaining fish sauce and sugar, the lime juice, remaining garlic, chili and 4 tablespoons of water."},
+      {"sk": "Rezance priprav podľa návodu a prepláchni studenou vodou. Zeleninu nakrájaj na prúžky.", "en": "Prepare the noodles according to the packet and rinse in cold water. Cut the vegetables into strips."},
+      {"sk": "Mäso opekaj na rozpálenom oleji 5 až 6 minút, kým nie je skaramelizované a prepečené.", "en": "Fry the pork in hot oil for 5–6 minutes until caramelised and cooked through.", "timerSeconds": 330},
+      {"sk": "Do misiek daj rezance, zeleninu, bylinky a mäso, posyp arašidmi a polej dresingom.", "en": "Fill bowls with noodles, vegetables, herbs and pork, sprinkle with peanuts and pour over the dressing."}
+    ]
   }
 ]

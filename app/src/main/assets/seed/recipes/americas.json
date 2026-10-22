@@ -189,5 +189,133 @@
       {"sk": "Panvicu jemne potri olejom a na miernom ohni na nej peč malé palacinky asi 2 minúty, kým sa na povrchu neurobia bublinky.", "en": "Lightly oil a pan and cook small pancakes over low heat for about 2 minutes, until bubbles appear on top.", "timerSeconds": 120},
       {"sk": "Otoč ich a dopeč ešte minútu. Podávaj s ovocím a kvapkou medu.", "en": "Flip and cook for one more minute. Serve with fruit and a drizzle of honey.", "timerSeconds": 60}
     ]
+  },
+  {
+    "id": "tacos-s-mletym-masom",
+    "title": {"sk": "Tacos s mletým hovädzím", "en": "Beef tacos"},
+    "description": {"sk": "Korenisté mleté mäso v tortillách so šalátom, syrom a smotanou.", "en": "Spiced ground beef in tortillas with lettuce, cheese and sour cream."},
+    "cuisine": "MEXICAN",
+    "mealTypes": ["LUNCH", "DINNER"],
+    "totalTimeMin": 25,
+    "activeTimeMin": 20,
+    "difficulty": 1,
+    "servings": 4,
+    "equipment": ["STOVE"],
+    "tags": ["STUDENT"],
+    "ingredients": [
+      {"id": "tortilla", "amount": 8, "unit": "PCS", "role": "MAIN", "note": {"sk": "malé, alebo 4 veľké", "en": "small, or 4 large"}},
+      {"id": "ground-beef", "amount": 500, "unit": "G", "role": "MAIN"},
+      {"id": "onion", "amount": 1, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "garlic", "amount": 2, "unit": "PCS", "role": "SEASONING"},
+      {"id": "cumin", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "smoked-paprika", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "chili-powder", "amount": 0.5, "unit": "TSP", "role": "SEASONING"},
+      {"id": "oregano", "amount": 0.5, "unit": "TSP", "role": "SEASONING"},
+      {"id": "tomato-paste", "amount": 1, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "salt", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "sunflower-oil", "amount": 1, "unit": "TBSP", "role": "SEASONING"},
+      {"id": "lettuce", "amount": 0.25, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "tomato", "amount": 2, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "cheddar", "amount": 80, "unit": "G", "role": "SECONDARY"},
+      {"id": "sour-cream", "amount": 100, "unit": "G", "role": "SECONDARY"},
+      {"id": "lime", "amount": 1, "unit": "PCS", "role": "SEASONING", "optional": true}
+    ],
+    "steps": [
+      {"sk": "Na oleji speň nakrájanú cibuľu, pridaj mäso a opekaj, kým nie je nikde ružové, asi 8 minút.", "en": "Soften the chopped onion in the oil, add the beef and fry until no pink remains, about 8 minutes.", "timerSeconds": 480},
+      {"sk": "Pridaj cesnak, korenie, pretlak, soľ a 100 ml vody a povar 5 minút, kým zmes nezhustne.", "en": "Add the garlic, spices, tomato paste, salt and 100 ml water and simmer for 5 minutes until thick.", "timerSeconds": 300},
+      {"sk": "Tortilly zohrej na suchej panvici.", "en": "Warm the tortillas in a dry pan."},
+      {"sk": "Plň mäsom, nakrájaným šalátom a paradajkami, strúhaným syrom a kyslou smotanou. Podávaj s limetkou.", "en": "Fill with the beef, shredded lettuce, chopped tomatoes, grated cheese and sour cream. Serve with lime."}
+    ]
+  },
+  {
+    "id": "mac-and-cheese",
+    "title": {"sk": "Mac and cheese – cestoviny so syrovou omáčkou", "en": "Mac and cheese"},
+    "description": {"sk": "Krémové cestoviny s čedarom, americká klasika na zahriatie.", "en": "Creamy pasta with cheddar, an American comfort classic."},
+    "cuisine": "AMERICAN",
+    "mealTypes": ["LUNCH", "DINNER"],
+    "totalTimeMin": 25,
+    "activeTimeMin": 20,
+    "difficulty": 1,
+    "servings": 4,
+    "equipment": ["STOVE"],
+    "tags": ["STUDENT", "COMFORT"],
+    "ingredients": [
+      {"id": "pasta", "amount": 350, "unit": "G", "role": "MAIN"},
+      {"id": "cheddar", "amount": 200, "unit": "G", "role": "MAIN"},
+      {"id": "milk", "amount": 500, "unit": "ML", "role": "SECONDARY"},
+      {"id": "butter", "amount": 30, "unit": "G", "role": "SECONDARY"},
+      {"id": "wheat-flour", "amount": 2, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "mustard", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "salt", "amount": 0.5, "unit": "TSP", "role": "SEASONING"},
+      {"id": "black-pepper", "amount": 0.25, "unit": "TSP", "role": "SEASONING"}
+    ],
+    "steps": [
+      {"sk": "Cestoviny uvar v osolenej vode o minútu kratšie, ako je na obale.", "en": "Cook the pasta in salted water for one minute less than the packet says."},
+      {"sk": "Na masle opraž múku 1 minútu, postupne vmiešaj mlieko a za stáleho miešania var 4 minúty, kým nezhustne.", "en": "Cook the flour in the butter for 1 minute, gradually whisk in the milk and simmer for 4 minutes, stirring, until thick.", "timerSeconds": 240},
+      {"sk": "Stiahni z ohňa, vmiešaj strúhaný čedar, horčicu, soľ a korenie, kým sa syr neroztopí.", "en": "Take off the heat and stir in the grated cheddar, mustard, salt and pepper until the cheese melts."},
+      {"sk": "Zmiešaj s cestovinami a hneď podávaj.", "en": "Toss with the pasta and serve right away."}
+    ]
+  },
+  {
+    "id": "brazilska-fazula-s-klobasou",
+    "title": {"sk": "Brazílska čierna fazuľa s klobásou a ryžou", "en": "Brazilian black beans with sausage and rice"},
+    "description": {"sk": "Zjednodušená feijoada: dymová fazuľa, ryža a čerstvý pomaranč.", "en": "A simplified feijoada: smoky beans, rice and fresh orange."},
+    "cuisine": "LATIN_AMERICAN",
+    "mealTypes": ["LUNCH", "DINNER"],
+    "totalTimeMin": 50,
+    "activeTimeMin": 15,
+    "difficulty": 1,
+    "servings": 4,
+    "equipment": ["STOVE"],
+    "tags": ["MEAL_PREP", "FREEZER_FRIENDLY"],
+    "ingredients": [
+      {"id": "black-beans", "amount": 720, "unit": "G", "role": "MAIN", "note": {"sk": "odkvapkaná", "en": "drained"}},
+      {"id": "chorizo", "amount": 150, "unit": "G", "role": "MAIN"},
+      {"id": "bacon", "amount": 80, "unit": "G", "role": "SECONDARY"},
+      {"id": "onion", "amount": 1, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "garlic", "amount": 3, "unit": "PCS", "role": "SEASONING"},
+      {"id": "bay-leaf", "amount": 2, "unit": "PCS", "role": "SEASONING"},
+      {"id": "cumin", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "salt", "amount": 0.5, "unit": "TSP", "role": "SEASONING"},
+      {"id": "rice", "amount": 250, "unit": "G", "role": "MAIN"},
+      {"id": "orange", "amount": 1, "unit": "PCS", "role": "SECONDARY", "note": {"sk": "na podávanie", "en": "to serve"}}
+    ],
+    "steps": [
+      {"sk": "V hrnci opeč slaninu a chorizo nakrájané na kúsky, asi 5 minút. Pridaj cibuľu a cesnak a opekaj ďalšie 3 minúty.", "en": "Fry the chopped bacon and chorizo in a pot for about 5 minutes. Add the onion and garlic and fry for 3 more minutes.", "timerSeconds": 480},
+      {"sk": "Pridaj fazuľu, rímsky kmín, bobkové listy, soľ a 400 ml vody a var 25 minút. Časť fazule roztlač, aby zhustla.", "en": "Add the beans, cumin, bay leaves, salt and 400 ml water and simmer for 25 minutes. Mash some of the beans to thicken.", "timerSeconds": 1500},
+      {"sk": "Medzitým uvar ryžu.", "en": "Meanwhile, cook the rice."},
+      {"sk": "Podávaj fazuľu s ryžou a plátkami pomaranča.", "en": "Serve the beans with the rice and orange slices."}
+    ]
+  },
+  {
+    "id": "kuraci-wrap-s-jogurtovym-dresingom",
+    "title": {"sk": "Kurací wrap s jogurtovým dresingom", "en": "Chicken wrap with yogurt dressing"},
+    "description": {"sk": "Rýchly obed so zeleninou a množstvom bielkovín.", "en": "A quick lunch with vegetables and plenty of protein."},
+    "cuisine": "AMERICAN",
+    "mealTypes": ["LUNCH", "DINNER"],
+    "totalTimeMin": 20,
+    "activeTimeMin": 20,
+    "difficulty": 1,
+    "servings": 2,
+    "equipment": ["STOVE"],
+    "tags": ["STUDENT", "MEAL_PREP"],
+    "ingredients": [
+      {"id": "tortilla", "amount": 2, "unit": "PCS", "role": "MAIN"},
+      {"id": "chicken-breast", "amount": 300, "unit": "G", "role": "MAIN"},
+      {"id": "greek-yogurt", "amount": 100, "unit": "G", "role": "SECONDARY"},
+      {"id": "lettuce", "amount": 0.25, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "tomato", "amount": 1, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "cucumber", "amount": 0.25, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "garlic", "amount": 1, "unit": "PCS", "role": "SEASONING"},
+      {"id": "lemon", "amount": 1, "unit": "TBSP", "role": "SEASONING", "note": {"sk": "šťava", "en": "juice"}},
+      {"id": "sweet-paprika", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "salt", "amount": 0.5, "unit": "TSP", "role": "SEASONING"},
+      {"id": "sunflower-oil", "amount": 1, "unit": "TSP", "role": "SEASONING"}
+    ],
+    "steps": [
+      {"sk": "Mäso nakrájaj na prúžky, okoreň paprikou a soľou a na oleji opekaj 6 až 7 minút, kým nie je prepečené.", "en": "Cut the chicken into strips, season with paprika and salt and fry in the oil for 6–7 minutes until cooked through.", "timerSeconds": 390},
+      {"sk": "Dresing: jogurt zmiešaj s prelisovaným cesnakom a citrónovou šťavou.", "en": "Dressing: mix the yogurt with the crushed garlic and lemon juice."},
+      {"sk": "Tortilly krátko zohrej, natri dresingom, pridaj šalát, nakrájanú zeleninu a mäso a pevne zroluj.", "en": "Warm the tortillas briefly, spread with the dressing, add lettuce, sliced vegetables and chicken and roll up tightly."}
+    ]
   }
 ]

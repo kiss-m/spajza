@@ -1,0 +1,145 @@
+[
+  {
+    "id": "bananovy-chlebik",
+    "title": {"sk": "Banánový chlebík s orechmi", "en": "Banana bread with walnuts"},
+    "description": {"sk": "Vláčny chlebík z prezretých banánov.", "en": "A moist loaf made from overripe bananas."},
+    "cuisine": "AMERICAN",
+    "mealTypes": ["DESSERT", "BREAKFAST", "SNACK"],
+    "totalTimeMin": 70,
+    "activeTimeMin": 15,
+    "difficulty": 1,
+    "servings": 10,
+    "equipment": ["OVEN"],
+    "tags": ["MEAL_PREP"],
+    "ingredients": [
+      {"id": "banana", "amount": 3, "unit": "PCS", "role": "MAIN", "note": {"sk": "prezreté", "en": "overripe"}},
+      {"id": "wheat-flour", "amount": 220, "unit": "G", "role": "MAIN"},
+      {"id": "brown-sugar", "amount": 100, "unit": "G", "role": "SECONDARY"},
+      {"id": "egg", "amount": 2, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "butter", "amount": 80, "unit": "G", "role": "SECONDARY", "note": {"sk": "rozpustené", "en": "melted"}},
+      {"id": "baking-soda", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "cinnamon", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "salt", "amount": 1, "unit": "PINCH", "role": "SEASONING"},
+      {"id": "walnuts", "amount": 50, "unit": "G", "role": "SECONDARY", "optional": true}
+    ],
+    "steps": [
+      {"sk": "Rúru predhrej na 175 °C a formu na chlebík vylož papierom.", "en": "Preheat the oven to 175 °C and line a loaf tin with parchment."},
+      {"sk": "Banány roztlač vidličkou a vymiešaj s rozpusteným maslom, cukrom a vajcami.", "en": "Mash the bananas with a fork and mix with the melted butter, sugar and eggs."},
+      {"sk": "Primiešaj múku so sódou, škoricou a soľou a nakoniec nasekané orechy. Nemiešaj dlho, stačí, kým sa suroviny spoja.", "en": "Fold in the flour with the baking soda, cinnamon and salt, then the chopped walnuts. Mix only until combined."},
+      {"sk": "Cesto vlej do formy a peč 50 až 55 minút. Je hotový, keď špajdľa zapichnutá do stredu vyjde suchá.", "en": "Pour into the tin and bake for 50–55 minutes, until a skewer inserted in the centre comes out clean.", "timerSeconds": 3150},
+      {"sk": "Nechaj vychladnúť vo forme 10 minút, potom na mriežke.", "en": "Cool in the tin for 10 minutes, then on a rack."}
+    ]
+  },
+  {
+    "id": "sulance-s-makom",
+    "title": {"sk": "Šúľance s makom", "en": "Potato noodles with poppy seeds"},
+    "description": {"sk": "Tradičný slovenský sladký obed zo zemiakového cesta.", "en": "A traditional Slovak sweet lunch made from potato dough."},
+    "cuisine": "SLOVAK_CZECH",
+    "mealTypes": ["LUNCH", "DESSERT"],
+    "totalTimeMin": 60,
+    "activeTimeMin": 35,
+    "difficulty": 2,
+    "servings": 4,
+    "equipment": ["STOVE"],
+    "tags": ["COMFORT"],
+    "ingredients": [
+      {"id": "potato", "amount": 600, "unit": "G", "role": "MAIN", "note": {"sk": "varené v šupke a vychladnuté", "en": "boiled in their skins and cooled"}},
+      {"id": "wheat-flour", "amount": 200, "unit": "G", "role": "MAIN"},
+      {"id": "egg", "amount": 1, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "salt", "amount": 0.5, "unit": "TSP", "role": "SEASONING"},
+      {"id": "butter", "amount": 50, "unit": "G", "role": "SECONDARY"},
+      {"id": "poppy-seeds", "amount": 80, "unit": "G", "role": "SECONDARY"},
+      {"id": "powdered-sugar", "amount": 4, "unit": "TBSP", "role": "SECONDARY"}
+    ],
+    "steps": [
+      {"sk": "Zemiaky uvar v šupke doměkka, asi 25 minút, ošúp a nechaj vychladnúť.", "en": "Boil the potatoes in their skins until tender, about 25 minutes, then peel and cool.", "timerSeconds": 1500},
+      {"sk": "Najemno ich nastrúhaj a s múkou, vajcom a soľou rýchlo vypracuj hladké cesto.", "en": "Grate them finely and quickly knead with the flour, egg and salt into a smooth dough."},
+      {"sk": "Z cesta vyvaľkaj valček, nakrájaj kúsky a dlaňami z nich vyšúľaj prstové šúľance.", "en": "Roll the dough into a log, cut it into pieces and roll each between your palms into finger-shaped noodles."},
+      {"sk": "Var ich v osolenej vode, kým nevyplávajú na povrch, a ešte 2 minúty.", "en": "Boil in salted water until they float, then for 2 more minutes.", "timerSeconds": 120},
+      {"sk": "Sceď ich, prelož do misy s rozpusteným maslom a posyp makom zmiešaným s cukrom.", "en": "Drain, toss with the melted butter and sprinkle with the poppy seeds mixed with the sugar."}
+    ]
+  },
+  {
+    "id": "ryzovy-nakyp-s-jablkami",
+    "title": {"sk": "Ryžový nákyp s jablkami", "en": "Baked rice pudding with apples"},
+    "description": {"sk": "Zapekaná mliečna ryža s jablkami a škoricou.", "en": "Baked milky rice with apples and cinnamon."},
+    "cuisine": "SLOVAK_CZECH",
+    "mealTypes": ["DESSERT", "LUNCH"],
+    "totalTimeMin": 75,
+    "activeTimeMin": 25,
+    "difficulty": 1,
+    "servings": 4,
+    "equipment": ["STOVE", "OVEN"],
+    "tags": ["COMFORT"],
+    "ingredients": [
+      {"id": "rice", "amount": 200, "unit": "G", "role": "MAIN"},
+      {"id": "milk", "amount": 700, "unit": "ML", "role": "MAIN"},
+      {"id": "egg", "amount": 2, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "sugar", "amount": 60, "unit": "G", "role": "SECONDARY"},
+      {"id": "vanilla-sugar", "amount": 1, "unit": "PCS", "role": "SEASONING", "note": {"sk": "sáčok", "en": "sachet"}},
+      {"id": "butter", "amount": 30, "unit": "G", "role": "SECONDARY"},
+      {"id": "apple", "amount": 2, "unit": "PCS", "role": "MAIN"},
+      {"id": "cinnamon", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "raisins", "amount": 40, "unit": "G", "role": "SECONDARY", "optional": true}
+    ],
+    "steps": [
+      {"sk": "Ryžu var v mlieku s vanilkovým cukrom na miernom ohni 20 minút do mäkka, občas premiešaj. Nechaj trochu vychladnúť.", "en": "Simmer the rice in the milk with the vanilla sugar over low heat for 20 minutes until soft, stirring occasionally. Let it cool a little.", "timerSeconds": 1200},
+      {"sk": "Rúru predhrej na 180 °C. Žĺtky vymiešaj s polovicou cukru a vmiešaj do ryže, z bielkov a zvyšného cukru vyšľahaj tuhý sneh a zľahka ho primiešaj.", "en": "Preheat the oven to 180 °C. Beat the yolks with half the sugar and stir into the rice; whisk the whites with the remaining sugar to stiff peaks and fold in gently."},
+      {"sk": "Zapekaciu misu vymaž maslom, vrstvi ryžu a nastrúhané jablká so škoricou a hrozienkami, navrch daj vločky masla.", "en": "Butter a baking dish and layer the rice with the grated apples, cinnamon and raisins; dot the top with butter."},
+      {"sk": "Peč 30 minút do zlatista.", "en": "Bake for 30 minutes until golden.", "timerSeconds": 1800}
+    ]
+  },
+  {
+    "id": "pecene-jablka-s-orechmi",
+    "title": {"sk": "Pečené jablká s orechmi a medom", "en": "Baked apples with walnuts and honey"},
+    "description": {"sk": "Jednoduchý jesenný dezert z pár surovín.", "en": "A simple autumn dessert from a few ingredients."},
+    "cuisine": "CENTRAL_EUROPEAN",
+    "mealTypes": ["DESSERT"],
+    "totalTimeMin": 35,
+    "activeTimeMin": 10,
+    "difficulty": 1,
+    "servings": 4,
+    "equipment": ["OVEN"],
+    "ingredients": [
+      {"id": "apple", "amount": 4, "unit": "PCS", "role": "MAIN"},
+      {"id": "walnuts", "amount": 50, "unit": "G", "role": "SECONDARY"},
+      {"id": "honey", "amount": 2, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "cinnamon", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "raisins", "amount": 30, "unit": "G", "role": "SECONDARY", "optional": true},
+      {"id": "butter", "amount": 15, "unit": "G", "role": "SECONDARY"}
+    ],
+    "steps": [
+      {"sk": "Rúru predhrej na 180 °C. Jablkám vykroj jadrovníky tak, aby zostalo dno.", "en": "Preheat the oven to 180 °C. Core the apples, leaving the base intact."},
+      {"sk": "Nasekané orechy zmiešaj s medom, škoricou a hrozienkami a naplň nimi jablká. Navrch daj kúsok masla.", "en": "Mix the chopped walnuts with the honey, cinnamon and raisins and fill the apples. Top each with a little butter."},
+      {"sk": "Peč 25 minút, kým jablká nie sú mäkké a šupka nepopraská.", "en": "Bake for 25 minutes until the apples are soft and the skins split.", "timerSeconds": 1500}
+    ]
+  },
+  {
+    "id": "brownies",
+    "title": {"sk": "Čokoládové brownies", "en": "Chocolate brownies"},
+    "description": {"sk": "Hutné a vlhké brownies pre milovníkov čokolády.", "en": "Dense, fudgy brownies for chocolate lovers."},
+    "cuisine": "AMERICAN",
+    "mealTypes": ["DESSERT"],
+    "totalTimeMin": 45,
+    "activeTimeMin": 15,
+    "difficulty": 1,
+    "servings": 12,
+    "equipment": ["OVEN"],
+    "ingredients": [
+      {"id": "dark-chocolate", "amount": 150, "unit": "G", "role": "MAIN"},
+      {"id": "butter", "amount": 120, "unit": "G", "role": "MAIN"},
+      {"id": "sugar", "amount": 180, "unit": "G", "role": "SECONDARY"},
+      {"id": "egg", "amount": 3, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "wheat-flour", "amount": 80, "unit": "G", "role": "SECONDARY"},
+      {"id": "cocoa", "amount": 2, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "salt", "amount": 1, "unit": "PINCH", "role": "SEASONING"}
+    ],
+    "steps": [
+      {"sk": "Rúru predhrej na 180 °C a formu 20 × 20 cm vylož papierom.", "en": "Preheat the oven to 180 °C and line a 20 × 20 cm tin with parchment."},
+      {"sk": "Čokoládu s maslom roztop nad parou alebo v mikrovlnke po krátkych intervaloch.", "en": "Melt the chocolate with the butter over a pan of simmering water or in short bursts in the microwave."},
+      {"sk": "Vajcia vyšľahaj s cukrom do svetlej peny a vmiešaj čokoládu. Primiešaj múku, kakao a soľ.", "en": "Whisk the eggs with the sugar until pale and stir in the chocolate. Fold in the flour, cocoa and salt."},
+      {"sk": "Vlej do formy a peč 22 až 25 minút. Stred má zostať mierne vlhký – špajdľa vyjde s pár omrvinkami.", "en": "Pour into the tin and bake for 22–25 minutes. The centre should stay slightly moist; a skewer comes out with a few crumbs.", "timerSeconds": 1410},
+      {"sk": "Nechaj úplne vychladnúť a až potom krájaj.", "en": "Let it cool completely before cutting."}
+    ]
+  }
+]
