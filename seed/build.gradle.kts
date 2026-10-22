@@ -35,3 +35,10 @@ tasks.test {
     inputs.dir(seedDir).withPropertyName("seed")
     systemProperty("spajza.seedDir", seedDir.asFile.absolutePath)
 }
+
+tasks.register<JavaExec>("contentReport") {
+    description = "Writes docs/CONTENT.md and docs/DATA_TODO.md from the bundled seed."
+    classpath = sourceSets.main.get().runtimeClasspath
+    mainClass.set("sk.matej.spajza.data.seed.CoverageReport")
+    args(seedDir.asFile.absolutePath, rootProject.layout.projectDirectory.dir("docs").asFile.absolutePath)
+}
