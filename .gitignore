@@ -1,0 +1,16 @@
+# Gradle / build
+.gradle/
+build/
+.kotlin/
+local.properties
+
+# IDE
+.idea/
+*.iml
+.DS_Store
+
+# Secrets — never commit (CI decodes them from GitHub secrets)
+app/google-services.json
+keystore/
+*.keystore
+*.jks
