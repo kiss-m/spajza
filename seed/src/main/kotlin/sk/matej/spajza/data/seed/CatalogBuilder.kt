@@ -4,6 +4,7 @@ import kotlinx.serialization.KSerializer
 import kotlinx.serialization.SerializationException
 import kotlinx.serialization.builtins.ListSerializer
 import kotlinx.serialization.json.Json
+import sk.matej.spajza.domain.catalog.Catalog
 import sk.matej.spajza.domain.catalog.CatalogTagger
 import sk.matej.spajza.domain.catalog.TagThresholds
 import sk.matej.spajza.domain.model.Ingredient

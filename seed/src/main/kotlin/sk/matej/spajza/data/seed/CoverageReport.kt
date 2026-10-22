@@ -1,5 +1,6 @@
 package sk.matej.spajza.data.seed
 
+import sk.matej.spajza.domain.catalog.Catalog
 import sk.matej.spajza.domain.model.ComputedTag
 import sk.matej.spajza.domain.model.Cuisine
 import sk.matej.spajza.domain.model.MealType
