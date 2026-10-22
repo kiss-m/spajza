@@ -1,0 +1,84 @@
+name: CI
+
+on:
+  push:
+  workflow_dispatch:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      HAS_SIGNING_SECRETS: ${{ secrets.GOOGLE_SERVICES_JSON_B64 != '' && secrets.DEBUG_KEYSTORE_B64 != '' }}
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Detect Android app module
+        run: echo "HAS_APP=$([[ -f app/build.gradle.kts ]] && echo true || echo false)" >> "$GITHUB_ENV"
+
+      - uses: actions/setup-java@v6
+        with:
+          distribution: temurin
+          java-version: 21
+
+      - uses: gradle/actions/setup-gradle@v6
+
+      - name: Decode Firebase config and debug keystore
+        if: env.HAS_SIGNING_SECRETS == 'true'
+        env:
+          GOOGLE_SERVICES_JSON_B64: ${{ secrets.GOOGLE_SERVICES_JSON_B64 }}
+          DEBUG_KEYSTORE_B64: ${{ secrets.DEBUG_KEYSTORE_B64 }}
+        run: |
+          echo "$GOOGLE_SERVICES_JSON_B64" | base64 --decode > app/google-services.json
+          mkdir -p keystore
+          echo "$DEBUG_KEYSTORE_B64" | base64 --decode > keystore/debug.keystore
+
+      - name: Use placeholder Firebase config
+        if: env.HAS_APP == 'true' && env.HAS_SIGNING_SECRETS != 'true'
+        run: scripts/placeholder-google-services.sh
+
+      - name: Unit tests
+        run: ./gradlew test --continue 2>&1 | tee build-output.txt; exit "${PIPESTATUS[0]}"
+
+      - name: Build debug APK
+        if: env.HAS_APP == 'true'
+        run: ./gradlew :app:assembleDebug 2>&1 | tee -a build-output.txt; exit "${PIPESTATUS[0]}"
+
+      - name: Annotate failures
+        if: failure()
+        run: scripts/ci-annotate.sh build-output.txt
+
+      - name: Upload test reports
+        if: failure()
+        uses: actions/upload-artifact@v7
+        with:
+          name: test-reports
+          path: '**/build/reports/tests/'
+          if-no-files-found: ignore
+
+      - name: Upload debug APK
+        if: env.HAS_APP == 'true'
+        uses: actions/upload-artifact@v7
+        with:
+          name: spajza-debug-${{ github.sha }}
+          path: app/build/outputs/apk/debug/*.apk
+
+      # Only APKs signed with the dedicated debug key can use Google Sign-In.
+      - name: Publish rolling latest-debug pre-release
+        if: env.HAS_APP == 'true' && env.HAS_SIGNING_SECRETS == 'true' && github.ref == 'refs/heads/main'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release delete latest-debug --cleanup-tag --yes || true
+          gh release create latest-debug app/build/outputs/apk/debug/*.apk \
+            --prerelease \
+            --target "$GITHUB_SHA" \
+            --title "Latest debug build" \
+            --notes "Debug build of ${GITHUB_SHA::7}. Install it over the previous latest-debug build."

@@ -1,0 +1,104 @@
+rules_version = '2';
+
+// Špajza security rules. See docs/DECISIONS.md (D2, D4) for the data layout.
+// - A user can read and write only users/{their uid} and its subcollections.
+// - Household data is visible only to its members (households/{hid}.memberUids).
+// - Joining a household requires a valid, unexpired invites/{code}.
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function signedIn() {
+      return request.auth != null;
+    }
+
+    function uid() {
+      return request.auth.uid;
+    }
+
+    function householdDoc(hid) {
+      return get(/databases/$(database)/documents/households/$(hid));
+    }
+
+    function isMemberOf(hid) {
+      return signedIn() && uid() in householdDoc(hid).data.memberUids;
+    }
+
+    function changedKeys() {
+      return request.resource.data.diff(resource.data).affectedKeys();
+    }
+
+    // ------------------------------------------------------------------ users
+    match /users/{userId} {
+      allow read, write: if signedIn() && uid() == userId;
+
+      match /{subcollection}/{docId} {
+        allow read, write: if signedIn() && uid() == userId && subcollection in ['ratings', 'cookHistory'];
+      }
+    }
+
+    // ------------------------------------------------------------------ households
+    match /households/{hid} {
+      function isMember() {
+        return signedIn() && uid() in resource.data.memberUids;
+      }
+
+      // A member edits shared fields (name, staples, equipment, invite code) but not the member list.
+      function isMemberEdit() {
+        return isMember() && !changedKeys().hasAny(['memberUids', 'joinCode']);
+      }
+
+      // A member removes only themselves.
+      function isLeave() {
+        return isMember()
+          && changedKeys().hasOnly(['memberUids'])
+          && request.resource.data.memberUids == resource.data.memberUids.removeAll([uid()]);
+      }
+
+      // A non-member adds only themselves, quoting an unexpired invite for this household.
+      function isJoin() {
+        let code = request.resource.data.joinCode;
+        let invitePath = /databases/$(database)/documents/invites/$(code);
+        return signedIn()
+          && !(uid() in resource.data.memberUids)
+          && changedKeys().hasOnly(['memberUids', 'joinCode'])
+          && request.resource.data.memberUids == resource.data.memberUids.concat([uid()])
+          && code is string
+          && exists(invitePath)
+          && get(invitePath).data.householdId == hid
+          && get(invitePath).data.expiresAt > request.time;
+      }
+
+      allow read: if isMember();
+      allow create: if signedIn() && request.resource.data.memberUids == [uid()];
+      allow update: if isMemberEdit() || isLeave() || isJoin();
+      // Only the last member may delete the household (account deletion).
+      allow delete: if isMember() && resource.data.memberUids == [uid()];
+
+      // Explicit subcollections: a recursive wildcard would also match the household document
+      // itself in rules_version 2 and bypass the member-list checks above.
+      match /{subcollection}/{docId} {
+        allow read, write: if subcollection in ['pantry', 'shopping', 'recipes', 'customIngredients', 'mealPlans']
+          && isMemberOf(hid);
+      }
+    }
+
+    // ------------------------------------------------------------------ invites
+    // Document id = the invite code: 6 characters without look-alikes (no 0/O, 1/I/L).
+    match /invites/{code} {
+      allow get: if signedIn();
+      allow list: if false;
+      allow create: if signedIn()
+        && code.matches('^[A-HJKMNP-Z2-9]{6}$')
+        && request.resource.data.keys().hasOnly(['householdId', 'householdName', 'expiresAt', 'createdBy'])
+        && request.resource.data.get('householdName', '') is string
+        && request.resource.data.get('householdName', '').size() <= 60
+        && request.resource.data.createdBy == uid()
+        && isMemberOf(request.resource.data.householdId)
+        && request.resource.data.expiresAt is timestamp
+        && request.resource.data.expiresAt > request.time
+        && request.resource.data.expiresAt <= request.time + duration.value(49, 'h');
+      allow update: if false;
+      allow delete: if signedIn() && isMemberOf(resource.data.householdId);
+    }
+  }
+}
