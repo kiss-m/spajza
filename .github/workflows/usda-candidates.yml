@@ -1,0 +1,49 @@
+name: USDA candidates
+
+# Finds USDA FoodData Central (SR Legacy) candidates for the seed ingredients and commits them to
+# tools/usda/candidates.json on the data/usda branch. The FDC ids are then picked by hand.
+on:
+  push:
+    branches: [data/usda]
+    paths:
+      - tools/usda/candidates.py
+      - .github/workflows/usda-candidates.yml
+      - app/src/main/assets/seed/ingredients/**
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  candidates:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Download SR Legacy CSV
+        run: |
+          set -euo pipefail
+          known=https://fdc.nal.usda.gov/fdc-datasets/FoodData_Central_sr_legacy_food_csv_2018-04.zip
+          if ! curl -fsSL --retry 3 -o "$RUNNER_TEMP/sr.zip" "$known"; then
+            page=$(curl -fsSL https://fdc.nal.usda.gov/download-datasets/ || true)
+            url=$(grep -oE 'https?://[^"]*sr_legacy_food_csv[^"]*\.zip|/fdc-datasets/[^"]*sr_legacy_food_csv[^"]*\.zip' <<<"$page" | head -1 || true)
+            [[ "$url" == /* ]] && url="https://fdc.nal.usda.gov$url"
+            echo "::notice title=SR Legacy URL::known URL failed, found '${url}'"
+            curl -fsSL --retry 3 -o "$RUNNER_TEMP/sr.zip" "$url"
+          fi
+          mkdir -p "$RUNNER_TEMP/sr"
+          unzip -q "$RUNNER_TEMP/sr.zip" -d "$RUNNER_TEMP/sr"
+          find "$RUNNER_TEMP/sr" -name '*.csv' | head -20
+
+      - name: Find candidates
+        run: python3 tools/usda/candidates.py "$RUNNER_TEMP/sr" app/src/main/assets/seed/ingredients tools/usda/candidates.json
+
+      - name: Commit candidates
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add tools/usda/candidates.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "Update USDA FDC candidates"
+          git push
