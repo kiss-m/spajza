@@ -11,14 +11,22 @@ and override the spec where they differ. `docs/CONTENT.md` (coverage) and `docs/
   Slovak. Stop after each phase with a list of things to test on the phone.
 - Ask before hard-to-change decisions (data model, Firestore structure). Build only current-phase features.
 - Library versions: latest stable, verified before use, declared only in `gradle/libs.versions.toml`.
-  Entries marked `verify:gmaven` still need a check against Google Maven.
+  Google Maven versions are checked with the `Google Maven versions` workflow (edit its artifact list,
+  push to an `m1/**` branch or run it manually, read the notices).
 - Guide the user step by step through anything only they can do (Firebase console, GitHub secrets, SHA-1).
 - Repo: github.com/kiss-m/spajza, commits go straight to `main`.
 
 ## Environment
-- Claude works in an ephemeral cloud container: JDK 21, Gradle wrapper, no adb, no phone. APKs reach the
-  phone through CI (rolling `latest-debug` pre-release). Push work before the session ends.
+- Claude works in an ephemeral cloud container: JDK 21, Gradle wrapper, no Android SDK, no adb, no phone.
+  APKs reach the phone through CI (rolling `latest-debug` pre-release). Push work before the session ends.
 - Needed network hosts: `dl.google.com` (Android SDK + Google Maven), `fdc.nal.usda.gov` (USDA data).
+  While they are blocked, `~/.gradle/gradle.properties` holds `spajza.jvmOnly=true`: `settings.gradle.kts`
+  then leaves `:app` out and local builds cover only `:domain` and `:seed`. `:app` is built by CI.
+- Reading CI from the container: job logs are not reachable, but `scripts/ci-annotate.sh` turns Gradle
+  failures, compiler errors and failed tests into annotations. Fetch them with `curl` from
+  `api.github.com/repos/kiss-m/spajza/actions/runs?branch=<branch>` → the run's jobs → each job's
+  `check_run_url` + `/annotations`. Pure-Kotlin parts of `:app` (e.g. `data/catalog/CatalogMapper.kt`)
+  can be compiled and tested locally in a scratch JVM project with stub annotations.
 - Maven Central sometimes answers 429; rerun the build.
 - `app/google-services.json` and `keystore/` are never committed. `scripts/placeholder-google-services.sh`
   writes a placeholder so the app builds without Firebase; CI decodes the real files from the secrets
@@ -36,8 +44,9 @@ Spark plan only: no Cloud Functions, no Cloud Storage. Package `sk.matej.spajza`
   No `android.*`, `androidx.*` or `com.google.firebase.*` imports — the module cannot see them.
 - `:seed` (Kotlin/JVM, `sk.matej.spajza.data.seed`): seed JSON format, `CatalogBuilder` (validation,
   gram normalization, computed tags), content tests, coverage report.
-- `:app` (Android, not created yet): rest of `data/` (Room, Firestore, repositories) and `ui/<feature>/`,
-  `ui/components/`, `ui/theme/`.
+- `:app` (Android, `sk.matej.spajza`): `data/` (Room catalog, Firebase, repository implementations),
+  `di/` (Hilt modules), `ui/<feature>/`, `ui/components/`, `ui/theme/`, `ui/navigation/`. Navigation keys
+  are `@Serializable` `…Destination` types; `…Route` composables wire a ViewModel to a stateless `…Screen`.
 
 ## Architecture rules
 - MVVM + UDF: ViewModels expose `StateFlow<UiState>`; screens are stateless composables taking state and
@@ -71,9 +80,9 @@ Spark plan only: no Cloud Functions, no Cloud Storage. Package `sk.matej.spajza`
   nutrition. Steps use the singular imperative in Slovak.
 
 ## Commands
-- `./gradlew test` — all JVM tests (domain + seed content tests)
+- `./gradlew test` — all unit tests (domain, seed content tests and, with the Android SDK, `:app`)
 - `./gradlew :seed:contentReport` — regenerate docs/CONTENT.md and docs/DATA_TODO.md
-- `./gradlew assembleDebug`, `./gradlew lintDebug` — once `:app` exists
+- `./gradlew :app:assembleDebug`, `./gradlew :app:lintDebug` — need the Android SDK (CI)
 - Firestore rules: `firestore.rules` (deploy by pasting into the Firebase console). Proper emulator rules
   tests are Phase 3; until then check changes ad hoc with `@firebase/rules-unit-testing` in the scratchpad.
 

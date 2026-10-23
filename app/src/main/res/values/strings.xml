@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name" translatable="false">Špajza</string>
+
+    <!-- Bottom navigation -->
+    <string name="nav_cook">Čo uvariť</string>
+    <string name="nav_pantry">Špajza</string>
+    <string name="nav_shopping">Nákup</string>
+    <string name="nav_profile">Profil</string>
+
+    <!-- Sign-in -->
+    <string name="signin_title">Vitaj v Špajzi</string>
+    <string name="signin_subtitle">Prihlás sa a uvidíš, čo uvaríš z toho, čo máš doma.</string>
+    <string name="signin_button">Prihlásiť sa cez Google</string>
+    <string name="signin_error">Prihlásenie sa nepodarilo. Skús to znova.</string>
+    <string name="signin_no_account">V zariadení nie je žiadny Google účet. Pridaj ho v nastaveniach telefónu.</string>
+    <string name="signin_offline_hint">Na prvé prihlásenie potrebuješ internet, potom funguje všetko aj offline.</string>
+
+    <!-- Catalog -->
+    <string name="catalog_loading">Pripravujem recepty…</string>
+    <plurals name="catalog_recipe_count">
+        <item quantity="one">%d recept v katalógu</item>
+        <item quantity="few">%d recepty v katalógu</item>
+        <item quantity="many">%d receptu v katalógu</item>
+        <item quantity="other">%d receptov v katalógu</item>
+    </plurals>
+
+    <!-- Placeholders until the screens arrive (Phase 1, M3) -->
+    <string name="cook_placeholder_title">Čo dnes uvaríš?</string>
+    <string name="cook_placeholder_body">Keď pridáš suroviny do špajze, ukážeme ti, čo uvaríš hneď a čo stačí dokúpiť.</string>
+    <string name="pantry_placeholder_title">Špajza je zatiaľ prázdna</string>
+    <string name="pantry_placeholder_body">Sem si budete s domácnosťou zapisovať, čo máte doma.</string>
+    <string name="shopping_placeholder_title">Nákupný zoznam je prázdny</string>
+    <string name="shopping_placeholder_body">Chýbajúce suroviny z receptov sa objavia tu.</string>
+
+    <!-- Profile -->
+    <string name="profile_language">Jazyk</string>
+    <string name="language_system">Podľa systému</string>
+    <string name="language_sk" translatable="false">Slovenčina</string>
+    <string name="language_en" translatable="false">English</string>
+    <string name="profile_signed_in_as">Prihlásený účet: %1$s</string>
+    <string name="sign_out">Odhlásiť sa</string>
+</resources>
