@@ -34,4 +34,6 @@ data class UserProfile(
     /** Hard filters; their UI is hidden behind a feature flag for now. */
     val restrictions: DietRestrictions = DietRestrictions(),
     val householdId: String? = null,
+    /** Set when onboarding is finished or skipped; until then the app resumes it after sign-in. */
+    val onboardingDone: Boolean = false,
 )

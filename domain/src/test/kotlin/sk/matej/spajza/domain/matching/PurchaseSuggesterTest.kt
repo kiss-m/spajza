@@ -19,6 +19,7 @@ class PurchaseSuggesterTest {
         perServing = Nutrition.ZERO,
         expiringItems = 0,
         breakdown = ScoreBreakdown(score, 0.0, 0.0, 0.0, 0.0, 0.0),
+        servings = 1,
     )
 
     private val cheap = PriceTier.CHEAP

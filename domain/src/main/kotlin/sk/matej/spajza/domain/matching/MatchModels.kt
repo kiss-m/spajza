@@ -78,6 +78,8 @@ data class RecipeMatch(
     val perServing: Nutrition,
     val expiringItems: Int,
     val breakdown: ScoreBreakdown,
+    /** The servings [lines] were evaluated for. */
+    val servings: Int,
 )
 
 data class MatchResult(

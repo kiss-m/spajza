@@ -2,6 +2,8 @@ import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 plugins {
     alias(libs.plugins.kotlin.jvm)
+    // Fakes and fixtures shared with the app's ViewModel tests.
+    `java-test-fixtures`
 }
 
 java {
@@ -17,7 +19,8 @@ kotlin {
 }
 
 dependencies {
-    implementation(libs.kotlinx.coroutines.core)
+    // Repository interfaces expose Flow.
+    api(libs.kotlinx.coroutines.core)
 
     testImplementation(kotlin("test"))
     testImplementation(platform(libs.junit.bom))

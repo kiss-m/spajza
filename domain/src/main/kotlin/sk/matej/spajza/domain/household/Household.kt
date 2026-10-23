@@ -7,6 +7,8 @@ data class Household(
     val id: String,
     val name: String,
     val memberUids: List<String>,
+    /** Display names by uid, for "added by" labels and the member list. */
+    val memberNames: Map<String, String> = emptyMap(),
     /** Catalog ingredient ids that always count as available. */
     val staples: Set<String>,
     val equipment: Set<Equipment> = DEFAULT_EQUIPMENT,

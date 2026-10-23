@@ -13,6 +13,7 @@ import sk.matej.spajza.domain.model.RecipeTag
 import sk.matej.spajza.domain.nutrition.NutritionCalculator
 import sk.matej.spajza.domain.pantry.PantryItem
 import sk.matej.spajza.domain.profile.Goal
+import sk.matej.spajza.domain.profile.Preferences
 import sk.matej.spajza.domain.profile.SpicyTolerance
 import sk.matej.spajza.domain.rating.Verdict
 import sk.matej.spajza.domain.unit.UnitConverter
@@ -43,9 +44,21 @@ class RecipeMatcher(
         )
     }
 
-    /** Evaluates a single recipe however many items are missing (recipe detail, search results). */
-    fun evaluate(recipe: Recipe, kitchen: KitchenState, personalization: Personalization, today: LocalDate): RecipeMatch =
-        evaluate(recipe, Context(kitchen, personalization, today))
+    /**
+     * Evaluates a single recipe however many items are missing (recipe detail, search results), for
+     * [servings] or, when null, the user's default for this recipe ([defaultServings]).
+     */
+    fun evaluate(
+        recipe: Recipe,
+        kitchen: KitchenState,
+        personalization: Personalization,
+        today: LocalDate,
+        servings: Int? = null,
+    ): RecipeMatch = evaluate(recipe, Context(kitchen, personalization, today), servings)
+
+    /** Meal-prep recipes are cooked whole when the user meal-preps; everything else for the default servings. */
+    fun defaultServings(recipe: Recipe, preferences: Preferences): Int =
+        if (preferences.mealPrep && RecipeTag.MEAL_PREP in recipe.tags) recipe.servings else preferences.defaultServings
 
     fun passesHardFilters(recipe: Recipe, kitchen: KitchenState, personalization: Personalization): Boolean {
         val disliked = personalization.preferences.dislikedIngredients
@@ -79,9 +92,9 @@ class RecipeMatcher(
         val isWeekend: Boolean = today.dayOfWeek == DayOfWeek.SATURDAY || today.dayOfWeek == DayOfWeek.SUNDAY
     }
 
-    private fun evaluate(recipe: Recipe, ctx: Context): RecipeMatch {
-        val preferences = ctx.personalization.preferences
-        val servings = if (preferences.mealPrep && RecipeTag.MEAL_PREP in recipe.tags) recipe.servings else preferences.defaultServings
+    private fun evaluate(recipe: Recipe, ctx: Context, requestedServings: Int? = null): RecipeMatch {
+        val servings = requestedServings ?: defaultServings(recipe, ctx.personalization.preferences)
+        require(servings > 0) { "servings must be positive, was $servings" }
         val factor = servings.toDouble() / recipe.servings
         val lines = recipe.ingredients.map { evaluateLine(it, factor, ctx) }
         val required = lines.filterNot { it.line.optional }
@@ -101,7 +114,7 @@ class RecipeMatcher(
             expiry = config.expiryWeight * minOf(1.0, expiring * config.expiryPerItem),
             adjustments = adjustments(recipe, ctx),
         )
-        return RecipeMatch(recipe, breakdown.total, coverage, lines, missing, perServing, expiring, breakdown)
+        return RecipeMatch(recipe, breakdown.total, coverage, lines, missing, perServing, expiring, breakdown, servings)
     }
 
     private fun evaluateLine(line: RecipeIngredient, factor: Double, ctx: Context): LineMatch {
