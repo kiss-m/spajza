@@ -61,6 +61,11 @@ Spark plan only: no Cloud Functions, no Cloud Storage. Package `sk.matej.spajza`
 - Ingredients: stable slug ids, SK/CZ/EN synonyms incl. inflected forms (a normalized term may belong to
   one ingredient only), `pantryUnit` + `gramsPerPiece`/`density` for every unit recipes use, EU-14
   allergens consistent with diet flags, nutrition per 100 g with `"USDA FDC <id>"` or `"estimate"`.
+  USDA values come from the SR Legacy dataset: the `USDA candidates` workflow on the `data/usda`
+  branch (tools/usda/candidates.py) dumps it to that branch, since the container cannot reach
+  fdc.nal.usda.gov. Estimates are typical label values and are listed in docs/DATA_TODO.md.
+- Substitutions (`substitutions/*.json`): `from` is the recipe ingredient, `to` the substitute,
+  `ratio` multiplies the grams.
 - Recipes: original, bilingual, realistic amounts, doneness cues for meat and fish, salt amounts that are
   eaten are written out (`TO_TASTE` only for pasta water and similar), optional lines don't count toward
   nutrition. Steps use the singular imperative in Slovak.
