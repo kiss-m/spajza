@@ -23,6 +23,7 @@ class FirestoreHouseholdRepository(private val db: FirebaseFirestore) : Househol
             FirestoreMappers.householdFrom(snapshot.id, snapshot.data.orEmpty(), expires)
         }
         .distinctUntilChanged()
+        .retryPermissionDenied()
         .catch { error ->
             // Reading fails once the user is no longer a member.
             Log.w("SpajzaFirestore", "observing household failed", error)

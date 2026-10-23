@@ -17,6 +17,7 @@ class FirestoreRatingRepository(private val db: FirebaseFirestore) : RatingRepos
 
     override fun observe(uid: String): Flow<Map<String, Rating>> = collection(uid).snapshots()
         .map { snapshot -> snapshot.documents.associate { it.id to FirestoreMappers.ratingFrom(it.id, it.data.orEmpty()) } }
+        .retryPermissionDenied()
         .catch { error ->
             Log.w("SpajzaFirestore", "observing ratings failed", error)
             emit(emptyMap())

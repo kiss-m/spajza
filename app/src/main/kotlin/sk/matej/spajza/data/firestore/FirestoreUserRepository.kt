@@ -24,6 +24,7 @@ class FirestoreUserRepository(private val db: FirebaseFirestore) : UserRepositor
         .filter { it.exists() || !it.metadata.isFromCache }
         .map { snapshot -> if (snapshot.exists()) FirestoreMappers.userFrom(uid, snapshot.data.orEmpty()) else null }
         .distinctUntilChanged()
+        .retryPermissionDenied()
         .catch { Log.w("SpajzaFirestore", "observing user failed", it) }
 
     override suspend fun create(uid: String, displayName: String?, householdId: String) {

@@ -19,6 +19,7 @@ class FirestoreShoppingRepository(private val db: FirebaseFirestore) : ShoppingR
 
     override fun observe(householdId: String): Flow<List<ShoppingItem>> = collection(householdId).snapshots()
         .map { snapshot -> snapshot.documents.mapNotNull { FirestoreMappers.shoppingItemFrom(it.id, it.data.orEmpty()) } }
+        .retryPermissionDenied()
         .catch { error ->
             Log.w("SpajzaFirestore", "observing shopping list failed", error)
             emit(emptyList())

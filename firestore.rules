@@ -72,7 +72,9 @@ service cloud.firestore {
           && get(invitePath).data.expiresAt > request.time;
       }
 
-      allow read: if isMember();
+      // A missing household reveals nothing; allowing the read lets a listener that reaches the
+      // server before the creating write wait for the document instead of failing.
+      allow read: if signedIn() && (resource == null || isMember());
       allow create: if signedIn() && request.resource.data.memberUids == [uid()];
       allow update: if isMemberEdit() || isLeave() || isJoin();
       // Only the last member may delete the household (account deletion).

@@ -27,6 +27,7 @@ class FirestoreCookHistoryRepository(private val db: FirebaseFirestore) : CookHi
                 CookEvent(doc.id, recipeId, cookedAt, (doc.get("servings") as? Number)?.toInt() ?: 1)
             }
         }
+        .retryPermissionDenied()
         .catch { error ->
             Log.w("SpajzaFirestore", "observing cook history failed", error)
             emit(emptyList())

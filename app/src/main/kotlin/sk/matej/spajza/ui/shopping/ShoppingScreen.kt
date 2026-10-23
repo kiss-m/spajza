@@ -40,9 +40,11 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberUpdatedState
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalResources
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.unit.dp
@@ -68,11 +70,12 @@ fun ShoppingRoute(viewModel: ShoppingViewModel = hiltViewModel()) {
     val query by viewModel.query.collectAsStateWithLifecycle()
     val snackbarHostState = remember { SnackbarHostState() }
     val context = LocalContext.current
+    val resources by rememberUpdatedState(LocalResources.current)
     LaunchedEffect(viewModel) {
         viewModel.screenEvents.collect { event ->
             when (event) {
                 is ShoppingEvent.Moved ->
-                    snackbarHostState.showSnackbar(context.resources.getQuantityString(R.plurals.shopping_moved, event.count, event.count))
+                    snackbarHostState.showSnackbar(resources.getQuantityString(R.plurals.shopping_moved, event.count, event.count))
             }
         }
     }

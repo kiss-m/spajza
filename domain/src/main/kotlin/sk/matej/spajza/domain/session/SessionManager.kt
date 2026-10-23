@@ -44,7 +44,8 @@ sealed interface SessionState {
 
 /**
  * The app-wide session. After the first sign-in, when the user document is confirmed missing, it
- * creates the household and the user document (once per user and process).
+ * creates the household and the user document (once per user and process). A document that
+ * disappears after it was seen (account deletion) is never recreated.
  */
 @OptIn(ExperimentalCoroutinesApi::class)
 class SessionManager(
@@ -59,6 +60,7 @@ class SessionManager(
 ) {
     private val creationLock = Mutex()
     private val createdFor = mutableSetOf<String>()
+    private val seenProfiles = mutableSetOf<String>()
 
     val state: StateFlow<SessionState> = auth.currentUser
         .flatMapLatest { user -> if (user == null) flowOf(SessionState.SignedOut) else sessionOf(user) }
@@ -66,6 +68,7 @@ class SessionManager(
         .stateIn(scope, SharingStarted.Eagerly, SessionState.Loading)
 
     private fun sessionOf(user: AuthUser): Flow<SessionState> = users.observe(user.uid).flatMapLatest { profile ->
+        if (profile != null) creationLock.withLock { seenProfiles += user.uid }
         val householdId = profile?.householdId
         if (profile == null || householdId == null) {
             flow {
@@ -84,7 +87,7 @@ class SessionManager(
     }
 
     private suspend fun ensureHousehold(user: AuthUser) = creationLock.withLock {
-        if (createdFor.add(user.uid)) {
+        if (user.uid !in seenProfiles && createdFor.add(user.uid)) {
             createHousehold(user.uid, user.displayName, defaultHouseholdName(), catalog.catalog.first())
         }
     }

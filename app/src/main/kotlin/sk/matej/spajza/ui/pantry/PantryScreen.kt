@@ -44,9 +44,10 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberUpdatedState
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalResources
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
@@ -57,7 +58,6 @@ import sk.matej.spajza.ui.common.Expiry
 import sk.matej.spajza.ui.common.IngredientOption
 import sk.matej.spajza.ui.common.currentLanguage
 import sk.matej.spajza.ui.common.labelRes
-import sk.matej.spajza.ui.common.languageOf
 import sk.matej.spajza.ui.common.pantryAmountText
 import sk.matej.spajza.ui.common.text
 import sk.matej.spajza.ui.components.EmptyState
@@ -74,16 +74,16 @@ fun PantryRoute(viewModel: PantryViewModel = hiltViewModel()) {
     val state by viewModel.state.collectAsStateWithLifecycle()
     val query by viewModel.query.collectAsStateWithLifecycle()
     val snackbarHostState = remember { SnackbarHostState() }
-    val context = LocalContext.current
+    val resources by rememberUpdatedState(LocalResources.current)
+    val language by rememberUpdatedState(currentLanguage())
     LaunchedEffect(viewModel) {
         viewModel.screenEvents.collect { event ->
-            val language = languageOf(context.resources.configuration.locales[0])
             when (event) {
-                is PantryEvent.Added -> snackbarHostState.showSnackbar(context.getString(R.string.pantry_added, event.name[language]))
+                is PantryEvent.Added -> snackbarHostState.showSnackbar(resources.getString(R.string.pantry_added, event.name[language]))
                 is PantryEvent.Removed -> {
                     val result = snackbarHostState.showSnackbar(
-                        message = context.getString(R.string.pantry_removed, event.name[language]),
-                        actionLabel = context.getString(R.string.action_undo),
+                        message = resources.getString(R.string.pantry_removed, event.name[language]),
+                        actionLabel = resources.getString(R.string.action_undo),
                         duration = SnackbarDuration.Long,
                     )
                     if (result == SnackbarResult.ActionPerformed) viewModel.onUndoDelete(event.item)

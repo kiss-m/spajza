@@ -29,6 +29,7 @@ class FirestorePantryRepository(private val db: FirebaseFirestore) : PantryRepos
                 FirestoreMappers.pantryItemFrom(doc.data.orEmpty(), (doc.get(FIELD_UPDATED_AT) as? Timestamp)?.toInstant())
             }
         }
+        .retryPermissionDenied()
         .catch { error ->
             Log.w("SpajzaFirestore", "observing pantry failed", error)
             emit(emptyList())

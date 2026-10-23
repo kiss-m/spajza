@@ -4,12 +4,15 @@ import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.test.TestScope
 import kotlinx.coroutines.test.UnconfinedTestDispatcher
+import kotlinx.coroutines.test.advanceUntilIdle
 import kotlinx.coroutines.test.runTest
 import sk.matej.spajza.domain.fakes.FakeAuthRepository
 import sk.matej.spajza.domain.fakes.FakeCatalogRepository
 import sk.matej.spajza.domain.fakes.FakeHouseholdRepository
 import sk.matej.spajza.domain.fakes.FakeUserRepository
+import sk.matej.spajza.domain.household.Household
 import sk.matej.spajza.domain.matching.MatcherFixture
+import sk.matej.spajza.domain.profile.UserProfile
 import sk.matej.spajza.domain.repository.AuthUser
 import sk.matej.spajza.domain.usecase.CreateHouseholdUseCase
 import kotlin.test.Test
@@ -56,6 +59,24 @@ class SessionManagerTest {
         auth.user.value = alex
         manager.state.first { it is SessionState.Onboarding }
         assertEquals(1, households.households.value.size)
+    }
+
+    @Test
+    fun `a deleted user document is not recreated`() = runTest {
+        // A user and household from an earlier app run, so this process never created them.
+        users.users.value = mapOf(alex.uid to UserProfile(uid = alex.uid, householdId = "h-old", onboardingDone = true))
+        households.households.value = mapOf("h-old" to Household("h-old", "Doma", listOf(alex.uid), staples = emptySet()))
+        val manager = manager()
+        auth.user.value = alex
+        manager.state.first { it is SessionState.Ready }
+
+        // Account deletion removes the user document before the account itself.
+        users.users.value = emptyMap()
+        manager.state.first { it == SessionState.Loading }
+        advanceUntilIdle()
+
+        assertEquals(setOf("h-old"), households.households.value.keys)
+        assertEquals(null, users.users.value[alex.uid])
     }
 
     @Test

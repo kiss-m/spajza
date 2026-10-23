@@ -170,7 +170,11 @@ private fun androidx.compose.foundation.lazy.LazyListScope.sections(state: CookU
     if (!state.filter.isEmpty && state.ready.isEmpty() && state.toBuy.isEmpty()) {
         item {
             Column(Modifier.padding(horizontal = 16.dp)) {
-                HintText(stringResource(R.string.cook_filtered_empty), Modifier)
+                Text(
+                    stringResource(R.string.cook_filtered_empty),
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                )
                 TextButton(onClick = actions.onClearFilters) { Text(stringResource(R.string.cook_clear_filters)) }
             }
         }
@@ -234,6 +238,11 @@ private fun EmptyPantryCard(onOpenPantry: () -> Unit) {
 }
 
 @Composable
-private fun HintText(text: String, modifier: Modifier = Modifier.padding(horizontal = 16.dp)) {
-    Text(text, style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.onSurfaceVariant, modifier = modifier)
+private fun HintText(text: String, modifier: Modifier = Modifier) {
+    Text(
+        text,
+        style = MaterialTheme.typography.bodyMedium,
+        color = MaterialTheme.colorScheme.onSurfaceVariant,
+        modifier = modifier.padding(horizontal = 16.dp),
+    )
 }

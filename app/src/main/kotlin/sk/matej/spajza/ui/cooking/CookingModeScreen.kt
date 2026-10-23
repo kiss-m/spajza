@@ -40,6 +40,7 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberUpdatedState
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
@@ -47,6 +48,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.hapticfeedback.HapticFeedbackType
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalHapticFeedback
+import androidx.compose.ui.platform.LocalResources
 import androidx.compose.ui.platform.LocalView
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
@@ -63,6 +65,7 @@ fun CookingModeRoute(onExit: () -> Unit, viewModel: CookingModeViewModel = hiltV
     val state by viewModel.state.collectAsStateWithLifecycle()
     val snackbarHostState = remember { SnackbarHostState() }
     val context = LocalContext.current
+    val resources by rememberUpdatedState(LocalResources.current)
     val haptics = LocalHapticFeedback.current
     KeepScreenOn()
     LaunchedEffect(viewModel) {
@@ -71,18 +74,18 @@ fun CookingModeRoute(onExit: () -> Unit, viewModel: CookingModeViewModel = hiltV
                 CookingEvent.TimerFinished -> {
                     haptics.performHapticFeedback(HapticFeedbackType.LongPress)
                     playAlert(context)
-                    snackbarHostState.showSnackbar(context.getString(R.string.cooking_timer_done))
+                    snackbarHostState.showSnackbar(resources.getString(R.string.cooking_timer_done))
                 }
                 is CookingEvent.Cooked -> {
                     val message = if (event.pantryChanges == 0) {
-                        context.getString(R.string.detail_cooked_logged)
+                        resources.getString(R.string.detail_cooked_logged)
                     } else {
-                        context.resources.getQuantityString(R.plurals.detail_cooked_deducted, event.pantryChanges, event.pantryChanges)
+                        resources.getQuantityString(R.plurals.detail_cooked_deducted, event.pantryChanges, event.pantryChanges)
                     }
-                    val result = snackbarHostState.showSnackbar(message, context.getString(R.string.action_undo), duration = SnackbarDuration.Long)
+                    val result = snackbarHostState.showSnackbar(message, resources.getString(R.string.action_undo), duration = SnackbarDuration.Long)
                     if (result == SnackbarResult.ActionPerformed) viewModel.onUndoCooked()
                 }
-                CookingEvent.CookUndone -> snackbarHostState.showSnackbar(context.getString(R.string.detail_cooked_undone))
+                CookingEvent.CookUndone -> snackbarHostState.showSnackbar(resources.getString(R.string.detail_cooked_undone))
             }
         }
     }
