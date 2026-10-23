@@ -1,5 +1,6 @@
 plugins {
-    alias(libs.plugins.android.application)
+    // On the root classpath (see the root build script), so applied without a version.
+    id("com.android.application")
     alias(libs.plugins.kotlin.compose)
     alias(libs.plugins.kotlin.serialization)
     alias(libs.plugins.ksp)
