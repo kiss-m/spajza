@@ -23,6 +23,15 @@ data object ShoppingDestination
 @Serializable
 data object ProfileDestination
 
+@Serializable
+data class RecipeDestination(val recipeId: String)
+
+@Serializable
+data class CookingDestination(val recipeId: String, val servings: Int)
+
+@Serializable
+data object AboutDestination
+
 /** The bottom navigation tabs, in order. */
 enum class TopLevelDestination(val destination: Any, @param:StringRes val label: Int, val icon: ImageVector) {
     COOK(CookDestination, R.string.nav_cook, SpajzaIcons.Restaurant),

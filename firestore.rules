@@ -47,11 +47,15 @@ service cloud.firestore {
         return isMember() && !changedKeys().hasAny(['memberUids', 'joinCode']);
       }
 
-      // A member removes only themselves.
+      // A member removes only themselves, optionally with their own entry in memberNames.
       function isLeave() {
+        let names = resource.data.get('memberNames', {});
+        let newNames = request.resource.data.get('memberNames', {});
         return isMember()
-          && changedKeys().hasOnly(['memberUids'])
-          && request.resource.data.memberUids == resource.data.memberUids.removeAll([uid()]);
+          && changedKeys().hasOnly(['memberUids', 'memberNames'])
+          && request.resource.data.memberUids == resource.data.memberUids.removeAll([uid()])
+          && names.diff(newNames).affectedKeys().hasOnly([uid()])
+          && !(uid() in newNames);
       }
 
       // A non-member adds only themselves, quoting an unexpired invite for this household.

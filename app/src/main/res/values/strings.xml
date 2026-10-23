@@ -2,6 +2,19 @@
 <resources>
     <string name="app_name" translatable="false">Špajza</string>
 
+    <!-- Common -->
+    <string name="action_cancel">Zrušiť</string>
+    <string name="action_save">Uložiť</string>
+    <string name="action_add">Pridať</string>
+    <string name="action_done">Hotovo</string>
+    <string name="action_skip">Preskočiť</string>
+    <string name="action_next">Ďalej</string>
+    <string name="action_back">Späť</string>
+    <string name="action_undo">Späť</string>
+    <string name="action_delete">Odstrániť</string>
+    <string name="action_clear">Vymazať</string>
+    <string name="default_household_name">Naša domácnosť</string>
+
     <!-- Bottom navigation -->
     <string name="nav_cook">Čo uvariť</string>
     <string name="nav_pantry">Špajza</string>
@@ -18,26 +31,337 @@
 
     <!-- Catalog -->
     <string name="catalog_loading">Pripravujem recepty…</string>
-    <plurals name="catalog_recipe_count">
-        <item quantity="one">%d recept v katalógu</item>
-        <item quantity="few">%d recepty v katalógu</item>
-        <item quantity="many">%d receptu v katalógu</item>
-        <item quantity="other">%d receptov v katalógu</item>
-    </plurals>
 
-    <!-- Placeholders until the screens arrive (Phase 1, M3) -->
-    <string name="cook_placeholder_title">Čo dnes uvaríš?</string>
-    <string name="cook_placeholder_body">Keď pridáš suroviny do špajze, ukážeme ti, čo uvaríš hneď a čo stačí dokúpiť.</string>
-    <string name="pantry_placeholder_title">Špajza je zatiaľ prázdna</string>
-    <string name="pantry_placeholder_body">Sem si budete s domácnosťou zapisovať, čo máte doma.</string>
-    <string name="shopping_placeholder_title">Nákupný zoznam je prázdny</string>
-    <string name="shopping_placeholder_body">Chýbajúce suroviny z receptov sa objavia tu.</string>
+    <!-- Units -->
+    <string name="unit_g">g</string>
+    <string name="unit_kg">kg</string>
+    <string name="unit_ml">ml</string>
+    <string name="unit_l">l</string>
+    <string name="unit_pcs">ks</string>
+    <string name="unit_tbsp">PL</string>
+    <string name="unit_tsp">ČL</string>
+    <plurals name="unit_cup">
+        <item quantity="one">hrnček</item>
+        <item quantity="few">hrnčeky</item>
+        <item quantity="many">hrnčeka</item>
+        <item quantity="other">hrnčekov</item>
+    </plurals>
+    <plurals name="unit_pinch">
+        <item quantity="one">štipka</item>
+        <item quantity="few">štipky</item>
+        <item quantity="many">štipky</item>
+        <item quantity="other">štipiek</item>
+    </plurals>
+    <string name="unit_to_taste">podľa chuti</string>
+
+    <!-- Time and nutrition -->
+    <string name="time_minutes">%1$d min</string>
+    <string name="time_hours">%1$d h</string>
+    <string name="time_hours_minutes">%1$d h %2$d min</string>
+    <string name="kcal_value">%1$d kcal</string>
+    <string name="macros_short">B %1$d g · S %2$d g · T %3$d g</string>
+    <string name="macro_protein">Bielkoviny</string>
+    <string name="macro_carbs">Sacharidy</string>
+    <string name="macro_fat">Tuky</string>
+    <string name="macro_fiber">Vláknina</string>
+    <string name="macro_grams">%1$d g</string>
+
+    <!-- Price tiers -->
+    <string name="price_cheap">lacné</string>
+    <string name="price_mid">bežná cena</string>
+    <string name="price_expensive">drahšie</string>
+
+    <!-- Cuisines -->
+    <string name="cuisine_slovak_czech">Slovenská a česká</string>
+    <string name="cuisine_central_european">Stredoeurópska</string>
+    <string name="cuisine_italian">Talianska</string>
+    <string name="cuisine_french">Francúzska</string>
+    <string name="cuisine_spanish">Španielska</string>
+    <string name="cuisine_greek_mediterranean">Grécka a stredomorská</string>
+    <string name="cuisine_middle_eastern">Blízkovýchodná</string>
+    <string name="cuisine_north_african">Severoafrická</string>
+    <string name="cuisine_indian">Indická</string>
+    <string name="cuisine_chinese">Čínska</string>
+    <string name="cuisine_japanese">Japonská</string>
+    <string name="cuisine_korean">Kórejská</string>
+    <string name="cuisine_thai">Thajská</string>
+    <string name="cuisine_vietnamese">Vietnamská</string>
+    <string name="cuisine_mexican">Mexická</string>
+    <string name="cuisine_latin_american">Latinskoamerická</string>
+    <string name="cuisine_american">Americká</string>
+    <string name="cuisine_british">Britská</string>
+    <string name="cuisine_international">Medzinárodná</string>
+
+    <!-- Recipe types (chips) -->
+    <string name="type_quick">Rýchle</string>
+    <string name="type_student">Študentské</string>
+    <string name="type_cheap">Lacné</string>
+    <string name="type_vegan">Vegánske</string>
+    <string name="type_vegetarian">Vegetariánske</string>
+    <string name="type_high_protein">High-protein</string>
+    <string name="type_bulk">Objemovka</string>
+    <string name="type_light">Diétne</string>
+    <string name="type_meal_prep">Meal prep</string>
+    <string name="type_one_pot">Jeden hrniec</string>
+
+    <!-- Meal types -->
+    <string name="meal_all">Všetko</string>
+    <string name="meal_breakfast">Raňajky</string>
+    <string name="meal_lunch">Obed</string>
+    <string name="meal_dinner">Večera</string>
+    <string name="meal_snack">Desiata</string>
+    <string name="meal_dessert">Dezert</string>
+
+    <!-- Ingredient categories -->
+    <string name="category_vegetables">Zelenina</string>
+    <string name="category_fruit">Ovocie</string>
+    <string name="category_meat">Mäso</string>
+    <string name="category_fish">Ryby a morské plody</string>
+    <string name="category_dairy">Mliečne výrobky</string>
+    <string name="category_eggs">Vajcia</string>
+    <string name="category_grains">Cestoviny, ryža, obilniny</string>
+    <string name="category_bakery">Pečivo</string>
+    <string name="category_legumes">Strukoviny</string>
+    <string name="category_nuts_seeds">Orechy a semienka</string>
+    <string name="category_oils_fats">Oleje a tuky</string>
+    <string name="category_spices">Koreniny</string>
+    <string name="category_sauces">Omáčky a dochucovadlá</string>
+    <string name="category_canned">Konzervy</string>
+    <string name="category_baking">Pečenie</string>
+    <string name="category_frozen">Mrazené</string>
+    <string name="category_other">Ostatné</string>
+
+    <!-- Equipment -->
+    <string name="equipment_stove">Sporák</string>
+    <string name="equipment_oven">Rúra</string>
+    <string name="equipment_microwave">Mikrovlnka</string>
+    <string name="equipment_blender">Mixér</string>
+    <string name="equipment_food_processor">Kuchynský robot</string>
+    <string name="equipment_hand_mixer">Ručný šľahač</string>
+    <string name="equipment_air_fryer">Teplovzdušná fritéza</string>
+    <string name="equipment_slow_cooker">Pomalý hrniec</string>
+    <string name="equipment_pressure_cooker">Tlakový hrniec</string>
+    <string name="equipment_toaster">Hriankovač</string>
+
+    <!-- Body profile -->
+    <string name="body_sex">Pohlavie (pre výpočet energie)</string>
+    <string name="sex_female">Žena</string>
+    <string name="sex_male">Muž</string>
+    <string name="sex_unspecified">Neuvádzam</string>
+    <string name="body_birth_year">Rok narodenia</string>
+    <string name="body_height">Výška (cm)</string>
+    <string name="body_weight">Hmotnosť (kg)</string>
+    <string name="body_activity">Pohyb počas týždňa</string>
+    <string name="activity_sedentary">Väčšinou sedím</string>
+    <string name="activity_light">Ľahký pohyb 1–3× týždenne</string>
+    <string name="activity_moderate">Pohyb 3–5× týždenne</string>
+    <string name="activity_active">Pohyb 6–7× týždenne</string>
+    <string name="activity_very_active">Fyzická práca alebo denný tréning</string>
+    <string name="body_goal">Cieľ</string>
+    <string name="goal_lose">Schudnúť</string>
+    <string name="goal_maintain">Udržať váhu</string>
+    <string name="goal_gain">Pribrať alebo nabrať svaly</string>
+
+    <!-- Daily targets -->
+    <string name="targets_title">Denný cieľ</string>
+    <string name="targets_macros">Bielkoviny %1$d g · Tuky %2$d g · Sacharidy %3$d g</string>
+    <string name="targets_incomplete">Doplň údaje vyššie a vypočítame ti denný cieľ.</string>
+    <string name="targets_computed">Vypočítané podľa tvojich údajov</string>
+    <string name="targets_overridden">Tvoj vlastný cieľ</string>
+    <string name="targets_override_label">Vlastný cieľ (kcal), nepovinné</string>
+    <string name="targets_floored">Cieľ neklesne pod tvoju bazálnu potrebu (%1$d kcal).</string>
+    <string name="targets_override_below_bmr">Tento cieľ je nižší ako tvoja bazálna potreba (%1$d kcal). Telo potrebuje aspoň toľko aj v pokoji, preto odporúčame vyšší cieľ.</string>
+
+    <!-- Taste and cooking preferences -->
+    <string name="taste_liked_cuisines">Obľúbené kuchyne</string>
+    <string name="taste_liked_ingredients">Obľúbené suroviny</string>
+    <string name="taste_disliked_ingredients">Suroviny, ktoré nejem</string>
+    <string name="taste_ingredient_search">Hľadaj surovinu</string>
+    <string name="taste_spicy">Pálivosť</string>
+    <string name="spicy_none">Bez pálivého</string>
+    <string name="spicy_mild">Jemne pálivé</string>
+    <string name="spicy_hot">Čím pálivejšie, tým lepšie</string>
+    <string name="taste_skill">Skúsenosti s varením</string>
+    <string name="skill_beginner">Začínam s varením</string>
+    <string name="skill_intermediate">Bežné recepty zvládam</string>
+    <string name="skill_advanced">Trúfnem si na čokoľvek</string>
+    <string name="taste_time_weekday">Čas na varenie cez týždeň</string>
+    <string name="taste_time_weekend">Čas na varenie cez víkend</string>
+    <string name="taste_budget">Rozpočet</string>
+    <string name="budget_cheap">Šetrím</string>
+    <string name="budget_mid">Bežný</string>
+    <string name="budget_expensive">Nehľadím na cenu</string>
+    <string name="taste_servings">Bežný počet porcií</string>
+    <string name="taste_meal_prep">Varím aj do zásoby (meal prep)</string>
+
+    <!-- Onboarding -->
+    <string name="onboarding_welcome_named">Vitaj, %1$s!</string>
+    <string name="onboarding_welcome">Vitaj!</string>
+    <string name="onboarding_welcome_body">Domácnosť je pripravená. Pár otázok a recepty ti prispôsobíme. Každý krok môžeš preskočiť a doplniť neskôr v profile.</string>
+    <string name="onboarding_step">Krok %1$d z %2$d</string>
+    <string name="onboarding_body_title">O tebe</string>
+    <string name="onboarding_body_hint">Z týchto údajov vypočítame denný cieľ energie a makroživín. Ostávajú len v tvojom účte.</string>
+    <string name="onboarding_taste_title">Chute a varenie</string>
+    <string name="onboarding_taste_hint">Podľa toho zoradíme recepty. Čo nejete, skryjeme.</string>
+    <string name="onboarding_equipment_title">Kuchynské vybavenie</string>
+    <string name="onboarding_equipment_hint">Recepty, na ktoré nemáte vybavenie, skryjeme.</string>
+    <string name="onboarding_staples_title">Základné zásoby</string>
+    <string name="onboarding_staples_hint">Tieto veci máte doma stále, preto ich netreba pridávať do špajze. Zoznam môžeš upraviť.</string>
+    <string name="onboarding_finish">Začať variť</string>
+
+    <!-- What to cook -->
+    <string name="cook_search_hint">Hľadaj recept alebo surovinu</string>
+    <string name="cook_section_ready">Môžeš uvariť hneď</string>
+    <string name="cook_section_to_buy">Treba dokúpiť</string>
+    <string name="cook_ready_empty">Zatiaľ nič. Pridaj do špajze ešte pár surovín.</string>
+    <string name="cook_to_buy_empty">Nič, čo by stačilo dokúpiť.</string>
+    <string name="cook_missing">Chýba: %1$s</string>
+    <string name="cook_purchase_title">Dokúp a odomkni</string>
+    <string name="cook_purchase_unlocks">Odomknuté recepty: %1$d</string>
+    <string name="cook_purchase_add">Pridať do nákupu</string>
+    <string name="cook_added_to_shopping">Pridané do nákupu</string>
+    <string name="cook_empty_title">Čo dnes uvaríš?</string>
+    <string name="cook_empty_body">Pridaj do špajze, čo máš doma, a ukážeme ti, čo uvaríš hneď a čo stačí dokúpiť.</string>
+    <string name="cook_open_pantry">Otvoriť špajzu</string>
+    <string name="cook_no_results">Nič sme nenašli. Skús iné slovo.</string>
+    <string name="cook_filtered_empty">Týmto filtrom nič nezodpovedá.</string>
+    <string name="cook_clear_filters">Zrušiť filtre</string>
+    <string name="cook_search_results">Výsledky hľadania</string>
+    <string name="cook_status_ready">Môžeš variť</string>
+    <plurals name="cook_status_missing">
+        <item quantity="one">Chýba %1$d surovina</item>
+        <item quantity="few">Chýbajú %1$d suroviny</item>
+        <item quantity="many">Chýba %1$d suroviny</item>
+        <item quantity="other">Chýba %1$d surovín</item>
+    </plurals>
+    <string name="cook_favorite">Obľúbený recept</string>
+
+    <!-- Recipe detail -->
+    <string name="detail_servings">Porcie</string>
+    <string name="detail_servings_decrease">Menej porcií</string>
+    <string name="detail_servings_increase">Viac porcií</string>
+    <string name="detail_per_serving">Na porciu</string>
+    <string name="detail_ingredients">Suroviny</string>
+    <string name="detail_steps">Postup</string>
+    <string name="detail_status_have">Máš</string>
+    <string name="detail_status_staple">Zásoba</string>
+    <string name="detail_status_partial">Máš málo</string>
+    <string name="detail_status_missing">Chýba</string>
+    <string name="detail_status_substitute">Nahraď: %1$s</string>
+    <string name="detail_or_use">Dá sa nahradiť: %1$s</string>
+    <string name="detail_optional">nepovinné</string>
+    <string name="detail_add_missing">Pridať chýbajúce do nákupu</string>
+    <string name="detail_start_cooking">Začať variť</string>
+    <string name="detail_cooked">Uvarené</string>
+    <plurals name="detail_cooked_deducted">
+        <item quantity="one">Uvarené. Zo špajze ubudla %1$d položka.</item>
+        <item quantity="few">Uvarené. Zo špajze ubudli %1$d položky.</item>
+        <item quantity="many">Uvarené. Zo špajze ubudlo %1$d položky.</item>
+        <item quantity="other">Uvarené. Zo špajze ubudlo %1$d položiek.</item>
+    </plurals>
+    <string name="detail_cooked_logged">Uvarené. Zapísané do histórie.</string>
+    <string name="detail_cooked_undone">Vrátené späť</string>
+    <string name="detail_like">Chutí mi</string>
+    <string name="detail_dislike">Nechutí mi</string>
+    <string name="detail_favorite">Obľúbené</string>
+    <string name="detail_goes_well">Hodí sa sem</string>
+    <string name="detail_addon_have">Máš aj %1$s — hodí sa sem.</string>
+    <string name="detail_pairs_with">Skús k tomu: %1$s</string>
+    <string name="detail_time">%1$s · aktívne %2$s</string>
+    <string name="difficulty_1">Jednoduché</string>
+    <string name="difficulty_2">Stredne náročné</string>
+    <string name="difficulty_3">Náročnejšie</string>
+    <string name="detail_not_found">Recept sa nenašiel.</string>
+
+    <!-- Cooking mode -->
+    <string name="cooking_step">Krok %1$d z %2$d</string>
+    <string name="cooking_next">Ďalší krok</string>
+    <string name="cooking_previous">Predchádzajúci krok</string>
+    <string name="cooking_timer_start">Časovač %1$s</string>
+    <string name="cooking_timer_pause">Pozastaviť</string>
+    <string name="cooking_timer_resume">Pokračovať</string>
+    <string name="cooking_timer_reset">Znova</string>
+    <string name="cooking_timer_done">Čas vypršal!</string>
+    <string name="cooking_exit">Ukončiť varenie</string>
+    <string name="cooking_ingredients">Suroviny</string>
+
+    <!-- Pantry -->
+    <string name="pantry_search_hint">Pridaj surovinu…</string>
+    <string name="pantry_quick_add">Rýchlo pridať</string>
+    <string name="pantry_empty_title">Špajza je zatiaľ prázdna</string>
+    <string name="pantry_empty_body">Pridaj, čo máš doma. Množstvo a dátum spotreby sú nepovinné.</string>
+    <string name="pantry_staples_note">Základné zásoby ako soľ či olej netreba pridávať, počítame s nimi vždy.</string>
+    <string name="pantry_added">Pridané: %1$s</string>
+    <string name="pantry_removed">Odstránené: %1$s</string>
+    <string name="pantry_in_pantry">v špajzi</string>
+    <string name="pantry_expired">Po dátume spotreby</string>
+    <string name="pantry_expires_today">Spotrebovať dnes</string>
+    <plurals name="pantry_expires_in">
+        <item quantity="one">Ešte %1$d deň</item>
+        <item quantity="few">Ešte %1$d dni</item>
+        <item quantity="many">Ešte %1$d dňa</item>
+        <item quantity="other">Ešte %1$d dní</item>
+    </plurals>
+    <string name="pantry_editor_add_title">Pridať do špajze</string>
+    <string name="pantry_editor_edit_title">Upraviť</string>
+    <string name="pantry_editor_quantity">Množstvo (%1$s), nepovinné</string>
+    <string name="pantry_editor_expiry">Spotrebovať do</string>
+    <string name="pantry_editor_no_expiry">Bez dátumu</string>
+    <string name="pantry_editor_pick_date">Vybrať dátum</string>
+    <string name="pantry_editor_clear_date">Bez dátumu</string>
+    <string name="pantry_delete">Odstrániť zo špajze</string>
+
+    <!-- Shopping list -->
+    <string name="shopping_search_hint">Pridaj do nákupu…</string>
+    <string name="shopping_add_text">Pridať „%1$s“</string>
+    <string name="shopping_empty_title">Nákupný zoznam je prázdny</string>
+    <string name="shopping_empty_body">Chýbajúce suroviny z receptov sa objavia tu. Zoznam je spoločný pre celú domácnosť.</string>
+    <string name="shopping_bought_to_pantry">Kúpené → do špajze</string>
+    <string name="shopping_bought_title">Presunúť do špajze</string>
+    <string name="shopping_bought_body">Množstvo a dátum spotreby sú nepovinné.</string>
+    <string name="shopping_bought_confirm">Presunúť</string>
+    <plurals name="shopping_moved">
+        <item quantity="one">Do špajze pribudla %1$d položka</item>
+        <item quantity="few">Do špajze pribudli %1$d položky</item>
+        <item quantity="many">Do špajze pribudlo %1$d položky</item>
+        <item quantity="other">Do špajze pribudlo %1$d položiek</item>
+    </plurals>
+    <string name="shopping_share">Zdieľať zoznam</string>
+    <string name="shopping_share_title">Nákup</string>
+    <string name="shopping_for_recipes">Na: %1$s</string>
+    <string name="shopping_free_text">Ďalšie</string>
+    <string name="shopping_remove">Odstrániť z nákupu</string>
 
     <!-- Profile -->
+    <string name="profile_signed_in_as">Prihlásený účet: %1$s</string>
+    <string name="profile_section_body">O mne</string>
+    <string name="profile_section_taste">Chute a varenie</string>
+    <string name="profile_section_equipment">Kuchynské vybavenie</string>
+    <string name="profile_section_staples">Základné zásoby</string>
+    <string name="profile_section_household">Domácnosť</string>
+    <string name="profile_household_members">Členovia: %1$s</string>
+    <string name="profile_household_invite_later">Pozvánky pre spolubývajúcich pribudnú v ďalšej verzii.</string>
+    <string name="profile_section_app">Aplikácia</string>
     <string name="profile_language">Jazyk</string>
     <string name="language_system">Podľa systému</string>
     <string name="language_sk" translatable="false">Slovenčina</string>
     <string name="language_en" translatable="false">English</string>
-    <string name="profile_signed_in_as">Prihlásený účet: %1$s</string>
+    <string name="profile_about">O aplikácii</string>
     <string name="sign_out">Odhlásiť sa</string>
+    <string name="profile_delete_account">Zmazať účet a dáta</string>
+    <string name="profile_delete_title">Zmazať účet?</string>
+    <string name="profile_delete_body">Natrvalo zmažeme tvoj profil, hodnotenia a históriu varenia. Ak v domácnosti nie je nikto ďalší, zmažeme aj špajzu a nákupný zoznam. Na potvrdenie sa ešte raz prihlásiš cez Google. Toto sa nedá vrátiť.</string>
+    <string name="profile_delete_confirm">Zmazať natrvalo</string>
+    <string name="profile_delete_failed">Zmazanie sa nepodarilo. Skontroluj pripojenie a skús to znova.</string>
+    <string name="profile_deleting">Mažem účet…</string>
+    <string name="staples_add_hint">Pridaj základnú zásobu</string>
+
+    <!-- About -->
+    <string name="about_body">Špajza navrhuje recepty z toho, čo máte doma. Všetky recepty sú pôvodné, napísané pre túto aplikáciu, a obrázky receptov sú generované.</string>
+    <string name="about_nutrition_title">Výživové hodnoty</string>
+    <string name="about_nutrition_body">Výživové hodnoty počíta aplikácia z hmotnosti surovín a hodnôt na 100 g. Zdroj hodnôt: USDA FoodData Central (U.S. Department of Agriculture, Agricultural Research Service), verejná doména. Pri niektorých miestnych potravinách používame typické hodnoty z obalov. Hodnoty sú orientačné.</string>
+    <string name="about_off_title">Open Food Facts</string>
+    <string name="about_off_body">Údaje o potravinách z Open Food Facts sú dostupné pod licenciou Open Database License (ODbL).</string>
+    <string name="about_icons">Ikony: Material Symbols (Apache 2.0).</string>
+    <string name="about_version">Verzia %1$s</string>
 </resources>

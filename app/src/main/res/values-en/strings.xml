@@ -1,10 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Common -->
+    <string name="action_cancel">Cancel</string>
+    <string name="action_save">Save</string>
+    <string name="action_add">Add</string>
+    <string name="action_done">Done</string>
+    <string name="action_skip">Skip</string>
+    <string name="action_next">Next</string>
+    <string name="action_back">Back</string>
+    <string name="action_undo">Undo</string>
+    <string name="action_delete">Delete</string>
+    <string name="action_clear">Clear</string>
+    <string name="default_household_name">Our household</string>
+
+    <!-- Bottom navigation -->
     <string name="nav_cook">What to cook</string>
     <string name="nav_pantry">Pantry</string>
     <string name="nav_shopping">Shopping</string>
     <string name="nav_profile">Profile</string>
 
+    <!-- Sign-in -->
     <string name="signin_title">Welcome to Špajza</string>
     <string name="signin_subtitle">Sign in to see what you can cook from what you have at home.</string>
     <string name="signin_button">Sign in with Google</string>
@@ -12,21 +27,325 @@
     <string name="signin_no_account">There is no Google account on this device. Add one in the phone settings.</string>
     <string name="signin_offline_hint">You need to be online for the first sign-in; after that everything works offline too.</string>
 
+    <!-- Catalog -->
     <string name="catalog_loading">Preparing recipes…</string>
-    <plurals name="catalog_recipe_count">
-        <item quantity="one">%d recipe in the catalog</item>
-        <item quantity="other">%d recipes in the catalog</item>
+
+    <!-- Units -->
+    <string name="unit_g">g</string>
+    <string name="unit_kg">kg</string>
+    <string name="unit_ml">ml</string>
+    <string name="unit_l">l</string>
+    <string name="unit_pcs">pcs</string>
+    <string name="unit_tbsp">tbsp</string>
+    <string name="unit_tsp">tsp</string>
+    <plurals name="unit_cup">
+        <item quantity="one">cup</item>
+        <item quantity="other">cups</item>
     </plurals>
+    <plurals name="unit_pinch">
+        <item quantity="one">pinch</item>
+        <item quantity="other">pinches</item>
+    </plurals>
+    <string name="unit_to_taste">to taste</string>
 
-    <string name="cook_placeholder_title">What are you cooking today?</string>
-    <string name="cook_placeholder_body">Once you add what you have to the pantry, you will see what you can cook right away and what needs just a few extra items.</string>
-    <string name="pantry_placeholder_title">The pantry is empty for now</string>
-    <string name="pantry_placeholder_body">This is where your household keeps track of what you have at home.</string>
-    <string name="shopping_placeholder_title">The shopping list is empty</string>
-    <string name="shopping_placeholder_body">Missing ingredients from recipes will show up here.</string>
+    <!-- Time and nutrition -->
+    <string name="time_minutes">%1$d min</string>
+    <string name="time_hours">%1$d h</string>
+    <string name="time_hours_minutes">%1$d h %2$d min</string>
+    <string name="kcal_value">%1$d kcal</string>
+    <string name="macros_short">P %1$d g · C %2$d g · F %3$d g</string>
+    <string name="macro_protein">Protein</string>
+    <string name="macro_carbs">Carbs</string>
+    <string name="macro_fat">Fat</string>
+    <string name="macro_fiber">Fiber</string>
+    <string name="macro_grams">%1$d g</string>
 
+    <!-- Price tiers -->
+    <string name="price_cheap">cheap</string>
+    <string name="price_mid">regular price</string>
+    <string name="price_expensive">pricier</string>
+
+    <!-- Cuisines -->
+    <string name="cuisine_slovak_czech">Slovak &amp; Czech</string>
+    <string name="cuisine_central_european">Central European</string>
+    <string name="cuisine_italian">Italian</string>
+    <string name="cuisine_french">French</string>
+    <string name="cuisine_spanish">Spanish</string>
+    <string name="cuisine_greek_mediterranean">Greek &amp; Mediterranean</string>
+    <string name="cuisine_middle_eastern">Middle Eastern</string>
+    <string name="cuisine_north_african">North African</string>
+    <string name="cuisine_indian">Indian</string>
+    <string name="cuisine_chinese">Chinese</string>
+    <string name="cuisine_japanese">Japanese</string>
+    <string name="cuisine_korean">Korean</string>
+    <string name="cuisine_thai">Thai</string>
+    <string name="cuisine_vietnamese">Vietnamese</string>
+    <string name="cuisine_mexican">Mexican</string>
+    <string name="cuisine_latin_american">Latin American</string>
+    <string name="cuisine_american">American</string>
+    <string name="cuisine_british">British</string>
+    <string name="cuisine_international">International</string>
+
+    <!-- Recipe types (chips) -->
+    <string name="type_quick">Quick</string>
+    <string name="type_student">Student</string>
+    <string name="type_cheap">Cheap</string>
+    <string name="type_vegan">Vegan</string>
+    <string name="type_vegetarian">Vegetarian</string>
+    <string name="type_high_protein">High-protein</string>
+    <string name="type_bulk">Bulking</string>
+    <string name="type_light">Light</string>
+    <string name="type_meal_prep">Meal prep</string>
+    <string name="type_one_pot">One pot</string>
+
+    <!-- Meal types -->
+    <string name="meal_all">All</string>
+    <string name="meal_breakfast">Breakfast</string>
+    <string name="meal_lunch">Lunch</string>
+    <string name="meal_dinner">Dinner</string>
+    <string name="meal_snack">Snack</string>
+    <string name="meal_dessert">Dessert</string>
+
+    <!-- Ingredient categories -->
+    <string name="category_vegetables">Vegetables</string>
+    <string name="category_fruit">Fruit</string>
+    <string name="category_meat">Meat</string>
+    <string name="category_fish">Fish &amp; seafood</string>
+    <string name="category_dairy">Dairy</string>
+    <string name="category_eggs">Eggs</string>
+    <string name="category_grains">Pasta, rice &amp; grains</string>
+    <string name="category_bakery">Bakery</string>
+    <string name="category_legumes">Legumes</string>
+    <string name="category_nuts_seeds">Nuts &amp; seeds</string>
+    <string name="category_oils_fats">Oils &amp; fats</string>
+    <string name="category_spices">Spices</string>
+    <string name="category_sauces">Sauces &amp; condiments</string>
+    <string name="category_canned">Canned</string>
+    <string name="category_baking">Baking</string>
+    <string name="category_frozen">Frozen</string>
+    <string name="category_other">Other</string>
+
+    <!-- Equipment -->
+    <string name="equipment_stove">Stove</string>
+    <string name="equipment_oven">Oven</string>
+    <string name="equipment_microwave">Microwave</string>
+    <string name="equipment_blender">Blender</string>
+    <string name="equipment_food_processor">Food processor</string>
+    <string name="equipment_hand_mixer">Hand mixer</string>
+    <string name="equipment_air_fryer">Air fryer</string>
+    <string name="equipment_slow_cooker">Slow cooker</string>
+    <string name="equipment_pressure_cooker">Pressure cooker</string>
+    <string name="equipment_toaster">Toaster</string>
+
+    <!-- Body profile -->
+    <string name="body_sex">Sex (for the energy formula)</string>
+    <string name="sex_female">Female</string>
+    <string name="sex_male">Male</string>
+    <string name="sex_unspecified">Prefer not to say</string>
+    <string name="body_birth_year">Year of birth</string>
+    <string name="body_height">Height (cm)</string>
+    <string name="body_weight">Weight (kg)</string>
+    <string name="body_activity">Activity during the week</string>
+    <string name="activity_sedentary">Mostly sitting</string>
+    <string name="activity_light">Light exercise 1–3× a week</string>
+    <string name="activity_moderate">Exercise 3–5× a week</string>
+    <string name="activity_active">Exercise 6–7× a week</string>
+    <string name="activity_very_active">Physical job or daily training</string>
+    <string name="body_goal">Goal</string>
+    <string name="goal_lose">Lose weight</string>
+    <string name="goal_maintain">Maintain weight</string>
+    <string name="goal_gain">Gain weight or build muscle</string>
+
+    <!-- Daily targets -->
+    <string name="targets_title">Daily target</string>
+    <string name="targets_macros">Protein %1$d g · Fat %2$d g · Carbs %3$d g</string>
+    <string name="targets_incomplete">Fill in the details above and we will work out your daily target.</string>
+    <string name="targets_computed">Calculated from your details</string>
+    <string name="targets_overridden">Your own target</string>
+    <string name="targets_override_label">Your own target (kcal), optional</string>
+    <string name="targets_floored">The target never goes below your basal needs (%1$d kcal).</string>
+    <string name="targets_override_below_bmr">This target is below your basal needs (%1$d kcal). Your body needs at least that much even at rest, so we suggest a higher target.</string>
+
+    <!-- Taste and cooking preferences -->
+    <string name="taste_liked_cuisines">Favorite cuisines</string>
+    <string name="taste_liked_ingredients">Favorite ingredients</string>
+    <string name="taste_disliked_ingredients">Ingredients you avoid</string>
+    <string name="taste_ingredient_search">Search ingredients</string>
+    <string name="taste_spicy">Spiciness</string>
+    <string name="spicy_none">Not spicy</string>
+    <string name="spicy_mild">Mildly spicy</string>
+    <string name="spicy_hot">The hotter the better</string>
+    <string name="taste_skill">Cooking experience</string>
+    <string name="skill_beginner">Just starting out</string>
+    <string name="skill_intermediate">Comfortable with everyday recipes</string>
+    <string name="skill_advanced">Up for anything</string>
+    <string name="taste_time_weekday">Cooking time on weekdays</string>
+    <string name="taste_time_weekend">Cooking time on weekends</string>
+    <string name="taste_budget">Budget</string>
+    <string name="budget_cheap">Saving</string>
+    <string name="budget_mid">Normal</string>
+    <string name="budget_expensive">Flexible</string>
+    <string name="taste_servings">Usual number of servings</string>
+    <string name="taste_meal_prep">I also cook ahead (meal prep)</string>
+
+    <!-- Onboarding -->
+    <string name="onboarding_welcome_named">Welcome, %1$s!</string>
+    <string name="onboarding_welcome">Welcome!</string>
+    <string name="onboarding_welcome_body">Your household is ready. A few questions and we will tailor the recipes to you. You can skip any step and fill it in later in your profile.</string>
+    <string name="onboarding_step">Step %1$d of %2$d</string>
+    <string name="onboarding_body_title">About you</string>
+    <string name="onboarding_body_hint">We use these details to work out your daily energy and macro target. They stay in your account only.</string>
+    <string name="onboarding_taste_title">Taste and cooking</string>
+    <string name="onboarding_taste_hint">This shapes the order of recipes. What you avoid stays hidden.</string>
+    <string name="onboarding_equipment_title">Kitchen equipment</string>
+    <string name="onboarding_equipment_hint">Recipes that need equipment you don\'t have stay hidden.</string>
+    <string name="onboarding_staples_title">Staples</string>
+    <string name="onboarding_staples_hint">You always have these at home, so there is no need to add them to the pantry. Edit the list as you like.</string>
+    <string name="onboarding_finish">Start cooking</string>
+
+    <!-- What to cook -->
+    <string name="cook_search_hint">Search recipes or ingredients</string>
+    <string name="cook_section_ready">Ready to cook</string>
+    <string name="cook_section_to_buy">A few items to buy</string>
+    <string name="cook_ready_empty">Nothing yet. Add a few more ingredients to the pantry.</string>
+    <string name="cook_to_buy_empty">Nothing that a few items would unlock.</string>
+    <string name="cook_missing">Missing: %1$s</string>
+    <string name="cook_purchase_title">Buy and unlock</string>
+    <string name="cook_purchase_unlocks">Recipes unlocked: %1$d</string>
+    <string name="cook_purchase_add">Add to shopping list</string>
+    <string name="cook_added_to_shopping">Added to the shopping list</string>
+    <string name="cook_empty_title">What are you cooking today?</string>
+    <string name="cook_empty_body">Add what you have at home to the pantry and we will show what you can cook now and what needs just a few items.</string>
+    <string name="cook_open_pantry">Open the pantry</string>
+    <string name="cook_no_results">Nothing found. Try another word.</string>
+    <string name="cook_filtered_empty">Nothing matches these filters.</string>
+    <string name="cook_clear_filters">Clear filters</string>
+    <string name="cook_search_results">Search results</string>
+    <string name="cook_status_ready">Ready to cook</string>
+    <plurals name="cook_status_missing">
+        <item quantity="one">%1$d ingredient missing</item>
+        <item quantity="other">%1$d ingredients missing</item>
+    </plurals>
+    <string name="cook_favorite">Favorite recipe</string>
+
+    <!-- Recipe detail -->
+    <string name="detail_servings">Servings</string>
+    <string name="detail_servings_decrease">Fewer servings</string>
+    <string name="detail_servings_increase">More servings</string>
+    <string name="detail_per_serving">Per serving</string>
+    <string name="detail_ingredients">Ingredients</string>
+    <string name="detail_steps">Method</string>
+    <string name="detail_status_have">In pantry</string>
+    <string name="detail_status_staple">Staple</string>
+    <string name="detail_status_partial">Not enough</string>
+    <string name="detail_status_missing">Missing</string>
+    <string name="detail_status_substitute">Use %1$s</string>
+    <string name="detail_or_use">Can be replaced with %1$s</string>
+    <string name="detail_optional">optional</string>
+    <string name="detail_add_missing">Add missing to shopping list</string>
+    <string name="detail_start_cooking">Start cooking</string>
+    <string name="detail_cooked">Cooked</string>
+    <plurals name="detail_cooked_deducted">
+        <item quantity="one">Cooked. %1$d pantry item updated.</item>
+        <item quantity="other">Cooked. %1$d pantry items updated.</item>
+    </plurals>
+    <string name="detail_cooked_logged">Cooked. Saved to your history.</string>
+    <string name="detail_cooked_undone">Undone</string>
+    <string name="detail_like">I like it</string>
+    <string name="detail_dislike">Not for me</string>
+    <string name="detail_favorite">Favorite</string>
+    <string name="detail_goes_well">Goes well here</string>
+    <string name="detail_addon_have">You also have %1$s; it goes well here.</string>
+    <string name="detail_pairs_with">Try it with: %1$s</string>
+    <string name="detail_time">%1$s · active %2$s</string>
+    <string name="difficulty_1">Easy</string>
+    <string name="difficulty_2">Medium</string>
+    <string name="difficulty_3">More demanding</string>
+    <string name="detail_not_found">Recipe not found.</string>
+
+    <!-- Cooking mode -->
+    <string name="cooking_step">Step %1$d of %2$d</string>
+    <string name="cooking_next">Next step</string>
+    <string name="cooking_previous">Previous step</string>
+    <string name="cooking_timer_start">Timer %1$s</string>
+    <string name="cooking_timer_pause">Pause</string>
+    <string name="cooking_timer_resume">Resume</string>
+    <string name="cooking_timer_reset">Reset</string>
+    <string name="cooking_timer_done">Time\'s up!</string>
+    <string name="cooking_exit">Exit cooking mode</string>
+    <string name="cooking_ingredients">Ingredients</string>
+
+    <!-- Pantry -->
+    <string name="pantry_search_hint">Add an ingredient…</string>
+    <string name="pantry_quick_add">Quick add</string>
+    <string name="pantry_empty_title">The pantry is empty</string>
+    <string name="pantry_empty_body">Add what you have at home. Amounts and use-by dates are optional.</string>
+    <string name="pantry_staples_note">Staples such as salt or oil don\'t need adding; we always count them in.</string>
+    <string name="pantry_added">Added: %1$s</string>
+    <string name="pantry_removed">Removed: %1$s</string>
+    <string name="pantry_in_pantry">in pantry</string>
+    <string name="pantry_expired">Past its date</string>
+    <string name="pantry_expires_today">Use today</string>
+    <plurals name="pantry_expires_in">
+        <item quantity="one">%1$d day left</item>
+        <item quantity="other">%1$d days left</item>
+    </plurals>
+    <string name="pantry_editor_add_title">Add to pantry</string>
+    <string name="pantry_editor_edit_title">Edit</string>
+    <string name="pantry_editor_quantity">Amount (%1$s), optional</string>
+    <string name="pantry_editor_expiry">Use by</string>
+    <string name="pantry_editor_no_expiry">No date</string>
+    <string name="pantry_editor_pick_date">Pick a date</string>
+    <string name="pantry_editor_clear_date">No date</string>
+    <string name="pantry_delete">Remove from pantry</string>
+
+    <!-- Shopping list -->
+    <string name="shopping_search_hint">Add to the list…</string>
+    <string name="shopping_add_text">Add “%1$s”</string>
+    <string name="shopping_empty_title">The shopping list is empty</string>
+    <string name="shopping_empty_body">Missing ingredients from recipes show up here. The list is shared by the whole household.</string>
+    <string name="shopping_bought_to_pantry">Bought → pantry</string>
+    <string name="shopping_bought_title">Move to the pantry</string>
+    <string name="shopping_bought_body">Amounts and use-by dates are optional.</string>
+    <string name="shopping_bought_confirm">Move</string>
+    <plurals name="shopping_moved">
+        <item quantity="one">%1$d item moved to the pantry</item>
+        <item quantity="other">%1$d items moved to the pantry</item>
+    </plurals>
+    <string name="shopping_share">Share list</string>
+    <string name="shopping_share_title">Shopping list</string>
+    <string name="shopping_for_recipes">For: %1$s</string>
+    <string name="shopping_free_text">More</string>
+    <string name="shopping_remove">Remove from the list</string>
+
+    <!-- Profile -->
+    <string name="profile_signed_in_as">Signed in as %1$s</string>
+    <string name="profile_section_body">About me</string>
+    <string name="profile_section_taste">Taste and cooking</string>
+    <string name="profile_section_equipment">Kitchen equipment</string>
+    <string name="profile_section_staples">Staples</string>
+    <string name="profile_section_household">Household</string>
+    <string name="profile_household_members">Members: %1$s</string>
+    <string name="profile_household_invite_later">Invites for housemates arrive in the next version.</string>
+    <string name="profile_section_app">App</string>
     <string name="profile_language">Language</string>
     <string name="language_system">System default</string>
-    <string name="profile_signed_in_as">Signed in as %1$s</string>
+    <string name="profile_about">About</string>
     <string name="sign_out">Sign out</string>
+    <string name="profile_delete_account">Delete account and data</string>
+    <string name="profile_delete_title">Delete your account?</string>
+    <string name="profile_delete_body">We will permanently delete your profile, ratings and cooking history. If nobody else is in your household, the pantry and shopping list go too. You will sign in with Google once more to confirm. This cannot be undone.</string>
+    <string name="profile_delete_confirm">Delete permanently</string>
+    <string name="profile_delete_failed">Deleting failed. Check your connection and try again.</string>
+    <string name="profile_deleting">Deleting your account…</string>
+    <string name="staples_add_hint">Add a staple</string>
+
+    <!-- About -->
+    <string name="about_body">Špajza suggests recipes from what you have at home. All recipes are original, written for this app, and recipe pictures are generated.</string>
+    <string name="about_nutrition_title">Nutrition</string>
+    <string name="about_nutrition_body">The app calculates nutrition from ingredient weights and values per 100 g. Source: USDA FoodData Central (U.S. Department of Agriculture, Agricultural Research Service), public domain. For some local foods we use typical label values. Values are approximate.</string>
+    <string name="about_off_title">Open Food Facts</string>
+    <string name="about_off_body">Food data from Open Food Facts is available under the Open Database License (ODbL).</string>
+    <string name="about_icons">Icons: Material Symbols (Apache 2.0).</string>
+    <string name="about_version">Version %1$s</string>
 </resources>

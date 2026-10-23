@@ -11,18 +11,21 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import sk.matej.spajza.domain.session.SessionState
 import sk.matej.spajza.ui.navigation.MainScaffold
+import sk.matej.spajza.ui.onboarding.OnboardingRoute
 import sk.matej.spajza.ui.signin.SignInRoute
 
-/** Shows sign-in until there is a user, then the main app. */
+/** Sign-in until there is a user, onboarding until it is finished or skipped, then the app. */
 @Composable
 fun SpajzaRoot(viewModel: RootViewModel = hiltViewModel()) {
     val state by viewModel.state.collectAsStateWithLifecycle()
     Surface(Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background) {
-        when (val current = state) {
-            RootState.Loading -> Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) { CircularProgressIndicator() }
-            RootState.SignedOut -> SignInRoute()
-            is RootState.SignedIn -> MainScaffold(current.user)
+        when (state) {
+            SessionState.Loading -> Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) { CircularProgressIndicator() }
+            SessionState.SignedOut -> SignInRoute()
+            is SessionState.Onboarding -> OnboardingRoute()
+            is SessionState.Ready -> MainScaffold()
         }
     }
 }

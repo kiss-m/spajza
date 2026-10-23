@@ -18,6 +18,14 @@ interface PantryRepository {
 
     suspend fun remove(householdId: String, itemId: String)
 
+    /**
+     * Sets the amount a member typed. Stored as an increment from [current] (the amount the member
+     * saw), so a concurrent change by someone else still adds up; null stops tracking the amount.
+     */
+    suspend fun setQuantity(householdId: String, itemId: String, current: Double?, new: Double?)
+
+    suspend fun setExpiry(householdId: String, itemId: String, expiresAt: LocalDate?)
+
     /** Applies cooking deductions or their undo. */
     suspend fun apply(householdId: String, changes: List<PantryChange>)
 }

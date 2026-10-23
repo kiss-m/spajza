@@ -27,6 +27,17 @@ class FakePantryRepository(initial: List<PantryItem> = emptyList()) : PantryRepo
         items.value = items.value - itemId
     }
 
+    override suspend fun setQuantity(householdId: String, itemId: String, current: Double?, new: Double?) {
+        val item = items.value[itemId] ?: return
+        val quantity = new?.let { (item.quantity ?: 0.0) + (it - (current ?: 0.0)) }
+        items.value = items.value + (itemId to item.copy(quantity = quantity))
+    }
+
+    override suspend fun setExpiry(householdId: String, itemId: String, expiresAt: LocalDate?) {
+        val item = items.value[itemId] ?: return
+        items.value = items.value + (itemId to item.copy(expiresAt = expiresAt))
+    }
+
     override suspend fun apply(householdId: String, changes: List<PantryChange>) {
         var map = items.value
         changes.forEach { change ->
