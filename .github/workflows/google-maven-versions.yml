@@ -1,7 +1,7 @@
 name: Google Maven versions
 
 # Prints the latest stable versions of Google Maven artifacts as annotations, because the dev
-# container cannot reach dl.google.com.
+# container cannot reach dl.google.com. GitHub keeps at most 10 notices per step.
 on:
   push:
     branches: ['m1/**']
@@ -13,39 +13,28 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
-      - name: Latest stable versions
+      - name: Write version lookup script
         run: |
-          for a in \
-            com/android/tools/build/gradle \
-            androidx/compose/compose-bom \
-            com/google/firebase/firebase-bom \
-            com/google/gms/google-services \
-            com/google/android/libraries/identity/googleid/googleid \
-            androidx/core/core-ktx \
-            androidx/core/core-splashscreen \
-            androidx/appcompat/appcompat \
-            androidx/activity/activity-compose \
-            androidx/lifecycle/lifecycle-runtime-compose \
-            androidx/navigation/navigation-compose \
-            androidx/room3/room3-runtime \
-            androidx/sqlite/sqlite-bundled \
-            androidx/datastore/datastore-preferences \
-            androidx/work/work-runtime-ktx \
-            androidx/credentials/credentials \
-            androidx/credentials/credentials-play-services-auth \
-            androidx/hilt/hilt-navigation-compose \
-            androidx/hilt/hilt-lifecycle-viewmodel-compose \
-            androidx/compose/material3/material3 \
-            androidx/compose/material/material-icons-core \
-            androidx/compose/ui/ui \
-            androidx/test/core \
-            androidx/test/ext/junit \
-            com/google/firebase/firebase-auth \
-            com/google/firebase/firebase-firestore; do
+          cat > "$RUNNER_TEMP/latest.sh" <<'SH'
+          for a in "$@"; do
             v=$(curl -fsSL "https://dl.google.com/dl/android/maven2/$a/maven-metadata.xml" \
               | grep -oE '<version>[^<]+' | sed 's/<version>//' \
               | grep -viE 'alpha|beta|rc|dev|eap|snapshot' | sort -V | tail -1 || true)
             echo "::notice title=$a::${v:-not found}"
           done
+          SH
+      - name: Navigation, Room, data
+        run: |
+          bash "$RUNNER_TEMP/latest.sh" androidx/navigation/navigation-compose androidx/room3/room3-runtime \
+            androidx/room3/room3-compiler androidx/sqlite/sqlite-bundled androidx/datastore/datastore-preferences \
+            androidx/work/work-runtime-ktx androidx/credentials/credentials androidx/credentials/credentials-play-services-auth
+      - name: Hilt, Compose, tests
+        run: |
+          bash "$RUNNER_TEMP/latest.sh" androidx/hilt/hilt-navigation-compose androidx/hilt/hilt-lifecycle-viewmodel-compose \
+            androidx/compose/material3/material3 androidx/compose/material/material-icons-core androidx/compose/ui/ui \
+            androidx/test/core androidx/test/ext/junit androidx/compose/ui/ui-test-junit4
+      - name: Firebase and SDK
+        run: |
+          bash "$RUNNER_TEMP/latest.sh" com/google/firebase/firebase-auth com/google/firebase/firebase-firestore
           echo "::notice title=sdk platforms::$(ls "$ANDROID_HOME/platforms" | tr '\n' ' ')"
           echo "::notice title=sdk build-tools::$(ls "$ANDROID_HOME/build-tools" | tr '\n' ' ')"
