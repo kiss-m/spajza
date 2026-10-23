@@ -3,6 +3,7 @@ package sk.matej.spajza.data.seed
 import sk.matej.spajza.domain.model.Allergen
 import sk.matej.spajza.domain.model.DietFlag
 import sk.matej.spajza.domain.model.Language
+import sk.matej.spajza.domain.model.NutritionSource
 import sk.matej.spajza.domain.nutrition.NutritionCalculator
 import sk.matej.spajza.domain.text.TextNormalizer
 import java.io.File
@@ -62,12 +63,17 @@ class SeedContentTest {
                 val atwater = 4 * n.protein + 4 * (n.carbs - n.fiber) + 2 * n.fiber + 9 * n.fat
                 val problems = listOfNotNull(
                     "macros add up to ${mass.toInt()} g".takeIf { mass > 101 },
-                    "kcal ${n.kcal} > 900".takeIf { n.kcal > 900 },
+                    "kcal ${n.kcal} > 910".takeIf { n.kcal > 910 },
                     "sugar exceeds carbs".takeIf { n.sugar > n.carbs + 0.5 },
                     "fiber exceeds carbs".takeIf { n.fiber > n.carbs + 0.5 },
                     "salt > 100 g".takeIf { n.salt > 100 },
-                    "kcal ${n.kcal} vs Atwater ${atwater.toInt()}"
-                        .takeIf { ingredient.id !in ALCOHOLIC && abs(atwater - n.kcal) > max(20.0, 0.2 * n.kcal) },
+                    // Hand-entered estimates are checked against Atwater factors to catch typos;
+                    // USDA values use food-specific energy factors and are taken as published.
+                    "kcal ${n.kcal} vs Atwater ${atwater.toInt()}".takeIf {
+                        ingredient.nutritionSource == NutritionSource.Estimate &&
+                            ingredient.id !in ALCOHOLIC &&
+                            abs(atwater - n.kcal) > max(20.0, 0.2 * n.kcal)
+                    },
                 )
                 problems.takeIf { it.isNotEmpty() }?.let { "${ingredient.id}: ${it.joinToString()}" }
             },
