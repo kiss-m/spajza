@@ -14,7 +14,8 @@ and override the spec where they differ. `docs/CONTENT.md` (coverage) and `docs/
   Google Maven versions are checked with the `Google Maven versions` workflow (edit its artifact list,
   push to an `m1/**` branch or run it manually, read the notices).
 - Guide the user step by step through anything only they can do (Firebase console, GitHub secrets, SHA-1).
-- Repo: github.com/kiss-m/spajza, commits go straight to `main`.
+- Repo: github.com/kiss-m/spajza, no pull requests. Work that needs CI to compile (`:app`) goes through a
+  short-lived branch (`m3/app`, …) that is fast-forwarded into `main` once CI is green.
 
 ## Environment
 - Claude works in an ephemeral cloud container: JDK 21, Gradle wrapper, no Android SDK, no adb, no phone.
@@ -25,8 +26,9 @@ and override the spec where they differ. `docs/CONTENT.md` (coverage) and `docs/
 - Reading CI from the container: job logs are not reachable, but `scripts/ci-annotate.sh` turns Gradle
   failures, compiler errors and failed tests into annotations. Fetch them with `curl` from
   `api.github.com/repos/kiss-m/spajza/actions/runs?branch=<branch>` → the run's jobs → each job's
-  `check_run_url` + `/annotations`. Pure-Kotlin parts of `:app` (e.g. `data/catalog/CatalogMapper.kt`)
-  can be compiled and tested locally in a scratch JVM project with stub annotations.
+  `check_run_url` + `/annotations`. Pure-Kotlin parts of `:app` (mappers, `CookFeed`, `RecipeDetailBuilder`,
+  `BodyDraft`, `NumberFormat`) can be compiled and tested locally in a scratch JVM project with stub Room
+  annotations, so keep such logic in files without Android or Compose imports.
 - Maven Central sometimes answers 429; rerun the build.
 - `app/google-services.json` and `keystore/` are never committed. `scripts/placeholder-google-services.sh`
   writes a placeholder so the app builds without Firebase; CI decodes the real files from the secrets
@@ -40,8 +42,10 @@ Firebase Auth (Google Sign-In via Credential Manager) + Cloud Firestore with off
 Spark plan only: no Cloud Functions, no Cloud Storage. Package `sk.matej.spajza`, app name Špajza.
 
 ## Modules
-- `:domain` (Kotlin/JVM, `sk.matej.spajza.domain`): models, engines, use cases, repository interfaces.
-  No `android.*`, `androidx.*` or `com.google.firebase.*` imports — the module cannot see them.
+- `:domain` (Kotlin/JVM, `sk.matej.spajza.domain`): models, engines, use cases, repository interfaces,
+  `SessionManager` and `HomeData` (the shared live household data). No `android.*`, `androidx.*` or
+  `com.google.firebase.*` imports — the module cannot see them. Fakes and fixtures live in its
+  `testFixtures` source set and are shared with the app's tests.
 - `:seed` (Kotlin/JVM, `sk.matej.spajza.data.seed`): seed JSON format, `CatalogBuilder` (validation,
   gram normalization, computed tags), content tests, coverage report.
 - `:app` (Android, `sk.matej.spajza`): `data/` (Room catalog, Firebase, repository implementations),
@@ -57,8 +61,11 @@ Spark plan only: no Cloud Functions, no Cloud Storage. Package `sk.matej.spajza`
 - Nutrition is always computed by `NutritionCalculator`: grams × per-100 g values. Never trust imported
   nutrition numbers.
 - Concurrent household edits: `FieldValue.increment` for quantities, server timestamps, field-level
-  updates. Pantry/shopping doc ids are deterministic (`i_<slug>`, `c_<customId>`), quantities are stored
-  in the ingredient's `pantryUnit`.
+  updates, `arrayUnion`/`arrayRemove` for staples and equipment. Pantry/shopping doc ids are deterministic
+  (`i_<slug>`, `c_<customId>`), quantities are stored in the ingredient's `pantryUnit`. Firestore writes
+  are never awaited (offline-first); only account deletion awaits. Field formats: docs/DECISIONS.md D9.
+- Domain code runs on Android 8+: no JDK APIs newer than Java 8 that Android lacks (`LocalDate.EPOCH`,
+  `List.removeFirst()`, …).
 - Diet/allergen filters live in domain and the model; their UI is behind a feature flag that stays off.
 - Every tunable (scoring weights, tag thresholds) lives in one documented config object.
 - Calorie targets never go below BMR; no shaming language.

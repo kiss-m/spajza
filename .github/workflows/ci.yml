@@ -51,18 +51,6 @@ jobs:
         if: env.HAS_APP == 'true'
         run: ./gradlew :app:assembleDebug 2>&1 | tee -a build-output.txt; exit "${PIPESTATUS[0]}"
 
-      - name: Annotate failures
-        if: failure()
-        run: scripts/ci-annotate.sh build-output.txt
-
-      - name: Upload test reports
-        if: failure()
-        uses: actions/upload-artifact@v7
-        with:
-          name: test-reports
-          path: '**/build/reports/tests/'
-          if-no-files-found: ignore
-
       - name: Upload debug APK
         if: env.HAS_APP == 'true'
         uses: actions/upload-artifact@v7
@@ -82,3 +70,28 @@ jobs:
             --target "$GITHUB_SHA" \
             --title "Latest debug build" \
             --notes "Debug build of ${GITHUB_SHA::7}. Install it over the previous latest-debug build."
+
+      # Last, so a lint error fails the run without holding back the APK above.
+      - name: Lint
+        if: env.HAS_APP == 'true'
+        run: ./gradlew :app:lintDebug 2>&1 | tee -a build-output.txt; exit "${PIPESTATUS[0]}"
+
+      - name: Lint report
+        if: always() && env.HAS_APP == 'true'
+        run: scripts/ci-lint-report.sh
+
+      - name: Annotate failures
+        if: failure()
+        run: scripts/ci-annotate.sh build-output.txt
+
+      - name: Test summary
+        if: always()
+        run: scripts/ci-test-summary.sh
+
+      - name: Upload test reports
+        if: failure()
+        uses: actions/upload-artifact@v7
+        with:
+          name: test-reports
+          path: '**/build/reports/tests/'
+          if-no-files-found: ignore

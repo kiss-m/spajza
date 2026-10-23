@@ -44,3 +44,18 @@ The "cooked it" action is labelled "Uvarené" (EN "Cooked") instead of "Uvaril s
 ## D8 — Room 3
 `androidx.room3` (3.x, stable since July 2026, KSP + coroutines only) for the catalog database. The
 catalog is read-only and rebuilt from the seed, so it never needs data migrations.
+
+## D9 — Firestore field formats (Phase 1)
+- `users/{uid}`: `displayName`, `householdId`, `onboardingDone`, nested maps `profile` (body data),
+  `preferences` and `restrictions` (hidden diet/allergen filters), `createdAt`, `updatedAt`. Enums are
+  stored by name; unknown names are ignored when reading, so older app versions survive newer data.
+- `households/{hid}`: `name`, `memberUids`, `memberNames` (uid → display name, for "added by" labels and
+  the member list; a leaving member removes their own entry), `staples`, `equipment`, timestamps.
+- Pantry items: `ingredientId` or `customIngredientId`, optional `quantity` (pantry unit), optional
+  `expiresAt` as an ISO date string (`2026-10-25`, no time zone), `addedBy`, `updatedAt`.
+- Shopping items: `ingredientId`/`customIngredientId` or `text`, optional `amount`, `checked`,
+  `reasonRecipeIds`, `addedBy`, timestamps. Re-adding a checked item resets its amount and reasons.
+- `users/{uid}/ratings/{recipeId}`: `verdict` (`LIKE`/`DISLIKE`/null), `favorite`, `note`.
+- `users/{uid}/cookHistory/{id}`: `recipeId`, `cookedAt` (device time, so offline events keep their
+  date), `servings`.
+
