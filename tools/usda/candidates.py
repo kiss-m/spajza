@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Find USDA FoodData Central (SR Legacy) candidates for every seed ingredient.
 
-Usage: candidates.py <sr_legacy_csv_dir> <seed_ingredients_dir> <out.json>
+Usage: candidates.py <sr_legacy_csv_dir> <seed_ingredients_dir> <out.json> [<all_foods.json>]
 
 For each ingredient that is not marked "estimate", ranks SR Legacy foods by word overlap with the
 ingredient's English name and synonyms and writes the top candidates with their nutrition per
@@ -91,8 +91,12 @@ def score(query_words, food):
     return s
 
 
-def main(csv_dir, seed_dir, out):
+def main(csv_dir, seed_dir, out, dump=None):
     foods = load(csv_dir)
+    if dump:
+        with open(dump, "w", encoding="utf-8") as f:
+            for food in sorted(foods, key=lambda x: x["fdcId"]):
+                f.write(json.dumps({k: v for k, v in food.items() if not k.startswith("_")}, ensure_ascii=False) + "\n")
     result = {}
     for path in sorted(glob.glob(os.path.join(seed_dir, "*.json"))):
         for ingredient in json.load(open(path, encoding="utf-8")):
