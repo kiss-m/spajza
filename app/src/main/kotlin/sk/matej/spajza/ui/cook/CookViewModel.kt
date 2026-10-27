@@ -110,9 +110,8 @@ class CookViewModel @Inject constructor(
 
     fun onMealType(mealType: MealType?) = filter.update { it.copy(mealType = mealType) }
 
-    fun onClearFilters() {
-        filter.value = FeedFilter()
-    }
+    /** Clears the chips and keeps the meal type tab. */
+    fun onClearFilters() = filter.update { FeedFilter(mealType = it.mealType) }
 
     fun onAddPurchase() {
         val purchase = state.value.purchase ?: return

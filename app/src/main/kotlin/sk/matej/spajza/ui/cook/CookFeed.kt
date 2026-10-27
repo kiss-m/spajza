@@ -80,7 +80,10 @@ class CookFeed(private val catalog: Catalog) {
         val searchResults = if (query.isBlank()) {
             null
         } else {
-            search.search(query).map { card(matcher.evaluate(it, kitchen, personalization, today), ratings) }
+            // The chips narrow the search too, like they narrow both sections.
+            search.search(query)
+                .filter { filter.matches(it) }
+                .map { card(matcher.evaluate(it, kitchen, personalization, today), ratings) }
         }
         return CookUiState(
             isLoading = false,

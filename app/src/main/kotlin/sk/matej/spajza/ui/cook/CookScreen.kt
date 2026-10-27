@@ -6,20 +6,28 @@ import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Check
+import androidx.compose.material.icons.filled.Close
+import androidx.compose.material3.AssistChip
 import androidx.compose.material3.Button
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ElevatedCard
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.FilterChip
+import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
+import androidx.compose.material3.PrimaryScrollableTabRow
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
+import androidx.compose.material3.Tab
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
@@ -106,57 +114,72 @@ fun CookScreen(state: CookUiState, query: String, snackbarHostState: SnackbarHos
                         Text(stringResource(R.string.catalog_loading), modifier = Modifier.padding(top = 12.dp))
                     }
                 }
-                state.searchResults != null -> searchResults(state.searchResults, actions)
+                state.searchResults != null -> searchResults(state, actions)
                 else -> sections(state, actions)
             }
         }
     }
 }
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 private fun FilterRows(state: CookUiState, actions: CookActions) {
-    Column(verticalArrangement = Arrangement.spacedBy(4.dp)) {
-        LazyRow(contentPadding = PaddingValues(horizontal = 16.dp), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-            item {
-                FilterChip(
-                    selected = state.filter.mealType == null,
-                    onClick = { actions.onMealType(null) },
-                    label = { Text(stringResource(R.string.meal_all)) },
-                )
-            }
-            items(MealType.entries) { meal ->
-                FilterChip(
+    Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+        // Meal types are tabs, so they read as "which meal" and not as one more filter chip.
+        val meals = listOf<MealType?>(null) + MealType.entries
+        PrimaryScrollableTabRow(
+            selectedTabIndex = meals.indexOf(state.filter.mealType).coerceAtLeast(0),
+            edgePadding = 8.dp,
+        ) {
+            meals.forEach { meal ->
+                Tab(
                     selected = state.filter.mealType == meal,
-                    onClick = { actions.onMealType(if (state.filter.mealType == meal) null else meal) },
-                    label = { Text(stringResource(meal.labelRes())) },
+                    onClick = { actions.onMealType(meal) },
+                    text = { Text(stringResource(meal?.labelRes() ?: R.string.meal_all)) },
                 )
             }
         }
         LazyRow(contentPadding = PaddingValues(horizontal = 16.dp), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+            if (state.filter.hasChips) {
+                item {
+                    AssistChip(
+                        onClick = actions.onClearFilters,
+                        label = { Text(stringResource(R.string.cook_clear_filters)) },
+                        leadingIcon = { Icon(Icons.Filled.Close, contentDescription = null, modifier = Modifier.size(18.dp)) },
+                    )
+                }
+            }
             items(RecipeType.entries) { type ->
-                FilterChip(
-                    selected = type in state.filter.types,
-                    onClick = { actions.onToggleType(type) },
-                    label = { Text(stringResource(type.labelRes())) },
-                )
+                CheckChip(type in state.filter.types, { actions.onToggleType(type) }, stringResource(type.labelRes()))
             }
         }
         LazyRow(contentPadding = PaddingValues(horizontal = 16.dp), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
             items(state.cuisines) { cuisine ->
-                FilterChip(
-                    selected = cuisine in state.filter.cuisines,
-                    onClick = { actions.onToggleCuisine(cuisine) },
-                    label = { Text(stringResource(cuisine.labelRes())) },
-                )
+                CheckChip(cuisine in state.filter.cuisines, { actions.onToggleCuisine(cuisine) }, stringResource(cuisine.labelRes()))
             }
         }
     }
 }
 
-private fun androidx.compose.foundation.lazy.LazyListScope.searchResults(results: List<RecipeCardModel>, actions: CookActions) {
+@Composable
+private fun CheckChip(selected: Boolean, onClick: () -> Unit, label: String) {
+    FilterChip(
+        selected = selected,
+        onClick = onClick,
+        label = { Text(label) },
+        leadingIcon = if (selected) {
+            { Icon(Icons.Filled.Check, contentDescription = null, modifier = Modifier.size(18.dp)) }
+        } else {
+            null
+        },
+    )
+}
+
+private fun androidx.compose.foundation.lazy.LazyListScope.searchResults(state: CookUiState, actions: CookActions) {
+    val results = state.searchResults.orEmpty()
     item { SectionHeader(stringResource(R.string.cook_search_results), Modifier.padding(horizontal = 16.dp)) }
     if (results.isEmpty()) {
-        item { HintText(stringResource(R.string.cook_no_results)) }
+        item { if (state.filter.hasChips) FilteredEmpty(actions) else HintText(stringResource(R.string.cook_no_results)) }
     }
     items(results, key = { it.recipeId }) { model ->
         RecipeListItem(model, onClick = { actions.onOpenRecipe(model.recipeId) }, modifier = Modifier.padding(horizontal = 16.dp))
@@ -167,17 +190,8 @@ private fun androidx.compose.foundation.lazy.LazyListScope.sections(state: CookU
     if (state.pantryEmpty) {
         item { EmptyPantryCard(actions.onOpenPantry) }
     }
-    if (!state.filter.isEmpty && state.ready.isEmpty() && state.toBuy.isEmpty()) {
-        item {
-            Column(Modifier.padding(horizontal = 16.dp)) {
-                Text(
-                    stringResource(R.string.cook_filtered_empty),
-                    style = MaterialTheme.typography.bodyMedium,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant,
-                )
-                TextButton(onClick = actions.onClearFilters) { Text(stringResource(R.string.cook_clear_filters)) }
-            }
-        }
+    if (state.filter.hasChips && state.ready.isEmpty() && state.toBuy.isEmpty()) {
+        item { FilteredEmpty(actions) }
         return
     }
     item { SectionHeader(stringResource(R.string.cook_section_ready), Modifier.padding(horizontal = 16.dp)) }
@@ -234,6 +248,18 @@ private fun EmptyPantryCard(onOpenPantry: () -> Unit) {
             Text(stringResource(R.string.cook_empty_body), style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.onSurfaceVariant)
             OutlinedButton(onClick = onOpenPantry) { Text(stringResource(R.string.cook_open_pantry)) }
         }
+    }
+}
+
+@Composable
+private fun FilteredEmpty(actions: CookActions) {
+    Column(Modifier.padding(horizontal = 16.dp)) {
+        Text(
+            stringResource(R.string.cook_filtered_empty),
+            style = MaterialTheme.typography.bodyMedium,
+            color = MaterialTheme.colorScheme.onSurfaceVariant,
+        )
+        TextButton(onClick = actions.onClearFilters) { Text(stringResource(R.string.cook_clear_filters)) }
     }
 }
 

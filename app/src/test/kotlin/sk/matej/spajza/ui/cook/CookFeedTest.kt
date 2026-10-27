@@ -51,6 +51,17 @@ class CookFeedTest {
     }
 
     @Test
+    fun `search results respect the chips`() {
+        // "rice" matches chicken-rice (Chinese) and salmon-rice (Japanese).
+        val all = feed.state(session, pantry, emptyMap(), emptyList(), query = "rice", filter = FeedFilter(), today = MONDAY)
+        assertEquals(setOf("chicken-rice", "salmon-rice"), all.searchResults!!.map { it.recipeId }.toSet())
+
+        val chinese = feed.state(session, pantry, emptyMap(), emptyList(), "rice", FeedFilter(cuisines = setOf(Cuisine.CHINESE)), MONDAY)
+
+        assertEquals(listOf("chicken-rice"), chinese.searchResults!!.map { it.recipeId })
+    }
+
+    @Test
     fun `search covers recipes that need more than three items and marks favorites`() {
         val ratings = mapOf("salmon-rice" to Rating("salmon-rice", favorite = true))
         val state = feed.state(session, emptyList(), ratings, emptyList(), query = "salmon", filter = FeedFilter(), today = MONDAY)

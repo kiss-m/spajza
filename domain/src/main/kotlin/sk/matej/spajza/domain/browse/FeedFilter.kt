@@ -35,6 +35,9 @@ data class FeedFilter(
 ) {
     val isEmpty: Boolean get() = cuisines.isEmpty() && types.isEmpty() && mealType == null
 
+    /** Any cuisine or type chip is on (the meal type is a tab, not a chip). */
+    val hasChips: Boolean get() = cuisines.isNotEmpty() || types.isNotEmpty()
+
     fun matches(recipe: Recipe): Boolean =
         (cuisines.isEmpty() || recipe.cuisine in cuisines) &&
             types.all { it.appliesTo(recipe) } &&

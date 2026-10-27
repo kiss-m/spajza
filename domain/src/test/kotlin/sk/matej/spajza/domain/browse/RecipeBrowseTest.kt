@@ -11,6 +11,7 @@ import sk.matej.spajza.domain.testing.line
 import sk.matej.spajza.domain.testing.recipe
 import kotlin.test.Test
 import kotlin.test.assertEquals
+import kotlin.test.assertFalse
 import kotlin.test.assertTrue
 
 class RecipeBrowseTest {
@@ -46,6 +47,13 @@ class RecipeBrowseTest {
         assertEquals(listOf("dal", "ovsena-kasa"), ids(FeedFilter(types = setOf(RecipeType.VEGETARIAN, RecipeType.CHEAP))))
         assertEquals(listOf("dal"), ids(FeedFilter(types = setOf(RecipeType.VEGETARIAN, RecipeType.STUDENT))))
         assertEquals(emptyList(), ids(FeedFilter(cuisines = setOf(Cuisine.SLOVAK_CZECH), types = setOf(RecipeType.VEGAN))))
+    }
+
+    @Test
+    fun `the meal type tab is not a chip`() {
+        assertTrue(FeedFilter(types = setOf(RecipeType.VEGAN)).hasChips)
+        assertTrue(FeedFilter(cuisines = setOf(Cuisine.THAI)).hasChips)
+        assertFalse(FeedFilter(mealType = MealType.LUNCH).hasChips)
     }
 
     @Test
