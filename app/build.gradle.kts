@@ -28,6 +28,7 @@ android {
             val dedicated = rootProject.file("keystore/debug.keystore")
             if (dedicated.exists()) {
                 storeFile = dedicated
+                storeType = "pkcs12"
                 storePassword = "android"
                 keyAlias = "androiddebugkey"
                 keyPassword = "android"
