@@ -35,8 +35,13 @@ and override the spec where they differ. `docs/CONTENT.md` (coverage) and `docs/
   secret `SPAJZA_SECRETS` (JSON with `google_services_json` and `debug_keystore_base64`, prepared by
   Claude so the owner pastes one value) and checks them in `scripts/ci-write-secrets.sh`. The dedicated debug key (PKCS12, alias `androiddebugkey`, password
   `android`) has SHA-1 `CD:17:72:E2:5D:D0:A0:A3:9C:77:11:14:58:FC:86:E9:C2:72:58:BC`; it was generated
-  for the owner, who keeps it only as that secret. The owner is not technical: they need click-by-click
+  for the owner and lives only inside that secret. The owner is not technical: they need click-by-click
   steps and no command line.
+- Firebase project `spajza-f6fa6` (Spark plan): Firestore `(default)` in eur3, Google sign-in enabled,
+  Android app `sk.matej.spajza` with the debug SHA-1, rules from `firestore.rules`. It was set up through
+  the Firebase Management, Firestore and Rules APIs with a temporary `gcloud auth login
+  --no-launch-browser` of the owner (run gcloud with `CLOUDSDK_AUTH_ACCESS_TOKEN` unset; revoke the login
+  when done). Enabling the Google provider has no public API: the owner clicks it in the console.
 
 ## Stack
 Kotlin · Jetpack Compose + Material 3 (warm palette, light + dark) · single `AppCompatActivity` (per-app
@@ -94,8 +99,10 @@ Spark plan only: no Cloud Functions, no Cloud Storage. Package `sk.matej.spajza`
 - `./gradlew test` — all unit tests (domain, seed content tests and, with the Android SDK, `:app`)
 - `./gradlew :seed:contentReport` — regenerate docs/CONTENT.md and docs/DATA_TODO.md
 - `./gradlew :app:assembleDebug`, `./gradlew :app:lintDebug` — need the Android SDK (CI)
-- Firestore rules: `firestore.rules` (deploy by pasting into the Firebase console). Proper emulator rules
-  tests are Phase 3; until then check changes ad hoc with `@firebase/rules-unit-testing` in the scratchpad.
+- Firestore rules: `firestore.rules`, deployed with the Rules API (create a ruleset, then update the
+  `cloud.firestore` release) during an owner gcloud login, or pasted into the console by the owner.
+  Proper emulator rules tests are Phase 3; until then check changes ad hoc with
+  `@firebase/rules-unit-testing` in the scratchpad.
 
 ## Conventions
 - Domain logic: tests first; ViewModels and domain tested with fakes, not Firebase mocks.
