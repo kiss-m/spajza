@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 30
     env:
-      HAS_SIGNING_SECRETS: ${{ secrets.GOOGLE_SERVICES_JSON != '' && secrets.DEBUG_KEYSTORE_B64 != '' }}
+      HAS_SIGNING_SECRETS: ${{ secrets.SPAJZA_SECRETS != '' }}
     steps:
       - uses: actions/checkout@v7
 
@@ -33,8 +33,7 @@ jobs:
       - name: Write and check Firebase config and debug keystore
         if: env.HAS_SIGNING_SECRETS == 'true'
         env:
-          GOOGLE_SERVICES_JSON: ${{ secrets.GOOGLE_SERVICES_JSON }}
-          DEBUG_KEYSTORE_B64: ${{ secrets.DEBUG_KEYSTORE_B64 }}
+          SPAJZA_SECRETS: ${{ secrets.SPAJZA_SECRETS }}
         run: scripts/ci-write-secrets.sh
 
       - name: Use placeholder Firebase config

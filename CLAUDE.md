@@ -31,9 +31,9 @@ and override the spec where they differ. `docs/CONTENT.md` (coverage) and `docs/
   annotations, so keep such logic in files without Android or Compose imports.
 - Maven Central sometimes answers 429; rerun the build.
 - `app/google-services.json` and `keystore/` are never committed. `scripts/placeholder-google-services.sh`
-  writes a placeholder so the app builds without Firebase; CI writes the real files from the secrets
-  `GOOGLE_SERVICES_JSON` (the Firebase file pasted as is) and `DEBUG_KEYSTORE_B64` and checks them in
-  `scripts/ci-write-secrets.sh`. The dedicated debug key (PKCS12, alias `androiddebugkey`, password
+  writes a placeholder so the app builds without Firebase; CI writes the real files from the single
+  secret `SPAJZA_SECRETS` (JSON with `google_services_json` and `debug_keystore_base64`, prepared by
+  Claude so the owner pastes one value) and checks them in `scripts/ci-write-secrets.sh`. The dedicated debug key (PKCS12, alias `androiddebugkey`, password
   `android`) has SHA-1 `CD:17:72:E2:5D:D0:A0:A3:9C:77:11:14:58:FC:86:E9:C2:72:58:BC`; it was generated
   for the owner, who keeps it only as that secret. The owner is not technical: they need click-by-click
   steps and no command line.
