@@ -1,0 +1,890 @@
+[
+  {
+    "id": "vanilkovy-puding-s-jahodami",
+    "title": {"sk": "Domáci vanilkový puding s jahodami", "en": "Homemade vanilla pudding with strawberries"},
+    "description": {"sk": "Hladký puding bez prášku z vrecúška, uvarený z mlieka, vajca a škrobu.", "en": "A silky pudding made without a packet mix, from milk, egg and starch."},
+    "cuisine": "SLOVAK_CZECH",
+    "mealTypes": ["DESSERT"],
+    "totalTimeMin": 80,
+    "activeTimeMin": 20,
+    "difficulty": 1,
+    "servings": 4,
+    "equipment": ["STOVE"],
+    "ingredients": [
+      {"id": "milk", "amount": 500, "unit": "ML", "role": "MAIN"},
+      {"id": "sugar", "amount": 60, "unit": "G", "role": "SECONDARY"},
+      {"id": "corn-starch", "amount": 40, "unit": "G", "role": "SECONDARY"},
+      {"id": "egg", "amount": 1, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "vanilla-sugar", "amount": 1, "unit": "PCS", "role": "SEASONING"},
+      {"id": "butter", "amount": 15, "unit": "G", "role": "SECONDARY"},
+      {"id": "salt", "amount": 1, "unit": "PINCH", "role": "SEASONING"},
+      {"id": "strawberry", "amount": 250, "unit": "G", "role": "SECONDARY"}
+    ],
+    "steps": [
+      {"sk": "Z mlieka odlej do misky asi 100 ml a zvyšok nalej do hrnca s cukrom, vanilkovým cukrom a štipkou soli. Hrniec postav na stredný oheň a mlieko zohrievaj, kým sa na okrajoch nezačnú tvoriť bublinky.", "en": "Pour about 100 ml of the milk into a bowl and the rest into a pan with the sugar, vanilla sugar and a pinch of salt. Set the pan over a medium heat and warm the milk until small bubbles form at the edges."},
+      {"sk": "Do studeného mlieka v miske pridaj škrob a vajce a metlou ich rozšľahaj do úplne hladka – žiadna hrudka škrobu nesmie zostať. Studené mlieko je dôležité, v teplom by sa škrob zrazil.", "en": "Add the cornflour and egg to the cold milk in the bowl and whisk until completely smooth; not a single lump of starch should remain. The milk must be cold, as warm milk makes the starch clump."},
+      {"sk": "Keď mlieko v hrnci začne vrieť, zníž oheň a za stáleho miešania metlou doň vlej škrobovú zmes. Miešaj aj po dne a v rohoch hrnca 2 až 3 minúty, kým puding nezhustne a neprebubláva ako lávový krém.", "en": "When the milk in the pan comes to the boil, lower the heat and pour in the starch mixture while whisking constantly. Keep whisking along the bottom and into the corners for 2 to 3 minutes until the pudding thickens and bubbles lazily.", "timerSeconds": 150},
+      {"sk": "Stiahni hrniec z ohňa a vmiešaj maslo – puding bude lesklý a jemnejší. Hneď ho rozlej do štyroch pohárov alebo misiek, kým je tekutý; neskôr by sa už pekne nerozlial.", "en": "Take the pan off the heat and stir in the butter; it makes the pudding glossy and smoother. Pour it straight away into four glasses or bowls while it is still fluid; later it will not settle neatly."},
+      {"sk": "Povrch pudingu prikry potravinovou fóliou priamo na hladinu, aby sa nevytvorila koža, a nechaj ho vychladnúť; potom ho daj aspoň na hodinu do chladničky. Jahody nakrájaj na štvrtiny a podávaj ich navrchu.", "en": "Press cling film directly onto the surface of the pudding so no skin forms and let it cool, then chill for at least an hour. Quarter the strawberries and serve them on top.", "timerSeconds": 3600}
+    ]
+  },
+  {
+    "id": "jablkova-strudla-z-listkoveho-cesta",
+    "title": {"sk": "Jablková štrúdľa z lístkového cesta", "en": "Apple strudel with puff pastry"},
+    "description": {"sk": "Chrumkavá štrúdľa plná jabĺk so škoricou, orechmi a hrozienkami.", "en": "A crisp strudel packed with cinnamon apples, walnuts and raisins."},
+    "cuisine": "CENTRAL_EUROPEAN",
+    "mealTypes": ["DESSERT", "SNACK"],
+    "totalTimeMin": 65,
+    "activeTimeMin": 20,
+    "difficulty": 1,
+    "servings": 8,
+    "equipment": ["OVEN"],
+    "ingredients": [
+      {"id": "puff-pastry", "amount": 275, "unit": "G", "role": "MAIN"},
+      {"id": "apple", "amount": 4, "unit": "PCS", "role": "MAIN"},
+      {"id": "sugar", "amount": 50, "unit": "G", "role": "SECONDARY"},
+      {"id": "cinnamon", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "raisins", "amount": 40, "unit": "G", "role": "SECONDARY"},
+      {"id": "walnuts", "amount": 40, "unit": "G", "role": "SECONDARY"},
+      {"id": "breadcrumbs", "amount": 30, "unit": "G", "role": "SECONDARY"},
+      {"id": "butter", "amount": 20, "unit": "G", "role": "SECONDARY"},
+      {"id": "lemon", "amount": 1, "unit": "TBSP", "role": "SEASONING", "note": {"sk": "šťava", "en": "juice"}},
+      {"id": "egg", "amount": 1, "unit": "PCS", "role": "SEASONING"},
+      {"id": "powdered-sugar", "amount": 1, "unit": "TBSP", "role": "SEASONING", "optional": true}
+    ],
+    "steps": [
+      {"sk": "Rúru predhrej na 200 °C a plech vystel papierom na pečenie. Strúhanku opraž na panvici s maslom na miernom ohni 3 minúty dozlatista – zachytí šťavu z jabĺk, aby cesto zospodu nezmoklo.", "en": "Preheat the oven to 200 °C and line a tray with baking paper. Toast the breadcrumbs in the butter in a pan over a low heat for 3 minutes until golden; they soak up the apple juice so the pastry does not go soggy underneath.", "timerSeconds": 180},
+      {"sk": "Jablká ošúp, vykroj jadrovníky a nakrájaj ich na tenké plátky alebo nastrúhaj nahrubo. Zmiešaj ich s citrónovou šťavou, cukrom, škoricou, hrozienkami a nahrubo nasekanými orechmi; zmes nenechávaj stáť, pustila by veľa šťavy.", "en": "Peel and core the apples and slice them thinly or grate them coarsely. Mix them with the lemon juice, sugar, cinnamon, raisins and roughly chopped walnuts; do not let the mixture stand, as it would release a lot of juice."},
+      {"sk": "Lístkové cesto rozvaľkaj na papieri na obdĺžnik asi 30 × 40 cm. Pozdĺž dlhšej strany nechaj 3 cm okraj, zvyšok posyp opraženou strúhankou a navrch rovnomerne rozlož jablkovú plnku.", "en": "Roll the puff pastry out on its paper into a rectangle about 30 × 40 cm. Leave a 3 cm border along one long side, sprinkle the rest with the toasted breadcrumbs and spread the apple filling evenly on top."},
+      {"sk": "Pomocou papiera cesto zroluj od plnky smerom k voľnému okraju, okraj potri vajcom a pritlač. Konce zahni pod rolku, prelož ju na plech spojom nadol, potri rozšľahaným vajcom a ostrým nožom ju na niekoľkých miestach nareš, aby unikala para.", "en": "Using the paper, roll the pastry up from the filled side towards the clear border, brush the border with egg and press to seal. Tuck the ends under, move the roll seam side down onto the tray, brush with beaten egg and cut a few slits in the top to let the steam out."},
+      {"sk": "Peč 35 až 40 minút, kým nie je štrúdľa nafúknutá a hlboko zlatohnedá aj zospodu. Ak sa vrch farbí príliš rýchlo, prikry ho po 25 minútach alobalom.", "en": "Bake for 35 to 40 minutes until puffed and deep golden brown, underneath too. If the top colours too quickly, cover it with foil after 25 minutes.", "timerSeconds": 2250},
+      {"sk": "Nechaj ju aspoň 15 minút vychladnúť na plechu, aby plnka stuhla, potom ju posyp práškovým cukrom a nakrájaj ostrým nožom. Najlepšia je v deň pečenia; ďalší deň ju krátko zohrej v rúre, aby znova chrumkala.", "en": "Let it cool on the tray for at least 15 minutes so the filling sets, then dust with icing sugar and slice with a sharp knife. It is best on the day it is baked; the next day, warm it briefly in the oven so it crisps up again.", "timerSeconds": 900}
+    ]
+  },
+  {
+    "id": "tvarohovy-kolac-na-plech",
+    "title": {"sk": "Tvarohový koláč na plech s hrozienkami", "en": "Sheet-pan quark cake with raisins"},
+    "description": {"sk": "Krehký korpus s hrubou vrstvou citrónovej tvarohovej plnky.", "en": "A short base with a thick layer of lemony quark filling."},
+    "cuisine": "SLOVAK_CZECH",
+    "mealTypes": ["DESSERT", "SNACK"],
+    "totalTimeMin": 75,
+    "activeTimeMin": 25,
+    "difficulty": 2,
+    "servings": 12,
+    "equipment": ["OVEN"],
+    "tags": ["MEAL_PREP"],
+    "ingredients": [
+      {"id": "wheat-flour", "amount": 250, "unit": "G", "role": "MAIN"},
+      {"id": "butter", "amount": 125, "unit": "G", "role": "SECONDARY", "note": {"sk": "studené", "en": "cold"}},
+      {"id": "sugar", "amount": 150, "unit": "G", "role": "SECONDARY"},
+      {"id": "egg", "amount": 3, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "baking-powder", "amount": 1, "unit": "PCS", "role": "SEASONING"},
+      {"id": "tvaroh", "amount": 500, "unit": "G", "role": "MAIN"},
+      {"id": "vanilla-sugar", "amount": 1, "unit": "PCS", "role": "SEASONING"},
+      {"id": "lemon", "amount": 2, "unit": "TBSP", "role": "SEASONING", "note": {"sk": "kôra a šťava", "en": "zest and juice"}},
+      {"id": "raisins", "amount": 50, "unit": "G", "role": "SECONDARY"},
+      {"id": "salt", "amount": 1, "unit": "PINCH", "role": "SEASONING"}
+    ],
+    "steps": [
+      {"sk": "Rúru predhrej na 180 °C a plech asi 25 × 35 cm vystel papierom na pečenie. Hrozienka zalej horúcou vodou, aby napučali, a citrón umy horúcou vodou, nastrúhaj z neho kôru a vytlač šťavu.", "en": "Preheat the oven to 180 °C and line a tray of about 25 × 35 cm with baking paper. Pour hot water over the raisins to plump them, scrub the lemon in hot water, grate its zest and squeeze the juice."},
+      {"sk": "Múku zmiešaj s práškom do pečiva, 60 g cukru a štipkou soli, pridaj studené maslo na kocky a prstami ho rýchlo rozotri na drobky. Pridaj 1 vajce a krátko vypracuj krehké cesto – dlhým miesením by stvrdlo.", "en": "Mix the flour with the baking powder, 60 g of the sugar and a pinch of salt, add the cold butter in cubes and quickly rub it in with your fingertips to crumbs. Add 1 egg and briefly work it into a short dough; long kneading makes it tough."},
+      {"sk": "Cesto rukami rozprestri a pritlač na dno plechu do rovnomernej vrstvy, okraje vytiahni asi 1 cm nahor. Daj ho na 10 minút do chladničky, kým pripravíš plnku – vychladené sa pri pečení nezmršti.", "en": "Press the dough evenly over the base of the tray with your hands, pushing it about 1 cm up the sides. Chill it for 10 minutes while you make the filling; chilled, it does not shrink as it bakes.", "timerSeconds": 600},
+      {"sk": "Tvaroh vymiešaj so zvyšným cukrom, vanilkovým cukrom, 2 vajcami, citrónovou kôrou a šťavou do hladkého krému a vmiešaj scedené hrozienka. Ak je tvaroh hrudkovitý, najprv ho pretlač cez sitko.", "en": "Beat the quark with the rest of the sugar, the vanilla sugar, 2 eggs and the lemon zest and juice into a smooth cream and stir in the drained raisins. If the quark is lumpy, push it through a sieve first."},
+      {"sk": "Plnku rozotri na cesto a peč 40 až 45 minút, kým nie je plnka v strede stuhnutá a na okrajoch zlatistá. Pri zatrasení plechom sa má stred už len jemne chvieť; v rúre by inak popraskal.", "en": "Spread the filling over the base and bake for 40 to 45 minutes until it is set in the middle and golden at the edges. The centre should only tremble slightly when you shake the tray; left longer it cracks.", "timerSeconds": 2550},
+      {"sk": "Koláč nechaj úplne vychladnúť v plechu a až potom ho nakrájaj na 12 kúskov – teplá plnka by sa trhala. V chladničke vydrží 4 dni a chutí ešte lepšie na druhý deň.", "en": "Let the cake cool completely in the tray before cutting it into 12 pieces; warm filling would tear. It keeps for 4 days in the fridge and tastes even better on the second day."}
+    ]
+  },
+  {
+    "id": "bublanina-s-cucoriedkami",
+    "title": {"sk": "Bublanina s čučoriedkami", "en": "Blueberry sponge traybake (bublanina)"},
+    "description": {"sk": "Ľahký piškótový koláč, do ktorého pri pečení zapadnú čučoriedky.", "en": "A light sponge traybake into which the blueberries sink as it bakes."},
+    "cuisine": "SLOVAK_CZECH",
+    "mealTypes": ["DESSERT", "SNACK"],
+    "totalTimeMin": 50,
+    "activeTimeMin": 15,
+    "difficulty": 1,
+    "servings": 10,
+    "equipment": ["OVEN"],
+    "ingredients": [
+      {"id": "egg", "amount": 4, "unit": "PCS", "role": "MAIN"},
+      {"id": "sugar", "amount": 150, "unit": "G", "role": "SECONDARY"},
+      {"id": "wheat-flour", "amount": 200, "unit": "G", "role": "MAIN"},
+      {"id": "milk", "amount": 100, "unit": "ML", "role": "SECONDARY"},
+      {"id": "sunflower-oil", "amount": 80, "unit": "ML", "role": "SECONDARY"},
+      {"id": "baking-powder", "amount": 1, "unit": "PCS", "role": "SEASONING"},
+      {"id": "vanilla-sugar", "amount": 1, "unit": "PCS", "role": "SEASONING"},
+      {"id": "blueberry", "amount": 300, "unit": "G", "role": "MAIN"},
+      {"id": "salt", "amount": 1, "unit": "PINCH", "role": "SEASONING"},
+      {"id": "powdered-sugar", "amount": 1, "unit": "TBSP", "role": "SEASONING", "optional": true}
+    ],
+    "steps": [
+      {"sk": "Rúru predhrej na 180 °C a plech asi 25 × 35 cm vystel papierom na pečenie. Čučoriedky umy a nechaj ich dôkladne odkvapkať; mrazené nerozmrazuj, použi ich priamo z mrazničky.", "en": "Preheat the oven to 180 °C and line a tray of about 25 × 35 cm with baking paper. Wash the blueberries and let them drain well; do not thaw frozen ones, use them straight from the freezer."},
+      {"sk": "Vajcia vyšľahaj s cukrom, vanilkovým cukrom a štipkou soli metlou alebo mixérom 5 minút, kým zmes nezosvetlie a nezdvojnásobí objem. Táto vzdušnosť je jediné, čo bublaninu nadvihne, preto šľahanie neskracuj.", "en": "Whisk the eggs with the sugar, vanilla sugar and a pinch of salt by hand or with a mixer for 5 minutes until pale and doubled in volume. That airiness is what lifts the sponge, so do not cut the whisking short.", "timerSeconds": 300},
+      {"sk": "Za stáleho miešania pomaly prilej olej a mlieko. Múku zmiešaj s práškom do pečiva, preosej ju na zmes a stierkou ju zľahka vmiešaj krúživým pohybom zdola nahor, kým nezmiznú suché miesta.", "en": "Slowly pour in the oil and milk while stirring. Mix the flour with the baking powder, sift it over the mixture and fold it in gently with a spatula, lifting from the bottom, until no dry patches remain."},
+      {"sk": "Cesto vylej na plech, uhlaď ho a rovnomerne naň rozsyp čučoriedky. Peč 25 až 30 minút, kým bublanina nie je zlatistá a špajdľa zapichnutá do stredu nevyjde suchá; čučoriedky pritom zapadnú a okolo nich vzniknú bublinky.", "en": "Pour the batter into the tray, smooth it and scatter the blueberries evenly over it. Bake for 25 to 30 minutes until golden and a skewer pushed into the centre comes out dry; the berries sink and little bubbles form around them.", "timerSeconds": 1650},
+      {"sk": "Nechaj ju vychladnúť v plechu, posyp práškovým cukrom a nakrájaj na štvorce. Prikrytá utierkou vydrží 3 dni; namiesto čučoriedok môžeš použiť ríbezle, marhule alebo slivky.", "en": "Let it cool in the tray, dust with icing sugar and cut into squares. Covered with a tea towel it keeps for 3 days; instead of blueberries you can use redcurrants, apricots or plums."}
+    ]
+  },
+  {
+    "id": "kysnute-buchty-s-lekvarom",
+    "title": {"sk": "Kysnuté buchty s lekvárom", "en": "Yeast buns filled with plum jam"},
+    "description": {"sk": "Mäkké maslové buchty z rúry s lekvárom vnútri, ako od babky.", "en": "Soft buttery baked buns with plum jam inside, the way grandma made them."},
+    "cuisine": "SLOVAK_CZECH",
+    "mealTypes": ["DESSERT", "SNACK"],
+    "totalTimeMin": 160,
+    "activeTimeMin": 45,
+    "difficulty": 3,
+    "servings": 12,
+    "equipment": ["OVEN"],
+    "tags": ["FREEZER_FRIENDLY"],
+    "ingredients": [
+      {"id": "wheat-flour", "amount": 500, "unit": "G", "role": "MAIN"},
+      {"id": "milk", "amount": 250, "unit": "ML", "role": "SECONDARY"},
+      {"id": "dry-yeast", "amount": 1, "unit": "PCS", "role": "SEASONING"},
+      {"id": "sugar", "amount": 60, "unit": "G", "role": "SECONDARY"},
+      {"id": "egg", "amount": 2, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "butter", "amount": 80, "unit": "G", "role": "SECONDARY"},
+      {"id": "vanilla-sugar", "amount": 1, "unit": "PCS", "role": "SEASONING"},
+      {"id": "salt", "amount": 0.5, "unit": "TSP", "role": "SEASONING"},
+      {"id": "jam", "amount": 250, "unit": "G", "role": "MAIN", "note": {"sk": "slivkový lekvár", "en": "plum jam"}},
+      {"id": "powdered-sugar", "amount": 2, "unit": "TBSP", "role": "SEASONING"}
+    ],
+    "steps": [
+      {"sk": "Mlieko zohrej na vlažnú teplotu (asi 37 °C), rozmiešaj v ňom lyžičku cukru a droždie a nechaj 10 minút stáť, kým sa nespení. Ak sa nespení vôbec, droždie je staré a cesto by nevykyslo.", "en": "Warm the milk until lukewarm (about 37 °C), stir in a teaspoon of the sugar and the yeast and leave for 10 minutes until frothy. If it does not foam at all, the yeast is stale and the dough will not rise.", "timerSeconds": 600},
+      {"sk": "Do misky preosej múku, pridaj zvyšný cukor, vanilkový cukor, soľ, 1 vajce, 50 g rozpusteného vlažného masla a mlieko s droždím. Mies cesto 10 minút, kým nie je hladké, pružné a neodlepí sa od misky.", "en": "Sift the flour into a bowl and add the rest of the sugar, the vanilla sugar, salt, 1 egg, 50 g of the melted lukewarm butter and the yeasty milk. Knead for 10 minutes until the dough is smooth, elastic and comes away from the bowl.", "timerSeconds": 600},
+      {"sk": "Misku prikry utierkou a cesto nechaj na teplom mieste bez prievanu kysnúť 1 hodinu, kým nezdvojnásobí objem. Rúru predhrej na 180 °C a zapekaciu misu asi 25 × 30 cm vymasti maslom.", "en": "Cover the bowl with a tea towel and leave the dough to rise in a warm, draught-free place for 1 hour until doubled. Preheat the oven to 180 °C and butter a baking dish of about 25 × 30 cm.", "timerSeconds": 3600},
+      {"sk": "Vykysnuté cesto rozvaľkaj na pomúčenej doske na hrúbku 1 cm a nakrájaj na 12 štvorcov. Do stredu každého daj lyžicu lekváru, zober rohy dohromady a okraje dôkladne zlep, aby lekvár pri pečení nevytiekol.", "en": "Roll the risen dough out on a floured board to 1 cm thick and cut it into 12 squares. Put a spoonful of jam in the middle of each, bring the corners together and pinch the edges firmly so the jam cannot leak out while baking."},
+      {"sk": "Buchty ukladaj do misy spojom nadol tesne vedľa seba a každú potri rozpusteným maslom, aby sa po upečení dali oddeliť. Nechaj ich ešte 20 minút podkysnúť a potom ich potri rozšľahaným vajcom.", "en": "Lay the buns seam side down in the dish, close together, brushing each with melted butter so they pull apart after baking. Leave them to rise for another 20 minutes, then brush the tops with beaten egg.", "timerSeconds": 1200},
+      {"sk": "Peč 30 až 35 minút, kým nie sú buchty navrchu zlatohnedé a pri poklepaní na spodok znejú duto. Nechaj ich vychladnúť v mise, posyp práškovým cukrom a podávaj s mliekom alebo kakaom; zamrazené vydržia mesiac.", "en": "Bake for 30 to 35 minutes until golden brown on top and they sound hollow when tapped underneath. Let them cool in the dish, dust with icing sugar and serve with milk or cocoa; frozen, they keep for a month.", "timerSeconds": 1950}
+    ]
+  },
+  {
+    "id": "zemlovka-s-jablkami-a-tvarohom",
+    "title": {"sk": "Žemľovka s jablkami a tvarohom", "en": "Bread pudding with apples and quark"},
+    "description": {"sk": "Zapekané rožky namočené v mlieku s vrstvou jabĺk a tvarohu – výborná vec zo starého pečiva.", "en": "Baked milk-soaked rolls layered with apples and quark: a great use for stale bread."},
+    "cuisine": "SLOVAK_CZECH",
+    "mealTypes": ["DESSERT"],
+    "totalTimeMin": 65,
+    "activeTimeMin": 20,
+    "difficulty": 1,
+    "servings": 6,
+    "equipment": ["OVEN"],
+    "tags": ["COMFORT"],
+    "ingredients": [
+      {"id": "bread-roll", "amount": 6, "unit": "PCS", "role": "MAIN", "note": {"sk": "deň staré", "en": "a day old"}},
+      {"id": "milk", "amount": 400, "unit": "ML", "role": "SECONDARY"},
+      {"id": "egg", "amount": 3, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "sugar", "amount": 70, "unit": "G", "role": "SECONDARY"},
+      {"id": "vanilla-sugar", "amount": 1, "unit": "PCS", "role": "SEASONING"},
+      {"id": "apple", "amount": 3, "unit": "PCS", "role": "MAIN"},
+      {"id": "tvaroh", "amount": 250, "unit": "G", "role": "SECONDARY"},
+      {"id": "cinnamon", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "butter", "amount": 30, "unit": "G", "role": "SECONDARY"},
+      {"id": "salt", "amount": 1, "unit": "PINCH", "role": "SEASONING"},
+      {"id": "raisins", "amount": 40, "unit": "G", "role": "SECONDARY", "optional": true}
+    ],
+    "steps": [
+      {"sk": "Rúru predhrej na 180 °C a zapekaciu misu asi 20 × 30 cm vymasti maslom. Rožky nakrájaj na kolieska hrubé asi 1 cm; čerstvé by sa rozmočili na kašu, deň staré nasajú mlieko a držia tvar.", "en": "Preheat the oven to 180 °C and butter a baking dish of about 20 × 30 cm. Slice the rolls into rounds about 1 cm thick; fresh ones turn to mush, while day-old rolls soak up the milk and hold their shape."},
+      {"sk": "Mlieko rozšľahaj s vajcami, polovicou cukru, vanilkovým cukrom a štipkou soli. Jablká ošúp, nastrúhaj nahrubo a zmiešaj so škoricou a hrozienkami; tvaroh vymiešaj so zvyšným cukrom do hladka.", "en": "Whisk the milk with the eggs, half the sugar, the vanilla sugar and a pinch of salt. Peel and coarsely grate the apples and mix them with the cinnamon and raisins; beat the quark with the rest of the sugar until smooth."},
+      {"sk": "Na dno misy poukladaj polovicu rožkov a polej ich tretinou mliečnej zmesi. Rozotri na ne tvaroh, navrch rozlož jablká a prikry ich zvyšnými rožkami tesne vedľa seba.", "en": "Arrange half the bread in the bottom of the dish and pour over a third of the milk mixture. Spread the quark over it, top with the apples and cover with the remaining bread, packed closely together."},
+      {"sk": "Zalej všetko zvyšnou mliečnou zmesou a rožky jemne pritlač, aby boli celé ponorené. Nechaj 10 minút postáť, kým nasiaknu, a navrch poukladaj kúsky masla.", "en": "Pour over the rest of the milk mixture and press the bread down gently so it is all submerged. Leave for 10 minutes to soak, then dot the top with the butter.", "timerSeconds": 600},
+      {"sk": "Peč 35 až 40 minút, kým nie je žemľovka navrchu zlatohnedá a chrumkavá a pri stlačení v strede už nepúšťa tekutinu. Nechaj ju 10 minút postáť, aby sa dala pekne krájať, a podávaj teplú.", "en": "Bake for 35 to 40 minutes until golden brown and crisp on top and no liquid seeps out when you press the centre. Let it stand for 10 minutes so it slices neatly, and serve warm.", "timerSeconds": 2250}
+    ]
+  },
+  {
+    "id": "medovy-pernik-s-orechmi",
+    "title": {"sk": "Medový perník s orechmi", "en": "Honey gingerbread cake with walnuts"},
+    "description": {"sk": "Vláčny korenistý perník na plech, ktorý je najlepší po dni odležania.", "en": "A moist spiced honey traybake that is best after resting for a day."},
+    "cuisine": "SLOVAK_CZECH",
+    "mealTypes": ["DESSERT", "SNACK"],
+    "totalTimeMin": 55,
+    "activeTimeMin": 15,
+    "difficulty": 1,
+    "servings": 12,
+    "equipment": ["OVEN"],
+    "tags": ["MEAL_PREP"],
+    "ingredients": [
+      {"id": "wheat-flour", "amount": 300, "unit": "G", "role": "MAIN"},
+      {"id": "honey", "amount": 150, "unit": "G", "role": "SECONDARY"},
+      {"id": "brown-sugar", "amount": 100, "unit": "G", "role": "SECONDARY"},
+      {"id": "egg", "amount": 2, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "milk", "amount": 250, "unit": "ML", "role": "SECONDARY"},
+      {"id": "sunflower-oil", "amount": 100, "unit": "ML", "role": "SECONDARY"},
+      {"id": "cocoa", "amount": 2, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "baking-soda", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "cinnamon", "amount": 2, "unit": "TSP", "role": "SEASONING"},
+      {"id": "cloves", "amount": 0.25, "unit": "TSP", "role": "SEASONING"},
+      {"id": "ginger-ground", "amount": 0.5, "unit": "TSP", "role": "SEASONING"},
+      {"id": "salt", "amount": 1, "unit": "PINCH", "role": "SEASONING"},
+      {"id": "walnuts", "amount": 50, "unit": "G", "role": "SECONDARY"},
+      {"id": "dark-chocolate", "amount": 50, "unit": "G", "role": "SECONDARY", "optional": true}
+    ],
+    "steps": [
+      {"sk": "Rúru predhrej na 175 °C a plech asi 25 × 35 cm vystel papierom na pečenie. Med krátko zohrej v hrnčeku, aby bol tekutý, ale nie horúci – horúci med by vajcia zrazil.", "en": "Preheat the oven to 175 °C and line a tray of about 25 × 35 cm with baking paper. Warm the honey briefly in a small pan until runny but not hot; hot honey would scramble the eggs."},
+      {"sk": "Vo veľkej miske zmiešaj múku, kakao, sódu bikarbónu, škoricu, klinčeky, zázvor a soľ. V druhej miske rozšľahaj vajcia s hnedým cukrom, pridaj med, olej a mlieko a miešaj, kým sa nespoja.", "en": "In a large bowl mix the flour, cocoa, bicarbonate of soda, cinnamon, cloves, ginger and salt. In a second bowl whisk the eggs with the brown sugar, add the honey, oil and milk and stir until combined."},
+      {"sk": "Tekutú zmes vlej do suchej a metlou krátko premiešaj na hladké, dosť riedke cesto; nemiešaj dlho, perník by stvrdol. Orechy nahrubo nasekaj, polovicu vmiešaj do cesta a cesto vylej na plech.", "en": "Pour the wet mixture into the dry one and whisk briefly into a smooth, fairly runny batter; do not overmix or the cake turns tough. Roughly chop the walnuts, stir half into the batter and pour it into the tray."},
+      {"sk": "Posyp ho zvyšnými orechmi a peč 25 až 30 minút, kým špajdľa zapichnutá do stredu nevyjde suchá a perník sa pri stlačení prstom vráti späť. Pozor na pripálenie – med farbí povrch rýchlejšie ako pri bežnom koláči.", "en": "Scatter with the remaining walnuts and bake for 25 to 30 minutes until a skewer pushed into the middle comes out dry and the cake springs back when pressed. Watch for scorching: honey browns the top faster than an ordinary sponge.", "timerSeconds": 1650},
+      {"sk": "Nechaj ho vychladnúť v plechu, prípadne ho pokvapkaj rozpustenou čokoládou. Zabaľ ho do fólie a nechaj aspoň do druhého dňa odležať – zvláčnie a korenie sa rozvonia; vydrží týždeň.", "en": "Let it cool in the tray and drizzle with melted chocolate if you like. Wrap it in film and let it rest at least until the next day; it softens and the spices bloom. It keeps for a week."}
+    ]
+  },
+  {
+    "id": "mramorova-babovka",
+    "title": {"sk": "Mramorová bábovka", "en": "Marble bundt cake"},
+    "description": {"sk": "Svetlo-tmavá bábovka k nedeľnej káve, nadýchaná a vláčna.", "en": "A light-and-dark bundt cake for Sunday coffee, fluffy and moist."},
+    "cuisine": "SLOVAK_CZECH",
+    "mealTypes": ["DESSERT", "SNACK"],
+    "totalTimeMin": 75,
+    "activeTimeMin": 20,
+    "difficulty": 1,
+    "servings": 12,
+    "equipment": ["OVEN"],
+    "ingredients": [
+      {"id": "wheat-flour", "amount": 300, "unit": "G", "role": "MAIN"},
+      {"id": "sugar", "amount": 200, "unit": "G", "role": "SECONDARY"},
+      {"id": "egg", "amount": 4, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "milk", "amount": 200, "unit": "ML", "role": "SECONDARY"},
+      {"id": "sunflower-oil", "amount": 150, "unit": "ML", "role": "SECONDARY"},
+      {"id": "baking-powder", "amount": 1, "unit": "PCS", "role": "SEASONING"},
+      {"id": "vanilla-sugar", "amount": 1, "unit": "PCS", "role": "SEASONING"},
+      {"id": "cocoa", "amount": 2, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "salt", "amount": 1, "unit": "PINCH", "role": "SEASONING"},
+      {"id": "butter", "amount": 10, "unit": "G", "role": "SEASONING", "note": {"sk": "na formu", "en": "for the tin"}},
+      {"id": "breadcrumbs", "amount": 1, "unit": "TBSP", "role": "SEASONING", "note": {"sk": "na formu", "en": "for the tin"}},
+      {"id": "powdered-sugar", "amount": 1, "unit": "TBSP", "role": "SEASONING", "optional": true}
+    ],
+    "steps": [
+      {"sk": "Rúru predhrej na 170 °C. Formu na bábovku dôkladne vymasti maslom aj v záhyboch a vysyp strúhankou, prebytok vyklop. Bábovka sa potom po upečení ľahko uvoľní a nepotrhá sa.", "en": "Preheat the oven to 170 °C. Butter the bundt tin thoroughly, into every crease, dust it with breadcrumbs and tap out the excess. The cake will then release easily after baking without tearing."},
+      {"sk": "Vajcia vyšľahaj s cukrom, vanilkovým cukrom a štipkou soli 5 minút do svetlej hustej peny. Za stáleho šľahania pomaly prilievaj olej a potom mlieko.", "en": "Whisk the eggs with the sugar, vanilla sugar and a pinch of salt for 5 minutes into a pale, thick foam. Keep whisking while you slowly pour in the oil and then the milk.", "timerSeconds": 300},
+      {"sk": "Múku zmiešaj s práškom do pečiva, preosej ju na zmes a stierkou zľahka vmiešaj do hladkého cesta. Odober asi tretinu cesta do druhej misky a vmiešaj do nej kakao rozmiešané s 2 lyžicami mlieka.", "en": "Mix the flour with the baking powder, sift it over the mixture and fold it in gently with a spatula into a smooth batter. Transfer about a third of the batter to a second bowl and stir in the cocoa mixed with 2 tablespoons of milk."},
+      {"sk": "Do formy nalej polovicu svetlého cesta, potom všetko tmavé a navrch zvyšok svetlého. Vidličkou alebo špajdľou prejdi cestom dvakrát dokola v špirále – vznikne mramor; viac miešania by farby zlialo.", "en": "Pour half the plain batter into the tin, then all the chocolate batter and finally the rest of the plain. Draw a fork or skewer through it twice round in a spiral to create the marbling; more stirring would blend the colours."},
+      {"sk": "Peč 45 až 50 minút, kým špajdľa zapichnutá do najhrubšieho miesta nevyjde suchá. Prvých 30 minút rúru neotváraj, bábovka by spľasla.", "en": "Bake for 45 to 50 minutes until a skewer pushed into the thickest part comes out dry. Do not open the oven for the first 30 minutes or the cake will sink.", "timerSeconds": 2850},
+      {"sk": "Nechaj ju 10 minút vychladnúť vo forme, potom ju vyklop na mriežku a nechaj úplne vychladnúť. Posyp ju práškovým cukrom; zabalená do fólie zostane vláčna 4 dni.", "en": "Let it cool in the tin for 10 minutes, then turn it out onto a rack to cool completely. Dust with icing sugar; wrapped in film it stays moist for 4 days.", "timerSeconds": 600}
+    ]
+  },
+  {
+    "id": "linecke-kolaciky",
+    "title": {"sk": "Linecké koláčiky s džemom", "en": "Linzer jam cookies"},
+    "description": {"sk": "Krehké maslové koláčiky zlepené džemom, vianočná klasika.", "en": "Short buttery cookies sandwiched with jam, a Christmas classic."},
+    "cuisine": "SLOVAK_CZECH",
+    "mealTypes": ["DESSERT", "SNACK"],
+    "totalTimeMin": 100,
+    "activeTimeMin": 45,
+    "difficulty": 2,
+    "servings": 15,
+    "equipment": ["OVEN"],
+    "tags": ["MEAL_PREP"],
+    "ingredients": [
+      {"id": "wheat-flour", "amount": 300, "unit": "G", "role": "MAIN"},
+      {"id": "butter", "amount": 200, "unit": "G", "role": "MAIN", "note": {"sk": "studené", "en": "cold"}},
+      {"id": "powdered-sugar", "amount": 100, "unit": "G", "role": "SECONDARY"},
+      {"id": "egg", "amount": 1, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "vanilla-sugar", "amount": 1, "unit": "PCS", "role": "SEASONING"},
+      {"id": "lemon", "amount": 1, "unit": "TSP", "role": "SEASONING", "note": {"sk": "nastrúhaná kôra", "en": "grated zest"}},
+      {"id": "salt", "amount": 1, "unit": "PINCH", "role": "SEASONING"},
+      {"id": "jam", "amount": 150, "unit": "G", "role": "SECONDARY", "note": {"sk": "ríbezľový alebo jahodový", "en": "redcurrant or strawberry"}}
+    ],
+    "steps": [
+      {"sk": "Múku zmiešaj s práškovým cukrom, vanilkovým cukrom, citrónovou kôrou a štipkou soli. Pridaj studené maslo nakrájané na kocky a rýchlo ho prstami rozotri na drobky, potom pridaj vajce.", "en": "Mix the flour with the icing sugar, vanilla sugar, lemon zest and a pinch of salt. Add the cold butter in cubes and quickly rub it in with your fingertips to crumbs, then add the egg."},
+      {"sk": "Vypracuj hladké cesto len toľko, aby sa spojilo – teplom rúk sa maslo topí a koláčiky by neboli krehké. Rozdeľ ho na dve placky, zabaľ do fólie a daj aspoň na 30 minút do chladničky.", "en": "Work it into a smooth dough just until it comes together; the warmth of your hands melts the butter and the cookies would lose their shortness. Divide it into two discs, wrap in film and chill for at least 30 minutes.", "timerSeconds": 1800},
+      {"sk": "Rúru predhrej na 170 °C. Cesto rozvaľkaj na pomúčenej doske alebo medzi dvoma papiermi na hrúbku 3 mm a vykrajuj kolieska; z polovice z nich vykroj v strede malý otvor (okienko). Odrezky znova zhňav a vychlaď.", "en": "Preheat the oven to 170 °C. Roll the dough out on a floured board or between two sheets of paper to 3 mm and cut out rounds; cut a small hole (a window) in the middle of half of them. Gather up the scraps and chill them again."},
+      {"sk": "Koláčiky ukladaj na plech s papierom s malými rozostupmi a peč 8 až 10 minút, kým okraje len jemne nezozlatnú – majú zostať svetlé. Sú krehké, preto ich nechaj na plechu vychladnúť, kým ich prenesieš.", "en": "Lay the cookies on a lined tray slightly apart and bake for 8 to 10 minutes until the edges are only faintly golden; they should stay pale. They are fragile, so let them cool on the tray before moving them.", "timerSeconds": 540},
+      {"sk": "Celé koláčiky natri tenkou vrstvou džemu a prikry ich koláčikmi s okienkom, ktoré najprv posyp práškovým cukrom. Ulož ich do plechovky medzi papiere – po 2 až 3 dňoch zmäknú a sú najlepšie; vydržia 3 týždne.", "en": "Spread the whole cookies with a thin layer of jam and top them with the window cookies, dusted with icing sugar first. Store them in a tin between sheets of paper; after 2 to 3 days they soften and are at their best, and they keep for 3 weeks."}
+    ]
+  },
+  {
+    "id": "cokoladova-pena",
+    "title": {"sk": "Čokoládová pena", "en": "Chocolate mousse"},
+    "description": {"sk": "Vzdušná pena z horkej čokolády a šľahačky, bez surových vajec.", "en": "An airy mousse of dark chocolate and whipped cream, with no raw eggs."},
+    "cuisine": "FRENCH",
+    "mealTypes": ["DESSERT"],
+    "totalTimeMin": 250,
+    "activeTimeMin": 20,
+    "difficulty": 2,
+    "servings": 4,
+    "equipment": ["STOVE"],
+    "ingredients": [
+      {"id": "dark-chocolate", "amount": 150, "unit": "G", "role": "MAIN"},
+      {"id": "whipping-cream", "amount": 300, "unit": "ML", "role": "MAIN"},
+      {"id": "sugar", "amount": 1, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "vanilla-sugar", "amount": 0.5, "unit": "PCS", "role": "SEASONING"},
+      {"id": "salt", "amount": 1, "unit": "PINCH", "role": "SEASONING"},
+      {"id": "raspberry", "amount": 100, "unit": "G", "role": "SECONDARY", "optional": true}
+    ],
+    "steps": [
+      {"sk": "Čokoládu nalámaj na kúsky a daj ju do misky s 100 ml smotany a štipkou soli. Misku postav nad hrniec s jemne vriacou vodou tak, aby sa dno nedotýkalo vody, a miešaj, kým sa čokoláda úplne nerozpustí.", "en": "Break the chocolate into pieces and put it in a bowl with 100 ml of the cream and a pinch of salt. Set the bowl over a pan of barely simmering water without letting the base touch the water, and stir until the chocolate has completely melted."},
+      {"sk": "Čokoládový krém stiahni z pary a nechaj ho vychladnúť na vlažnú teplotu, asi 10 minút; má byť tekutý, ale nie teplý. Horúca čokoláda by šľahačku rozpustila a pena by spľasla.", "en": "Take the chocolate cream off the heat and let it cool until lukewarm, about 10 minutes; it should be fluid but not warm. Hot chocolate would melt the whipped cream and the mousse would collapse.", "timerSeconds": 600},
+      {"sk": "Zvyšnú vychladenú smotanu vyšľahaj s cukrom a vanilkovým cukrom do mäkkých špičiek – šľahačka má držať tvar, ale ešte byť krémová. Prešľahaná šľahačka by bola zrnitá a pena by nebola hladká.", "en": "Whip the remaining chilled cream with the sugar and vanilla sugar to soft peaks; it should hold its shape but still be creamy. Over-whipped cream turns grainy and the mousse would not be smooth."},
+      {"sk": "Do čokolády vmiešaj najprv tretinu šľahačky, aby zmes zjemnela, a potom zvyšok jemne vmiešaj stierkou krúživým pohybom zdola nahor, kým nezmiznú biele pruhy. Nemiešaj prudko, vzduch by unikol.", "en": "Stir a third of the cream into the chocolate first to loosen it, then gently fold in the rest with a spatula, lifting from the bottom, until no white streaks remain. Do not stir hard or the air escapes."},
+      {"sk": "Penu rozdeľ do štyroch pohárov a daj aspoň na 4 hodiny do chladničky, aby stuhla. Podávaj ju s malinami, ktorých kyslosť krásne vyváži bohatú čokoládu; vydrží 2 dni.", "en": "Divide the mousse between four glasses and chill for at least 4 hours to set. Serve with raspberries, whose sharpness balances the rich chocolate beautifully; it keeps for 2 days.", "timerSeconds": 14400}
+    ]
+  },
+  {
+    "id": "clafoutis-so-slivkami",
+    "title": {"sk": "Clafoutis so slivkami", "en": "Plum clafoutis"},
+    "description": {"sk": "Francúzsky ovocný nákyp, niečo medzi palacinkou a pudingom.", "en": "A French baked fruit dessert, somewhere between a pancake and a custard."},
+    "cuisine": "FRENCH",
+    "mealTypes": ["DESSERT"],
+    "totalTimeMin": 55,
+    "activeTimeMin": 15,
+    "difficulty": 1,
+    "servings": 6,
+    "equipment": ["OVEN"],
+    "ingredients": [
+      {"id": "plum", "amount": 400, "unit": "G", "role": "MAIN"},
+      {"id": "egg", "amount": 3, "unit": "PCS", "role": "MAIN"},
+      {"id": "milk", "amount": 250, "unit": "ML", "role": "SECONDARY"},
+      {"id": "wheat-flour", "amount": 70, "unit": "G", "role": "SECONDARY"},
+      {"id": "sugar", "amount": 70, "unit": "G", "role": "SECONDARY"},
+      {"id": "butter", "amount": 20, "unit": "G", "role": "SECONDARY"},
+      {"id": "vanilla-sugar", "amount": 1, "unit": "PCS", "role": "SEASONING"},
+      {"id": "salt", "amount": 1, "unit": "PINCH", "role": "SEASONING"},
+      {"id": "powdered-sugar", "amount": 1, "unit": "TBSP", "role": "SEASONING", "optional": true}
+    ],
+    "steps": [
+      {"sk": "Rúru predhrej na 190 °C a zapekaciu misu s priemerom asi 24 cm vymasti maslom a posyp lyžicou cukru. Slivky umy, rozpoľ, vykôstkuj a polož ich do misy reznou stranou nahor tesne vedľa seba.", "en": "Preheat the oven to 190 °C, butter a baking dish about 24 cm across and sprinkle it with a spoonful of the sugar. Wash, halve and stone the plums and lay them in the dish cut side up, close together."},
+      {"sk": "V miske rozšľahaj vajcia so zvyšným cukrom, vanilkovým cukrom a štipkou soli. Pridaj múku a metlou vymiešaj do hladka, potom postupne prilievaj mlieko – vznikne riedke cesto ako na palacinky.", "en": "Whisk the eggs with the rest of the sugar, the vanilla sugar and a pinch of salt in a bowl. Add the flour and whisk until smooth, then gradually pour in the milk to make a thin batter like crêpe batter."},
+      {"sk": "Zvyšné maslo rozpusti a vmiešaj do cesta. Ak máš čas, nechaj cesto 15 minút odpočinúť – múka napučí a clafoutis bude jemnejšie.", "en": "Melt the rest of the butter and stir it into the batter. If you have time, let the batter rest for 15 minutes; the flour swells and the clafoutis turns out silkier.", "timerSeconds": 900},
+      {"sk": "Cesto opatrne vlej na slivky a peč 35 až 40 minút, kým nie je nafúknuté, na okrajoch zlatohnedé a v strede stuhnuté – pri zatrasení sa už nechveje. Po vybratí trochu klesne, to je normálne.", "en": "Carefully pour the batter over the plums and bake for 35 to 40 minutes until puffed, golden brown at the edges and set in the middle; it no longer wobbles when shaken. It sinks a little as it cools, which is normal.", "timerSeconds": 2250},
+      {"sk": "Nechaj ho 10 minút vychladnúť, posyp práškovým cukrom a podávaj vlažné, najlepšie s lyžicou jogurtu alebo šľahačky. Mimo sezóny sliviek ho urob s čerešňami, hruškami alebo mrazeným ovocím.", "en": "Let it cool for 10 minutes, dust with icing sugar and serve warm, ideally with a spoonful of yogurt or cream. Out of plum season, make it with cherries, pears or frozen fruit.", "timerSeconds": 600}
+    ]
+  },
+  {
+    "id": "palacinky-s-pomarancovym-maslom",
+    "title": {"sk": "Palacinky s pomarančovým maslom", "en": "Crêpes with orange butter"},
+    "description": {"sk": "Tenké palacinky v lesklej omáčke z karamelu, masla a pomarančovej šťavy.", "en": "Thin crêpes in a glossy sauce of caramel, butter and orange juice."},
+    "cuisine": "FRENCH",
+    "mealTypes": ["DESSERT"],
+    "totalTimeMin": 45,
+    "activeTimeMin": 40,
+    "difficulty": 2,
+    "servings": 4,
+    "equipment": ["STOVE"],
+    "ingredients": [
+      {"id": "wheat-flour", "amount": 125, "unit": "G", "role": "MAIN"},
+      {"id": "milk", "amount": 300, "unit": "ML", "role": "MAIN"},
+      {"id": "egg", "amount": 2, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "butter", "amount": 60, "unit": "G", "role": "SECONDARY"},
+      {"id": "sugar", "amount": 60, "unit": "G", "role": "SECONDARY"},
+      {"id": "orange", "amount": 2, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "salt", "amount": 1, "unit": "PINCH", "role": "SEASONING"}
+    ],
+    "steps": [
+      {"sk": "Múku so štipkou soli a lyžicou cukru preosej do misky, pridaj vajcia a polovicu mlieka a metlou vymiešaj do hladka. Potom prilej zvyšné mlieko a 20 g rozpusteného masla; cesto nechaj 20 minút odpočinúť.", "en": "Sift the flour with a pinch of salt and a spoonful of the sugar into a bowl, add the eggs and half the milk and whisk until smooth. Then add the rest of the milk and 20 g of melted butter; let the batter rest for 20 minutes.", "timerSeconds": 1200},
+      {"sk": "Nepriľnavú panvicu zohrej na strednom ohni a potri ju kvapkou masla. Nalej naberačku cesta a krúživým pohybom ho rozlej na tenkú vrstvu; peč asi minútu, kým okraje nezozlatnú, obráť a peč ešte 30 sekúnd.", "en": "Heat a non-stick pan over a medium heat and brush it with a little butter. Pour in a ladle of batter and swirl it into a thin layer; cook for about a minute until the edges turn golden, flip and cook for 30 seconds more."},
+      {"sk": "Upeč tak 8 tenkých palaciniek a ukladaj ich na seba na tanier. Z pomarančov nastrúhaj kôru z jedného a z oboch vytlač šťavu – mala by vyjsť asi 200 ml.", "en": "Make 8 thin crêpes this way and stack them on a plate. Grate the zest from one orange and squeeze the juice from both; you should have about 200 ml."},
+      {"sk": "Do širokej panvice nasyp zvyšný cukor a na strednom ohni ho bez miešania nechaj roztopiť na svetlý karamel, len panvicou krúž. Pridaj zvyšné maslo, a keď sa spení, opatrne prilej pomarančovú šťavu – karamel zasyčí a stuhne.", "en": "Tip the rest of the sugar into a wide frying pan and let it melt over a medium heat into a light caramel without stirring, just swirling the pan. Add the remaining butter, and once it foams, carefully pour in the orange juice; the caramel will hiss and seize."},
+      {"sk": "Miešaj 2 až 3 minúty, kým sa karamel znova nerozpustí a omáčka trochu nezhustne, a pridaj kôru. Palacinky po jednej prelož na štvrtiny, vlož do omáčky a obráť, aby nasiakli.", "en": "Stir for 2 to 3 minutes until the caramel dissolves again and the sauce thickens slightly, then add the zest. Fold the crêpes into quarters one at a time, lay them in the sauce and turn them so they soak it up.", "timerSeconds": 150},
+      {"sk": "Podávaj ich hneď po dve na tanieri, prelievané teplou omáčkou z panvice. Ak chceš, pridaj navrch plátky pomaranča alebo lyžicu jogurtu na osvieženie.", "en": "Serve at once, two per plate, with the warm sauce from the pan spooned over. Add orange slices or a spoonful of yogurt on top for freshness if you like."}
+    ]
+  },
+  {
+    "id": "churros-s-cokoladou",
+    "title": {"sk": "Churros s čokoládovou omáčkou", "en": "Churros with chocolate sauce"},
+    "description": {"sk": "Chrumkavé španielske pečivo obalené v škoricovom cukre, na namáčanie do čokolády.", "en": "Crisp Spanish fried pastry rolled in cinnamon sugar, for dipping in chocolate."},
+    "cuisine": "SPANISH",
+    "mealTypes": ["DESSERT", "SNACK"],
+    "totalTimeMin": 40,
+    "activeTimeMin": 40,
+    "difficulty": 2,
+    "servings": 4,
+    "equipment": ["STOVE"],
+    "ingredients": [
+      {"id": "wheat-flour", "amount": 150, "unit": "G", "role": "MAIN"},
+      {"id": "butter", "amount": 30, "unit": "G", "role": "SECONDARY"},
+      {"id": "sugar", "amount": 50, "unit": "G", "role": "SECONDARY"},
+      {"id": "cinnamon", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "salt", "amount": 1, "unit": "PINCH", "role": "SEASONING"},
+      {"id": "sunflower-oil", "amount": 100, "unit": "ML", "role": "SECONDARY", "note": {"sk": "na vyprážanie, nasiakne len časť", "en": "for frying; only part is absorbed"}},
+      {"id": "dark-chocolate", "amount": 100, "unit": "G", "role": "SECONDARY"},
+      {"id": "milk", "amount": 150, "unit": "ML", "role": "SECONDARY"}
+    ],
+    "steps": [
+      {"sk": "Do hrnca nalej 250 ml vody, pridaj maslo, lyžicu cukru a štipku soli a priveď do varu. Stiahni hrniec z ohňa, naraz vsyp múku a vareškou energicky miešaj, kým nevznikne hladké cesto, ktoré sa odlepí od stien.", "en": "Put 250 ml of water in a pan with the butter, a spoonful of the sugar and a pinch of salt and bring to the boil. Take it off the heat, add the flour all at once and beat hard with a wooden spoon until a smooth dough forms and leaves the sides of the pan."},
+      {"sk": "Cesto nechaj 5 minút vychladnúť a naplň ním cukrárske vrecko s hviezdicovou koncovkou (alebo pevné mrazničkové vrecko s odstrihnutým rohom). Hviezdicové ryhy sú dôležité – hladké churros môžu pri vyprážaní prasknúť.", "en": "Let the dough cool for 5 minutes and spoon it into a piping bag fitted with a star nozzle (or a sturdy freezer bag with a corner cut off). The star ridges matter: smooth churros can burst while frying.", "timerSeconds": 300},
+      {"sk": "V hlbokej panvici zohrej olej do výšky 2 cm na 180 °C – kúsok cesta v ňom má hneď syčať. Vytláčaj do oleja pásy dlhé asi 12 cm, odstrihávaj ich nožnicami a vyprážaj po 4 kusoch 2 až 3 minúty, kým nie sú zlatohnedé.", "en": "Heat 2 cm of oil in a deep frying pan to 180 °C; a scrap of dough should sizzle at once. Pipe 12 cm lengths into the oil, snipping them off with scissors, and fry 4 at a time for 2 to 3 minutes until golden brown.", "timerSeconds": 180},
+      {"sk": "Churros nechaj odkvapkať na papierovej utierke a ešte horúce ich obaľ v zvyšnom cukre zmiešanom so škoricou. Cukor sa prilepí len na teplé pečivo, preto nečakaj.", "en": "Drain the churros on kitchen paper and roll them while still hot in the remaining sugar mixed with the cinnamon. The sugar only sticks to warm pastry, so do not wait."},
+      {"sk": "Na omáčku zohrej mlieko, kým nezačne vrieť, stiahni ho z ohňa a vmiešaj nalámanú čokoládu, kým sa nerozpustí do hladkého krému. Podávaj churros hneď, teplé a chrumkavé, s hrnčekom čokolády na namáčanie.", "en": "For the sauce, heat the milk until it just boils, take it off the heat and stir in the broken chocolate until it melts into a smooth cream. Serve the churros at once, warm and crisp, with a cup of chocolate for dipping."}
+    ]
+  },
+  {
+    "id": "arroz-con-leche",
+    "title": {"sk": "Arroz con leche – ryžový puding so škoricou a citrónom", "en": "Arroz con leche: rice pudding with cinnamon and lemon"},
+    "description": {"sk": "Krémová španielska ryža v mlieku, voňajúca citrónovou kôrou a škoricou.", "en": "Creamy Spanish rice cooked in milk, fragrant with lemon peel and cinnamon."},
+    "cuisine": "SPANISH",
+    "mealTypes": ["DESSERT"],
+    "totalTimeMin": 55,
+    "activeTimeMin": 15,
+    "difficulty": 1,
+    "servings": 4,
+    "equipment": ["STOVE"],
+    "tags": ["COMFORT"],
+    "ingredients": [
+      {"id": "arborio-rice", "amount": 100, "unit": "G", "role": "MAIN"},
+      {"id": "milk", "amount": 800, "unit": "ML", "role": "MAIN"},
+      {"id": "sugar", "amount": 70, "unit": "G", "role": "SECONDARY"},
+      {"id": "cinnamon", "amount": 1, "unit": "PCS", "role": "SEASONING", "note": {"sk": "celá škorica + mletá navrch", "en": "a stick, plus ground to finish"}},
+      {"id": "lemon", "amount": 1, "unit": "TSP", "role": "SEASONING", "note": {"sk": "pásik kôry", "en": "a strip of peel"}},
+      {"id": "butter", "amount": 10, "unit": "G", "role": "SECONDARY"},
+      {"id": "salt", "amount": 1, "unit": "PINCH", "role": "SEASONING"}
+    ],
+    "steps": [
+      {"sk": "Z citróna umytého horúcou vodou odkroj škrabkou dlhý pásik kôry bez bielej časti, ktorá horkne. Ryžu krátko prepláchni a nechaj odkvapkať – neprepieraj ju dlho, škrob na povrchu puding zahustí.", "en": "Pare a long strip of peel from a lemon scrubbed in hot water, leaving behind the bitter white pith. Rinse the rice briefly and let it drain; do not wash it for long, as the surface starch thickens the pudding."},
+      {"sk": "Do hrnca s hrubým dnom nalej mlieko, pridaj škoricu, citrónovú kôru a štipku soli a priveď ho do varu. Stráž ho – mlieko pri vare rado vykypí a pripáli sa.", "en": "Pour the milk into a heavy-based pan, add the cinnamon stick, lemon peel and a pinch of salt and bring it to the boil. Watch it, as milk boils over and scorches easily."},
+      {"sk": "Vsyp ryžu, zníž oheň na minimum a var bez pokrievky 35 až 40 minút. Miešaj každých 5 minút až po dno, aby sa ryža neprilepila; postupne zmäkne a mlieko zhustne na krém.", "en": "Add the rice, turn the heat right down and simmer uncovered for 35 to 40 minutes. Stir right to the bottom every 5 minutes so the rice does not stick; it gradually softens and the milk thickens into a cream.", "timerSeconds": 2250},
+      {"sk": "Keď je ryža úplne mäkká a puding hustý ako riedka kaša, vmiešaj cukor a maslo a var ešte 3 minúty. Vylov škoricu a kôru; pri chladnutí ešte zhustne, preto ho nevar príliš hustý.", "en": "When the rice is completely soft and the pudding as thick as a loose porridge, stir in the sugar and butter and cook for 3 minutes more. Fish out the cinnamon and peel; it thickens further as it cools, so do not cook it too thick.", "timerSeconds": 180},
+      {"sk": "Rozlej ho do misiek a posyp mletou škoricou. V Španielsku sa je vychladený z chladničky, ale chutí aj teplý; prikrytý vydrží v chladničke 3 dni.", "en": "Pour it into bowls and dust with ground cinnamon. In Spain it is eaten chilled from the fridge, but it is lovely warm too; covered, it keeps in the fridge for 3 days."}
+    ]
+  },
+  {
+    "id": "gajar-halwa",
+    "title": {"sk": "Gajar halwa – indický mrkvový dezert", "en": "Gajar halwa: Indian carrot pudding"},
+    "description": {"sk": "Mrkva pomaly varená v mlieku s maslom, cukrom, mandľami a hrozienkami.", "en": "Carrots slowly cooked in milk with butter, sugar, almonds and raisins."},
+    "cuisine": "INDIAN",
+    "mealTypes": ["DESSERT"],
+    "totalTimeMin": 65,
+    "activeTimeMin": 20,
+    "difficulty": 1,
+    "servings": 4,
+    "equipment": ["STOVE"],
+    "ingredients": [
+      {"id": "carrot", "amount": 6, "unit": "PCS", "role": "MAIN"},
+      {"id": "milk", "amount": 500, "unit": "ML", "role": "MAIN"},
+      {"id": "sugar", "amount": 80, "unit": "G", "role": "SECONDARY"},
+      {"id": "butter", "amount": 30, "unit": "G", "role": "SECONDARY"},
+      {"id": "almonds", "amount": 30, "unit": "G", "role": "SECONDARY"},
+      {"id": "raisins", "amount": 30, "unit": "G", "role": "SECONDARY"},
+      {"id": "vanilla-sugar", "amount": 0.5, "unit": "PCS", "role": "SEASONING"},
+      {"id": "salt", "amount": 1, "unit": "PINCH", "role": "SEASONING"},
+      {"id": "cashews", "amount": 20, "unit": "G", "role": "SECONDARY", "optional": true}
+    ],
+    "steps": [
+      {"sk": "Mrkvu ošúp a nastrúhaj na jemnejšom strúhadle. Mandle nahrubo nasekaj. V širokom hrnci s hrubým dnom priveď mlieko do varu a pridaj mrkvu.", "en": "Peel the carrots and grate them on the finer side of the grater. Roughly chop the almonds. Bring the milk to the boil in a wide heavy-based pan and add the carrots."},
+      {"sk": "Var na miernom až strednom ohni bez pokrievky 35 až 40 minút a pravidelne miešaj, najmä ku koncu. Mlieko sa postupne odparí a mrkva ho celé nasaje; zmes musí byť takmer suchá.", "en": "Simmer uncovered over a low to medium heat for 35 to 40 minutes, stirring regularly and more often towards the end. The milk gradually evaporates and the carrot absorbs it all; the mixture should be almost dry.", "timerSeconds": 2250},
+      {"sk": "Pridaj cukor a štipku soli a miešaj ďalších 5 minút – cukor sa roztopí, zmes znova trochu zvlhne a potom zhustne. Neodchádzaj od sporáka, teraz sa halwa ľahko pripáli.", "en": "Add the sugar and a pinch of salt and stir for another 5 minutes; the sugar melts, the mixture loosens briefly and then thickens again. Do not leave the stove now, as the halwa catches easily.", "timerSeconds": 300},
+      {"sk": "Vmiešaj maslo, vanilkový cukor, hrozienka a väčšinu mandlí a kešu a opekaj za stáleho miešania 5 minút, kým sa halwa neleskne a nezačne sa odlepovať od dna. Farba sa zmení na sýto oranžovú.", "en": "Stir in the butter, vanilla sugar, raisins and most of the almonds and cashews and fry, stirring all the time, for 5 minutes until the halwa turns glossy and starts to come away from the base. The colour deepens to a rich orange.", "timerSeconds": 300},
+      {"sk": "Podávaj ju teplú, posypanú zvyšnými orechmi; v Indii je obľúbená v zime a na sviatky. V chladničke vydrží 4 dni a zohreješ ju na panvici s lyžicou mlieka.", "en": "Serve it warm, scattered with the remaining nuts; in India it is a winter and festival favourite. It keeps in the fridge for 4 days and reheats in a pan with a spoonful of milk."}
+    ]
+  },
+  {
+    "id": "japonsky-nadychany-cheesecake",
+    "title": {"sk": "Japonský nadýchaný cheesecake", "en": "Japanese fluffy cheesecake"},
+    "description": {"sk": "Ľahký ako suflé, jemne kyslý a trasúci sa – iný ako americký cheesecake.", "en": "Light as a soufflé, gently tangy and wobbly; nothing like an American cheesecake."},
+    "cuisine": "JAPANESE",
+    "mealTypes": ["DESSERT"],
+    "totalTimeMin": 110,
+    "activeTimeMin": 30,
+    "difficulty": 3,
+    "servings": 8,
+    "equipment": ["OVEN", "HAND_MIXER"],
+    "ingredients": [
+      {"id": "cream-cheese", "amount": 250, "unit": "G", "role": "MAIN"},
+      {"id": "egg", "amount": 4, "unit": "PCS", "role": "MAIN"},
+      {"id": "milk", "amount": 100, "unit": "ML", "role": "SECONDARY"},
+      {"id": "butter", "amount": 40, "unit": "G", "role": "SECONDARY"},
+      {"id": "sugar", "amount": 90, "unit": "G", "role": "SECONDARY"},
+      {"id": "wheat-flour", "amount": 50, "unit": "G", "role": "SECONDARY"},
+      {"id": "corn-starch", "amount": 20, "unit": "G", "role": "SECONDARY"},
+      {"id": "lemon", "amount": 1, "unit": "TBSP", "role": "SEASONING", "note": {"sk": "šťava", "en": "juice"}},
+      {"id": "vanilla-sugar", "amount": 1, "unit": "PCS", "role": "SEASONING"},
+      {"id": "salt", "amount": 1, "unit": "PINCH", "role": "SEASONING"}
+    ],
+    "steps": [
+      {"sk": "Rúru predhrej na 160 °C. Dno a steny okrúhlej formy s priemerom 18 až 20 cm vylož papierom na pečenie tak, aby papier prečnieval 5 cm nad okraj – cheesecake pri pečení vystúpi. Formu zvonka obaľ dvakrát alobalom.", "en": "Preheat the oven to 160 °C. Line the base and sides of an 18 to 20 cm round tin with baking paper so the paper stands 5 cm above the rim, as the cake rises in the oven. Wrap the outside of the tin twice in foil."},
+      {"sk": "Krémový syr, mlieko a maslo zohrievaj v miske nad parou za stáleho miešania, kým nevznikne hladký krém bez hrudiek. Stiahni ho z pary, vmiešaj žĺtky, citrónovú šťavu a vanilkový cukor a preosej doň múku so škrobom.", "en": "Warm the cream cheese, milk and butter in a bowl over steam, stirring all the time, until you have a smooth, lump-free cream. Take it off the heat, stir in the egg yolks, lemon juice and vanilla sugar and sift in the flour and cornflour."},
+      {"sk": "Bielky so štipkou soli šľahaj mixérom do peny, potom postupne pridávaj cukor a šľahaj do mäkkého snehu, ktorého špička sa ohne ako háčik. Tuhý sneh by spôsobil, že koláč pri pečení praskne.", "en": "Whisk the egg whites with a pinch of salt to a foam, then gradually add the sugar and whisk to soft peaks whose tips curl over like a hook. Stiff whites would make the cake crack in the oven."},
+      {"sk": "Sneh vmiešaj do syrovej zmesi v troch dávkach stierkou zdola nahor, kým nezmiznú biele pruhy, a vylej do formy. Formou dvakrát klepni o stôl, aby unikli veľké bubliny.", "en": "Fold the whites into the cheese mixture in three batches with a spatula, lifting from the bottom, until no white streaks remain, then pour into the tin. Tap the tin twice on the counter to knock out large bubbles."},
+      {"sk": "Formu postav do väčšieho plechu, nalej doň 2 cm horúcej vody a peč 25 minút na 160 °C, potom zníž teplotu na 140 °C a peč ďalších 45 minút. Hotový je zlatistý, nafúknutý a pri zatrasení sa chveje ako puding.", "en": "Stand the tin in a larger roasting tray, pour in 2 cm of hot water and bake for 25 minutes at 160 °C, then lower the oven to 140 °C and bake for 45 minutes more. It is ready when golden, risen and wobbling like a pudding when shaken.", "timerSeconds": 4200},
+      {"sk": "Vypni rúru a nechaj ho v nej s pootvorenými dvierkami 15 minút, aby pomaly klesol bez praskania. Potom ho vyber z formy a podávaj vlažný, alebo ho daj vychladiť – v chladničke zhutnie a vydrží 3 dni.", "en": "Turn off the oven and leave it inside with the door ajar for 15 minutes so it settles slowly without cracking. Then lift it out of the tin and serve warm, or chill it; in the fridge it firms up and keeps for 3 days.", "timerSeconds": 900}
+    ]
+  },
+  {
+    "id": "karamelizovane-banany-so-sezamom",
+    "title": {"sk": "Banány karamelizované s medom a sezamom", "en": "Honey-caramelised bananas with sesame"},
+    "description": {"sk": "Rýchly teplý dezert z panvice s limetkou a kokosovým mliekom.", "en": "A quick warm pan dessert with lime and coconut milk."},
+    "cuisine": "THAI",
+    "mealTypes": ["DESSERT"],
+    "totalTimeMin": 10,
+    "activeTimeMin": 10,
+    "difficulty": 1,
+    "servings": 2,
+    "equipment": ["STOVE"],
+    "tags": ["STUDENT"],
+    "ingredients": [
+      {"id": "banana", "amount": 2, "unit": "PCS", "role": "MAIN"},
+      {"id": "butter", "amount": 15, "unit": "G", "role": "SECONDARY"},
+      {"id": "honey", "amount": 2, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "lime", "amount": 1, "unit": "TBSP", "role": "SEASONING", "note": {"sk": "šťava", "en": "juice"}},
+      {"id": "sesame-seeds", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "salt", "amount": 1, "unit": "PINCH", "role": "SEASONING"},
+      {"id": "coconut-milk", "amount": 50, "unit": "ML", "role": "SECONDARY", "optional": true}
+    ],
+    "steps": [
+      {"sk": "Sezam opraž nasucho na panvici 2 minúty, kým nezavonia a nezozlatne, a vysyp ho do misky. Banány ošúp a rozkroj pozdĺžne a potom na polovice; najlepšie sú zrelé, ale ešte pevné, prezreté by sa rozpadli.", "en": "Toast the sesame seeds in a dry frying pan for 2 minutes until fragrant and golden, then tip them into a bowl. Peel the bananas and halve them lengthways and then across; ripe but still firm ones are best, as overripe ones fall apart."},
+      {"sk": "Na tej istej panvici rozpusti maslo na strednom ohni, kým nezačne peniť. Banány polož reznou stranou nadol a nechaj ich 2 minúty bez hýbania opekať, kým nie sú zlatohnedé.", "en": "Melt the butter in the same pan over a medium heat until it foams. Lay the bananas cut side down and fry them for 2 minutes without moving until golden brown.", "timerSeconds": 120},
+      {"sk": "Opatrne ich obráť, pridaj med a štipku soli a nechaj 1 minútu bublať, kým med nezhustne na lesklý karamel. Panvicou krúž a banány prelievaj karamelom lyžicou – na silnom ohni by med zhorkol.", "en": "Carefully turn them, add the honey and a pinch of salt and let it bubble for 1 minute until the honey thickens into a glossy caramel. Swirl the pan and spoon the caramel over the bananas; over a high heat the honey would turn bitter.", "timerSeconds": 60},
+      {"sk": "Stiahni panvicu z ohňa, pokvapkaj banány limetkovou šťavou a posyp sezamom. Podávaj hneď, prelievané karamelom z panvice a podľa chuti kokosovým mliekom, ktoré chuť zjemní.", "en": "Take the pan off the heat, sprinkle the bananas with the lime juice and scatter with the sesame. Serve at once with the caramel from the pan and, if you like, a drizzle of coconut milk to soften it."}
+    ]
+  },
+  {
+    "id": "ryza-s-mangom-a-kokosom",
+    "title": {"sk": "Lepkavá ryža s mangom a kokosovým mliekom", "en": "Mango with coconut sticky rice"},
+    "description": {"sk": "Thajský dezert z ryže napitej sladkým kokosovým mliekom a zrelého manga.", "en": "A Thai dessert of rice soaked in sweet coconut milk with ripe mango."},
+    "cuisine": "THAI",
+    "mealTypes": ["DESSERT"],
+    "totalTimeMin": 75,
+    "activeTimeMin": 20,
+    "difficulty": 2,
+    "servings": 4,
+    "equipment": ["STOVE"],
+    "ingredients": [
+      {"id": "sushi-rice", "amount": 200, "unit": "G", "role": "MAIN", "note": {"sk": "alebo lepkavá ryža", "en": "or glutinous rice"}},
+      {"id": "coconut-milk", "amount": 300, "unit": "ML", "role": "MAIN"},
+      {"id": "sugar", "amount": 60, "unit": "G", "role": "SECONDARY"},
+      {"id": "salt", "amount": 0.5, "unit": "TSP", "role": "SEASONING"},
+      {"id": "mango", "amount": 2, "unit": "PCS", "role": "MAIN"},
+      {"id": "corn-starch", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "sesame-seeds", "amount": 1, "unit": "TSP", "role": "SEASONING", "optional": true}
+    ],
+    "steps": [
+      {"sk": "Ryžu preplachuj v miske studenou vodou, kým nie je takmer číra, potom ju zalej čerstvou vodou a nechaj aspoň 30 minút namočenú. Namáčaním zrnká nasajú vodu a pri varení zostanú mäkké a lepkavé.", "en": "Rinse the rice in a bowl of cold water until it runs almost clear, then cover it with fresh water and leave it to soak for at least 30 minutes. Soaking lets the grains absorb water so they cook soft and sticky.", "timerSeconds": 1800},
+      {"sk": "Ryžu sceď, daj ju do hrnca s 250 ml vody, priveď do varu, prikry a na najmenšom ohni var 15 minút. Potom ju nechaj 10 minút postáť pod pokrievkou, aby dotiahla.", "en": "Drain the rice, put it in a pan with 250 ml of water, bring to the boil, cover and cook over the lowest heat for 15 minutes. Then let it stand, covered, for 10 minutes to finish.", "timerSeconds": 900},
+      {"sk": "Medzitým zohrej 200 ml kokosového mlieka s cukrom a polovicou soli, kým sa cukor nerozpustí – nevar ho. Teplú ryžu ním prelej, premiešaj a nechaj 15 minút prikrytú nasiaknuť; ryža natiahne takmer všetku tekutinu.", "en": "Meanwhile warm 200 ml of the coconut milk with the sugar and half the salt until the sugar dissolves; do not boil it. Pour it over the warm rice, stir and leave covered for 15 minutes to soak; the rice takes up almost all the liquid.", "timerSeconds": 900},
+      {"sk": "Na omáčku zohrej zvyšné kokosové mlieko so zvyšnou soľou a škrobom rozmiešaným v lyžici vody a miešaj, kým nezhustne ako smotana. Slaná omáčka je zámerná – zvýrazní sladkosť ryže a manga.", "en": "For the sauce, heat the remaining coconut milk with the rest of the salt and the cornflour mixed with a spoonful of water, stirring until it thickens like cream. The salty sauce is deliberate: it brings out the sweetness of the rice and mango."},
+      {"sk": "Mango ošúp, odkroj dužinu od kôstky a nakrájaj na plátky. Na taniere daj kôpku ryže, vedľa mango, prelej omáčkou a posyp sezamom; podávaj vlažné, nie z chladničky, kde ryža stvrdne.", "en": "Peel the mango, cut the flesh from the stone and slice it. Put a mound of rice on each plate with the mango alongside, spoon over the sauce and sprinkle with sesame; serve warm or at room temperature, not from the fridge, where the rice hardens."}
+    ]
+  },
+  {
+    "id": "cookies-s-cokoladou",
+    "title": {"sk": "Americké cookies s kúskami čokolády", "en": "Chocolate chip cookies"},
+    "description": {"sk": "Okraje chrumkavé, stred mäkký a žuvací, všade kúsky horkej čokolády.", "en": "Crisp edges, a soft chewy middle and chunks of dark chocolate throughout."},
+    "cuisine": "AMERICAN",
+    "mealTypes": ["DESSERT", "SNACK"],
+    "totalTimeMin": 75,
+    "activeTimeMin": 15,
+    "difficulty": 1,
+    "servings": 16,
+    "equipment": ["OVEN"],
+    "tags": ["FREEZER_FRIENDLY"],
+    "ingredients": [
+      {"id": "wheat-flour", "amount": 220, "unit": "G", "role": "MAIN"},
+      {"id": "butter", "amount": 125, "unit": "G", "role": "SECONDARY", "note": {"sk": "mäkké", "en": "softened"}},
+      {"id": "brown-sugar", "amount": 120, "unit": "G", "role": "SECONDARY"},
+      {"id": "sugar", "amount": 50, "unit": "G", "role": "SECONDARY"},
+      {"id": "egg", "amount": 1, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "vanilla-sugar", "amount": 1, "unit": "PCS", "role": "SEASONING"},
+      {"id": "baking-soda", "amount": 0.5, "unit": "TSP", "role": "SEASONING"},
+      {"id": "salt", "amount": 0.5, "unit": "TSP", "role": "SEASONING"},
+      {"id": "dark-chocolate", "amount": 150, "unit": "G", "role": "MAIN"}
+    ],
+    "steps": [
+      {"sk": "Mäkké maslo vymiešaj s hnedým aj bielym cukrom a vanilkovým cukrom vareškou alebo mixérom 2 minúty, kým zmes nezosvetlie. Hnedý cukor robí cookies žuvacími, biely chrumkavými – preto oba.", "en": "Beat the softened butter with the brown and white sugars and the vanilla sugar with a wooden spoon or mixer for 2 minutes until paler. Brown sugar makes cookies chewy, white sugar crisp, which is why you use both."},
+      {"sk": "Pridaj vajce a vymiešaj do hladka. Múku zmiešaj so sódou bikarbónou a soľou a vmiešaj ju do maslovej zmesi len tak, aby nezostala suchá múka.", "en": "Add the egg and beat until smooth. Mix the flour with the bicarbonate of soda and salt and stir it into the butter mixture just until no dry flour remains."},
+      {"sk": "Čokoládu nasekaj nožom na nepravidelné kúsky veľké ako lieskový orech a vmiešaj ich do cesta. Cesto prikry a daj aspoň na 30 minút do chladničky – vychladené sa pri pečení menej roztečie a cookies budú hrubšie.", "en": "Chop the chocolate with a knife into uneven pieces the size of hazelnuts and stir them into the dough. Cover and chill the dough for at least 30 minutes; chilled, it spreads less in the oven and the cookies come out thicker.", "timerSeconds": 1800},
+      {"sk": "Rúru predhrej na 180 °C a dva plechy vystel papierom na pečenie. Z cesta tvaruj guľky veľké ako vlašský orech (asi 16) a ukladaj ich s rozostupmi 6 cm – v rúre sa roztečú.", "en": "Preheat the oven to 180 °C and line two trays with baking paper. Roll the dough into walnut-sized balls (about 16) and space them 6 cm apart; they spread in the oven."},
+      {"sk": "Peč 10 až 12 minút, kým okraje nie sú zlatohnedé, ale stred ešte vyzerá mäkký a nedopečený – po vychladnutí stuhne. Dlhšie pečené cookies vychladnutím stvrdnú ako sušienky.", "en": "Bake for 10 to 12 minutes until the edges are golden brown but the middles still look soft and underdone; they firm up as they cool. Baked longer, they harden like biscuits once cool.", "timerSeconds": 660},
+      {"sk": "Nechaj ich 5 minút stuhnúť na plechu a potom ich prelož na mriežku. V plechovke vydržia 5 dní; guľky surového cesta môžeš zamraziť a piecť priamo z mrazu o 2 minúty dlhšie.", "en": "Let them firm up on the trays for 5 minutes, then move them to a rack. They keep in a tin for 5 days; you can freeze balls of raw dough and bake them from frozen for 2 minutes longer.", "timerSeconds": 300}
+    ]
+  },
+  {
+    "id": "americky-jablkovy-kolac",
+    "title": {"sk": "Americký jablkový koláč (apple pie)", "en": "American apple pie"},
+    "description": {"sk": "Maslové krehké cesto zhora aj zdola a šťavnatá škoricová jablková plnka.", "en": "Buttery shortcrust above and below a juicy cinnamon apple filling."},
+    "cuisine": "AMERICAN",
+    "mealTypes": ["DESSERT"],
+    "totalTimeMin": 150,
+    "activeTimeMin": 45,
+    "difficulty": 3,
+    "servings": 8,
+    "equipment": ["OVEN"],
+    "ingredients": [
+      {"id": "wheat-flour", "amount": 300, "unit": "G", "role": "MAIN"},
+      {"id": "butter", "amount": 200, "unit": "G", "role": "MAIN", "note": {"sk": "veľmi studené", "en": "very cold"}},
+      {"id": "sugar", "amount": 100, "unit": "G", "role": "SECONDARY"},
+      {"id": "salt", "amount": 0.5, "unit": "TSP", "role": "SEASONING"},
+      {"id": "apple", "amount": 6, "unit": "PCS", "role": "MAIN"},
+      {"id": "lemon", "amount": 1, "unit": "TBSP", "role": "SEASONING", "note": {"sk": "šťava", "en": "juice"}},
+      {"id": "cinnamon", "amount": 1.5, "unit": "TSP", "role": "SEASONING"},
+      {"id": "corn-starch", "amount": 2, "unit": "TBSP", "role": "SEASONING"},
+      {"id": "nutmeg", "amount": 1, "unit": "PINCH", "role": "SEASONING"},
+      {"id": "egg", "amount": 1, "unit": "PCS", "role": "SEASONING"}
+    ],
+    "steps": [
+      {"sk": "Múku zmiešaj so soľou a 1 lyžicou cukru, pridaj veľmi studené maslo na kocky a prstami ho rozotri, až kým nezostanú kúsky veľké ako hrášok. Prilej 5 až 6 lyžíc ľadovej vody a len stlač cesto dohromady – kúsky masla v ňom robia vrstvy.", "en": "Mix the flour with the salt and 1 tablespoon of the sugar, add the very cold butter in cubes and rub it in with your fingertips until pea-sized pieces remain. Add 5 to 6 tablespoons of iced water and just press the dough together; those bits of butter create the flaky layers."},
+      {"sk": "Cesto rozdeľ na dve časti, jednu o niečo väčšiu, sploští ich na placky, zabaľ do fólie a daj aspoň na hodinu do chladničky. Vychladené cesto sa ľahšie vaľká a pri pečení sa nezmršti.", "en": "Divide the dough into two pieces, one slightly larger, flatten them into discs, wrap in film and chill for at least an hour. Chilled dough rolls more easily and does not shrink in the oven.", "timerSeconds": 3600},
+      {"sk": "Jablká ošúp, vykroj jadrovníky a nakrájaj ich na plátky hrubé asi 5 mm. Zmiešaj ich so zvyšným cukrom, citrónovou šťavou, škoricou, muškátovým orieškom a škrobom – škrob zahustí šťavu, aby koláč nebol vodnatý.", "en": "Peel and core the apples and slice them about 5 mm thick. Toss them with the rest of the sugar, the lemon juice, cinnamon, nutmeg and cornflour; the starch thickens the juices so the pie is not watery."},
+      {"sk": "Rúru predhrej na 200 °C. Väčšiu placku rozvaľkaj na kruh hrubý 3 mm, vylož ním koláčovú formu s priemerom 23 cm a naplň jablkami do kopčeka. Prikry ich druhým rozvaľkaným kruhom, okraje zahni a stlač vidličkou.", "en": "Preheat the oven to 200 °C. Roll the larger disc into a 3 mm-thick round, line a 23 cm pie dish with it and pile in the apples in a mound. Cover with the second rolled-out round, fold over the edges and press them with a fork."},
+      {"sk": "Vrch potri rozšľahaným vajcom, urob doň 4 zárezy na odvod pary a peč 20 minút na 200 °C, potom zníž na 180 °C a peč ďalších 35 až 40 minút. Hotový je, keď je kôrka hlboko zlatohnedá a cez zárezy prebubláva hustá šťava.", "en": "Brush the top with beaten egg, cut 4 vents for the steam and bake for 20 minutes at 200 °C, then lower to 180 °C and bake for 35 to 40 minutes more. It is done when the crust is deep golden brown and thick juices bubble through the vents.", "timerSeconds": 3450},
+      {"sk": "Nechaj ho aspoň 2 hodiny vychladnúť, kým šťava stuhne – teplý koláč sa pri krájaní rozteká. Podávaj ho vlažný, napríklad s vanilkovou zmrzlinou alebo šľahačkou; vydrží 3 dni.", "en": "Let it cool for at least 2 hours so the juices set; cut warm, it runs everywhere. Serve it barely warm, with vanilla ice cream or whipped cream if you like; it keeps for 3 days."}
+    ]
+  },
+  {
+    "id": "mrkvovy-kolac-s-kremovym-syrom",
+    "title": {"sk": "Mrkvový koláč s krémovým syrom", "en": "Carrot cake with cream cheese frosting"},
+    "description": {"sk": "Vláčny korenistý koláč s mrkvou a orechmi pod jemne kyslou polevou.", "en": "A moist spiced cake with carrots and walnuts under a gently tangy frosting."},
+    "cuisine": "BRITISH",
+    "mealTypes": ["DESSERT", "SNACK"],
+    "totalTimeMin": 120,
+    "activeTimeMin": 30,
+    "difficulty": 2,
+    "servings": 12,
+    "equipment": ["OVEN"],
+    "ingredients": [
+      {"id": "carrot", "amount": 4, "unit": "PCS", "role": "MAIN"},
+      {"id": "wheat-flour", "amount": 250, "unit": "G", "role": "MAIN"},
+      {"id": "brown-sugar", "amount": 180, "unit": "G", "role": "SECONDARY"},
+      {"id": "sunflower-oil", "amount": 180, "unit": "ML", "role": "SECONDARY"},
+      {"id": "egg", "amount": 3, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "walnuts", "amount": 80, "unit": "G", "role": "SECONDARY"},
+      {"id": "baking-powder", "amount": 2, "unit": "TSP", "role": "SEASONING"},
+      {"id": "baking-soda", "amount": 0.5, "unit": "TSP", "role": "SEASONING"},
+      {"id": "cinnamon", "amount": 2, "unit": "TSP", "role": "SEASONING"},
+      {"id": "nutmeg", "amount": 0.25, "unit": "TSP", "role": "SEASONING"},
+      {"id": "salt", "amount": 1, "unit": "PINCH", "role": "SEASONING"},
+      {"id": "cream-cheese", "amount": 200, "unit": "G", "role": "SECONDARY"},
+      {"id": "powdered-sugar", "amount": 80, "unit": "G", "role": "SECONDARY"},
+      {"id": "butter", "amount": 40, "unit": "G", "role": "SECONDARY", "note": {"sk": "mäkké", "en": "softened"}},
+      {"id": "lemon", "amount": 1, "unit": "TSP", "role": "SEASONING", "note": {"sk": "šťava", "en": "juice"}}
+    ],
+    "steps": [
+      {"sk": "Rúru predhrej na 170 °C a formu asi 20 × 30 cm vystel papierom na pečenie. Mrkvu ošúp a nastrúhaj najemno, orechy nahrubo nasekaj; niekoľko polovičiek si odlož na ozdobu.", "en": "Preheat the oven to 170 °C and line a tin of about 20 × 30 cm with baking paper. Peel and finely grate the carrots and roughly chop the walnuts, keeping a few halves for decoration."},
+      {"sk": "Vajcia rozšľahaj s hnedým cukrom, kým sa cukor nerozpustí, a za stáleho miešania prilej olej. Múku zmiešaj s práškom do pečiva, sódou, škoricou, muškátovým orieškom a soľou a vmiešaj ju do vajec.", "en": "Whisk the eggs with the brown sugar until it dissolves, then pour in the oil while whisking. Mix the flour with the baking powder, bicarbonate of soda, cinnamon, nutmeg and salt and stir it into the eggs."},
+      {"sk": "Stierkou vmiešaj mrkvu a orechy, cesto vylej do formy a uhlaď. Peč 35 až 40 minút, kým špajdľa zapichnutá do stredu nevyjde suchá a koláč sa pri stlačení vráti späť.", "en": "Fold in the carrots and walnuts with a spatula, pour the batter into the tin and level it. Bake for 35 to 40 minutes until a skewer pushed into the centre comes out dry and the cake springs back when pressed.", "timerSeconds": 2250},
+      {"sk": "Koláč nechaj úplne vychladnúť vo forme – na teplom koláči by sa poleva rozpustila a stiekla. Trvá to asi hodinu; urýchliť to môžeš krátkym pobytom v chladničke.", "en": "Let the cake cool completely in the tin; on a warm cake the frosting melts and runs off. It takes about an hour, and a short spell in the fridge speeds it up.", "timerSeconds": 3600},
+      {"sk": "Na polevu vymiešaj mäkké maslo s práškovým cukrom do hladka, pridaj krémový syr a citrónovú šťavu a len krátko premiešaj – dlhým šľahaním krémový syr zriedne. Polevu rozotri na koláč a ozdob orechmi.", "en": "For the frosting, beat the softened butter with the icing sugar until smooth, add the cream cheese and lemon juice and mix only briefly; long beating makes cream cheese runny. Spread it over the cake and decorate with the walnuts."},
+      {"sk": "Koláč nakrájaj na 12 kúskov a skladuj ho v chladničke, kde vydrží 4 dni. Pred podávaním ho nechaj 15 minút pri izbovej teplote, aby poleva zmäkla a chuť sa rozvinula.", "en": "Cut the cake into 12 pieces and keep it in the fridge, where it lasts for 4 days. Leave it at room temperature for 15 minutes before serving so the frosting softens and the flavour opens up."}
+    ]
+  },
+  {
+    "id": "sticky-toffee-pudding",
+    "title": {"sk": "Sticky toffee pudding s datľami", "en": "Sticky toffee pudding"},
+    "description": {"sk": "Britský teplý datľový koláč zaliaty karamelovou omáčkou.", "en": "A warm British date sponge drenched in toffee sauce."},
+    "cuisine": "BRITISH",
+    "mealTypes": ["DESSERT"],
+    "totalTimeMin": 60,
+    "activeTimeMin": 20,
+    "difficulty": 2,
+    "servings": 6,
+    "equipment": ["OVEN", "STOVE"],
+    "tags": ["COMFORT"],
+    "ingredients": [
+      {"id": "dates", "amount": 150, "unit": "G", "role": "MAIN"},
+      {"id": "wheat-flour", "amount": 150, "unit": "G", "role": "MAIN"},
+      {"id": "brown-sugar", "amount": 160, "unit": "G", "role": "SECONDARY"},
+      {"id": "butter", "amount": 110, "unit": "G", "role": "SECONDARY"},
+      {"id": "egg", "amount": 2, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "baking-soda", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "baking-powder", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "whipping-cream", "amount": 200, "unit": "ML", "role": "SECONDARY"},
+      {"id": "vanilla-sugar", "amount": 1, "unit": "PCS", "role": "SEASONING"},
+      {"id": "salt", "amount": 1, "unit": "PINCH", "role": "SEASONING"}
+    ],
+    "steps": [
+      {"sk": "Rúru predhrej na 180 °C a zapekaciu misu asi 20 × 20 cm vymasti maslom. Datle vykôstkuj, nasekaj, zalej 180 ml vriacej vody, pridaj sódu bikarbónu a nechaj 10 minút zmäknúť; potom ich roztlač vidličkou na hrubé pyré.", "en": "Preheat the oven to 180 °C and butter a baking dish of about 20 × 20 cm. Stone and chop the dates, pour 180 ml of boiling water over them, add the bicarbonate of soda and leave to soften for 10 minutes, then mash them with a fork into a rough purée.", "timerSeconds": 600},
+      {"sk": "Vymiešaj 60 g mäkkého masla s 80 g hnedého cukru a vanilkovým cukrom, potom po jednom vmiešaj vajcia. Pridaj múku s práškom do pečiva a štipkou soli a nakoniec datľové pyré aj s vodou.", "en": "Beat 60 g of the softened butter with 80 g of the brown sugar and the vanilla sugar, then beat in the eggs one at a time. Add the flour with the baking powder and a pinch of salt, and finally the date purée with its water."},
+      {"sk": "Riedke cesto vylej do misy a peč 30 až 35 minút, kým nie je vrch pevný a špajdľa zapichnutá do stredu nevyjde čistá. Koláč je tmavý a vláčny, preto sa nezľakni farby – datle ho farbia.", "en": "Pour the loose batter into the dish and bake for 30 to 35 minutes until the top is firm and a skewer pushed into the middle comes out clean. The sponge is dark and moist, so do not be alarmed by the colour; the dates colour it.", "timerSeconds": 1950},
+      {"sk": "Medzitým v hrnci roztop zvyšné maslo so zvyšným cukrom a za stáleho miešania ho 3 minúty povar, kým nie je tmavý a bublajúci. Prilej smotanu – zasyčí – a var 2 minúty, kým nevznikne hladká karamelová omáčka.", "en": "Meanwhile melt the remaining butter with the rest of the sugar in a pan and cook, stirring, for 3 minutes until dark and bubbling. Pour in the cream, which will hiss, and simmer for 2 minutes into a smooth toffee sauce.", "timerSeconds": 300},
+      {"sk": "Teplý koláč popichaj špajdľou a prelej ho tretinou omáčky, aby do neho vsiakla. Podávaj ho teplý, nakrájaný na štvorce a zaliaty zvyšnou horúcou omáčkou.", "en": "Prick the warm sponge all over with a skewer and pour over a third of the sauce so it soaks in. Serve warm, cut into squares and drenched in the rest of the hot sauce."}
+    ]
+  },
+  {
+    "id": "ovocny-salat-s-matou",
+    "title": {"sk": "Ovocný šalát s mätou a limetkovým sirupom", "en": "Fruit salad with mint and lime syrup"},
+    "description": {"sk": "Farebné ovocie v sviežom medovo-limetkovom náleve s mätou.", "en": "Colourful fruit in a fresh honey and lime dressing with mint."},
+    "cuisine": "INTERNATIONAL",
+    "mealTypes": ["DESSERT", "SNACK"],
+    "totalTimeMin": 20,
+    "activeTimeMin": 20,
+    "difficulty": 1,
+    "servings": 4,
+    "tags": ["NO_COOK"],
+    "ingredients": [
+      {"id": "pineapple", "amount": 300, "unit": "G", "role": "MAIN"},
+      {"id": "strawberry", "amount": 200, "unit": "G", "role": "MAIN"},
+      {"id": "mango", "amount": 1, "unit": "PCS", "role": "MAIN"},
+      {"id": "orange", "amount": 2, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "blueberry", "amount": 100, "unit": "G", "role": "SECONDARY"},
+      {"id": "honey", "amount": 2, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "lime", "amount": 1, "unit": "PCS", "role": "SEASONING"},
+      {"id": "mint", "amount": 2, "unit": "TBSP", "role": "SEASONING"}
+    ],
+    "steps": [
+      {"sk": "Z limetky umytej horúcou vodou nastrúhaj kôru a vytlač šťavu. Zmiešaj ich s medom a 2 lyžicami vody a miešaj, kým sa med nerozpustí – vznikne riedky sirup, ktorý ovocie osvieži a zabráni jeho tmavnutiu.", "en": "Grate the zest from a lime scrubbed in hot water and squeeze the juice. Mix them with the honey and 2 tablespoons of water and stir until the honey dissolves into a thin syrup that freshens the fruit and stops it from browning."},
+      {"sk": "Ananás ošúp, vykroj tvrdý stred a nakrájaj ho na kocky asi 2 cm. Mango ošúp a nakrájaj dužinu na rovnako veľké kocky; jahody rozštvrť.", "en": "Peel the pineapple, cut out the tough core and dice it into roughly 2 cm cubes. Peel the mango and cut the flesh into cubes of the same size; quarter the strawberries."},
+      {"sk": "Pomaranče ošúp nožom spolu s bielou kôrkou a vykroj jednotlivé mesiačiky spomedzi blán. Šťavu, ktorá pri tom vytečie, prilej do sirupu.", "en": "Peel the oranges with a knife, cutting away all the white pith, and cut out the segments from between the membranes. Add any juice that runs out to the syrup."},
+      {"sk": "Všetko ovocie vrátane čučoriedok daj do misy, prelej sirupom a zľahka premiešaj. Mätu natrhaj a pridaj ju až tesne pred podávaním, inak zčernie.", "en": "Put all the fruit, including the blueberries, in a bowl, pour over the syrup and toss gently. Tear the mint and add it only just before serving, otherwise it blackens."},
+      {"sk": "Nechaj šalát 10 minút v chladničke odležať, aby ovocie pustilo šťavu a spojilo sa so sirupom. Podávaj ho vychladený samotný alebo s gréckym jogurtom; najlepší je v ten istý deň.", "en": "Let the salad rest in the fridge for 10 minutes so the fruit releases its juice into the syrup. Serve chilled on its own or with Greek yogurt; it is best the same day.", "timerSeconds": 600}
+    ]
+  },
+  {
+    "id": "bananova-zmrzlina-nice-cream",
+    "title": {"sk": "Banánová zmrzlina bez šľahačky (nice cream)", "en": "Banana nice cream"},
+    "description": {"sk": "Krémová zmrzlina len z mrazených banánov – s kakaom alebo arašidovým maslom.", "en": "A creamy ice cream made just from frozen bananas, with cocoa or peanut butter."},
+    "cuisine": "INTERNATIONAL",
+    "mealTypes": ["DESSERT"],
+    "totalTimeMin": 250,
+    "activeTimeMin": 10,
+    "difficulty": 1,
+    "servings": 2,
+    "equipment": ["BLENDER"],
+    "tags": ["NO_COOK"],
+    "ingredients": [
+      {"id": "banana", "amount": 3, "unit": "PCS", "role": "MAIN", "note": {"sk": "prezreté", "en": "overripe"}},
+      {"id": "milk", "amount": 2, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "cocoa", "amount": 1, "unit": "TBSP", "role": "SECONDARY", "optional": true},
+      {"id": "peanut-butter", "amount": 1, "unit": "TBSP", "role": "SECONDARY", "optional": true}
+    ],
+    "steps": [
+      {"sk": "Prezreté banány s hnedými škvrnami ošúp a nakrájaj na kolieska hrubé asi 1 cm. Čím sú zrelšie, tým je zmrzlina sladšia a krémovejšia – zelenkavé banány chutia múčne.", "en": "Peel overripe bananas with brown spots and slice them about 1 cm thick. The riper they are, the sweeter and creamier the ice cream; greenish bananas taste floury."},
+      {"sk": "Kolieska rozlož na tanier alebo plech s papierom v jednej vrstve, aby sa nezlepili do jednej kocky, a daj ich aspoň na 4 hodiny do mrazničky. Zmrazené ich môžeš prelož do vrecka a skladovať až 2 mesiace.", "en": "Spread the slices on a lined plate or tray in a single layer so they do not freeze into one block, and freeze for at least 4 hours. Once frozen, you can transfer them to a bag and keep them for up to 2 months.", "timerSeconds": 14400},
+      {"sk": "Zmrazené kolieska nechaj 3 minúty pri izbovej teplote a daj ich do mixéra s mliekom. Mixuj pulzne a medzi tým zmes stierkou zhŕňaj zo stien – najprv bude drobivá, po chvíli sa zmení na hladký krém.", "en": "Leave the frozen slices at room temperature for 3 minutes, then put them in the blender with the milk. Blend in pulses, scraping down the sides with a spatula in between; it starts crumbly and then turns into a smooth cream."},
+      {"sk": "Ak chceš čokoládovú alebo arašidovú verziu, pridaj teraz kakao alebo arašidové maslo a krátko premixuj. Podávaj hneď ako mäkkú zmrzlinu, alebo ju daj na 30 minút do mrazničky, aby stuhla na guľky.", "en": "For a chocolate or peanut version, add the cocoa or peanut butter now and blend briefly. Serve straight away as soft-serve, or freeze for 30 minutes so it firms up enough to scoop."}
+    ]
+  },
+  {
+    "id": "loukoumades",
+    "title": {"sk": "Loukoumades – grécke medové šišky", "en": "Loukoumades: Greek honey doughnuts"},
+    "description": {"sk": "Malé chrumkavé kysnuté šišky polievané medom so škoricou a orechmi.", "en": "Small crisp yeast doughnut balls soaked in honey with cinnamon and walnuts."},
+    "cuisine": "GREEK_MEDITERRANEAN",
+    "mealTypes": ["DESSERT", "SNACK"],
+    "totalTimeMin": 90,
+    "activeTimeMin": 30,
+    "difficulty": 2,
+    "servings": 6,
+    "equipment": ["STOVE"],
+    "ingredients": [
+      {"id": "wheat-flour", "amount": 250, "unit": "G", "role": "MAIN"},
+      {"id": "dry-yeast", "amount": 1, "unit": "PCS", "role": "SEASONING"},
+      {"id": "sugar", "amount": 1, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "milk", "amount": 200, "unit": "ML", "role": "SECONDARY"},
+      {"id": "salt", "amount": 0.25, "unit": "TSP", "role": "SEASONING"},
+      {"id": "sunflower-oil", "amount": 100, "unit": "ML", "role": "SECONDARY", "note": {"sk": "na vyprážanie, nasiakne len časť", "en": "for frying; only part is absorbed"}},
+      {"id": "honey", "amount": 120, "unit": "G", "role": "SECONDARY"},
+      {"id": "cinnamon", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "walnuts", "amount": 40, "unit": "G", "role": "SECONDARY"}
+    ],
+    "steps": [
+      {"sk": "Mlieko s 50 ml vody zohrej na vlažnú teplotu, rozmiešaj v ňom cukor a droždie a nechaj 10 minút stáť, kým sa nespení. Vo veľkej miske zmiešaj múku so soľou a prilej k nej kvások.", "en": "Warm the milk with 50 ml of water until lukewarm, stir in the sugar and yeast and leave for 10 minutes until frothy. Mix the flour with the salt in a large bowl and pour in the yeasty milk.", "timerSeconds": 600},
+      {"sk": "Vareškou vymiešaj hladké, riedke a lepkavé cesto, hustejšie ako na palacinky – má sa ťahať z lyžice. Misku prikry a nechaj na teplom mieste 1 hodinu kysnúť, kým cesto nezdvojnásobí objem a nie je plné bublín.", "en": "Beat with a wooden spoon into a smooth, loose and sticky batter, thicker than crêpe batter; it should stretch from the spoon. Cover the bowl and leave in a warm place for 1 hour until doubled and full of bubbles.", "timerSeconds": 3600},
+      {"sk": "Med zohrej s 2 lyžicami vody, aby bol tekutý, a orechy nasekaj nadrobno. V hlbokej panvici zohrej olej do výšky 3 cm na 175 °C; kvapka cesta v ňom má hneď vyplávať a syčať.", "en": "Warm the honey with 2 tablespoons of water until runny, and finely chop the walnuts. Heat the oil 3 cm deep in a deep frying pan to 175 °C; a drop of batter should float up and sizzle straight away."},
+      {"sk": "Lyžičku namáčaj do oleja a naberaj ňou kúsky cesta veľké ako vlašský orech, ktoré do oleja stláčaj prstom alebo druhou lyžičkou. Vyprážaj po 8 až 10 kusoch 3 až 4 minúty a otáčaj ich, kým nie sú dookola zlatohnedé.", "en": "Dip a teaspoon in the oil and scoop walnut-sized pieces of batter with it, pushing them into the oil with a finger or a second spoon. Fry 8 to 10 at a time for 3 to 4 minutes, turning them, until golden brown all over.", "timerSeconds": 210},
+      {"sk": "Šišky nechaj odkvapkať na papierovej utierke a ešte teplé ich prelož do misy, prelej teplým medom, posyp škoricou a orechmi. Podávaj ich hneď, kým sú zvonka chrumkavé a vnútri vzdušné.", "en": "Drain the doughnuts on kitchen paper and, while still warm, pile them into a bowl, pour over the warm honey and sprinkle with cinnamon and walnuts. Serve at once while they are crisp outside and airy inside."}
+    ]
+  },
+  {
+    "id": "basbousa",
+    "title": {"sk": "Basbousa – krupicový koláč s citrónovým sirupom", "en": "Basbousa: semolina cake with lemon syrup"},
+    "description": {"sk": "Egyptský hutný krupicový koláč s kokosom, nasiaknutý sladkým sirupom.", "en": "A dense Egyptian semolina cake with coconut, soaked in sweet syrup."},
+    "cuisine": "NORTH_AFRICAN",
+    "mealTypes": ["DESSERT", "SNACK"],
+    "totalTimeMin": 75,
+    "activeTimeMin": 15,
+    "difficulty": 1,
+    "servings": 12,
+    "equipment": ["OVEN", "STOVE"],
+    "ingredients": [
+      {"id": "semolina", "amount": 250, "unit": "G", "role": "MAIN"},
+      {"id": "yogurt", "amount": 200, "unit": "G", "role": "SECONDARY"},
+      {"id": "sugar", "amount": 200, "unit": "G", "role": "SECONDARY"},
+      {"id": "butter", "amount": 100, "unit": "G", "role": "SECONDARY", "note": {"sk": "rozpustené", "en": "melted"}},
+      {"id": "coconut-flakes", "amount": 40, "unit": "G", "role": "SECONDARY"},
+      {"id": "baking-powder", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "almonds", "amount": 24, "unit": "G", "role": "SECONDARY", "note": {"sk": "polovičky na ozdobu", "en": "halves to decorate"}},
+      {"id": "lemon", "amount": 2, "unit": "TBSP", "role": "SEASONING", "note": {"sk": "šťava", "en": "juice"}},
+      {"id": "salt", "amount": 1, "unit": "PINCH", "role": "SEASONING"}
+    ],
+    "steps": [
+      {"sk": "Najprv priprav sirup, aby stihol vychladnúť: v hrnci priveď do varu 100 g cukru so 150 ml vody, var 5 minút a nakoniec pridaj citrónovú šťavu. Sirup nechaj vychladnúť – na horúci koláč patrí studený.", "en": "Make the syrup first so it has time to cool: bring 100 g of the sugar and 150 ml of water to the boil in a pan, simmer for 5 minutes and finally add the lemon juice. Let it cool; cold syrup goes onto the hot cake.", "timerSeconds": 300},
+      {"sk": "Rúru predhrej na 180 °C a formu asi 20 × 25 cm vymasti maslom. V miske zmiešaj krupicu, zvyšný cukor, kokos, prášok do pečiva a štipku soli.", "en": "Preheat the oven to 180 °C and butter a tin of about 20 × 25 cm. In a bowl, mix the semolina, the rest of the sugar, the coconut, baking powder and a pinch of salt."},
+      {"sk": "Pridaj jogurt a rozpustené maslo a vareškou vymiešaj husté, vlhké cesto; nemiešaj dlho. Vtlač ho do formy, uhlaď vlhkou lyžicou a nožom ho nareš na kosoštvorce asi 4 cm, do každého zatlač polovičku mandle.", "en": "Add the yogurt and melted butter and stir into a thick, moist batter without overmixing. Press it into the tin, smooth it with a wet spoon and score it with a knife into diamonds about 4 cm wide, pressing an almond half into each."},
+      {"sk": "Peč 30 až 35 minút, kým nie je koláč zlatohnedý a okraje sa začnú odlepovať od formy. Hneď po vybratí ho znova prejdi nožom po zárezoch až na dno.", "en": "Bake for 30 to 35 minutes until golden brown and the edges start to pull away from the tin. As soon as it comes out, run the knife along the score lines again, right down to the base.", "timerSeconds": 1950},
+      {"sk": "Horúci koláč pomaly prelej studeným sirupom a nechaj ho aspoň 30 minút nasiaknuť. Podávaj ho izbovej teploty; prikrytý vydrží 4 dni a s každým dňom je vláčnejší.", "en": "Slowly pour the cold syrup over the hot cake and leave it to soak for at least 30 minutes. Serve at room temperature; covered, it keeps for 4 days and grows moister by the day.", "timerSeconds": 1800}
+    ]
+  },
+  {
+    "id": "karamelovy-flan",
+    "title": {"sk": "Karamelový flan", "en": "Caramel flan"},
+    "description": {"sk": "Hladký vaječný krém pečený vo vodnom kúpeli, s tekutým karamelom navrchu.", "en": "A smooth baked custard cooked in a water bath and crowned with runny caramel."},
+    "cuisine": "LATIN_AMERICAN",
+    "mealTypes": ["DESSERT"],
+    "totalTimeMin": 300,
+    "activeTimeMin": 25,
+    "difficulty": 2,
+    "servings": 6,
+    "equipment": ["OVEN", "STOVE"],
+    "ingredients": [
+      {"id": "milk", "amount": 500, "unit": "ML", "role": "MAIN"},
+      {"id": "egg", "amount": 4, "unit": "PCS", "role": "MAIN"},
+      {"id": "sugar", "amount": 160, "unit": "G", "role": "SECONDARY"},
+      {"id": "vanilla-sugar", "amount": 1, "unit": "PCS", "role": "SEASONING"},
+      {"id": "salt", "amount": 1, "unit": "PINCH", "role": "SEASONING"}
+    ],
+    "steps": [
+      {"sk": "Rúru predhrej na 160 °C. Do suchého hrnca nasyp 100 g cukru a na strednom ohni ho bez miešania nechaj roztopiť, len hrncom krúž. Keď má farbu tmavšieho medu, hneď ho vylej do formy s priemerom asi 20 cm a nakláňaním rozlej po dne.", "en": "Preheat the oven to 160 °C. Tip 100 g of the sugar into a dry pan and let it melt over a medium heat without stirring, just swirling the pan. When it is the colour of dark honey, pour it at once into a round dish about 20 cm across and tilt to coat the base."},
+      {"sk": "Pozor, karamel je extrémne horúci – nedotýkaj sa ho a nechaj ho stuhnúť. Mlieko zohrej s vanilkovým cukrom, kým nie je teplé, ale nevrie.", "en": "Careful: the caramel is extremely hot, so do not touch it and let it set. Warm the milk with the vanilla sugar until hot but not boiling."},
+      {"sk": "Vajcia rozšľahaj so zvyšným cukrom a štipkou soli len tak, aby sa spojili – nemá vzniknúť pena, bubliny by vo flane zostali ako diery. Za stáleho miešania prilej teplé mlieko a zmes preceď cez sitko na karamel.", "en": "Whisk the eggs with the rest of the sugar and a pinch of salt just until combined; you do not want foam, as bubbles would leave holes in the flan. Pour in the warm milk while stirring and strain the mixture through a sieve onto the caramel."},
+      {"sk": "Formu postav do hlbšieho plechu, nalej doň horúcu vodu do polovice výšky formy a peč 45 až 50 minút. Flan je hotový, keď je na okrajoch pevný a v strede sa pri zatrasení chveje ako želé.", "en": "Stand the dish in a deeper roasting tray, pour hot water halfway up its sides and bake for 45 to 50 minutes. The flan is ready when firm at the edges and wobbling like jelly in the middle when shaken.", "timerSeconds": 2850},
+      {"sk": "Nechaj ho vychladnúť a potom aspoň 4 hodiny, najlepšie cez noc, v chladničke stuhnúť – karamel sa medzitým rozpustí na omáčku. Okraje uvoľni nožom, prikry formu tanierom a jedným pohybom ju prevráť.", "en": "Let it cool, then chill for at least 4 hours, ideally overnight, to set; meanwhile the caramel dissolves into a sauce. Loosen the edges with a knife, cover the dish with a plate and flip it over in one movement.", "timerSeconds": 14400},
+      {"sk": "Flan nakrájaj na 6 dielov a polievaj karamelom, ktorý stečie na tanier. V chladničke vydrží 3 dni; ak je vo flane veľa dier, nabudúce peč pri nižšej teplote alebo šľahaj vajcia menej.", "en": "Cut the flan into 6 wedges and spoon over the caramel that runs onto the plate. It keeps in the fridge for 3 days; if your flan has lots of holes, bake it lower or whisk the eggs less next time."}
+    ]
+  },
+  {
+    "id": "hotteok",
+    "title": {"sk": "Hotteok – kórejské placky plnené hnedým cukrom", "en": "Hotteok: Korean sweet filled pancakes"},
+    "description": {"sk": "Mäkké kysnuté placky z panvice s tekutým škoricovým cukrom a orechmi vnútri.", "en": "Soft yeast pancakes from the pan with a molten cinnamon sugar and nut filling."},
+    "cuisine": "KOREAN",
+    "mealTypes": ["DESSERT", "SNACK"],
+    "totalTimeMin": 100,
+    "activeTimeMin": 30,
+    "difficulty": 2,
+    "servings": 6,
+    "equipment": ["STOVE"],
+    "ingredients": [
+      {"id": "wheat-flour", "amount": 250, "unit": "G", "role": "MAIN"},
+      {"id": "milk", "amount": 180, "unit": "ML", "role": "SECONDARY"},
+      {"id": "dry-yeast", "amount": 0.5, "unit": "PCS", "role": "SEASONING"},
+      {"id": "sugar", "amount": 1, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "salt", "amount": 0.25, "unit": "TSP", "role": "SEASONING"},
+      {"id": "sunflower-oil", "amount": 3, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "brown-sugar", "amount": 70, "unit": "G", "role": "SECONDARY"},
+      {"id": "cinnamon", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "walnuts", "amount": 30, "unit": "G", "role": "SECONDARY"},
+      {"id": "sesame-seeds", "amount": 1, "unit": "TSP", "role": "SEASONING", "optional": true}
+    ],
+    "steps": [
+      {"sk": "Mlieko zohrej na vlažnú teplotu, rozmiešaj v ňom cukor a droždie a nechaj 5 minút stáť. V miske zmiešaj múku so soľou, prilej mlieko s droždím a lyžicu oleja a vymiešaj mäkké, lepkavé cesto.", "en": "Warm the milk until lukewarm, stir in the sugar and yeast and leave for 5 minutes. Mix the flour with the salt in a bowl, add the yeasty milk and a spoonful of the oil and beat into a soft, sticky dough.", "timerSeconds": 300},
+      {"sk": "Cesto prikry a nechaj na teplom mieste 1 hodinu kysnúť, kým nezdvojnásobí objem. Medzitým zmiešaj hnedý cukor so škoricou, nasekanými orechmi a sezamom – to je plnka.", "en": "Cover the dough and leave it somewhere warm for 1 hour until doubled. Meanwhile mix the brown sugar with the cinnamon, chopped walnuts and sesame seeds for the filling.", "timerSeconds": 3600},
+      {"sk": "Ruky si namasti olejom, cesto rozdeľ na 6 guliek a každú roztlač v dlani na placku. Do stredu daj lyžicu plnky, okraje zober hore a pevne zlep, aby cukor pri pečení nevytiekol.", "en": "Oil your hands, divide the dough into 6 balls and flatten each in your palm into a round. Put a spoonful of filling in the middle, gather the edges up and pinch them firmly shut so the sugar cannot leak out while cooking."},
+      {"sk": "Na panvici zohrej 1 lyžicu oleja na strednom ohni a polož do nej guľky spojom nadol. Po 30 sekundách ich obráť a širokou stierkou stlač na placky hrubé asi 1 cm.", "en": "Heat 1 tablespoon of the oil in a frying pan over a medium heat and lay in the balls seam side down. After 30 seconds turn them and press them flat with a wide spatula into pancakes about 1 cm thick."},
+      {"sk": "Peč ich 2 až 3 minúty z každej strany na miernejšom ohni, kým nie sú zlatohnedé a chrumkavé a cukor vnútri sa nerozpustí na sirup. Na silnom ohni by zhoreli skôr, ako sa vnútro prepečie.", "en": "Cook them for 2 to 3 minutes a side over a gentler heat until golden brown and crisp and the sugar inside has melted into a syrup. Over a high heat they would burn before the inside cooks.", "timerSeconds": 300},
+      {"sk": "Podávaj ich teplé, ale nie hneď z panvice – roztopený cukor vnútri je veľmi horúci. V Kórei sa jedia na ulici zabalené v papierovom vrecku, najmä v zime.", "en": "Serve them warm, but not straight from the pan, as the melted sugar inside is very hot. In Korea they are a street snack eaten from a paper sleeve, especially in winter."}
+    ]
+  },
+  {
+    "id": "vajecne-tartaletky",
+    "title": {"sk": "Vaječné tartaletky z lístkového cesta", "en": "Puff pastry egg tarts"},
+    "description": {"sk": "Chrumkavé košíčky z lístkového cesta s jemným vaječným krémom, ako z kantonských cukrární.", "en": "Crisp puff pastry cases with a delicate egg custard, as in Cantonese bakeries."},
+    "cuisine": "CHINESE",
+    "mealTypes": ["DESSERT", "SNACK"],
+    "totalTimeMin": 50,
+    "activeTimeMin": 20,
+    "difficulty": 2,
+    "servings": 12,
+    "equipment": ["OVEN"],
+    "ingredients": [
+      {"id": "puff-pastry", "amount": 275, "unit": "G", "role": "MAIN"},
+      {"id": "egg", "amount": 3, "unit": "PCS", "role": "MAIN"},
+      {"id": "milk", "amount": 150, "unit": "ML", "role": "SECONDARY"},
+      {"id": "whipping-cream", "amount": 100, "unit": "ML", "role": "SECONDARY"},
+      {"id": "sugar", "amount": 60, "unit": "G", "role": "SECONDARY"},
+      {"id": "vanilla-sugar", "amount": 0.5, "unit": "PCS", "role": "SEASONING"},
+      {"id": "salt", "amount": 1, "unit": "PINCH", "role": "SEASONING"}
+    ],
+    "steps": [
+      {"sk": "Rúru predhrej na 220 °C. Mlieko zohrej s cukrom, vanilkovým cukrom a štipkou soli len toľko, aby sa cukor rozpustil, a nechaj ho vychladnúť na vlažnú teplotu – horúce mlieko by vajcia zrazilo.", "en": "Preheat the oven to 220 °C. Warm the milk with the sugar, vanilla sugar and a pinch of salt just until the sugar dissolves, then let it cool until lukewarm; hot milk would curdle the eggs."},
+      {"sk": "Vajcia zľahka rozšľahaj so smotanou, prilej vlažné mlieko a zmes preceď cez sitko do džbánu. Preceďovanie odstráni bielkové vlákna a krém bude po upečení hladký ako zrkadlo.", "en": "Lightly whisk the eggs with the cream, pour in the lukewarm milk and strain the mixture through a sieve into a jug. Straining removes the stringy bits of white so the baked custard is glassy smooth."},
+      {"sk": "Lístkové cesto zroluj od dlhšej strany do pevnej rolky a nakrájaj ju na 12 koliesok. Každé koliesko polož reznou stranou nahor do jamky formy na muffiny a palcami ho roztlač po dne a stenách do tenkého košíčka.", "en": "Roll the puff pastry up tightly from a long side and cut it into 12 rounds. Set each round cut side up in a hole of a muffin tin and press it with your thumbs over the base and up the sides into a thin case."},
+      {"sk": "Košíčky naplň krémom asi do troch štvrtín výšky a peč 15 minút na 220 °C, potom zníž teplotu na 190 °C a peč ešte 8 až 10 minút. Krém má stuhnúť a navrchu sa môžu objaviť zlatohnedé škvrny.", "en": "Fill the cases about three-quarters full with custard and bake for 15 minutes at 220 °C, then lower the oven to 190 °C and bake for 8 to 10 minutes more. The custard should set, and golden brown spots may appear on top.", "timerSeconds": 1440},
+      {"sk": "Nechaj ich 10 minút vychladnúť vo forme, kým krém dotiahne, a potom ich opatrne vyber nožom. Najlepšie sú vlažné v deň pečenia, keď je cesto ešte chrumkavé.", "en": "Let them cool in the tin for 10 minutes while the custard firms, then ease them out with a knife. They are best warm on the day they are baked, while the pastry is still crisp.", "timerSeconds": 600}
+    ]
+  }
+]
