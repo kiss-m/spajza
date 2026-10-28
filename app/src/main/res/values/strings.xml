@@ -387,7 +387,12 @@
     <string name="notification_expiry_today">%1$s – dnes</string>
     <string name="notification_expiry_tomorrow">%1$s – zajtra</string>
     <string name="notification_expiry_expired">%1$s – po dátume</string>
-    <string name="notification_expiry_more">a ďalšie: %1$d</string>
+    <plurals name="notification_expiry_more">
+        <item quantity="one">a ešte %1$d ďalšia</item>
+        <item quantity="few">a ešte %1$d ďalšie</item>
+        <item quantity="many">a ešte %1$d ďalšej</item>
+        <item quantity="other">a ešte %1$d ďalších</item>
+    </plurals>
     <plurals name="notification_expiry_title">
         <item quantity="one">%1$d potravinu treba spotrebovať</item>
         <item quantity="few">%1$d potraviny treba spotrebovať</item>

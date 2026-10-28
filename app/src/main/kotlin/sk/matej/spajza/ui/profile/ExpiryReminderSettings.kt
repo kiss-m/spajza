@@ -65,8 +65,7 @@ fun ExpiryReminderSettings(reminder: ExpiryReminder, onChange: (ExpiryReminder) 
                 onCheckedChange = { on ->
                     when {
                         !on -> onChange(reminder.copy(enabled = false))
-                        needsPermission && Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU ->
-                            askPermission.launch(Manifest.permission.POST_NOTIFICATIONS)
+                        needsPermission -> askPermission.launch(Manifest.permission.POST_NOTIFICATIONS)
                         else -> onChange(reminder.copy(enabled = true))
                     }
                 },

@@ -371,7 +371,10 @@
     <string name="notification_expiry_today">%1$s – today</string>
     <string name="notification_expiry_tomorrow">%1$s – tomorrow</string>
     <string name="notification_expiry_expired">%1$s – past its date</string>
-    <string name="notification_expiry_more">and %1$d more</string>
+    <plurals name="notification_expiry_more">
+        <item quantity="one">and %1$d more</item>
+        <item quantity="other">and %1$d more</item>
+    </plurals>
     <plurals name="notification_expiry_title">
         <item quantity="one">%1$d item to use up</item>
         <item quantity="other">%1$d items to use up</item>

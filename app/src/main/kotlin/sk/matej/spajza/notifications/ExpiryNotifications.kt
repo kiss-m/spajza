@@ -40,7 +40,9 @@ object ExpiryNotifications {
         val lines = items.take(ExpiryReminderConfig.MAX_NAMED).map { line(localized, names(it.item.id), it.daysLeft) }
         val more = items.size - lines.size
         val title = localized.resources.getQuantityString(R.plurals.notification_expiry_title, items.size, items.size)
-        val summary = (lines + listOfNotNull(more.takeIf { it > 0 }?.let { localized.getString(R.string.notification_expiry_more, it) }))
+        val summary = lines + listOfNotNull(
+            more.takeIf { it > 0 }?.let { localized.resources.getQuantityString(R.plurals.notification_expiry_more, it, it) },
+        )
         val style = NotificationCompat.InboxStyle().setBigContentTitle(title)
         summary.forEach { style.addLine(it) }
 
