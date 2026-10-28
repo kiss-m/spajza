@@ -202,6 +202,9 @@
     <string name="onboarding_staples_title">Staples</string>
     <string name="onboarding_staples_hint">You always have these at home, so there is no need to add them to the pantry. Edit the list as you like.</string>
     <string name="onboarding_finish">Start cooking</string>
+    <string name="onboarding_household_title">Cooking with someone?</string>
+    <string name="onboarding_household_hint">If a housemate sent you a code, enter it – you\'ll share the pantry and shopping list. If not, just continue; you can invite someone later in Profile.</string>
+    <string name="onboarding_household_joined">You\'re in the household “%1$s”.</string>
 
     <!-- What to cook -->
     <string name="cook_search_hint">Search recipes or ingredients</string>
@@ -326,7 +329,53 @@
     <string name="profile_section_staples">Staples</string>
     <string name="profile_section_household">Household</string>
     <string name="profile_household_members">Members: %1$s</string>
-    <string name="profile_household_invite_later">Invites for housemates arrive in the next version.</string>
+    <string name="household_invite_hint">Invite a housemate – they get a code to join your shared pantry and shopping list.</string>
+    <string name="household_invite">Invite a housemate</string>
+    <string name="household_invite_code_label">Code for your housemate</string>
+    <string name="household_invite_valid_until">Valid until %1$s</string>
+    <string name="household_invite_share">Share code</string>
+    <string name="household_invite_new">New code</string>
+    <string name="household_invite_share_text">Join our household in the Špajza app. After signing in, enter the code %1$s (valid until %2$s).</string>
+    <string name="household_join_title">Got a code from a housemate?</string>
+    <string name="household_join_hint_profile">Enter it to join their household.</string>
+    <string name="household_join_code">Code</string>
+    <string name="household_join">Join</string>
+    <string name="household_join_not_found">We don\'t know this code, or it has expired. Ask for a new one.</string>
+    <string name="household_join_offline">You need an internet connection to check the code.</string>
+    <string name="household_join_already_member">You\'re already in this household.</string>
+    <string name="household_join_expired">The code has expired in the meantime. Ask for a new one.</string>
+    <string name="household_join_failed">Joining didn\'t work. Check your connection and try again.</string>
+    <string name="household_join_confirm_title">Join the household “%1$s”?</string>
+    <string name="household_join_confirm_alone">Your pantry and shopping list move over to them. You take over the new household\'s kitchen equipment and staples.</string>
+    <string name="household_join_confirm_shared">You\'ll leave your current household – its pantry and shopping list stay with the other members.</string>
+    <string name="household_joined_title">Welcome to “%1$s”</string>
+    <string name="household_joined_body">From now on you share the pantry and shopping list.</string>
+    <string name="household_leave">Leave household</string>
+    <string name="household_leave_title">Leave the household?</string>
+    <string name="household_leave_body">The pantry and shopping list stay with the other members. You\'ll start with a new, empty household.</string>
+    <string name="household_leave_confirm">Leave</string>
+    <plurals name="household_joined_moved">
+        <item quantity="one">We moved %1$d item from your pantry and shopping list.</item>
+        <item quantity="other">We moved %1$d items from your pantry and shopping list.</item>
+    </plurals>
+    <string name="profile_section_notifications">Notifications</string>
+    <string name="notifications_expiry_switch">Remind me what to use up</string>
+    <string name="notifications_expiry_hint">Once a day we\'ll tell you what in the pantry expires today or tomorrow and what is already past its date.</string>
+    <string name="notifications_expiry_time">Reminder at %1$s</string>
+    <string name="notifications_expiry_change_time">Change time</string>
+    <string name="notifications_expiry_time_title">Reminder time</string>
+    <string name="notifications_denied">Notifications for Špajza are turned off on this phone. Allow them in settings.</string>
+    <string name="notifications_open_settings">Open settings</string>
+    <string name="notification_channel_expiry">Use-by dates</string>
+    <string name="notification_channel_expiry_description">A daily reminder about food that is about to expire.</string>
+    <string name="notification_expiry_today">%1$s – today</string>
+    <string name="notification_expiry_tomorrow">%1$s – tomorrow</string>
+    <string name="notification_expiry_expired">%1$s – past its date</string>
+    <string name="notification_expiry_more">and %1$d more</string>
+    <plurals name="notification_expiry_title">
+        <item quantity="one">%1$d item to use up</item>
+        <item quantity="other">%1$d items to use up</item>
+    </plurals>
     <string name="profile_section_app">App</string>
     <string name="profile_language">Language</string>
     <string name="language_system">System default</string>

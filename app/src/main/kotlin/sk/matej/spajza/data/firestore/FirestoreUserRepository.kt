@@ -52,4 +52,8 @@ class FirestoreUserRepository(private val db: FirebaseFirestore) : UserRepositor
     override suspend fun setOnboardingDone(uid: String) {
         doc(uid).update(mapOf("onboardingDone" to true, FIELD_UPDATED_AT to serverTime())).logFailure("finishing onboarding")
     }
+
+    override suspend fun setHousehold(uid: String, householdId: String) {
+        doc(uid).update(mapOf("householdId" to householdId, FIELD_UPDATED_AT to serverTime())).logFailure("switching household")
+    }
 }

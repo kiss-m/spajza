@@ -9,6 +9,7 @@ import androidx.compose.material3.NavigationBarItem
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
@@ -30,8 +31,15 @@ import sk.matej.spajza.ui.recipe.RecipeDetailRoute
 import sk.matej.spajza.ui.shopping.ShoppingRoute
 
 @Composable
-fun MainScaffold() {
+fun MainScaffold(link: AppLink?, onLinkHandled: (AppLink) -> Unit) {
     val navController = rememberNavController()
+    LaunchedEffect(link) {
+        val target = link ?: return@LaunchedEffect
+        when (target) {
+            AppLink.Pantry -> navController.navigateToTab(PantryDestination)
+        }
+        onLinkHandled(target)
+    }
     val backStackEntry by navController.currentBackStackEntryAsState()
     val current = backStackEntry?.destination
     val onTopLevel = TopLevelDestination.entries.any { current.isOn(it) }

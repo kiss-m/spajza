@@ -59,3 +59,19 @@ catalog is read-only and rebuilt from the seed, so it never needs data migration
 - `users/{uid}/cookHistory/{id}`: `recipeId`, `cookedAt` (device time, so offline events keep their
   date), `servings`.
 
+## D10 — Joining and leaving households (Phase 2)
+- A new invite writes `invites/{code}` (D4; `householdName` at most 60 characters) and shows the code on
+  the household (`inviteCode`, `inviteExpiresAt`); it withdraws the previous code. Valid 48 h.
+- Joining looks the code up on the server, never in the cache. The join itself is a Firestore
+  transaction, so it fails at once without a connection instead of waiting in the offline queue; it
+  writes only `memberUids` (arrayUnion) and `joinCode`, and the member's name in a second write.
+- A member who was alone brings their pantry (quantities merged by increment) and unchecked shopping
+  items; their old household, its subcollections and its invite are deleted. A member of a shared
+  household just leaves it, and its data stays with the others. The joined household keeps its own
+  staples and equipment.
+- Leaving a shared household starts a new empty one with the default staples and equipment. The last
+  member cannot leave; deleting the account removes the household.
+- Device settings live in the DataStore file `device_settings`: the expiry reminder (off by default)
+  and its time (17:00 by default). The reminder is a daily WorkManager job that reads the pantry from
+  the Firestore cache, so it works offline.
+

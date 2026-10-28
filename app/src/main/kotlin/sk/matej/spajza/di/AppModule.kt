@@ -30,10 +30,14 @@ import sk.matej.spajza.data.firestore.FirestorePantryRepository
 import sk.matej.spajza.data.firestore.FirestoreRatingRepository
 import sk.matej.spajza.data.firestore.FirestoreShoppingRepository
 import sk.matej.spajza.data.firestore.FirestoreUserRepository
+import sk.matej.spajza.data.settings.DataStoreDeviceSettingsRepository
+import sk.matej.spajza.notifications.WorkManagerExpiryScheduler
 import sk.matej.spajza.domain.repository.AccountRepository
 import sk.matej.spajza.domain.repository.AuthRepository
 import sk.matej.spajza.domain.repository.CatalogRepository
 import sk.matej.spajza.domain.repository.CookHistoryRepository
+import sk.matej.spajza.domain.repository.DeviceSettingsRepository
+import sk.matej.spajza.domain.repository.ExpiryReminderScheduler
 import sk.matej.spajza.domain.repository.HouseholdRepository
 import sk.matej.spajza.domain.repository.PantryRepository
 import sk.matej.spajza.domain.repository.RatingRepository
@@ -42,6 +46,9 @@ import sk.matej.spajza.domain.repository.UserRepository
 import sk.matej.spajza.domain.session.HomeData
 import sk.matej.spajza.domain.session.SessionManager
 import sk.matej.spajza.domain.usecase.CreateHouseholdUseCase
+import sk.matej.spajza.domain.usecase.CreateInviteUseCase
+import sk.matej.spajza.domain.usecase.JoinHouseholdUseCase
+import sk.matej.spajza.domain.usecase.LeaveHouseholdUseCase
 import java.time.Clock
 import javax.inject.Qualifier
 import javax.inject.Singleton
@@ -143,6 +150,33 @@ object AppModule {
         defaultHouseholdName = { context.getString(R.string.default_household_name) },
         scope = scope,
     )
+
+    @Provides
+    @Singleton
+    fun deviceSettingsRepository(@ApplicationContext context: Context): DeviceSettingsRepository =
+        DataStoreDeviceSettingsRepository(context)
+
+    @Provides
+    @Singleton
+    fun expiryReminderScheduler(@ApplicationContext context: Context, clock: Clock): ExpiryReminderScheduler =
+        WorkManagerExpiryScheduler(context, clock)
+
+    @Provides
+    fun createInviteUseCase(households: HouseholdRepository, clock: Clock): CreateInviteUseCase =
+        CreateInviteUseCase(households, clock)
+
+    @Provides
+    fun joinHouseholdUseCase(
+        users: UserRepository,
+        households: HouseholdRepository,
+        pantry: PantryRepository,
+        shopping: ShoppingRepository,
+        clock: Clock,
+    ): JoinHouseholdUseCase = JoinHouseholdUseCase(users, households, pantry, shopping, clock)
+
+    @Provides
+    fun leaveHouseholdUseCase(users: UserRepository, households: HouseholdRepository): LeaveHouseholdUseCase =
+        LeaveHouseholdUseCase(users, households)
 
     @Provides
     @Singleton

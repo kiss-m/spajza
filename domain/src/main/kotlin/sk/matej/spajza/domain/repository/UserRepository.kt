@@ -21,4 +21,7 @@ interface UserRepository {
     suspend fun updatePreferences(uid: String, preferences: Preferences)
 
     suspend fun setOnboardingDone(uid: String)
+
+    /** Points the user at another household after joining or leaving one. */
+    suspend fun setHousehold(uid: String, householdId: String)
 }

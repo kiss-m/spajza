@@ -12,16 +12,26 @@ import kotlinx.coroutines.launch
 import sk.matej.spajza.domain.catalog.Catalog
 import sk.matej.spajza.domain.model.Cuisine
 import sk.matej.spajza.domain.model.Equipment
+import sk.matej.spajza.domain.pantry.ExpiryReminder
 import sk.matej.spajza.domain.profile.DailyTargets
 import sk.matej.spajza.domain.profile.Preferences
 import sk.matej.spajza.domain.profile.TargetCalculator
 import sk.matej.spajza.domain.repository.AccountRepository
 import sk.matej.spajza.domain.repository.AuthRepository
+import sk.matej.spajza.domain.repository.DeviceSettingsRepository
+import sk.matej.spajza.domain.repository.ExpiryReminderScheduler
 import sk.matej.spajza.domain.repository.HouseholdRepository
 import sk.matej.spajza.domain.repository.UserRepository
 import sk.matej.spajza.domain.session.HomeData
+import sk.matej.spajza.domain.usecase.CreateInviteUseCase
+import sk.matej.spajza.domain.usecase.JoinHouseholdUseCase
+import sk.matej.spajza.domain.usecase.LeaveHouseholdUseCase
 import sk.matej.spajza.ui.common.IngredientOption
 import sk.matej.spajza.ui.common.IngredientOptions
+import sk.matej.spajza.ui.household.HouseholdUiState
+import sk.matej.spajza.ui.household.InviteUi
+import sk.matej.spajza.ui.household.JoinFlow
+import java.time.Clock
 import javax.inject.Inject
 
 enum class DeletionState { IDLE, DELETING, FAILED }
@@ -39,8 +49,8 @@ data class ProfileUiState(
     val disliked: List<IngredientOption> = emptyList(),
     val equipment: Set<Equipment> = emptySet(),
     val staples: List<IngredientOption> = emptyList(),
-    val householdName: String = "",
-    val members: List<String> = emptyList(),
+    val household: HouseholdUiState = HouseholdUiState(),
+    val expiryReminder: ExpiryReminder = ExpiryReminder(),
     val deletion: DeletionState = DeletionState.IDLE,
 )
 
@@ -52,13 +62,28 @@ class ProfileViewModel @Inject constructor(
     private val households: HouseholdRepository,
     private val auth: AuthRepository,
     private val account: AccountRepository,
+    private val createInvite: CreateInviteUseCase,
+    private val leaveHousehold: LeaveHouseholdUseCase,
+    private val clock: Clock,
+    private val deviceSettings: DeviceSettingsRepository,
+    private val reminderScheduler: ExpiryReminderScheduler,
+    joinHousehold: JoinHouseholdUseCase,
 ) : ViewModel() {
+    /** Joining another household with a code from a housemate. */
+    val join = JoinFlow(viewModelScope, joinHousehold) { home.session.value }
+
     private val bodyDraft = MutableStateFlow<BodyDraft?>(null)
     private val deletion = MutableStateFlow(DeletionState.IDLE)
     private val targetCalculator = TargetCalculator()
     private var options: Pair<Catalog, IngredientOptions>? = null
 
-    val state: StateFlow<ProfileUiState> = combine(home.catalog, home.session, bodyDraft, deletion) { catalog, session, draft, deletionState ->
+    val state: StateFlow<ProfileUiState> = combine(
+        home.catalog,
+        home.session,
+        bodyDraft,
+        deletion,
+        deviceSettings.expiryReminder,
+    ) { catalog, session, draft, deletionState, reminder ->
         if (catalog == null || session == null) return@combine ProfileUiState(deletion = deletionState)
         val saved = session.profile.body
         val body = draft ?: BodyDraft.of(saved)
@@ -76,9 +101,16 @@ class ProfileViewModel @Inject constructor(
             disliked = preferences.dislikedOptions(catalog),
             equipment = household.equipment,
             staples = stapleOptions(catalog, household.staples),
-            householdName = household.name,
-            members = household.memberUids.map { household.memberNames[it] ?: "?" },
+            household = HouseholdUiState(
+                name = household.name,
+                members = household.memberUids.map { household.memberNames[it] ?: "?" },
+                isShared = household.memberUids.any { it != session.uid },
+                invite = household.inviteCode?.let { code ->
+                    household.inviteExpiresAt?.takeIf { it.isAfter(clock.instant()) }?.let { InviteUi(code, it) }
+                },
+            ),
             deletion = deletionState,
+            expiryReminder = reminder,
         )
     }.stateIn(viewModelScope, SharingStarted.WhileSubscribed(5_000), ProfileUiState())
 
@@ -120,6 +152,25 @@ class ProfileViewModel @Inject constructor(
     private fun setStaple(ingredientId: String, isStaple: Boolean) {
         val session = home.session.value ?: return
         viewModelScope.launch { households.setStaple(session.householdId, ingredientId, isStaple) }
+    }
+
+    fun onExpiryReminderChange(reminder: ExpiryReminder) {
+        viewModelScope.launch {
+            deviceSettings.setExpiryReminder(reminder)
+            reminderScheduler.apply(reminder)
+        }
+    }
+
+    fun onCreateInvite() {
+        val session = home.session.value ?: return
+        viewModelScope.launch { createInvite(session) }
+    }
+
+    /** The user starts a new household named [newHouseholdName]; the shared one keeps its data. */
+    fun onLeaveHousehold(newHouseholdName: String) {
+        val session = home.session.value ?: return
+        val catalog = home.catalog.value ?: return
+        viewModelScope.launch { leaveHousehold(session, catalog, newHouseholdName) }
     }
 
     fun signOut() {

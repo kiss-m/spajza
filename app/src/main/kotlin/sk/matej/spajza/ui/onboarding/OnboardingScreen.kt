@@ -37,6 +37,10 @@ import sk.matej.spajza.R
 import sk.matej.spajza.domain.model.Equipment
 import sk.matej.spajza.domain.profile.Preferences
 import sk.matej.spajza.ui.common.IngredientOption
+import sk.matej.spajza.ui.household.JoinActions
+import sk.matej.spajza.ui.household.JoinCodeField
+import sk.matej.spajza.ui.household.JoinDialogs
+import sk.matej.spajza.ui.household.JoinUiState
 import sk.matej.spajza.ui.profile.BodyDraft
 import sk.matej.spajza.ui.profile.BodyEditor
 import sk.matej.spajza.ui.profile.EquipmentEditor
@@ -47,8 +51,10 @@ import sk.matej.spajza.ui.profile.TasteEditor
 @Composable
 fun OnboardingRoute(viewModel: OnboardingViewModel = hiltViewModel()) {
     val state by viewModel.state.collectAsStateWithLifecycle()
+    val join by viewModel.join.state.collectAsStateWithLifecycle()
     OnboardingScreen(
         state = state,
+        join = join,
         actions = OnboardingActions(
             lookup = viewModel::searchIngredients,
             onBodyChange = viewModel::onBodyChange,
@@ -59,6 +65,7 @@ fun OnboardingRoute(viewModel: OnboardingViewModel = hiltViewModel()) {
             onNext = viewModel::onNext,
             onSkip = viewModel::onSkip,
             onBack = viewModel::onBack,
+            join = JoinActions.of(viewModel.join),
         ),
     )
 }
@@ -73,20 +80,22 @@ class OnboardingActions(
     val onNext: () -> Unit,
     val onSkip: () -> Unit,
     val onBack: () -> Unit,
+    val join: JoinActions,
 )
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun OnboardingScreen(state: OnboardingUiState, actions: OnboardingActions) {
-    val steps = OnboardingStep.entries
-    val isLast = state.step == steps.last()
-    BackHandler(enabled = state.step != steps.first()) { actions.onBack() }
+fun OnboardingScreen(state: OnboardingUiState, join: JoinUiState, actions: OnboardingActions) {
+    val steps = state.steps
+    val index = steps.indexOf(state.step).coerceAtLeast(0)
+    val isLast = index == steps.lastIndex
+    BackHandler(enabled = index > 0) { actions.onBack() }
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text(stringResource(R.string.onboarding_step, state.step.ordinal + 1, steps.size)) },
+                title = { Text(stringResource(R.string.onboarding_step, index + 1, steps.size)) },
                 navigationIcon = {
-                    if (state.step != steps.first()) {
+                    if (index > 0) {
                         IconButton(onClick = actions.onBack) {
                             Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = stringResource(R.string.action_back))
                         }
@@ -113,8 +122,8 @@ fun OnboardingScreen(state: OnboardingUiState, actions: OnboardingActions) {
                 Modifier.fillMaxSize().padding(padding).verticalScroll(rememberScrollState()).padding(16.dp),
                 verticalArrangement = Arrangement.spacedBy(16.dp),
             ) {
-                LinearProgressIndicator(progress = { (state.step.ordinal + 1f) / steps.size }, modifier = Modifier.fillMaxWidth())
-                if (state.step == OnboardingStep.BODY) {
+                LinearProgressIndicator(progress = { (index + 1f) / steps.size }, modifier = Modifier.fillMaxWidth())
+                if (state.step == OnboardingStep.HOUSEHOLD) {
                     val name = state.displayName
                     Text(
                         if (name != null) stringResource(R.string.onboarding_welcome_named, name) else stringResource(R.string.onboarding_welcome),
@@ -123,6 +132,7 @@ fun OnboardingScreen(state: OnboardingUiState, actions: OnboardingActions) {
                     Text(stringResource(R.string.onboarding_welcome_body), style = MaterialTheme.typography.bodyLarge)
                 }
                 val (title, hint) = when (state.step) {
+                    OnboardingStep.HOUSEHOLD -> R.string.onboarding_household_title to R.string.onboarding_household_hint
                     OnboardingStep.BODY -> R.string.onboarding_body_title to R.string.onboarding_body_hint
                     OnboardingStep.TASTE -> R.string.onboarding_taste_title to R.string.onboarding_taste_hint
                     OnboardingStep.EQUIPMENT -> R.string.onboarding_equipment_title to R.string.onboarding_equipment_hint
@@ -131,6 +141,11 @@ fun OnboardingScreen(state: OnboardingUiState, actions: OnboardingActions) {
                 Text(stringResource(title), style = MaterialTheme.typography.titleLarge)
                 Text(stringResource(hint), style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.onSurfaceVariant)
                 when (state.step) {
+                    OnboardingStep.HOUSEHOLD -> if (state.joinedHousehold) {
+                        Text(stringResource(R.string.onboarding_household_joined, state.householdName), style = MaterialTheme.typography.bodyLarge)
+                    } else {
+                        JoinCodeField(join, actions.join)
+                    }
                     OnboardingStep.BODY -> BodyEditor(state.body, state.targets, actions.onBodyChange)
                     OnboardingStep.TASTE -> TasteEditor(
                         preferences = state.preferences,
@@ -146,4 +161,6 @@ fun OnboardingScreen(state: OnboardingUiState, actions: OnboardingActions) {
             }
         }
     }
+    // A new user's own household has nobody else in it, so their pantry would move along.
+    JoinDialogs(join, alone = true, actions.join)
 }

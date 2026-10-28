@@ -23,6 +23,8 @@ class FakeUserRepository(initial: List<UserProfile> = emptyList()) : UserReposit
 
     override suspend fun setOnboardingDone(uid: String) = update(uid) { it.copy(onboardingDone = true) }
 
+    override suspend fun setHousehold(uid: String, householdId: String) = update(uid) { it.copy(householdId = householdId) }
+
     private fun update(uid: String, change: (UserProfile) -> UserProfile) {
         val user = users.value[uid] ?: return
         users.value = users.value + (uid to change(user))

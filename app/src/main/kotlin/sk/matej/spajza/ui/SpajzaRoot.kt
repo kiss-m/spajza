@@ -20,12 +20,13 @@ import sk.matej.spajza.ui.signin.SignInRoute
 @Composable
 fun SpajzaRoot(viewModel: RootViewModel = hiltViewModel()) {
     val state by viewModel.state.collectAsStateWithLifecycle()
+    val link by viewModel.pendingLink.collectAsStateWithLifecycle()
     Surface(Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background) {
         when (state) {
             SessionState.Loading -> Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) { CircularProgressIndicator() }
             SessionState.SignedOut -> SignInRoute()
             is SessionState.Onboarding -> OnboardingRoute()
-            is SessionState.Ready -> MainScaffold()
+            is SessionState.Ready -> MainScaffold(link, viewModel::onLinkHandled)
         }
     }
 }

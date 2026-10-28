@@ -33,7 +33,7 @@ class ShoppingUseCasesTest {
 
         // tomato 240 g = 2 pieces, garlic 10 g; oil and salt are staples, basil is optional.
         assertEquals(2, added)
-        val items = shopping.items.value
+        val items = shopping.itemsOf()
         assertEquals(setOf("i_tomato", "i_garlic"), items.keys)
         assertEquals(2.0, items.getValue("i_tomato").amount)
         assertEquals(10.0, items.getValue("i_garlic").amount)
@@ -47,7 +47,7 @@ class ShoppingUseCasesTest {
 
         addMissing("home", match, addedBy = "me")
 
-        assertEquals(mapOf("i_pasta" to 150.0), shopping.items.value.mapValues { it.value.amount })
+        assertEquals(mapOf("i_pasta" to 150.0), shopping.itemsOf().mapValues { it.value.amount })
     }
 
     @Test
@@ -57,7 +57,7 @@ class ShoppingUseCasesTest {
         addMissing("home", matcher.evaluate(chickenRice, home, taste(), MONDAY, servings = 3), addedBy = "me")
         addMissing("home", matcher.evaluate(creamyChicken, home, taste(), MONDAY, servings = 2), addedBy = "me")
 
-        val items = shopping.items.value
+        val items = shopping.itemsOf()
         assertEquals(setOf("i_onion"), items.keys)
         assertEquals(2.0 + 1.0, items.getValue("i_onion").amount)
         assertEquals(setOf("chicken-rice", "creamy-chicken"), items.getValue("i_onion").reasonRecipeIds)
@@ -79,15 +79,15 @@ class ShoppingUseCasesTest {
         MoveBoughtToPantryUseCase(list, pantryRepo)(
             householdId = "home",
             bought = listOf(
-                BoughtItem(list.items.value.getValue("i_tomato"), quantity = 4.0, expiresAt = expiry),
-                BoughtItem(list.items.value.getValue("i_garlic"), quantity = null, expiresAt = null),
-                BoughtItem(list.items.value.getValue("text-1"), quantity = null, expiresAt = null),
+                BoughtItem(list.itemsOf().getValue("i_tomato"), quantity = 4.0, expiresAt = expiry),
+                BoughtItem(list.itemsOf().getValue("i_garlic"), quantity = null, expiresAt = null),
+                BoughtItem(list.itemsOf().getValue("text-1"), quantity = null, expiresAt = null),
             ),
             addedBy = "me",
         )
 
-        assertEquals(setOf("i_onion"), list.items.value.keys)
-        val stored = pantryRepo.items.value
+        assertEquals(setOf("i_onion"), list.itemsOf().keys)
+        val stored = pantryRepo.itemsOf()
         assertEquals(setOf("i_tomato", "i_garlic"), stored.keys)
         assertEquals(4.0, stored.getValue("i_tomato").quantity)
         assertEquals(expiry, stored.getValue("i_tomato").expiresAt)

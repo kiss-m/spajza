@@ -40,20 +40,28 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import kotlinx.coroutines.launch
 import sk.matej.spajza.R
 import sk.matej.spajza.domain.model.Equipment
+import sk.matej.spajza.domain.pantry.ExpiryReminder
 import sk.matej.spajza.domain.profile.Preferences
 import sk.matej.spajza.ui.common.IngredientOption
 import sk.matej.spajza.ui.components.FormSection
+import sk.matej.spajza.ui.household.HouseholdActions
+import sk.matej.spajza.ui.household.JoinActions
+import sk.matej.spajza.ui.household.HouseholdSection
+import sk.matej.spajza.ui.household.JoinUiState
 import sk.matej.spajza.ui.signin.GoogleSignInResult
 import sk.matej.spajza.ui.signin.requestGoogleIdToken
 
 @Composable
 fun ProfileRoute(onOpenAbout: () -> Unit, viewModel: ProfileViewModel = hiltViewModel()) {
     val state by viewModel.state.collectAsStateWithLifecycle()
+    val join by viewModel.join.state.collectAsStateWithLifecycle()
     var language by remember { mutableStateOf(AppLanguage.current()) }
     val context = LocalContext.current
     val scope = rememberCoroutineScope()
+    val newHouseholdName = stringResource(R.string.default_household_name)
     ProfileScreen(
         state = state,
+        join = join,
         language = language,
         actions = ProfileActions(
             lookup = viewModel::searchIngredients,
@@ -77,6 +85,12 @@ fun ProfileRoute(onOpenAbout: () -> Unit, viewModel: ProfileViewModel = hiltView
                 }
             },
             onDeletionErrorShown = viewModel::onDeletionErrorShown,
+            onExpiryReminderChange = viewModel::onExpiryReminderChange,
+            household = HouseholdActions(
+                onCreateInvite = viewModel::onCreateInvite,
+                onLeave = { viewModel.onLeaveHousehold(newHouseholdName) },
+                join = JoinActions.of(viewModel.join),
+            ),
         ),
     )
 }
@@ -94,11 +108,13 @@ class ProfileActions(
     val onSignOut: () -> Unit,
     val onDeleteConfirmed: () -> Unit,
     val onDeletionErrorShown: () -> Unit,
+    val onExpiryReminderChange: (ExpiryReminder) -> Unit,
+    val household: HouseholdActions,
 )
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun ProfileScreen(state: ProfileUiState, language: AppLanguage, actions: ProfileActions) {
+fun ProfileScreen(state: ProfileUiState, join: JoinUiState, language: AppLanguage, actions: ProfileActions) {
     var confirmDelete by remember { mutableStateOf(false) }
     Scaffold(topBar = { TopAppBar(title = { Text(stringResource(R.string.nav_profile)) }) }) { padding ->
         if (state.isLoading) {
@@ -130,9 +146,11 @@ fun ProfileScreen(state: ProfileUiState, language: AppLanguage, actions: Profile
                 }
                 HorizontalDivider()
                 FormSection(stringResource(R.string.profile_section_household)) {
-                    Text(state.householdName, style = MaterialTheme.typography.titleMedium)
-                    Text(stringResource(R.string.profile_household_members, state.members.joinToString()), style = MaterialTheme.typography.bodyMedium)
-                    Text(stringResource(R.string.profile_household_invite_later), style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                    HouseholdSection(state.household, join, actions.household)
+                }
+                HorizontalDivider()
+                FormSection(stringResource(R.string.profile_section_notifications)) {
+                    ExpiryReminderSettings(state.expiryReminder, actions.onExpiryReminderChange)
                 }
                 HorizontalDivider()
                 FormSection(stringResource(R.string.profile_section_app)) {

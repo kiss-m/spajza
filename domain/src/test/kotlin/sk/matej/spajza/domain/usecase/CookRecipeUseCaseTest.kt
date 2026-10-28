@@ -26,12 +26,12 @@ class CookRecipeUseCaseTest {
         val undo = cook("me", "home", MatcherFixture.tomatoPasta, servings = 2, currentPantry = start, staples = setOf("oil", "salt"))
 
         assertEquals(listOf("tomato-pasta"), history.events.value.map { it.recipeId })
-        assertEquals(300.0, pantry.items.value.getValue("i_pasta").quantity)
-        assertTrue("i_tomato" !in pantry.items.value, "both tomatoes were used")
-        assertEquals(null, pantry.items.value.getValue("i_garlic").quantity)
+        assertEquals(300.0, pantry.itemsOf().getValue("i_pasta").quantity)
+        assertTrue("i_tomato" !in pantry.itemsOf(), "both tomatoes were used")
+        assertEquals(null, pantry.itemsOf().getValue("i_garlic").quantity)
 
         undo.undo()
         assertEquals(emptyList(), history.events.value)
-        assertEquals(start.associateBy { it.id }, pantry.items.value)
+        assertEquals(start.associateBy { it.id }, pantry.itemsOf())
     }
 }
