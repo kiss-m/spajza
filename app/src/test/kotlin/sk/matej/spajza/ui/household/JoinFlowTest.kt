@@ -3,6 +3,7 @@ package sk.matej.spajza.ui.household
 import kotlinx.coroutines.test.TestScope
 import kotlinx.coroutines.test.UnconfinedTestDispatcher
 import kotlinx.coroutines.test.runTest
+import org.junit.jupiter.api.Test
 import sk.matej.spajza.domain.fakes.FakeHouseholdRepository
 import sk.matej.spajza.domain.fakes.FakePantryRepository
 import sk.matej.spajza.domain.fakes.FakeShoppingRepository
@@ -16,7 +17,6 @@ import sk.matej.spajza.domain.usecase.JoinHouseholdUseCase
 import java.time.Clock
 import java.time.Instant
 import java.time.ZoneOffset
-import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertFalse
 import kotlin.test.assertNull

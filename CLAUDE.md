@@ -109,4 +109,5 @@ Spark plan only: no Cloud Functions, no Cloud Storage. Package `sk.matej.spajza`
 
 ## Conventions
 - Domain logic: tests first; ViewModels and domain tested with fakes, not Firebase mocks.
+- `:app` unit tests use `org.junit.jupiter.api.Test` (`kotlin.test.Test` does not resolve on Android).
 - Commit messages: imperative English subject, ≤ 72 chars, body explains why.
