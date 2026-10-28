@@ -4,6 +4,7 @@ import kotlinx.coroutines.test.runTest
 import sk.matej.spajza.domain.custom.CustomIngredient
 import sk.matej.spajza.domain.fakes.FakeCustomIngredientRepository
 import sk.matej.spajza.domain.fakes.FakeHouseholdRepository
+import sk.matej.spajza.domain.fakes.FakeOwnRecipeRepository
 import sk.matej.spajza.domain.fakes.FakePantryRepository
 import sk.matej.spajza.domain.fakes.FakeShoppingRepository
 import sk.matej.spajza.domain.fakes.FakeUserRepository
@@ -11,6 +12,7 @@ import sk.matej.spajza.domain.household.Household
 import sk.matej.spajza.domain.household.Invite
 import sk.matej.spajza.domain.household.InviteCodes
 import sk.matej.spajza.domain.matching.MatcherFixture
+import sk.matej.spajza.domain.own.OwnRecipe
 import sk.matej.spajza.domain.pantry.IngredientRef
 import sk.matej.spajza.domain.pantry.PantryItem
 import sk.matej.spajza.domain.pantry.ShoppingItem
@@ -57,7 +59,8 @@ class HouseholdMembershipTest {
         householdId = "mine",
     )
     private val custom = FakeCustomIngredientRepository(listOf(CustomIngredient(id = "b123", name = "Horalky")), householdId = "mine")
-    private val join = JoinHouseholdUseCase(users, households, pantry, shopping, custom, clock)
+    private val recipes = FakeOwnRecipeRepository(listOf(OwnRecipe(id = "r1", title = "Babkin guláš")), householdId = "mine")
+    private val join = JoinHouseholdUseCase(users, households, pantry, shopping, custom, recipes, clock)
 
     private fun session(household: Household = mine) =
         Session(AuthUser("me", "Alex", null), UserProfile(uid = "me", displayName = "Alex", householdId = household.id), household)
@@ -115,6 +118,7 @@ class HouseholdMembershipTest {
         assertEquals(listOf("baterky"), list.mapNotNull { it.text })
 
         assertEquals(setOf("b123"), custom.itemsOf("theirs").keys, "own foods come along")
+        assertEquals(setOf("r1"), recipes.itemsOf("theirs").keys, "and own recipes too")
         assertEquals(listOf("mine"), households.deleted)
         assertTrue("OLDOLD" !in households.invites.value)
     }

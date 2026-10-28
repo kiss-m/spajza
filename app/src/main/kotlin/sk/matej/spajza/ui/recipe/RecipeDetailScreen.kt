@@ -17,9 +17,12 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.filled.Delete
+import androidx.compose.material.icons.filled.Edit
 import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material.icons.filled.FavoriteBorder
 import androidx.compose.material.icons.filled.ThumbUp
+import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.BottomAppBar
 import androidx.compose.material3.Button
 import androidx.compose.material3.Card
@@ -42,11 +45,14 @@ import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberUpdatedState
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalResources
+import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
@@ -64,6 +70,7 @@ import sk.matej.spajza.ui.components.RecipePlaceholder
 import sk.matej.spajza.ui.components.SectionHeader
 import sk.matej.spajza.ui.components.SpajzaIcons
 import sk.matej.spajza.ui.components.Stepper
+import sk.matej.spajza.ui.ownrecipe.hostOf
 import kotlin.math.roundToInt
 
 @Composable
@@ -71,11 +78,14 @@ fun RecipeDetailRoute(
     onBack: () -> Unit,
     onOpenRecipe: (String) -> Unit,
     onStartCooking: (recipeId: String, servings: Int) -> Unit,
+    onEdit: (recipeId: String) -> Unit,
     viewModel: RecipeDetailViewModel = hiltViewModel(),
 ) {
     val state by viewModel.state.collectAsStateWithLifecycle()
     val snackbarHostState = remember { SnackbarHostState() }
     val resources by rememberUpdatedState(LocalResources.current)
+    val back by rememberUpdatedState(onBack)
+    var confirmDelete by remember { mutableStateOf(false) }
     LaunchedEffect(viewModel) {
         viewModel.screenEvents.collect { event ->
             when (event) {
@@ -94,6 +104,7 @@ fun RecipeDetailRoute(
                     if (result == SnackbarResult.ActionPerformed) viewModel.onUndoCooked()
                 }
                 DetailEvent.CookUndone -> snackbarHostState.showSnackbar(resources.getString(R.string.detail_cooked_undone))
+                DetailEvent.Deleted -> back()
             }
         }
     }
@@ -109,8 +120,24 @@ fun RecipeDetailRoute(
             onVerdict = viewModel::onVerdict,
             onAddMissing = viewModel::onAddMissing,
             onCooked = viewModel::onCooked,
+            onEdit = { state.recipe?.let { onEdit(it.id) } },
+            onDelete = { confirmDelete = true },
         ),
     )
+    if (confirmDelete) {
+        AlertDialog(
+            onDismissRequest = { confirmDelete = false },
+            title = { Text(stringResource(R.string.detail_delete_title)) },
+            text = { Text(stringResource(R.string.detail_delete_body)) },
+            confirmButton = {
+                TextButton(onClick = {
+                    confirmDelete = false
+                    viewModel.onDelete()
+                }) { Text(stringResource(R.string.detail_delete_confirm)) }
+            },
+            dismissButton = { TextButton(onClick = { confirmDelete = false }) { Text(stringResource(R.string.action_cancel)) } },
+        )
+    }
 }
 
 class DetailActions(
@@ -122,6 +149,8 @@ class DetailActions(
     val onVerdict: (Verdict) -> Unit,
     val onAddMissing: () -> Unit,
     val onCooked: () -> Unit,
+    val onEdit: () -> Unit,
+    val onDelete: () -> Unit,
 )
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -138,6 +167,10 @@ fun RecipeDetailScreen(state: RecipeDetailUiState, snackbarHostState: SnackbarHo
                     }
                 },
                 actions = {
+                    if (recipe != null && state.own != null) {
+                        IconButton(onClick = actions.onEdit) { Icon(Icons.Filled.Edit, contentDescription = stringResource(R.string.detail_edit)) }
+                        IconButton(onClick = actions.onDelete) { Icon(Icons.Filled.Delete, contentDescription = stringResource(R.string.action_delete)) }
+                    }
                     if (recipe != null) {
                         IconButton(onClick = actions.onToggleFavorite) {
                             Icon(
@@ -187,6 +220,7 @@ fun RecipeDetailScreen(state: RecipeDetailUiState, snackbarHostState: SnackbarHo
                 }
                 // No keys: a recipe may list one ingredient twice (dough and filling).
                 items(state.lines) { line -> IngredientRow(line) }
+                state.own?.let { own -> items(own.unmatched) { text -> UnmatchedRow(text) } }
                 if (state.addOns.isNotEmpty() || state.pairs.isNotEmpty()) {
                     item { GoesWell(state, actions.onOpenRecipe) }
                 }
@@ -214,8 +248,11 @@ fun RecipeDetailScreen(state: RecipeDetailUiState, snackbarHostState: SnackbarHo
 private fun Header(state: RecipeDetailUiState) {
     val recipe = state.recipe ?: return
     Column(Modifier.padding(horizontal = 16.dp), verticalArrangement = Arrangement.spacedBy(6.dp)) {
+        state.own?.let { own -> OwnRecipeLabel(own) }
         Text(recipe.title.text(), style = MaterialTheme.typography.headlineSmall)
-        Text(recipe.description.text(), style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.onSurfaceVariant)
+        if (recipe.description.text().isNotBlank()) {
+            Text(recipe.description.text(), style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.onSurfaceVariant)
+        }
         Text(
             stringResource(R.string.detail_time, durationText(recipe.totalTimeMin), durationText(recipe.activeTimeMin)) +
                 " · " + stringResource(difficultyLabelRes(recipe.difficulty)),
@@ -237,6 +274,14 @@ private fun NutritionCard(state: RecipeDetailUiState) {
                 Macro(stringResource(R.string.macro_carbs), n.carbs)
                 Macro(stringResource(R.string.macro_fat), n.fat)
                 Macro(stringResource(R.string.macro_fiber), n.fiber)
+            }
+            val uncounted = state.own?.uncounted.orEmpty()
+            if (uncounted.isNotEmpty()) {
+                Text(
+                    stringResource(R.string.detail_uncounted, uncounted.joinToString()),
+                    style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                )
             }
         }
     }
@@ -342,6 +387,42 @@ private fun GoesWell(state: RecipeDetailUiState, onOpenRecipe: (String) -> Unit)
                 TextButton(onClick = { onOpenRecipe(pair.recipeId) }) { Text(stringResource(R.string.detail_pairs_with, pair.title[language])) }
             }
             Spacer(Modifier.height(0.dp))
+        }
+    }
+}
+
+/** "Vlastný recept · z example.com", the source opening in the browser. */
+@Composable
+private fun OwnRecipeLabel(own: OwnRecipeInfo) {
+    val uriHandler = LocalUriHandler.current
+    Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+        Surface(color = MaterialTheme.colorScheme.tertiaryContainer, shape = MaterialTheme.shapes.small) {
+            Text(
+                stringResource(R.string.detail_own_recipe),
+                style = MaterialTheme.typography.labelMedium,
+                modifier = Modifier.padding(horizontal = 8.dp, vertical = 2.dp),
+            )
+        }
+        own.sourceUrl?.let { url ->
+            TextButton(onClick = { runCatching { uriHandler.openUri(url) } }) {
+                Text(stringResource(R.string.detail_source, hostOf(url)))
+            }
+        }
+    }
+}
+
+/** An own recipe's line that matches nothing in the catalog: shown, but neither counted nor checked. */
+@Composable
+private fun UnmatchedRow(text: String) {
+    Row(
+        Modifier.fillMaxWidth().padding(horizontal = 16.dp, vertical = 2.dp),
+        verticalAlignment = Alignment.CenterVertically,
+        horizontalArrangement = Arrangement.spacedBy(12.dp),
+    ) {
+        Spacer(Modifier.width(76.dp))
+        Column(Modifier.weight(1f)) {
+            Text(text, style = MaterialTheme.typography.bodyLarge)
+            Text(stringResource(R.string.detail_unmatched), style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
         }
     }
 }

@@ -9,6 +9,7 @@ import sk.matej.spajza.domain.household.Invite
 import sk.matej.spajza.domain.household.InviteCodes
 import sk.matej.spajza.domain.repository.CustomIngredientRepository
 import sk.matej.spajza.domain.repository.HouseholdRepository
+import sk.matej.spajza.domain.repository.OwnRecipeRepository
 import sk.matej.spajza.domain.repository.PantryRepository
 import sk.matej.spajza.domain.repository.ShoppingRepository
 import sk.matej.spajza.domain.repository.UserRepository
@@ -49,8 +50,9 @@ sealed interface JoinOutcome {
 
 /**
  * Joining another household with an invite code. A user who was alone in their household brings
- * its pantry, unchecked shopping items and own foods along, and that household is deleted; a user
- * who shared one leaves its data with the others. The joined household's kitchen settings stay.
+ * its pantry, unchecked shopping items, own foods and own recipes along, and that household is
+ * deleted; a user who shared one leaves its data with the others. The joined household's kitchen
+ * settings stay.
  */
 class JoinHouseholdUseCase(
     private val users: UserRepository,
@@ -58,6 +60,7 @@ class JoinHouseholdUseCase(
     private val pantry: PantryRepository,
     private val shopping: ShoppingRepository,
     private val customIngredients: CustomIngredientRepository,
+    private val ownRecipes: OwnRecipeRepository,
     private val clock: Clock = Clock.systemUTC(),
 ) {
     /** The invite behind [code] if it exists and is still valid; fails without a connection. */
@@ -87,6 +90,7 @@ class JoinHouseholdUseCase(
     private suspend fun moveData(from: String, to: String, uid: String): Int {
         // Own foods first: pantry and shopping items may point at them.
         customIngredients.observe(from).first().forEach { customIngredients.save(to, it, uid) }
+        ownRecipes.observe(from).first().forEach { ownRecipes.save(to, it, uid) }
         val items = pantry.observe(from).first()
         items.forEach { pantry.add(to, it.ingredient, it.quantity, it.expiresAt, it.addedBy ?: uid) }
         val open = shopping.observe(from).first().filterNot { it.checked }

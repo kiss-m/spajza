@@ -99,3 +99,23 @@ catalog is read-only and rebuilt from the seed, so it never needs data migration
   text recognition; photos stay in the app cache and are deleted after a day. The parser only
   suggests rows; the user ticks what goes into the pantry, as catalog ingredients.
 - A member who was alone when joining a household brings their own foods along with the pantry.
+
+## D12 — Own recipes (Phase 2)
+- `households/{hid}/recipes/{id}` (id: 32 hex characters): `title`, `description`, `servings`,
+  `totalTimeMin`, `activeTimeMin`, `difficulty`, `cuisine`, `mealTypes`, `equipment`, `tags`,
+  `ingredients` (array of `{text, ingredientId, amount, unit, optional}`), `steps` (array of
+  `{text, timerSeconds}`), `source` (`MANUAL`/`URL`/`PHOTO`), `sourceUrl`, `updatedBy`, `updatedAt`
+  (server), written with merge. One document per recipe; two members editing one recipe at the same
+  time keep the later version of each field. Text is single-language, as written.
+- Every line keeps its text as written. The app matches it to a catalog ingredient when it is
+  typed or imported; a line picked by hand keeps the user's choice, and a line without a match is
+  shown but left out of matching, the pantry and nutrition. Grams are never stored: they are
+  computed from amount and unit like for catalog recipes, so nutrition stays the app's own.
+- The recipes join the catalog in memory as `own:<id>`, so matching, search, detail, cooking mode
+  and pantry deduction treat them like catalog recipes. Computed tags are derived the same way;
+  while any line is not counted, only QUICK is kept, since an unknown line may be meat or sugar.
+- Imports: a web page's schema.org Recipe JSON-LD (also from "Share" in the browser; the page's
+  own nutrition is ignored), or a photo read on the phone, where the user marks the title,
+  ingredient and step lines. Imported recipes stay private to the household.
+- A member who was alone when joining a household brings their own recipes along; account
+  deletion removes them with the household.

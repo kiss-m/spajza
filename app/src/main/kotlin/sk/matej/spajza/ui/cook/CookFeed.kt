@@ -9,6 +9,7 @@ import sk.matej.spajza.domain.matching.RecipeMatcher
 import sk.matej.spajza.domain.model.Cuisine
 import sk.matej.spajza.domain.model.LocalizedText
 import sk.matej.spajza.domain.model.PriceTier
+import sk.matej.spajza.domain.model.Recipe
 import sk.matej.spajza.domain.pantry.PantryItem
 import sk.matej.spajza.domain.rating.CookEvent
 import sk.matej.spajza.domain.rating.Rating
@@ -95,6 +96,20 @@ class CookFeed(private val catalog: Catalog) {
             purchase = purchase,
             searchResults = searchResults,
         )
+    }
+
+    /** Cards for [recipes] in the given order, each checked against the household's pantry. */
+    fun cards(
+        recipes: List<Recipe>,
+        session: Session,
+        pantry: List<PantryItem>,
+        ratings: Map<String, Rating>,
+        cookHistory: List<CookEvent>,
+        today: LocalDate,
+    ): List<RecipeCardModel> {
+        val kitchen = session.kitchen(pantry)
+        val personalization = session.personalization(ratings, cookHistory)
+        return recipes.map { card(matcher.evaluate(it, kitchen, personalization, today), ratings) }
     }
 
     private fun card(match: RecipeMatch, ratings: Map<String, Rating>) = RecipeCardModel(

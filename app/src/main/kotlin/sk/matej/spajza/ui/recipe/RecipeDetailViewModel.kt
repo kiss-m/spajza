@@ -19,10 +19,15 @@ import kotlinx.coroutines.launch
 import sk.matej.spajza.domain.catalog.Catalog
 import sk.matej.spajza.domain.matching.RecipeMatch
 import sk.matej.spajza.domain.matching.RecipeMatcher
+import sk.matej.spajza.domain.own.OwnRecipe
+import sk.matej.spajza.domain.own.OwnRecipes
+import sk.matej.spajza.domain.pantry.PantryItem
 import sk.matej.spajza.domain.rating.Verdict
+import sk.matej.spajza.domain.repository.OwnRecipeRepository
 import sk.matej.spajza.domain.repository.RatingRepository
 import sk.matej.spajza.domain.repository.ShoppingRepository
 import sk.matej.spajza.domain.session.HomeData
+import sk.matej.spajza.domain.session.Session
 import sk.matej.spajza.domain.session.kitchen
 import sk.matej.spajza.domain.session.personalization
 import sk.matej.spajza.domain.usecase.AddMissingToShoppingUseCase
@@ -38,6 +43,9 @@ sealed interface DetailEvent {
     data class Cooked(val pantryChanges: Int) : DetailEvent
 
     data object CookUndone : DetailEvent
+
+    /** An own recipe was deleted; the screen closes. */
+    data object Deleted : DetailEvent
 }
 
 @HiltViewModel
@@ -46,6 +54,7 @@ class RecipeDetailViewModel @Inject constructor(
     private val home: HomeData,
     private val ratings: RatingRepository,
     private val shopping: ShoppingRepository,
+    private val ownRecipes: OwnRecipeRepository,
     private val cooking: RecipeCooking,
     private val clock: Clock,
 ) : ViewModel() {
@@ -60,10 +69,21 @@ class RecipeDetailViewModel @Inject constructor(
     private val events = Channel<DetailEvent>(Channel.BUFFERED)
     val screenEvents: Flow<DetailEvent> = events.receiveAsFlow()
 
-    private val household = combine(home.catalog, home.session, home.pantry) { catalog, session, pantry -> Triple(catalog, session, pantry) }
+    /** True from deleting an own recipe until the screen closes, so it never shows "not found". */
+    private val deleting = MutableStateFlow(false)
 
-    val state: StateFlow<RecipeDetailUiState> = combine(household, home.ratings, home.cookHistory, servings) { (catalog, session, pantry), ratings, history, chosenServings ->
-        if (catalog == null || session == null || pantry == null) return@combine RecipeDetailUiState()
+    private class Household(val catalog: Catalog?, val session: Session?, val pantry: List<PantryItem>?, val ownRecipes: List<OwnRecipe>?)
+
+    private val household = combine(home.catalog, home.session, home.pantry, home.ownRecipes) { catalog, session, pantry, own ->
+        Household(catalog, session, pantry, own)
+    }
+    private val choices = combine(servings, deleting) { chosen, closing -> chosen to closing }
+
+    val state: StateFlow<RecipeDetailUiState> = combine(household, home.ratings, home.cookHistory, choices) { data, ratings, history, (chosenServings, closing) ->
+        val catalog = data.catalog
+        val session = data.session
+        val pantry = data.pantry
+        if (closing || catalog == null || session == null || pantry == null) return@combine RecipeDetailUiState()
         val recipe = catalog.recipesById[recipeId] ?: return@combine RecipeDetailUiState(isLoading = false, notFound = true)
         val match = matcherFor(catalog).evaluate(
             recipe = recipe,
@@ -73,7 +93,8 @@ class RecipeDetailViewModel @Inject constructor(
             servings = chosenServings,
         )
         lastMatch = match
-        RecipeDetailBuilder.build(catalog, match, ratings?.get(recipeId))
+        val own = OwnRecipes.ownId(recipeId)?.let { id -> data.ownRecipes?.firstOrNull { it.id == id } }
+        RecipeDetailBuilder.build(catalog, match, ratings?.get(recipeId), own)
     }
         .flowOn(Dispatchers.Default)
         .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5_000), RecipeDetailUiState())
@@ -125,6 +146,17 @@ class RecipeDetailViewModel @Inject constructor(
         viewModelScope.launch {
             undo.undo()
             events.send(DetailEvent.CookUndone)
+        }
+    }
+
+    /** Deletes an own recipe for the whole household. */
+    fun onDelete() {
+        val ownId = OwnRecipes.ownId(recipeId) ?: return
+        val session = home.session.value ?: return
+        deleting.value = true
+        viewModelScope.launch {
+            ownRecipes.delete(session.householdId, ownId)
+            events.send(DetailEvent.Deleted)
         }
     }
 

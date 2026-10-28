@@ -11,9 +11,15 @@ import sk.matej.spajza.domain.model.Cuisine
 import sk.matej.spajza.domain.model.DietFlag
 import sk.matej.spajza.domain.model.Equipment
 import sk.matej.spajza.domain.model.IngredientCategory
+import sk.matej.spajza.domain.model.MealType
 import sk.matej.spajza.domain.model.PantryUnit
 import sk.matej.spajza.domain.model.PriceTier
+import sk.matej.spajza.domain.model.RecipeTag
 import sk.matej.spajza.domain.nutrition.Nutrition
+import sk.matej.spajza.domain.own.OwnIngredientLine
+import sk.matej.spajza.domain.own.OwnRecipe
+import sk.matej.spajza.domain.own.OwnStep
+import sk.matej.spajza.domain.own.RecipeSource
 import sk.matej.spajza.domain.pantry.IngredientRef
 import sk.matej.spajza.domain.pantry.PantryItem
 import sk.matej.spajza.domain.pantry.ShoppingItem
@@ -27,6 +33,7 @@ import sk.matej.spajza.domain.profile.SpicyTolerance
 import sk.matej.spajza.domain.profile.UserProfile
 import sk.matej.spajza.domain.rating.Rating
 import sk.matej.spajza.domain.rating.Verdict
+import sk.matej.spajza.domain.unit.MeasureUnit
 import java.time.Instant
 import java.time.LocalDate
 
@@ -223,6 +230,66 @@ object FirestoreMappers {
         "source" to ingredient.source.name,
     )
 
+    // households/{hid}/recipes/{id}
+
+    fun ownRecipeFrom(id: String, data: Map<String, Any?>): OwnRecipe? {
+        val title = (data["title"] as? String)?.takeIf { it.isNotBlank() } ?: return null
+        return OwnRecipe(
+            id = id,
+            title = title,
+            description = data["description"] as? String ?: "",
+            servings = data.int("servings")?.takeIf { it > 0 } ?: OwnRecipe.DEFAULT_SERVINGS,
+            totalTimeMin = data.int("totalTimeMin")?.takeIf { it > 0 } ?: OwnRecipe.DEFAULT_MINUTES,
+            activeTimeMin = data.int("activeTimeMin")?.takeIf { it > 0 },
+            difficulty = data.int("difficulty")?.coerceIn(1, 3) ?: 1,
+            cuisine = data.enum<Cuisine>("cuisine") ?: Cuisine.INTERNATIONAL,
+            mealTypes = data.enums<MealType>("mealTypes").ifEmpty { OwnRecipe.DEFAULT_MEAL_TYPES },
+            equipment = data.enums<Equipment>("equipment"),
+            tags = data.enums<RecipeTag>("tags"),
+            ingredients = data.maps("ingredients").mapNotNull { line ->
+                val text = (line["text"] as? String)?.takeIf { it.isNotBlank() } ?: return@mapNotNull null
+                OwnIngredientLine(
+                    text = text,
+                    ingredientId = line["ingredientId"] as? String,
+                    amount = line.double("amount"),
+                    unit = line.enum<MeasureUnit>("unit"),
+                    optional = line["optional"] as? Boolean ?: false,
+                )
+            },
+            steps = data.maps("steps").mapNotNull { step ->
+                val text = (step["text"] as? String)?.takeIf { it.isNotBlank() } ?: return@mapNotNull null
+                OwnStep(text, step.int("timerSeconds")?.takeIf { it > 0 })
+            },
+            source = data.enum<RecipeSource>("source") ?: RecipeSource.MANUAL,
+            sourceUrl = data["sourceUrl"] as? String,
+        )
+    }
+
+    fun ownRecipeTo(recipe: OwnRecipe): Map<String, Any?> = mapOf(
+        "title" to recipe.title,
+        "description" to recipe.description,
+        "servings" to recipe.servings,
+        "totalTimeMin" to recipe.totalTimeMin,
+        "activeTimeMin" to recipe.activeTimeMin,
+        "difficulty" to recipe.difficulty,
+        "cuisine" to recipe.cuisine.name,
+        "mealTypes" to recipe.mealTypes.map { it.name },
+        "equipment" to recipe.equipment.map { it.name },
+        "tags" to recipe.tags.map { it.name },
+        "ingredients" to recipe.ingredients.map { line ->
+            mapOf(
+                "text" to line.text,
+                "ingredientId" to line.ingredientId,
+                "amount" to line.amount,
+                "unit" to line.unit?.name,
+                "optional" to line.optional,
+            )
+        },
+        "steps" to recipe.steps.map { mapOf("text" to it.text, "timerSeconds" to it.timerSeconds) },
+        "source" to recipe.source.name,
+        "sourceUrl" to recipe.sourceUrl,
+    )
+
     // users/{uid}/ratings/{recipeId}
 
     fun ratingFrom(recipeId: String, data: Map<String, Any?>) = Rating(
@@ -248,6 +315,10 @@ object FirestoreMappers {
 
     @Suppress("UNCHECKED_CAST")
     private fun Map<String, Any?>.map(key: String): Map<String, Any?> = this[key] as? Map<String, Any?> ?: emptyMap()
+
+    @Suppress("UNCHECKED_CAST")
+    private fun Map<String, Any?>.maps(key: String): List<Map<String, Any?>> =
+        (this[key] as? List<*>).orEmpty().filterIsInstance<Map<*, *>>().map { it as Map<String, Any?> }
 
     private fun Map<String, Any?>.strings(key: String): Set<String> =
         (this[key] as? List<*>).orEmpty().filterIsInstance<String>().toCollection(linkedSetOf())

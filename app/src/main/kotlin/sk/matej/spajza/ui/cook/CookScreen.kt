@@ -11,6 +11,7 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material3.AssistChip
@@ -21,6 +22,7 @@ import androidx.compose.material3.ElevatedCard
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.FilterChip
 import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.PrimaryScrollableTabRow
@@ -35,12 +37,14 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import kotlinx.coroutines.launch
 import sk.matej.spajza.R
 import sk.matej.spajza.domain.browse.RecipeType
 import sk.matej.spajza.domain.model.Cuisine
@@ -49,12 +53,25 @@ import sk.matej.spajza.ui.common.currentLanguage
 import sk.matej.spajza.ui.common.labelRes
 import sk.matej.spajza.ui.components.SearchField
 import sk.matej.spajza.ui.components.SectionHeader
+import sk.matej.spajza.ui.components.SpajzaIcons
+import sk.matej.spajza.ui.navigation.RecipeEditorDestination
+import sk.matej.spajza.ui.ownrecipe.AddRecipeDialogs
+import sk.matej.spajza.ui.ownrecipe.rememberAddRecipeState
 
 @Composable
-fun CookRoute(onOpenRecipe: (String) -> Unit, onOpenPantry: () -> Unit, viewModel: CookViewModel = hiltViewModel()) {
+fun CookRoute(
+    onOpenRecipe: (String) -> Unit,
+    onOpenPantry: () -> Unit,
+    onOpenOwnRecipes: () -> Unit,
+    onOpenEditor: (RecipeEditorDestination) -> Unit,
+    viewModel: CookViewModel = hiltViewModel(),
+) {
     val state by viewModel.state.collectAsStateWithLifecycle()
     val query by viewModel.query.collectAsStateWithLifecycle()
     val snackbarHostState = remember { SnackbarHostState() }
+    val scope = rememberCoroutineScope()
+    val addRecipe = rememberAddRecipeState()
+    val noCamera = stringResource(R.string.receipt_no_camera)
     val addedMessage = stringResource(R.string.cook_added_to_shopping)
     LaunchedEffect(viewModel) {
         viewModel.screenEvents.collect { event ->
@@ -76,7 +93,16 @@ fun CookRoute(onOpenRecipe: (String) -> Unit, onOpenPantry: () -> Unit, viewMode
             onAddPurchase = viewModel::onAddPurchase,
             onOpenRecipe = onOpenRecipe,
             onOpenPantry = onOpenPantry,
+            onOpenOwnRecipes = onOpenOwnRecipes,
+            onAddRecipe = addRecipe::open,
         ),
+    )
+    AddRecipeDialogs(
+        state = addRecipe,
+        onWrite = { onOpenEditor(RecipeEditorDestination()) },
+        onImportUrl = { onOpenEditor(RecipeEditorDestination(importUrl = it)) },
+        onImportPhoto = { onOpenEditor(RecipeEditorDestination(photoUri = it)) },
+        onNoCamera = { scope.launch { snackbarHostState.showSnackbar(noCamera) } },
     )
 }
 
@@ -89,13 +115,27 @@ class CookActions(
     val onAddPurchase: () -> Unit,
     val onOpenRecipe: (String) -> Unit,
     val onOpenPantry: () -> Unit,
+    val onOpenOwnRecipes: () -> Unit,
+    val onAddRecipe: () -> Unit,
 )
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun CookScreen(state: CookUiState, query: String, snackbarHostState: SnackbarHostState, actions: CookActions) {
     Scaffold(
-        topBar = { TopAppBar(title = { Text(stringResource(R.string.nav_cook)) }) },
+        topBar = {
+            TopAppBar(
+                title = { Text(stringResource(R.string.nav_cook)) },
+                actions = {
+                    IconButton(onClick = actions.onOpenOwnRecipes) {
+                        Icon(SpajzaIcons.MenuBook, contentDescription = stringResource(R.string.own_recipes_title))
+                    }
+                    IconButton(onClick = actions.onAddRecipe) {
+                        Icon(Icons.Filled.Add, contentDescription = stringResource(R.string.add_recipe_title))
+                    }
+                },
+            )
+        },
         snackbarHost = { SnackbarHost(snackbarHostState) },
     ) { padding ->
         LazyColumn(

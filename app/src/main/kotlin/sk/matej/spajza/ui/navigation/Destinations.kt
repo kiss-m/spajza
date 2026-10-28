@@ -40,6 +40,17 @@ data class ProductDestination(val barcode: String? = null, val name: String? = n
 @Serializable
 data class ReceiptDestination(val imageUri: String)
 
+/** The household's own recipes. */
+@Serializable
+data object OwnRecipesDestination
+
+/**
+ * The own recipe editor: editing [recipeId], importing [importUrl] or [photoUri], or a blank
+ * recipe when all are null.
+ */
+@Serializable
+data class RecipeEditorDestination(val recipeId: String? = null, val importUrl: String? = null, val photoUri: String? = null)
+
 /** The bottom navigation tabs, in order. */
 enum class TopLevelDestination(val destination: Any, @param:StringRes val label: Int, val icon: ImageVector) {
     COOK(CookDestination, R.string.nav_cook, SpajzaIcons.Restaurant),

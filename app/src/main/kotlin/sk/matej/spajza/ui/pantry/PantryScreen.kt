@@ -68,9 +68,11 @@ import sk.matej.spajza.ui.components.EmptyState
 import sk.matej.spajza.ui.components.ExpiryBadge
 import sk.matej.spajza.ui.components.ExpiryField
 import sk.matej.spajza.ui.components.NumberField
+import sk.matej.spajza.ui.components.PhotoSourceDialog
 import sk.matej.spajza.ui.components.SearchField
 import sk.matej.spajza.ui.components.SpajzaIcons
 import sk.matej.spajza.ui.components.SuggestionRow
+import sk.matej.spajza.ui.components.rememberPhotoPicker
 import java.time.LocalDate
 
 @Composable
@@ -85,7 +87,7 @@ fun PantryRoute(
     val resources by rememberUpdatedState(LocalResources.current)
     val language by rememberUpdatedState(currentLanguage())
     val scope = rememberCoroutineScope()
-    val photos = rememberReceiptPhotoPicker(
+    val photos = rememberPhotoPicker(
         onPicked = { onOpenReceipt(it.toString()) },
         onNoCamera = { scope.launch { snackbarHostState.showSnackbar(resources.getString(R.string.receipt_no_camera)) } },
     )
@@ -132,7 +134,9 @@ fun PantryRoute(
         ),
     )
     if (chooseReceiptSource) {
-        ReceiptSourceDialog(
+        PhotoSourceDialog(
+            title = stringResource(R.string.receipt_source_title),
+            body = stringResource(R.string.receipt_source_body),
             onCamera = {
                 chooseReceiptSource = false
                 photos.takePhoto()

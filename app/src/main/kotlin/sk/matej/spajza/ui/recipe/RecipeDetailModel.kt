@@ -6,6 +6,8 @@ import sk.matej.spajza.domain.matching.RecipeMatch
 import sk.matej.spajza.domain.model.LocalizedText
 import sk.matej.spajza.domain.model.Recipe
 import sk.matej.spajza.domain.nutrition.Nutrition
+import sk.matej.spajza.domain.own.OwnRecipe
+import sk.matej.spajza.domain.own.OwnRecipes
 import sk.matej.spajza.domain.rating.Rating
 import sk.matej.spajza.domain.rating.Verdict
 import sk.matej.spajza.domain.unit.MeasureUnit
@@ -27,6 +29,15 @@ data class DetailLine(
 
 data class PairedRecipe(val recipeId: String, val title: LocalizedText)
 
+/** What an own recipe adds to the detail: lines outside the catalog and where it came from. */
+data class OwnRecipeInfo(
+    /** Lines that match no catalog ingredient, as written. */
+    val unmatched: List<String>,
+    /** Lines the nutrition leaves out: unmatched ones and amounts that cannot be weighed. */
+    val uncounted: List<String>,
+    val sourceUrl: String?,
+)
+
 data class RecipeDetailUiState(
     val isLoading: Boolean = true,
     val notFound: Boolean = false,
@@ -41,11 +52,13 @@ data class RecipeDetailUiState(
     val toBuyCount: Int = 0,
     val favorite: Boolean = false,
     val verdict: Verdict? = null,
+    /** Set for the household's own recipes, which can be edited and deleted. */
+    val own: OwnRecipeInfo? = null,
 )
 
 /** Turns a [RecipeMatch] into the detail screen's state. Pure, so it is unit-tested. */
 object RecipeDetailBuilder {
-    fun build(catalog: Catalog, match: RecipeMatch, rating: Rating?): RecipeDetailUiState {
+    fun build(catalog: Catalog, match: RecipeMatch, rating: Rating?, own: OwnRecipe? = null): RecipeDetailUiState {
         val recipe = match.recipe
         val factor = match.servings.toDouble() / recipe.servings
         val lines = match.lines.map { lineMatch ->
@@ -77,6 +90,13 @@ object RecipeDetailBuilder {
             toBuyCount = lines.count { !it.optional && (it.status == LineStatus.MISSING || it.status == LineStatus.PARTIAL) },
             favorite = rating?.favorite == true,
             verdict = rating?.verdict,
+            own = own?.let {
+                OwnRecipeInfo(
+                    unmatched = OwnRecipes.unmatched(it, catalog).map { line -> line.text },
+                    uncounted = OwnRecipes.uncounted(it, catalog).map { line -> line.text },
+                    sourceUrl = it.sourceUrl,
+                )
+            },
         )
     }
 

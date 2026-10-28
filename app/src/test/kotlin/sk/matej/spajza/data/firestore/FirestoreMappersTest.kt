@@ -10,9 +10,14 @@ import sk.matej.spajza.domain.model.Cuisine
 import sk.matej.spajza.domain.model.DietFlag
 import sk.matej.spajza.domain.model.Equipment
 import sk.matej.spajza.domain.model.IngredientCategory
+import sk.matej.spajza.domain.model.MealType
 import sk.matej.spajza.domain.model.PantryUnit
 import sk.matej.spajza.domain.model.PriceTier
 import sk.matej.spajza.domain.nutrition.Nutrition
+import sk.matej.spajza.domain.own.OwnIngredientLine
+import sk.matej.spajza.domain.own.OwnRecipe
+import sk.matej.spajza.domain.own.OwnStep
+import sk.matej.spajza.domain.own.RecipeSource
 import sk.matej.spajza.domain.pantry.IngredientRef
 import sk.matej.spajza.domain.pantry.PantryItem
 import sk.matej.spajza.domain.profile.ActivityLevel
@@ -23,6 +28,7 @@ import sk.matej.spajza.domain.profile.Preferences
 import sk.matej.spajza.domain.profile.Sex
 import sk.matej.spajza.domain.profile.SpicyTolerance
 import sk.matej.spajza.domain.rating.Verdict
+import sk.matej.spajza.domain.unit.MeasureUnit
 import java.time.LocalDate
 import kotlin.test.assertEquals
 import kotlin.test.assertNull
@@ -140,10 +146,42 @@ class FirestoreMappersTest {
         assertNull(FirestoreMappers.customIngredientFrom("x", mapOf("name" to " ")), "a nameless food is skipped")
     }
 
-    private fun asFirestore(data: Map<String, Any?>): Map<String, Any?> = data.mapValues { (_, value) ->
-        when (value) {
-            is Int -> value.toLong()
-            else -> value
-        }
+    @Test
+    fun `own recipe survives writing and reading`() {
+        val recipe = OwnRecipe(
+            id = "f00d",
+            title = "Babkin guláš",
+            description = "Ako u babky v nedeľu.",
+            servings = 6,
+            totalTimeMin = 150,
+            activeTimeMin = 40,
+            difficulty = 2,
+            cuisine = Cuisine.SLOVAK_CZECH,
+            mealTypes = setOf(MealType.LUNCH),
+            equipment = setOf(Equipment.STOVE),
+            ingredients = listOf(
+                OwnIngredientLine("1 kg hovädzieho pliecka", "beef-chuck", 1.0, MeasureUnit.KG),
+                OwnIngredientLine("trocha bravčovej masti"),
+                OwnIngredientLine("majorán (nepovinné)", "marjoram", null, null, optional = true),
+            ),
+            steps = listOf(OwnStep("Mäso nakrájaj na kocky."), OwnStep("Duste dve hodiny.", timerSeconds = 7200)),
+            source = RecipeSource.URL,
+            sourceUrl = "https://example.com/gulas",
+        )
+
+        assertEquals(recipe, FirestoreMappers.ownRecipeFrom(recipe.id, asFirestore(FirestoreMappers.ownRecipeTo(recipe))))
+        assertNull(FirestoreMappers.ownRecipeFrom("x", mapOf("title" to "")), "a recipe without a title is skipped")
+        val sparse = FirestoreMappers.ownRecipeFrom("y", mapOf("title" to "Rýchlovka", "servings" to 0L, "mealTypes" to listOf("BRUNCH")))!!
+        assertEquals(OwnRecipe.DEFAULT_SERVINGS, sparse.servings)
+        assertEquals(OwnRecipe.DEFAULT_MEAL_TYPES, sparse.mealTypes, "unknown names from a newer app are skipped")
+    }
+
+    private fun asFirestore(data: Map<String, Any?>): Map<String, Any?> = data.mapValues { (_, value) -> firestoreValue(value) }
+
+    private fun firestoreValue(value: Any?): Any? = when (value) {
+        is Int -> value.toLong()
+        is List<*> -> value.map(::firestoreValue)
+        is Map<*, *> -> value.mapValues { (_, nested) -> firestoreValue(nested) }
+        else -> value
     }
 }

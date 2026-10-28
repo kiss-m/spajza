@@ -26,9 +26,11 @@ class MlKitTextReader(private val context: Context) : TextReader {
             try {
                 val text = recognizer.process(image).await()
                 Result.success(
-                    text.textBlocks.flatMap { it.lines }.mapNotNull { line ->
-                        val box = line.boundingBox ?: return@mapNotNull null
-                        OcrLine(line.text, box.left, box.top, box.right, box.bottom)
+                    text.textBlocks.flatMapIndexed { index, block ->
+                        block.lines.mapNotNull { line ->
+                            val box = line.boundingBox ?: return@mapNotNull null
+                            OcrLine(line.text, box.left, box.top, box.right, box.bottom, block = index)
+                        }
                     },
                 )
             } finally {

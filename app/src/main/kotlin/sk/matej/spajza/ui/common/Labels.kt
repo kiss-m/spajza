@@ -9,6 +9,7 @@ import sk.matej.spajza.domain.model.IngredientCategory
 import sk.matej.spajza.domain.model.MealType
 import sk.matej.spajza.domain.model.PantryUnit
 import sk.matej.spajza.domain.model.PriceTier
+import sk.matej.spajza.domain.own.PhotoLineKind
 import sk.matej.spajza.domain.profile.ActivityLevel
 import sk.matej.spajza.domain.profile.CookingSkill
 import sk.matej.spajza.domain.profile.Goal
@@ -162,4 +163,12 @@ fun difficultyLabelRes(difficulty: Int): Int = when {
     difficulty <= 1 -> R.string.difficulty_1
     difficulty == 2 -> R.string.difficulty_2
     else -> R.string.difficulty_3
+}
+
+@StringRes
+fun PhotoLineKind.labelRes(): Int = when (this) {
+    PhotoLineKind.TITLE -> R.string.photo_kind_title
+    PhotoLineKind.INGREDIENT -> R.string.photo_kind_ingredient
+    PhotoLineKind.STEP -> R.string.photo_kind_step
+    PhotoLineKind.IGNORE -> R.string.photo_kind_ignore
 }

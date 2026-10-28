@@ -6,6 +6,7 @@ import kotlinx.coroutines.test.runTest
 import org.junit.jupiter.api.Test
 import sk.matej.spajza.domain.fakes.FakeCustomIngredientRepository
 import sk.matej.spajza.domain.fakes.FakeHouseholdRepository
+import sk.matej.spajza.domain.fakes.FakeOwnRecipeRepository
 import sk.matej.spajza.domain.fakes.FakePantryRepository
 import sk.matej.spajza.domain.fakes.FakeShoppingRepository
 import sk.matej.spajza.domain.fakes.FakeUserRepository
@@ -37,7 +38,7 @@ class JoinFlowTest {
         scope = TestScope(UnconfinedTestDispatcher(testScheduler)),
         joinHousehold = JoinHouseholdUseCase(
             users, households, FakePantryRepository(householdId = "mine"), FakeShoppingRepository(householdId = "mine"),
-            FakeCustomIngredientRepository(householdId = "mine"), Clock.fixed(now, ZoneOffset.UTC),
+            FakeCustomIngredientRepository(householdId = "mine"), FakeOwnRecipeRepository(householdId = "mine"), Clock.fixed(now, ZoneOffset.UTC),
         ),
         session = { session },
     )

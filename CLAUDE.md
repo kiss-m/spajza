@@ -66,14 +66,15 @@ Spark plan only: no Cloud Functions, no Cloud Storage. Package `sk.matej.spajza`
   event callbacks; a thin route composable wires the ViewModel.
 - Data placement: catalog → Room, imported from `app/src/main/assets/seed/` on first launch and whenever
   `SeedSources.fingerprint()` changes (never Firestore). User/household data → Firestore, observed as
-  Flows, works offline. Device-only settings → DataStore.
+  Flows, works offline. Device-only settings → DataStore. Own recipes (Firestore) join the catalog in
+  memory as `own:<id>` through `HomeData.catalog`, so screens treat them like catalog recipes (D12).
 - Nutrition is always computed by `NutritionCalculator`: grams × per-100 g values. Never trust imported
   nutrition numbers.
 - Concurrent household edits: `FieldValue.increment` for quantities, server timestamps, field-level
   updates, `arrayUnion`/`arrayRemove` for staples and equipment. Pantry/shopping doc ids are deterministic
   (`i_<slug>`, `c_<customId>`), quantities are stored in the ingredient's `pantryUnit`. Firestore writes
   are never awaited (offline-first); only account deletion and joining a household (a transaction the
-  rules check) wait for the server. Field formats: docs/DECISIONS.md D9, D10.
+  rules check) wait for the server. Field formats: docs/DECISIONS.md D9–D12.
 - Domain code runs on Android 8+: no JDK APIs newer than Java 8 that Android lacks (`LocalDate.EPOCH`,
   `List.removeFirst()`, …).
 - Diet/allergen filters live in domain and the model; their UI is behind a feature flag that stays off.

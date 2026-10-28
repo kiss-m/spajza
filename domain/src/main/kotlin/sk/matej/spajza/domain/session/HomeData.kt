@@ -5,6 +5,7 @@ import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.coroutines.flow.flatMapLatest
 import kotlinx.coroutines.flow.flowOf
@@ -14,6 +15,8 @@ import sk.matej.spajza.domain.catalog.Catalog
 import sk.matej.spajza.domain.custom.CustomIngredient
 import sk.matej.spajza.domain.matching.KitchenState
 import sk.matej.spajza.domain.matching.Personalization
+import sk.matej.spajza.domain.own.OwnRecipe
+import sk.matej.spajza.domain.own.OwnRecipes
 import sk.matej.spajza.domain.pantry.PantryItem
 import sk.matej.spajza.domain.pantry.ShoppingItem
 import sk.matej.spajza.domain.profile.TargetCalculator
@@ -22,6 +25,7 @@ import sk.matej.spajza.domain.rating.Rating
 import sk.matej.spajza.domain.repository.CatalogRepository
 import sk.matej.spajza.domain.repository.CookHistoryRepository
 import sk.matej.spajza.domain.repository.CustomIngredientRepository
+import sk.matej.spajza.domain.repository.OwnRecipeRepository
 import sk.matej.spajza.domain.repository.PantryRepository
 import sk.matej.spajza.domain.repository.RatingRepository
 import sk.matej.spajza.domain.repository.ShoppingRepository
@@ -40,6 +44,7 @@ class HomeData(
     ratingRepository: RatingRepository,
     cookHistoryRepository: CookHistoryRepository,
     customIngredientRepository: CustomIngredientRepository,
+    ownRecipeRepository: OwnRecipeRepository,
     scope: CoroutineScope,
 ) {
     val session: StateFlow<Session?> = sessionManager.state
@@ -52,10 +57,21 @@ class HomeData(
         }
         .stateIn(scope, SharingStarted.Eagerly, null)
 
-    val catalog: StateFlow<Catalog?> = catalogRepository.catalog.stateIn(scope, SharingStarted.Eagerly, null)
+    private val bundled: StateFlow<Catalog?> = catalogRepository.catalog.stateIn(scope, SharingStarted.Eagerly, null)
 
     private val householdId = session.map { it?.householdId }.distinctUntilChanged()
     private val uid = session.map { it?.uid }.distinctUntilChanged()
+
+    /** The household's own recipes, as stored. */
+    val ownRecipes: StateFlow<List<OwnRecipe>?> = householdId.follow(scope) { ownRecipeRepository.observe(it).distinctUntilChanged() }
+
+    /**
+     * The bundled catalog with the household's own recipes added (ids `own:<id>`), so every screen
+     * treats them like catalog recipes. Null until the bundled catalog is loaded.
+     */
+    val catalog: StateFlow<Catalog?> = combine(bundled, ownRecipes) { base, own -> base?.let { OwnRecipes.merge(it, own.orEmpty()) } }
+        .distinctUntilChanged { old, new -> old === new }
+        .stateIn(scope, SharingStarted.WhileSubscribed(STOP_TIMEOUT_MS), null)
 
     val pantry: StateFlow<List<PantryItem>?> = householdId.follow(scope) { pantryRepository.observe(it) }
     val shopping: StateFlow<List<ShoppingItem>?> = householdId.follow(scope) { shoppingRepository.observe(it) }

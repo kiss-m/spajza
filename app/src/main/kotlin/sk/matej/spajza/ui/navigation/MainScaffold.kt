@@ -24,6 +24,8 @@ import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import sk.matej.spajza.ui.cook.CookRoute
 import sk.matej.spajza.ui.cooking.CookingModeRoute
+import sk.matej.spajza.ui.ownrecipe.OwnRecipesRoute
+import sk.matej.spajza.ui.ownrecipe.RecipeEditorRoute
 import sk.matej.spajza.ui.pantry.PantryRoute
 import sk.matej.spajza.ui.product.ProductRoute
 import sk.matej.spajza.ui.profile.AboutScreen
@@ -39,6 +41,7 @@ fun MainScaffold(link: AppLink?, onLinkHandled: (AppLink) -> Unit) {
         val target = link ?: return@LaunchedEffect
         when (target) {
             AppLink.Pantry -> navController.navigateToTab(PantryDestination)
+            is AppLink.ImportRecipe -> navController.navigate(RecipeEditorDestination(importUrl = target.url))
         }
         onLinkHandled(target)
     }
@@ -72,6 +75,8 @@ fun MainScaffold(link: AppLink?, onLinkHandled: (AppLink) -> Unit) {
                 CookRoute(
                     onOpenRecipe = { navController.navigate(RecipeDestination(it)) },
                     onOpenPantry = { navController.navigateToTab(PantryDestination) },
+                    onOpenOwnRecipes = { navController.navigate(OwnRecipesDestination) },
+                    onOpenEditor = { navController.navigate(it) },
                 )
             }
             composable<PantryDestination> {
@@ -93,6 +98,27 @@ fun MainScaffold(link: AppLink?, onLinkHandled: (AppLink) -> Unit) {
                     onBack = { navController.popBackStack() },
                     onOpenRecipe = { navController.navigate(RecipeDestination(it)) },
                     onStartCooking = { recipeId, servings -> navController.navigate(CookingDestination(recipeId, servings)) },
+                    onEdit = { navController.navigate(RecipeEditorDestination(recipeId = it)) },
+                )
+            }
+            composable<OwnRecipesDestination> {
+                OwnRecipesRoute(
+                    onBack = { navController.popBackStack() },
+                    onOpenRecipe = { navController.navigate(RecipeDestination(it)) },
+                    onOpenEditor = { navController.navigate(it) },
+                )
+            }
+            composable<RecipeEditorDestination> {
+                RecipeEditorRoute(
+                    onBack = { navController.popBackStack() },
+                    onDone = { recipeId, isNew ->
+                        if (isNew) {
+                            // A new recipe opens in place of the editor.
+                            navController.navigate(RecipeDestination(recipeId)) { popUpTo<RecipeEditorDestination> { inclusive = true } }
+                        } else {
+                            navController.popBackStack()
+                        }
+                    },
                 )
             }
             composable<CookingDestination> { CookingModeRoute(onExit = { navController.popBackStack() }) }

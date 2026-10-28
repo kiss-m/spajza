@@ -28,6 +28,7 @@ import sk.matej.spajza.data.catalog.RoomCatalogRepository
 import sk.matej.spajza.data.firestore.FirestoreCookHistoryRepository
 import sk.matej.spajza.data.firestore.FirestoreCustomIngredientRepository
 import sk.matej.spajza.data.firestore.FirestoreHouseholdRepository
+import sk.matej.spajza.data.firestore.FirestoreOwnRecipeRepository
 import sk.matej.spajza.data.firestore.FirestorePantryRepository
 import sk.matej.spajza.data.firestore.FirestoreRatingRepository
 import sk.matej.spajza.data.firestore.FirestoreShoppingRepository
@@ -35,6 +36,7 @@ import sk.matej.spajza.data.firestore.FirestoreUserRepository
 import sk.matej.spajza.data.ocr.MlKitTextReader
 import sk.matej.spajza.data.off.OpenFoodFactsClient
 import sk.matej.spajza.data.settings.DataStoreDeviceSettingsRepository
+import sk.matej.spajza.data.web.WebRecipeImporter
 import sk.matej.spajza.notifications.WorkManagerExpiryScheduler
 import sk.matej.spajza.domain.receipt.TextReader
 import sk.matej.spajza.domain.repository.AccountRepository
@@ -45,9 +47,11 @@ import sk.matej.spajza.domain.repository.CustomIngredientRepository
 import sk.matej.spajza.domain.repository.DeviceSettingsRepository
 import sk.matej.spajza.domain.repository.ExpiryReminderScheduler
 import sk.matej.spajza.domain.repository.HouseholdRepository
+import sk.matej.spajza.domain.repository.OwnRecipeRepository
 import sk.matej.spajza.domain.repository.PantryRepository
 import sk.matej.spajza.domain.repository.ProductLookup
 import sk.matej.spajza.domain.repository.RatingRepository
+import sk.matej.spajza.domain.repository.RecipeImporter
 import sk.matej.spajza.domain.repository.ShoppingRepository
 import sk.matej.spajza.domain.repository.UserRepository
 import sk.matej.spajza.domain.session.HomeData
@@ -144,6 +148,16 @@ object AppModule {
 
     @Provides
     @Singleton
+    fun ownRecipeRepository(db: FirebaseFirestore): OwnRecipeRepository = FirestoreOwnRecipeRepository(db)
+
+    @Provides
+    @Singleton
+    fun recipeImporter(http: OkHttpClient): RecipeImporter =
+        // Recipe sites expect a browser; the app still says who it is.
+        WebRecipeImporter(http, userAgent = "Mozilla/5.0 (Linux; Android) Spajza/${BuildConfig.VERSION_NAME} (+https://github.com/kiss-m/spajza)")
+
+    @Provides
+    @Singleton
     fun okHttpClient(): OkHttpClient = OkHttpClient.Builder()
         .connectTimeout(15, TimeUnit.SECONDS)
         .readTimeout(20, TimeUnit.SECONDS)
@@ -211,8 +225,9 @@ object AppModule {
         pantry: PantryRepository,
         shopping: ShoppingRepository,
         custom: CustomIngredientRepository,
+        recipes: OwnRecipeRepository,
         clock: Clock,
-    ): JoinHouseholdUseCase = JoinHouseholdUseCase(users, households, pantry, shopping, custom, clock)
+    ): JoinHouseholdUseCase = JoinHouseholdUseCase(users, households, pantry, shopping, custom, recipes, clock)
 
     @Provides
     fun leaveHouseholdUseCase(users: UserRepository, households: HouseholdRepository): LeaveHouseholdUseCase =
@@ -228,6 +243,7 @@ object AppModule {
         ratings: RatingRepository,
         history: CookHistoryRepository,
         custom: CustomIngredientRepository,
+        recipes: OwnRecipeRepository,
         @ApplicationScope scope: CoroutineScope,
-    ): HomeData = HomeData(sessions, catalog, pantry, shopping, ratings, history, custom, scope)
+    ): HomeData = HomeData(sessions, catalog, pantry, shopping, ratings, history, custom, recipes, scope)
 }

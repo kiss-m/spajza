@@ -10,8 +10,8 @@ import sk.matej.spajza.domain.unit.MissingConversionException
 import sk.matej.spajza.domain.unit.UnitConverter
 import kotlin.math.abs
 
-/** One line of recognized text with its box on the photo, in pixels. */
-data class OcrLine(val text: String, val left: Int, val top: Int, val right: Int, val bottom: Int) {
+/** One line of recognized text with its box on the photo, in pixels, and the text block it belongs to. */
+data class OcrLine(val text: String, val left: Int, val top: Int, val right: Int, val bottom: Int, val block: Int = 0) {
     val centerY: Int get() = (top + bottom) / 2
     val height: Int get() = bottom - top
 }
