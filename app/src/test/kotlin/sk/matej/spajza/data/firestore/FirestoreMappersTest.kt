@@ -1,10 +1,18 @@
 package sk.matej.spajza.data.firestore
 
 import org.junit.jupiter.api.Test
+import sk.matej.spajza.domain.custom.CustomIngredient
+import sk.matej.spajza.domain.custom.CustomSource
+import sk.matej.spajza.domain.custom.Energy
 import sk.matej.spajza.domain.household.Household
+import sk.matej.spajza.domain.model.Allergen
 import sk.matej.spajza.domain.model.Cuisine
+import sk.matej.spajza.domain.model.DietFlag
 import sk.matej.spajza.domain.model.Equipment
+import sk.matej.spajza.domain.model.IngredientCategory
+import sk.matej.spajza.domain.model.PantryUnit
 import sk.matej.spajza.domain.model.PriceTier
+import sk.matej.spajza.domain.nutrition.Nutrition
 import sk.matej.spajza.domain.pantry.IngredientRef
 import sk.matej.spajza.domain.pantry.PantryItem
 import sk.matej.spajza.domain.profile.ActivityLevel
@@ -109,6 +117,29 @@ class FirestoreMappersTest {
     }
 
     /** Firestore returns whole numbers as Long and drops nothing else we use. */
+    @Test
+    fun `custom ingredient survives writing and reading, energy always from the macros`() {
+        val milk = CustomIngredient(
+            id = "b8580000000012",
+            name = "Mlieko polotučné",
+            brand = "Mliekareň",
+            barcode = "8580000000012",
+            category = IngredientCategory.DAIRY,
+            nutrition = Nutrition(kcal = 999.0, protein = 3.4, carbs = 4.8, fat = 1.5, fiber = 0.0, sugar = 4.8, salt = 0.1),
+            nutritionKnown = true,
+            pantryUnit = PantryUnit.ML,
+            densityGPerMl = 1.0,
+            packageQuantity = 1000.0,
+            allergens = setOf(Allergen.MILK),
+            dietFlags = setOf(DietFlag.DAIRY, DietFlag.ANIMAL_PRODUCT),
+            catalogId = "milk",
+            source = CustomSource.OPEN_FOOD_FACTS,
+        )
+        val read = FirestoreMappers.customIngredientFrom(milk.id, asFirestore(FirestoreMappers.customIngredientTo(milk)))
+        assertEquals(milk.copy(nutrition = Energy.recomputed(milk.nutrition)), read)
+        assertNull(FirestoreMappers.customIngredientFrom("x", mapOf("name" to " ")), "a nameless food is skipped")
+    }
+
     private fun asFirestore(data: Map<String, Any?>): Map<String, Any?> = data.mapValues { (_, value) ->
         when (value) {
             is Int -> value.toLong()

@@ -20,9 +20,11 @@ internal object Collections {
     const val RATINGS = "ratings"
     const val COOK_HISTORY = "cookHistory"
     const val INVITES = "invites"
+    const val CUSTOM_INGREDIENTS = "customIngredients"
+    const val RECIPES = "recipes"
 
     /** Every household subcollection the security rules allow, for deleting a household. */
-    val HOUSEHOLD_SUBCOLLECTIONS = listOf(PANTRY, SHOPPING, "recipes", "customIngredients", "mealPlans")
+    val HOUSEHOLD_SUBCOLLECTIONS = listOf(PANTRY, SHOPPING, RECIPES, CUSTOM_INGREDIENTS, "mealPlans")
 }
 
 internal const val FIELD_UPDATED_AT = "updatedAt"

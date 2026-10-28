@@ -8,6 +8,7 @@ import kotlinx.coroutines.test.runTest
 import sk.matej.spajza.domain.fakes.FakeAuthRepository
 import sk.matej.spajza.domain.fakes.FakeCatalogRepository
 import sk.matej.spajza.domain.fakes.FakeCookHistoryRepository
+import sk.matej.spajza.domain.fakes.FakeCustomIngredientRepository
 import sk.matej.spajza.domain.fakes.FakeHouseholdRepository
 import sk.matej.spajza.domain.fakes.FakePantryRepository
 import sk.matej.spajza.domain.fakes.FakeRatingRepository
@@ -33,7 +34,7 @@ class HomeDataTest {
             auth, users, households, catalog, CreateHouseholdUseCase(users, households),
             defaultHouseholdName = { "Doma" }, scope = backgroundScope, dispatcher = UnconfinedTestDispatcher(testScheduler),
         )
-        val home = HomeData(sessions, catalog, pantry, FakeShoppingRepository(), FakeRatingRepository(), FakeCookHistoryRepository(), backgroundScope)
+        val home = HomeData(sessions, catalog, pantry, FakeShoppingRepository(), FakeRatingRepository(), FakeCookHistoryRepository(), FakeCustomIngredientRepository(), backgroundScope)
         backgroundScope.launch(UnconfinedTestDispatcher(testScheduler)) { home.pantry.collect {} }
 
         auth.user.value = AuthUser("uid-1", "Alex", null)

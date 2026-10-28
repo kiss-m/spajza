@@ -32,6 +32,14 @@ data class CookingDestination(val recipeId: String, val servings: Int)
 @Serializable
 data object AboutDestination
 
+/** Checking a scanned product ([barcode]) or typing in a food of one's own (named [name] so far). */
+@Serializable
+data class ProductDestination(val barcode: String? = null, val name: String? = null)
+
+/** Reviewing what a receipt photo says before it goes into the pantry. */
+@Serializable
+data class ReceiptDestination(val imageUri: String)
+
 /** The bottom navigation tabs, in order. */
 enum class TopLevelDestination(val destination: Any, @param:StringRes val label: Int, val icon: ImageVector) {
     COOK(CookDestination, R.string.nav_cook, SpajzaIcons.Restaurant),

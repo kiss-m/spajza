@@ -1,6 +1,7 @@
 package sk.matej.spajza.ui.components
 
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.addPathNodes
@@ -52,8 +53,27 @@ object SpajzaIcons {
         )
     }
 
-    private fun icon(name: String, pathData: String): ImageVector =
+    /** Scan frame corners around barcode bars. */
+    val Barcode: ImageVector by lazy {
+        icon(
+            "Barcode",
+            "M3,3h5v2H5v3H3V3z M16,3h5v5h-2V5h-3V3z M3,16h2v3h3v2H3V16z M19,16h2v5h-5v-2h3V16z" +
+                "M7,8h2v8H7z M10,8h1v8h-1z M12,8h2v8h-2z M15,8h2v8h-2z",
+        )
+    }
+
+    /** A receipt with a torn edge; the printed lines are cut out. */
+    val Receipt: ImageVector by lazy {
+        icon(
+            "Receipt",
+            "M5,2h14v20l-2.33,-1.5 -2.33,1.5 -2.34,-1.5 -2.33,1.5 -2.34,-1.5L5,22V2z" +
+                "M8,6h8v2H8z M8,10h8v2H8z M8,14h5v2H8z",
+            PathFillType.EvenOdd,
+        )
+    }
+
+    private fun icon(name: String, pathData: String, fillType: PathFillType = PathFillType.NonZero): ImageVector =
         ImageVector.Builder(name = name, defaultWidth = 24.dp, defaultHeight = 24.dp, viewportWidth = 24f, viewportHeight = 24f)
-            .addPath(pathData = addPathNodes(pathData), fill = SolidColor(Color.Black))
+            .addPath(pathData = addPathNodes(pathData), pathFillType = fillType, fill = SolidColor(Color.Black))
             .build()
 }

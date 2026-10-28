@@ -1,6 +1,8 @@
 package sk.matej.spajza.domain.usecase
 
 import kotlinx.coroutines.test.runTest
+import sk.matej.spajza.domain.custom.CustomIngredient
+import sk.matej.spajza.domain.fakes.FakeCustomIngredientRepository
 import sk.matej.spajza.domain.fakes.FakeHouseholdRepository
 import sk.matej.spajza.domain.fakes.FakePantryRepository
 import sk.matej.spajza.domain.fakes.FakeShoppingRepository
@@ -54,7 +56,8 @@ class HouseholdMembershipTest {
         ),
         householdId = "mine",
     )
-    private val join = JoinHouseholdUseCase(users, households, pantry, shopping, clock)
+    private val custom = FakeCustomIngredientRepository(listOf(CustomIngredient(id = "b123", name = "Horalky")), householdId = "mine")
+    private val join = JoinHouseholdUseCase(users, households, pantry, shopping, custom, clock)
 
     private fun session(household: Household = mine) =
         Session(AuthUser("me", "Alex", null), UserProfile(uid = "me", displayName = "Alex", householdId = household.id), household)
@@ -111,6 +114,7 @@ class HouseholdMembershipTest {
         assertEquals(setOf("milk"), list.mapNotNull { (it.ingredient as? IngredientRef.Catalog)?.id }.toSet(), "checked eggs stay behind")
         assertEquals(listOf("baterky"), list.mapNotNull { it.text })
 
+        assertEquals(setOf("b123"), custom.itemsOf("theirs").keys, "own foods come along")
         assertEquals(listOf("mine"), households.deleted)
         assertTrue("OLDOLD" !in households.invites.value)
     }

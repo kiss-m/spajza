@@ -14,6 +14,7 @@ import sk.matej.spajza.domain.pantry.ExpiryDigest
 import sk.matej.spajza.domain.pantry.IngredientRef
 import sk.matej.spajza.domain.repository.AuthRepository
 import sk.matej.spajza.domain.repository.CatalogRepository
+import sk.matej.spajza.domain.repository.CustomIngredientRepository
 import sk.matej.spajza.domain.repository.DeviceSettingsRepository
 import sk.matej.spajza.domain.repository.PantryRepository
 import sk.matej.spajza.domain.repository.UserRepository
@@ -34,6 +35,8 @@ interface ExpiryWorkerEntryPoint {
     fun pantry(): PantryRepository
 
     fun catalog(): CatalogRepository
+
+    fun customIngredients(): CustomIngredientRepository
 
     fun clock(): Clock
 }
@@ -62,12 +65,17 @@ class ExpiryCheckWorker(context: Context, params: WorkerParameters) : CoroutineW
         val items = ExpiryDigest.of(app.pantry().observe(householdId).first(), today)
         if (items.isEmpty()) return null
         val catalog = app.catalog().catalog.first()
+        val custom = if (items.any { it.item.ingredient is IngredientRef.Custom }) {
+            app.customIngredients().observe(householdId).first().associateBy { it.id }
+        } else {
+            emptyMap()
+        }
         val language = languageOf(ExpiryNotifications.localizedContext(applicationContext).resources.configuration.locales[0])
         val names = items.associate { expiring ->
             val ref = expiring.item.ingredient
             val name = when (ref) {
                 is IngredientRef.Catalog -> catalog.ingredientsById[ref.id]?.name?.get(language)
-                is IngredientRef.Custom -> null
+                is IngredientRef.Custom -> custom[ref.id]?.name
             }
             expiring.item.id to (name ?: ref.docId)
         }

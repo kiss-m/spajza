@@ -25,8 +25,10 @@ import androidx.navigation.compose.rememberNavController
 import sk.matej.spajza.ui.cook.CookRoute
 import sk.matej.spajza.ui.cooking.CookingModeRoute
 import sk.matej.spajza.ui.pantry.PantryRoute
+import sk.matej.spajza.ui.product.ProductRoute
 import sk.matej.spajza.ui.profile.AboutScreen
 import sk.matej.spajza.ui.profile.ProfileRoute
+import sk.matej.spajza.ui.receipt.ReceiptRoute
 import sk.matej.spajza.ui.recipe.RecipeDetailRoute
 import sk.matej.spajza.ui.shopping.ShoppingRoute
 
@@ -72,7 +74,18 @@ fun MainScaffold(link: AppLink?, onLinkHandled: (AppLink) -> Unit) {
                     onOpenPantry = { navController.navigateToTab(PantryDestination) },
                 )
             }
-            composable<PantryDestination> { PantryRoute() }
+            composable<PantryDestination> {
+                PantryRoute(
+                    onOpenProduct = { barcode, name -> navController.navigate(ProductDestination(barcode, name)) },
+                    onOpenReceipt = { navController.navigate(ReceiptDestination(it)) },
+                )
+            }
+            composable<ProductDestination> {
+                ProductRoute(onBack = { navController.popBackStack() }, onDone = { navController.popBackStack() })
+            }
+            composable<ReceiptDestination> {
+                ReceiptRoute(onBack = { navController.popBackStack() }, onDone = { navController.popBackStack() })
+            }
             composable<ShoppingDestination> { ShoppingRoute() }
             composable<ProfileDestination> { ProfileRoute(onOpenAbout = { navController.navigate(AboutDestination) }) }
             composable<RecipeDestination> {

@@ -313,6 +313,77 @@
     <string name="pantry_editor_pick_date">Vybrať dátum</string>
     <string name="pantry_editor_clear_date">Bez dátumu</string>
     <string name="pantry_delete">Odstrániť zo špajze</string>
+    <string name="pantry_own_food">vlastná potravina</string>
+    <string name="pantry_create_custom">Pridať „%1$s“ ako vlastnú potravinu</string>
+    <plurals name="pantry_added_many">
+        <item quantity="one">Do špajze pribudla %1$d položka</item>
+        <item quantity="few">Do špajze pribudli %1$d položky</item>
+        <item quantity="many">Do špajze pribudlo %1$d položky</item>
+        <item quantity="other">Do špajze pribudlo %1$d položiek</item>
+    </plurals>
+    <string name="scan_action">Skenovať čiarový kód</string>
+    <string name="scan_failed">Skener sa nepodarilo spustiť. Skús to o chvíľu znova.</string>
+    <string name="receipt_action">Načítať bloček</string>
+
+    <!-- Product: a scanned product or an own food -->
+    <string name="product_title_new">Vlastná potravina</string>
+    <string name="product_title_scanned">Naskenovaný produkt</string>
+    <string name="product_loading">Hľadám produkt…</string>
+    <string name="product_status_known">Tento produkt už v domácnosti poznáte. Stačí zadať množstvo.</string>
+    <string name="product_status_found">Údaje sú z Open Food Facts. Skontroluj ich podľa obalu a oprav, čo nesedí.</string>
+    <string name="product_status_unknown">Tento kód zatiaľ v Open Food Facts nie je. Opíš údaje z obalu, nabudúce ho už spoznáme.</string>
+    <string name="product_status_offline">Bez pripojenia sa produkt nedá vyhľadať. Môžeš ho zapísať ručne alebo to skúsiť neskôr.</string>
+    <string name="product_status_manual">Potravina, ktorá v zozname surovín chýba. Názov stačí, ostatné je nepovinné.</string>
+    <string name="product_barcode">Čiarový kód: %1$s</string>
+    <string name="product_name">Názov</string>
+    <string name="product_brand">Značka, nepovinné</string>
+    <string name="product_category">Kategória</string>
+    <string name="product_change">Zmeniť</string>
+    <string name="product_link_title">Počíta sa ako</string>
+    <string name="product_link_body">Ak je to druh suroviny z receptov (napríklad mlieko alebo ryža), vyber ju. Recepty potom produkt nájdu v špajzi.</string>
+    <string name="product_link_hint">Hľadať surovinu…</string>
+    <string name="product_unit">Ako ho evidovať</string>
+    <string name="product_package">Jedno balenie (%1$s), nepovinné</string>
+    <string name="product_piece_weight">Jeden kus váži (g), nepovinné</string>
+    <string name="product_nutrition_title">Výživové hodnoty na 100 g</string>
+    <string name="product_nutrition_title_ml">Výživové hodnoty na 100 ml</string>
+    <string name="product_protein">Bielkoviny (g)</string>
+    <string name="product_carbs">Sacharidy (g)</string>
+    <string name="product_sugar">z toho cukry (g)</string>
+    <string name="product_fat">Tuky (g)</string>
+    <string name="product_fiber">Vláknina (g)</string>
+    <string name="product_salt">Soľ (g)</string>
+    <string name="product_energy" tools:ignore="PluralsCandidate">Energia: %1$s kcal</string>
+    <string name="product_energy_missing">Energiu vypočítame, keď doplníš bielkoviny, sacharidy a tuky.</string>
+    <string name="product_energy_note">Energiu vždy počíta aplikácia z bielkovín, sacharidov, tukov a vlákniny.</string>
+    <string name="product_pantry_title">Do špajze</string>
+    <string name="product_edit_details">Upraviť údaje</string>
+    <string name="product_save">Pridať do špajze</string>
+
+    <!-- Receipt -->
+    <string name="receipt_title">Bloček</string>
+    <string name="receipt_source_title">Fotka bločku</string>
+    <string name="receipt_source_body">Polož bloček na stôl a odfoť ho celý zhora, pri dobrom svetle. Text sa prečíta priamo v telefóne, fotka sa nikam neposiela.</string>
+    <string name="receipt_source_camera">Odfotiť</string>
+    <string name="receipt_source_gallery">Z galérie</string>
+    <string name="receipt_no_camera">V telefóne chýba aplikácia fotoaparátu. Vyber fotku z galérie.</string>
+    <string name="receipt_loading">Čítam bloček…</string>
+    <string name="receipt_intro">Skontroluj, čo sa na bločku našlo. Zaškrtnuté položky pridáme do špajze. Ťuknutím na položku zmeníš surovinu alebo množstvo.</string>
+    <string name="receipt_unmatched">Vyber surovinu</string>
+    <string name="receipt_row_title">Položka z bločku</string>
+    <string name="receipt_row_ingredient">Surovina</string>
+    <plurals name="receipt_add">
+        <item quantity="one">Pridať %1$d položku</item>
+        <item quantity="few">Pridať %1$d položky</item>
+        <item quantity="many">Pridať %1$d položky</item>
+        <item quantity="other">Pridať %1$d položiek</item>
+    </plurals>
+    <string name="receipt_unreadable_title">Fotku sa nepodarilo otvoriť</string>
+    <string name="receipt_unreadable_body">Skús to znova, prípadne s inou fotkou.</string>
+    <string name="receipt_no_text_title">Na fotke sa nenašiel text</string>
+    <string name="receipt_no_text_body">Odfoť bloček zblízka, rovno a pri dobrom svetle, aby bol text ostrý.</string>
+    <string name="receipt_no_items_title">Na bločku sa nenašli potraviny</string>
+    <string name="receipt_no_items_body">Potraviny môžeš pridať aj ručne v Špajzi alebo skenovaním čiarového kódu.</string>
 
     <!-- Shopping list -->
     <string name="shopping_search_hint">Pridaj do nákupu…</string>

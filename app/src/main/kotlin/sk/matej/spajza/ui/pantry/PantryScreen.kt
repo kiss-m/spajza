@@ -43,8 +43,11 @@ import androidx.compose.material3.rememberSwipeToDismissBoxState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.rememberUpdatedState
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalResources
@@ -52,6 +55,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import kotlinx.coroutines.launch
 import sk.matej.spajza.R
 import sk.matej.spajza.domain.model.IngredientCategory
 import sk.matej.spajza.ui.common.Expiry
@@ -70,16 +74,31 @@ import sk.matej.spajza.ui.components.SuggestionRow
 import java.time.LocalDate
 
 @Composable
-fun PantryRoute(viewModel: PantryViewModel = hiltViewModel()) {
+fun PantryRoute(
+    onOpenProduct: (barcode: String?, name: String?) -> Unit,
+    onOpenReceipt: (imageUri: String) -> Unit,
+    viewModel: PantryViewModel = hiltViewModel(),
+) {
     val state by viewModel.state.collectAsStateWithLifecycle()
     val query by viewModel.query.collectAsStateWithLifecycle()
     val snackbarHostState = remember { SnackbarHostState() }
     val resources by rememberUpdatedState(LocalResources.current)
     val language by rememberUpdatedState(currentLanguage())
+    val scope = rememberCoroutineScope()
+    val photos = rememberReceiptPhotoPicker(
+        onPicked = { onOpenReceipt(it.toString()) },
+        onNoCamera = { scope.launch { snackbarHostState.showSnackbar(resources.getString(R.string.receipt_no_camera)) } },
+    )
+    val scanner = rememberBarcodeScanner(
+        onScanned = { onOpenProduct(it, null) },
+        onFailed = { scope.launch { snackbarHostState.showSnackbar(resources.getString(R.string.scan_failed)) } },
+    )
+    var chooseReceiptSource by remember { mutableStateOf(false) }
     LaunchedEffect(viewModel) {
         viewModel.screenEvents.collect { event ->
             when (event) {
                 is PantryEvent.Added -> snackbarHostState.showSnackbar(resources.getString(R.string.pantry_added, event.name[language]))
+                is PantryEvent.AddedMany -> snackbarHostState.showSnackbar(resources.getQuantityString(R.plurals.pantry_added_many, event.count, event.count))
                 is PantryEvent.Removed -> {
                     val result = snackbarHostState.showSnackbar(
                         message = resources.getString(R.string.pantry_removed, event.name[language]),
@@ -106,8 +125,25 @@ fun PantryRoute(viewModel: PantryViewModel = hiltViewModel()) {
             onEditorExpiry = viewModel::onEditorExpiry,
             onEditorSave = viewModel::onEditorSave,
             onEditorDismiss = viewModel::onEditorDismiss,
+            onPickCustom = viewModel::onPickCustom,
+            onCreateCustom = { name -> onOpenProduct(null, name) },
+            onScan = scanner,
+            onReceipt = { chooseReceiptSource = true },
         ),
     )
+    if (chooseReceiptSource) {
+        ReceiptSourceDialog(
+            onCamera = {
+                chooseReceiptSource = false
+                photos.takePhoto()
+            },
+            onGallery = {
+                chooseReceiptSource = false
+                photos.pickPhoto()
+            },
+            onDismiss = { chooseReceiptSource = false },
+        )
+    }
 }
 
 class PantryActions(
@@ -121,6 +157,10 @@ class PantryActions(
     val onEditorExpiry: (LocalDate?) -> Unit,
     val onEditorSave: () -> Unit,
     val onEditorDismiss: () -> Unit,
+    val onPickCustom: (CustomSuggestion) -> Unit,
+    val onCreateCustom: (String) -> Unit,
+    val onScan: () -> Unit,
+    val onReceipt: () -> Unit,
 )
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -128,7 +168,15 @@ class PantryActions(
 fun PantryScreen(state: PantryUiState, query: String, snackbarHostState: SnackbarHostState, actions: PantryActions) {
     val language = currentLanguage()
     Scaffold(
-        topBar = { TopAppBar(title = { Text(stringResource(R.string.nav_pantry)) }) },
+        topBar = {
+            TopAppBar(
+                title = { Text(stringResource(R.string.nav_pantry)) },
+                actions = {
+                    IconButton(onClick = actions.onScan) { Icon(SpajzaIcons.Barcode, contentDescription = stringResource(R.string.scan_action)) }
+                    IconButton(onClick = actions.onReceipt) { Icon(SpajzaIcons.Receipt, contentDescription = stringResource(R.string.receipt_action)) }
+                },
+            )
+        },
         snackbarHost = { SnackbarHost(snackbarHostState) },
     ) { padding ->
         if (state.isLoading) {
@@ -149,6 +197,15 @@ fun PantryScreen(state: PantryUiState, query: String, snackbarHostState: Snackba
                             else -> stringResource(suggestion.option.category.labelRes())
                         }
                         SuggestionRow(suggestion.option.name.text(), detail, onAdd = { actions.onPickSuggestion(suggestion) })
+                    }
+                    items(state.customSuggestions, key = { "custom-${it.id}" }) { suggestion ->
+                        val detail = stringResource(if (suggestion.inPantry) R.string.pantry_in_pantry else R.string.pantry_own_food)
+                        SuggestionRow(suggestion.name, detail, onAdd = { actions.onPickCustom(suggestion) })
+                    }
+                    item(key = "create-custom") {
+                        TextButton(onClick = { actions.onCreateCustom(query.trim()) }, modifier = Modifier.padding(horizontal = 8.dp)) {
+                            Text(stringResource(R.string.pantry_create_custom, query.trim()))
+                        }
                     }
                 } else {
                     item { QuickAdd(state, actions) }
@@ -261,7 +318,7 @@ private fun PantryEditorDialog(editor: PantryEditor, actions: PantryActions) {
         title = {
             Column {
                 Text(stringResource(if (editor.existing == null) R.string.pantry_editor_add_title else R.string.pantry_editor_edit_title), style = MaterialTheme.typography.labelLarge)
-                Text(editor.option.name.text())
+                Text(editor.target.name.text())
             }
         },
         text = {
@@ -269,7 +326,7 @@ private fun PantryEditorDialog(editor: PantryEditor, actions: PantryActions) {
                 NumberField(
                     value = editor.quantityText,
                     onValueChange = actions.onEditorQuantity,
-                    label = stringResource(R.string.pantry_editor_quantity, stringResource(editor.option.pantryUnit.labelRes())),
+                    label = stringResource(R.string.pantry_editor_quantity, stringResource(editor.target.unit.labelRes())),
                 )
                 ExpiryField(editor.expiresAt, actions.onEditorExpiry)
             }

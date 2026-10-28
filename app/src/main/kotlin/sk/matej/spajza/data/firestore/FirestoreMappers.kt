@@ -1,12 +1,19 @@
 package sk.matej.spajza.data.firestore
 
+import sk.matej.spajza.domain.custom.CustomIngredient
+import sk.matej.spajza.domain.custom.CustomSource
+import sk.matej.spajza.domain.custom.Energy
 import sk.matej.spajza.domain.diet.Diet
 import sk.matej.spajza.domain.diet.DietRestrictions
 import sk.matej.spajza.domain.household.Household
 import sk.matej.spajza.domain.model.Allergen
 import sk.matej.spajza.domain.model.Cuisine
+import sk.matej.spajza.domain.model.DietFlag
 import sk.matej.spajza.domain.model.Equipment
+import sk.matej.spajza.domain.model.IngredientCategory
+import sk.matej.spajza.domain.model.PantryUnit
 import sk.matej.spajza.domain.model.PriceTier
+import sk.matej.spajza.domain.nutrition.Nutrition
 import sk.matej.spajza.domain.pantry.IngredientRef
 import sk.matej.spajza.domain.pantry.PantryItem
 import sk.matej.spajza.domain.pantry.ShoppingItem
@@ -162,6 +169,59 @@ object FirestoreMappers {
             addedBy = data["addedBy"] as? String,
         )
     }
+
+    // households/{hid}/customIngredients/{id}
+
+    fun customIngredientFrom(id: String, data: Map<String, Any?>): CustomIngredient? {
+        val name = (data["name"] as? String)?.takeIf { it.isNotBlank() } ?: return null
+        val n = data.map("nutrition")
+        val nutrition = Nutrition(
+            kcal = 0.0,
+            protein = n.double("protein") ?: 0.0,
+            carbs = n.double("carbs") ?: 0.0,
+            fat = n.double("fat") ?: 0.0,
+            fiber = n.double("fiber") ?: 0.0,
+            sugar = n.double("sugar") ?: 0.0,
+            salt = n.double("salt") ?: 0.0,
+        )
+        return CustomIngredient(
+            id = id,
+            name = name,
+            brand = data["brand"] as? String,
+            barcode = data["barcode"] as? String,
+            category = data.enum<IngredientCategory>("category") ?: IngredientCategory.OTHER,
+            // Stored energy is ignored: it is always computed from the macros.
+            nutrition = Energy.recomputed(nutrition),
+            nutritionKnown = data["nutritionKnown"] as? Boolean ?: false,
+            pantryUnit = data.enum<PantryUnit>("pantryUnit") ?: PantryUnit.G,
+            gramsPerPiece = data.double("gramsPerPiece"),
+            densityGPerMl = data.double("densityGPerMl"),
+            packageQuantity = data.double("packageQuantity"),
+            allergens = data.enums<Allergen>("allergens"),
+            dietFlags = data.enums<DietFlag>("dietFlags"),
+            catalogId = data["catalogId"] as? String,
+            source = data.enum<CustomSource>("source") ?: CustomSource.MANUAL,
+        )
+    }
+
+    fun customIngredientTo(ingredient: CustomIngredient): Map<String, Any?> = mapOf(
+        "name" to ingredient.name,
+        "brand" to ingredient.brand,
+        "barcode" to ingredient.barcode,
+        "category" to ingredient.category.name,
+        "nutrition" to with(ingredient.nutrition) {
+            mapOf("kcal" to kcal, "protein" to protein, "carbs" to carbs, "fat" to fat, "fiber" to fiber, "sugar" to sugar, "salt" to salt)
+        },
+        "nutritionKnown" to ingredient.nutritionKnown,
+        "pantryUnit" to ingredient.pantryUnit.name,
+        "gramsPerPiece" to ingredient.gramsPerPiece,
+        "densityGPerMl" to ingredient.densityGPerMl,
+        "packageQuantity" to ingredient.packageQuantity,
+        "allergens" to ingredient.allergens.map { it.name },
+        "dietFlags" to ingredient.dietFlags.map { it.name },
+        "catalogId" to ingredient.catalogId,
+        "source" to ingredient.source.name,
+    )
 
     // users/{uid}/ratings/{recipeId}
 

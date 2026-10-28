@@ -75,3 +75,27 @@ catalog is read-only and rebuilt from the seed, so it never needs data migration
   and its time (17:00 by default). The reminder is a daily WorkManager job that reads the pantry from
   the Firestore cache, so it works offline.
 
+
+## D11 — Own foods, barcodes and receipts (Phase 2)
+- `households/{hid}/customIngredients/{id}`: `name`, `brand`, `barcode`, `category`, `nutrition` (per
+  100 g, or 100 ml for drinks counted at 1 g/ml), `nutritionKnown`, `pantryUnit`, `gramsPerPiece`,
+  `densityGPerMl`, `packageQuantity`, `allergens`, `dietFlags`, `catalogId`, `source`
+  (`OPEN_FOOD_FACTS`/`MANUAL`), `updatedBy`, `updatedAt` (server), written with merge. A stored `kcal`
+  is ignored: energy is always recomputed from protein, carbohydrates, fat and fibre (EU factors
+  4/4/9/2). Text is in one language, as the user typed or Open Food Facts named it.
+- Ids: `b<barcode digits>` for scanned products, so every member scanning a product shares one
+  document; `m<32 hex>` for foods typed in without a barcode.
+- A product linked to a catalog ingredient (`catalogId`, suggested from its name and Open Food Facts
+  categories, confirmed by the user) goes into the pantry as that ingredient (`i_<slug>`), its amount
+  converted into the ingredient's pantry unit; an amount that cannot be converted is left out. Recipes
+  then count it. Unlinked products are `c_<id>` pantry items and only show in the pantry.
+- A scanned code is looked up in the household's own foods first, then in the Open Food Facts API v2
+  (`/api/v2/product/{code}.json` with a field list) with the User-Agent
+  `Spajza/<version> (Android; https://github.com/kiss-m/spajza)`. Only the barcode is sent. Names,
+  brand, package size, macros per 100 g, allergen and category tags are used; the draft is shown for
+  checking before anything is saved. Data under ODbL, credited on the About screen.
+- Barcodes are read by the Google code scanner from Play services (no camera permission). Receipts
+  are photographed with the camera app or picked from the gallery and read on the phone by ML Kit
+  text recognition; photos stay in the app cache and are deleted after a day. The parser only
+  suggests rows; the user ticks what goes into the pantry, as catalog ingredients.
+- A member who was alone when joining a household brings their own foods along with the pantry.

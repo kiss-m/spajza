@@ -43,6 +43,10 @@ data class CustomIngredient(
     val catalogId: String? = null,
     val source: CustomSource = CustomSource.MANUAL,
 ) {
+    /** The name with the brand, unless the name already says it: "Horalky · Sedita". */
+    val displayName: String
+        get() = if (brand.isNullOrBlank() || name.contains(brand, ignoreCase = true)) name else "$name · $brand"
+
     /** Where an amount of this food is kept in the pantry. */
     val pantryRef: IngredientRef get() = catalogId?.let { IngredientRef.Catalog(it) } ?: IngredientRef.Custom(id)
 

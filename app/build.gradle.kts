@@ -113,6 +113,9 @@ dependencies {
     implementation(libs.kotlinx.coroutines.android)
     implementation(libs.kotlinx.coroutines.play.services)
     implementation(libs.kotlinx.serialization.json)
+    implementation(libs.okhttp)
+    implementation(libs.play.services.code.scanner)
+    implementation(libs.play.services.mlkit.text.recognition)
 
     testImplementation(testFixtures(project(":domain")))
     testImplementation(kotlin("test"))

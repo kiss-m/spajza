@@ -301,6 +301,73 @@
     <string name="pantry_editor_pick_date">Pick a date</string>
     <string name="pantry_editor_clear_date">No date</string>
     <string name="pantry_delete">Remove from pantry</string>
+    <string name="pantry_own_food">own food</string>
+    <string name="pantry_create_custom">Add “%1$s” as your own food</string>
+    <plurals name="pantry_added_many">
+        <item quantity="one">%1$d item added to the pantry</item>
+        <item quantity="other">%1$d items added to the pantry</item>
+    </plurals>
+    <string name="scan_action">Scan a barcode</string>
+    <string name="scan_failed">The scanner couldn\'t start. Try again in a moment.</string>
+    <string name="receipt_action">Read a receipt</string>
+
+    <!-- Product: a scanned product or an own food -->
+    <string name="product_title_new">Your own food</string>
+    <string name="product_title_scanned">Scanned product</string>
+    <string name="product_loading">Looking up the product…</string>
+    <string name="product_status_known">Your household already knows this product. Just enter the amount.</string>
+    <string name="product_status_found">The details come from Open Food Facts. Check them against the package and fix anything that\'s off.</string>
+    <string name="product_status_unknown">Open Food Facts doesn\'t know this code yet. Copy the details from the package and it will be recognized next time.</string>
+    <string name="product_status_offline">Without a connection the product can\'t be looked up. You can type it in or try again later.</string>
+    <string name="product_status_manual">A food that isn\'t in the ingredient list. The name is enough; everything else is optional.</string>
+    <string name="product_barcode">Barcode: %1$s</string>
+    <string name="product_name">Name</string>
+    <string name="product_brand">Brand, optional</string>
+    <string name="product_category">Category</string>
+    <string name="product_change">Change</string>
+    <string name="product_link_title">Counts as</string>
+    <string name="product_link_body">If it\'s a kind of recipe ingredient (milk or rice, for example), pick it. Recipes will then find the product in the pantry.</string>
+    <string name="product_link_hint">Search ingredients…</string>
+    <string name="product_unit">Keep track in</string>
+    <string name="product_package">One package (%1$s), optional</string>
+    <string name="product_piece_weight">One piece weighs (g), optional</string>
+    <string name="product_nutrition_title">Nutrition per 100 g</string>
+    <string name="product_nutrition_title_ml">Nutrition per 100 ml</string>
+    <string name="product_protein">Protein (g)</string>
+    <string name="product_carbs">Carbohydrates (g)</string>
+    <string name="product_sugar">of which sugars (g)</string>
+    <string name="product_fat">Fat (g)</string>
+    <string name="product_fiber">Fiber (g)</string>
+    <string name="product_salt">Salt (g)</string>
+    <string name="product_energy" tools:ignore="PluralsCandidate">Energy: %1$s kcal</string>
+    <string name="product_energy_missing">Energy is computed once protein, carbohydrates and fat are filled in.</string>
+    <string name="product_energy_note">The app always computes energy from protein, carbohydrates, fat and fiber.</string>
+    <string name="product_pantry_title">Into the pantry</string>
+    <string name="product_edit_details">Edit details</string>
+    <string name="product_save">Add to pantry</string>
+
+    <!-- Receipt -->
+    <string name="receipt_title">Receipt</string>
+    <string name="receipt_source_title">Receipt photo</string>
+    <string name="receipt_source_body">Lay the receipt flat and photograph all of it from above in good light. The text is read on the phone; the photo isn\'t sent anywhere.</string>
+    <string name="receipt_source_camera">Take a photo</string>
+    <string name="receipt_source_gallery">From gallery</string>
+    <string name="receipt_no_camera">No camera app was found. Pick a photo from the gallery instead.</string>
+    <string name="receipt_loading">Reading the receipt…</string>
+    <string name="receipt_intro">Check what was found on the receipt. Ticked items go into the pantry. Tap an item to change the ingredient or amount.</string>
+    <string name="receipt_unmatched">Pick an ingredient</string>
+    <string name="receipt_row_title">Receipt item</string>
+    <string name="receipt_row_ingredient">Ingredient</string>
+    <plurals name="receipt_add">
+        <item quantity="one">Add %1$d item</item>
+        <item quantity="other">Add %1$d items</item>
+    </plurals>
+    <string name="receipt_unreadable_title">The photo couldn\'t be opened</string>
+    <string name="receipt_unreadable_body">Try again, perhaps with another photo.</string>
+    <string name="receipt_no_text_title">No text found on the photo</string>
+    <string name="receipt_no_text_body">Take the photo closer, straight on and in good light so the text is sharp.</string>
+    <string name="receipt_no_items_title">No food found on the receipt</string>
+    <string name="receipt_no_items_body">You can add food by hand in the pantry or by scanning its barcode.</string>
 
     <!-- Shopping list -->
     <string name="shopping_search_hint">Add to the list…</string>

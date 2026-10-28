@@ -26,6 +26,22 @@
             </intent-filter>
         </activity>
 
+        <!-- The camera app writes receipt photos into the app cache through this provider. -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <!-- Google Play services installs the on-device text recognizer and barcode scanner with the app. -->
+        <meta-data
+            android:name="com.google.mlkit.vision.DEPENDENCIES"
+            android:value="ocr,barcode_ui" />
+
         <!-- Stores the per-app language on Android 12 and older (AppCompat per-app language API). -->
         <service
             android:name="androidx.appcompat.app.AppLocalesMetadataHolderService"
