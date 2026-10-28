@@ -33,6 +33,12 @@ jobs:
           bash "$RUNNER_TEMP/latest.sh" androidx/hilt/hilt-navigation-compose androidx/hilt/hilt-lifecycle-viewmodel-compose \
             androidx/compose/material3/material3 androidx/compose/material/material-icons-core androidx/compose/ui/ui \
             androidx/test/core androidx/test/ext/junit androidx/compose/ui/ui-test-junit4
+      - name: ML Kit and Play services (Phase 2)
+        run: |
+          bash "$RUNNER_TEMP/latest.sh" com/google/android/gms/play-services-code-scanner \
+            com/google/android/gms/play-services-mlkit-text-recognition com/google/mlkit/text-recognition \
+            com/google/mlkit/barcode-scanning androidx/activity/activity-compose androidx/core/core-ktx \
+            androidx/lifecycle/lifecycle-runtime-compose
       - name: Firebase and SDK
         run: |
           bash "$RUNNER_TEMP/latest.sh" com/google/firebase/firebase-auth com/google/firebase/firebase-firestore
