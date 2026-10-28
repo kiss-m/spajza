@@ -4,6 +4,7 @@ import android.content.Context
 import android.graphics.ImageDecoder
 import android.net.Uri
 import android.os.Build
+import androidx.core.net.toUri
 import com.google.mlkit.vision.common.InputImage
 import com.google.mlkit.vision.text.TextRecognition
 import com.google.mlkit.vision.text.latin.TextRecognizerOptions
@@ -20,7 +21,7 @@ class MlKitTextReader(private val context: Context) : TextReader {
 
     override suspend fun read(imageUri: String): Result<List<OcrLine>> = withContext(Dispatchers.IO) {
         try {
-            val image = load(Uri.parse(imageUri))
+            val image = load(imageUri.toUri())
             val recognizer = TextRecognition.getClient(TextRecognizerOptions.DEFAULT_OPTIONS)
             try {
                 val text = recognizer.process(image).await()
