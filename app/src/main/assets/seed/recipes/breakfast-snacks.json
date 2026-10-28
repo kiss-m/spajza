@@ -20,9 +20,10 @@
       {"id": "walnuts", "amount": 10, "unit": "G", "role": "SECONDARY", "optional": true}
     ],
     "steps": [
-      {"sk": "Vločky s mliekom priveď do varu a na miernom ohni var 4 až 5 minút za stáleho miešania, kým kaša nezhustne.", "en": "Bring the oats and milk to the boil and simmer over low heat for 4–5 minutes, stirring, until thick.", "timerSeconds": 270},
-      {"sk": "Medzitým nastrúhaj jablko a vmiešaj ho do kaše spolu so škoricou.", "en": "Meanwhile, grate the apple and stir it into the porridge with the cinnamon."},
-      {"sk": "Podávaj pokvapkané medom a posypané nasekanými orechmi.", "en": "Serve drizzled with honey and sprinkled with chopped walnuts."}
+      {"sk": "Polovicu jablka umy (šúpať ho netreba), vykroj jadrovník a nahrubo ho nastrúhaj. Orechy nahrubo nasekaj; ak chceš, opraž ich minútu na suchej panvici, budú voňavejšie.", "en": "Wash the half apple (no need to peel it), cut out the core and grate it coarsely. Roughly chop the walnuts; toast them in a dry pan for a minute for extra flavour if you like."},
+      {"sk": "Do malého hrnca nasyp vločky, zalej ich mliekom a na strednom ohni za stáleho miešania priveď do varu – mlieko ľahko pripáli dno a vykypí.", "en": "Put the oats in a small pan, pour over the milk and bring to the boil over medium heat, stirring constantly – milk scorches on the bottom and boils over easily."},
+      {"sk": "Zníž oheň a var 4 až 5 minút za stáleho miešania, kým kaša nezhustne a vločky nezmäknú. Posledné 2 minúty vmiešaj nastrúhané jablko a škoricu – jablko zmäkne, ale zostane šťavnaté.", "en": "Lower the heat and cook for 4 to 5 minutes, stirring all the time, until the porridge thickens and the oats are soft. Stir in the grated apple and cinnamon for the last 2 minutes – the apple softens but stays juicy.", "timerSeconds": 270},
+      {"sk": "Ak je kaša príliš hustá, prilej lyžicu vody. Preber ju do misky, pokvapkaj medom a posyp orechmi. Jedz hneď – postupne ďalej hustne.", "en": "If the porridge is too thick, add a spoonful of water. Spoon it into a bowl, drizzle with the honey and scatter over the walnuts. Eat straight away – it keeps thickening."}
     ]
   },
   {
@@ -46,10 +47,12 @@
       {"id": "black-pepper", "amount": 1, "unit": "PINCH", "role": "SEASONING"}
     ],
     "steps": [
-      {"sk": "Vajcia rozšľahaj so soľou.", "en": "Beat the eggs with the salt."},
-      {"sk": "Na panvici na miernom ohni rozpusti maslo, vlej vajcia a stierkou ich pomaly posúvaj od okrajov do stredu.", "en": "Melt the butter over low heat, pour in the eggs and slowly push them from the edges to the centre with a spatula."},
-      {"sk": "Keď sú vajcia takmer stuhnuté, ale ešte lesklé (asi po 3 minútach), stiahni ich z ohňa – dotiahnu sa samy.", "en": "When the eggs are almost set but still glossy (about 3 minutes), take them off the heat; they finish cooking on their own.", "timerSeconds": 180},
-      {"sk": "Okoreň, posyp pažítkou a podávaj na chlebe.", "en": "Season with pepper, sprinkle with chives and serve on the bread."}
+      {"sk": "Pažítku nakrájaj nadrobno. Vajcia rozbi do misky, pridaj soľ a vidličkou ich rozšľahaj, kým sa bielky úplne nespoja so žĺtkami – praženica bude mať rovnomernú farbu.", "en": "Finely snip the chives. Crack the eggs into a bowl, add the salt and beat with a fork until the whites and yolks are fully combined – the scramble will have an even colour."},
+      {"sk": "Chlieb opeč v hriankovači alebo ho nechaj čerstvý a priprav ho na tanier – praženica nemá čakať.", "en": "Toast the bread or leave it fresh, and have it ready on the plate – scrambled eggs should not wait."},
+      {"sk": "Na nepriľnavej panvici na miernom ohni rozpusti maslo, kým sa nespení, ale nezhnedne. Vlej vajcia a chvíľu ich nechaj, kým okraje nezačnú tuhnúť.", "en": "Melt the butter in a non-stick frying pan over low heat until it foams but does not brown. Pour in the eggs and leave them for a moment until the edges start to set."},
+      {"sk": "Stierkou potom vajcia pomaly posúvaj od okrajov do stredu, aby vznikali veľké mäkké vločky. Mierny oheň a trpezlivosť znamenajú krémovú praženicu; na prudkom ohni sa vajcia zrazia a pustia vodu.", "en": "Then slowly push the eggs from the edges to the centre with a spatula to form large soft curds. Low heat and patience make creamy eggs; over high heat they toughen and weep water."},
+      {"sk": "Keď sú vajcia takmer stuhnuté, ale ešte lesklé a vlhké (asi po 3 minútach), stiahni panvicu z ohňa – zvyškovým teplom sa dotiahnu.", "en": "When the eggs are almost set but still glossy and moist (after about 3 minutes), take the pan off the heat – the residual heat finishes them.", "timerSeconds": 180},
+      {"sk": "Okoreň, posyp pažítkou a hneď podávaj na chlebe.", "en": "Season with the pepper, sprinkle with the chives and serve at once on the bread."}
     ]
   },
   {
@@ -73,9 +76,10 @@
       {"id": "wholegrain-bread", "amount": 4, "unit": "PCS", "role": "SECONDARY", "note": {"sk": "krajce", "en": "slices"}}
     ],
     "steps": [
-      {"sk": "Tvaroh vymiešaj s jogurtom dohladka.", "en": "Beat the quark with the yogurt until smooth."},
-      {"sk": "Reďkovky nakrájaj na drobné kocky, pažítku nasekaj a oboje vmiešaj do tvarohu.", "en": "Finely dice the radishes, chop the chives and stir both into the quark."},
-      {"sk": "Osoľ, okoreň a natieraj na chlieb. V chladničke vydrží 2 dni.", "en": "Season with salt and pepper and spread on the bread. Keeps in the fridge for 2 days."}
+      {"sk": "Tvaroh daj do misy a vidličkou alebo metličkou ho vymiešaj s jogurtom dohladka – jogurt ho zjemní a nátierka sa bude lepšie natierať.", "en": "Put the quark in a bowl and beat it with the yoghurt using a fork or whisk until smooth – the yoghurt softens it so it spreads easily."},
+      {"sk": "Reďkovky umy, odrež korienky a listy a nakrájaj ich na drobné kocky asi 3 mm. Pažítku nakrájaj nadrobno.", "en": "Wash the radishes, trim off the roots and leaves and cut them into small dice of about 3 mm. Finely snip the chives."},
+      {"sk": "Reďkovky aj pažítku vmiešaj do tvarohu, osoľ a okoreň. Ochutnaj – reďkovky dodajú pikantnosť.", "en": "Stir the radishes and chives into the quark and season with the salt and pepper. Taste – the radishes add a peppery bite."},
+      {"sk": "Natieraj na chlieb a podávaj, prípadne ozdobené plátkami reďkovky. V uzavretej nádobe vydrží v chladničke 2 dni; reďkovky časom pustia trochu šťavy, preto ju pred podávaním premiešaj.", "en": "Spread on the bread and serve, garnished with radish slices if you like. In a closed container it keeps in the fridge for 2 days; the radishes release a little juice over time, so stir before serving."}
     ]
   },
   {
@@ -99,10 +103,11 @@
       {"id": "sunflower-oil", "amount": 1, "unit": "TSP", "role": "SEASONING"}
     ],
     "steps": [
-      {"sk": "Chlieb opeč v hriankovači alebo na suchej panvici.", "en": "Toast the bread in a toaster or a dry pan."},
-      {"sk": "Avokádo roztlač vidličkou s citrónovou šťavou a soľou.", "en": "Mash the avocado with the lemon juice and salt."},
-      {"sk": "Na oleji usmaž vajcia, kým bielky nestuhnú a žĺtky sú ešte tekuté, asi 3 minúty.", "en": "Fry the eggs in the oil until the whites are set and the yolks still runny, about 3 minutes.", "timerSeconds": 180},
-      {"sk": "Chlieb natri avokádom, navrch polož vajce a posyp čili.", "en": "Spread the avocado on the toast, top with an egg and sprinkle with chili."}
+      {"sk": "Avokádo rozkroj pozdĺžne okolo kôstky, polovice pootočením oddeľ a kôstku vyber. Dužinu vyber lyžicou do misky. Zrelé avokádo pri stlačení mierne povolí; tvrdé sa zle tlačí a nemá chuť.", "en": "Cut the avocado lengthways around the stone, twist the halves apart and remove the stone. Scoop the flesh into a bowl. A ripe avocado gives slightly when pressed; a hard one mashes badly and has little flavour."},
+      {"sk": "Dužinu roztlač vidličkou s citrónovou šťavou a polovicou soli – nemusí byť úplne hladká, kúsky nevadia. Citrón zabráni, aby avokádo zhnedlo.", "en": "Mash the flesh with a fork with the lemon juice and half the salt – it need not be completely smooth. The lemon keeps the avocado from browning."},
+      {"sk": "Chlieb opeč v hriankovači alebo na suchej panvici dochrumkava – mäkký by pod avokádom rozmokol.", "en": "Toast the bread in a toaster or dry frying pan until crisp – soft bread goes soggy under the avocado."},
+      {"sk": "Na nepriľnavej panvici zohrej olej na strednom ohni, rozbi doň vajcia a smaž asi 3 minúty, kým bielky nie sú úplne stuhnuté a žĺtky ešte tekuté. Ak chceš, aby sa vrch bielka dopiekol, na poslednú minútu panvicu prikry.", "en": "Heat the oil in a non-stick frying pan over medium heat, crack in the eggs and fry for about 3 minutes until the whites are fully set and the yolks still runny. To set the top of the whites, cover the pan for the last minute.", "timerSeconds": 180},
+      {"sk": "Toasty natri avokádom, na každý polož vajce, osoľ zvyšnou soľou a posyp čili vločkami. Jedz hneď.", "en": "Spread the toast with the avocado, top each slice with an egg, season with the remaining salt and sprinkle with chilli flakes. Eat at once."}
     ]
   },
   {
@@ -124,9 +129,10 @@
       {"id": "honey", "amount": 1, "unit": "TSP", "role": "SEASONING"}
     ],
     "steps": [
-      {"sk": "Jogurt daj do misky a navrch rozlož ovocie.", "en": "Spoon the yogurt into a bowl and top with the fruit."},
-      {"sk": "Vločky a nasekané orechy krátko opraž na suchej panvici, kým nezavoňajú, a posyp nimi jogurt.", "en": "Toast the oats and chopped walnuts briefly in a dry pan until fragrant and sprinkle them over the yogurt."},
-      {"sk": "Pokvapkaj medom.", "en": "Drizzle with honey."}
+      {"sk": "Mrazené ovocie nechaj rozmraziť – večer v chladničke alebo ráno minútu v mikrovlnke; pustí šťavu, ktorá jogurt pekne zafarbí. Čerstvé ovocie len umy.", "en": "Thaw the frozen berries – overnight in the fridge or for a minute in the microwave in the morning; they release juice that colours the yoghurt nicely. Just wash fresh fruit."},
+      {"sk": "Orechy nahrubo nasekaj a spolu s vločkami ich opraž na suchej panvici na strednom ohni 2 až 3 minúty za stáleho miešania, kým nezavoňajú a vločky nie sú zlatisté. Daj pozor, rýchlo sa pripália.", "en": "Roughly chop the walnuts and toast them with the oats in a dry pan over medium heat for 2 to 3 minutes, stirring constantly, until fragrant and the oats are golden. Watch them – they burn quickly."},
+      {"sk": "Jogurt daj do misky, navrch rozlož ovocie aj so šťavou a posyp opraženou zmesou.", "en": "Spoon the yoghurt into a bowl, top with the berries and their juice and sprinkle with the toasted mix."},
+      {"sk": "Pokvapkaj medom a jedz hneď, kým sú vločky chrumkavé. Opraženú zmes si môžeš pripraviť aj do zásoby – v uzavretej nádobe vydrží týždeň.", "en": "Drizzle with the honey and eat at once while the oats are crunchy. You can toast a bigger batch of the mix – it keeps for a week in a closed jar."}
     ]
   },
   {
@@ -153,10 +159,12 @@
       {"id": "lemon", "amount": 1, "unit": "TSP", "role": "SEASONING", "optional": true, "note": {"sk": "šťava", "en": "juice"}}
     ],
     "steps": [
-      {"sk": "Múku, mlieko, vajcia, soľ a lyžicu oleja vyšľahaj na hladké riedke cesto a nechaj ho 10 minút odpočinúť.", "en": "Whisk the flour, milk, eggs, salt and a tablespoon of oil into a smooth, thin batter and let it rest for 10 minutes.", "timerSeconds": 600},
-      {"sk": "Plnka: tvaroh vymiešaj s cukrom, vanilkovým cukrom a citrónovou šťavou.", "en": "Filling: beat the quark with the sugar, vanilla sugar and lemon juice."},
-      {"sk": "Panvicu potri trochou oleja, vlej tenkú vrstvu cesta a krúživým pohybom ho rozlej. Peč asi minútu, kým okraje nezačnú hnednúť, otoč a dopeč 30 sekúnd.", "en": "Brush a pan with a little oil, pour in a thin layer of batter and swirl to spread it. Cook for about a minute until the edges brown, flip and cook for 30 seconds.", "timerSeconds": 60},
-      {"sk": "Palacinky natri tvarohom, zroluj a podávaj.", "en": "Spread the crêpes with the quark, roll up and serve."}
+      {"sk": "Do misy daj múku a soľ, v strede urob jamku, rozbi do nej vajcia a prilej asi tretinu mlieka. Metličkou miešaj od stredu, kým nevznikne hladké husté cesto bez hrudiek, a potom postupne prilievaj zvyšné mlieko. Nakoniec vmiešaj lyžicu oleja.", "en": "Put the flour and salt in a bowl, make a well in the middle, crack in the eggs and add about a third of the milk. Whisk from the centre outwards into a smooth, thick batter without lumps, then gradually whisk in the rest of the milk. Finally stir in 1 tablespoon of the oil."},
+      {"sk": "Cesto nechaj 10 minút odpočinúť – múka napučí a palacinky sa nebudú trhať. Má mať hustotu tekutej smotany; ak je hustejšie, prilej trochu vody.", "en": "Let the batter rest for 10 minutes – the flour swells and the pancakes will not tear. It should have the consistency of pouring cream; if it is thicker, add a little water.", "timerSeconds": 600},
+      {"sk": "Plnka: tvaroh vymiešaj s cukrom, vanilkovým cukrom a citrónovou šťavou dohladka. Ak je tvaroh suchý, pridaj lyžicu mlieka.", "en": "Filling: beat the quark with the sugar, vanilla sugar and lemon juice until smooth. If the quark is dry, add a spoonful of milk."},
+      {"sk": "Panvicu na palacinky (asi 22 cm) rozohrej na stredne vysokom ohni a papierovou utierkou namočenou v oleji ju potri tenkou vrstvou oleja. Do stredu vlej asi pol naberačky cesta a hneď panvicou krúž, aby sa cesto rozlialo na tenkú vrstvu po celom dne.", "en": "Heat a pancake pan (about 22 cm) over medium-high heat and wipe it with a thin film of oil using kitchen paper dipped in the oil. Pour about half a ladle of batter into the centre and immediately swirl the pan so it spreads thinly over the whole base."},
+      {"sk": "Peč asi minútu, kým povrch nestuhne a okraje nezačnú hnednúť a odliepať sa. Obracačkou palacinku obráť a dopeč 30 sekúnd. Prvá sa často nevydarí – podľa nej uprav teplotu. Hotové ukladaj na tanier na seba a prikry ich, aby nevyschli.", "en": "Cook for about a minute until the top is set and the edges start to brown and lift. Flip it with a spatula and cook for 30 seconds more. The first one often fails – use it to adjust the heat. Stack the finished pancakes on a plate and keep them covered so they do not dry out.", "timerSeconds": 60},
+      {"sk": "Každú palacinku natri lyžicou tvarohovej plnky, zroluj ju alebo prelož na štvrtiny a podávaj, napríklad s ovocím.", "en": "Spread each pancake with a spoonful of the quark filling, roll it up or fold it into quarters and serve, for example with fruit."}
     ]
   },
   {
@@ -178,9 +186,10 @@
       {"id": "coconut-flakes", "amount": 1, "unit": "TBSP", "role": "SEASONING", "optional": true}
     ],
     "steps": [
-      {"sk": "Datle nasekaj nadrobno a s chia semienkami ich zamiešaj do sójového mlieka.", "en": "Finely chop the dates and stir them into the soy milk with the chia seeds."},
-      {"sk": "Po 10 minútach znova premiešaj, aby sa nevytvorili hrudky, a daj aspoň na 4 hodiny do chladničky.", "en": "Stir again after 10 minutes so no lumps form, then refrigerate for at least 4 hours.", "timerSeconds": 600},
-      {"sk": "Mango nakrájaj na kocky a podávaj na pudingu posypané kokosom.", "en": "Dice the mango and serve on the pudding, sprinkled with coconut."}
+      {"sk": "Datle zbav kôstok a nasekaj čo najjemnejšie – rozpustia sa v pudingu a osladia ho. V miske alebo v dvoch pohároch ich zmiešaj s chia semienkami a sójovým mliekom.", "en": "Stone the dates and chop them as finely as you can – they melt into the pudding and sweeten it. Mix them with the chia seeds and soy milk in a bowl or two jars."},
+      {"sk": "Dôkladne premiešaj, nechaj 10 minút postáť a potom znova premiešaj – chia semienka sa na začiatku zhlukujú a bez druhého miešania by v pudingu zostali hrudky.", "en": "Stir thoroughly, leave for 10 minutes and stir again – chia seeds clump at first, and without a second stir the pudding will be lumpy.", "timerSeconds": 600},
+      {"sk": "Prikry a daj do chladničky aspoň na 4 hodiny, najlepšie cez noc. Puding je hotový, keď semienka napučia a zmes je hustá ako jogurt; ak je príliš hustá, vmiešaj lyžicu mlieka.", "en": "Cover and refrigerate for at least 4 hours, ideally overnight. The pudding is ready when the seeds have swollen and it is as thick as yoghurt; if it is too thick, stir in a spoonful of milk."},
+      {"sk": "Pred podávaním mango ošúp, odkroj dužinu od kôstky a nakrájaj na kocky. Navrch pudingu poukladaj mango a posyp kokosom. V chladničke vydrží 3 dni; mango pridaj až pri jedle.", "en": "Before serving, peel the mango, cut the flesh off the stone and dice it. Top the pudding with the mango and sprinkle with the coconut. It keeps in the fridge for 3 days; add the mango when you eat it."}
     ]
   },
   {
@@ -206,10 +215,11 @@
       {"id": "powdered-sugar", "amount": 1, "unit": "TSP", "role": "SEASONING", "optional": true}
     ],
     "steps": [
-      {"sk": "Vajcia rozšľahaj s mliekom, škoricou a cukrom v plytkej mise.", "en": "Whisk the eggs with the milk, cinnamon and sugar in a shallow dish."},
-      {"sk": "Plátky chleba v zmesi z oboch strán namoč, aby nasiakli, ale nerozpadli sa.", "en": "Dip the bread slices on both sides so they soak up the mixture without falling apart."},
-      {"sk": "Na masle ich opekaj na strednom ohni 2 až 3 minúty z každej strany dozlatista.", "en": "Fry in the butter over medium heat for 2–3 minutes per side until golden.", "timerSeconds": 150},
-      {"sk": "Podávaj s ovocím, podľa chuti poprášené práškovým cukrom.", "en": "Serve with the berries, dusted with powdered sugar if you like."}
+      {"sk": "Mrazené ovocie daj do malého hrnca a na miernom ohni ho zohrievaj 3 až 4 minúty, kým nerozmrzne a nepustí šťavu – vznikne jednoduchá ovocná omáčka.", "en": "Put the frozen berries in a small pan and warm them over low heat for 3 to 4 minutes until thawed and juicy – this makes a simple fruit sauce."},
+      {"sk": "V plytkej mise rozšľahaj vajcia s mliekom, škoricou a cukrom; miešaj dôkladne, škorica sa drží na povrchu.", "en": "Beat the eggs with the milk, cinnamon and sugar in a shallow dish; whisk well, as the cinnamon tends to float."},
+      {"sk": "Plátky chleba v zmesi namoč z oboch strán asi na 10 sekúnd, aby nasiakli, ale nerozpadli sa. Starší chlieb nasaje viac a nerozmokne.", "en": "Dip the bread slices in the mixture for about 10 seconds per side so they soak it up without falling apart. Slightly stale bread absorbs more and does not go soggy."},
+      {"sk": "Na veľkej panvici rozpusti polovicu masla na strednom ohni. Plátky opekaj 2 až 3 minúty z každej strany dozlatista; pred obrátením pridaj zvyšné maslo. Na príliš silnom ohni zhnednú zvonku a vnútri zostanú surové.", "en": "Melt half the butter in a large frying pan over medium heat. Fry the slices for 2 to 3 minutes on each side until golden, adding the rest of the butter before turning them. Over too high a heat they brown outside and stay raw inside.", "timerSeconds": 150},
+      {"sk": "Podávaj teplé s ovocnou omáčkou, podľa chuti poprášené práškovým cukrom.", "en": "Serve warm with the fruit sauce, dusted with icing sugar if you like."}
     ]
   },
   {
@@ -238,10 +248,12 @@
       {"id": "coriander-leaves", "amount": 1, "unit": "TBSP", "role": "SEASONING", "optional": true}
     ],
     "steps": [
-      {"sk": "Na polovici oleja speň nakrájanú cibuľu s cesnakom, pridaj rímsky kmín, čili, paradajky, fazuľu a soľ a var 6 minút.", "en": "Soften the chopped onion and garlic in half the oil, add the cumin, chili, tomatoes, beans and salt and simmer for 6 minutes.", "timerSeconds": 360},
-      {"sk": "Tortilly zohrej na suchej panvici a polož na taniere.", "en": "Warm the tortillas in a dry pan and put them on plates."},
-      {"sk": "Na zvyšnom oleji usmaž volské oká s tekutým žĺtkom.", "en": "Fry the eggs in the remaining oil, keeping the yolks runny."},
-      {"sk": "Na tortilly rozlož fazuľovú omáčku, navrch vajcia a podľa chuti avokádo a koriander.", "en": "Spread the bean sauce over the tortillas and top with the eggs and, if you like, avocado and coriander."}
+      {"sk": "Cibuľu nakrájaj nadrobno, cesnak nasekaj a fazuľu sceď a prepláchni. Avokádo nakrájaj na plátky až tesne pred podávaním.", "en": "Finely chop the onion and garlic, and drain and rinse the beans. Slice the avocado just before serving."},
+      {"sk": "V panvici zohrej polovicu oleja na strednom ohni a cibuľu opekaj 3 minúty, kým nezmäkne. Pridaj cesnak, rímsky kmín a čili a miešaj pol minúty, kým nezavoňajú.", "en": "Heat half the oil in a frying pan over medium heat and cook the onion for 3 minutes until soft. Add the garlic, cumin and chilli and stir for half a minute until fragrant."},
+      {"sk": "Pridaj paradajky, fazuľu a soľ a var 6 minút, kým omáčka nezhustne; niekoľko fazúľ roztlač varechou.", "en": "Add the tomatoes, beans and salt and simmer for 6 minutes until the sauce thickens, crushing a few beans with the spoon.", "timerSeconds": 360},
+      {"sk": "Medzitým tortilly zohrej na suchej panvici asi 30 sekúnd z každej strany a polož ich na taniere.", "en": "Meanwhile warm the tortillas in a dry pan for about 30 seconds per side and put them on plates."},
+      {"sk": "Na zvyšnom oleji v nepriľnavej panvici na strednom ohni usmaž 4 volské oká – asi 3 minúty, kým bielky nie sú stuhnuté a žĺtky tekuté.", "en": "Fry 4 eggs sunny side up in the remaining oil in a non-stick frying pan over medium heat for about 3 minutes until the whites are set and the yolks runny.", "timerSeconds": 180},
+      {"sk": "Na tortilly rozlož fazuľovú omáčku, navrch polož vajcia a podľa chuti pridaj avokádo a nasekaný koriander. Jedz hneď – tekutý žĺtok poslúži ako omáčka.", "en": "Spread the bean sauce over the tortillas, top with the eggs and add the avocado and chopped coriander if you like. Eat at once – the runny yolk becomes part of the sauce."}
     ]
   },
   {
@@ -269,9 +281,11 @@
       {"id": "wholegrain-bread", "amount": 2, "unit": "PCS", "role": "SECONDARY", "optional": true, "note": {"sk": "na podávanie", "en": "to serve"}}
     ],
     "steps": [
-      {"sk": "Na oleji opekaj nakrájanú cibuľu a papriku 4 minúty.", "en": "Fry the chopped onion and pepper in the oil for 4 minutes.", "timerSeconds": 240},
-      {"sk": "Tofu rozdrob rukami priamo do panvice, pridaj kurkumu, cesnak, soľ a korenie a opekaj 4 minúty.", "en": "Crumble the tofu straight into the pan with your hands, add the turmeric, garlic powder, salt and pepper and fry for 4 minutes.", "timerSeconds": 240},
-      {"sk": "Vmiešaj špenát, nechaj ho zavädnúť a podávaj s chlebom.", "en": "Stir in the spinach, let it wilt and serve with bread."}
+      {"sk": "Tofu vyber z obalu, sceď a nad drezom ho zľahka vytlač medzi dlaňami, aby pustilo vodu – suché sa lepšie opečie a nasaje korenie. Cibuľu a papriku nakrájaj na drobné kocky.", "en": "Take the tofu out of its pack, drain it and squeeze it gently between your palms over the sink to remove water – dry tofu browns better and absorbs the spices. Finely dice the onion and pepper."},
+      {"sk": "V panvici zohrej olej na strednom ohni a cibuľu s paprikou opekaj 4 minúty, kým nezmäknú.", "en": "Heat the oil in a frying pan over medium heat and cook the onion and pepper for 4 minutes until soft.", "timerSeconds": 240},
+      {"sk": "Tofu rozdrob rukami priamo do panvice na kúsky veľké ako hrášok až lieskový orech – nerovnomerné kúsky pripomínajú praženicu najviac. Pridaj kurkumu, sušený cesnak, soľ a korenie a opekaj 4 minúty za občasného miešania, kým tofu nie je žlté a miestami zlatisté.", "en": "Crumble the tofu with your hands straight into the pan into pieces from pea to hazelnut size – uneven pieces look most like scrambled eggs. Add the turmeric, garlic powder, salt and pepper and cook for 4 minutes, stirring now and then, until the tofu is yellow and golden in places.", "timerSeconds": 240},
+      {"sk": "Vmiešaj špenát a miešaj asi minútu, kým nezvädne. Ochutnaj – tofu potrebuje výrazné ochutenie.", "en": "Stir in the spinach and cook for about a minute until wilted. Taste – tofu needs bold seasoning."},
+      {"sk": "Podávaj hneď s chlebom. Zvyšok vydrží v chladničke 2 dni a dá sa zohriať na panvici.", "en": "Serve at once with the bread. Leftovers keep in the fridge for 2 days and reheat in a frying pan."}
     ]
   },
   {
@@ -296,9 +310,10 @@
       {"id": "powdered-sugar", "amount": 2, "unit": "TSP", "role": "SEASONING"}
     ],
     "steps": [
-      {"sk": "Mlieko s cukrom a soľou priveď do varu.", "en": "Bring the milk to the boil with the sugar and salt."},
-      {"sk": "Za stáleho miešania metličkou pomaly vsýpaj krupicu a var 3 minúty, kým kaša nezhustne.", "en": "Whisking constantly, slowly pour in the semolina and simmer for 3 minutes until thick.", "timerSeconds": 180},
-      {"sk": "Rozdeľ do tanierov, navrch daj kúsok masla a posyp kakaom zmiešaným s práškovým cukrom.", "en": "Divide between plates, top with a little butter and sprinkle with the cocoa mixed with powdered sugar."}
+      {"sk": "V hrnci s hrubým dnom priveď mlieko s cukrom a soľou na strednom ohni do varu; občas premiešaj a postráž ho, mlieko ľahko vykypí.", "en": "Bring the milk with the sugar and salt to the boil in a heavy-based pan over medium heat, stirring now and then and keeping an eye on it – milk boils over easily."},
+      {"sk": "Zníž oheň. Jednou rukou pomaly v tenkom prúde vsýpaj krupicu a druhou neustále miešaj metličkou – inak vzniknú hrudky.", "en": "Lower the heat. With one hand pour in the semolina slowly in a thin stream while whisking constantly with the other – otherwise lumps form."},
+      {"sk": "Var 3 minúty za stáleho miešania, kým kaša nezhustne a krupica nezmäkne. Pri chladnutí ešte zhustne; ak je priveľmi hustá, prilej trochu mlieka.", "en": "Cook for 3 minutes, still whisking, until the porridge thickens and the semolina is soft. It thickens further as it cools; if it gets too thick, add a splash of milk.", "timerSeconds": 180},
+      {"sk": "V miske zmiešaj kakao s práškovým cukrom. Kašu rozdeľ do tanierov, do stredu daj kúsok masla, nechaj ho roztopiť a posyp kakaovou zmesou. Jedz teplú.", "en": "Mix the cocoa with the icing sugar in a small bowl. Divide the porridge between plates, put a knob of butter in the middle, let it melt and sprinkle with the cocoa mixture. Eat warm."}
     ]
   },
   {
@@ -321,8 +336,10 @@
       {"id": "oats", "amount": 40, "unit": "G", "role": "SECONDARY"}
     ],
     "steps": [
-      {"sk": "Všetko daj do mixéra a mixuj 30 sekúnd dohladka.", "en": "Put everything in the blender and blend for 30 seconds until smooth.", "timerSeconds": 30},
-      {"sk": "Ak je smoothie príliš husté, prilej trochu mlieka. Pi hneď.", "en": "If it is too thick, add a splash of milk. Drink right away."}
+      {"sk": "Banán ošúp a nalámaj na kúsky. Ak chceš smoothie studené a hustejšie, použi banán zamrazený na kúsky – nahradí ľad a nezriedi chuť.", "en": "Peel the banana and break it into pieces. For a colder, thicker smoothie use banana frozen in chunks – it replaces ice without diluting the flavour."},
+      {"sk": "Do mixéra nalej najprv mlieko, potom pridaj vločky, proteín, banán a arašidové maslo – tekutina na dne pomôže nožom roztočiť sa a proteín sa neprilepí na steny.", "en": "Pour the milk into the blender first, then add the oats, protein powder, banana and peanut butter – liquid at the bottom helps the blades spin and keeps the powder off the sides."},
+      {"sk": "Mixuj asi 30 sekúnd na najvyšší výkon, kým nie je smoothie úplne hladké a vločky rozmixované.", "en": "Blend on full power for about 30 seconds until completely smooth with no flakes of oats left.", "timerSeconds": 30},
+      {"sk": "Ak je príliš husté, prilej trochu mlieka a krátko premixuj. Pi hneď – vločky postupne napučiavajú a smoothie hustne.", "en": "If it is too thick, add a little more milk and blend briefly. Drink at once – the oats keep swelling and the smoothie thickens."}
     ]
   },
   {
@@ -345,10 +362,10 @@
       {"id": "salt", "amount": 0.5, "unit": "TSP", "role": "SEASONING"}
     ],
     "steps": [
-      {"sk": "Rúru predhrej na 200 °C. Cícer prepláchni a dôkladne osuš utierkou – čím je suchší, tým bude chrumkavejší.", "en": "Preheat the oven to 200 °C. Rinse the chickpeas and dry them thoroughly with a towel; the drier they are, the crunchier they get."},
-      {"sk": "Premiešaj ho s olejom, korením a soľou a rozlož na plech v jednej vrstve.", "en": "Toss with the oil, spices and salt and spread in a single layer on a baking tray."},
-      {"sk": "Peč 30 až 35 minút, v polovici premiešaj. Hotový je, keď je zlatistý a chrumká.", "en": "Bake for 30–35 minutes, stirring halfway. They are done when golden and crunchy.", "timerSeconds": 1950},
-      {"sk": "Nechaj vychladnúť na plechu. V uzavretej nádobe vydrží 3 dni.", "en": "Let them cool on the tray. Keeps in an airtight container for 3 days."}
+      {"sk": "Rúru predhrej na 200 °C (horný a spodný ohrev). Cícer sceď, prepláchni a rozlož na čistú utierku. Prikry ho druhou utierkou a dôkladne osuš; uvoľnené šupky vyhoď. Čím je suchší, tým bude chrumkavejší.", "en": "Preheat the oven to 200 °C (conventional). Drain and rinse the chickpeas and spread them on a clean tea towel. Cover with a second towel and dry them thoroughly, discarding any loose skins. The drier they are, the crunchier they get."},
+      {"sk": "Na plechu vystlanom papierom premiešaj cícer s olejom, údenou paprikou, rímskym kmínom a soľou a rozlož ho v jednej vrstve s medzerami. Peč 15 minút a potom ho premiešaj.", "en": "On a lined baking tray toss the chickpeas with the oil, smoked paprika, cumin and salt and spread them in a single layer with gaps. Roast for 15 minutes, then stir.", "timerSeconds": 900},
+      {"sk": "Peč ďalších 15 až 20 minút. Cícer je hotový, keď je zlatohnedý a pri zahryznutí chrumká; ak je vnútri ešte mäkký, peč ho ďalších 5 minút.", "en": "Roast for another 15 to 20 minutes. The chickpeas are done when golden brown and crunchy when bitten; if still soft inside, roast for 5 minutes more.", "timerSeconds": 1050},
+      {"sk": "Nechaj ho vychladnúť priamo na plechu – chladnutím ešte stvrdne. V uzavretej nádobe pri izbovej teplote vydrží 3 dni; ak zmäkne, zohrej ho 5 minút v rúre.", "en": "Let them cool on the tray – they crisp up further as they cool. They keep for 3 days in a closed container at room temperature; if they soften, warm them in the oven for 5 minutes."}
     ]
   },
   {
@@ -373,10 +390,11 @@
       {"id": "salt", "amount": 1, "unit": "PINCH", "role": "SEASONING"}
     ],
     "steps": [
-      {"sk": "Paradajky nakrájaj na drobné kocky, osoľ, premiešaj s polovicou oleja a natrhanou bazalkou a nechaj 5 minút postáť.", "en": "Dice the tomatoes, salt them, mix with half the oil and the torn basil and let stand for 5 minutes.", "timerSeconds": 300},
-      {"sk": "Chlieb opeč dochrumkava na suchej panvici alebo v hriankovači.", "en": "Toast the bread until crisp in a dry pan or toaster."},
-      {"sk": "Teplý chlieb potri rozpoleným strúčikom cesnaku a pokvapkaj zvyšným olejom.", "en": "Rub the warm toast with the cut garlic clove and drizzle with the remaining oil."},
-      {"sk": "Navrch daj paradajky, podľa chuti pokvapkaj balzamikom a hneď podávaj.", "en": "Top with the tomatoes, add a few drops of balsamic if you like and serve right away."}
+      {"sk": "Paradajky umy, rozpoľ, lyžičkou vyber vodnaté semená a dužinu nakrájaj na drobné kocky asi 5 mm – bez semien bruschetta nerozmokne.", "en": "Wash and halve the tomatoes, scoop out the watery seeds with a teaspoon and dice the flesh into small cubes of about 5 mm – without the seeds the bruschetta stays crisp."},
+      {"sk": "Paradajky v miske osoľ, premiešaj s polovicou oleja a natrhanou bazalkou a nechaj 5 minút postáť, aby pustili šťavu a nasali chuť.", "en": "Salt the tomatoes in a bowl, toss with half the oil and the torn basil and leave for 5 minutes to release their juices and absorb the flavours.", "timerSeconds": 300},
+      {"sk": "Medzitým chlieb opeč na suchej panvici, grilovacej panvici alebo v hriankovači dochrumkava – povrch má byť zlatý a pevný.", "en": "Meanwhile toast the bread in a dry frying pan, griddle or toaster until crisp – the surface should be golden and firm."},
+      {"sk": "Strúčik cesnaku rozpoľ a reznou stranou ním potri teplý chlieb – chrumkavý povrch funguje ako strúhadlo. Pokvapkaj zvyšným olejom.", "en": "Halve the garlic clove and rub the cut side over the warm toast – the crisp surface grates it like a rasp. Drizzle with the remaining oil."},
+      {"sk": "Paradajky naber lyžicou (šťavu nechaj v miske) a rozdeľ na chlieb. Podľa chuti pokvapkaj balzamikom a podávaj hneď, kým je chlieb chrumkavý.", "en": "Spoon the tomatoes onto the toast, leaving the juice in the bowl. Drizzle with balsamic vinegar if you like and serve at once while the bread is crisp."}
     ]
   },
   {
@@ -402,9 +420,10 @@
       {"id": "cucumber", "amount": 0.5, "unit": "PCS", "role": "SECONDARY"}
     ],
     "steps": [
-      {"sk": "Avokádo roztlač vidličkou s limetkovou šťavou a soľou – nechaj ho trochu hrudkovité.", "en": "Mash the avocado with the lime juice and salt, leaving it a little chunky."},
-      {"sk": "Vmiešaj nadrobno nakrájanú cibuľu, paradajku, koriander a čili.", "en": "Stir in the finely chopped onion, tomato, coriander and chili."},
-      {"sk": "Mrkvu a uhorku nakrájaj na tyčinky a podávaj s dipom.", "en": "Cut the carrots and cucumber into sticks and serve with the dip."}
+      {"sk": "Cibuľu nakrájaj čo najjemnejšie, paradajku rozpoľ, vyber semená a dužinu nakrájaj na drobné kocky. Čili zbav semienok a nasekaj nadrobno, koriander nasekaj.", "en": "Chop the onion as finely as you can, halve the tomato, remove the seeds and dice the flesh finely. Seed and finely chop the chilli and chop the coriander."},
+      {"sk": "Avokáda rozkroj, vyber kôstky a dužinu vyber lyžicou do misky. Roztlač ju vidličkou s limetkovou šťavou a soľou – nechaj ju trochu hrudkovitú, guacamole má mať štruktúru.", "en": "Halve the avocados, remove the stones and scoop the flesh into a bowl. Mash it with a fork with the lime juice and salt – leave it a little chunky; guacamole should have texture."},
+      {"sk": "Vmiešaj cibuľu, paradajku, čili a koriander. Ochutnaj a podľa chuti pridaj kvapku limetky.", "en": "Stir in the onion, tomato, chilli and coriander. Taste and add a drop more lime if you like."},
+      {"sk": "Mrkvu ošúp a spolu s uhorkou nakrájaj na tyčinky asi 1 × 8 cm. Podávaj hneď s guacamole. Ak ho chceš chvíľu uchovať, prikry ho fóliou priamo na povrchu – bez vzduchu nezhnedne; v chladničke vydrží do druhého dňa.", "en": "Peel the carrots and cut them and the cucumber into sticks about 1 × 8 cm. Serve at once with the guacamole. To keep it for a while, press cling film directly onto the surface – without air it does not brown; it keeps in the fridge until the next day."}
     ]
   },
   {
@@ -430,10 +449,11 @@
       {"id": "bread", "amount": 3, "unit": "PCS", "role": "SECONDARY", "optional": true, "note": {"sk": "na podávanie", "en": "to serve"}}
     ],
     "steps": [
-      {"sk": "Vajcia var 10 minút natvrdo, schlaď ich v studenej vode a ošúp.", "en": "Boil the eggs for 10 minutes until hard, cool them in cold water and peel.", "timerSeconds": 600},
-      {"sk": "Nastrúhaj ich na hrubom strúhadle alebo roztlač vidličkou.", "en": "Grate them coarsely or mash with a fork."},
-      {"sk": "Zmiešaj s jogurtom, horčicou, nadrobno nakrájanou cibuľou a pažítkou, osoľ a okoreň.", "en": "Mix with the yogurt, mustard, finely chopped onion and chives and season with salt and pepper."},
-      {"sk": "Podávaj na chlebe. V chladničke vydrží 2 dni.", "en": "Serve on bread. Keeps in the fridge for 2 days."}
+      {"sk": "Vajcia vlož do hrnca, zalej studenou vodou tak, aby boli ponorené, a priveď do varu. Od začiatku varu ich var 10 minút – žĺtky budú stuhnuté a bez sivého okraja.", "en": "Put the eggs in a pan, cover them with cold water and bring to the boil. Cook for 10 minutes from when the water boils – the yolks will be firm without a grey ring.", "timerSeconds": 600},
+      {"sk": "Uvarené vajcia hneď prelož do misky so studenou vodou a nechaj aspoň 5 minút vychladnúť – rýchle schladenie uľahčí šúpanie. Potom ich ošúp; začni na tupom konci, kde je vzduchová bublina.", "en": "Transfer the cooked eggs straight into a bowl of cold water and leave them to cool for at least 5 minutes – quick cooling makes them easier to peel. Then peel them, starting at the blunt end where the air pocket is.", "timerSeconds": 300},
+      {"sk": "Medzitým cibuľu nakrájaj nadrobno a pažítku nasekaj. Ošúpané vajcia nastrúhaj na hrubom strúhadle alebo roztlač vidličkou.", "en": "Meanwhile finely chop the onion and snip the chives. Grate the peeled eggs on the coarse side of a grater or mash them with a fork."},
+      {"sk": "V mise zmiešaj vajcia s jogurtom, horčicou, cibuľou a pažítkou, osoľ a okoreň. Ochutnaj – horčica dodá nátierke jemnú pikantnosť.", "en": "Mix the eggs with the yoghurt, mustard, onion and chives in a bowl and season with the salt and pepper. Taste – the mustard gives it a tangy kick."},
+      {"sk": "Podávaj na chlebe, prípadne ozdobené pažítkou. V uzavretej nádobe vydrží v chladničke 2 dni.", "en": "Serve on bread, garnished with chives if you like. In a closed container it keeps in the fridge for 2 days."}
     ]
   },
   {
@@ -460,10 +480,12 @@
       {"id": "greek-yogurt", "amount": 100, "unit": "G", "role": "SECONDARY", "optional": true, "note": {"sk": "na podávanie", "en": "to serve"}}
     ],
     "steps": [
-      {"sk": "Cuketu nastrúhaj, posoľ a po 10 minútach z nej v utierke vytlač čo najviac vody.", "en": "Grate the zucchini, salt it and after 10 minutes squeeze out as much water as you can in a tea towel.", "timerSeconds": 600},
-      {"sk": "Zmiešaj ju s rozdrobenou fetou, vajcami, múkou, nakrájanou cibuľkou, kôprom a korením.", "en": "Mix with the crumbled feta, eggs, flour, sliced spring onion, dill and pepper."},
-      {"sk": "Na oleji opekaj lyžicou tvarované placky 3 minúty z každej strany dozlatista.", "en": "Fry spoonfuls of the mixture in the oil for 3 minutes per side until golden.", "timerSeconds": 180},
-      {"sk": "Nechaj odkvapkať a podávaj s jogurtom.", "en": "Drain and serve with yogurt."}
+      {"sk": "Cuketu nahrubo nastrúhaj, v sitku ju premiešaj so soľou a nechaj 10 minút postáť – soľ z nej vytiahne vodu.", "en": "Coarsely grate the courgettes, toss them with the salt in a sieve and leave for 10 minutes – the salt draws out the water.", "timerSeconds": 600},
+      {"sk": "Cuketu prelož do čistej utierky a nad drezom z nej pevne vytlač čo najviac vody – môže jej byť aj pol pohára. Mokrá cuketa by placky rozmočila a rozpadli by sa.", "en": "Tip the courgette into a clean tea towel and squeeze out as much water as you can over the sink – there may be half a glass. Wet courgette makes the fritters soggy and they fall apart."},
+      {"sk": "V mise zmiešaj cuketu s rozdrobenou fetou, vajcami, múkou, nakrájanou jarnou cibuľkou, nasekaným kôprom a korením. Cesto má byť husté a lepkavé.", "en": "In a bowl mix the courgette with the crumbled feta, eggs, flour, sliced spring onions, chopped dill and pepper. The batter should be thick and sticky."},
+      {"sk": "V širokej panvici rozohrej polovicu oleja na strednom ohni. Lyžicou do nej klaď kôpky cesta (asi 2 lyžice na placku) a zľahka ich splošti na hrúbku 1 cm.", "en": "Heat half the oil in a wide frying pan over medium heat. Drop in spoonfuls of the batter (about 2 tablespoons per fritter) and flatten them gently to about 1 cm thick."},
+      {"sk": "Opekaj 3 minúty z každej strany, kým nie sú zlatohnedé a pevné; obracaj ich opatrne obracačkou. Hotové prelož na papierovú utierku a pokračuj so zvyškom cesta a oleja.", "en": "Fry for 3 minutes on each side until golden brown and firm, turning them carefully with a spatula. Drain the finished fritters on kitchen paper and continue with the rest of the batter and oil.", "timerSeconds": 180},
+      {"sk": "Podávaj teplé s gréckym jogurtom. Zvyšky vydržia v chladničke 2 dni a dajú sa zohriať na suchej panvici.", "en": "Serve warm with the Greek yoghurt. Leftovers keep in the fridge for 2 days and reheat in a dry frying pan."}
     ]
   },
   {
@@ -485,10 +507,11 @@
       {"id": "sweet-paprika", "amount": 0.5, "unit": "TSP", "role": "SEASONING"}
     ],
     "steps": [
-      {"sk": "Rúru predhrej na 200 °C a plech vylož papierom na pečenie.", "en": "Preheat the oven to 200 °C and line a baking tray with parchment."},
-      {"sk": "Cesto rozvaľkaj, potri rozšľahaným vajcom a posyp polovicou syra, paprikou a rascou. Preklop napoly a jemne pritlač.", "en": "Unroll the pastry, brush with beaten egg and sprinkle with half the cheese, the paprika and caraway. Fold in half and press gently."},
-      {"sk": "Nakrájaj na prúžky široké 1,5 cm, každý niekoľkokrát skrúť, potri vajcom a posyp zvyšným syrom.", "en": "Cut into 1.5 cm strips, twist each a few times, brush with egg and sprinkle with the remaining cheese."},
-      {"sk": "Peč 12 až 15 minút do zlatista.", "en": "Bake for 12–15 minutes until golden.", "timerSeconds": 810}
+      {"sk": "Rúru predhrej na 200 °C (horný a spodný ohrev) a plech vylož papierom na pečenie. Syr nastrúhaj najemno a vajce rozšľahaj vidličkou. Lístkové cesto vyber z chladničky až teraz – teplé sa ťahá a zle sa s ním pracuje.", "en": "Preheat the oven to 200 °C (conventional) and line a baking tray with baking paper. Finely grate the cheese and beat the egg with a fork. Take the puff pastry out of the fridge only now – warm pastry stretches and is hard to work."},
+      {"sk": "Cesto rozbaľ a ak treba, zľahka ho rozvaľkaj na obdĺžnik hrubý asi 3 mm. Potri ho rozšľahaným vajcom, posyp polovicou syra, paprikou a rascou, preklop napoly a valčekom jemne pritlač, aby sa vrstvy spojili.", "en": "Unroll the pastry and, if needed, roll it lightly into a rectangle about 3 mm thick. Brush it with the beaten egg, sprinkle with half the cheese, the paprika and caraway, fold it in half and press gently with the rolling pin to stick the layers together."},
+      {"sk": "Ostrým nožom alebo kolieskom nakrájaj cesto na prúžky široké asi 1,5 cm. Každý prúžok uchop za oba konce a niekoľkokrát skrúť do špirály. Poukladaj ich na plech s medzerami a konce pritlač k papieru, aby sa pri pečení nerozkrútili.", "en": "Cut the pastry into strips about 1.5 cm wide with a sharp knife or pizza wheel. Hold each strip by both ends and twist it several times into a spiral. Lay them on the tray with gaps and press the ends onto the paper so they do not untwist in the oven."},
+      {"sk": "Tyčinky potri zvyšným vajcom a posyp zvyšným syrom. Peč 12 až 15 minút, kým nie sú nafúknuté a zlatohnedé – vrstvy musia byť prepečené, inak budú vnútri mazľavé.", "en": "Brush the twists with the remaining egg and sprinkle with the rest of the cheese. Bake for 12 to 15 minutes until puffed and golden brown – the layers must be cooked through or they stay doughy inside.", "timerSeconds": 810},
+      {"sk": "Nechaj ich 5 minút vychladnúť na plechu, kým stuhnú. Najlepšie sú v deň pečenia; v uzavretej nádobe vydržia 2 dni a po krátkom zohriatí v rúre sú znova chrumkavé.", "en": "Let them cool on the tray for 5 minutes to firm up. They are best on the day; they keep for 2 days in a closed container and crisp up again after a few minutes in the oven."}
     ]
   },
   {
@@ -510,8 +533,10 @@
       {"id": "honey", "amount": 2, "unit": "TSP", "role": "SEASONING"}
     ],
     "steps": [
-      {"sk": "Mango ošúp a nakrájaj dužinu.", "en": "Peel the mango and cut up the flesh."},
-      {"sk": "Rozmixuj s jogurtom, mliekom a medom dohladka a podávaj vychladené.", "en": "Blend with the yogurt, milk and honey until smooth and serve chilled.", "timerSeconds": 30}
+      {"sk": "Mango ošúp škrabkou a dužinu odkroj od plochej kôstky v strede; zvyšky okolo kôstky zoškrab nožom. Nakrájaj ju na kúsky – zrelé mango je mäkké a voňavé.", "en": "Peel the mango with a peeler and cut the flesh away from the flat stone in the middle, scraping off what is left around the stone with a knife. Cut it into pieces – a ripe mango is soft and fragrant."},
+      {"sk": "Do mixéra daj mango, jogurt, mlieko a med a mixuj asi 30 sekúnd, kým nie je lassi úplne hladké a penisté.", "en": "Put the mango, yoghurt, milk and honey in the blender and blend for about 30 seconds until completely smooth and frothy.", "timerSeconds": 30},
+      {"sk": "Ochutnaj – ak mango nebolo dosť sladké, pridaj kvapku medu. Ak je lassi príliš husté, zrieď ho studenou vodou.", "en": "Taste – if the mango was not sweet enough, add a drop more honey. If the lassi is too thick, thin it with cold water."},
+      {"sk": "Podávaj vychladené, napríklad s kockami ľadu. V chladničke vydrží do druhého dňa; pred podávaním ho premiešaj.", "en": "Serve chilled, with ice cubes if you like. It keeps in the fridge until the next day; stir before serving."}
     ]
   }
 ]

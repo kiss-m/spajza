@@ -132,6 +132,35 @@ class SeedContentTest {
         assertTrue(catalog.ingredients.count { it.isDefaultStaple } >= 5, "expected at least 5 default staples")
     }
 
+    @Test
+    fun `steps are detailed enough to cook from`() {
+        assertNoProblems(
+            catalog.recipes.mapNotNull { recipe ->
+                val averageSk = recipe.steps.sumOf { it.text.sk.length } / recipe.steps.size
+                val problems = listOfNotNull(
+                    "${recipe.steps.size} steps < $MIN_STEPS".takeIf { recipe.steps.size < MIN_STEPS },
+                    "average step $averageSk chars < $MIN_AVERAGE_STEP_CHARS".takeIf { averageSk < MIN_AVERAGE_STEP_CHARS },
+                )
+                problems.takeIf { it.isNotEmpty() }?.let { "${recipe.id}: ${it.joinToString()}" }
+            },
+        )
+    }
+
+    @Test
+    fun `slovak steps use the singular imperative`() {
+        assertNoProblems(
+            catalog.recipes.flatMap { recipe ->
+                recipe.steps.flatMap { step ->
+                    PLURAL_IMPERATIVE.findAll(step.text.sk)
+                        .map { it.value }
+                        .filter { it.lowercase() !in NOT_PLURAL_IMPERATIVES }
+                        .map { "${recipe.id} step ${step.index + 1}: '$it'" }
+                        .toList()
+                }
+            },
+        )
+    }
+
     private fun assertNoProblems(problems: List<String>) {
         if (problems.isNotEmpty()) {
             fail("${problems.size} problem(s):\n" + problems.take(100).joinToString("\n") { "  - $it" })
@@ -159,5 +188,15 @@ class SeedContentTest {
         val ALCOHOLIC = setOf("white-wine", "red-wine", "beer", "rum")
 
         val SEAFOOD_ALLERGENS = setOf(Allergen.FISH, Allergen.CRUSTACEANS, Allergen.MOLLUSCS)
+
+        /** Even a smoothie gets prep, method, a doneness or texture cue and serving. */
+        const val MIN_STEPS = 4
+        const val MIN_AVERAGE_STEP_CHARS = 100
+
+        /** Plural (vykanie) imperative endings such as "pridajte" or "nakrájajte"; (?U) makes \w cover diacritics. */
+        val PLURAL_IMPERATIVE = Regex("""(?U)\b\w+(ajte|ejte|ujte|ijte|ite|ete|ľte|šte|čte|ďte|ňte|ťte|žte|ste)\b""", RegexOption.IGNORE_CASE)
+
+        /** Ordinary words that happen to end like a plural imperative. */
+        val NOT_PLURAL_IMPERATIVES = setOf("vopred", "ešte", "mieste", "nepretržite", "pite")
     }
 }

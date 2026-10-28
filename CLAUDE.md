@@ -93,7 +93,9 @@ Spark plan only: no Cloud Functions, no Cloud Storage. Package `sk.matej.spajza`
   `ratio` multiplies the grams.
 - Recipes: original, bilingual, realistic amounts, doneness cues for meat and fish, salt amounts that are
   eaten are written out (`TO_TASTE` only for pasta water and similar), optional lines don't count toward
-  nutrition. Steps use the singular imperative in Slovak.
+  nutrition. Steps use the singular imperative in Slovak and are detailed enough to cook from without
+  experience: cut sizes, vessel and heat level, times, sensory and doneness cues, mistakes to avoid, serving
+  and storage for meal prep, timers on waiting steps (at least 4 steps, ~150–250 characters each; content test).
 
 ## Commands
 - `./gradlew test` — all unit tests (domain, seed content tests and, with the Android SDK, `:app`)

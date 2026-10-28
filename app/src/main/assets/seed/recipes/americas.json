@@ -29,11 +29,13 @@
       {"id": "sour-cream", "amount": 120, "unit": "G", "role": "SECONDARY", "optional": true, "note": {"sk": "na podávanie", "en": "to serve"}}
     ],
     "steps": [
-      {"sk": "Na oleji speň nakrájanú cibuľu a papriku, asi 6 minút. Pridaj cesnak.", "en": "Soften the chopped onions and pepper in the oil for about 6 minutes. Add the garlic.", "timerSeconds": 360},
-      {"sk": "Pridaj mäso a opekaj ho, kým nie je nikde ružové, asi 8 minút. Vmiešaj pretlak a všetko korenie a minútu opekaj.", "en": "Add the beef and brown until no pink remains, about 8 minutes. Stir in the tomato paste and all the spices and fry for a minute.", "timerSeconds": 480},
-      {"sk": "Prilej paradajky a 200 ml vody, osoľ a var prikryté 30 minút.", "en": "Add the tomatoes and 200 ml water, season with salt and simmer covered for 30 minutes.", "timerSeconds": 1800},
-      {"sk": "Pridaj prepláchnutú fazuľu a var ešte 10 minút. Medzitým uvar ryžu.", "en": "Add the rinsed beans and simmer for 10 more minutes. Meanwhile, cook the rice.", "timerSeconds": 600},
-      {"sk": "Podávaj s ryžou a lyžicou kyslej smotany. V mrazničke vydrží 3 mesiace.", "en": "Serve with rice and a spoonful of sour cream. Freezes well for 3 months."}
+      {"sk": "Cibule nakrájaj nadrobno, papriku zbav semienok a nakrájaj na kocky asi 1 cm a cesnak nasekaj. Vo veľkom hrnci s hrubým dnom zohrej olej na strednom ohni a cibuľu s paprikou opekaj asi 6 minút, kým nezmäknú. Pridaj cesnak a miešaj ešte pol minúty.", "en": "Finely chop the onions, seed the pepper and cut it into roughly 1 cm dice, and chop the garlic. Heat the oil in a large heavy-based pan over medium heat and cook the onions and pepper for about 6 minutes until soft. Add the garlic and stir for another half minute.", "timerSeconds": 360},
+      {"sk": "Zvýš oheň, pridaj mäso a varechou ho rozbíjaj na drobné kúsky. Opekaj asi 8 minút, kým nie je nikde ružové a na dne sa netvoria hnedé zvyšky – tie dodajú chili hlbokú chuť. Ak mäso pustí veľa vody, nechaj ju odpariť.", "en": "Turn up the heat, add the beef and break it into small crumbs with a wooden spoon. Cook for about 8 minutes until no pink remains and brown bits form on the bottom – they give the chilli its depth. If the meat releases a lot of water, let it evaporate.", "timerSeconds": 480},
+      {"sk": "Vmiešaj pretlak, rímsky kmín, papriku, čili a oregano a za stáleho miešania opekaj minútu, kým korenie nezavonia. Mleté čili býva rôzne pálivé – ak nevieš, aké je, daj najprv polovicu a zvyšok pridaj na konci podľa chuti.", "en": "Stir in the tomato paste, cumin, paprika, chilli and oregano and cook, stirring, for a minute until fragrant. Ground chilli varies in heat – if you are unsure of yours, add half now and the rest at the end to taste."},
+      {"sk": "Prilej paradajky a 200 ml vody, osoľ, vyškrab dno a priveď do varu. Zníž oheň na minimum, prikry a mierne var 30 minút; občas premiešaj, aby sa nepripálilo.", "en": "Add the tomatoes and 200 ml of water, season with the salt, scrape the bottom of the pan and bring to the boil. Turn the heat to the lowest setting, cover and simmer gently for 30 minutes, stirring now and then so it does not catch.", "timerSeconds": 1800},
+      {"sk": "Ryžu prepláchni v sitku, kým voda nie je číra, a v hrnci ju zalej 450 ml vody. Priveď do varu, prikry, zníž oheň na minimum a var 12 minút; potom ju nechaj 10 minút postáť pod pokrievkou.", "en": "Rinse the rice in a sieve until the water runs clear and put it in a pan with 450 ml of water. Bring to the boil, cover, turn the heat to the lowest setting and cook for 12 minutes; then let it stand, covered, for 10 minutes.", "timerSeconds": 720},
+      {"sk": "Fazuľu sceď, prepláchni a pridaj do chili. Var odokryté ešte 10 minút, kým omáčka nezhustne tak, že sa drží na lyžici. Ochutnaj a podľa chuti pridaj zvyšné čili.", "en": "Drain and rinse the beans and add them to the chilli. Simmer uncovered for another 10 minutes until the sauce is thick enough to coat a spoon. Taste and add the rest of the chilli if you like.", "timerSeconds": 600},
+      {"sk": "Podávaj s ryžou a lyžicou kyslej smotany. Chili je na druhý deň ešte lepšie; v chladničke vydrží 4 dni a v mrazničke 3 mesiace (bez ryže).", "en": "Serve with the rice and a spoonful of sour cream. Chilli is even better the next day; it keeps for 4 days in the fridge and 3 months in the freezer (without the rice)."}
     ]
   },
   {
@@ -62,11 +64,12 @@
       {"id": "sour-cream", "amount": 100, "unit": "G", "role": "SECONDARY", "optional": true, "note": {"sk": "na podávanie", "en": "to serve"}}
     ],
     "steps": [
-      {"sk": "Mäso nakrájaj na drobné kúsky, okoreň rímskym kmínom, paprikou a soľou a na oleji opekaj 6 až 7 minút, kým nie je prepečené a bez ružovej farby.", "en": "Cut the chicken into small pieces, season with cumin, paprika and salt and fry in the oil for 6–7 minutes until cooked through with no pink left.", "timerSeconds": 390},
-      {"sk": "Pridaj nakrájanú papriku a cibuľu a opekaj ešte 3 minúty. Vmiešaj kukuricu.", "en": "Add the chopped pepper and onion and fry for 3 more minutes. Stir in the corn.", "timerSeconds": 180},
-      {"sk": "Na polovicu každej tortilly daj strúhaný syr a plnku a druhú polovicu preklop.", "en": "Put grated cheese and filling on one half of each tortilla and fold over the other half."},
-      {"sk": "Opekaj na suchej panvici 2 minúty z každej strany, kým tortilla nie je chrumkavá a syr sa neroztopí.", "en": "Toast in a dry pan for 2 minutes per side until the tortilla is crisp and the cheese has melted.", "timerSeconds": 120},
-      {"sk": "Nakrájaj na trojuholníky a podávaj s kyslou smotanou.", "en": "Cut into wedges and serve with sour cream."}
+      {"sk": "Kuracie prsia nakrájaj na drobné kúsky asi 1 cm, papriku a cibuľu na tenké prúžky. Čedar nahrubo nastrúhaj a kukuricu sceď a nechaj dobre odkvapkať – mokrá plnka by tortillu rozmočila.", "en": "Cut the chicken into small pieces of about 1 cm and slice the pepper and onion into thin strips. Coarsely grate the cheddar and drain the sweetcorn well – a wet filling makes the tortillas soggy."},
+      {"sk": "Mäso posyp rímskym kmínom, paprikou a soľou. Na panvici zohrej olej na stredne vysokom ohni a mäso opekaj 6 až 7 minút za občasného miešania, kým nie je zlaté a po prekrojení biele, bez ružovej farby.", "en": "Sprinkle the chicken with the cumin, paprika and salt. Heat the oil in a frying pan over medium-high heat and cook the chicken for 6 to 7 minutes, stirring now and then, until golden and white inside with no pink when cut.", "timerSeconds": 390},
+      {"sk": "Pridaj papriku a cibuľu a opekaj ešte 3 minúty, kým nezmäknú, ale stále trochu chrumkajú. Vmiešaj kukuricu, plnku prelož do misky a panvicu utri papierovou utierkou.", "en": "Add the pepper and onion and cook for 3 minutes more until softened but still with some crunch. Stir in the sweetcorn, tip the filling into a bowl and wipe the pan with kitchen paper.", "timerSeconds": 180},
+      {"sk": "Na polovicu každej tortilly nasyp trochu syra, naň plnku a navrch ďalší syr – syr na oboch stranách drží plnku pokope. Druhú polovicu tortilly preklop a zľahka pritlač.", "en": "Scatter a little cheese over one half of each tortilla, add the filling and top with more cheese – cheese on both sides holds the filling together. Fold over the other half and press lightly."},
+      {"sk": "Quesadilly opekaj na suchej panvici na strednom ohni po dvoch, 2 minúty z každej strany, kým tortilla nie je zlatistá a chrumkavá a syr sa neroztopí. Pri obracaní si pomôž širokou obracačkou.", "en": "Cook the quesadillas two at a time in the dry pan over medium heat for 2 minutes on each side until the tortillas are golden and crisp and the cheese has melted. Use a wide spatula to turn them.", "timerSeconds": 120},
+      {"sk": "Nechaj ich minútu postáť, aby syr nevytiekol, nakrájaj na trojuholníky a podávaj hneď s kyslou smotanou.", "en": "Let them stand for a minute so the cheese does not run out, cut into triangles and serve at once with sour cream."}
     ]
   },
   {
@@ -97,10 +100,12 @@
       {"id": "coriander-leaves", "amount": 2, "unit": "TBSP", "role": "SEASONING", "optional": true}
     ],
     "steps": [
-      {"sk": "Uvar ryžu podľa návodu a vmiešaj do nej polovicu limetkovej šťavy.", "en": "Cook the rice according to the packet and stir in half the lime juice."},
-      {"sk": "Na oleji minútu opekaj cesnak s rímskym kmínom a paprikou, pridaj prepláchnutú fazuľu, 4 lyžice vody a polovicu soli a var 5 minút.", "en": "Fry the garlic with the cumin and paprika in the oil for a minute, add the rinsed beans, 4 tablespoons of water and half the salt and simmer for 5 minutes.", "timerSeconds": 300},
-      {"sk": "Salsa: paradajky a cibuľu nakrájaj nadrobno a zmiešaj s kukuricou, zvyšnou limetkovou šťavou, soľou a koriandrom.", "en": "Salsa: finely chop the tomatoes and onion and mix with the corn, remaining lime juice, salt and coriander."},
-      {"sk": "Do misiek daj ryžu, fazuľu a salsu a navrch plátky avokáda.", "en": "Fill bowls with rice, beans and salsa and top with sliced avocado."}
+      {"sk": "Ryžu prepláchni v sitku, kým voda nie je číra, a v hrnci ju zalej 300 ml vody so štvrť lyžičkou soli. Priveď do varu, prikry, zníž oheň na minimum a var 12 minút; potom ju nechaj 10 minút postáť pod pokrievkou.", "en": "Rinse the rice in a sieve until the water runs clear and put it in a pan with 300 ml of water and a quarter teaspoon of the salt. Bring to the boil, cover, turn the heat to the lowest setting and cook for 12 minutes; then let it stand, covered, for 10 minutes.", "timerSeconds": 720},
+      {"sk": "Do uvarenej ryže vmiešaj polovicu limetkovej šťavy. Cesnak nasekaj. V menšom hrnci zohrej olej na strednom ohni a cesnak s rímskym kmínom a paprikou opekaj asi minútu, kým nezavoňajú – korenie nenechaj stmavnúť.", "en": "Stir half the lime juice into the cooked rice. Chop the garlic. Heat the oil in a small pan over medium heat and cook the garlic with the cumin and paprika for about a minute until fragrant – do not let the spices darken."},
+      {"sk": "Fazuľu sceď, prepláchni a pridaj do hrnca so 4 lyžicami vody a polovicou soli. Var 5 minút, občas premiešaj a niekoľko fazúľ roztlač varechou, aby vznikla krémová omáčka.", "en": "Drain and rinse the beans and add them to the pan with 4 tablespoons of water and half the salt. Simmer for 5 minutes, stirring occasionally and crushing a few beans with the spoon to make a creamy sauce.", "timerSeconds": 300},
+      {"sk": "Salsa: paradajky a cibuľu nakrájaj nadrobno, kukuricu sceď a všetko zmiešaj so zvyšnou limetkovou šťavou, zvyšnou soľou a nasekaným koriandrom.", "en": "Salsa: finely chop the tomatoes and onion, drain the sweetcorn and mix everything with the remaining lime juice, the remaining salt and the chopped coriander."},
+      {"sk": "Avokádo rozkroj, vyber kôstku, dužinu vyber lyžicou a nakrájaj na plátky. Krájaj ho až tesne pred podávaním, inak zhnedne.", "en": "Halve the avocado, remove the stone, scoop out the flesh with a spoon and slice it. Cut it just before serving or it turns brown."},
+      {"sk": "Do misiek daj ryžu, vedľa fazuľu a salsu a navrch plátky avokáda. Na meal prep ulož ryžu, fazuľu a salsu do krabičiek a avokádo pridaj až pri jedle; v chladničke vydrží 3 dni.", "en": "Put the rice in bowls with the beans and salsa beside it and the avocado slices on top. For meal prep, pack the rice, beans and salsa in containers and add the avocado when eating; it keeps in the fridge for 3 days."}
     ]
   },
   {
@@ -130,11 +135,12 @@
       {"id": "sunflower-oil", "amount": 1, "unit": "TBSP", "role": "SEASONING"}
     ],
     "steps": [
-      {"sk": "Mäso rozdeľ na 4 časti a vytvaruj placky o niečo širšie ako žemle. Do stredu každej urob palcom jamku, aby sa pri pečení nevydula.", "en": "Divide the beef into 4 and shape patties slightly wider than the buns. Press a dimple into the centre of each so they stay flat while cooking."},
-      {"sk": "Placky osoľ a okoreň z oboch strán až tesne pred pečením.", "en": "Season both sides with salt and pepper just before cooking."},
-      {"sk": "Na rozpálenej panvici s olejom ich opekaj 4 minúty z každej strany. Mleté mäso má byť prepečené, vnútri bez ružovej farby (71 °C).", "en": "Fry in a hot oiled pan for 4 minutes per side. Ground beef should be cooked through, with no pink inside (71 °C).", "timerSeconds": 480},
-      {"sk": "Poslednú minútu polož na každú placku plátok syra a prikry, aby sa roztopil. Žemle rozkroj a reznou stranou opeč.", "en": "For the last minute, put a slice of cheese on each patty and cover so it melts. Halve the buns and toast them cut side down.", "timerSeconds": 60},
-      {"sk": "Žemle natri kečupom a horčicou a poskladaj burgery so šalátom, paradajkou, cibuľou a uhorkami.", "en": "Spread the buns with ketchup and mustard and build the burgers with lettuce, tomato, onion and pickles."}
+      {"sk": "Najprv priprav obloženie, pri pečení naň nebude čas: šalát umy a osuš, paradajku nakrájaj na plátky, cibuľu na tenké krúžky a uhorky na plátky.", "en": "Prepare the toppings first – there is no time once the burgers are cooking: wash and dry the lettuce, slice the tomato, cut the onion into thin rings and slice the pickles."},
+      {"sk": "Mäso rozdeľ na 4 rovnaké časti (po 125 g) a zľahka vytvaruj placky hrubé asi 2 cm a o niečo širšie ako žemle – pri pečení sa zmrštia. Mäso dlho nemies, stlačené je potom tuhé. Do stredu každej placky urob palcom plytkú jamku, aby sa nevydula.", "en": "Divide the beef into 4 equal portions (125 g each) and gently shape patties about 2 cm thick and slightly wider than the buns – they shrink as they cook. Do not work the meat for long; compressed meat turns tough. Press a shallow dimple into the centre of each with your thumb so it does not puff up."},
+      {"sk": "Placky osoľ a okoreň z oboch strán až tesne pred pečením – soľ pridaná vopred by z mäsa vytiahla šťavu. Veľkú panvicu (najlepšie liatinovú) rozpáľ s olejom na vysokom ohni, kým olej nezačne jemne dymiť.", "en": "Season the patties with salt and pepper on both sides just before cooking – salt added earlier draws out the juices. Heat a large frying pan (ideally cast iron) with the oil over high heat until the oil just starts to smoke."},
+      {"sk": "Placky polož na panvicu a 4 minúty nimi nehýb ani ich nestláčaj, aby sa vytvorila kôrka. Potom ich obráť a opekaj ďalšie 4 minúty. Mleté mäso má byť prepečené – vnútri bez ružovej farby, 71 °C.", "en": "Put the patties in the pan and leave them untouched for 4 minutes without pressing so a crust forms. Then turn them and cook for another 4 minutes. Minced beef must be cooked through – no pink inside, 71 °C.", "timerSeconds": 480},
+      {"sk": "Poslednú minútu polož na každú placku plátok syra, prilej do panvice lyžicu vody a prikry, aby sa syr v pare roztopil. Mäso presuň na tanier.", "en": "For the last minute lay a slice of cheese on each patty, add a spoonful of water to the pan and cover so the steam melts the cheese. Move the burgers to a plate.", "timerSeconds": 60},
+      {"sk": "Žemle rozkroj a reznou stranou ich asi minútu opeč na panvici vo výpeku – nezmoknú od šťavy. Spodok natri kečupom, vrch horčicou a poskladaj burgery: šalát, placka so syrom, paradajka, cibuľa a uhorky. Podávaj hneď.", "en": "Split the buns and toast them cut side down in the pan juices for about a minute – this keeps them from going soggy. Spread the bottoms with ketchup and the tops with mustard and build the burgers: lettuce, cheeseburger patty, tomato, onion and pickles. Serve at once."}
     ]
   },
   {
@@ -158,9 +164,10 @@
       {"id": "cinnamon", "amount": 1, "unit": "PINCH", "role": "SEASONING", "optional": true}
     ],
     "steps": [
-      {"sk": "V pohári alebo krabičke zmiešaj vločky, mlieko, jogurt, chia semienka, med a škoricu.", "en": "Mix the oats, milk, yogurt, chia seeds, honey and cinnamon in a jar or container."},
-      {"sk": "Zatvor a nechaj v chladničke aspoň 8 hodín alebo cez noc.", "en": "Close and refrigerate for at least 8 hours or overnight."},
-      {"sk": "Ráno premiešaj, podľa potreby zrieď lyžicou mlieka a navrch pridaj čučoriedky.", "en": "In the morning, stir, loosen with a spoonful of milk if needed and top with the blueberries."}
+      {"sk": "Do pohára alebo krabičky s viečkom (asi 400 ml) nasyp vločky, chia semienka a škoricu a premiešaj ich nasucho – chia sa potom nezlepí do hrudiek.", "en": "Put the oats, chia seeds and cinnamon in a jar or lidded container (about 400 ml) and stir them while dry – this keeps the chia from clumping later."},
+      {"sk": "Pridaj mlieko, jogurt a med a dôkladne premiešaj, kým nie je zmes rovnomerná a na dne nezostali suché vločky. Teraz je zmes riedka – vločky a chia cez noc nasajú tekutinu.", "en": "Add the milk, yoghurt and honey and stir thoroughly until even, with no dry oats left at the bottom. It is runny now – the oats and chia soak up the liquid overnight."},
+      {"sk": "Zatvor a daj do chladničky aspoň na 8 hodín alebo cez noc. Ak máš čas, po 10 minútach to ešte raz premiešaj, aby sa chia rovnomerne rozptýlila.", "en": "Close the lid and refrigerate for at least 8 hours or overnight. If you have time, stir once more after 10 minutes so the chia spreads evenly."},
+      {"sk": "Ráno premiešaj a ak je kaša príliš hustá, zrieď ju lyžicou mlieka. Navrch pridaj čučoriedky – mrazené môžeš dať navrch už večer, do rána sa rozmrazia. Jedz studené; v chladničke vydržia 2 dni, takže si ich môžeš pripraviť viac naraz.", "en": "In the morning stir and, if too thick, loosen with a spoonful of milk. Top with the blueberries – frozen ones can go on the night before and thaw by morning. Eat cold; they keep for 2 days in the fridge, so you can make several at once."}
     ]
   },
   {
@@ -185,9 +192,12 @@
       {"id": "honey", "amount": 1, "unit": "TSP", "role": "SEASONING", "optional": true}
     ],
     "steps": [
-      {"sk": "Vločky, vajcia, tvaroh, banán a prášok do pečiva rozmixuj na hladké cesto. Nechaj ho 5 minút odstáť.", "en": "Blend the oats, eggs, quark, banana and baking powder into a smooth batter. Let it rest for 5 minutes.", "timerSeconds": 300},
-      {"sk": "Panvicu jemne potri olejom a na miernom ohni na nej peč malé palacinky asi 2 minúty, kým sa na povrchu neurobia bublinky.", "en": "Lightly oil a pan and cook small pancakes over low heat for about 2 minutes, until bubbles appear on top.", "timerSeconds": 120},
-      {"sk": "Otoč ich a dopeč ešte minútu. Podávaj s ovocím a kvapkou medu.", "en": "Flip and cook for one more minute. Serve with fruit and a drizzle of honey.", "timerSeconds": 60}
+      {"sk": "Do mixéra daj vločky a rozmixuj ich najprv nasucho na hrubú múku. Pridaj vajcia, tvaroh, ošúpaný banán nalámaný na kúsky a prášok do pečiva a mixuj asi minútu na hladké, husté cesto bez hrudiek tvarohu.", "en": "Blend the oats in the blender on their own into a coarse flour first. Add the eggs, quark, the peeled banana broken into pieces and the baking powder and blend for about a minute into a smooth, thick batter with no lumps of quark."},
+      {"sk": "Cesto nechaj 5 minút odstáť – vločky napučia a palacinky budú lepšie držať tvar. Medzitým ovocie zohrej v hrnčeku alebo v mikrovlnke, kým nepustí šťavu.", "en": "Let the batter rest for 5 minutes – the oats swell and the pancakes hold their shape better. Meanwhile warm the berries in a small pan or the microwave until they release their juice.", "timerSeconds": 300},
+      {"sk": "Nepriľnavú panvicu zohrej na strednom až miernom ohni a papierovou utierkou ju potri tenkou vrstvou oleja. Cesto naberaj lyžicou a tvaruj malé placky s priemerom asi 8 cm, s medzerami medzi nimi.", "en": "Heat a non-stick frying pan over medium-low heat and wipe it with a thin film of oil using kitchen paper. Spoon in the batter to make small pancakes about 8 cm across, leaving gaps between them."},
+      {"sk": "Peč ich asi 2 minúty, kým sa na povrchu neurobia bublinky a okraje nezačnú matnieť. Pri silnom ohni by sa spálili skôr, ako sa prepečú vnútri – tvaroh a banán sa ľahko pripaľujú.", "en": "Cook for about 2 minutes until bubbles appear on the surface and the edges turn matt. Over high heat they burn before they cook through – quark and banana catch easily.", "timerSeconds": 120},
+      {"sk": "Opatrne ich obráť širokou obracačkou a peč ešte asi minútu, kým nie sú pružné na dotyk. Hotové drž v teple pod utierkou a pokračuj so zvyškom cesta.", "en": "Turn them carefully with a wide spatula and cook for about a minute more until springy to the touch. Keep the finished ones warm under a tea towel while you cook the rest of the batter.", "timerSeconds": 60},
+      {"sk": "Podávaj s teplým ovocím a kvapkou medu. Vychladnuté palacinky vydržia v chladničke 2 dni a dajú sa zohriať v hriankovači alebo na suchej panvici.", "en": "Serve with the warm berries and a drizzle of honey. Cooled pancakes keep in the fridge for 2 days and reheat in a toaster or a dry frying pan."}
     ]
   },
   {
@@ -221,10 +231,11 @@
       {"id": "lime", "amount": 1, "unit": "PCS", "role": "SEASONING", "optional": true}
     ],
     "steps": [
-      {"sk": "Na oleji speň nakrájanú cibuľu, pridaj mäso a opekaj, kým nie je nikde ružové, asi 8 minút.", "en": "Soften the chopped onion in the oil, add the beef and fry until no pink remains, about 8 minutes.", "timerSeconds": 480},
-      {"sk": "Pridaj cesnak, korenie, pretlak, soľ a 100 ml vody a povar 5 minút, kým zmes nezhustne.", "en": "Add the garlic, spices, tomato paste, salt and 100 ml water and simmer for 5 minutes until thick.", "timerSeconds": 300},
-      {"sk": "Tortilly zohrej na suchej panvici.", "en": "Warm the tortillas in a dry pan."},
-      {"sk": "Plň mäsom, nakrájaným šalátom a paradajkami, strúhaným syrom a kyslou smotanou. Podávaj s limetkou.", "en": "Fill with the beef, shredded lettuce, chopped tomatoes, grated cheese and sour cream. Serve with lime."}
+      {"sk": "Cibuľu nakrájaj nadrobno a cesnak nasekaj. Šalát nakrájaj na tenké pásiky, paradajky na malé kocky, syr nastrúhaj a limetku nakrájaj na mesiačiky – obloženie maj pripravené v miskách na stole.", "en": "Finely chop the onion and garlic. Shred the lettuce, dice the tomatoes, grate the cheese and cut the lime into wedges – have the toppings ready in bowls on the table."},
+      {"sk": "Vo veľkej panvici zohrej olej na strednom ohni a cibuľu opekaj 3 minúty, kým nezmäkne. Zvýš oheň, pridaj mäso a varechou ho rozbíjaj na drobné kúsky. Opekaj asi 8 minút, kým nie je nikde ružové a nezačne hnednúť.", "en": "Heat the oil in a large frying pan over medium heat and cook the onion for 3 minutes until soft. Turn up the heat, add the beef and break it into small crumbs with a wooden spoon. Cook for about 8 minutes until no pink remains and it starts to brown.", "timerSeconds": 480},
+      {"sk": "Pridaj cesnak, rímsky kmín, papriku, čili, oregano a pretlak a minútu miešaj. Potom prilej 100 ml vody, osoľ a povar 5 minút, kým sa tekutina neodparí a zmes nie je šťavnatá, ale nie mokrá.", "en": "Add the garlic, cumin, paprika, chilli, oregano and tomato paste and stir for a minute. Then pour in 100 ml of water, season with the salt and simmer for 5 minutes until the liquid has evaporated and the mixture is juicy but not wet.", "timerSeconds": 300},
+      {"sk": "Tortilly zohrej na suchej panvici na strednom ohni asi 30 sekúnd z každej strany, kým nie sú vláčne a miestami opečené. Teplé ich drž zabalené v utierke, aby nevyschli a pri plnení nepraskali.", "en": "Warm the tortillas in a dry pan over medium heat for about 30 seconds per side until pliable and lightly charred in spots. Keep them wrapped in a tea towel so they stay soft and do not crack when filled."},
+      {"sk": "Do každej tortilly daj lyžicu mäsa, šalát, paradajky, syr a kyslú smotanu, prelož ju na polovicu a jedz rukami, pokvapkanú limetkou. Zvyšné mäso vydrží v chladničke 3 dni.", "en": "Fill each tortilla with a spoonful of beef, lettuce, tomatoes, cheese and sour cream, fold it in half and eat with your hands, with a squeeze of lime. Leftover beef keeps in the fridge for 3 days."}
     ]
   },
   {
@@ -250,10 +261,12 @@
       {"id": "black-pepper", "amount": 0.25, "unit": "TSP", "role": "SEASONING"}
     ],
     "steps": [
-      {"sk": "Cestoviny uvar v osolenej vode o minútu kratšie, ako je na obale.", "en": "Cook the pasta in salted water for one minute less than the packet says."},
-      {"sk": "Na masle opraž múku 1 minútu, postupne vmiešaj mlieko a za stáleho miešania var 4 minúty, kým nezhustne.", "en": "Cook the flour in the butter for 1 minute, gradually whisk in the milk and simmer for 4 minutes, stirring, until thick.", "timerSeconds": 240},
-      {"sk": "Stiahni z ohňa, vmiešaj strúhaný čedar, horčicu, soľ a korenie, kým sa syr neroztopí.", "en": "Take off the heat and stir in the grated cheddar, mustard, salt and pepper until the cheese melts."},
-      {"sk": "Zmiešaj s cestovinami a hneď podávaj.", "en": "Toss with the pasta and serve right away."}
+      {"sk": "Vo veľkom hrnci priveď do varu asi 3 l osolenej vody. Kým sa voda zohrieva, čedar nahrubo nastrúhaj – strúhaný syr z vrecka býva posypaný škrobom a v omáčke sa horšie rozpúšťa.", "en": "Bring about 3 litres of salted water to the boil in a large pan. While it heats, coarsely grate the cheddar – ready-grated cheese is coated in starch and melts less smoothly."},
+      {"sk": "Cestoviny var o minútu kratšie, ako je uvedené na obale – v horúcej omáčke ešte zmäknú. Pred scedením si odlož hrnček vody z cestovín.", "en": "Cook the pasta for one minute less than the packet says – it softens further in the hot sauce. Before draining, save a mugful of the cooking water."},
+      {"sk": "Medzitým v inom hrnci roztop maslo na strednom ohni, vsyp múku a za stáleho miešania ju 1 minútu praž, kým sa nespení a nezavonia – nemá zhnednúť.", "en": "Meanwhile melt the butter in another pan over medium heat, add the flour and cook, stirring, for 1 minute until it foams and smells toasty – it should not brown."},
+      {"sk": "Po troškách prilievaj studené mlieko a stále miešaj metličkou, aby nevznikli hrudky. Var 4 minúty za stáleho miešania, kým omáčka nezhustne ako riedky puding a nepokrýva zadnú stranu lyžice.", "en": "Add the cold milk a little at a time, whisking constantly to prevent lumps. Simmer for 4 minutes, still whisking, until the sauce is as thick as a thin custard and coats the back of a spoon.", "timerSeconds": 240},
+      {"sk": "Hrniec stiahni z ohňa a po hrstiach vmiešaj čedar; každú dávku nechaj roztopiť, kým pridáš ďalšiu. Na ohni by sa syr zrazil a omáčka by bola zrnitá. Dochuť horčicou, soľou a korením.", "en": "Take the pan off the heat and stir in the cheddar a handful at a time, letting each melt before adding the next. Over the heat the cheese would split and turn grainy. Season with the mustard, salt and pepper."},
+      {"sk": "Scedené cestoviny vmiešaj do omáčky a ak je hustá, zrieď ju lyžicou-dvoma vody z cestovín. Podávaj hneď – omáčka postupne hustne. Zvyšok zohrej s trochou mlieka, aby bol znova krémový.", "en": "Stir the drained pasta into the sauce, loosening it with a spoonful or two of the pasta water if it is thick. Serve at once – the sauce thickens as it stands. Reheat leftovers with a splash of milk to make them creamy again."}
     ]
   },
   {
@@ -281,10 +294,12 @@
       {"id": "orange", "amount": 1, "unit": "PCS", "role": "SECONDARY", "note": {"sk": "na podávanie", "en": "to serve"}}
     ],
     "steps": [
-      {"sk": "V hrnci opeč slaninu a chorizo nakrájané na kúsky, asi 5 minút. Pridaj cibuľu a cesnak a opekaj ďalšie 3 minúty.", "en": "Fry the chopped bacon and chorizo in a pot for about 5 minutes. Add the onion and garlic and fry for 3 more minutes.", "timerSeconds": 480},
-      {"sk": "Pridaj fazuľu, rímsky kmín, bobkové listy, soľ a 400 ml vody a var 25 minút. Časť fazule roztlač, aby zhustla.", "en": "Add the beans, cumin, bay leaves, salt and 400 ml water and simmer for 25 minutes. Mash some of the beans to thicken.", "timerSeconds": 1500},
-      {"sk": "Medzitým uvar ryžu.", "en": "Meanwhile, cook the rice."},
-      {"sk": "Podávaj fazuľu s ryžou a plátkami pomaranča.", "en": "Serve the beans with the rice and orange slices."}
+      {"sk": "Slaninu nakrájaj na prúžky, chorizo na polkolieska hrubé asi 5 mm, cibuľu nadrobno a cesnak nasekaj. Fazuľu sceď a prepláchni.", "en": "Cut the bacon into strips and the chorizo into half-moons about 5 mm thick, finely chop the onion and chop the garlic. Drain and rinse the beans."},
+      {"sk": "Vo väčšom hrnci opekaj slaninu a chorizo na strednom ohni bez oleja asi 5 minút, kým nepustia tuk a slanina nie je chrumkavá. Pridaj cibuľu a cesnak a vo vypustenom tuku ich opekaj ďalšie 3 minúty, kým cibuľa nezmäkne.", "en": "Fry the bacon and chorizo in a large pan over medium heat without oil for about 5 minutes until they release their fat and the bacon is crisp. Add the onion and garlic and cook them in the rendered fat for 3 minutes more until the onion softens.", "timerSeconds": 480},
+      {"sk": "Pridaj fazuľu, rímsky kmín, bobkové listy, soľ a 400 ml vody, priveď do varu a mierne var 25 minút odokryté; občas premiešaj.", "en": "Add the beans, cumin, bay leaves, salt and 400 ml of water, bring to the boil and simmer gently, uncovered, for 25 minutes, stirring occasionally.", "timerSeconds": 1500},
+      {"sk": "Ryžu prepláchni v sitku, kým voda nie je číra, a v hrnci ju zalej 375 ml vody. Priveď do varu, prikry, zníž oheň na minimum a var 12 minút; potom ju nechaj 10 minút postáť pod pokrievkou.", "en": "Rinse the rice in a sieve until the water runs clear and put it in a pan with 375 ml of water. Bring to the boil, cover, turn the heat to the lowest setting and cook for 12 minutes; then let it stand, covered, for 10 minutes.", "timerSeconds": 720},
+      {"sk": "Asi pätinu fazule roztlač varechou o stenu hrnca – omáčka zhustne do krémova. Ak je príliš hustá, prilej trochu vody, ak je riedka, var ešte pár minút. Bobkové listy vyber.", "en": "Crush about a fifth of the beans against the side of the pan with the spoon – the sauce turns creamy. If it is too thick, add a little water; if too thin, simmer for a few more minutes. Remove the bay leaves."},
+      {"sk": "Pomaranč ošúp a nakrájaj na plátky – jeho sviežosť vyváži sýtu, údenú fazuľu. Podávaj fazuľu s ryžou a plátkami pomaranča. Fazuľa vydrží 4 dni v chladničke a 3 mesiace v mrazničke.", "en": "Peel the orange and slice it – its freshness balances the rich, smoky beans. Serve the beans with the rice and orange slices. The beans keep for 4 days in the fridge and 3 months in the freezer."}
     ]
   },
   {
@@ -313,9 +328,11 @@
       {"id": "sunflower-oil", "amount": 1, "unit": "TSP", "role": "SEASONING"}
     ],
     "steps": [
-      {"sk": "Mäso nakrájaj na prúžky, okoreň paprikou a soľou a na oleji opekaj 6 až 7 minút, kým nie je prepečené.", "en": "Cut the chicken into strips, season with paprika and salt and fry in the oil for 6–7 minutes until cooked through.", "timerSeconds": 390},
-      {"sk": "Dresing: jogurt zmiešaj s prelisovaným cesnakom a citrónovou šťavou.", "en": "Dressing: mix the yogurt with the crushed garlic and lemon juice."},
-      {"sk": "Tortilly krátko zohrej, natri dresingom, pridaj šalát, nakrájanú zeleninu a mäso a pevne zroluj.", "en": "Warm the tortillas briefly, spread with the dressing, add lettuce, sliced vegetables and chicken and roll up tightly."}
+      {"sk": "Kuracie prsia nakrájaj na prúžky asi 1 cm, posyp ich paprikou a soľou (štipku si odlož do dresingu) a premiešaj.", "en": "Cut the chicken into strips about 1 cm wide, sprinkle with the paprika and salt (keep a pinch for the dressing) and toss."},
+      {"sk": "Na panvici zohrej olej na stredne vysokom ohni a mäso opekaj 6 až 7 minút, občas ho obráť, kým nie je zo všetkých strán zlaté a po prekrojení biele až do stredu. Nechaj ho trochu vychladnúť, aby wrap nezmäkol.", "en": "Heat the oil in a frying pan over medium-high heat and cook the chicken for 6 to 7 minutes, turning occasionally, until golden on all sides and white right through when cut. Let it cool a little so the wrap does not go soggy.", "timerSeconds": 390},
+      {"sk": "Dresing: jogurt zmiešaj s pretlačeným cesnakom, citrónovou šťavou a štipkou soli. Šalát natrhaj, paradajku a uhorku nakrájaj na tenké plátky alebo prúžky.", "en": "Dressing: mix the yoghurt with the crushed garlic, lemon juice and a pinch of salt. Tear the lettuce and slice the tomato and cucumber thinly or into strips."},
+      {"sk": "Tortilly zohrej 20 sekúnd na suchej panvici, aby boli vláčne a pri rolovaní nepraskli. Natri ich dresingom, nechaj 3 cm voľný okraj a do stredu poukladaj šalát, zeleninu a mäso.", "en": "Warm the tortillas in a dry pan for 20 seconds so they are pliable and do not crack when rolled. Spread them with the dressing, leaving a 3 cm border, and lay the lettuce, vegetables and chicken down the middle."},
+      {"sk": "Spodný okraj preklop cez plnku, zahni boky dovnútra a pevne zroluj. Prekroj wrap šikmo na polovicu a podávaj. Na meal prep ho zabaľ do papiera na pečenie alebo fólie; v chladničke vydrží do druhého dňa.", "en": "Fold the bottom edge over the filling, tuck in the sides and roll up tightly. Cut in half on the diagonal and serve. For meal prep, wrap in baking paper or foil; it keeps in the fridge until the next day."}
     ]
   },
   {
@@ -346,11 +363,13 @@
       {"id": "sour-cream", "amount": 100, "unit": "G", "role": "SECONDARY", "optional": true, "note": {"sk": "na podávanie", "en": "to serve"}}
     ],
     "steps": [
-      {"sk": "Mäso var v osolenej vode 15 minút, kým nie je vnútri biele, a natrhaj ho vidličkami.", "en": "Poach the chicken in salted water for 15 minutes until white inside, then shred it with forks.", "timerSeconds": 900},
-      {"sk": "Omáčka: na oleji speň cibuľu s cesnakom a korením, prilej passatu a var 5 minút.", "en": "Sauce: soften the onion with the garlic and spices in the oil, add the passata and simmer for 5 minutes.", "timerSeconds": 300},
-      {"sk": "Rúru predhrej na 200 °C. Mäso zmiešaj s fazuľou a tretinou omáčky.", "en": "Preheat the oven to 200 °C. Mix the chicken with the beans and a third of the sauce."},
-      {"sk": "Tortilly naplň, zroluj a poukladaj do misy. Zalej zvyšnou omáčkou, posyp syrom a peč 20 minút.", "en": "Fill and roll the tortillas and lay them in a dish. Pour over the remaining sauce, sprinkle with cheese and bake for 20 minutes.", "timerSeconds": 1200},
-      {"sk": "Podávaj s kyslou smotanou.", "en": "Serve with sour cream."}
+      {"sk": "Kuracie prsia vlož do hrnca, zalej studenou vodou tak, aby boli ponorené, a pridaj polovicu soli. Priveď do varu, zníž oheň a mierne var 15 minút, kým mäso nie je vnútri biele (74 °C). Vyber ho a nechaj trochu vychladnúť.", "en": "Put the chicken in a pan, cover with cold water and add half the salt. Bring to the boil, lower the heat and simmer gently for 15 minutes until white inside (74 °C). Lift it out and let it cool a little.", "timerSeconds": 900},
+      {"sk": "Medzitým priprav omáčku: cibuľu nakrájaj nadrobno a cesnak nasekaj. V hrnci zohrej olej na strednom ohni a cibuľu opekaj 4 minúty, kým nezmäkne. Pridaj cesnak, rímsky kmín, čili a oregano a minútu miešaj, kým nezavoňajú.", "en": "Meanwhile make the sauce: finely chop the onion and the garlic. Heat the oil in a pan over medium heat and cook the onion for 4 minutes until soft. Add the garlic, cumin, chilli and oregano and stir for a minute until fragrant."},
+      {"sk": "Prilej passatu, pridaj zvyšnú soľ a var 5 minút, kým omáčka mierne nezhustne. Rúru predhrej na 200 °C (horný a spodný ohrev).", "en": "Pour in the passata, add the remaining salt and simmer for 5 minutes until slightly thickened. Preheat the oven to 200 °C (conventional).", "timerSeconds": 300},
+      {"sk": "Mäso natrhaj dvoma vidličkami na tenké vlákna a v mise ho zmiešaj s prepláchnutou fazuľou a tretinou omáčky. Syr nastrúhaj.", "en": "Shred the chicken finely with two forks and mix it in a bowl with the rinsed beans and a third of the sauce. Grate the cheese."},
+      {"sk": "Na dno zapekacej misy (asi 30 × 20 cm) rozotri tenkú vrstvu omáčky, aby sa tortilly neprilepili. Na každú tortillu daj pruh plnky, pevne ju zroluj a polož do misy spojom nadol, jednu tesne vedľa druhej.", "en": "Spread a thin layer of sauce over the bottom of a baking dish (about 30 × 20 cm) so the tortillas do not stick. Put a line of filling on each tortilla, roll it up tightly and lay it seam side down in the dish, packed closely together."},
+      {"sk": "Zalej zvyšnou omáčkou – aj okraje tortíl, inak by vyschli a stvrdli – a posyp syrom. Peč 20 minút, kým syr nie je roztopený a zlatistý a omáčka na okrajoch nebublá.", "en": "Pour over the rest of the sauce, covering the tortilla edges too or they dry out and harden, and sprinkle with the cheese. Bake for 20 minutes until the cheese is melted and golden and the sauce bubbles at the edges.", "timerSeconds": 1200},
+      {"sk": "Nechaj 5 minút postáť a podávaj s kyslou smotanou. Vydrží 3 dni v chladničke; zamraziť sa dá upečené aj neupečené (bez smotany).", "en": "Let it stand for 5 minutes and serve with sour cream. It keeps for 3 days in the fridge and can be frozen baked or unbaked (without the sour cream)."}
     ]
   },
   {
@@ -380,9 +399,11 @@
       {"id": "coriander-leaves", "amount": 2, "unit": "TBSP", "role": "SEASONING", "optional": true}
     ],
     "steps": [
-      {"sk": "Na oleji speň nakrájanú cibuľu a papriku, pridaj cesnak a korenie a minútu opekaj.", "en": "Soften the chopped onion and pepper in the oil, add the garlic and spices and fry for a minute."},
-      {"sk": "Pridaj paradajky, fazuľu, kukuricu, bujón a 700 ml vody a var 20 minút.", "en": "Add the tomatoes, beans, corn, stock cube and 700 ml water and simmer for 20 minutes.", "timerSeconds": 1200},
-      {"sk": "Tretinu polievky rozmixuj a vráť späť, aby zhustla. Dochuť limetkovou šťavou a posyp koriandrom.", "en": "Blend a third of the soup and stir it back in to thicken. Finish with lime juice and coriander."}
+      {"sk": "Cibuľu a papriku nakrájaj na kocky asi 1 cm a cesnak nasekaj. Fazuľu aj kukuricu sceď a prepláchni.", "en": "Cut the onion and pepper into roughly 1 cm dice and chop the garlic. Drain and rinse the beans and the sweetcorn."},
+      {"sk": "Vo väčšom hrnci zohrej olej na strednom ohni a cibuľu s paprikou opekaj 5 minút, kým nezmäknú. Pridaj cesnak, rímsky kmín a papriku a za stáleho miešania opekaj minútu, kým korenie nezavonia.", "en": "Heat the oil in a large pan over medium heat and cook the onion and pepper for 5 minutes until soft. Add the garlic, cumin and paprika and cook, stirring, for a minute until fragrant.", "timerSeconds": 300},
+      {"sk": "Pridaj paradajky, fazuľu, kukuricu, rozdrobený bujón a 700 ml vody. Priveď do varu, zníž oheň a mierne var 20 minút.", "en": "Add the tomatoes, beans, sweetcorn, crumbled stock cube and 700 ml of water. Bring to the boil, lower the heat and simmer gently for 20 minutes.", "timerSeconds": 1200},
+      {"sk": "Asi tretinu polievky preber do nádoby, rozmixuj dohladka a vráť späť do hrnca – polievka zhustne, ale zostane v nej dosť celých fazúľ a kukurice. Ak je príliš hustá, prilej trochu vody.", "en": "Ladle about a third of the soup into a jug, blend it smooth and stir it back into the pan – the soup thickens but keeps plenty of whole beans and corn. If it is too thick, add a little water."},
+      {"sk": "Hrniec odstav a dochuť limetkovou šťavou. Podávaj posypanú nasekaným koriandrom. Vydrží 4 dni v chladničke a 3 mesiace v mrazničke.", "en": "Take the pan off the heat and season with the lime juice. Serve sprinkled with chopped coriander. It keeps for 4 days in the fridge and 3 months in the freezer."}
     ]
   },
   {
@@ -411,10 +432,11 @@
       {"id": "sour-cream", "amount": 100, "unit": "G", "role": "SECONDARY", "optional": true, "note": {"sk": "na podávanie", "en": "to serve"}}
     ],
     "steps": [
-      {"sk": "Mäso nakrájaj na prúžky a premiešaj s korením, soľou, limetkovou šťavou a lyžicou oleja.", "en": "Slice the chicken into strips and toss with the spices, salt, lime juice and a tablespoon of oil."},
-      {"sk": "Na rozpálenej panvici opekaj mäso 6 minút, kým nie je prepečené. Odlož ho.", "en": "Fry the chicken in a hot pan for 6 minutes until cooked through. Set aside.", "timerSeconds": 360},
-      {"sk": "Na zvyšnom oleji opekaj papriku a cibuľu nakrájané na prúžky 5 minút, aby zostali chrumkavé. Vráť mäso.", "en": "Fry the sliced peppers and onion in the remaining oil for 5 minutes so they stay crisp. Return the chicken.", "timerSeconds": 300},
-      {"sk": "Podávaj v zohriatych tortillách s kyslou smotanou.", "en": "Serve in warm tortillas with sour cream."}
+      {"sk": "Kuracie prsia nakrájaj na prúžky hrubé asi 1 cm. V mise ich premiešaj s údenou paprikou, rímskym kmínom, čili, sušeným cesnakom, soľou, limetkovou šťavou a lyžicou oleja a nechaj postáť, kým pripravíš zeleninu.", "en": "Cut the chicken into strips about 1 cm thick. Toss them in a bowl with the smoked paprika, cumin, chilli, garlic powder, salt, lime juice and 1 tablespoon of the oil and leave while you prepare the vegetables."},
+      {"sk": "Papriky zbav semienok a nakrájaj na prúžky asi 1 cm, cibuľu na mesiačiky. Veľkú panvicu rozpáľ na vysokom ohni, kým nie je naozaj horúca – fajitas majú byť opečené, nie dusené.", "en": "Seed the peppers and cut them into strips about 1 cm wide, and cut the onion into wedges. Heat a large frying pan over high heat until really hot – fajitas should be seared, not stewed."},
+      {"sk": "Mäso rozlož na panvicu v jednej vrstve a 2 minúty ním nehýb, potom ho obracaj ešte asi 4 minúty, kým nie je zo všetkých strán opečené a po prekrojení biele až do stredu. Presuň ho na tanier.", "en": "Spread the chicken in the pan in a single layer and leave it for 2 minutes, then turn it for about 4 minutes more until browned all over and white right through when cut. Move it to a plate.", "timerSeconds": 360},
+      {"sk": "Do panvice daj zvyšný olej, papriku a cibuľu a opekaj ich 5 minút na vysokom ohni, kým nie sú miestami opečené, ale stále chrumkavé. Vráť mäso aj so šťavou z taniera a premiešaj.", "en": "Add the remaining oil, the peppers and onion to the pan and cook over high heat for 5 minutes until charred in places but still crisp. Return the chicken with its juices and toss.", "timerSeconds": 300},
+      {"sk": "Tortilly zohrej na suchej panvici alebo v mikrovlnke zabalené vo vlhkej utierke. Panvicu postav na stôl, nech si každý naplní tortillu mäsom so zeleninou a lyžicou kyslej smotany.", "en": "Warm the tortillas in a dry pan, or in the microwave wrapped in a damp towel. Put the pan on the table so everyone can fill their tortillas with the chicken, vegetables and a spoonful of sour cream."}
     ]
   },
   {
@@ -446,10 +468,12 @@
       {"id": "lime", "amount": 1, "unit": "PCS", "role": "SEASONING", "optional": true}
     ],
     "steps": [
-      {"sk": "Na oleji opeč mäso zo všetkých strán dozlatista, asi 6 minút. Pridaj cibuľu, papriku a cesnak a opekaj 4 minúty.", "en": "Brown the chicken on all sides in the oil, about 6 minutes. Add the onion, pepper and garlic and fry for 4 minutes.", "timerSeconds": 600},
-      {"sk": "Vmiešaj pretlak, korenie a ryžu a minútu opekaj.", "en": "Stir in the tomato paste, spices and rice and fry for a minute."},
-      {"sk": "Zalej 700 ml vody s bujónmi, prikry a var na miernom ohni 20 minút.", "en": "Add 700 ml water with the stock cubes, cover and simmer over low heat for 20 minutes.", "timerSeconds": 1200},
-      {"sk": "Pridaj hrášok, prikry a nechaj 5 minút dôjsť. Kura má byť vnútri prepečené (75 °C). Podávaj s koriandrom a limetkou.", "en": "Add the peas, cover and leave for 5 minutes to finish. The chicken should be cooked through (75 °C). Serve with coriander and lime.", "timerSeconds": 300}
+      {"sk": "Kuracie stehná osuš a nakrájaj na väčšie kusy asi 4 cm. Cibuľu nakrájaj nadrobno, papriku na kocky a cesnak nasekaj. Ryžu prepláchni v sitku, kým voda nie je číra, a nechaj odkvapkať. Bujóny rozpusti v 700 ml horúcej vody.", "en": "Pat the chicken thighs dry and cut them into large pieces of about 4 cm. Finely chop the onion, dice the pepper and chop the garlic. Rinse the rice in a sieve until the water runs clear and let it drain. Dissolve the stock cubes in 700 ml of hot water."},
+      {"sk": "V širokom hrnci alebo hlbokej panvici s pokrievkou zohrej olej na stredne vysokom ohni. Mäso opekaj asi 6 minút, kým nie je zo všetkých strán zlatohnedé – ešte nemusí byť prepečené. Pridaj cibuľu, papriku a cesnak a opekaj ďalšie 4 minúty.", "en": "Heat the oil in a wide pan or deep frying pan with a lid over medium-high heat. Brown the chicken for about 6 minutes until golden on all sides – it does not need to be cooked through yet. Add the onion, pepper and garlic and cook for 4 minutes more.", "timerSeconds": 600},
+      {"sk": "Vmiešaj pretlak, rímsky kmín, kurkumu a oregano a potom ryžu. Minútu ju miešaj s mäsom a zeleninou, kým zrnká nie sú obalené a lesklé – potom sa nezlepia.", "en": "Stir in the tomato paste, cumin, turmeric and oregano, then the rice. Stir it with the chicken and vegetables for a minute until the grains are coated and glossy – they will not clump later."},
+      {"sk": "Zalej horúcim bujónom, premiešaj, vyškrab dno a priveď do varu. Prikry, zníž oheň na minimum a var 20 minút. Pokrievku počas varu nedvíhaj a nemiešaj, aby ryža zostala sypká.", "en": "Pour in the hot stock, stir, scrape the bottom and bring to the boil. Cover, turn the heat to the lowest setting and cook for 20 minutes. Do not lift the lid or stir during cooking so the rice stays fluffy.", "timerSeconds": 1200},
+      {"sk": "Na ryžu nasyp hrášok (mrazený netreba rozmrazovať), znova prikry a odstavené nechaj 5 minút dôjsť. Kura má byť prepečené, vnútri 75 °C, a ryža mäkká, bez tekutiny na dne.", "en": "Scatter the peas over the rice (frozen ones need no thawing), cover again and leave off the heat for 5 minutes. The chicken should be cooked through, 75 °C inside, and the rice tender with no liquid left at the bottom.", "timerSeconds": 300},
+      {"sk": "Ryžu prevzdušni vidličkou a podávaj posypanú koriandrom, s mesiačikmi limetky. V chladničke vydrží 3 dni; pri ohrievaní ju pokvapkaj trochou vody.", "en": "Fluff the rice with a fork and serve sprinkled with coriander, with lime wedges. It keeps in the fridge for 3 days; sprinkle with a little water when reheating."}
     ]
   },
   {
@@ -476,10 +500,12 @@
       {"id": "black-pepper", "amount": 0.5, "unit": "TSP", "role": "SEASONING"}
     ],
     "steps": [
-      {"sk": "Rúru predhrej na 220 °C. Zemiaky nakrájaj na mesiačiky, premiešaj s 2 lyžicami oleja a polovicou soli a peč 30 minút.", "en": "Preheat the oven to 220 °C. Cut the potatoes into wedges, toss with 2 tablespoons of oil and half the salt and roast for 30 minutes.", "timerSeconds": 1800},
-      {"sk": "Chimichurri: nadrobno nasekaj petržlen a cesnak a zmiešaj s oreganom, čili, octom, 2 lyžicami oleja a štipkou soli.", "en": "Chimichurri: finely chop the parsley and garlic and mix with the oregano, chili, vinegar, 2 tablespoons of oil and a pinch of salt."},
-      {"sk": "Steaky nechaj 20 minút temperovať, osuš, osoľ a opeč na rozpálenej panvici so zvyšným olejom 3 minúty z každej strany na medium (55–57 °C v strede).", "en": "Bring the steaks to room temperature for 20 minutes, pat dry, salt and sear in a very hot pan with the remaining oil for 3 minutes per side for medium (55–57 °C in the centre).", "timerSeconds": 360},
-      {"sk": "Nechaj 5 minút odpočinúť, nakrájaj proti vláknam, okoreň a podávaj so zemiakmi a chimichurri.", "en": "Rest for 5 minutes, slice against the grain, season with pepper and serve with the potatoes and chimichurri.", "timerSeconds": 300}
+      {"sk": "Steaky vyber z chladničky aspoň 20 minút pred pečením, aby sa zohriali na izbovú teplotu a upiekli rovnomerne. Rúru predhrej na 220 °C (horný a spodný ohrev).", "en": "Take the steaks out of the fridge at least 20 minutes before cooking so they come to room temperature and cook evenly. Preheat the oven to 220 °C (conventional)."},
+      {"sk": "Zemiaky umy a nakrájaj na mesiačiky hrubé asi 1,5 cm. Na plechu ich premiešaj s 2 lyžicami oleja a polovicou soli, rozlož v jednej vrstve a peč 30 minút, v polovici obráť, kým nie sú zlaté a chrumkavé.", "en": "Scrub the potatoes and cut them into wedges about 1.5 cm thick. Toss them on a baking tray with 2 tablespoons of the oil and half the salt, spread in a single layer and roast for 30 minutes, turning halfway, until golden and crisp.", "timerSeconds": 1800},
+      {"sk": "Chimichurri: petržlen (lístky aj tenké stonky) a cesnak nasekaj nožom nadrobno – v mixéri by z nich bola kaša. Zmiešaj ich s oreganom, čili, octom, 2 lyžicami oleja a štipkou soli a nechaj postáť, aby sa chute spojili.", "en": "Chimichurri: finely chop the parsley (leaves and thin stalks) and garlic with a knife – a blender turns them to mush. Mix with the oregano, chilli, vinegar, 2 tablespoons of the oil and a pinch of salt and leave to let the flavours meld."},
+      {"sk": "Steaky dôkladne osuš papierovou utierkou a osoľ zvyšnou soľou. Ťažkú panvicu rozpáľ so zvyšným olejom na vysokom ohni, kým olej nezačne jemne dymiť. Steaky do nej polož a 3 minúty nimi nehýb, aby sa vytvorila tmavá kôrka.", "en": "Pat the steaks thoroughly dry with kitchen paper and season with the remaining salt. Heat a heavy frying pan with the rest of the oil over high heat until it just starts to smoke. Lay in the steaks and leave them untouched for 3 minutes so a dark crust forms.", "timerSeconds": 180},
+      {"sk": "Obráť ich a peč ďalšie 3 minúty pre stupeň medium – teplomer v strede ukáže 55 až 57 °C a mäso je na dotyk pružné. Pre medium well peč o 1 až 2 minúty dlhšie (60–63 °C); hrubšie steaky potrebujú viac času.", "en": "Turn them and cook for another 3 minutes for medium – a thermometer in the centre reads 55 to 57 °C and the meat feels springy. For medium well cook 1 to 2 minutes longer (60–63 °C); thicker steaks need more time.", "timerSeconds": 180},
+      {"sk": "Steaky prelož na dosku a nechaj 5 minút odpočinúť – šťava sa v nich rozloží a pri krájaní nevytečie. Potom ich nakrájaj naprieč vláknami na plátky, okoreň a podávaj so zemiakmi, prelievané chimichurri.", "en": "Move the steaks to a board and let them rest for 5 minutes – the juices settle and do not run out when you cut. Then slice across the grain, season with the pepper and serve with the potatoes, spooning over the chimichurri.", "timerSeconds": 300}
     ]
   },
   {
@@ -509,11 +535,13 @@
       {"id": "burger-bun", "amount": 8, "unit": "PCS", "role": "MAIN"}
     ],
     "steps": [
-      {"sk": "Paprikou, polovicou cukru, cesnakom, rímskym kmínom a soľou potri mäso zo všetkých strán.", "en": "Rub the pork all over with the paprika, half the sugar, the garlic powder, cumin and salt."},
-      {"sk": "Na dno pomalého hrnca daj cibuľu nakrájanú na kolieska, navrch mäso a podlej 100 ml vody.", "en": "Lay the sliced onions in the slow cooker, put the pork on top and add 100 ml water."},
-      {"sk": "Var na stupni LOW 8 hodín, kým sa mäso nedá ľahko roztrhať vidličkou (vnútri aspoň 90 °C).", "en": "Cook on LOW for 8 hours until the pork pulls apart easily with a fork (at least 90 °C inside)."},
-      {"sk": "Mäso vyber, natrhaj vidličkami a premiešaj s kečupom, octom, horčicou, zvyšným cukrom a trochou výpeku.", "en": "Lift out the pork, shred it with forks and mix with the ketchup, vinegar, mustard, remaining sugar and a little of the cooking juices."},
-      {"sk": "Podávaj v opečených žemliach, napríklad s coleslawom.", "en": "Serve in toasted buns, for example with coleslaw."}
+      {"sk": "V miske zmiešaj údenú papriku, polovicu cukru, sušený cesnak, rímsky kmín a soľ. Mäso osuš papierovou utierkou; ak má vrstvu tuku, nechaj ju na ňom – pri pomalom varení udržuje mäso šťavnaté. Korenistú zmes doň vtri zo všetkých strán.", "en": "Mix the smoked paprika, half the sugar, the garlic powder, cumin and salt in a small bowl. Pat the pork dry with kitchen paper; if it has a layer of fat, leave it on – it keeps the meat juicy during slow cooking. Rub the spice mix into it on all sides."},
+      {"sk": "Cibule ošúp, nakrájaj na hrubé kolieska a rozlož na dno pomalého hrnca – mäso bude ležať na nich ako na mriežke a nepripáli sa. Navrch polož mäso tukom nahor a podlej 100 ml vody, nie priamo na mäso, aby sa korenie nezmylo.", "en": "Peel the onions, cut them into thick rings and spread them over the bottom of the slow cooker – the pork sits on them like a rack and does not catch. Lay the pork on top, fat side up, and pour 100 ml of water around it, not over it, so the rub stays on."},
+      {"sk": "Prikry a var na stupni LOW 8 hodín. Pokrievku počas varu nedvíhaj – každé otvorenie predĺži varenie asi o 20 minút.", "en": "Cover and cook on LOW for 8 hours. Do not lift the lid while it cooks – each peek adds about 20 minutes."},
+      {"sk": "Mäso je hotové, keď sa dá vidličkou bez námahy roztrhať a vnútri má aspoň 90 °C – pri tejto teplote sa väzivo rozpustí. Ak sa ešte trhá ťažko, var ho ďalšiu hodinu.", "en": "The pork is done when it pulls apart easily with a fork and reaches at least 90 °C inside – at that temperature the connective tissue melts. If it still resists, cook for another hour."},
+      {"sk": "Mäso prelož na veľkú dosku, odstráň veľké kusy tuku a dvoma vidličkami ho natrhaj na vlákna. Výpek v hrnci preceď a lyžicou z neho zober tuk z povrchu.", "en": "Lift the pork onto a large board, remove any big pieces of fat and shred it with two forks. Strain the cooking juices and skim the fat off the top with a spoon."},
+      {"sk": "V mise zmiešaj kečup, ocot, horčicu, zvyšný cukor a asi 100 ml výpeku, vmiešaj mäso a ochutnaj – ak je suché, pridaj ešte výpek. Žemle rozkroj a reznou stranou opeč na suchej panvici.", "en": "In a bowl mix the ketchup, vinegar, mustard, remaining sugar and about 100 ml of the juices, stir in the pork and taste – if it is dry, add more juices. Split the buns and toast them cut side down in a dry frying pan."},
+      {"sk": "Žemle naplň mäsom, napríklad s coleslawom. Trhané mäso vydrží 4 dni v chladničke a 3 mesiace v mrazničke – zamraz ho aj s trochou výpeku, aby nevyschlo.", "en": "Fill the buns with the pork, for example with coleslaw. Pulled pork keeps for 4 days in the fridge and 3 months in the freezer – freeze it with a little of the juices so it does not dry out."}
     ]
   },
   {
@@ -522,7 +550,7 @@
     "description": {"sk": "Chrumkavý šalát z kapusty a mrkvy s ľahkým jogurtovým dresingom.", "en": "A crunchy cabbage and carrot salad with a light yogurt dressing."},
     "cuisine": "AMERICAN",
     "mealTypes": ["LUNCH", "DINNER", "SNACK"],
-    "totalTimeMin": 15,
+    "totalTimeMin": 25,
     "activeTimeMin": 15,
     "difficulty": 1,
     "servings": 6,
@@ -539,9 +567,10 @@
       {"id": "salt", "amount": 1, "unit": "TSP", "role": "SEASONING"}
     ],
     "steps": [
-      {"sk": "Kapustu nakrájaj na tenké rezance a mrkvu nastrúhaj. Osoľ a premiešaj.", "en": "Finely shred the cabbage and grate the carrots. Salt and toss."},
-      {"sk": "Majonézu zmiešaj s jogurtom, octom, horčicou a cukrom.", "en": "Mix the mayonnaise with the yogurt, vinegar, mustard and sugar."},
-      {"sk": "Zmiešaj so zeleninou a nechaj aspoň 30 minút odležať v chladničke.", "en": "Toss with the vegetables and chill for at least 30 minutes."}
+      {"sk": "Z kapusty odstráň vonkajšie listy a vykroj hlúb. Ostrým nožom alebo na strúhadle ju nakrájaj na čo najtenšie rezance. Mrkvu ošúp a nahrubo nastrúhaj.", "en": "Remove the outer leaves from the cabbage and cut out the core. Shred it as finely as you can with a sharp knife or a mandoline. Peel and coarsely grate the carrots."},
+      {"sk": "Kapustu s mrkvou daj do veľkej misy, posyp soľou a 1 až 2 minúty ju rukami pomačkaj – zmäkne a pustí šťavu. Nechaj 10 minút postáť a potom z nej vytlač nadbytočnú šťavu, aby šalát nebol vodnatý.", "en": "Put the cabbage and carrots in a large bowl, sprinkle with the salt and squeeze with your hands for 1 to 2 minutes – it softens and releases its juice. Leave for 10 minutes, then squeeze out the excess liquid so the salad is not watery.", "timerSeconds": 600},
+      {"sk": "Dresing: v miske vymiešaj majonézu s jogurtom, octom, horčicou a cukrom dohladka.", "en": "Dressing: whisk the mayonnaise with the yoghurt, vinegar, mustard and sugar in a small bowl until smooth."},
+      {"sk": "Dresing vmiešaj do zeleniny a ochutnaj. Podávať ho môžeš hneď, ale po 30 minútach v chladničke sa chute spoja a šalát je lepší. V uzavretej nádobe vydrží 3 dni; pred podávaním ho premiešaj.", "en": "Stir the dressing into the vegetables and taste. You can serve it straight away, but after 30 minutes in the fridge the flavours meld and it tastes better. In a closed container it keeps for 3 days; stir before serving."}
     ]
   },
   {
@@ -568,10 +597,12 @@
       {"id": "ketchup", "amount": 2, "unit": "TBSP", "role": "SEASONING", "optional": true, "note": {"sk": "na podávanie", "en": "to serve"}}
     ],
     "steps": [
-      {"sk": "Mäso nakrájaj na prúžky hrubé ako prst a osoľ.", "en": "Cut the chicken into finger-thick strips and salt them."},
-      {"sk": "Strúhanku zmiešaj s paprikou a cesnakom. Prúžky obaľ v múke, rozšľahanom vajci a strúhanke.", "en": "Mix the breadcrumbs with the paprika and garlic powder. Coat the strips in flour, beaten egg and the breadcrumbs."},
-      {"sk": "Košík fritézy potri olejom, poukladaj prúžky v jednej vrstve a peč pri 200 °C 10 až 12 minút, v polovici otoč, kým nie sú zlatisté a vnútri biele (74 °C).", "en": "Oil the air fryer basket, lay the strips in a single layer and cook at 200 °C for 10–12 minutes, turning halfway, until golden and white inside (74 °C).", "timerSeconds": 660},
-      {"sk": "Podávaj s kečupom alebo jogurtovým dipom.", "en": "Serve with ketchup or a yogurt dip."}
+      {"sk": "Kuracie prsia osuš a nakrájaj na prúžky hrubé asi ako prst (1,5 cm) – rovnako hrubé sa upečú naraz. Osoľ ich.", "en": "Pat the chicken dry and cut it into finger-thick strips (1.5 cm) – strips of the same thickness cook evenly. Season them with the salt."},
+      {"sk": "Priprav si tri plytké misky: v prvej múku, v druhej vajce rozšľahané vidličkou s lyžicou vody a v tretej strúhanku premiešanú s údenou paprikou a sušeným cesnakom.", "en": "Set out three shallow dishes: flour in the first, the egg beaten with a fork and a spoonful of water in the second, and the breadcrumbs mixed with the smoked paprika and garlic powder in the third."},
+      {"sk": "Každý prúžok obaľ v múke a otrep prebytok, ponor ho do vajca, nechaj odkvapkať a nakoniec ho dôkladne obaľ v strúhanke, ktorú pritlač dlaňou. Jednou rukou pracuj so suchými a druhou s mokrými miskami, aby sa ti obal nelepil na prsty.", "en": "Coat each strip in flour and shake off the excess, dip it in the egg, let it drip and finally press it firmly into the breadcrumbs. Use one hand for the dry dishes and the other for the wet one so the coating does not stick to your fingers."},
+      {"sk": "Fritézu predhrej na 200 °C. Košík potri olejom a poukladaj doň prúžky v jednej vrstve s medzerami – natlačené by nezhnedli dochrumkava. Ak sa nezmestia, peč ich vo dvoch dávkach.", "en": "Preheat the air fryer to 200 °C. Brush the basket with the oil and lay the strips in a single layer with gaps – crowded, they will not crisp. If they do not fit, cook them in two batches."},
+      {"sk": "Peč 10 až 12 minút, v polovici ich obráť. Sú hotové, keď je obal zlatohnedý a chrumkavý a mäso po prekrojení biele až do stredu (74 °C).", "en": "Cook for 10 to 12 minutes, turning halfway. They are done when the coating is golden brown and crisp and the chicken is white right through when cut (74 °C).", "timerSeconds": 660},
+      {"sk": "Podávaj hneď s kečupom alebo jogurtovým dipom. Zvyšky zohrej vo fritéze 3 minúty pri 180 °C – v mikrovlnke by zmäkli.", "en": "Serve at once with ketchup or a yoghurt dip. Reheat leftovers in the air fryer at 180 °C for 3 minutes – the microwave makes them soft."}
     ]
   }
 ]
