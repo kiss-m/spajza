@@ -98,6 +98,9 @@ Spark plan only: no Cloud Functions, no Cloud Storage. Package `sk.matej.spajza`
   nutrition. Steps use the singular imperative in Slovak and are detailed enough to cook from without
   experience: cut sizes, vessel and heat level, times, sensory and doneness cues, mistakes to avoid, serving
   and storage for meal prep, timers on waiting steps (at least 4 steps, ~150–250 characters each; content test).
+  Steps address the cook gender-neutrally (no „si pridal“, „máš rád“). The plural-imperative test also flags
+  ordinary words ending like one (`v ceste`, `v paste`, `okamžite`): rephrase them. A dish that needs an
+  ingredient the seed lacks uses the closest one and says so in the line note (`namiesto doubanjiang`).
 
 ## Commands
 - `./gradlew test` — all unit tests (domain, seed content tests and, with the Android SDK, `:app`)
