@@ -3,14 +3,12 @@ package sk.matej.spajza.domain.usecase
 import sk.matej.spajza.domain.catalog.Catalog
 import sk.matej.spajza.domain.matching.LineStatus
 import sk.matej.spajza.domain.matching.RecipeMatch
-import sk.matej.spajza.domain.model.PantryUnit
 import sk.matej.spajza.domain.pantry.IngredientRef
 import sk.matej.spajza.domain.pantry.ShoppingItem
 import sk.matej.spajza.domain.repository.PantryRepository
 import sk.matej.spajza.domain.repository.ShoppingRepository
 import sk.matej.spajza.domain.unit.UnitConverter
 import java.time.LocalDate
-import kotlin.math.ceil
 
 /**
  * "Pridať chýbajúce do nákupu": puts the missing ingredients of [RecipeMatch] on the shopping list,
@@ -36,19 +34,10 @@ class AddMissingToShoppingUseCase(
         gramsById.forEach { (id, grams) ->
             val ingredient = catalog.ingredient(id)
             // "To taste" lines have no grams; they go on the list without an amount.
-            val amount = if (grams > 0) roundUp(UnitConverter.gramsToPantryUnit(grams, ingredient), ingredient.pantryUnit) else null
+            val amount = if (grams > 0) UnitConverter.roundUpPantryAmount(UnitConverter.gramsToPantryUnit(grams, ingredient)) else null
             shopping.addIngredient(householdId, IngredientRef.Catalog(id), amount, setOf(match.recipe.id), addedBy)
         }
         return gramsById.size
-    }
-
-    /** Whole pieces, whole grams and millilitres; a tiny tolerance keeps 2.0000001 at 2. */
-    private fun roundUp(amount: Double, unit: PantryUnit): Double = when (unit) {
-        PantryUnit.PCS, PantryUnit.G, PantryUnit.ML -> ceil(amount - ROUNDING_TOLERANCE)
-    }
-
-    private companion object {
-        const val ROUNDING_TOLERANCE = 1e-6
     }
 }
 

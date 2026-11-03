@@ -2,6 +2,7 @@ package sk.matej.spajza.domain.unit
 
 import sk.matej.spajza.domain.model.Ingredient
 import sk.matej.spajza.domain.model.PantryUnit
+import kotlin.math.ceil
 
 class MissingConversionException(
     val ingredientId: String,
@@ -44,6 +45,14 @@ object UnitConverter {
         PantryUnit.ML -> quantity * density(ingredient, MeasureUnit.ML)
         PantryUnit.PCS -> quantity * pieceWeight(ingredient)
     }
+
+    /**
+     * Rounds an amount to buy up to whole pieces, grams or millilitres; a tiny tolerance keeps
+     * 2.0000001 at 2.
+     */
+    fun roundUpPantryAmount(amount: Double): Double = ceil(amount - ROUNDING_TOLERANCE)
+
+    private const val ROUNDING_TOLERANCE = 1e-6
 
     private fun density(ingredient: Ingredient, unit: MeasureUnit): Double =
         ingredient.densityGPerMl ?: throw MissingConversionException(ingredient.id, unit)

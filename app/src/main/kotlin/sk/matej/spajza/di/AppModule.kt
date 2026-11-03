@@ -28,6 +28,7 @@ import sk.matej.spajza.data.catalog.RoomCatalogRepository
 import sk.matej.spajza.data.firestore.FirestoreCookHistoryRepository
 import sk.matej.spajza.data.firestore.FirestoreCustomIngredientRepository
 import sk.matej.spajza.data.firestore.FirestoreHouseholdRepository
+import sk.matej.spajza.data.firestore.FirestoreMealPlanRepository
 import sk.matej.spajza.data.firestore.FirestoreOwnRecipeRepository
 import sk.matej.spajza.data.firestore.FirestorePantryRepository
 import sk.matej.spajza.data.firestore.FirestoreRatingRepository
@@ -47,6 +48,7 @@ import sk.matej.spajza.domain.repository.CustomIngredientRepository
 import sk.matej.spajza.domain.repository.DeviceSettingsRepository
 import sk.matej.spajza.domain.repository.ExpiryReminderScheduler
 import sk.matej.spajza.domain.repository.HouseholdRepository
+import sk.matej.spajza.domain.repository.MealPlanRepository
 import sk.matej.spajza.domain.repository.OwnRecipeRepository
 import sk.matej.spajza.domain.repository.PantryRepository
 import sk.matej.spajza.domain.repository.ProductLookup
@@ -152,6 +154,10 @@ object AppModule {
 
     @Provides
     @Singleton
+    fun mealPlanRepository(db: FirebaseFirestore): MealPlanRepository = FirestoreMealPlanRepository(db)
+
+    @Provides
+    @Singleton
     fun recipeImporter(http: OkHttpClient): RecipeImporter =
         // Recipe sites expect a browser; the app still says who it is.
         WebRecipeImporter(http, userAgent = "Mozilla/5.0 (Linux; Android) Spajza/${BuildConfig.VERSION_NAME} (+https://github.com/kiss-m/spajza)")
@@ -226,8 +232,9 @@ object AppModule {
         shopping: ShoppingRepository,
         custom: CustomIngredientRepository,
         recipes: OwnRecipeRepository,
+        plans: MealPlanRepository,
         clock: Clock,
-    ): JoinHouseholdUseCase = JoinHouseholdUseCase(users, households, pantry, shopping, custom, recipes, clock)
+    ): JoinHouseholdUseCase = JoinHouseholdUseCase(users, households, pantry, shopping, custom, recipes, plans, clock)
 
     @Provides
     fun leaveHouseholdUseCase(users: UserRepository, households: HouseholdRepository): LeaveHouseholdUseCase =

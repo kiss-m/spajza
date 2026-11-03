@@ -519,4 +519,47 @@
     <string name="about_off_body">Food data from Open Food Facts is available under the Open Database License (ODbL).</string>
     <string name="about_icons">Icons: Material Symbols (Apache 2.0).</string>
     <string name="about_version">Version %1$s</string>
+
+    <!-- Plan -->
+    <string name="nav_plan">Plan</string>
+    <string name="plan_to_shopping">To list</string>
+    <string name="plan_this_week">This week</string>
+    <string name="plan_next_week">Next week</string>
+    <string name="plan_last_week">Last week</string>
+    <string name="plan_week_number">Week %1$d</string>
+    <string name="plan_previous_week_action">Previous week</string>
+    <string name="plan_next_week_action">Following week</string>
+    <string name="plan_go_this_week">Back to this week</string>
+    <string name="plan_today">Today</string>
+    <string name="plan_add_for_day">Add</string>
+    <string name="plan_empty_title">Plan your week</string>
+    <string name="plan_empty_body">Add meals to the days, or tap the calendar icon in a recipe. One tap then turns the plan into a shopping list, minus what is already in the pantry.</string>
+    <string name="plan_kcal_per_serving" tools:ignore="PluralsCandidate">%1$d kcal per serving</string>
+    <string name="plan_have_all">You have everything</string>
+    <string name="plan_servings">Servings</string>
+    <string name="plan_recipe_gone">This recipe is no longer available</string>
+    <string name="plan_entry_menu">Options</string>
+    <string name="plan_move">Move</string>
+    <string name="plan_move_title">Move meal</string>
+    <string name="plan_removed">Removed from the plan</string>
+    <plurals name="plan_added_to_shopping">
+        <item quantity="one">%1$d item added to the list</item>
+        <item quantity="other">%1$d items added to the list</item>
+    </plurals>
+    <string name="plan_open_shopping">Open list</string>
+    <string name="plan_nothing_to_buy">Everything planned is already in the pantry or on the list.</string>
+    <string name="plan_add_title">Add to plan</string>
+    <string name="plan_add_days">Days</string>
+    <string name="plan_add_meal">Meal</string>
+    <plurals name="plan_add_action_days">
+        <item quantity="one">Add to %1$d day</item>
+        <item quantity="other">Add to %1$d days</item>
+    </plurals>
+    <plurals name="plan_added">
+        <item quantity="one">Added to the plan for %1$d day</item>
+        <item quantity="other">Added to the plan for %1$d days</item>
+    </plurals>
+    <string name="plan_open_plan">Open plan</string>
+    <string name="plan_pick_title">Choose a recipe</string>
+    <string name="plan_pick_for_day">for %1$s</string>
 </resources>

@@ -4,6 +4,7 @@ import kotlinx.coroutines.test.runTest
 import sk.matej.spajza.domain.custom.CustomIngredient
 import sk.matej.spajza.domain.fakes.FakeCustomIngredientRepository
 import sk.matej.spajza.domain.fakes.FakeHouseholdRepository
+import sk.matej.spajza.domain.fakes.FakeMealPlanRepository
 import sk.matej.spajza.domain.fakes.FakeOwnRecipeRepository
 import sk.matej.spajza.domain.fakes.FakePantryRepository
 import sk.matej.spajza.domain.fakes.FakeShoppingRepository
@@ -16,6 +17,8 @@ import sk.matej.spajza.domain.own.OwnRecipe
 import sk.matej.spajza.domain.pantry.IngredientRef
 import sk.matej.spajza.domain.pantry.PantryItem
 import sk.matej.spajza.domain.pantry.ShoppingItem
+import sk.matej.spajza.domain.plan.PlanEntry
+import sk.matej.spajza.domain.plan.PlanMeal
 import sk.matej.spajza.domain.profile.UserProfile
 import sk.matej.spajza.domain.repository.AuthUser
 import sk.matej.spajza.domain.session.Session
@@ -60,7 +63,16 @@ class HouseholdMembershipTest {
     )
     private val custom = FakeCustomIngredientRepository(listOf(CustomIngredient(id = "b123", name = "Horalky")), householdId = "mine")
     private val recipes = FakeOwnRecipeRepository(listOf(OwnRecipe(id = "r1", title = "Babkin guláš")), householdId = "mine")
-    private val join = JoinHouseholdUseCase(users, households, pantry, shopping, custom, recipes, clock)
+    private val plans = FakeMealPlanRepository(
+        listOf(
+            // The clock is Wednesday 28 October 2026: last week stays, this week and later come along.
+            PlanEntry("old", LocalDate.of(2026, 10, 21), PlanMeal.DINNER, "lecso", 2, addedBy = "me"),
+            PlanEntry("now", LocalDate.of(2026, 10, 26), PlanMeal.LUNCH, "own:r1", 2, addedBy = "me"),
+            PlanEntry("later", LocalDate.of(2026, 11, 4), PlanMeal.DINNER, "lecso", 4, addedBy = "me"),
+        ),
+        householdId = "mine",
+    )
+    private val join = JoinHouseholdUseCase(users, households, pantry, shopping, custom, recipes, plans, clock)
 
     private fun session(household: Household = mine) =
         Session(AuthUser("me", "Alex", null), UserProfile(uid = "me", displayName = "Alex", householdId = household.id), household)
@@ -119,6 +131,7 @@ class HouseholdMembershipTest {
 
         assertEquals(setOf("b123"), custom.itemsOf("theirs").keys, "own foods come along")
         assertEquals(setOf("r1"), recipes.itemsOf("theirs").keys, "and own recipes too")
+        assertEquals(setOf("now", "later"), plans.entriesOf("theirs").keys, "and the plan from this week on")
         assertEquals(listOf("mine"), households.deleted)
         assertTrue("OLDOLD" !in households.invites.value)
     }

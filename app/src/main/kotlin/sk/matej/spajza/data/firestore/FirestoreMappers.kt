@@ -23,6 +23,10 @@ import sk.matej.spajza.domain.own.RecipeSource
 import sk.matej.spajza.domain.pantry.IngredientRef
 import sk.matej.spajza.domain.pantry.PantryItem
 import sk.matej.spajza.domain.pantry.ShoppingItem
+import sk.matej.spajza.domain.plan.PlanEntry
+import sk.matej.spajza.domain.plan.PlanMeal
+import sk.matej.spajza.domain.plan.WeekId
+import sk.matej.spajza.domain.plan.WeekPlan
 import sk.matej.spajza.domain.profile.ActivityLevel
 import sk.matej.spajza.domain.profile.BodyProfile
 import sk.matej.spajza.domain.profile.CookingSkill
@@ -288,6 +292,42 @@ object FirestoreMappers {
         "steps" to recipe.steps.map { mapOf("text" to it.text, "timerSeconds" to it.timerSeconds) },
         "source" to recipe.source.name,
         "sourceUrl" to recipe.sourceUrl,
+    )
+
+    // households/{hid}/mealPlans/{weekId}
+
+    /**
+     * A week of the plan (D13). Timestamps must already be [Instant]s. Entries without a valid day of
+     * this week or a recipe are skipped; an unknown meal (from a newer app) shows as dinner.
+     */
+    fun weekPlanFrom(weekId: String, data: Map<String, Any?>): WeekPlan? {
+        val week = WeekId.parse(weekId) ?: return null
+        val entries = data.map("entries").mapNotNull { (id, value) ->
+            @Suppress("UNCHECKED_CAST")
+            val entry = value as? Map<String, Any?> ?: return@mapNotNull null
+            val date = (entry["date"] as? String)?.let { runCatching { LocalDate.parse(it) }.getOrNull() }
+                ?.takeIf { it in week } ?: return@mapNotNull null
+            val recipeId = (entry["recipeId"] as? String)?.takeIf { it.isNotBlank() } ?: return@mapNotNull null
+            PlanEntry(
+                id = id,
+                date = date,
+                meal = entry.enum<PlanMeal>("meal") ?: PlanMeal.DINNER,
+                recipeId = recipeId,
+                servings = (entry.int("servings") ?: PlanEntry.MIN_SERVINGS).coerceIn(PlanEntry.MIN_SERVINGS, PlanEntry.MAX_SERVINGS),
+                addedBy = entry["addedBy"] as? String,
+                addedAt = entry["addedAt"] as? Instant,
+            )
+        }
+        return WeekPlan(week, entries)
+    }
+
+    /** The fields of a new entry under `entries.<id>`; the repository adds `addedAt` as server time. */
+    fun planEntryTo(entry: PlanEntry, addedBy: String): Map<String, Any?> = mapOf(
+        "date" to entry.date.toString(),
+        "meal" to entry.meal.name,
+        "recipeId" to entry.recipeId,
+        "servings" to entry.servings,
+        "addedBy" to addedBy,
     )
 
     // users/{uid}/ratings/{recipeId}

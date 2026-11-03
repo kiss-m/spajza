@@ -22,7 +22,9 @@ import sk.matej.spajza.domain.matching.RecipeMatcher
 import sk.matej.spajza.domain.own.OwnRecipe
 import sk.matej.spajza.domain.own.OwnRecipes
 import sk.matej.spajza.domain.pantry.PantryItem
+import sk.matej.spajza.domain.plan.PlanEntry
 import sk.matej.spajza.domain.rating.Verdict
+import sk.matej.spajza.domain.repository.MealPlanRepository
 import sk.matej.spajza.domain.repository.OwnRecipeRepository
 import sk.matej.spajza.domain.repository.RatingRepository
 import sk.matej.spajza.domain.repository.ShoppingRepository
@@ -31,8 +33,10 @@ import sk.matej.spajza.domain.session.Session
 import sk.matej.spajza.domain.session.kitchen
 import sk.matej.spajza.domain.session.personalization
 import sk.matej.spajza.domain.usecase.AddMissingToShoppingUseCase
+import sk.matej.spajza.domain.usecase.AddToPlanUseCase
 import sk.matej.spajza.domain.usecase.CookUndo
 import sk.matej.spajza.ui.navigation.RecipeDestination
+import sk.matej.spajza.ui.plan.AddToPlanDraft
 import java.time.Clock
 import java.time.LocalDate
 import javax.inject.Inject
@@ -43,6 +47,9 @@ sealed interface DetailEvent {
     data class Cooked(val pantryChanges: Int) : DetailEvent
 
     data object CookUndone : DetailEvent
+
+    /** Planned for [days] days. */
+    data class AddedToPlan(val days: Int) : DetailEvent
 
     /** An own recipe was deleted; the screen closes. */
     data object Deleted : DetailEvent
@@ -55,13 +62,15 @@ class RecipeDetailViewModel @Inject constructor(
     private val ratings: RatingRepository,
     private val shopping: ShoppingRepository,
     private val ownRecipes: OwnRecipeRepository,
+    private val plans: MealPlanRepository,
     private val cooking: RecipeCooking,
     private val clock: Clock,
 ) : ViewModel() {
-    private val recipeId = savedStateHandle.toRoute<RecipeDestination>().recipeId
+    private val route = savedStateHandle.toRoute<RecipeDestination>()
+    private val recipeId = route.recipeId
 
-    /** Null until the user changes it: then the matcher's default for this recipe applies. */
-    private val servings = MutableStateFlow<Int?>(null)
+    /** A planned meal's servings, or null until the user changes it: then the matcher's default applies. */
+    private val servings = MutableStateFlow(route.servings?.coerceIn(MIN_SERVINGS, MAX_SERVINGS))
     private var matcher: Pair<Catalog, RecipeMatcher>? = null
     private var lastMatch: RecipeMatch? = null
     private var lastUndo: CookUndo? = null
@@ -149,6 +158,23 @@ class RecipeDetailViewModel @Inject constructor(
         }
     }
 
+    fun today(): LocalDate = LocalDate.now(clock)
+
+    /** The "Pridať do plánu" sheet's starting point: today, the recipe's meal and the shown servings. */
+    fun planDraft(): AddToPlanDraft? {
+        val current = state.value
+        val recipe = current.recipe ?: return null
+        return AddToPlanDraft.initial(recipe.mealTypes, current.servings, today())
+    }
+
+    fun onAddToPlan(draft: AddToPlanDraft) {
+        val session = home.session.value ?: return
+        viewModelScope.launch {
+            val entries = AddToPlanUseCase(plans)(session.householdId, recipeId, draft.dates, draft.meal, draft.servings, addedBy = session.uid)
+            events.send(DetailEvent.AddedToPlan(entries.size))
+        }
+    }
+
     /** Deletes an own recipe for the whole household. */
     fun onDelete() {
         val ownId = OwnRecipes.ownId(recipeId) ?: return
@@ -161,7 +187,9 @@ class RecipeDetailViewModel @Inject constructor(
     }
 
     companion object {
-        const val MIN_SERVINGS = 1
-        const val MAX_SERVINGS = 12
+        const val MIN_SERVINGS = PlanEntry.MIN_SERVINGS
+
+        /** As many as a plan entry may have, so a planned batch opens with its servings. */
+        const val MAX_SERVINGS = PlanEntry.MAX_SERVINGS
     }
 }

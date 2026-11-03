@@ -8,13 +8,16 @@ import sk.matej.spajza.domain.household.Household
 import sk.matej.spajza.domain.household.Invite
 import sk.matej.spajza.domain.household.InviteCodes
 import sk.matej.spajza.domain.repository.CustomIngredientRepository
+import sk.matej.spajza.domain.plan.WeekId
 import sk.matej.spajza.domain.repository.HouseholdRepository
+import sk.matej.spajza.domain.repository.MealPlanRepository
 import sk.matej.spajza.domain.repository.OwnRecipeRepository
 import sk.matej.spajza.domain.repository.PantryRepository
 import sk.matej.spajza.domain.repository.ShoppingRepository
 import sk.matej.spajza.domain.repository.UserRepository
 import sk.matej.spajza.domain.session.Session
 import java.time.Clock
+import java.time.LocalDate
 
 /** A fresh invite for the session's household; it replaces the previous code. */
 class CreateInviteUseCase(
@@ -50,9 +53,9 @@ sealed interface JoinOutcome {
 
 /**
  * Joining another household with an invite code. A user who was alone in their household brings
- * its pantry, unchecked shopping items, own foods and own recipes along, and that household is
- * deleted; a user who shared one leaves its data with the others. The joined household's kitchen
- * settings stay.
+ * its pantry, unchecked shopping items, own foods, own recipes and the meal plan from this week on
+ * along, and that household is deleted; a user who shared one leaves its data with the others. The
+ * joined household's kitchen settings stay.
  */
 class JoinHouseholdUseCase(
     private val users: UserRepository,
@@ -61,6 +64,7 @@ class JoinHouseholdUseCase(
     private val shopping: ShoppingRepository,
     private val customIngredients: CustomIngredientRepository,
     private val ownRecipes: OwnRecipeRepository,
+    private val mealPlans: MealPlanRepository,
     private val clock: Clock = Clock.systemUTC(),
 ) {
     /** The invite behind [code] if it exists and is still valid; fails without a connection. */
@@ -91,6 +95,9 @@ class JoinHouseholdUseCase(
         // Own foods first: pantry and shopping items may point at them.
         customIngredients.observe(from).first().forEach { customIngredients.save(to, it, uid) }
         ownRecipes.observe(from).first().forEach { ownRecipes.save(to, it, uid) }
+        mealPlans.observeFrom(from, WeekId.of(LocalDate.now(clock))).first()
+            .flatMap { it.entries }
+            .forEach { mealPlans.add(to, it, it.addedBy ?: uid) }
         val items = pantry.observe(from).first()
         items.forEach { pantry.add(to, it.ingredient, it.quantity, it.expiresAt, it.addedBy ?: uid) }
         val open = shopping.observe(from).first().filterNot { it.checked }

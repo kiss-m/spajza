@@ -119,3 +119,37 @@ catalog is read-only and rebuilt from the seed, so it never needs data migration
   ingredient and step lines. Imported recipes stay private to the household.
 - A member who was alone when joining a household brings their own recipes along; account
   deletion removes them with the household.
+
+## D13 — Weekly meal plan (Phase 3)
+- Shared by the household: `households/{hid}/mealPlans/{weekId}`, one document per ISO week with
+  Monday first; `weekId` is the week-based year and week number (`2026-W45`).
+- Field `entries`: a map from entry id (16 random hex characters) to `{date, meal, recipeId,
+  servings, addedBy, addedAt}`: `date` an ISO date inside the week (`2026-11-03`), `meal` one of
+  `BREAKFAST`/`LUNCH`/`DINNER`/`SNACK`, `recipeId` a catalog id or `own:<id>`, `servings` 1–20,
+  `addedAt` server time. The document also has `updatedAt` (server).
+- Every write touches only `entries.<id>` (add, change servings, meal or day within the week,
+  delete), so two members editing one week never overwrite each other's entries; edits of the same
+  entry keep the later value of each field. Moving an entry to another week deletes it in one
+  document and creates it in the other.
+- Adding a recipe to several days (meal prep) creates one entry per day. "Uvarené" from the plan
+  opens the recipe with the entry's servings; cooking is recorded in the user's cook history as
+  before, the plan itself does not track it. Entries whose recipe no longer exists (a deleted own
+  recipe) show as unavailable and can be removed.
+- "Do nákupu" (the shown week, from today on) sums the grams of every planned entry's required lines,
+  scaled to its servings, and subtracts what the pantry has (tracked quantities in grams; untracked
+  items and staples count as enough) and what the unchecked shopping list already holds, so pressing
+  it twice adds nothing more. The shortfall goes on the shopping list in each ingredient's pantry unit
+  with the planned recipes as reasons, in the D2/D9 format (amounts merged by increment). A "to taste"
+  line is added without an amount when the ingredient is missing altogether.
+- Past weeks stay, one small document each; account deletion removes them with the household. A
+  member who was alone when joining another household brings the plan from the current week on.
+
+## D14 — Own recipe photos stay on the device (Phase 3)
+- The free Spark plan has no Cloud Storage, so photos never leave the phone. They are JPEGs in
+  app-private storage, `files/recipe-photos/<recipeKey>/<timestamp>.jpg` (`recipeKey`: the recipe id
+  with `:` replaced by `_`), scaled to at most 1600 px on the long side.
+- No database: the folder is the list, newest first. The newest photo replaces the generated
+  placeholder on recipe cards and in the recipe detail.
+- Other members and devices do not see them. Backup and device transfer stay off (as for all app
+  data), so uninstalling removes them. They are deleted with an own recipe on this device and on
+  account deletion.

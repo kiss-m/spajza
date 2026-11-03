@@ -2,6 +2,7 @@ package sk.matej.spajza.ui.navigation
 
 import androidx.annotation.StringRes
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.DateRange
 import androidx.compose.material.icons.filled.Person
 import androidx.compose.material.icons.filled.ShoppingCart
 import androidx.compose.ui.graphics.vector.ImageVector
@@ -15,6 +16,9 @@ import sk.matej.spajza.ui.components.SpajzaIcons
 data object CookDestination
 
 @Serializable
+data object PlanDestination
+
+@Serializable
 data object PantryDestination
 
 @Serializable
@@ -23,8 +27,13 @@ data object ShoppingDestination
 @Serializable
 data object ProfileDestination
 
+/** A recipe, optionally for [servings] (a planned meal), otherwise for the user's default. */
 @Serializable
-data class RecipeDestination(val recipeId: String)
+data class RecipeDestination(val recipeId: String, val servings: Int? = null)
+
+/** Choosing a recipe to plan for [date] (an ISO date). */
+@Serializable
+data class PlanPickerDestination(val date: String)
 
 @Serializable
 data class CookingDestination(val recipeId: String, val servings: Int)
@@ -54,6 +63,7 @@ data class RecipeEditorDestination(val recipeId: String? = null, val importUrl: 
 /** The bottom navigation tabs, in order. */
 enum class TopLevelDestination(val destination: Any, @param:StringRes val label: Int, val icon: ImageVector) {
     COOK(CookDestination, R.string.nav_cook, SpajzaIcons.Restaurant),
+    PLAN(PlanDestination, R.string.nav_plan, Icons.Filled.DateRange),
     PANTRY(PantryDestination, R.string.nav_pantry, SpajzaIcons.Kitchen),
     SHOPPING(ShoppingDestination, R.string.nav_shopping, Icons.Filled.ShoppingCart),
     PROFILE(ProfileDestination, R.string.nav_profile, Icons.Filled.Person),

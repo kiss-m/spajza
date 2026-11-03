@@ -2,6 +2,7 @@ package sk.matej.spajza.data.firestore
 
 import android.util.Log
 import com.google.android.gms.tasks.Task
+import com.google.firebase.Timestamp
 import com.google.firebase.firestore.DocumentReference
 import com.google.firebase.firestore.FieldValue
 import com.google.firebase.firestore.FirebaseFirestoreException
@@ -22,9 +23,10 @@ internal object Collections {
     const val INVITES = "invites"
     const val CUSTOM_INGREDIENTS = "customIngredients"
     const val RECIPES = "recipes"
+    const val MEAL_PLANS = "mealPlans"
 
     /** Every household subcollection the security rules allow, for deleting a household. */
-    val HOUSEHOLD_SUBCOLLECTIONS = listOf(PANTRY, SHOPPING, RECIPES, CUSTOM_INGREDIENTS, "mealPlans")
+    val HOUSEHOLD_SUBCOLLECTIONS = listOf(PANTRY, SHOPPING, RECIPES, CUSTOM_INGREDIENTS, MEAL_PLANS)
 }
 
 internal const val FIELD_UPDATED_AT = "updatedAt"
@@ -60,3 +62,13 @@ internal fun <T> Flow<T>.retryPermissionDenied(): Flow<T> = retryWhen { cause, a
 
 private const val MAX_LISTEN_RETRIES = 5
 private const val LISTEN_RETRY_STEP_MS = 1_000L
+
+/** The data with Firestore timestamps, also nested ones, turned into Instants for the pure mappers. */
+internal fun Map<String, Any?>.withInstants(): Map<String, Any?> = mapValues { (_, value) -> instantsIn(value) }
+
+private fun instantsIn(value: Any?): Any? = when (value) {
+    is Timestamp -> value.toInstant()
+    is Map<*, *> -> value.entries.associate { (key, nested) -> key.toString() to instantsIn(nested) }
+    is List<*> -> value.map(::instantsIn)
+    else -> value
+}

@@ -27,6 +27,8 @@ import sk.matej.spajza.ui.cooking.CookingModeRoute
 import sk.matej.spajza.ui.ownrecipe.OwnRecipesRoute
 import sk.matej.spajza.ui.ownrecipe.RecipeEditorRoute
 import sk.matej.spajza.ui.pantry.PantryRoute
+import sk.matej.spajza.ui.plan.PlanPickerRoute
+import sk.matej.spajza.ui.plan.PlanRoute
 import sk.matej.spajza.ui.product.ProductRoute
 import sk.matej.spajza.ui.profile.AboutScreen
 import sk.matej.spajza.ui.profile.ProfileRoute
@@ -79,6 +81,16 @@ fun MainScaffold(link: AppLink?, onLinkHandled: (AppLink) -> Unit) {
                     onOpenEditor = { navController.navigate(it) },
                 )
             }
+            composable<PlanDestination> {
+                PlanRoute(
+                    onOpenRecipe = { recipeId, servings -> navController.navigate(RecipeDestination(recipeId, servings)) },
+                    onAddForDay = { date -> navController.navigate(PlanPickerDestination(date.toString())) },
+                    onOpenShopping = { navController.navigateToTab(ShoppingDestination) },
+                )
+            }
+            composable<PlanPickerDestination> {
+                PlanPickerRoute(onBack = { navController.popBackStack() }, onAdded = { navController.popBackStack() })
+            }
             composable<PantryDestination> {
                 PantryRoute(
                     onOpenProduct = { barcode, name -> navController.navigate(ProductDestination(barcode, name)) },
@@ -99,6 +111,7 @@ fun MainScaffold(link: AppLink?, onLinkHandled: (AppLink) -> Unit) {
                     onOpenRecipe = { navController.navigate(RecipeDestination(it)) },
                     onStartCooking = { recipeId, servings -> navController.navigate(CookingDestination(recipeId, servings)) },
                     onEdit = { navController.navigate(RecipeEditorDestination(recipeId = it)) },
+                    onOpenPlan = { navController.navigateToTab(PlanDestination) },
                 )
             }
             composable<OwnRecipesDestination> {
