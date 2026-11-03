@@ -18,6 +18,7 @@ import sk.matej.spajza.domain.matching.MatcherFixture.taste
 import sk.matej.spajza.domain.matching.MatcherFixture.tomatoPasta
 import sk.matej.spajza.domain.matching.MatcherFixture.bigFeast
 import sk.matej.spajza.domain.model.Allergen
+import sk.matej.spajza.domain.model.Cuisine
 import sk.matej.spajza.domain.model.Equipment
 import sk.matej.spajza.domain.model.PriceTier
 import sk.matej.spajza.domain.model.RecipeTag
@@ -28,9 +29,11 @@ import sk.matej.spajza.domain.rating.CookEvent
 import sk.matej.spajza.domain.rating.Rating
 import sk.matej.spajza.domain.rating.Verdict
 import java.time.Instant
+import java.time.ZoneOffset
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertTrue
+import kotlin.test.assertFalse
 
 class RecipeMatcherTest {
     private fun ids(matches: List<RecipeMatch>) = matches.map { it.recipe.id }
@@ -151,7 +154,7 @@ class RecipeMatcherTest {
     fun `recipes similar to liked or cooked ones rank higher`() {
         // Same coverage; the user cooked an Italian pasta recipe several times.
         val home = kitchen(pantry("pasta" to null, "garlic" to null, "rice" to null, "peanuts" to null))
-        val history = (1..3).map { CookEvent("e$it", "tomato-pasta", Instant.EPOCH, 2) }
+        val history = (1..3).map { CookEvent("e$it", "tomato-pasta", Instant.parse("2026-10-1${it}T18:00:00Z"), 2) }
         val result = RecipeMatcher(catalog(garlicPasta, peanutRice, tomatoPasta)).match(home, taste(history = history), MONDAY)
         val ready = ids(result.ready)
         assertTrue(ready.indexOf("garlic-pasta") < ready.indexOf("peanut-rice"), "ranking was $ready")
@@ -213,5 +216,63 @@ class RecipeMatcherTest {
         val match = RecipeMatcher(catalog(garlicPasta)).match(kitchen(pantry("pasta" to null, "garlic" to null)), taste(), MONDAY).ready.single()
         // (200 × 3.6 + 20 × 1.49 + 40 × 8.84) / 2
         assertEquals((720.0 + 29.8 + 353.6) / 2, match.perServing.kcal, 1e-9)
+    }
+
+    private fun cooked(recipeId: String, daysBeforeMonday: Long, id: String = "$recipeId-$daysBeforeMonday") =
+        CookEvent(id, recipeId, MONDAY.minusDays(daysBeforeMonday).atTime(18, 0).toInstant(ZoneOffset.UTC), 2)
+
+    private fun breakdownOf(matcher: RecipeMatcher, recipe: sk.matej.spajza.domain.model.Recipe, personalization: Personalization) =
+        matcher.evaluate(recipe, kitchen(pantry("pasta" to null, "garlic" to null)), personalization, MONDAY).breakdown
+
+    @Test
+    fun `recent cooking weighs more than cooking long ago`() {
+        val matcher = RecipeMatcher(catalog(garlicPasta, tomatoPasta))
+        val recent = breakdownOf(matcher, garlicPasta, taste(history = listOf(cooked("tomato-pasta", 1))))
+        val old = breakdownOf(matcher, garlicPasta, taste(history = listOf(cooked("tomato-pasta", 300))))
+        assertTrue(recent.taste > old.taste, "recent ${recent.taste}, old ${old.taste}")
+        assertTrue(old.taste > 0, "old cooking still counts a little")
+    }
+
+    @Test
+    fun `many cooked recipes of one cuisine build a taste profile`() {
+        // The candidate shares only the cuisine with each cooked recipe, so it resembles none of them closely.
+        val sources = listOf(chickenRice, peanutRice, salmonRice).mapIndexed { i, r -> r.copy(id = "indian-$i", cuisine = Cuisine.INDIAN) }
+        val candidate = garlicPasta.copy(id = "indian-new", cuisine = Cuisine.INDIAN)
+        val matcher = RecipeMatcher(catalog(candidate, *sources.toTypedArray()))
+        val one = breakdownOf(matcher, candidate, taste(history = listOf(cooked("indian-1", 2))))
+        val many = breakdownOf(matcher, candidate, taste(history = sources.map { cooked(it.id, 2) }))
+        assertTrue(many.taste > one.taste, "many ${many.taste}, one ${one.taste}")
+        val declared = breakdownOf(matcher, candidate, taste(Preferences(likedCuisines = setOf(Cuisine.INDIAN))))
+        assertTrue(many.taste < declared.taste, "three cooked dinners weigh less than a declared favorite cuisine")
+    }
+
+    @Test
+    fun `recipes like disliked ones rank lower`() {
+        val twin = salmonRice.copy(id = "salmon-rice-2")
+        val matcher = RecipeMatcher(catalog(salmonRice, twin, garlicPasta))
+        val disliked = breakdownOf(matcher, twin, taste(ratings = mapOf("salmon-rice" to Rating("salmon-rice", verdict = Verdict.DISLIKE))))
+        val neutral = breakdownOf(matcher, twin, taste())
+        assertTrue(disliked.taste < neutral.taste, "disliked ${disliked.taste}, neutral ${neutral.taste}")
+        assertTrue(disliked.taste < 0)
+    }
+
+    @Test
+    fun `a recipe cooked three times counts like a like`() {
+        val matcher = RecipeMatcher(catalog(garlicPasta))
+        val thrice = breakdownOf(matcher, garlicPasta, taste(history = (1L..3L).map { cooked("garlic-pasta", 10 * it) }))
+        val liked = breakdownOf(matcher, garlicPasta, taste(ratings = mapOf("garlic-pasta" to Rating("garlic-pasta", verdict = Verdict.LIKE))))
+        val once = breakdownOf(matcher, garlicPasta, taste(history = listOf(cooked("garlic-pasta", 10))))
+        assertEquals(liked.taste, thrice.taste)
+        assertTrue(once.taste < thrice.taste)
+    }
+
+    @Test
+    fun `a recipe cooked in the last days ranks a little lower for variety`() {
+        val matcher = RecipeMatcher(catalog(garlicPasta))
+        val config = MatcherConfig()
+        val yesterday = breakdownOf(matcher, garlicPasta, taste(history = listOf(cooked("garlic-pasta", 1))))
+        val lastWeek = breakdownOf(matcher, garlicPasta, taste(history = listOf(cooked("garlic-pasta", 8))))
+        assertEquals(lastWeek.adjustments - config.recentCookPenalty, yesterday.adjustments, 1e-9)
+        assertFalse(config.recentCookPenalty > config.tasteWeight / 4, "variety must not outweigh taste")
     }
 }

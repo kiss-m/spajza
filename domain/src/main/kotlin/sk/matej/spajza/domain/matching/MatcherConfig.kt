@@ -6,7 +6,7 @@ package sk.matej.spajza.domain.matching
  * The score is `Σ weight × component + adjustments`. Components are normalized (coverage, taste,
  * macros and expiry to 0..1, time to -1..1) and the weights decrease in the priority order of
  * docs/SPEC.md: coverage > ratings/taste > macro fit > time > expiring items. Adjustments for skill,
- * spiciness, budget and meal prep are small point values on top.
+ * spiciness, budget, meal prep and recent cooking are small point values on top.
  */
 data class MatcherConfig(
     // 1) Ingredient coverage: Σ(role weight × availability) / Σ(role weight) over required lines.
@@ -16,15 +16,37 @@ data class MatcherConfig(
     /** Recipes missing more required ingredients than this are hidden. */
     val maxMissingForToBuy: Int = 3,
 
-    // 2) Ratings and taste.
+    // 2) Ratings and taste: learned + declared likes - likeness to dislikes, from -[dislikeSimilarityPenalty]
+    //    to 1. Learned combines cooking this recipe, similarity and the profile as 1 - (1 - a)(1 - b)(1 - c).
+    //    A liked or favorite recipe always scores 1. Likeness is the Jaccard index of cuisine, meal types,
+    //    tags and main ingredients.
     val tasteWeight: Double = 40.0,
-    /** Weight of a like or favorite when building the taste profile for similarity. */
+    /** A recipe cooked this many times counts as liked; fewer times count proportionally. */
+    val cooksForDirectLike: Int = 3,
+    /** Weight of a like or favorite as a source of the taste profile and similarity. */
     val likeSourceWeight: Double = 1.0,
     val favoriteSourceWeight: Double = 1.5,
-    /** Each "cooked it" event; repeated cooking adds up to a full like. */
+    /** Each "cooked it" event as a source; repeated recent cooking adds up to a full like. */
     val cookEventSourceWeight: Double = 0.5,
-    /** How much of the taste component similarity to liked or cooked recipes can earn. */
+    /** A cook event's weight halves every this many days ... */
+    val cookHalfLifeDays: Double = 45.0,
+    /** ... but never drops below this share. */
+    val cookEventFloor: Double = 0.25,
+    /** How much of the taste component similarity to one liked or cooked recipe can earn. */
     val similarityShare: Double = 0.6,
+    /**
+     * The profile adds up all sources: the share of source weight with the recipe's cuisine, with its
+     * most common main ingredient and, on average, with its tags, times these points ...
+     */
+    val profileCuisinePoints: Double = 0.3,
+    val profileMainPoints: Double = 0.3,
+    val profileTagPoints: Double = 0.15,
+    /** ... times confidence W / (W + this), W being the total source weight. */
+    val profileConfidenceHalf: Double = 2.0,
+    /** Taken off at full likeness (Jaccard 1) to a disliked recipe, falling linearly to 0 at ... */
+    val dislikeSimilarityPenalty: Double = 0.3,
+    /** ... this likeness, so only close relatives of a disliked recipe drop. */
+    val dislikeLikenessFrom: Double = 0.5,
     val likedCuisineBonus: Double = 0.3,
     /** Per liked ingredient among required MAIN/SECONDARY lines ... */
     val likedIngredientBonus: Double = 0.15,
@@ -65,4 +87,7 @@ data class MatcherConfig(
     /** Penalty for EXPENSIVE ingredients when the budget is MID. */
     val budgetPointsMid: Double = 2.0,
     val mealPrepBonus: Double = 3.0,
+    /** For variety: penalty for a recipe cooked within the last [recentCookDays] days, today included. */
+    val recentCookPenalty: Double = 6.0,
+    val recentCookDays: Long = 3,
 )

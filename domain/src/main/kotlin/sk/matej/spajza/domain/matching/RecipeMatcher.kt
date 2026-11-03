@@ -18,7 +18,11 @@ import sk.matej.spajza.domain.profile.SpicyTolerance
 import sk.matej.spajza.domain.rating.Verdict
 import sk.matej.spajza.domain.unit.UnitConverter
 import java.time.DayOfWeek
+import java.time.Instant
 import java.time.LocalDate
+import java.time.ZoneOffset
+import java.time.temporal.ChronoUnit
+import kotlin.math.pow
 
 /**
  * Splits the catalog into recipes the household can cook now and recipes that need 1–3 more
@@ -76,21 +80,58 @@ class RecipeMatcher(
             .mapNotNull { item -> item.catalogId?.let { it to item } }
             .toMap()
 
-        /** Liked, favorite and cooked recipes with their weight in the taste profile. */
+        private val disliked: Set<String> = personalization.ratings.values
+            .filter { it.verdict == Verdict.DISLIKE }
+            .mapTo(HashSet()) { it.recipeId }
+
+        /** How many times each recipe that is not disliked was cooked. */
+        val cookCounts: Map<String, Int> = personalization.cookHistory
+            .filter { it.recipeId !in disliked }
+            .groupingBy { it.recipeId }
+            .eachCount()
+
+        /** Recipes cooked within the last [MatcherConfig.recentCookDays] days. */
+        val recentlyCooked: Set<String> = personalization.cookHistory
+            .filter { ageInDays(it.cookedAt, today) < config.recentCookDays }
+            .mapTo(HashSet()) { it.recipeId }
+
+        /**
+         * Liked, favorite and cooked catalog recipes that are not disliked, with their weight in the
+         * taste profile; recent cooking weighs more than cooking long ago.
+         */
         val tasteSources: Map<String, Double> = buildMap<String, Double> {
             personalization.ratings.values.forEach { rating ->
-                if (rating.verdict == Verdict.DISLIKE) return@forEach
                 var weight = 0.0
                 if (rating.verdict == Verdict.LIKE) weight += config.likeSourceWeight
                 if (rating.favorite) weight += config.favoriteSourceWeight
                 if (weight > 0) merge(rating.recipeId, weight, Double::plus)
             }
-            personalization.cookHistory.forEach { merge(it.recipeId, config.cookEventSourceWeight, Double::plus) }
-            personalization.ratings.values.filter { it.verdict == Verdict.DISLIKE }.forEach { remove(it.recipeId) }
+            personalization.cookHistory.forEach { event ->
+                merge(event.recipeId, config.cookEventSourceWeight * recency(event.cookedAt, today), Double::plus)
+            }
+            keys.retainAll { it in features && it !in disliked }
         }
+
+        /** Total weight of [tasteSources]. */
+        val sourceWeight: Double = tasteSources.values.sum()
+
+        /** For every feature, the weight of the sources that have it. */
+        val featureWeights: Map<String, Double> = buildMap<String, Double> {
+            tasteSources.forEach { (id, weight) -> features.getValue(id).forEach { merge(it, weight, Double::plus) } }
+        }
+
+        val dislikedFeatures: List<Set<String>> = disliked.mapNotNull { features[it] }
 
         val isWeekend: Boolean = today.dayOfWeek == DayOfWeek.SATURDAY || today.dayOfWeek == DayOfWeek.SUNDAY
     }
+
+    /** Whole days from the (UTC) day [instant] falls on to [today]; never negative. */
+    private fun ageInDays(instant: Instant, today: LocalDate): Long =
+        ChronoUnit.DAYS.between(instant.atZone(ZoneOffset.UTC).toLocalDate(), today).coerceAtLeast(0)
+
+    /** 1 for cooking today, halving every [MatcherConfig.cookHalfLifeDays], at least [MatcherConfig.cookEventFloor]. */
+    private fun recency(cookedAt: Instant, today: LocalDate): Double =
+        maxOf(config.cookEventFloor, 0.5.pow(ageInDays(cookedAt, today) / config.cookHalfLifeDays))
 
     private fun evaluate(recipe: Recipe, ctx: Context, requestedServings: Int? = null): RecipeMatch {
         val servings = requestedServings ?: defaultServings(recipe, ctx.personalization.preferences)
@@ -168,18 +209,47 @@ class RecipeMatcher(
     private fun tasteComponent(recipe: Recipe, ctx: Context): Double {
         val preferences = ctx.personalization.preferences
         val rating = ctx.personalization.ratings[recipe.id]
-        val direct = if (rating?.verdict == Verdict.LIKE || rating?.favorite == true) 1.0 else 0.0
+        if (rating?.verdict == Verdict.DISLIKE) return -config.dislikeSimilarityPenalty
+        if (rating?.verdict == Verdict.LIKE || rating?.favorite == true) return 1.0
+
         val own = features.getValue(recipe.id)
+        val cooked = minOf(1.0, (ctx.cookCounts[recipe.id] ?: 0).toDouble() / config.cooksForDirectLike)
         val similarity = ctx.tasteSources
-            .filterKeys { it != recipe.id && it in features }
+            .filterKeys { it != recipe.id }
             .maxOfOrNull { (sourceId, weight) -> jaccard(own, features.getValue(sourceId)) * minOf(1.0, weight) }
             ?: 0.0
+        // Each signal closes part of the gap the others leave: 1 - (1 - a)(1 - b)(1 - c).
+        val learned = 1 - (1 - cooked) * (1 - config.similarityShare * similarity) * (1 - profileComponent(recipe.id, own, ctx))
+
         val likedIngredients = recipe.ingredients.count {
             !it.optional && it.role != IngredientRole.SEASONING && it.ingredientId in preferences.likedIngredients
         }
         val declared = (if (recipe.cuisine in preferences.likedCuisines) config.likedCuisineBonus else 0.0) +
             minOf(config.likedIngredientBonusCap, likedIngredients * config.likedIngredientBonus)
-        return (maxOf(direct, config.similarityShare * similarity) + declared).coerceIn(0.0, 1.0)
+        val dislikedLikeness = ctx.dislikedFeatures.maxOfOrNull { jaccard(own, it) } ?: 0.0
+        val dislikedShare = ((dislikedLikeness - config.dislikeLikenessFrom) / (1 - config.dislikeLikenessFrom)).coerceAtLeast(0.0)
+        return (learned + declared - config.dislikeSimilarityPenalty * dislikedShare)
+            .coerceIn(-config.dislikeSimilarityPenalty, 1.0)
+    }
+
+    /**
+     * How well a recipe with the features [own] fits everything else the user liked or cooked: the
+     * share of the other sources' weight with its cuisine, its most common main ingredient and its
+     * tags on average, scaled by how much there is to learn from.
+     */
+    private fun profileComponent(recipeId: String, own: Set<String>, ctx: Context): Double {
+        // The recipe's own weight is left out, so cooking it does not count twice.
+        val ownWeight = ctx.tasteSources[recipeId] ?: 0.0
+        val total = ctx.sourceWeight - ownWeight
+        if (total <= PROFILE_EPSILON) return 0.0
+        fun share(feature: String) = ((ctx.featureWeights[feature] ?: 0.0) - ownWeight).coerceAtLeast(0.0) / total
+
+        val cuisine = own.filter { it.startsWith(CUISINE) }.maxOfOrNull(::share) ?: 0.0
+        val main = own.filter { it.startsWith(MAIN) }.maxOfOrNull(::share) ?: 0.0
+        val tags = own.filter { it.startsWith(TAG) }.map(::share).takeIf { it.isNotEmpty() }?.average() ?: 0.0
+        val confidence = total / (total + config.profileConfidenceHalf)
+        return confidence *
+            (config.profileCuisinePoints * cuisine + config.profileMainPoints * main + config.profileTagPoints * tags)
     }
 
     private fun macroComponent(kcal: Double, proteinPer100Kcal: Double, ctx: Context): Double {
@@ -227,14 +297,16 @@ class RecipeMatcher(
         }
 
         if (preferences.mealPrep && RecipeTag.MEAL_PREP in recipe.tags) points += config.mealPrepBonus
+        if (recipe.id in ctx.recentlyCooked) points -= config.recentCookPenalty
         return points
     }
 
     private fun featuresOf(recipe: Recipe): Set<String> = buildSet {
-        add("cuisine:${recipe.cuisine}")
-        recipe.tags.forEach { add("tag:$it") }
-        recipe.computedTags.filter { it in SIMILARITY_TAGS }.forEach { add("tag:$it") }
-        recipe.ingredients.filter { !it.optional && it.role == IngredientRole.MAIN }.forEach { add("main:${it.ingredientId}") }
+        add("$CUISINE${recipe.cuisine}")
+        recipe.mealTypes.forEach { add("$MEAL$it") }
+        recipe.tags.forEach { add("$TAG$it") }
+        recipe.computedTags.filter { it in SIMILARITY_TAGS }.forEach { add("$TAG$it") }
+        recipe.ingredients.filter { !it.optional && it.role == IngredientRole.MAIN }.forEach { add("$MAIN${it.ingredientId}") }
     }
 
     private fun jaccard(a: Set<String>, b: Set<String>): Double {
@@ -245,6 +317,12 @@ class RecipeMatcher(
     private fun ingredient(id: String): Ingredient = catalog.ingredient(id)
 
     private companion object {
+        const val CUISINE = "cuisine:"
+        const val TAG = "tag:"
+        const val MAIN = "main:"
+        const val MEAL = "meal:"
+        const val PROFILE_EPSILON = 1e-9
+
         val SIMILARITY_TAGS = setOf(
             ComputedTag.VEGAN,
             ComputedTag.VEGETARIAN,
