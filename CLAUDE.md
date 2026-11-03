@@ -108,8 +108,9 @@ Spark plan only: no Cloud Functions, no Cloud Storage. Package `sk.matej.spajza`
 - `./gradlew :app:assembleDebug`, `./gradlew :app:lintDebug` — need the Android SDK (CI)
 - Firestore rules: `firestore.rules`, deployed with the Rules API (create a ruleset, then update the
   `cloud.firestore` release) during an owner gcloud login, or pasted into the console by the owner.
-  Proper emulator rules tests are Phase 3; until then check changes ad hoc with
-  `@firebase/rules-unit-testing` in the scratchpad.
+- `cd firestore-tests && npm ci && npm test` — rules tests (`node:test` + `@firebase/rules-unit-testing`)
+  in the Firestore emulator, which needs Java; CI runs them in the `firestore-rules` job. Every rules
+  change comes with tests there.
 
 ## Conventions
 - Domain logic: tests first; ViewModels and domain tested with fakes, not Firebase mocks.

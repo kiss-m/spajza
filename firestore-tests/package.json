@@ -1,0 +1,17 @@
+{
+  "name": "spajza-firestore-tests",
+  "private": true,
+  "type": "module",
+  "description": "Tests of firestore.rules against the Firestore emulator.",
+  "scripts": {
+    "test": "firebase emulators:exec --config ../firebase.json --only firestore --project demo-spajza \"node --test --test-concurrency=1 --test-reporter=spec --test-reporter-destination=stdout --test-reporter=./annotations.mjs --test-reporter-destination=stdout\""
+  },
+  "devDependencies": {
+    "@firebase/rules-unit-testing": "6.0.0",
+    "firebase": "13.2.0",
+    "firebase-tools": "15.34.2"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

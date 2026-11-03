@@ -92,3 +92,37 @@ jobs:
           name: test-reports
           path: '**/build/reports/tests/'
           if-no-files-found: ignore
+
+  firestore-rules:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    defaults:
+      run:
+        working-directory: firestore-tests
+    steps:
+      - uses: actions/checkout@v7
+
+      # The Firestore emulator runs on Java.
+      - uses: actions/setup-java@v6
+        with:
+          distribution: temurin
+          java-version: 21
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: firestore-tests/package-lock.json
+
+      - name: Cache the Firestore emulator
+        uses: actions/cache@v6
+        with:
+          path: ~/.cache/firebase/emulators
+          key: firebase-emulators-${{ hashFiles('firestore-tests/package-lock.json') }}
+
+      - name: Install
+        run: npm ci --no-audit --no-fund
+
+      # Failed tests and a summary become annotations (firestore-tests/annotations.mjs).
+      - name: Rules tests
+        run: npm test
