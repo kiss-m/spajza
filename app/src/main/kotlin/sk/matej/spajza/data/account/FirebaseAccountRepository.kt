@@ -11,16 +11,19 @@ import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.Source
 import kotlinx.coroutines.tasks.await
 import sk.matej.spajza.data.firestore.Collections
+import sk.matej.spajza.data.photos.RecipePhotoStore
 import sk.matej.spajza.domain.repository.AccountRepository
 
 /**
- * Deletes everything the user owns. Unlike normal writes these calls are awaited: deletion needs
- * a connection, and the account itself is deleted only after all data is gone.
+ * Deletes everything the user owns, including recipe photos on this phone. Unlike normal writes
+ * these calls are awaited: deletion needs a connection, and the account itself is deleted only
+ * after all data is gone.
  */
 class FirebaseAccountRepository(
     private val context: Context,
     private val auth: FirebaseAuth,
     private val db: FirebaseFirestore,
+    private val photos: RecipePhotoStore,
 ) : AccountRepository {
 
     override suspend fun deleteAccount(uid: String, idToken: String): Result<Unit> = runCatching {
@@ -36,6 +39,8 @@ class FirebaseAccountRepository(
 
         user.delete().await()
         runCatching { CredentialManager.create(context).clearCredentialState(ClearCredentialStateRequest()) }
+        // Own recipe photos live only on this phone (D14).
+        runCatching { photos.clear() }
         Unit
     }
 

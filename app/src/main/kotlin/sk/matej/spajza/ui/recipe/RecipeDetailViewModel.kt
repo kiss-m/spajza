@@ -1,5 +1,6 @@
 package sk.matej.spajza.ui.recipe
 
+import android.net.Uri
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -16,6 +17,7 @@ import kotlinx.coroutines.flow.flowOn
 import kotlinx.coroutines.flow.receiveAsFlow
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
+import sk.matej.spajza.data.photos.RecipePhotoStore
 import sk.matej.spajza.domain.catalog.Catalog
 import sk.matej.spajza.domain.matching.RecipeMatch
 import sk.matej.spajza.domain.matching.RecipeMatcher
@@ -37,6 +39,7 @@ import sk.matej.spajza.domain.usecase.AddToPlanUseCase
 import sk.matej.spajza.domain.usecase.CookUndo
 import sk.matej.spajza.ui.navigation.RecipeDestination
 import sk.matej.spajza.ui.plan.AddToPlanDraft
+import java.io.File
 import java.time.Clock
 import java.time.LocalDate
 import javax.inject.Inject
@@ -53,6 +56,11 @@ sealed interface DetailEvent {
 
     /** An own recipe was deleted; the screen closes. */
     data object Deleted : DetailEvent
+
+    data object PhotoSaved : DetailEvent
+
+    /** The picked picture could not be read or saved. */
+    data object PhotoFailed : DetailEvent
 }
 
 @HiltViewModel
@@ -64,6 +72,7 @@ class RecipeDetailViewModel @Inject constructor(
     private val ownRecipes: OwnRecipeRepository,
     private val plans: MealPlanRepository,
     private val cooking: RecipeCooking,
+    private val photoStore: RecipePhotoStore,
     private val clock: Clock,
 ) : ViewModel() {
     private val route = savedStateHandle.toRoute<RecipeDestination>()
@@ -107,6 +116,10 @@ class RecipeDetailViewModel @Inject constructor(
     }
         .flowOn(Dispatchers.Default)
         .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5_000), RecipeDetailUiState())
+
+    /** Own photos of this recipe on this phone, newest first (D14). */
+    val photos: StateFlow<List<File>> = photoStore.photos(recipeId)
+        .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5_000), emptyList())
 
     private fun matcherFor(catalog: Catalog): RecipeMatcher {
         val cached = matcher
@@ -175,15 +188,28 @@ class RecipeDetailViewModel @Inject constructor(
         }
     }
 
-    /** Deletes an own recipe for the whole household. */
+    /** Deletes an own recipe for the whole household, and its photos on this phone. */
     fun onDelete() {
         val ownId = OwnRecipes.ownId(recipeId) ?: return
         val session = home.session.value ?: return
         deleting.value = true
         viewModelScope.launch {
             ownRecipes.delete(session.householdId, ownId)
+            photoStore.deleteAll(recipeId)
             events.send(DetailEvent.Deleted)
         }
+    }
+
+    /** Saves the picture at [source] (camera or gallery) as the recipe's newest photo. */
+    fun onAddPhoto(source: Uri) {
+        viewModelScope.launch {
+            val saved = photoStore.add(recipeId, source)
+            events.send(if (saved) DetailEvent.PhotoSaved else DetailEvent.PhotoFailed)
+        }
+    }
+
+    fun onDeletePhoto(photo: File) {
+        viewModelScope.launch { photoStore.delete(recipeId, photo) }
     }
 
     companion object {

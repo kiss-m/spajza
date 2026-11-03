@@ -36,6 +36,7 @@ import sk.matej.spajza.data.firestore.FirestoreShoppingRepository
 import sk.matej.spajza.data.firestore.FirestoreUserRepository
 import sk.matej.spajza.data.ocr.MlKitTextReader
 import sk.matej.spajza.data.off.OpenFoodFactsClient
+import sk.matej.spajza.data.photos.RecipePhotoStore
 import sk.matej.spajza.data.settings.DataStoreDeviceSettingsRepository
 import sk.matej.spajza.data.web.WebRecipeImporter
 import sk.matej.spajza.notifications.WorkManagerExpiryScheduler
@@ -188,8 +189,16 @@ object AppModule {
 
     @Provides
     @Singleton
-    fun accountRepository(@ApplicationContext context: Context, auth: FirebaseAuth, db: FirebaseFirestore): AccountRepository =
-        FirebaseAccountRepository(context, auth, db)
+    fun recipePhotoStore(@ApplicationContext context: Context): RecipePhotoStore = RecipePhotoStore(context)
+
+    @Provides
+    @Singleton
+    fun accountRepository(
+        @ApplicationContext context: Context,
+        auth: FirebaseAuth,
+        db: FirebaseFirestore,
+        photos: RecipePhotoStore,
+    ): AccountRepository = FirebaseAccountRepository(context, auth, db, photos)
 
     @Provides
     @Singleton

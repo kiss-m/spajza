@@ -28,7 +28,7 @@ import sk.matej.spajza.ui.common.currentLanguage
 import sk.matej.spajza.ui.common.durationText
 import sk.matej.spajza.ui.common.text
 import sk.matej.spajza.ui.components.MacroLine
-import sk.matej.spajza.ui.components.RecipePlaceholder
+import sk.matej.spajza.ui.components.RecipeImage
 import sk.matej.spajza.ui.components.SpajzaIcons
 
 /** A card in the horizontal "Môžeš uvariť hneď" and "Treba dokúpiť" rows. */
@@ -37,7 +37,7 @@ fun RecipeCard(model: RecipeCardModel, onClick: () -> Unit, modifier: Modifier =
     val language = currentLanguage()
     Card(onClick = onClick, modifier = modifier.width(244.dp)) {
         Box {
-            RecipePlaceholder(model.cuisine, Modifier.fillMaxWidth().height(96.dp))
+            RecipeImage(model.recipeId, model.cuisine, Modifier.fillMaxWidth().height(96.dp))
             if (model.favorite) {
                 Icon(
                     Icons.Filled.Favorite,
@@ -75,7 +75,7 @@ fun RecipeCard(model: RecipeCardModel, onClick: () -> Unit, modifier: Modifier =
 fun RecipeListItem(model: RecipeCardModel, onClick: () -> Unit, modifier: Modifier = Modifier) {
     Card(onClick = onClick, modifier = modifier.fillMaxWidth()) {
         Row(verticalAlignment = Alignment.CenterVertically) {
-            RecipePlaceholder(model.cuisine, Modifier.size(88.dp), iconSize = 28.dp)
+            RecipeImage(model.recipeId, model.cuisine, Modifier.size(88.dp), iconSize = 28.dp)
             Column(Modifier.padding(12.dp).weight(1f), verticalArrangement = Arrangement.spacedBy(4.dp)) {
                 Text(model.title.text(), style = MaterialTheme.typography.titleSmall, maxLines = 2, overflow = TextOverflow.Ellipsis)
                 MacroLine(model.kcal, model.protein, model.carbs, model.fat)

@@ -59,7 +59,7 @@ import sk.matej.spajza.ui.common.currentLocale
 import sk.matej.spajza.ui.common.labelRes
 import sk.matej.spajza.ui.common.text
 import sk.matej.spajza.ui.components.EmptyState
-import sk.matej.spajza.ui.components.RecipePlaceholder
+import sk.matej.spajza.ui.components.RecipeImage
 import sk.matej.spajza.ui.components.Stepper
 import java.time.LocalDate
 
@@ -252,7 +252,7 @@ private fun PlanEntryCard(
         Row(Modifier.padding(start = 12.dp, top = 12.dp, end = 4.dp), verticalAlignment = Alignment.Top) {
             val cuisine = model.cuisine
             if (cuisine != null) {
-                RecipePlaceholder(cuisine, Modifier.size(56.dp), iconSize = 24.dp)
+                RecipeImage(model.entry.recipeId, cuisine, Modifier.size(56.dp), iconSize = 24.dp)
             } else {
                 Surface(shape = MaterialTheme.shapes.medium, color = MaterialTheme.colorScheme.surfaceVariant, modifier = Modifier.size(56.dp)) {}
             }

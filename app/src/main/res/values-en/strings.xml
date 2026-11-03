@@ -2,6 +2,7 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Common -->
     <string name="action_cancel">Cancel</string>
+    <string name="action_close">Close</string>
     <string name="action_save">Save</string>
     <string name="action_add">Add</string>
     <string name="action_done">Done</string>
@@ -562,4 +563,14 @@
     <string name="plan_open_plan">Open plan</string>
     <string name="plan_pick_title">Choose a recipe</string>
     <string name="plan_pick_for_day">for %1$s</string>
+
+    <!-- Own recipe photos (only on this phone) -->
+    <string name="detail_add_photo">Add a photo</string>
+    <string name="detail_photo">Photo of the dish</string>
+    <string name="detail_photo_open">Show photo</string>
+    <string name="detail_photo_source_body">The photo stays on this phone only; others in the household won\'t see it. The newest photo replaces the recipe\'s picture.</string>
+    <string name="detail_photo_saved">Photo saved on this phone</string>
+    <string name="detail_photo_failed">Couldn\'t save the photo</string>
+    <string name="detail_photo_delete_title">Delete this photo?</string>
+    <string name="detail_photo_delete_body">The photo is only on this phone, so it can\'t be restored.</string>
 </resources>

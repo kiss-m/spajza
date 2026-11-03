@@ -1,5 +1,6 @@
 package sk.matej.spajza.ui.recipe
 
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -9,10 +10,12 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.material.icons.Icons
@@ -29,6 +32,7 @@ import androidx.compose.material3.Button
 import androidx.compose.material3.Card
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.FilledTonalIconButton
 import androidx.compose.material3.FilterChip
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -48,32 +52,43 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.rememberUpdatedState
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalResources
 import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.window.Dialog
+import androidx.compose.ui.window.DialogProperties
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import sk.matej.spajza.R
+import kotlinx.coroutines.launch
 import sk.matej.spajza.domain.matching.LineStatus
+import sk.matej.spajza.domain.model.Cuisine
 import sk.matej.spajza.domain.rating.Verdict
 import sk.matej.spajza.ui.common.amountText
 import sk.matej.spajza.ui.common.currentLanguage
 import sk.matej.spajza.ui.common.difficultyLabelRes
 import sk.matej.spajza.ui.common.durationText
 import sk.matej.spajza.ui.common.text
+import sk.matej.spajza.ui.components.PhotoSourceDialog
+import sk.matej.spajza.ui.components.RecipePhoto
 import sk.matej.spajza.ui.components.RecipePlaceholder
 import sk.matej.spajza.ui.components.SectionHeader
 import sk.matej.spajza.ui.components.SpajzaIcons
 import sk.matej.spajza.ui.components.Stepper
+import sk.matej.spajza.ui.components.rememberPhotoPicker
 import sk.matej.spajza.ui.ownrecipe.hostOf
 import sk.matej.spajza.ui.plan.AddToPlanDraft
 import sk.matej.spajza.ui.plan.AddToPlanSheet
+import java.io.File
 import kotlin.math.roundToInt
 
 @Composable
@@ -86,12 +101,21 @@ fun RecipeDetailRoute(
     viewModel: RecipeDetailViewModel = hiltViewModel(),
 ) {
     val state by viewModel.state.collectAsStateWithLifecycle()
+    val photos by viewModel.photos.collectAsStateWithLifecycle()
     val snackbarHostState = remember { SnackbarHostState() }
     val resources by rememberUpdatedState(LocalResources.current)
     val back by rememberUpdatedState(onBack)
     val openPlan by rememberUpdatedState(onOpenPlan)
     var confirmDelete by remember { mutableStateOf(false) }
     var planDraft by remember { mutableStateOf<AddToPlanDraft?>(null) }
+    var choosePhotoSource by remember { mutableStateOf(false) }
+    var shownPhoto by remember { mutableStateOf<File?>(null) }
+    var photoToDelete by remember { mutableStateOf<File?>(null) }
+    val scope = rememberCoroutineScope()
+    val photoPicker = rememberPhotoPicker(
+        onPicked = viewModel::onAddPhoto,
+        onNoCamera = { scope.launch { snackbarHostState.showSnackbar(resources.getString(R.string.receipt_no_camera)) } },
+    )
     LaunchedEffect(viewModel) {
         viewModel.screenEvents.collect { event ->
             when (event) {
@@ -118,11 +142,14 @@ fun RecipeDetailRoute(
                     if (result == SnackbarResult.ActionPerformed) openPlan()
                 }
                 DetailEvent.Deleted -> back()
+                DetailEvent.PhotoSaved -> snackbarHostState.showSnackbar(resources.getString(R.string.detail_photo_saved))
+                DetailEvent.PhotoFailed -> snackbarHostState.showSnackbar(resources.getString(R.string.detail_photo_failed))
             }
         }
     }
     RecipeDetailScreen(
         state = state,
+        photos = photos,
         snackbarHostState = snackbarHostState,
         actions = DetailActions(
             onBack = onBack,
@@ -136,6 +163,8 @@ fun RecipeDetailRoute(
             onEdit = { state.recipe?.let { onEdit(it.id) } },
             onDelete = { confirmDelete = true },
             onAddToPlan = { planDraft = viewModel.planDraft() },
+            onAddPhoto = { choosePhotoSource = true },
+            onOpenPhoto = { shownPhoto = it },
         ),
     )
     val recipe = state.recipe
@@ -150,6 +179,45 @@ fun RecipeDetailRoute(
                 planDraft = null
                 viewModel.onAddToPlan(result)
             },
+        )
+    }
+    if (choosePhotoSource) {
+        PhotoSourceDialog(
+            title = stringResource(R.string.detail_add_photo),
+            body = stringResource(R.string.detail_photo_source_body),
+            onCamera = {
+                choosePhotoSource = false
+                photoPicker.takePhoto()
+            },
+            onGallery = {
+                choosePhotoSource = false
+                photoPicker.pickPhoto()
+            },
+            onDismiss = { choosePhotoSource = false },
+        )
+    }
+    shownPhoto?.let { photo ->
+        PhotoViewer(
+            photo = photo,
+            onDelete = {
+                shownPhoto = null
+                photoToDelete = photo
+            },
+            onDismiss = { shownPhoto = null },
+        )
+    }
+    photoToDelete?.let { photo ->
+        AlertDialog(
+            onDismissRequest = { photoToDelete = null },
+            title = { Text(stringResource(R.string.detail_photo_delete_title)) },
+            text = { Text(stringResource(R.string.detail_photo_delete_body)) },
+            confirmButton = {
+                TextButton(onClick = {
+                    photoToDelete = null
+                    viewModel.onDeletePhoto(photo)
+                }) { Text(stringResource(R.string.action_delete)) }
+            },
+            dismissButton = { TextButton(onClick = { photoToDelete = null }) { Text(stringResource(R.string.action_cancel)) } },
         )
     }
     if (confirmDelete) {
@@ -180,11 +248,13 @@ class DetailActions(
     val onEdit: () -> Unit,
     val onDelete: () -> Unit,
     val onAddToPlan: () -> Unit,
+    val onAddPhoto: () -> Unit,
+    val onOpenPhoto: (File) -> Unit,
 )
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun RecipeDetailScreen(state: RecipeDetailUiState, snackbarHostState: SnackbarHostState, actions: DetailActions) {
+fun RecipeDetailScreen(state: RecipeDetailUiState, photos: List<File>, snackbarHostState: SnackbarHostState, actions: DetailActions) {
     val recipe = state.recipe
     Scaffold(
         topBar = {
@@ -239,7 +309,7 @@ fun RecipeDetailScreen(state: RecipeDetailUiState, snackbarHostState: SnackbarHo
                 contentPadding = PaddingValues(top = padding.calculateTopPadding(), bottom = padding.calculateBottomPadding() + 16.dp),
                 verticalArrangement = Arrangement.spacedBy(12.dp),
             ) {
-                item { RecipePlaceholder(recipe.cuisine, Modifier.fillMaxWidth().height(160.dp), iconSize = 56.dp) }
+                item { PhotoHeader(recipe.cuisine, photos, actions) }
                 item { Header(state) }
                 item { NutritionCard(state) }
                 item { ServingsAndRating(state, actions) }
@@ -270,6 +340,65 @@ fun RecipeDetailScreen(state: RecipeDetailUiState, snackbarHostState: SnackbarHo
                             }
                         }
                     }
+                }
+            }
+        }
+    }
+}
+
+/** The newest own photo (or the generated picture), a camera button and the other photos. */
+@Composable
+private fun PhotoHeader(cuisine: Cuisine, photos: List<File>, actions: DetailActions) {
+    val cover = photos.firstOrNull()
+    val photoLabel = stringResource(R.string.detail_photo)
+    val openLabel = stringResource(R.string.detail_photo_open)
+    Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+        Box(Modifier.fillMaxWidth().height(if (cover == null) 160.dp else 240.dp)) {
+            if (cover == null) {
+                RecipePlaceholder(cuisine, Modifier.matchParentSize(), iconSize = 56.dp)
+            } else {
+                RecipePhoto(
+                    cover,
+                    Modifier.matchParentSize().clickable(onClickLabel = openLabel) { actions.onOpenPhoto(cover) },
+                    contentDescription = photoLabel,
+                )
+            }
+            FilledTonalIconButton(onClick = actions.onAddPhoto, modifier = Modifier.align(Alignment.BottomEnd).padding(8.dp)) {
+                Icon(SpajzaIcons.PhotoCamera, contentDescription = stringResource(R.string.detail_add_photo))
+            }
+        }
+        if (photos.size > 1) {
+            LazyRow(contentPadding = PaddingValues(horizontal = 16.dp), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                items(photos, key = { it.name }) { photo ->
+                    RecipePhoto(
+                        photo,
+                        Modifier
+                            .size(64.dp)
+                            .clip(MaterialTheme.shapes.small)
+                            .clickable(onClickLabel = openLabel) { actions.onOpenPhoto(photo) },
+                        contentDescription = photoLabel,
+                    )
+                }
+            }
+        }
+    }
+}
+
+/** One photo, whole, with a way to delete it. */
+@Composable
+private fun PhotoViewer(photo: File, onDelete: () -> Unit, onDismiss: () -> Unit) {
+    Dialog(onDismissRequest = onDismiss, properties = DialogProperties(usePlatformDefaultWidth = false)) {
+        Surface(shape = MaterialTheme.shapes.large, modifier = Modifier.fillMaxWidth().padding(16.dp)) {
+            Column {
+                RecipePhoto(
+                    photo,
+                    Modifier.fillMaxWidth().heightIn(min = 200.dp, max = 560.dp),
+                    contentDescription = stringResource(R.string.detail_photo),
+                    contentScale = ContentScale.Fit,
+                )
+                Row(Modifier.fillMaxWidth().padding(8.dp), horizontalArrangement = Arrangement.End) {
+                    TextButton(onClick = onDelete) { Text(stringResource(R.string.action_delete)) }
+                    TextButton(onClick = onDismiss) { Text(stringResource(R.string.action_close)) }
                 }
             }
         }
