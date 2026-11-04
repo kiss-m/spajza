@@ -485,6 +485,15 @@
     <string name="editor_description">Description, optional</string>
     <string name="editor_minutes">Total time (min)</string>
     <string name="editor_meals">Good for</string>
+    <string name="editor_course">Chapter in the recipe book</string>
+    <string name="course_breakfast">Breakfast</string>
+    <string name="course_soup">Soup</string>
+    <string name="course_salad">Salad</string>
+    <string name="course_main">Main course</string>
+    <string name="course_side">Side dish</string>
+    <string name="course_snack">Snack or starter</string>
+    <string name="course_dessert">Dessert</string>
+    <string name="course_drink">Drink</string>
     <string name="editor_ingredients_hint">200 g pasta\n2 garlic cloves\nsalt to taste</string>
     <string name="editor_ingredients_help">One ingredient per line. Tap a line below to pick the ingredient yourself.</string>
     <string name="editor_steps_hint">Chop the garlic finely.\nBoil the pasta for 10 minutes.</string>
@@ -530,4 +539,28 @@
     <string name="detail_photo_failed">Couldn\'t save the photo</string>
     <string name="detail_photo_delete_title">Delete this photo?</string>
     <string name="detail_photo_delete_body">The photo is only on this phone, so it can\'t be restored.</string>
+
+    <!-- Recipe book -->
+    <string name="nav_book">Recipes</string>
+    <string name="book_title">Recipe book</string>
+    <string name="book_search_hint">Search recipes or ingredients</string>
+    <string name="book_add_recipe">Add your own recipe</string>
+    <string name="book_no_results">Nothing found. Try another word.</string>
+    <string name="book_jump_to">Go to chapter</string>
+    <string name="book_main_dishes">Main courses</string>
+    <string name="book_chapter_favorites">Favorites</string>
+    <string name="book_chapter_own">Our recipes</string>
+    <string name="book_chapter_breakfast">Breakfast</string>
+    <string name="book_chapter_soup">Soups</string>
+    <string name="book_chapter_salad">Salads</string>
+    <string name="book_chapter_poultry">Poultry</string>
+    <string name="book_chapter_pork">Pork</string>
+    <string name="book_chapter_beef_lamb">Beef and lamb</string>
+    <string name="book_chapter_fish">Fish and seafood</string>
+    <string name="book_chapter_meatless">Meatless</string>
+    <string name="book_chapter_side">Sides</string>
+    <string name="book_chapter_snack">Snacks and starters</string>
+    <string name="book_chapter_dessert">Desserts</string>
+    <string name="book_chapter_drink">Drinks</string>
+    <string name="book_recipe_meta" tools:ignore="PluralsCandidate">%1$d min · %2$d kcal</string>
 </resources>

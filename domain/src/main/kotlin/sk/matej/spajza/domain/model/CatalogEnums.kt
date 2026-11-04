@@ -75,6 +75,33 @@ enum class Cuisine {
 
 enum class MealType { BREAKFAST, LUNCH, DINNER, SNACK, DESSERT }
 
+/**
+ * The chapter of the recipe book a recipe belongs to (D15), in reading order. Catalog recipes name
+ * one in the seed; an own recipe may leave it out and gets [forMealTypes].
+ */
+enum class Course {
+    BREAKFAST,
+    SOUP,
+    SALAD,
+    MAIN,
+    SIDE,
+    SNACK,
+    DESSERT,
+    DRINK,
+    ;
+
+    companion object {
+        /** The chapter for a recipe that names none: lunch or dinner make a main, then breakfast, dessert, snack. */
+        fun forMealTypes(mealTypes: Set<MealType>): Course = when {
+            MealType.LUNCH in mealTypes || MealType.DINNER in mealTypes -> MAIN
+            MealType.BREAKFAST in mealTypes -> BREAKFAST
+            MealType.DESSERT in mealTypes -> DESSERT
+            MealType.SNACK in mealTypes -> SNACK
+            else -> MAIN
+        }
+    }
+}
+
 /** Kitchen equipment a recipe may require. Pots, pans and knives are assumed. */
 enum class Equipment {
     STOVE,

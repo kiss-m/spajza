@@ -1,6 +1,7 @@
 package sk.matej.spajza.ui.ownrecipe
 
 import sk.matej.spajza.domain.catalog.Catalog
+import sk.matej.spajza.domain.model.Course
 import sk.matej.spajza.domain.model.MealType
 import sk.matej.spajza.domain.own.OwnRecipe
 import sk.matej.spajza.domain.own.OwnRecipes
@@ -25,6 +26,8 @@ data class RecipeForm(
     val servings: Int = OwnRecipe.DEFAULT_SERVINGS,
     val minutesText: String = OwnRecipe.DEFAULT_MINUTES.toString(),
     val mealTypes: Set<MealType> = OwnRecipe.DEFAULT_MEAL_TYPES,
+    /** The chosen recipe book chapter; null follows the meal types. */
+    val course: Course? = null,
     val ingredientsText: String = "",
     val stepsText: String = "",
     /** Ingredients picked by hand, by line text; null marks a line as not in the catalog. */
@@ -36,6 +39,9 @@ data class RecipeForm(
 ) {
     val canSave: Boolean get() = title.isNotBlank()
 
+    /** The chapter the recipe will be in: the chosen one, or the one its meal types suggest. */
+    val shownCourse: Course get() = course ?: Course.forMealTypes(mealTypes.ifEmpty { OwnRecipe.DEFAULT_MEAL_TYPES })
+
     fun toRecipe(matcher: RecipeLineMatcher): OwnRecipe = (base ?: OwnRecipe(id = id, title = "")).copy(
         id = id,
         title = title.trim(),
@@ -43,6 +49,7 @@ data class RecipeForm(
         servings = servings.coerceIn(MIN_SERVINGS, MAX_SERVINGS),
         totalTimeMin = parseNumber(minutesText)?.toInt()?.takeIf { it > 0 } ?: OwnRecipe.DEFAULT_MINUTES,
         mealTypes = mealTypes.ifEmpty { OwnRecipe.DEFAULT_MEAL_TYPES },
+        course = course,
         ingredients = matcher.lines(ingredientsText.lines()).map { line ->
             if (line.text in picks) line.copy(ingredientId = picks[line.text]) else line
         },
@@ -62,6 +69,7 @@ data class RecipeForm(
             servings = (draft.servings ?: OwnRecipe.DEFAULT_SERVINGS).coerceIn(MIN_SERVINGS, MAX_SERVINGS),
             minutesText = (draft.totalTimeMin ?: OwnRecipe.DEFAULT_MINUTES).toString(),
             mealTypes = draft.mealTypes.ifEmpty { OwnRecipe.DEFAULT_MEAL_TYPES },
+            course = draft.course,
             ingredientsText = draft.ingredientLines.joinToString("\n"),
             stepsText = draft.steps.joinToString("\n"),
             source = draft.source,
@@ -75,6 +83,7 @@ data class RecipeForm(
             servings = recipe.servings,
             minutesText = recipe.totalTimeMin.toString(),
             mealTypes = recipe.mealTypes,
+            course = recipe.course,
             ingredientsText = recipe.ingredients.joinToString("\n") { it.text },
             stepsText = recipe.steps.joinToString("\n") { it.text },
             // Lines matched by hand differ from what the matcher finds on its own.

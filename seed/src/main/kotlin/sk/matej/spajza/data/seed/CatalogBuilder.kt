@@ -186,6 +186,7 @@ class CatalogBuilder(private val thresholds: TagThresholds = TagThresholds()) {
             pairsWith = dto.pairsWith,
             ingredients = lines,
             steps = steps,
+            course = dto.course,
         )
     }
 

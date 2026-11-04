@@ -2,10 +2,12 @@ package sk.matej.spajza.domain.own
 
 import sk.matej.spajza.domain.catalog.Catalog
 import sk.matej.spajza.domain.model.ComputedTag
+import sk.matej.spajza.domain.model.Course
 import sk.matej.spajza.domain.model.DietFlag
 import sk.matej.spajza.domain.model.IngredientCategory
 import sk.matej.spajza.domain.model.IngredientRole
 import sk.matej.spajza.domain.model.LocalizedText
+import sk.matej.spajza.domain.model.MealType
 import sk.matej.spajza.domain.model.PantryUnit
 import sk.matej.spajza.domain.nutrition.NutritionCalculator
 import sk.matej.spajza.domain.testing.ingredient
@@ -57,6 +59,13 @@ class OwnRecipesTest {
         assertEquals("abc", OwnRecipes.ownId(recipe.id))
         assertEquals(null, OwnRecipes.ownId("goulash"))
         assertEquals(catalog.ingredients, merged.ingredients)
+    }
+
+    @Test
+    fun `an own recipe keeps its chosen chapter or takes one from its meal types`() {
+        assertEquals(Course.MAIN, OwnRecipes.toRecipe(curry, catalog).course, "lunch and dinner make a main")
+        assertEquals(Course.SOUP, OwnRecipes.toRecipe(curry.copy(course = Course.SOUP), catalog).course)
+        assertEquals(Course.DESSERT, OwnRecipes.toRecipe(curry.copy(mealTypes = setOf(MealType.DESSERT)), catalog).course)
     }
 
     @Test

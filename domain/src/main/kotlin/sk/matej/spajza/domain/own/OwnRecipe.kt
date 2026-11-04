@@ -3,6 +3,7 @@ package sk.matej.spajza.domain.own
 import sk.matej.spajza.domain.catalog.Catalog
 import sk.matej.spajza.domain.catalog.CatalogTagger
 import sk.matej.spajza.domain.model.ComputedTag
+import sk.matej.spajza.domain.model.Course
 import sk.matej.spajza.domain.model.Cuisine
 import sk.matej.spajza.domain.model.Equipment
 import sk.matej.spajza.domain.model.Ingredient
@@ -49,6 +50,8 @@ data class OwnRecipe(
     val difficulty: Int = 1,
     val cuisine: Cuisine = Cuisine.INTERNATIONAL,
     val mealTypes: Set<MealType> = DEFAULT_MEAL_TYPES,
+    /** The recipe book chapter; null when not chosen, then it follows the meal types. */
+    val course: Course? = null,
     val equipment: Set<Equipment> = emptySet(),
     val tags: Set<RecipeTag> = emptySet(),
     val ingredients: List<OwnIngredientLine> = emptyList(),
@@ -100,6 +103,7 @@ object OwnRecipes {
             pairsWith = emptyList(),
             ingredients = own.ingredients.mapNotNull { line -> ingredientOf(line, catalog)?.let { weigh(line, it) } },
             steps = own.steps.mapIndexed { index, step -> RecipeStep(index, LocalizedText.same(step.text), step.timerSeconds) },
+            course = own.course ?: Course.forMealTypes(own.mealTypes),
         )
         val tags = CatalogTagger(catalog.ingredientsById::get).computeTags(recipe)
         // A line the app cannot see might be meat or sugar, so only the time-based tag stays safe.

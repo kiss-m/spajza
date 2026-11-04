@@ -1,6 +1,7 @@
 package sk.matej.spajza.data.web
 
 import org.junit.jupiter.api.Test
+import sk.matej.spajza.domain.model.Course
 import sk.matej.spajza.domain.model.MealType
 import sk.matej.spajza.domain.own.RecipeSource
 import kotlin.test.assertEquals
@@ -41,6 +42,7 @@ class RecipePageParserTest {
         assertEquals(listOf("1 kg hovädzieho pliecka", "3 cibule", "2 PL sladkej papriky"), draft.ingredientLines)
         assertEquals(listOf("Mäso nakrájajte na kocky.", "Opečte ho na masti.", "Duste 2 hodiny."), draft.steps)
         assertEquals(setOf(MealType.LUNCH, MealType.DINNER), draft.mealTypes)
+        assertEquals(Course.MAIN, draft.course)
         assertEquals(RecipeSource.URL, draft.source)
         assertEquals(url, draft.sourceUrl)
     }
@@ -59,6 +61,18 @@ class RecipePageParserTest {
         assertEquals(listOf("2 vajcia", "500 ml mlieka"), draft.ingredientLines)
         assertEquals(listOf("Vymiešajte cesto.", "Pečte na panvici.", "Podávajte s džemom."), draft.steps)
         assertEquals(setOf(MealType.DESSERT), draft.mealTypes)
+        assertEquals(Course.DESSERT, draft.course)
+    }
+
+    @Test
+    fun `a soup category files the recipe among soups, and no category leaves the chapter open`() {
+        val soup = page(
+            """{"@type":"Recipe","name":"Kapustnica","recipeIngredient":["500 g kyslej kapusty"],
+               "recipeInstructions":"Var 30 minút.","recipeCategory":["Polievky","Hlavné jedlá"]}""",
+        )
+        assertEquals(Course.SOUP, RecipePageParser.parse(soup, url)!!.course)
+        val plain = page("""{"@type":"Recipe","name":"Chlieb","recipeIngredient":["500 g múky"]}""")
+        assertEquals(null, RecipePageParser.parse(plain, url)!!.course)
     }
 
     @Test

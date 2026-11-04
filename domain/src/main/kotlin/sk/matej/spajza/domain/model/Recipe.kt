@@ -19,6 +19,8 @@ data class Recipe(
     val pairsWith: List<String>,
     val ingredients: List<RecipeIngredient>,
     val steps: List<RecipeStep>,
+    /** The recipe book chapter (D15). */
+    val course: Course = Course.MAIN,
 )
 
 data class RecipeIngredient(

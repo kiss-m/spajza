@@ -12,8 +12,9 @@ import androidx.room3.RoomDatabase
         SubstitutionEntity::class,
         CatalogMetaEntity::class,
     ],
-    version = 1,
-    // The catalog is rebuilt from the bundled seed, so there is no schema history to keep.
+    // 2: recipes have a recipe book chapter (course). The catalog is rebuilt from the bundled seed,
+    // so a new version just drops the tables and imports again; there is no schema history to keep.
+    version = 2,
     exportSchema = false,
 )
 abstract class CatalogDatabase : RoomDatabase() {

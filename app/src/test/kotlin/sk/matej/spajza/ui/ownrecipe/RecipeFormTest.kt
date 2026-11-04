@@ -2,6 +2,7 @@ package sk.matej.spajza.ui.ownrecipe
 
 import org.junit.jupiter.api.Test
 import sk.matej.spajza.domain.matching.MatcherFixture
+import sk.matej.spajza.domain.model.Course
 import sk.matej.spajza.domain.model.MealType
 import sk.matej.spajza.domain.own.OwnRecipe
 import sk.matej.spajza.domain.own.RecipeDraft
@@ -37,6 +38,18 @@ class RecipeFormTest {
         assertEquals(MeasureUnit.G, recipe.ingredients[0].unit)
         assertEquals(listOf("Boil the pasta for 10 minutes.", "Serve at once."), recipe.steps.map { it.text })
         assertEquals(listOf(600, null), recipe.steps.map { it.timerSeconds })
+    }
+
+    @Test
+    fun `the chapter follows the meal types until one is chosen`() {
+        assertNull(form.toRecipe(matcher).course, "not chosen, so stored as none")
+        assertEquals(Course.MAIN, form.shownCourse)
+        assertEquals(Course.DESSERT, form.copy(mealTypes = setOf(MealType.DESSERT)).shownCourse)
+
+        val soup = form.copy(course = Course.SOUP)
+        assertEquals(Course.SOUP, soup.shownCourse)
+        assertEquals(Course.SOUP, RecipeForm.of(soup.toRecipe(matcher), matcher).course, "kept when editing again")
+        assertEquals(Course.SALAD, RecipeForm.of(RecipeDraft(title = "Šalát", course = Course.SALAD), "r2").course, "an import names it")
     }
 
     @Test

@@ -6,6 +6,7 @@ import sk.matej.spajza.domain.custom.CustomSource
 import sk.matej.spajza.domain.custom.Energy
 import sk.matej.spajza.domain.household.Household
 import sk.matej.spajza.domain.model.Allergen
+import sk.matej.spajza.domain.model.Course
 import sk.matej.spajza.domain.model.Cuisine
 import sk.matej.spajza.domain.model.DietFlag
 import sk.matej.spajza.domain.model.Equipment
@@ -158,6 +159,7 @@ class FirestoreMappersTest {
             difficulty = 2,
             cuisine = Cuisine.SLOVAK_CZECH,
             mealTypes = setOf(MealType.LUNCH),
+            course = Course.SOUP,
             equipment = setOf(Equipment.STOVE),
             ingredients = listOf(
                 OwnIngredientLine("1 kg hovädzieho pliecka", "beef-chuck", 1.0, MeasureUnit.KG),
@@ -171,9 +173,10 @@ class FirestoreMappersTest {
 
         assertEquals(recipe, FirestoreMappers.ownRecipeFrom(recipe.id, asFirestore(FirestoreMappers.ownRecipeTo(recipe))))
         assertNull(FirestoreMappers.ownRecipeFrom("x", mapOf("title" to "")), "a recipe without a title is skipped")
-        val sparse = FirestoreMappers.ownRecipeFrom("y", mapOf("title" to "Rýchlovka", "servings" to 0L, "mealTypes" to listOf("BRUNCH")))!!
+        val sparse = FirestoreMappers.ownRecipeFrom("y", mapOf("title" to "Rýchlovka", "servings" to 0L, "mealTypes" to listOf("BRUNCH"), "course" to "BRUNCH"))!!
         assertEquals(OwnRecipe.DEFAULT_SERVINGS, sparse.servings)
         assertEquals(OwnRecipe.DEFAULT_MEAL_TYPES, sparse.mealTypes, "unknown names from a newer app are skipped")
+        assertNull(sparse.course, "an unknown chapter leaves the choice to the meal types")
     }
 
     private fun asFirestore(data: Map<String, Any?>): Map<String, Any?> = data.mapValues { (_, value) -> firestoreValue(value) }

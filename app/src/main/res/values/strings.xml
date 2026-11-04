@@ -511,6 +511,15 @@
     <string name="editor_description">Popis, nepovinné</string>
     <string name="editor_minutes">Čas celkom (min)</string>
     <string name="editor_meals">Hodí sa na</string>
+    <string name="editor_course">Kapitola v knihe receptov</string>
+    <string name="course_breakfast">Raňajky</string>
+    <string name="course_soup">Polievka</string>
+    <string name="course_salad">Šalát</string>
+    <string name="course_main">Hlavné jedlo</string>
+    <string name="course_side">Príloha</string>
+    <string name="course_snack">Snack alebo predjedlo</string>
+    <string name="course_dessert">Dezert</string>
+    <string name="course_drink">Nápoj</string>
     <string name="editor_ingredients_hint">200 g cestovín\n2 strúčiky cesnaku\nsoľ podľa chuti</string>
     <string name="editor_ingredients_help">Každá surovina na samostatnom riadku. Ťuknutím na riadok nižšie vyberieš surovinu ručne.</string>
     <string name="editor_steps_hint">Cesnak nakrájaj nadrobno.\nCestoviny var 10 minút.</string>
@@ -556,4 +565,28 @@
     <string name="detail_photo_failed">Fotku sa nepodarilo uložiť</string>
     <string name="detail_photo_delete_title">Odstrániť fotku?</string>
     <string name="detail_photo_delete_body">Fotka je len v tomto telefóne, takže sa nedá obnoviť.</string>
+
+    <!-- Recipe book -->
+    <string name="nav_book">Recepty</string>
+    <string name="book_title">Kniha receptov</string>
+    <string name="book_search_hint">Hľadaj recept alebo surovinu</string>
+    <string name="book_add_recipe">Pridať vlastný recept</string>
+    <string name="book_no_results">Nič sme nenašli. Skús iné slovo.</string>
+    <string name="book_jump_to">Prejsť na kapitolu</string>
+    <string name="book_main_dishes">Hlavné jedlá</string>
+    <string name="book_chapter_favorites">Obľúbené</string>
+    <string name="book_chapter_own">Naše recepty</string>
+    <string name="book_chapter_breakfast">Raňajky</string>
+    <string name="book_chapter_soup">Polievky</string>
+    <string name="book_chapter_salad">Šaláty</string>
+    <string name="book_chapter_poultry">Hydina</string>
+    <string name="book_chapter_pork">Bravčové</string>
+    <string name="book_chapter_beef_lamb">Hovädzie a jahňacie</string>
+    <string name="book_chapter_fish">Ryby a morské plody</string>
+    <string name="book_chapter_meatless">Bezmäsité</string>
+    <string name="book_chapter_side">Prílohy</string>
+    <string name="book_chapter_snack">Snacky a predjedlá</string>
+    <string name="book_chapter_dessert">Dezerty</string>
+    <string name="book_chapter_drink">Nápoje</string>
+    <string name="book_recipe_meta" tools:ignore="PluralsCandidate">%1$d min · %2$d kcal</string>
 </resources>

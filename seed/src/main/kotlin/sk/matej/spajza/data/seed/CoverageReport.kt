@@ -1,5 +1,7 @@
 package sk.matej.spajza.data.seed
 
+import sk.matej.spajza.domain.book.BookChapter
+import sk.matej.spajza.domain.book.RecipeBook
 import sk.matej.spajza.domain.catalog.Catalog
 import sk.matej.spajza.domain.model.ComputedTag
 import sk.matej.spajza.domain.model.Cuisine
@@ -56,6 +58,19 @@ object CoverageReport {
             } + listOf(listOf("**total**") + types.map { (_, matches) -> recipes.count(matches).cell() }),
         )
         appendLine()
+        appendLine("## Recipe book chapters × cuisine")
+        appendLine()
+        val book = RecipeBook(catalog.ingredientsById::get)
+        val chapters = BookChapter.entries.filter { it != BookChapter.FAVORITES && it != BookChapter.OWN }
+        val chapterOf = recipes.associateWith(book::chapterOf)
+        table(
+            header = listOf("Cuisine") + chapters.map { it.label() },
+            rows = Cuisine.entries.map { cuisine ->
+                val inCuisine = recipes.filter { it.cuisine == cuisine }
+                listOf(cuisine.label()) + chapters.map { chapter -> inCuisine.count { chapterOf[it] == chapter }.cell() }
+            } + listOf(listOf("**total**") + chapters.map { chapter -> recipes.count { chapterOf[it] == chapter }.cell() }),
+        )
+        appendLine()
         appendLine("## Meal type × type")
         appendLine()
         table(
@@ -97,6 +112,8 @@ object CoverageReport {
     }
 
     private fun Cuisine.label() = name.lowercase().replace('_', ' ')
+
+    private fun BookChapter.label() = name.lowercase().replace('_', ' ')
 
     private fun Int.cell() = if (this == 0) "·" else toString()
 

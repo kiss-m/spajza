@@ -161,3 +161,17 @@ catalog is read-only and rebuilt from the seed, so it never needs data migration
   and delete that subcollection; once no old documents remain, it can leave the rules altogether.
 - The tab's place in the bottom bar goes to "Recepty", a recipe book of the whole catalog plus the
   household's own recipes.
+- Chapters like a cookbook: every recipe has a `course` (`BREAKFAST`, `SOUP`, `SALAD`, `MAIN`, `SIDE`,
+  `SNACK`, `DESSERT`, `DRINK`). It is a required seed field (the 806 recipes were sorted by hand) and
+  a Room column (catalog database version 2, rebuilt from the seed). Own recipes store it as an
+  optional `course` field on `households/{hid}/recipes/{id}` (D12); without one, lunch or dinner make a
+  main, then breakfast, dessert and snack follow the meal types. An imported page's `recipeCategory`
+  suggests it (soup, salad, side dish, …).
+- Mains are split by their meat or fish, derived rather than authored: the heaviest meat or fish line
+  among the main ingredients decides (then among the secondary ones) — poultry, pork, beef and lamb,
+  fish and seafood — and a main without any is "Bezmäsité". Seasonings, stock, sauces and fats do not
+  count even when flagged as meat or fish (fish sauce, lard), so the chapter is a way to browse, not a
+  diet guarantee.
+- "Obľúbené" (the user's favorites) and "Naše recepty" (own recipes) open the book as shortcuts; their
+  recipes also stay in their chapters. Recipes inside a chapter are sorted by title for the app
+  language. The separate "Naše recepty" screen goes away; the book's + button adds own recipes.

@@ -2,7 +2,9 @@ package sk.matej.spajza.ui.common
 
 import androidx.annotation.StringRes
 import sk.matej.spajza.R
+import sk.matej.spajza.domain.book.BookChapter
 import sk.matej.spajza.domain.browse.RecipeType
+import sk.matej.spajza.domain.model.Course
 import sk.matej.spajza.domain.model.Cuisine
 import sk.matej.spajza.domain.model.Equipment
 import sk.matej.spajza.domain.model.IngredientCategory
@@ -53,6 +55,36 @@ fun RecipeType.labelRes(): Int = when (this) {
     RecipeType.LIGHT -> R.string.type_light
     RecipeType.MEAL_PREP -> R.string.type_meal_prep
     RecipeType.ONE_POT -> R.string.type_one_pot
+}
+
+@StringRes
+fun Course.labelRes(): Int = when (this) {
+    Course.BREAKFAST -> R.string.course_breakfast
+    Course.SOUP -> R.string.course_soup
+    Course.SALAD -> R.string.course_salad
+    Course.MAIN -> R.string.course_main
+    Course.SIDE -> R.string.course_side
+    Course.SNACK -> R.string.course_snack
+    Course.DESSERT -> R.string.course_dessert
+    Course.DRINK -> R.string.course_drink
+}
+
+@StringRes
+fun BookChapter.labelRes(): Int = when (this) {
+    BookChapter.FAVORITES -> R.string.book_chapter_favorites
+    BookChapter.OWN -> R.string.book_chapter_own
+    BookChapter.BREAKFAST -> R.string.book_chapter_breakfast
+    BookChapter.SOUP -> R.string.book_chapter_soup
+    BookChapter.SALAD -> R.string.book_chapter_salad
+    BookChapter.POULTRY -> R.string.book_chapter_poultry
+    BookChapter.PORK -> R.string.book_chapter_pork
+    BookChapter.BEEF_LAMB -> R.string.book_chapter_beef_lamb
+    BookChapter.FISH -> R.string.book_chapter_fish
+    BookChapter.MEATLESS -> R.string.book_chapter_meatless
+    BookChapter.SIDE -> R.string.book_chapter_side
+    BookChapter.SNACK -> R.string.book_chapter_snack
+    BookChapter.DESSERT -> R.string.book_chapter_dessert
+    BookChapter.DRINK -> R.string.book_chapter_drink
 }
 
 @StringRes

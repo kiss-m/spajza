@@ -42,6 +42,7 @@ data class RecipeEntity(
     val descriptionEn: String,
     val cuisine: String,
     val mealTypes: String,
+    val course: String,
     val totalTimeMin: Int,
     val activeTimeMin: Int,
     val difficulty: Int,

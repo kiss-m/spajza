@@ -49,6 +49,7 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import sk.matej.spajza.R
+import sk.matej.spajza.domain.model.Course
 import sk.matej.spajza.domain.model.MealType
 import sk.matej.spajza.domain.own.PhotoLineKind
 import sk.matej.spajza.ui.common.IngredientOption
@@ -221,6 +222,9 @@ private fun EditorForm(state: RecipeEditorUiState, form: RecipeForm, padding: Pa
         }
         FormSection(stringResource(R.string.editor_meals)) {
             ChipGroup(MealType.entries, form.mealTypes, { stringResource(it.labelRes()) }, actions.onToggleMeal)
+        }
+        FormSection(stringResource(R.string.editor_course)) {
+            ChipGroup(Course.entries, setOf(form.shownCourse), { stringResource(it.labelRes()) }, { course -> actions.onChange { it.copy(course = course) } })
         }
         FormSection(stringResource(R.string.detail_ingredients)) {
             OutlinedTextField(

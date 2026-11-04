@@ -3,6 +3,7 @@ package sk.matej.spajza.data.catalog
 import sk.matej.spajza.domain.catalog.Catalog
 import sk.matej.spajza.domain.model.Allergen
 import sk.matej.spajza.domain.model.ComputedTag
+import sk.matej.spajza.domain.model.Course
 import sk.matej.spajza.domain.model.Cuisine
 import sk.matej.spajza.domain.model.DietFlag
 import sk.matej.spajza.domain.model.Equipment
@@ -114,6 +115,7 @@ object CatalogMapper {
         descriptionEn = description.en,
         cuisine = cuisine.name,
         mealTypes = mealTypes.joinNames(),
+        course = course.name,
         totalTimeMin = totalTimeMin,
         activeTimeMin = activeTimeMin,
         difficulty = difficulty,
@@ -140,6 +142,7 @@ object CatalogMapper {
         pairsWith = pairsWith.split(SET_SEPARATOR).filter { it.isNotEmpty() },
         ingredients = lines,
         steps = steps,
+        course = Course.valueOf(course),
     )
 
     private fun RecipeIngredient.toEntity(recipeId: String, position: Int) = RecipeIngredientEntity(

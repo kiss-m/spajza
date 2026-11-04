@@ -7,6 +7,7 @@ import sk.matej.spajza.domain.diet.Diet
 import sk.matej.spajza.domain.diet.DietRestrictions
 import sk.matej.spajza.domain.household.Household
 import sk.matej.spajza.domain.model.Allergen
+import sk.matej.spajza.domain.model.Course
 import sk.matej.spajza.domain.model.Cuisine
 import sk.matej.spajza.domain.model.DietFlag
 import sk.matej.spajza.domain.model.Equipment
@@ -244,6 +245,7 @@ object FirestoreMappers {
             difficulty = data.int("difficulty")?.coerceIn(1, 3) ?: 1,
             cuisine = data.enum<Cuisine>("cuisine") ?: Cuisine.INTERNATIONAL,
             mealTypes = data.enums<MealType>("mealTypes").ifEmpty { OwnRecipe.DEFAULT_MEAL_TYPES },
+            course = data.enum<Course>("course"),
             equipment = data.enums<Equipment>("equipment"),
             tags = data.enums<RecipeTag>("tags"),
             ingredients = data.maps("ingredients").mapNotNull { line ->
@@ -274,6 +276,7 @@ object FirestoreMappers {
         "difficulty" to recipe.difficulty,
         "cuisine" to recipe.cuisine.name,
         "mealTypes" to recipe.mealTypes.map { it.name },
+        "course" to recipe.course?.name,
         "equipment" to recipe.equipment.map { it.name },
         "tags" to recipe.tags.map { it.name },
         "ingredients" to recipe.ingredients.map { line ->

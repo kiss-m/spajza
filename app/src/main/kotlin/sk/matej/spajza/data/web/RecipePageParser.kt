@@ -7,6 +7,7 @@ import kotlinx.serialization.json.JsonObject
 import kotlinx.serialization.json.JsonPrimitive
 import kotlinx.serialization.json.contentOrNull
 import kotlinx.serialization.json.intOrNull
+import sk.matej.spajza.domain.model.Course
 import sk.matej.spajza.domain.model.MealType
 import sk.matej.spajza.domain.own.RecipeDraft
 import sk.matej.spajza.domain.own.RecipeSource
@@ -36,6 +37,7 @@ object RecipePageParser {
             ingredientLines = (recipe["recipeIngredient"] ?: recipe["ingredients"]).texts().flatMap(::lines),
             steps = instructions(recipe["recipeInstructions"]),
             mealTypes = mealTypes(recipe["recipeCategory"].texts()),
+            course = course(recipe["recipeCategory"].texts()),
             source = RecipeSource.URL,
             sourceUrl = url,
         )
@@ -87,6 +89,12 @@ object RecipePageParser {
     private fun mealTypes(categories: List<String>): Set<MealType> {
         val words = categories.joinToString(" ") { TextNormalizer.normalize(it) }
         return MEAL_WORDS.filterValues { stems -> stems.any { words.contains(it) } }.keys.flatMapTo(linkedSetOf()) { it }
+    }
+
+    /** The first recipe book chapter whose words the categories contain. */
+    private fun course(categories: List<String>): Course? {
+        val words = categories.joinToString(" ") { TextNormalizer.normalize(it) }
+        return COURSE_WORDS.entries.firstOrNull { (_, stems) -> stems.any { words.contains(it) } }?.key
     }
 
     /** Values of [this] as text: a string, a number, a list of them, or objects with a name or text. */
@@ -148,5 +156,17 @@ object RecipePageParser {
         setOf(MealType.DESSERT) to listOf("dessert", "dezert", "sladk", "kolac", "cake", "torta", "cookie", "kolacik"),
         setOf(MealType.SNACK) to listOf("snack", "appetizer", "predjed", "desiat", "olovrant", "starter"),
         setOf(MealType.LUNCH, MealType.DINNER) to listOf("main", "hlavn", "dinner", "lunch", "obed", "vecer", "soup", "polievk", "polevk"),
+    )
+
+    /** Category words per chapter, in the order they are tried: "soup" wins over "main course". */
+    private val COURSE_WORDS: Map<Course, List<String>> = linkedMapOf(
+        Course.SOUP to listOf("soup", "polievk", "polevk"),
+        Course.SALAD to listOf("salad", "salat"),
+        Course.SIDE to listOf("side dish", "priloh"),
+        Course.DRINK to listOf("drink", "beverage", "napoj", "smoothie", "koktejl", "cocktail"),
+        Course.BREAKFAST to listOf("breakfast", "brunch", "ranajk", "snidan"),
+        Course.DESSERT to listOf("dessert", "dezert", "sladk", "kolac", "cake", "torta", "cookie"),
+        Course.SNACK to listOf("snack", "appetizer", "predjed", "desiat", "olovrant", "starter"),
+        Course.MAIN to listOf("main", "hlavn"),
     )
 }

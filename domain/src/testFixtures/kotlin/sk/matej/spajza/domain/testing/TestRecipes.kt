@@ -1,5 +1,6 @@
 package sk.matej.spajza.domain.testing
 
+import sk.matej.spajza.domain.model.Course
 import sk.matej.spajza.domain.model.Cuisine
 import sk.matej.spajza.domain.model.Equipment
 import sk.matej.spajza.domain.model.IngredientRole
@@ -33,6 +34,7 @@ fun recipe(
     mealTypes: Set<MealType> = setOf(MealType.DINNER),
     equipment: Set<Equipment> = setOf(Equipment.STOVE),
     tags: Set<RecipeTag> = emptySet(),
+    course: Course = Course.MAIN,
 ) = Recipe(
     id = id,
     title = LocalizedText(sk = id, en = id),
@@ -49,4 +51,5 @@ fun recipe(
     pairsWith = emptyList(),
     ingredients = ingredients,
     steps = emptyList(),
+    course = course,
 )

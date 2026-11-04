@@ -2,6 +2,7 @@ package sk.matej.spajza.data.seed
 
 import kotlinx.serialization.Serializable
 import sk.matej.spajza.domain.model.Allergen
+import sk.matej.spajza.domain.model.Course
 import sk.matej.spajza.domain.model.Cuisine
 import sk.matej.spajza.domain.model.DietFlag
 import sk.matej.spajza.domain.model.Equipment
@@ -57,6 +58,8 @@ data class RecipeDto(
     val description: LocalizedDto,
     val cuisine: Cuisine,
     val mealTypes: Set<MealType>,
+    /** The recipe book chapter (D15). */
+    val course: Course,
     val totalTimeMin: Int,
     val activeTimeMin: Int,
     val difficulty: Int,

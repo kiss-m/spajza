@@ -1,7 +1,12 @@
 package sk.matej.spajza.data.seed
 
+import sk.matej.spajza.domain.book.BookChapter
+import sk.matej.spajza.domain.book.RecipeBook
+import sk.matej.spajza.domain.book.RecipeBookConfig
 import sk.matej.spajza.domain.model.Allergen
+import sk.matej.spajza.domain.model.Course
 import sk.matej.spajza.domain.model.DietFlag
+import sk.matej.spajza.domain.model.IngredientCategory
 import sk.matej.spajza.domain.model.Language
 import sk.matej.spajza.domain.model.NutritionSource
 import sk.matej.spajza.domain.nutrition.NutritionCalculator
@@ -128,6 +133,30 @@ class SeedContentTest {
     }
 
     @Test
+    fun `every meat ingredient falls into a recipe book chapter on purpose`() {
+        val meat = catalog.ingredients.filter { it.category == IngredientCategory.MEAT }
+        assertNoProblems(
+            meat.mapNotNull { ingredient ->
+                val kinds = listOfNotNull(
+                    "pork".takeIf { DietFlag.PORK in ingredient.dietFlags },
+                    "poultry".takeIf { ingredient.id in RecipeBookConfig.POULTRY_IDS },
+                    "beef and lamb".takeIf { ingredient.id in BEEF_AND_LAMB },
+                )
+                if (kinds.size == 1) null else "${ingredient.id}: book chapter is ${kinds.ifEmpty { listOf("undecided") }}"
+            } + (RecipeBookConfig.POULTRY_IDS - meat.map { it.id }.toSet()).map { "$it: poultry id is not a meat ingredient" },
+        )
+    }
+
+    @Test
+    fun `every chapter of the recipe book has recipes`() {
+        val book = RecipeBook(catalog.ingredientsById::get)
+        val chapters = catalog.recipes.map(book::chapterOf).toSet()
+        val empty = BookChapter.entries.filter { it != BookChapter.FAVORITES && it != BookChapter.OWN && it !in chapters }
+        assertTrue(empty.isEmpty(), "chapters without recipes: $empty")
+        assertTrue(Course.entries.all { course -> catalog.recipes.any { it.course == course } })
+    }
+
+    @Test
     fun `there are default staples`() {
         assertTrue(catalog.ingredients.count { it.isDefaultStaple } >= 5, "expected at least 5 default staples")
     }
@@ -184,6 +213,9 @@ class SeedContentTest {
     }
 
     private companion object {
+        /** Meat that the recipe book files as beef and lamb (everything that is neither pork nor poultry). */
+        val BEEF_AND_LAMB = setOf("beef-chuck", "beef-steak", "ground-beef", "ground-lamb")
+
         /** Alcohol adds 7 kcal/g, which the Atwater check above does not model. */
         val ALCOHOLIC = setOf("white-wine", "red-wine", "beer", "rum")
 

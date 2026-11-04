@@ -1,6 +1,7 @@
 package sk.matej.spajza.data.seed
 
 import sk.matej.spajza.domain.model.ComputedTag
+import sk.matej.spajza.domain.model.Course
 import sk.matej.spajza.domain.model.NutritionSource
 import kotlin.test.Test
 import kotlin.test.assertEquals
@@ -39,7 +40,7 @@ class CatalogBuilderTest {
     ) = """
         {"id": "$id", "title": {"sk": "Šošovicový prívarok", "en": "Lentil stew"},
          "description": {"sk": "Hustý a sýty.", "en": "Thick and filling."},
-         "cuisine": "SLOVAK_CZECH", "mealTypes": ["LUNCH"], "totalTimeMin": 40, "activeTimeMin": 15,
+         "cuisine": "SLOVAK_CZECH", "mealTypes": ["LUNCH"], "course": "SOUP", "totalTimeMin": 40, "activeTimeMin": 15,
          "difficulty": 1, "servings": 2, "equipment": ["STOVE"], $extra
          "ingredients": [$lines],
          "steps": [{"sk": "Uvar šošovicu.", "en": "Cook the lentils.", "timerSeconds": 1500}]}
@@ -70,6 +71,7 @@ class CatalogBuilderTest {
         assertTrue(ComputedTag.VEGAN in recipe.computedTags)
         assertTrue(ComputedTag.CHEAP in recipe.computedTags)
         assertEquals(listOf(0), recipe.steps.map { it.index })
+        assertEquals(Course.SOUP, recipe.course)
     }
 
     @Test
@@ -136,6 +138,14 @@ class CatalogBuilderTest {
         assertEquals(setOf(SeedIssueCode.PARSE_ERROR), codes(builder.build(sources(recipes = "[$json]"))))
         val badEnum = recipeJson().replace("\"SLOVAK_CZECH\"", "\"KLINGON\"")
         assertEquals(setOf(SeedIssueCode.PARSE_ERROR), codes(builder.build(sources(recipes = "[$badEnum]"))))
+    }
+
+    @Test
+    fun `every recipe names a recipe book chapter`() {
+        val missing = recipeJson().replace("\"course\": \"SOUP\", ", "")
+        assertEquals(setOf(SeedIssueCode.PARSE_ERROR), codes(builder.build(sources(recipes = "[$missing]"))))
+        val unknown = recipeJson().replace("\"SOUP\"", "\"STEW\"")
+        assertEquals(setOf(SeedIssueCode.PARSE_ERROR), codes(builder.build(sources(recipes = "[$unknown]"))))
     }
 
     @Test

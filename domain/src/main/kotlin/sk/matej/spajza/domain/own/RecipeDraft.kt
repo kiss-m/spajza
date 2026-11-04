@@ -1,5 +1,6 @@
 package sk.matej.spajza.domain.own
 
+import sk.matej.spajza.domain.model.Course
 import sk.matej.spajza.domain.model.MealType
 
 /** A recipe as imported or typed, before its ingredient lines are matched to the catalog. */
@@ -11,6 +12,8 @@ data class RecipeDraft(
     val ingredientLines: List<String> = emptyList(),
     val steps: List<String> = emptyList(),
     val mealTypes: Set<MealType> = emptySet(),
+    /** The recipe book chapter the source names, if any. */
+    val course: Course? = null,
     val source: RecipeSource = RecipeSource.MANUAL,
     val sourceUrl: String? = null,
 )
