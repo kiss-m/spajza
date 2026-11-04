@@ -14,6 +14,10 @@ import sk.matej.spajza.ui.components.SpajzaIcons
 @Serializable
 data object CookDestination
 
+/** The recipe book: every recipe by chapter (D15). */
+@Serializable
+data object BookDestination
+
 @Serializable
 data object PantryDestination
 
@@ -40,10 +44,6 @@ data class ProductDestination(val barcode: String? = null, val name: String? = n
 @Serializable
 data class ReceiptDestination(val imageUri: String)
 
-/** The household's own recipes. */
-@Serializable
-data object OwnRecipesDestination
-
 /**
  * The own recipe editor: editing [recipeId], importing [importUrl] or [photoUri], or a blank
  * recipe when all are null.
@@ -54,6 +54,7 @@ data class RecipeEditorDestination(val recipeId: String? = null, val importUrl: 
 /** The bottom navigation tabs, in order. */
 enum class TopLevelDestination(val destination: Any, @param:StringRes val label: Int, val icon: ImageVector) {
     COOK(CookDestination, R.string.nav_cook, SpajzaIcons.Restaurant),
+    BOOK(BookDestination, R.string.nav_book, SpajzaIcons.MenuBook),
     PANTRY(PantryDestination, R.string.nav_pantry, SpajzaIcons.Kitchen),
     SHOPPING(ShoppingDestination, R.string.nav_shopping, Icons.Filled.ShoppingCart),
     PROFILE(ProfileDestination, R.string.nav_profile, Icons.Filled.Person),

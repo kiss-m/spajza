@@ -461,9 +461,6 @@
     <string name="staples_add_hint">Add a staple</string>
 
     <!-- Own recipes -->
-    <string name="own_recipes_title">Our recipes</string>
-    <string name="own_recipes_empty_title">No recipes of your own yet</string>
-    <string name="own_recipes_empty_body">Add a recipe from a web page or a cookbook photo, or write one. The whole household sees it, and it joins the suggestions of what to cook.</string>
     <string name="add_recipe_title">Add a recipe</string>
     <string name="add_recipe_write">Write a recipe</string>
     <string name="add_recipe_write_detail">Type the ingredients and steps.</string>
@@ -546,7 +543,6 @@
     <string name="book_search_hint">Search recipes or ingredients</string>
     <string name="book_add_recipe">Add your own recipe</string>
     <string name="book_no_results">Nothing found. Try another word.</string>
-    <string name="book_jump_to">Go to chapter</string>
     <string name="book_main_dishes">Main courses</string>
     <string name="book_chapter_favorites">Favorites</string>
     <string name="book_chapter_own">Our recipes</string>
@@ -562,5 +558,5 @@
     <string name="book_chapter_snack">Snacks and starters</string>
     <string name="book_chapter_dessert">Desserts</string>
     <string name="book_chapter_drink">Drinks</string>
-    <string name="book_recipe_meta" tools:ignore="PluralsCandidate">%1$d min · %2$d kcal</string>
+    <string name="book_recipe_meta" tools:ignore="PluralsCandidate">%1$s · %2$d kcal</string>
 </resources>

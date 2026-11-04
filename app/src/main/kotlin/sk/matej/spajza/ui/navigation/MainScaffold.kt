@@ -22,9 +22,9 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
+import sk.matej.spajza.ui.book.RecipeBookRoute
 import sk.matej.spajza.ui.cook.CookRoute
 import sk.matej.spajza.ui.cooking.CookingModeRoute
-import sk.matej.spajza.ui.ownrecipe.OwnRecipesRoute
 import sk.matej.spajza.ui.ownrecipe.RecipeEditorRoute
 import sk.matej.spajza.ui.pantry.PantryRoute
 import sk.matej.spajza.ui.product.ProductRoute
@@ -75,7 +75,11 @@ fun MainScaffold(link: AppLink?, onLinkHandled: (AppLink) -> Unit) {
                 CookRoute(
                     onOpenRecipe = { navController.navigate(RecipeDestination(it)) },
                     onOpenPantry = { navController.navigateToTab(PantryDestination) },
-                    onOpenOwnRecipes = { navController.navigate(OwnRecipesDestination) },
+                )
+            }
+            composable<BookDestination> {
+                RecipeBookRoute(
+                    onOpenRecipe = { navController.navigate(RecipeDestination(it)) },
                     onOpenEditor = { navController.navigate(it) },
                 )
             }
@@ -99,13 +103,6 @@ fun MainScaffold(link: AppLink?, onLinkHandled: (AppLink) -> Unit) {
                     onOpenRecipe = { navController.navigate(RecipeDestination(it)) },
                     onStartCooking = { recipeId, servings -> navController.navigate(CookingDestination(recipeId, servings)) },
                     onEdit = { navController.navigate(RecipeEditorDestination(recipeId = it)) },
-                )
-            }
-            composable<OwnRecipesDestination> {
-                OwnRecipesRoute(
-                    onBack = { navController.popBackStack() },
-                    onOpenRecipe = { navController.navigate(RecipeDestination(it)) },
-                    onOpenEditor = { navController.navigate(it) },
                 )
             }
             composable<RecipeEditorDestination> {

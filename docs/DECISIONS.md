@@ -174,4 +174,5 @@ catalog is read-only and rebuilt from the seed, so it never needs data migration
   diet guarantee.
 - "Obľúbené" (the user's favorites) and "Naše recepty" (own recipes) open the book as shortcuts; their
   recipes also stay in their chapters. Recipes inside a chapter are sorted by title for the app
-  language. The separate "Naše recepty" screen goes away; the book's + button adds own recipes.
+  language. The separate "Naše recepty" screen and the matching buttons on "Čo uvariť" go away; the
+  book's + button adds own recipes. Searching narrows the book to matching recipes, still by chapter.

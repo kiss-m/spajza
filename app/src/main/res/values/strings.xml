@@ -487,9 +487,6 @@
     <string name="staples_add_hint">Pridaj základnú zásobu</string>
 
     <!-- Own recipes -->
-    <string name="own_recipes_title">Naše recepty</string>
-    <string name="own_recipes_empty_title">Zatiaľ žiadne vlastné recepty</string>
-    <string name="own_recipes_empty_body">Pridaj recept z webovej stránky, z fotky kuchárky alebo ho napíš. Uvidí ho celá domácnosť a zaradí sa medzi návrhy, čo uvariť.</string>
     <string name="add_recipe_title">Pridať recept</string>
     <string name="add_recipe_write">Napísať recept</string>
     <string name="add_recipe_write_detail">Suroviny a postup napíšeš ručne.</string>
@@ -572,7 +569,6 @@
     <string name="book_search_hint">Hľadaj recept alebo surovinu</string>
     <string name="book_add_recipe">Pridať vlastný recept</string>
     <string name="book_no_results">Nič sme nenašli. Skús iné slovo.</string>
-    <string name="book_jump_to">Prejsť na kapitolu</string>
     <string name="book_main_dishes">Hlavné jedlá</string>
     <string name="book_chapter_favorites">Obľúbené</string>
     <string name="book_chapter_own">Naše recepty</string>
@@ -588,5 +584,5 @@
     <string name="book_chapter_snack">Snacky a predjedlá</string>
     <string name="book_chapter_dessert">Dezerty</string>
     <string name="book_chapter_drink">Nápoje</string>
-    <string name="book_recipe_meta" tools:ignore="PluralsCandidate">%1$d min · %2$d kcal</string>
+    <string name="book_recipe_meta" tools:ignore="PluralsCandidate">%1$s · %2$d kcal</string>
 </resources>
