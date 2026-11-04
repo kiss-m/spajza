@@ -1,0 +1,590 @@
+[
+  {
+    "id": "penne-v-ruzovej-omacke",
+    "title": {"sk": "Penne v ružovej omáčke", "en": "Penne in rosé sauce"},
+    "description": {"sk": "Cestoviny v krémovej paradajkovej omáčke so smotanou, cesnakom a parmezánom.", "en": "Pasta in a creamy tomato sauce with cream, garlic and Parmesan."},
+    "cuisine": "ITALIAN",
+    "mealTypes": ["LUNCH", "DINNER"],
+    "totalTimeMin": 25,
+    "activeTimeMin": 15,
+    "difficulty": 1,
+    "servings": 4,
+    "equipment": ["STOVE"],
+    "tags": ["STUDENT"],
+    "ingredients": [
+      {"id": "pasta", "amount": 400, "unit": "G", "role": "MAIN", "note": {"sk": "penne", "en": "penne"}},
+      {"id": "passata", "amount": 400, "unit": "G", "role": "MAIN"},
+      {"id": "cooking-cream", "amount": 150, "unit": "ML", "role": "SECONDARY"},
+      {"id": "onion", "amount": 1, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "garlic", "amount": 2, "unit": "PCS", "role": "SEASONING"},
+      {"id": "olive-oil", "amount": 2, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "parmesan", "amount": 4, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "chili-flakes", "amount": 1, "unit": "PINCH", "role": "SEASONING"},
+      {"id": "salt", "unit": "TO_TASTE", "role": "SEASONING", "note": {"sk": "do vody na cestoviny", "en": "for the pasta water"}},
+      {"id": "basil", "amount": 0.25, "unit": "PCS", "role": "SEASONING"}
+    ],
+    "steps": [
+      {"sk": "Vo veľkom hrnci priveď do varu vodu na cestoviny a poriadne ju osoľ. Cibuľu nakrájaj nadrobno a cesnak na plátky.", "en": "Bring a large pan of water to the boil for the pasta and salt it well. Finely chop the onion and slice the garlic."},
+      {"sk": "Na panvici zohrej olej na strednom ohni a cibuľu opekaj 5 minút dosklovita, potom pridaj cesnak a čili a opekaj ešte minútu. Vlej passatu a var na miernom ohni 10 minút, kým omáčka nezhustne.", "en": "Heat the oil in a pan over a medium heat and fry the onion for 5 minutes until translucent, then add the garlic and chilli and fry for another minute. Pour in the passata and simmer for 10 minutes until thickened.", "timerSeconds": 660},
+      {"sk": "Medzitým uvar cestoviny podľa návodu do al dente. Pred scedením odober hrnček vody z cestovín – škrob v nej pomôže omáčke priľnúť.", "en": "Meanwhile cook the pasta according to the packet until al dente. Before draining, scoop out a mugful of the pasta water; its starch helps the sauce cling."},
+      {"sk": "Do omáčky vmiešaj smotanu a polovicu parmezánu – omáčka zružovie. Ochutnaj, slanosť dodá parmezán a voda z cestovín. Pridaj scedené cestoviny a premiešaj, ak je omáčka príliš hustá, prilej trochu vody z cestovín.", "en": "Stir the cream and half the Parmesan into the sauce; it turns pink. Taste: the Parmesan and pasta water bring the salt. Add the drained pasta and toss, adding a little pasta water if the sauce is too thick."},
+      {"sk": "Podávaj hneď, posypané zvyšným parmezánom a natrhanou bazalkou. Zvyšky vydržia v chladničke 2 dni – pri ohrievaní prilej lyžicu vody.", "en": "Serve at once, sprinkled with the remaining Parmesan and torn basil. Leftovers keep in the fridge for 2 days; add a spoonful of water when reheating."}
+    ]
+  },
+  {
+    "id": "spaghetti-alla-puttanesca",
+    "title": {"sk": "Spaghetti alla puttanesca", "en": "Spaghetti alla puttanesca"},
+    "description": {"sk": "Výrazné cestoviny s paradajkami, olivami, kaparami, cesnakom a čili.", "en": "Bold pasta with tomatoes, olives, capers, garlic and chilli."},
+    "cuisine": "ITALIAN",
+    "mealTypes": ["LUNCH", "DINNER"],
+    "totalTimeMin": 25,
+    "activeTimeMin": 15,
+    "difficulty": 1,
+    "servings": 4,
+    "equipment": ["STOVE"],
+    "tags": ["STUDENT"],
+    "ingredients": [
+      {"id": "spaghetti", "amount": 400, "unit": "G", "role": "MAIN"},
+      {"id": "canned-tomatoes", "amount": 1, "unit": "PCS", "role": "MAIN"},
+      {"id": "olives", "amount": 80, "unit": "G", "role": "SECONDARY", "note": {"sk": "čierne", "en": "black"}},
+      {"id": "capers", "amount": 2, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "garlic", "amount": 3, "unit": "PCS", "role": "SEASONING"},
+      {"id": "chili-flakes", "amount": 0.5, "unit": "TSP", "role": "SEASONING"},
+      {"id": "olive-oil", "amount": 3, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "oregano", "amount": 0.5, "unit": "TSP", "role": "SEASONING"},
+      {"id": "parsley", "amount": 0.5, "unit": "PCS", "role": "SEASONING"},
+      {"id": "salt", "unit": "TO_TASTE", "role": "SEASONING", "note": {"sk": "do vody na cestoviny", "en": "for the pasta water"}}
+    ],
+    "steps": [
+      {"sk": "Vo veľkom hrnci priveď do varu osolenú vodu na špagety. Cesnak nakrájaj na tenké plátky, olivy na kolieska a kapary prepláchni a nahrubo nasekaj.", "en": "Bring a large pan of salted water to the boil for the spaghetti. Slice the garlic thinly, cut the olives into rings and rinse and roughly chop the capers."},
+      {"sk": "Na veľkej panvici zohrej olej na miernom ohni, pridaj cesnak a čili a opekaj 1 minútu, kým cesnak nezačne zlatnúť. Potom pridaj olivy a kapary a minútu ich opekaj.", "en": "Heat the oil in a large pan over a low heat, add the garlic and chilli and fry for 1 minute until the garlic starts to turn golden. Then add the olives and capers and fry for a minute.", "timerSeconds": 120},
+      {"sk": "Pridaj paradajky, roztlač ich vareškou a posyp oreganom. Var na strednom ohni 10 minút, kým omáčka nezhustne. Soľ nepridávaj – kapary a olivy sú slané.", "en": "Add the tomatoes, crush them with a wooden spoon and sprinkle with oregano. Simmer over a medium heat for 10 minutes until thick. Do not add salt; the capers and olives are salty.", "timerSeconds": 600},
+      {"sk": "Špagety uvar al dente, odlož trochu vody z cestovín a sceď ich. Prelož ich do omáčky a 1 minútu ich spolu prehadzuj na ohni, s trochou vody, aby omáčka obalila každú špagetu.", "en": "Cook the spaghetti until al dente, keep a little pasta water and drain. Tip them into the sauce and toss together over the heat for 1 minute with a splash of the water so the sauce coats every strand.", "timerSeconds": 60},
+      {"sk": "Posyp nasekanou petržlenovou vňaťou a podávaj hneď. Puttanesca sa tradične podáva bez syra.", "en": "Sprinkle with chopped parsley and serve at once. Puttanesca is traditionally served without cheese."}
+    ]
+  },
+  {
+    "id": "cestoviny-all-amatriciana",
+    "title": {"sk": "Cestoviny all'amatriciana", "en": "Pasta all'amatriciana"},
+    "description": {"sk": "Rímske cestoviny s paradajkovou omáčkou, chrumkavou slaninou a syrom.", "en": "Roman pasta with tomato sauce, crisp bacon and cheese."},
+    "cuisine": "ITALIAN",
+    "mealTypes": ["LUNCH", "DINNER"],
+    "totalTimeMin": 30,
+    "activeTimeMin": 20,
+    "difficulty": 1,
+    "servings": 4,
+    "equipment": ["STOVE"],
+    "ingredients": [
+      {"id": "spaghetti", "amount": 400, "unit": "G", "role": "MAIN", "note": {"sk": "alebo bucatini", "en": "or bucatini"}},
+      {"id": "bacon", "amount": 150, "unit": "G", "role": "MAIN", "note": {"sk": "namiesto guanciale", "en": "instead of guanciale"}},
+      {"id": "canned-tomatoes", "amount": 1, "unit": "PCS", "role": "MAIN"},
+      {"id": "onion", "amount": 0.5, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "chili-flakes", "amount": 0.25, "unit": "TSP", "role": "SEASONING"},
+      {"id": "olive-oil", "amount": 1, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "parmesan", "amount": 5, "unit": "TBSP", "role": "SECONDARY", "note": {"sk": "ideálne pecorino", "en": "ideally pecorino"}},
+      {"id": "black-pepper", "amount": 1, "unit": "PINCH", "role": "SEASONING"},
+      {"id": "salt", "unit": "TO_TASTE", "role": "SEASONING", "note": {"sk": "do vody na cestoviny", "en": "for the pasta water"}}
+    ],
+    "steps": [
+      {"sk": "Slaninu nakrájaj na prúžky hrubé asi 5 mm. Na studenú panvicu s olejom ju daj a pomaly opekaj na strednom ohni 8 minút, kým nepustí tuk a nezačne byť chrumkavá. Polovicu vyber na tanier.", "en": "Cut the bacon into strips about 5 mm thick. Put it into a cold pan with the oil and fry slowly over a medium heat for 8 minutes until it releases its fat and starts to crisp. Lift half onto a plate.", "timerSeconds": 480},
+      {"sk": "Do tuku pridaj nadrobno nakrájanú cibuľu a čili a opekaj 4 minúty, kým cibuľa nezmäkne. Pridaj paradajky, roztlač ich a var 12 minút, kým omáčka nezhustne a tuk sa na okrajoch neleskne.", "en": "Add the finely chopped onion and chilli to the fat and fry for 4 minutes until soft. Add the tomatoes, crush them and simmer for 12 minutes until the sauce thickens and the fat glistens at the edges.", "timerSeconds": 960},
+      {"sk": "Medzitým uvar cestoviny vo vriacej osolenej vode al dente. Pred scedením odober hrnček vody z cestovín.", "en": "Meanwhile cook the pasta in boiling salted water until al dente. Before draining, keep a mugful of the pasta water."},
+      {"sk": "Cestoviny prelož do omáčky, pridaj polovicu syra a trochu vody z cestovín a minútu prehadzuj, kým omáčka nie je krémová a priľne k cestovinám.", "en": "Tip the pasta into the sauce, add half the cheese and a splash of pasta water and toss for a minute until the sauce is creamy and clings to the pasta.", "timerSeconds": 60},
+      {"sk": "Podávaj posypané zvyšným syrom, chrumkavou slaninou a čerstvo mletým korením.", "en": "Serve topped with the remaining cheese, the crisp bacon and freshly ground pepper."}
+    ]
+  },
+  {
+    "id": "sparglove-rizoto",
+    "title": {"sk": "Špargľové rizoto s citrónom", "en": "Asparagus risotto with lemon"},
+    "description": {"sk": "Jarné krémové rizoto so zelenou špargľou, citrónovou kôrou a parmezánom.", "en": "A creamy spring risotto with green asparagus, lemon zest and Parmesan."},
+    "cuisine": "ITALIAN",
+    "mealTypes": ["LUNCH", "DINNER"],
+    "totalTimeMin": 40,
+    "activeTimeMin": 35,
+    "difficulty": 2,
+    "servings": 4,
+    "equipment": ["STOVE"],
+    "ingredients": [
+      {"id": "arborio-rice", "amount": 300, "unit": "G", "role": "MAIN"},
+      {"id": "asparagus", "amount": 400, "unit": "G", "role": "MAIN"},
+      {"id": "onion", "amount": 1, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "white-wine", "amount": 100, "unit": "ML", "role": "SECONDARY"},
+      {"id": "stock-vegetable", "amount": 1, "unit": "PCS", "role": "SEASONING"},
+      {"id": "butter", "amount": 40, "unit": "G", "role": "SECONDARY"},
+      {"id": "olive-oil", "amount": 1, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "parmesan", "amount": 5, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "lemon", "amount": 1, "unit": "PCS", "role": "SEASONING"},
+      {"id": "black-pepper", "amount": 1, "unit": "PINCH", "role": "SEASONING"}
+    ],
+    "steps": [
+      {"sk": "Špargľe odlom drevnaté konce – zlomí sa sama tam, kde začína byť mäkká. Hlavičky odrež asi 4 cm dlhé a stonky nakrájaj na kolieska 1 cm. Bujón rozpusti v 1,2 litri vody a udržuj ho horúci.", "en": "Snap off the woody ends of the asparagus; it breaks by itself where it turns tender. Cut off the tips about 4 cm long and slice the stalks into 1 cm rounds. Dissolve the stock cube in 1.2 litres of water and keep it hot."},
+      {"sk": "V širokom hrnci rozpusti polovicu masla s olejom a nadrobno nakrájanú cibuľu opekaj 5 minút dosklovita. Pridaj ryžu a 2 minúty ju opekaj, kým zrnká nie sú na okrajoch priesvitné. Zalej vínom a miešaj, kým sa neodparí.", "en": "Melt half the butter with the oil in a wide pan and fry the finely chopped onion for 5 minutes until translucent. Add the rice and toast for 2 minutes until the grains are translucent at the edges. Pour in the wine and stir until it evaporates.", "timerSeconds": 420},
+      {"sk": "Prilievaj horúci vývar po naberačke a stále miešaj; ďalšiu naberačku pridaj, až keď sa predošlá vpije. Po 10 minútach pridaj kolieska špargle. Rizoto var spolu asi 18 minút.", "en": "Add the hot stock a ladle at a time, stirring constantly; add the next ladle only when the last has been absorbed. After 10 minutes add the asparagus rounds. Cook the risotto for about 18 minutes in all.", "timerSeconds": 1080},
+      {"sk": "Hlavičky špargle spar 2 minúty vo vriacom vývare alebo vode, aby zostali zelené a chrumkavé. Ryža je hotová, keď je mäkká, no v strede ešte jemne pevná, a rizoto tečie ako láva.", "en": "Blanch the asparagus tips for 2 minutes in boiling stock or water so they stay green and crisp. The rice is done when tender but still with a little bite in the centre and the risotto flows like lava.", "timerSeconds": 120},
+      {"sk": "Odstav z ohňa, vmiešaj zvyšné maslo, parmezán, citrónovú kôru a lyžicu citrónovej šťavy a nechaj 2 minúty odpočívať pod pokrievkou. Podávaj s hlavičkami špargle navrchu a korením.", "en": "Take off the heat, stir in the remaining butter, the Parmesan, lemon zest and a spoonful of lemon juice and rest, covered, for 2 minutes. Serve topped with the asparagus tips and black pepper.", "timerSeconds": 120}
+    ]
+  },
+  {
+    "id": "tekvicove-rizoto",
+    "title": {"sk": "Tekvicové rizoto s rozmarínom", "en": "Pumpkin risotto with rosemary"},
+    "description": {"sk": "Jesenné zlaté rizoto s pečenou tekvicou, rozmarínom a parmezánom.", "en": "A golden autumn risotto with roasted pumpkin, rosemary and Parmesan."},
+    "cuisine": "ITALIAN",
+    "mealTypes": ["LUNCH", "DINNER"],
+    "totalTimeMin": 50,
+    "activeTimeMin": 35,
+    "difficulty": 2,
+    "servings": 4,
+    "equipment": ["STOVE", "OVEN"],
+    "ingredients": [
+      {"id": "arborio-rice", "amount": 300, "unit": "G", "role": "MAIN"},
+      {"id": "pumpkin", "amount": 600, "unit": "G", "role": "MAIN", "note": {"sk": "hokaido", "en": "hokkaido"}},
+      {"id": "onion", "amount": 1, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "stock-vegetable", "amount": 1, "unit": "PCS", "role": "SEASONING"},
+      {"id": "butter", "amount": 40, "unit": "G", "role": "SECONDARY"},
+      {"id": "olive-oil", "amount": 2, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "parmesan", "amount": 5, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "rosemary", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "nutmeg", "amount": 1, "unit": "PINCH", "role": "SEASONING"},
+      {"id": "salt", "amount": 0.25, "unit": "TSP", "role": "SEASONING"}
+    ],
+    "steps": [
+      {"sk": "Rúru predhrej na 200 °C. Tekvicu zbav semien a nakrájaj na kocky asi 2 cm – hokaido netreba šúpať. Polovicu kociek premiešaj s olejom, rozmarínom a soľou a peč 25 minút, kým nie sú mäkké a na okrajoch opečené.", "en": "Preheat the oven to 200 °C. Deseed the pumpkin and cut it into roughly 2 cm cubes; hokkaido needs no peeling. Toss half the cubes with the oil, rosemary and salt and roast for 25 minutes until soft and browned at the edges.", "timerSeconds": 1500},
+      {"sk": "Druhú polovicu tekvice nastrúhaj na hrubom strúhadle – v rizote sa rozvarí a dodá mu farbu a krémovosť. Bujón rozpusti v 1,2 litri vody a udržuj ho horúci.", "en": "Coarsely grate the other half of the pumpkin; it melts into the risotto, giving colour and creaminess. Dissolve the stock cube in 1.2 litres of water and keep it hot."},
+      {"sk": "V širokom hrnci rozpusti polovicu masla a nadrobno nakrájanú cibuľu opekaj 5 minút. Pridaj ryžu, opekaj 2 minúty a potom nastrúhanú tekvicu. Prilievaj vývar po naberačke a stále miešaj, spolu asi 18 minút.", "en": "Melt half the butter in a wide pan and fry the finely chopped onion for 5 minutes. Add the rice, toast for 2 minutes, then add the grated pumpkin. Add the stock a ladle at a time, stirring constantly, for about 18 minutes.", "timerSeconds": 1380},
+      {"sk": "Keď je ryža mäkká s jemným jadierkom, odstav ju, vmiešaj zvyšné maslo, parmezán a muškátový oriešok a nechaj 2 minúty odpočívať pod pokrievkou. Rizoto má byť voľné, nie tuhé – podľa potreby prilej vývar.", "en": "When the rice is tender with a slight bite, take it off the heat, stir in the remaining butter, the Parmesan and nutmeg and rest, covered, for 2 minutes. The risotto should be loose, not stiff; add stock if needed.", "timerSeconds": 120},
+      {"sk": "Rozdeľ do tanierov a navrch rozlož pečené kocky tekvice. Zvyšky sa dajú na druhý deň vytvarovať do placiek a opiecť.", "en": "Divide between plates and top with the roasted pumpkin. Leftovers can be shaped into patties the next day and fried."}
+    ]
+  },
+  {
+    "id": "gnocchi-s-pestom-a-cherry-paradajkami",
+    "title": {"sk": "Gnocchi s pestom a cherry paradajkami", "en": "Gnocchi with pesto and cherry tomatoes"},
+    "description": {"sk": "Opečené gnocchi s bazalkovým pestom, praskajúcimi paradajkami a mozzarellou.", "en": "Pan-fried gnocchi with basil pesto, burst cherry tomatoes and mozzarella."},
+    "cuisine": "ITALIAN",
+    "mealTypes": ["LUNCH", "DINNER"],
+    "totalTimeMin": 15,
+    "activeTimeMin": 15,
+    "difficulty": 1,
+    "servings": 3,
+    "equipment": ["STOVE"],
+    "tags": ["STUDENT"],
+    "ingredients": [
+      {"id": "gnocchi", "amount": 500, "unit": "G", "role": "MAIN"},
+      {"id": "pesto", "amount": 4, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "cherry-tomato", "amount": 250, "unit": "G", "role": "SECONDARY"},
+      {"id": "mozzarella", "amount": 1, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "olive-oil", "amount": 1, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "garlic", "amount": 1, "unit": "PCS", "role": "SEASONING"},
+      {"id": "basil", "amount": 0.25, "unit": "PCS", "role": "SEASONING"}
+    ],
+    "steps": [
+      {"sk": "Na veľkej nepriľnavej panvici zohrej olej na strednom až vysokom ohni. Gnocchi pridaj priamo z balenia v jednej vrstve a 3 minúty ich nemiešaj, aby spodok zozlatol.", "en": "Heat the oil in a large non-stick pan over a medium-high heat. Add the gnocchi straight from the pack in a single layer and leave them for 3 minutes without stirring so the undersides turn golden.", "timerSeconds": 180},
+      {"sk": "Gnocchi premiešaj a opekaj ďalšie 3 minúty, kým nie sú zo všetkých strán chrumkavé a vnútri mäkké. Opekané chutia lepšie ako varené a netreba ich predtým variť.", "en": "Stir and fry for another 3 minutes until crisp all over and soft inside. Fried, they taste better than boiled, and they need no boiling first.", "timerSeconds": 180},
+      {"sk": "Pridaj celé cherry paradajky a nakrájaný cesnak a opekaj 3 až 4 minúty, kým paradajky nepopraskajú a nepustia šťavu.", "en": "Add the whole cherry tomatoes and sliced garlic and fry for 3 to 4 minutes until the tomatoes burst and release their juice.", "timerSeconds": 210},
+      {"sk": "Odstav panvicu, vmiešaj pesto a 2 lyžice vody, aby vznikla omáčka. Navrch natrhaj mozzarellu a bazalku a podávaj hneď, kým sa syr začína topiť.", "en": "Take the pan off the heat and stir in the pesto and 2 tablespoons of water to make a sauce. Tear the mozzarella and basil over the top and serve at once as the cheese starts to melt."}
+    ]
+  },
+  {
+    "id": "lasagne-so-spenatom-a-ricottou",
+    "title": {"sk": "Lasagne so špenátom a ricottou", "en": "Spinach and ricotta lasagne"},
+    "description": {"sk": "Vegetariánske lasagne s vrstvami špenátu, ricotty, paradajkovej omáčky a mozzarelly.", "en": "Vegetarian lasagne with layers of spinach, ricotta, tomato sauce and mozzarella."},
+    "cuisine": "ITALIAN",
+    "mealTypes": ["LUNCH", "DINNER"],
+    "totalTimeMin": 80,
+    "activeTimeMin": 35,
+    "difficulty": 2,
+    "servings": 6,
+    "equipment": ["OVEN", "STOVE"],
+    "tags": ["MEAL_PREP", "FREEZER_FRIENDLY"],
+    "ingredients": [
+      {"id": "lasagna-sheets", "amount": 250, "unit": "G", "role": "MAIN"},
+      {"id": "spinach", "amount": 500, "unit": "G", "role": "MAIN", "note": {"sk": "mrazený alebo čerstvý", "en": "frozen or fresh"}},
+      {"id": "ricotta", "amount": 500, "unit": "G", "role": "MAIN"},
+      {"id": "egg", "amount": 1, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "passata", "amount": 700, "unit": "G", "role": "SECONDARY"},
+      {"id": "mozzarella", "amount": 2, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "parmesan", "amount": 6, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "onion", "amount": 1, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "garlic", "amount": 3, "unit": "PCS", "role": "SEASONING"},
+      {"id": "olive-oil", "amount": 2, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "nutmeg", "amount": 1, "unit": "PINCH", "role": "SEASONING"},
+      {"id": "oregano", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "salt", "amount": 1, "unit": "TSP", "role": "SEASONING"}
+    ],
+    "steps": [
+      {"sk": "Cibuľu a cesnak nasekaj nadrobno, opeč na oleji 5 minút, pridaj passatu, oregano a polovicu soli a var 10 minút. Špenát rozmraz alebo spar a dôkladne ho vytlač – voda by lasagne rozmočila.", "en": "Finely chop the onion and garlic, fry in the oil for 5 minutes, add the passata, oregano and half the salt and simmer for 10 minutes. Thaw or wilt the spinach and squeeze it really dry; any water would make the lasagne soggy.", "timerSeconds": 900},
+      {"sk": "Rúru predhrej na 190 °C. Špenát nasekaj a zmiešaj s ricottou, vajcom, polovicou parmezánu, muškátovým orieškom a zvyšnou soľou.", "en": "Preheat the oven to 190 °C. Chop the spinach and mix with the ricotta, egg, half the Parmesan, the nutmeg and the remaining salt."},
+      {"sk": "Do zapekacej misy asi 30 × 20 cm rozotri tenkú vrstvu omáčky. Navrstvi pláty, špenátovú plnku, omáčku a kúsky mozzarelly a opakuj ešte dvakrát. Poslednú vrstvu tvoria pláty, omáčka, mozzarella a parmezán.", "en": "Spread a thin layer of sauce in a baking dish of about 30 × 20 cm. Layer sheets, spinach filling, sauce and pieces of mozzarella and repeat twice more. Finish with sheets, sauce, mozzarella and Parmesan."},
+      {"sk": "Prikry alobalom a peč 25 minút, potom alobal odstráň a peč ďalších 15 až 20 minút, kým nie je povrch zlatohnedý a bublá a nôž ľahko prejde plátmi.", "en": "Cover with foil and bake for 25 minutes, then remove the foil and bake for another 15 to 20 minutes until golden brown and bubbling and a knife passes easily through the sheets.", "timerSeconds": 2400},
+      {"sk": "Nechaj lasagne 10 minút odpočívať, aby sa pri krájaní nerozpadli. Porcie vydržia v chladničke 4 dni a zamrazené 3 mesiace.", "en": "Let the lasagne rest for 10 minutes so it does not collapse when cut. Portions keep for 4 days in the fridge and 3 months in the freezer.", "timerSeconds": 600}
+    ]
+  },
+  {
+    "id": "pasta-primavera",
+    "title": {"sk": "Pasta primavera", "en": "Pasta primavera"},
+    "description": {"sk": "Jarné cestoviny so špargľou, hráškom a cuketou v ľahkej citrónovej omáčke.", "en": "Spring pasta with asparagus, peas and courgette in a light lemony sauce."},
+    "cuisine": "ITALIAN",
+    "mealTypes": ["LUNCH", "DINNER"],
+    "totalTimeMin": 25,
+    "activeTimeMin": 20,
+    "difficulty": 1,
+    "servings": 4,
+    "equipment": ["STOVE"],
+    "ingredients": [
+      {"id": "pasta", "amount": 400, "unit": "G", "role": "MAIN"},
+      {"id": "asparagus", "amount": 250, "unit": "G", "role": "SECONDARY"},
+      {"id": "peas", "amount": 150, "unit": "G", "role": "SECONDARY"},
+      {"id": "zucchini", "amount": 1, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "garlic", "amount": 2, "unit": "PCS", "role": "SEASONING"},
+      {"id": "olive-oil", "amount": 3, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "butter", "amount": 20, "unit": "G", "role": "SECONDARY"},
+      {"id": "lemon", "amount": 1, "unit": "PCS", "role": "SEASONING"},
+      {"id": "parmesan", "amount": 4, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "mint", "amount": 0.25, "unit": "PCS", "role": "SEASONING"},
+      {"id": "salt", "amount": 0.25, "unit": "TSP", "role": "SEASONING"},
+      {"id": "black-pepper", "amount": 1, "unit": "PINCH", "role": "SEASONING"}
+    ],
+    "steps": [
+      {"sk": "Špargľe odlom drevnaté konce a nakrájaj ju šikmo na kúsky 3 cm. Cuketu nakrájaj na polkolieska, cesnak na plátky. Vo veľkom hrnci priveď do varu osolenú vodu.", "en": "Snap the woody ends off the asparagus and cut it diagonally into 3 cm pieces. Cut the courgette into half-moons and slice the garlic. Bring a large pan of salted water to the boil."},
+      {"sk": "Cestoviny uvar podľa návodu; 3 minúty pred koncom pridaj do vody špargľu a hrášok, aby sa uvarili spolu. Pred scedením odober hrnček vody z cestovín.", "en": "Cook the pasta according to the packet; 3 minutes before the end add the asparagus and peas to the water so they cook together. Keep a mugful of the pasta water before draining.", "timerSeconds": 180},
+      {"sk": "Medzitým na veľkej panvici zohrej olej a cuketu opekaj na vysokom ohni 4 minúty dozlatista. Pridaj cesnak a opekaj ešte 30 sekúnd.", "en": "Meanwhile heat the oil in a large pan and fry the courgette over a high heat for 4 minutes until golden. Add the garlic and fry for another 30 seconds.", "timerSeconds": 270},
+      {"sk": "Pridaj scedené cestoviny so zeleninou, maslo, citrónovú kôru a 2 lyžice šťavy, parmezán a trochu vody z cestovín. Prehadzuj, kým sa nevytvorí lesklá omáčka.", "en": "Add the drained pasta and vegetables, the butter, lemon zest and 2 tablespoons of juice, the Parmesan and a splash of pasta water. Toss until a glossy sauce forms."},
+      {"sk": "Dochuť soľou a korením a posyp natrhanou mätou. Podávaj hneď, kým je zelenina jasne zelená.", "en": "Season with salt and pepper and scatter with torn mint. Serve at once while the vegetables are bright green."}
+    ]
+  },
+  {
+    "id": "cestoviny-so-susenymi-paradajkami-a-kuracim",
+    "title": {"sk": "Cestoviny so sušenými paradajkami a kuracím", "en": "Pasta with sun-dried tomatoes and chicken"},
+    "description": {"sk": "Krémové cestoviny s opečeným kuracím mäsom, sušenými paradajkami a špenátom.", "en": "Creamy pasta with seared chicken, sun-dried tomatoes and spinach."},
+    "cuisine": "ITALIAN",
+    "mealTypes": ["LUNCH", "DINNER"],
+    "totalTimeMin": 30,
+    "activeTimeMin": 25,
+    "difficulty": 1,
+    "servings": 4,
+    "equipment": ["STOVE"],
+    "tags": ["MEAL_PREP"],
+    "ingredients": [
+      {"id": "pasta", "amount": 350, "unit": "G", "role": "MAIN"},
+      {"id": "chicken-breast", "amount": 2, "unit": "PCS", "role": "MAIN"},
+      {"id": "sun-dried-tomatoes", "amount": 60, "unit": "G", "role": "SECONDARY"},
+      {"id": "spinach", "amount": 100, "unit": "G", "role": "SECONDARY"},
+      {"id": "cooking-cream", "amount": 200, "unit": "ML", "role": "SECONDARY"},
+      {"id": "garlic", "amount": 3, "unit": "PCS", "role": "SEASONING"},
+      {"id": "parmesan", "amount": 4, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "olive-oil", "amount": 2, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "oregano", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "salt", "amount": 0.5, "unit": "TSP", "role": "SEASONING"},
+      {"id": "black-pepper", "amount": 0.25, "unit": "TSP", "role": "SEASONING"}
+    ],
+    "steps": [
+      {"sk": "Sušené paradajky zalej horúcou vodou a nechaj 10 minút zmäknúť, potom ich nakrájaj na prúžky. Kuracie prsia nakrájaj na kúsky veľkosti sústa, posyp oreganom, soľou a korením.", "en": "Cover the sun-dried tomatoes with hot water and leave for 10 minutes to soften, then cut them into strips. Cut the chicken into bite-sized pieces and season with the oregano, salt and pepper.", "timerSeconds": 600},
+      {"sk": "Cestoviny uvar v osolenej vode al dente a odlož hrnček vody z cestovín. Na veľkej panvici zohrej olej a kuracie mäso opekaj na vysokom ohni 5 až 6 minút, kým nie je zlatohnedé a vo vnútri biele bez ružovej farby.", "en": "Cook the pasta in salted water until al dente and keep a mugful of the pasta water. Heat the oil in a large pan and fry the chicken over a high heat for 5 to 6 minutes until golden brown and white inside with no pink.", "timerSeconds": 330},
+      {"sk": "Zníž oheň, pridaj nakrájaný cesnak a paradajky a opekaj minútu. Vlej smotanu a var 2 minúty, kým nezhustne, potom vmiešaj špenát a nechaj ho zvädnúť.", "en": "Lower the heat, add the sliced garlic and the tomatoes and fry for a minute. Pour in the cream and simmer for 2 minutes until it thickens, then stir in the spinach and let it wilt.", "timerSeconds": 180},
+      {"sk": "Pridaj cestoviny, parmezán a trochu vody z cestovín a premiešaj, kým omáčka nie je hladká a obalí cestoviny. Podávaj hneď alebo rozdeľ do krabičiek – v chladničke vydržia 3 dni.", "en": "Add the pasta, Parmesan and a splash of pasta water and toss until the sauce is smooth and coats the pasta. Serve at once or divide into boxes; they keep in the fridge for 3 days."}
+    ]
+  },
+  {
+    "id": "focaccia-s-rozmarinom",
+    "title": {"sk": "Focaccia s rozmarínom a soľou", "en": "Rosemary focaccia"},
+    "description": {"sk": "Nadýchaný taliansky chlieb z plechu s olivovým olejom, rozmarínom a hrubou soľou.", "en": "A fluffy Italian tray bread with olive oil, rosemary and flaky salt."},
+    "cuisine": "ITALIAN",
+    "mealTypes": ["SNACK", "LUNCH"],
+    "totalTimeMin": 180,
+    "activeTimeMin": 20,
+    "difficulty": 2,
+    "servings": 8,
+    "equipment": ["OVEN"],
+    "ingredients": [
+      {"id": "wheat-flour", "amount": 500, "unit": "G", "role": "MAIN"},
+      {"id": "dry-yeast", "amount": 1, "unit": "PCS", "role": "SEASONING"},
+      {"id": "olive-oil", "amount": 6, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "salt", "amount": 1.5, "unit": "TSP", "role": "SEASONING", "note": {"sk": "1 lyžička do cesta, zvyšok navrch", "en": "1 teaspoon for the dough, the rest on top"}},
+      {"id": "sugar", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "rosemary", "amount": 2, "unit": "TSP", "role": "SEASONING"},
+      {"id": "cherry-tomato", "amount": 100, "unit": "G", "role": "SECONDARY", "optional": true}
+    ],
+    "steps": [
+      {"sk": "Droždie s cukrom rozmiešaj v 400 ml vlažnej vody. Pridaj múku, lyžičku soli a 2 lyžice oleja a vareškou premiešaj na veľmi mäkké, lepkavé cesto – nemies ho, len ho spoj.", "en": "Stir the yeast and sugar into 400 ml of lukewarm water. Add the flour, a teaspoon of salt and 2 tablespoons of oil and mix with a wooden spoon into a very soft, sticky dough; do not knead, just combine."},
+      {"sk": "Prikry misku a nechaj cesto kysnúť 1 a pol hodiny. Počas kysnutia ho trikrát navlhčenou rukou prelož od okraja do stredu – cesto tak zosilnie aj bez miesenia.", "en": "Cover the bowl and leave to rise for 1½ hours. Three times during rising, fold the dough from the edge to the centre with a wet hand; this strengthens it without kneading.", "timerSeconds": 5400},
+      {"sk": "Plech asi 30 × 25 cm vymasti 2 lyžicami oleja, cesto naň vylej a prstami ho jemne roztiahni do rohov. Nechaj ho ešte 30 minút kysnúť. Rúru predhrej na 230 °C.", "en": "Grease a tin of about 30 × 25 cm with 2 tablespoons of oil, tip the dough in and gently stretch it into the corners with your fingers. Leave to rise for another 30 minutes. Preheat the oven to 230 °C.", "timerSeconds": 1800},
+      {"sk": "Naolejovanými prstami vtlač do cesta hlboké jamky až po dno, polej ho zvyšným olejom, posyp rozmarínom, zvyšnou soľou a prípadne zatlač polovice cherry paradajok.", "en": "With oiled fingers press deep dimples into the dough right to the bottom, drizzle with the remaining oil and sprinkle with the rosemary, the rest of the salt and, if you like, press in halved cherry tomatoes."},
+      {"sk": "Peč 20 až 25 minút, kým nie je focaccia zlatohnedá a spodok chrumkavý – keď na ňu poklopeš, znie duto. Nechaj ju 10 minút vychladnúť na mriežke a krájaj na štvorce.", "en": "Bake for 20 to 25 minutes until golden brown with a crisp base; it sounds hollow when tapped. Leave to cool on a rack for 10 minutes and cut into squares.", "timerSeconds": 1350}
+    ]
+  },
+  {
+    "id": "polievka-stracciatella",
+    "title": {"sk": "Polievka stracciatella", "en": "Stracciatella soup"},
+    "description": {"sk": "Rímska vajcová polievka s parmezánom, citrónom a špenátom, hotová za 15 minút.", "en": "A Roman egg soup with Parmesan, lemon and spinach, ready in 15 minutes."},
+    "cuisine": "ITALIAN",
+    "mealTypes": ["LUNCH", "DINNER"],
+    "totalTimeMin": 15,
+    "activeTimeMin": 15,
+    "difficulty": 1,
+    "servings": 4,
+    "equipment": ["STOVE"],
+    "tags": ["STUDENT"],
+    "ingredients": [
+      {"id": "egg", "amount": 4, "unit": "PCS", "role": "MAIN"},
+      {"id": "parmesan", "amount": 5, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "stock-chicken", "amount": 1, "unit": "PCS", "role": "SEASONING"},
+      {"id": "spinach", "amount": 100, "unit": "G", "role": "SECONDARY"},
+      {"id": "semolina", "amount": 1, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "lemon", "amount": 0.5, "unit": "PCS", "role": "SEASONING"},
+      {"id": "nutmeg", "amount": 1, "unit": "PINCH", "role": "SEASONING"},
+      {"id": "black-pepper", "amount": 1, "unit": "PINCH", "role": "SEASONING"},
+      {"id": "bread", "amount": 4, "unit": "PCS", "role": "SECONDARY", "note": {"sk": "na podávanie", "en": "to serve"}}
+    ],
+    "steps": [
+      {"sk": "V hrnci priveď do varu 1,2 litra vody s bujónom. Vajcia rozšľahaj v miske s parmezánom, krupicou, muškátovým orieškom a korením – krupica polievku jemne zahustí.", "en": "Bring 1.2 litres of water with the stock cube to the boil in a pan. Beat the eggs in a bowl with the Parmesan, semolina, nutmeg and pepper; the semolina thickens the soup slightly."},
+      {"sk": "Do vriaceho vývaru pridaj špenát a var minútu, kým nezvädne. Zníž oheň tak, aby vývar len jemne bublal.", "en": "Add the spinach to the boiling stock and cook for a minute until wilted. Lower the heat so the stock just simmers gently.", "timerSeconds": 60},
+      {"sk": "Za stáleho miešania vidličkou vlievaj vaječnú zmes tenkým prúdom do polievky. Vytvoria sa jemné „handričky“ – stracciatella znamená po taliansky handrička. Var ešte 1 minútu.", "en": "Pour in the egg mixture in a thin stream while stirring with a fork. Delicate 'rags' form; stracciatella means little rag in Italian. Simmer for 1 more minute.", "timerSeconds": 60},
+      {"sk": "Dochuť citrónovou šťavou a podávaj hneď s opečeným chlebom. Polievku nezohrievaj opakovane, vajce by stvrdlo.", "en": "Season with lemon juice and serve at once with toasted bread. Do not reheat the soup repeatedly or the egg turns rubbery."}
+    ]
+  },
+  {
+    "id": "treska-v-paradajkach-s-olivami-a-kaparami",
+    "title": {"sk": "Treska v paradajkách s olivami a kaparami", "en": "Cod in tomatoes with olives and capers"},
+    "description": {"sk": "Biela ryba dusená v rýchlej paradajkovej omáčke s olivami, kaparami a bazalkou.", "en": "White fish poached in a quick tomato sauce with olives, capers and basil."},
+    "cuisine": "ITALIAN",
+    "mealTypes": ["LUNCH", "DINNER"],
+    "totalTimeMin": 30,
+    "activeTimeMin": 15,
+    "difficulty": 1,
+    "servings": 4,
+    "equipment": ["STOVE"],
+    "tags": ["ONE_POT"],
+    "ingredients": [
+      {"id": "cod", "amount": 4, "unit": "PCS", "role": "MAIN"},
+      {"id": "cherry-tomato", "amount": 400, "unit": "G", "role": "MAIN"},
+      {"id": "olives", "amount": 60, "unit": "G", "role": "SECONDARY"},
+      {"id": "capers", "amount": 1, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "garlic", "amount": 3, "unit": "PCS", "role": "SEASONING"},
+      {"id": "olive-oil", "amount": 3, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "white-wine", "amount": 80, "unit": "ML", "role": "SECONDARY", "optional": true},
+      {"id": "chili-flakes", "amount": 1, "unit": "PINCH", "role": "SEASONING"},
+      {"id": "basil", "amount": 0.5, "unit": "PCS", "role": "SEASONING"},
+      {"id": "salt", "amount": 0.25, "unit": "TSP", "role": "SEASONING"},
+      {"id": "bread", "amount": 4, "unit": "PCS", "role": "SECONDARY", "note": {"sk": "na podávanie", "en": "to serve"}}
+    ],
+    "steps": [
+      {"sk": "Rybu osuš papierovou utierkou a jemne osoľ. Cherry paradajky rozpoľ, cesnak nakrájaj na plátky a kapary prepláchni.", "en": "Pat the fish dry with kitchen paper and season lightly with salt. Halve the cherry tomatoes, slice the garlic and rinse the capers."},
+      {"sk": "Na širokej panvici zohrej olej na strednom ohni, pridaj cesnak a čili a opekaj 1 minútu. Pridaj paradajky, olivy a kapary, prípadne víno, a var 5 minút, kým paradajky nezmäknú a nevytvoria omáčku.", "en": "Heat the oil in a wide pan over a medium heat, add the garlic and chilli and fry for 1 minute. Add the tomatoes, olives, capers and the wine if using, and simmer for 5 minutes until the tomatoes soften into a sauce.", "timerSeconds": 360},
+      {"sk": "Do omáčky vlož filety rybacieho mäsa, polej ich omáčkou a prikry pokrievkou. Dus na miernom ohni 8 až 10 minút, kým ryba nie je nepriesvitná a pri dotyku vidličkou sa rozdeľuje na lupienky.", "en": "Nestle the fish fillets into the sauce, spoon some over and cover. Cook gently for 8 to 10 minutes until the fish is opaque and flakes when touched with a fork.", "timerSeconds": 540},
+      {"sk": "Posyp natrhanou bazalkou a podávaj priamo z panvice s chlebom na namáčanie omáčky.", "en": "Scatter with torn basil and serve straight from the pan with bread for mopping up the sauce."}
+    ]
+  },
+  {
+    "id": "peperonata-s-polentou",
+    "title": {"sk": "Peperonata s krémovou polentou", "en": "Peperonata with creamy polenta"},
+    "description": {"sk": "Pomaly dusené papriky s cibuľou a paradajkami na hladkej polente, vegánske.", "en": "Slow-cooked peppers with onion and tomatoes on smooth polenta, vegan."},
+    "cuisine": "ITALIAN",
+    "mealTypes": ["LUNCH", "DINNER"],
+    "totalTimeMin": 50,
+    "activeTimeMin": 20,
+    "difficulty": 1,
+    "servings": 4,
+    "equipment": ["STOVE"],
+    "tags": ["MEAL_PREP"],
+    "ingredients": [
+      {"id": "bell-pepper", "amount": 4, "unit": "PCS", "role": "MAIN"},
+      {"id": "onion", "amount": 2, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "canned-tomatoes", "amount": 1, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "garlic", "amount": 3, "unit": "PCS", "role": "SEASONING"},
+      {"id": "olive-oil", "amount": 4, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "vinegar", "amount": 1, "unit": "TBSP", "role": "SEASONING"},
+      {"id": "sugar", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "polenta", "amount": 200, "unit": "G", "role": "MAIN"},
+      {"id": "salt", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "basil", "amount": 0.5, "unit": "PCS", "role": "SEASONING"}
+    ],
+    "steps": [
+      {"sk": "Papriky zbav semien a nakrájaj na prúžky široké 1 cm, cibuľu na polkolieska a cesnak na plátky. Farebné papriky dodajú peperonate sladkosť.", "en": "Deseed the peppers and cut them into 1 cm strips, the onions into half-moons and the garlic into slices. Mixed-colour peppers make the peperonata sweeter."},
+      {"sk": "V širokom hrnci zohrej 3 lyžice oleja a cibuľu s paprikami dus pod pokrievkou na miernom ohni 15 minút, kým nezmäknú. Občas premiešaj.", "en": "Heat 3 tablespoons of oil in a wide pan and cook the onions and peppers, covered, over a low heat for 15 minutes until soft. Stir now and then.", "timerSeconds": 900},
+      {"sk": "Pridaj cesnak, paradajky, ocot, cukor a polovicu soli a var odkryté 15 minút, kým omáčka nezhustne a papriky nie sú hodvábne mäkké.", "en": "Add the garlic, tomatoes, vinegar, sugar and half the salt and simmer uncovered for 15 minutes until the sauce thickens and the peppers are silky soft.", "timerSeconds": 900},
+      {"sk": "Medzitým priveď do varu 900 ml vody so zvyšnou soľou. Polentu sypi tenkým prúdom za stáleho šľahania a var na minimálnom ohni 10 minút, kým nie je hustá a hladká. Vmiešaj zvyšný olej.", "en": "Meanwhile bring 900 ml of water with the remaining salt to the boil. Pour in the polenta in a thin stream, whisking constantly, and cook on the lowest heat for 10 minutes until thick and smooth. Stir in the remaining oil.", "timerSeconds": 600},
+      {"sk": "Polentu rozotri na taniere, navrch daj peperonatu a natrhanú bazalku. Peperonata vydrží v chladničke 4 dni a hodí sa aj ku grilovanému mäsu.", "en": "Spread the polenta on plates and top with the peperonata and torn basil. The peperonata keeps in the fridge for 4 days and also goes well with grilled meat."}
+    ]
+  },
+  {
+    "id": "spagety-s-krevetami-a-cesnakom",
+    "title": {"sk": "Špagety s krevetami, cesnakom a citrónom", "en": "Spaghetti with prawns, garlic and lemon"},
+    "description": {"sk": "Rýchle cestoviny s krevetami, cesnakom, čili, petržlenovou vňaťou a citrónom.", "en": "Quick pasta with prawns, garlic, chilli, parsley and lemon."},
+    "cuisine": "ITALIAN",
+    "mealTypes": ["LUNCH", "DINNER"],
+    "totalTimeMin": 20,
+    "activeTimeMin": 15,
+    "difficulty": 1,
+    "servings": 4,
+    "equipment": ["STOVE"],
+    "ingredients": [
+      {"id": "spaghetti", "amount": 400, "unit": "G", "role": "MAIN"},
+      {"id": "shrimp", "amount": 400, "unit": "G", "role": "MAIN", "note": {"sk": "očistené", "en": "peeled"}},
+      {"id": "garlic", "amount": 4, "unit": "PCS", "role": "SEASONING"},
+      {"id": "chili-flakes", "amount": 0.5, "unit": "TSP", "role": "SEASONING"},
+      {"id": "olive-oil", "amount": 4, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "white-wine", "amount": 80, "unit": "ML", "role": "SECONDARY", "optional": true},
+      {"id": "lemon", "amount": 1, "unit": "PCS", "role": "SEASONING"},
+      {"id": "parsley", "amount": 0.5, "unit": "PCS", "role": "SEASONING"},
+      {"id": "butter", "amount": 20, "unit": "G", "role": "SECONDARY"},
+      {"id": "salt", "amount": 0.25, "unit": "TSP", "role": "SEASONING", "note": {"sk": "na krevety; vodu na cestoviny osoľ podľa chuti", "en": "for the prawns; salt the pasta water to taste"}},
+      {"id": "black-pepper", "amount": 1, "unit": "PINCH", "role": "SEASONING"}
+    ],
+    "steps": [
+      {"sk": "Vo veľkom hrnci priveď do varu osolenú vodu a uvar špagety al dente. Odlož hrnček vody z cestovín. Krevety osuš a osoľ, cesnak nakrájaj na tenké plátky.", "en": "Bring a large pan of salted water to the boil and cook the spaghetti until al dente. Keep a mugful of the pasta water. Pat the prawns dry and season with salt; slice the garlic thinly."},
+      {"sk": "Na veľkej panvici zohrej olej na strednom ohni, pridaj cesnak a čili a opekaj 1 minútu, kým cesnak nezačne zlatnúť – nesmie zhnednúť, zhorkol by.", "en": "Heat the oil in a large pan over a medium heat, add the garlic and chilli and fry for 1 minute until the garlic starts to turn golden; it must not brown or it turns bitter.", "timerSeconds": 60},
+      {"sk": "Zvýš oheň, pridaj krevety a opekaj ich 1 až 2 minúty z každej strany, kým nezružovejú a nestočia sa do tvaru C. Krevety stočené do tvaru O sú prepečené a gumové. Podlej vínom a nechaj ho minútu odpariť.", "en": "Turn up the heat, add the prawns and fry for 1 to 2 minutes per side until pink and curled into a C shape. Prawns curled into an O are overcooked and rubbery. Add the wine and let it bubble away for a minute.", "timerSeconds": 180},
+      {"sk": "Pridaj scedené špagety, maslo, citrónovú kôru a šťavu z polovice citróna, nasekanú vňať a trochu vody z cestovín. Prehadzuj minútu, kým sa omáčka nespojí a neobalí špagety.", "en": "Add the drained spaghetti, the butter, lemon zest and juice of half the lemon, the chopped parsley and a splash of pasta water. Toss for a minute until the sauce comes together and coats the spaghetti.", "timerSeconds": 60},
+      {"sk": "Okoreň a podávaj hneď s mesiačikmi citróna. Krevety pri ohrievaní stvrdnú, preto toto jedlo jedz čerstvé.", "en": "Season with pepper and serve at once with lemon wedges. Prawns toughen when reheated, so eat this dish fresh."}
+    ]
+  },
+  {
+    "id": "kuracie-prsia-s-pestom-a-mozzarellou",
+    "title": {"sk": "Kuracie prsia s pestom a mozzarellou", "en": "Chicken breasts with pesto and mozzarella"},
+    "description": {"sk": "Šťavnaté kuracie prsia zapečené s pestom, paradajkami a mozzarellou.", "en": "Juicy chicken breasts baked with pesto, tomatoes and mozzarella."},
+    "cuisine": "ITALIAN",
+    "mealTypes": ["LUNCH", "DINNER"],
+    "totalTimeMin": 35,
+    "activeTimeMin": 10,
+    "difficulty": 1,
+    "servings": 4,
+    "equipment": ["OVEN"],
+    "tags": ["MEAL_PREP"],
+    "ingredients": [
+      {"id": "chicken-breast", "amount": 4, "unit": "PCS", "role": "MAIN"},
+      {"id": "pesto", "amount": 4, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "tomato", "amount": 2, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "mozzarella", "amount": 1, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "olive-oil", "amount": 1, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "salt", "amount": 0.5, "unit": "TSP", "role": "SEASONING"},
+      {"id": "black-pepper", "amount": 0.25, "unit": "TSP", "role": "SEASONING"},
+      {"id": "basil", "amount": 0.25, "unit": "PCS", "role": "SEASONING"},
+      {"id": "rice", "amount": 250, "unit": "G", "role": "SECONDARY", "note": {"sk": "na podávanie", "en": "to serve"}}
+    ],
+    "steps": [
+      {"sk": "Rúru predhrej na 200 °C. Hrubšie kuracie prsia rozrež vodorovne napoly alebo ich naklep na rovnomernú hrúbku asi 2 cm – upečú sa rovnomerne a nebudú suché.", "en": "Preheat the oven to 200 °C. Slice thicker chicken breasts in half horizontally or pound them to an even 2 cm; they cook evenly and stay moist."},
+      {"sk": "Prsia ulož do vymastenej zapekacej misy, osoľ ich, okoreň a každé natri lyžicou pesta. Navrch polož plátky paradajok a mozzarelly.", "en": "Lay the chicken in an oiled baking dish, season with salt and pepper and spread each piece with a spoonful of pesto. Top with slices of tomato and mozzarella."},
+      {"sk": "Peč 20 až 25 minút, kým mäso nie je vo vnútri biele, bez ružovej farby, a šťava je číra (75 °C), a syr sa roztopí. Medzitým uvar ryžu.", "en": "Bake for 20 to 25 minutes until the meat is white inside with no pink, the juices run clear (75 °C) and the cheese has melted. Meanwhile cook the rice.", "timerSeconds": 1350},
+      {"sk": "Posyp bazalkou a podávaj s ryžou a šťavou z misy. Do krabičiek sa hodí aj so zeleninovým šalátom; v chladničke vydrží 3 dni.", "en": "Scatter with basil and serve with the rice and the juices from the dish. It also works in lunchboxes with a green salad and keeps in the fridge for 3 days."}
+    ]
+  },
+  {
+    "id": "calzone-so-sunkou-a-hubami",
+    "title": {"sk": "Calzone so šunkou a hubami", "en": "Calzone with ham and mushrooms"},
+    "description": {"sk": "Preložená pizza plnená šunkou, šampiňónmi, mozzarellou a ricottou.", "en": "A folded pizza filled with ham, mushrooms, mozzarella and ricotta."},
+    "cuisine": "ITALIAN",
+    "mealTypes": ["LUNCH", "DINNER"],
+    "totalTimeMin": 110,
+    "activeTimeMin": 30,
+    "difficulty": 2,
+    "servings": 4,
+    "equipment": ["OVEN"],
+    "ingredients": [
+      {"id": "wheat-flour", "amount": 400, "unit": "G", "role": "MAIN"},
+      {"id": "dry-yeast", "amount": 1, "unit": "PCS", "role": "SEASONING"},
+      {"id": "olive-oil", "amount": 3, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "salt", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "ham", "amount": 150, "unit": "G", "role": "MAIN"},
+      {"id": "mushroom", "amount": 200, "unit": "G", "role": "SECONDARY"},
+      {"id": "mozzarella", "amount": 1, "unit": "PCS", "role": "MAIN"},
+      {"id": "ricotta", "amount": 150, "unit": "G", "role": "SECONDARY"},
+      {"id": "passata", "amount": 150, "unit": "G", "role": "SECONDARY"},
+      {"id": "oregano", "amount": 1, "unit": "TSP", "role": "SEASONING"}
+    ],
+    "steps": [
+      {"sk": "Droždie rozmiešaj v 250 ml vlažnej vody, pridaj múku, soľ a 2 lyžice oleja premiešaj vareškou a potom mies rukami 8 minút, kým cesto nie je hladké a pružné. Prikry ho a nechaj 1 hodinu kysnúť.", "en": "Stir the yeast into 250 ml of lukewarm water, add the flour, salt and 2 tablespoons of oil and mix with a spoon, then knead by hand for 8 minutes until smooth and elastic. Cover and leave to rise for 1 hour.", "timerSeconds": 3600},
+      {"sk": "Šampiňóny nakrájaj na plátky a opeč ich na zvyšnom oleji na vysokom ohni 5 minút, kým sa neodparí voda. Šunku nakrájaj na prúžky, mozzarellu natrhaj a nechaj odkvapkať. Ricottu zmiešaj s oreganom.", "en": "Slice the mushrooms and fry them in the remaining oil over a high heat for 5 minutes until their liquid evaporates. Cut the ham into strips, tear the mozzarella and let it drain. Mix the ricotta with the oregano.", "timerSeconds": 300},
+      {"sk": "Rúru predhrej na 240 °C aj s plechom. Cesto rozdeľ na 4 diely a každý rozvaľkaj na kruh s priemerom asi 22 cm. Na polovicu kruhu natri lyžicu passaty, potom ricottu, šunku, huby a mozzarellu, okraj 2 cm nechaj voľný.", "en": "Preheat the oven to 240 °C with a baking tray inside. Divide the dough into 4 and roll each piece into a circle about 22 cm across. Spread a spoonful of passata over half the circle, then the ricotta, ham, mushrooms and mozzarella, leaving a 2 cm border."},
+      {"sk": "Druhú polovicu preklop cez plnku a okraje pevne zatoč a pritlač prstami, aby plnka pri pečení nevytiekla. Navrchu urob malý zárez na paru a potri zvyšnou passatou.", "en": "Fold the other half over the filling and roll and pinch the edges firmly so the filling does not leak during baking. Cut a small slit on top for steam and brush with the remaining passata."},
+      {"sk": "Calzone prelož na rozpálený plech s papierom a peč 12 až 15 minút do zlatohneda. Nechaj ho 3 minúty postáť – plnka je veľmi horúca.", "en": "Slide the calzoni onto the hot tray on baking paper and bake for 12 to 15 minutes until golden brown. Let them stand for 3 minutes; the filling is very hot.", "timerSeconds": 810}
+    ]
+  },
+  {
+    "id": "bravcova-panenka-s-balzamikom",
+    "title": {"sk": "Bravčová panenka s balzamikovou omáčkou", "en": "Pork tenderloin with balsamic sauce"},
+    "description": {"sk": "Opečená panenka dopečená v rúre, s lesklou omáčkou z balzamika a medu.", "en": "Seared pork tenderloin finished in the oven with a glossy balsamic and honey sauce."},
+    "cuisine": "ITALIAN",
+    "mealTypes": ["LUNCH", "DINNER"],
+    "totalTimeMin": 40,
+    "activeTimeMin": 20,
+    "difficulty": 2,
+    "servings": 4,
+    "equipment": ["STOVE", "OVEN"],
+    "ingredients": [
+      {"id": "pork-loin", "amount": 600, "unit": "G", "role": "MAIN", "note": {"sk": "panenka", "en": "tenderloin"}},
+      {"id": "balsamic-vinegar", "amount": 4, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "honey", "amount": 1, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "garlic", "amount": 2, "unit": "PCS", "role": "SEASONING"},
+      {"id": "rosemary", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "olive-oil", "amount": 1, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "butter", "amount": 20, "unit": "G", "role": "SECONDARY"},
+      {"id": "salt", "amount": 0.75, "unit": "TSP", "role": "SEASONING"},
+      {"id": "black-pepper", "amount": 0.25, "unit": "TSP", "role": "SEASONING"},
+      {"id": "potato", "amount": 700, "unit": "G", "role": "SECONDARY", "note": {"sk": "na podávanie", "en": "to serve"}}
+    ],
+    "steps": [
+      {"sk": "Rúru predhrej na 200 °C. Zemiaky ošúp, nakrájaj na kúsky a uvar v osolenej vode 15 minút doměkka. Mäso osuš, odstráň blany a potri soľou, korením a rozmarínom.", "en": "Preheat the oven to 200 °C. Peel the potatoes, cut into chunks and boil in salted water for 15 minutes until tender. Pat the pork dry, trim off the silver skin and rub with the salt, pepper and rosemary.", "timerSeconds": 900},
+      {"sk": "Na panvici s kovovou rúčkou rozpáľ olej na vysokom ohni a panenku opekaj zo všetkých strán 6 minút dozlatohneda. Prelož panvicu do rúry a peč 12 až 15 minút, kým teplota vo vnútri nedosiahne 63 °C – stred zostane jemne ružový a šťavnatý.", "en": "Heat the oil in an ovenproof pan over a high heat and brown the tenderloin on all sides for 6 minutes. Move the pan to the oven and roast for 12 to 15 minutes until the centre reaches 63 °C; it stays slightly pink and juicy.", "timerSeconds": 1260},
+      {"sk": "Mäso vyber na dosku, prikry alobalom a nechaj 5 minút odpočívať, aby sa šťava vrátila do vlákien. Panvicu postav na mierny oheň, pridaj nakrájaný cesnak, balzamiko, med a 3 lyžice vody a var 2 minúty, kým omáčka nezhustne na sirup.", "en": "Lift the meat onto a board, cover with foil and rest for 5 minutes so the juices settle back into the meat. Put the pan over a low heat, add the sliced garlic, balsamic, honey and 3 tablespoons of water and simmer for 2 minutes until syrupy.", "timerSeconds": 300},
+      {"sk": "Odstav omáčku a vmiešaj maslo, aby sa leskla. Mäso nakrájaj na medailóny hrubé 2 cm a podávaj so zemiakmi poliatymi omáčkou.", "en": "Take the sauce off the heat and stir in the butter to make it shine. Slice the pork into 2 cm medallions and serve with the potatoes, spooning over the sauce."}
+    ]
+  },
+  {
+    "id": "taliansky-cestovinovy-salat",
+    "title": {"sk": "Taliansky cestovinový šalát s pestom", "en": "Italian pasta salad with pesto"},
+    "description": {"sk": "Studený šalát z cestovín, paradajok, mozzarelly, olív a rukoly do krabičky.", "en": "A cold salad of pasta, tomatoes, mozzarella, olives and arugula for lunchboxes."},
+    "cuisine": "ITALIAN",
+    "mealTypes": ["LUNCH", "DINNER", "SNACK"],
+    "totalTimeMin": 25,
+    "activeTimeMin": 15,
+    "difficulty": 1,
+    "servings": 4,
+    "equipment": ["STOVE"],
+    "tags": ["MEAL_PREP"],
+    "ingredients": [
+      {"id": "pasta", "amount": 300, "unit": "G", "role": "MAIN", "note": {"sk": "fusilli", "en": "fusilli"}},
+      {"id": "pesto", "amount": 4, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "cherry-tomato", "amount": 250, "unit": "G", "role": "SECONDARY"},
+      {"id": "mozzarella", "amount": 1, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "olives", "amount": 60, "unit": "G", "role": "SECONDARY"},
+      {"id": "arugula", "amount": 50, "unit": "G", "role": "SECONDARY"},
+      {"id": "olive-oil", "amount": 1, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "lemon", "amount": 0.5, "unit": "PCS", "role": "SEASONING"},
+      {"id": "salt", "unit": "TO_TASTE", "role": "SEASONING", "note": {"sk": "do vody na cestoviny", "en": "for the pasta water"}}
+    ],
+    "steps": [
+      {"sk": "Cestoviny uvar v osolenej vode o minútu dlhšie, ako je al dente – v studenom šaláte stvrdnú. Sceď ich, prepláchni studenou vodou, aby sa nelepili, a nechaj dobre odkvapkať.", "en": "Cook the pasta in salted water for a minute longer than al dente; it firms up in a cold salad. Drain, rinse under cold water so it does not stick together and drain well."},
+      {"sk": "Cherry paradajky rozpoľ, mozzarellu natrhaj na kúsky a olivy nakrájaj na kolieska.", "en": "Halve the cherry tomatoes, tear the mozzarella into pieces and slice the olives into rings."},
+      {"sk": "Pesto rozmiešaj s olejom a šťavou z polovice citróna. Cestoviny premiešaj s dresingom, aby boli všetky obalené, a pridaj paradajky, mozzarellu a olivy.", "en": "Mix the pesto with the oil and the juice of half the lemon. Toss the pasta with the dressing until coated, then add the tomatoes, mozzarella and olives."},
+      {"sk": "Rukolu pridaj až tesne pred jedením, inak zvädne. Šalát vydrží v chladničke 3 dni; pred jedením ho nechaj 10 minút postáť pri izbovej teplote, chutí výraznejšie.", "en": "Add the arugula just before eating or it wilts. The salad keeps in the fridge for 3 days; let it sit at room temperature for 10 minutes before eating for fuller flavour."}
+    ]
+  },
+  {
+    "id": "spaghetti-al-limone",
+    "title": {"sk": "Spaghetti al limone", "en": "Spaghetti al limone"},
+    "description": {"sk": "Jednoduché citrónové špagety s maslom, parmezánom a čiernym korením.", "en": "Simple lemon spaghetti with butter, Parmesan and black pepper."},
+    "cuisine": "ITALIAN",
+    "mealTypes": ["LUNCH", "DINNER"],
+    "totalTimeMin": 15,
+    "activeTimeMin": 15,
+    "difficulty": 1,
+    "servings": 2,
+    "equipment": ["STOVE"],
+    "tags": ["STUDENT"],
+    "ingredients": [
+      {"id": "spaghetti", "amount": 200, "unit": "G", "role": "MAIN"},
+      {"id": "lemon", "amount": 1, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "butter", "amount": 30, "unit": "G", "role": "SECONDARY"},
+      {"id": "parmesan", "amount": 4, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "olive-oil", "amount": 1, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "black-pepper", "amount": 0.25, "unit": "TSP", "role": "SEASONING"},
+      {"id": "parsley", "amount": 0.25, "unit": "PCS", "role": "SEASONING"},
+      {"id": "salt", "unit": "TO_TASTE", "role": "SEASONING", "note": {"sk": "do vody na cestoviny", "en": "for the pasta water"}}
+    ],
+    "steps": [
+      {"sk": "Vo veľkom hrnci priveď do varu osolenú vodu a uvar špagety al dente. Citrón umy horúcou vodou, nastrúhaj z neho celú kôru a vytlač šťavu.", "en": "Bring a large pan of salted water to the boil and cook the spaghetti until al dente. Wash the lemon in hot water, grate all the zest and squeeze the juice."},
+      {"sk": "Na širokej panvici rozpusti maslo s olejom na miernom ohni, pridaj citrónovú kôru a korenie a zohrievaj 1 minútu, kým nezavoňajú. Kôra nesmie zhnednúť.", "en": "Melt the butter with the oil in a wide pan over a low heat, add the lemon zest and pepper and warm for 1 minute until fragrant. The zest must not brown.", "timerSeconds": 60},
+      {"sk": "Pred scedením odober hrnček vody z cestovín. Špagety prelož klieštikmi rovno do panvice, pridaj 2 lyžice citrónovej šťavy, parmezán a 4 lyžice vody z cestovín.", "en": "Before draining, scoop out a mugful of the pasta water. Lift the spaghetti with tongs straight into the pan and add 2 tablespoons of lemon juice, the Parmesan and 4 tablespoons of the pasta water."},
+      {"sk": "Rýchlo prehadzuj mimo ohňa, kým sa syr neroztopí na hladkú lesklú omáčku – na ohni by sa zrazil do hrudiek. Dochuť citrónom, posyp vňaťou a podávaj hneď.", "en": "Toss quickly off the heat until the cheese melts into a smooth, glossy sauce; on the heat it would clump. Add more lemon to taste, sprinkle with parsley and serve at once."}
+    ]
+  }
+]
