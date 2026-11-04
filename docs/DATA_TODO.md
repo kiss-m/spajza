@@ -15,7 +15,9 @@ These ingredients have no USDA FoodData Central match and use typical label valu
 | `cream-cheese` | Krémový syr (Lučina) | 264 | 9.5 | 2.5 | 24 |
 | `dried-mushrooms` | Sušené hríby | 300 | 30 | 37 | 3 |
 | `garam-masala` | Garam masala | 310 | 10.5 | 62 | 11.5 |
+| `gnocchi` | Gnocchi | 155 | 3.6 | 33 | 0.4 |
 | `gochujang` | Gočudžang | 235 | 5.5 | 49 | 1.8 |
+| `green-curry-paste` | Zelená kari pasta | 100 | 2.5 | 14 | 4 |
 | `halloumi` | Halloumi | 321 | 21 | 2 | 25.5 |
 | `mascarpone` | Mascarpone | 410 | 4.5 | 4 | 42 |
 | `nori` | Nori | 297 | 41.4 | 44.3 | 3.7 |
@@ -26,6 +28,7 @@ These ingredients have no USDA FoodData Central match and use typical label valu
 | `rice-vinegar` | Ryžový ocot | 18 | 0 | 0.5 | 0 |
 | `skyr` | Skyr | 63 | 11 | 4 | 0.2 |
 | `smoked-cheese` | Údený syr (oštiepok) | 310 | 22 | 1.5 | 24 |
+| `smoked-mackerel` | Údená makrela | 305 | 19 | 0 | 25 |
 | `sour-cream` | Kyslá smotana | 153 | 2.9 | 3.8 | 14 |
 | `star-anise` | Badián | 337 | 17.6 | 50 | 15.9 |
 | `stock-vegetable` | Zeleninový bujón | 270 | 6 | 18 | 19 |
