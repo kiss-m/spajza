@@ -235,7 +235,7 @@
       {"sk": "Broskyne umy, rozkroj ich okolo kôstky, vyber kôstku a dužinu nakrájaj na kúsky aj so šupkou. Banán ošúp a nalámaj na kúsky. Ak sú broskyne veľmi tvrdé, smoothie bude kyslejšie, pridaj viac medu.", "en": "Wash the peaches, cut around the stone, remove it and chop the flesh, skin and all. Peel the banana and break it into pieces. If the peaches are very firm, the smoothie will be sharper, so add more honey."},
       {"sk": "Vločky nasyp do mixéra ako prvé a zalej ich mliekom. Nechaj ich 3 minúty namočiť – zmäknú a smoothie bude hladké bez zrniek.", "en": "Put the oats into the blender first and pour over the milk. Leave them to soak for 3 minutes; they soften and the smoothie turns out smooth with no grainy bits.", "timerSeconds": 180},
       {"sk": "Pridaj broskyne, banán, jogurt, med a štipku škorice. Mixuj na najvyšší výkon 1 minútu, kým nie je zmes úplne hladká a krémová. Ak je príliš hustá, prilej trochu mlieka alebo vody a premixuj.", "en": "Add the peaches, banana, yogurt, honey and a pinch of cinnamon. Blend on full power for 1 minute until completely smooth and creamy. If it is too thick, add a little milk or water and blend again.", "timerSeconds": 60},
-      {"sk": "Ochutnaj a podľa potreby dosladí. Nalej do pohárov alebo do uzatvárateľnej fľaše a vypi do niekoľkých hodín; postátím vločky zhustnú, preto ho pred pitím pretrep.", "en": "Taste and sweeten more if needed. Pour into glasses or a sealable bottle and drink within a few hours; the oats thicken it as it stands, so shake before drinking."}
+      {"sk": "Ochutnaj a podľa potreby doslaď. Nalej do pohárov alebo do uzatvárateľnej fľaše a vypi do niekoľkých hodín; postátím vločky zhustnú, preto ho pred pitím pretrep.", "en": "Taste and sweeten more if needed. Pour into glasses or a sealable bottle and drink within a few hours; the oats thicken it as it stands, so shake before drinking."}
     ]
   },
   {
@@ -1247,7 +1247,7 @@
       {"id": "sunflower-oil", "amount": 1, "unit": "TBSP", "role": "SECONDARY"}
     ],
     "steps": [
-      {"sk": "Mlieko zohrej na vlažné, asi 35 °C, a rozmiešaj v ňom droždie s cukrom. Pridaj múku, soľ a olej a miesi 8 minút na hladké pružné cesto. Prikry ho a nechaj na teplom mieste 1 hodinu kysnúť, kým nezdvojnásobí objem.", "en": "Warm the milk to lukewarm, about 35 °C, and stir in the yeast and sugar. Add the flour, salt and oil and knead for 8 minutes into a smooth, springy dough. Cover and leave in a warm place for 1 hour until doubled in size.", "timerSeconds": 3600},
+      {"sk": "Mlieko zohrej na vlažné, asi 35 °C, a rozmiešaj v ňom droždie s cukrom. Pridaj múku, soľ a olej a mies 8 minút na hladké pružné cesto. Prikry ho a nechaj na teplom mieste 1 hodinu kysnúť, kým nezdvojnásobí objem.", "en": "Warm the milk to lukewarm, about 35 °C, and stir in the yeast and sugar. Add the flour, salt and oil and knead for 8 minutes into a smooth, springy dough. Cover and leave in a warm place for 1 hour until doubled in size.", "timerSeconds": 3600},
       {"sk": "Rúru predhrej na 230 °C. Mozzarellu nastrúhaj, fetu rozdrob a oba syry zmiešaj s 1 vajcom – plnka sa pri pečení spojí a neztečie.", "en": "Preheat the oven to 230 °C. Grate the mozzarella, crumble the feta and mix both cheeses with 1 egg so the filling binds as it bakes instead of running."},
       {"sk": "Cesto rozdeľ na polovice a každú rozvaľkaj na ovál hrubý asi 5 mm. Dlhšie okraje zroluj smerom do stredu a konce stoč a pritlač, aby vznikla lodička. Prelož na plech s papierom a stred naplň syrom.", "en": "Divide the dough in half and roll each piece into an oval about 5 mm thick. Roll the long edges towards the centre and twist and pinch the ends to make a boat shape. Move to a lined tray and fill the centre with the cheese."},
       {"sk": "Okraje potri rozšľahaným vajcom. Peč 12 až 15 minút, kým cesto nie je zlatohnedé a syr bublá. Vyber plech, do stredu každej lodičky vytvor lyžicou jamku a rozbi do nej vajce.", "en": "Brush the edges with beaten egg. Bake for 12 to 15 minutes until the dough is golden brown and the cheese is bubbling. Take out the tray, make a hollow in the middle of each boat with a spoon and crack an egg into it.", "timerSeconds": 840},
@@ -1341,6 +1341,458 @@
       {"sk": "Bielky nakrájaj nadrobno a žĺtky roztlač vidličkou v miske s majonézou, mliekom, cukrom, octom, štipkou soli a korením na hladký krém. Potom vmiešaj bielky – šalát má byť krémový s jemnými kúskami.", "en": "Finely chop the whites and mash the yolks with a fork in a bowl with the mayonnaise, milk, sugar, vinegar, a pinch of salt and the pepper into a smooth cream. Then fold in the whites; the salad should be creamy with fine pieces."},
       {"sk": "Krajce chleba z jednej strany tenko natri maslom – zabráni to, aby chlieb nasiakol. Na dva krajce rozotri hrubú vrstvu vajíčkového šalátu, najviac v strede, a prikry zvyšnými krajcami.", "en": "Butter the slices of bread thinly on one side; it stops them going soggy. Spread a thick layer of egg salad over two slices, piling it highest in the middle, and top with the remaining slices."},
       {"sk": "Sendviče jemne pritlač dlaňou, ostrým nožom odkroj kôrky a prekroj ich na polovice. Ak ich chceš krájať úhľadne, zabaľ ich najprv na 10 minút do fólie a daj do chladničky. Zjedz v ten istý deň.", "en": "Press the sandwiches gently with your palm, cut off the crusts with a sharp knife and halve them. For neat slices, wrap them in film and chill for 10 minutes first. Eat the same day."}
+    ]
+  },
+  {
+    "id": "kakaovy-tvarohovy-puding",
+    "title": {"sk": "Kakaový tvarohový puding s banánom", "en": "Chocolate quark pudding with banana"},
+    "description": {"sk": "Hustý čokoládový krém z tvarohu bez varenia, plný bielkovín.", "en": "A thick no-cook chocolate cream made from quark, full of protein."},
+    "cuisine": "SLOVAK_CZECH",
+    "mealTypes": ["BREAKFAST", "SNACK", "DESSERT"],
+    "totalTimeMin": 10,
+    "activeTimeMin": 10,
+    "difficulty": 1,
+    "servings": 2,
+    "equipment": ["BLENDER"],
+    "tags": ["NO_COOK"],
+    "ingredients": [
+      {"id": "tvaroh", "amount": 250, "unit": "G", "role": "MAIN"},
+      {"id": "milk", "amount": 80, "unit": "ML", "role": "SECONDARY"},
+      {"id": "banana", "amount": 1, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "cocoa", "amount": 2, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "honey", "amount": 2, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "hazelnuts", "amount": 20, "unit": "G", "role": "SECONDARY"},
+      {"id": "salt", "amount": 1, "unit": "PINCH", "role": "SEASONING"}
+    ],
+    "steps": [
+      {"sk": "Banán ošúp a polovicu nalámaj do mixéra, druhú polovicu nakrájaj na kolieska na ozdobu. Pridaj tvaroh, mlieko, kakao, med a štipku soli – soľ zvýrazní chuť čokolády.", "en": "Peel the banana; break half into the blender and slice the other half for the top. Add the quark, milk, cocoa, honey and a pinch of salt; the salt brings out the chocolate flavour."},
+      {"sk": "Mixuj 1 minútu, kým nie je krém úplne hladký a lesklý. Ak je príliš hustý, prilej lyžicu mlieka. Ochutnaj a podľa potreby pridaj med – kakao bez cukru je horké.", "en": "Blend for 1 minute until completely smooth and glossy. If it is too thick, add a spoonful of milk. Taste and add more honey if needed; unsweetened cocoa is bitter.", "timerSeconds": 60},
+      {"sk": "Lieskové orechy opraž na suchej panvici 3 minúty, kým nezavoňajú a šupky nezačnú pukať. Zabaľ ich do utierky, pošúchaj, aby šupky opadli, a nahrubo ich nasekaj.", "en": "Toast the hazelnuts in a dry pan for 3 minutes until fragrant and the skins start to crack. Wrap them in a tea towel and rub off the skins, then chop roughly.", "timerSeconds": 180},
+      {"sk": "Puding rozdeľ do pohárov, navrch daj kolieska banánu a orechy. Najlepší je vychladený aspoň 20 minút; v chladničke vydrží 2 dni, banán však pridaj až pred jedením.", "en": "Spoon the pudding into glasses and top with the banana slices and hazelnuts. It is best chilled for at least 20 minutes; it keeps in the fridge for 2 days, but add the banana just before eating."}
+    ]
+  },
+  {
+    "id": "sladky-kuskus-s-datlami-a-mandlami",
+    "title": {"sk": "Sladký kuskus s datľami a mandľami", "en": "Sweet couscous with dates and almonds"},
+    "description": {"sk": "Marocké raňajky: kuskus v teplom mlieku so škoricou, datľami a mandľami.", "en": "A Moroccan breakfast of couscous in warm milk with cinnamon, dates and almonds."},
+    "cuisine": "NORTH_AFRICAN",
+    "mealTypes": ["BREAKFAST"],
+    "totalTimeMin": 15,
+    "activeTimeMin": 10,
+    "difficulty": 1,
+    "servings": 2,
+    "equipment": ["STOVE"],
+    "tags": ["STUDENT"],
+    "ingredients": [
+      {"id": "couscous", "amount": 100, "unit": "G", "role": "MAIN"},
+      {"id": "milk", "amount": 300, "unit": "ML", "role": "MAIN"},
+      {"id": "dates", "amount": 40, "unit": "G", "role": "SECONDARY"},
+      {"id": "almonds", "amount": 30, "unit": "G", "role": "SECONDARY"},
+      {"id": "butter", "amount": 10, "unit": "G", "role": "SECONDARY"},
+      {"id": "honey", "amount": 1, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "cinnamon", "amount": 0.5, "unit": "TSP", "role": "SEASONING"},
+      {"id": "salt", "amount": 1, "unit": "PINCH", "role": "SEASONING"}
+    ],
+    "steps": [
+      {"sk": "Mandle nahrubo nasekaj a opraž ich na suchej panvici na strednom ohni 3 minúty dozlatista. Datle vykôstkuj a nakrájaj na malé kúsky.", "en": "Roughly chop the almonds and toast them in a dry pan over a medium heat for 3 minutes until golden. Stone the dates and chop them into small pieces.", "timerSeconds": 180},
+      {"sk": "Do hrnca nalej 200 ml mlieka, pridaj maslo, med, polovicu škorice a štipku soli a priveď do varu. Hneď odstav, vsyp kuskus a datle, premiešaj a prikry pokrievkou.", "en": "Pour 200 ml of the milk into a pan, add the butter, honey, half the cinnamon and a pinch of salt and bring to the boil. Take off the heat straight away, stir in the couscous and dates and cover with a lid."},
+      {"sk": "Nechaj kuskus 5 minút napučať, kým nenasaje všetko mlieko. Potom ho vidličkou prečechraj, aby sa zrnká oddelili a nebol zlepený.", "en": "Leave the couscous to swell for 5 minutes until it has absorbed all the milk. Then fluff it with a fork so the grains separate and do not clump.", "timerSeconds": 300},
+      {"sk": "Zvyšné mlieko zohrej. Kuskus rozdeľ do misiek, polej teplým mliekom, posyp mandľami a zvyšnou škoricou. Jedz hneď – kuskus v mlieku rýchlo mäkne.", "en": "Warm the remaining milk. Divide the couscous between bowls, pour over the warm milk and sprinkle with the almonds and remaining cinnamon. Eat straight away, as couscous softens quickly in milk."}
+    ]
+  },
+  {
+    "id": "vajcia-namakko-s-hriankovymi-pruzkami",
+    "title": {"sk": "Vajcia namäkko s hriankovými prúžkami", "en": "Soft-boiled eggs with toast soldiers"},
+    "description": {"sk": "Britská klasika: tekutý žĺtok a maslové prúžky hrianky na namáčanie.", "en": "A British classic: runny yolks and buttered toast fingers for dipping."},
+    "cuisine": "BRITISH",
+    "mealTypes": ["BREAKFAST"],
+    "totalTimeMin": 10,
+    "activeTimeMin": 10,
+    "difficulty": 1,
+    "servings": 2,
+    "equipment": ["STOVE", "TOASTER"],
+    "tags": ["STUDENT"],
+    "ingredients": [
+      {"id": "egg", "amount": 4, "unit": "PCS", "role": "MAIN"},
+      {"id": "toast-bread", "amount": 4, "unit": "PCS", "role": "MAIN"},
+      {"id": "butter", "amount": 20, "unit": "G", "role": "SECONDARY"},
+      {"id": "salt", "amount": 1, "unit": "PINCH", "role": "SEASONING"},
+      {"id": "black-pepper", "amount": 1, "unit": "PINCH", "role": "SEASONING"},
+      {"id": "chives", "amount": 0.25, "unit": "PCS", "role": "SEASONING", "optional": true}
+    ],
+    "steps": [
+      {"sk": "Vajcia vyber z chladničky aspoň 10 minút vopred – studené by pri vložení do vriacej vody mohli prasknúť a časovanie by nesedelo. V hrnci priveď do varu toľko vody, aby vajcia ponorila.", "en": "Take the eggs out of the fridge at least 10 minutes ahead; cold eggs can crack in boiling water and throw off the timing. Bring enough water to the boil in a pan to cover the eggs.", "timerSeconds": 600},
+      {"sk": "Vajcia opatrne vlož do vody lyžicou a var presne 6 minút pri miernom vare. Bielok tak stuhne a žĺtok zostane tekutý. Hneď ich vyber a daj do stojanov na vajcia.", "en": "Lower the eggs gently into the water with a spoon and cook for exactly 6 minutes at a steady simmer. The whites set and the yolks stay runny. Lift them out straight away into egg cups.", "timerSeconds": 360},
+      {"sk": "Medzitým opeč chlieb v hriankovači do zlatista, natri ho maslom a nakrájaj na prúžky široké asi 2 cm – musia sa zmestiť do vajca.", "en": "Meanwhile toast the bread until golden, butter it and cut it into fingers about 2 cm wide; they need to fit into the egg."},
+      {"sk": "Vajcia nožom zrež na vrchu, aby sa otvorili, posoľ ich a okoreň a posyp pažítkou. Prúžky hrianky namáčaj do tekutého žĺtka a zvyšok vajca vyjedz lyžičkou.", "en": "Slice the tops off the eggs with a knife, season with salt and pepper and sprinkle with chives. Dip the toast fingers into the runny yolk and eat the rest of the egg with a teaspoon."}
+    ]
+  },
+  {
+    "id": "ranajkovy-sendvic-so-slaninou-a-vajcom",
+    "title": {"sk": "Raňajkový sendvič so slaninou a vajcom", "en": "Bacon and egg breakfast sandwich"},
+    "description": {"sk": "Teplé pečivo s chrumkavou slaninou, vajcom, syrom a paradajkou.", "en": "A warm roll with crisp bacon, egg, cheese and tomato."},
+    "cuisine": "AMERICAN",
+    "mealTypes": ["BREAKFAST"],
+    "totalTimeMin": 15,
+    "activeTimeMin": 15,
+    "difficulty": 1,
+    "servings": 2,
+    "equipment": ["STOVE"],
+    "tags": ["COMFORT"],
+    "ingredients": [
+      {"id": "burger-bun", "amount": 2, "unit": "PCS", "role": "MAIN"},
+      {"id": "bacon", "amount": 80, "unit": "G", "role": "MAIN"},
+      {"id": "egg", "amount": 2, "unit": "PCS", "role": "MAIN"},
+      {"id": "cheddar", "amount": 40, "unit": "G", "role": "SECONDARY"},
+      {"id": "tomato", "amount": 1, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "lettuce", "amount": 0.1, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "ketchup", "amount": 1, "unit": "TBSP", "role": "SEASONING"},
+      {"id": "black-pepper", "amount": 1, "unit": "PINCH", "role": "SEASONING"}
+    ],
+    "steps": [
+      {"sk": "Slaninu rozlož na studenú panvicu a pomaly ju zohrievaj na strednom ohni. Opekaj ju 5 až 6 minút za občasného obracania, kým tuk nevypečie a plátky nie sú chrumkavé. Vyber ju na papierovú utierku.", "en": "Lay the bacon in a cold pan and heat it slowly over a medium heat. Fry for 5 to 6 minutes, turning now and then, until the fat has rendered and the rashers are crisp. Drain on kitchen paper.", "timerSeconds": 330},
+      {"sk": "Rozkrojené pečivo opeč reznými stranami nadol na tuku zo slaniny asi 1 minútu, kým nezozlatne. Paradajku nakrájaj na plátky a šalát umy a osuš.", "en": "Toast the split buns cut side down in the bacon fat for about 1 minute until golden. Slice the tomato and wash and dry the lettuce.", "timerSeconds": 60},
+      {"sk": "Na tej istej panvici rozbi vajcia a žĺtky prepichni, aby sa rozliali a vajce bolo ploché ako pečivo. Peč 2 minúty, otoč, polož na každé plátok syra a peč ešte minútu, kým sa syr neroztopí.", "en": "Crack the eggs into the same pan and break the yolks so they spread and the eggs lie flat like the bun. Cook for 2 minutes, flip, top each with cheese and cook for a minute more until the cheese melts.", "timerSeconds": 180},
+      {"sk": "Spodnú časť pečiva natri kečupom, polož šalát, paradajku, vajce so syrom a slaninu, okoreň a prikry vrchnou časťou. Jedz hneď, kým je syr roztopený.", "en": "Spread the bottom of each bun with ketchup and layer on the lettuce, tomato, egg with cheese and bacon, season with pepper and close with the top. Eat at once while the cheese is melted."}
+    ]
+  },
+  {
+    "id": "hrianka-s-cicerovou-natierkou-a-redkovkou",
+    "title": {"sk": "Hrianka s cícerovou nátierkou a reďkovkou", "en": "Toast with chickpea smash and radishes"},
+    "description": {"sk": "Vegánska nátierka z cíceru, tahini a citróna na chrumkavom chlebe.", "en": "A vegan smash of chickpeas, tahini and lemon on crisp bread."},
+    "cuisine": "MIDDLE_EASTERN",
+    "mealTypes": ["BREAKFAST", "SNACK"],
+    "totalTimeMin": 10,
+    "activeTimeMin": 10,
+    "difficulty": 1,
+    "servings": 2,
+    "equipment": ["TOASTER"],
+    "tags": ["STUDENT", "NO_COOK"],
+    "ingredients": [
+      {"id": "chickpeas", "amount": 240, "unit": "G", "role": "MAIN", "note": {"sk": "sterilizovaný, scedený", "en": "canned, drained"}},
+      {"id": "wholegrain-bread", "amount": 4, "unit": "PCS", "role": "MAIN"},
+      {"id": "tahini", "amount": 2, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "lemon", "amount": 0.5, "unit": "PCS", "role": "SEASONING"},
+      {"id": "olive-oil", "amount": 1, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "garlic", "amount": 1, "unit": "PCS", "role": "SEASONING"},
+      {"id": "radish", "amount": 6, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "cumin", "amount": 0.25, "unit": "TSP", "role": "SEASONING"},
+      {"id": "salt", "amount": 0.25, "unit": "TSP", "role": "SEASONING"},
+      {"id": "parsley", "amount": 0.25, "unit": "PCS", "role": "SEASONING"}
+    ],
+    "steps": [
+      {"sk": "Cícer prepláchni a nechaj odkvapkať. V miske ho roztlač vidličkou alebo tĺčikom na zemiaky na hrubú kašu – môžu zostať kúsky, nátierka bude mať príjemnú štruktúru.", "en": "Rinse and drain the chickpeas. Mash them in a bowl with a fork or potato masher into a rough paste; some pieces can remain, giving the spread a pleasant texture."},
+      {"sk": "Pridaj tahini, šťavu z polovice citróna, olej, prelisovaný cesnak, rascu a soľ a dôkladne premiešaj. Ak je nátierka príliš hustá, vmiešaj 1 až 2 lyžice studenej vody.", "en": "Add the tahini, the juice of half the lemon, the oil, crushed garlic, cumin and salt and mix well. If the spread is too thick, stir in 1 to 2 tablespoons of cold water."},
+      {"sk": "Reďkovky umy a nakrájaj na tenké kolieska. Petržlenovú vňať nasekaj. Chlieb opeč v hriankovači do chrumkava.", "en": "Wash the radishes and slice them thinly. Chop the parsley. Toast the bread until crisp."},
+      {"sk": "Hrianky natri hrubou vrstvou cícerovej nátierky, navrch rozlož reďkovky a posyp petržlenovou vňaťou. Nátierka vydrží v chladničke 3 dni, hodí sa aj do krabičky so zeleninou.", "en": "Spread the toast thickly with the chickpea smash, top with the radishes and sprinkle with parsley. The spread keeps in the fridge for 3 days and also works in a lunchbox with vegetables."}
+    ]
+  },
+  {
+    "id": "slany-hrnckovy-muffin-so-syrom-a-sunkou",
+    "title": {"sk": "Slaný hrnčekový muffin so syrom a šunkou", "en": "Savoury microwave mug muffin with cheese and ham"},
+    "description": {"sk": "Rýchly teplý muffin z vajca, múky, šunky a syra hotový za dve minúty.", "en": "A quick warm muffin of egg, flour, ham and cheese ready in two minutes."},
+    "cuisine": "INTERNATIONAL",
+    "mealTypes": ["BREAKFAST", "SNACK"],
+    "totalTimeMin": 8,
+    "activeTimeMin": 5,
+    "difficulty": 1,
+    "servings": 1,
+    "equipment": ["MICROWAVE"],
+    "tags": ["STUDENT"],
+    "ingredients": [
+      {"id": "egg", "amount": 1, "unit": "PCS", "role": "MAIN"},
+      {"id": "wheat-flour", "amount": 3, "unit": "TBSP", "role": "MAIN"},
+      {"id": "milk", "amount": 2, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "ham", "amount": 30, "unit": "G", "role": "SECONDARY"},
+      {"id": "edam", "amount": 25, "unit": "G", "role": "SECONDARY"},
+      {"id": "baking-powder", "amount": 0.25, "unit": "TSP", "role": "SEASONING"},
+      {"id": "chives", "amount": 0.1, "unit": "PCS", "role": "SEASONING"},
+      {"id": "sunflower-oil", "amount": 1, "unit": "TSP", "role": "SECONDARY"}
+    ],
+    "steps": [
+      {"sk": "Šunku nakrájaj na drobné kocky, syr nastrúhaj a pažítku nasekaj. V širokom hrnčeku s objemom aspoň 300 ml rozšľahaj vidličkou vajce s mliekom a olejom.", "en": "Dice the ham small, grate the cheese and chop the chives. In a wide mug of at least 300 ml beat the egg with the milk and oil using a fork."},
+      {"sk": "Pridaj múku s kypriacim práškom a premiešaj do hladka, aby na dne nezostali suché hrudky. Vmiešaj šunku, väčšinu syra a pažítku a navrch posyp zvyšný syr.", "en": "Add the flour with the baking powder and stir until smooth, making sure no dry lumps remain at the bottom. Stir in the ham, most of the cheese and the chives and scatter the rest of the cheese on top."},
+      {"sk": "Ohrievaj v mikrovlnke na plný výkon 70 až 90 sekúnd, kým muffin nenakysne a stred nie je pevný. Ak je ešte vlhký, pridaj 10 sekúnd – prehriaty by bol suchý.", "en": "Microwave on full power for 70 to 90 seconds until risen and the centre is firm. If it is still moist, add 10 seconds; overcooked, it turns dry.", "timerSeconds": 80},
+      {"sk": "Nechaj ho 1 minútu postáť, potom ho vyklop na tanier alebo jedz priamo z hrnčeka. Hodí sa k nemu zelenina alebo kyslá uhorka.", "en": "Let it stand for 1 minute, then turn it out onto a plate or eat it straight from the mug. Vegetables or a gherkin go well with it.", "timerSeconds": 60}
+    ]
+  },
+  {
+    "id": "ovsena-kasa-ako-mrkvovy-kolac",
+    "title": {"sk": "Ovsená kaša ako mrkvový koláč", "en": "Carrot cake porridge"},
+    "description": {"sk": "Kaša s nastrúhanou mrkvou, škoricou, hrozienkami a orechmi chutí ako koláč.", "en": "Porridge with grated carrot, cinnamon, raisins and walnuts that tastes like cake."},
+    "cuisine": "INTERNATIONAL",
+    "mealTypes": ["BREAKFAST"],
+    "totalTimeMin": 15,
+    "activeTimeMin": 10,
+    "difficulty": 1,
+    "servings": 2,
+    "equipment": ["STOVE"],
+    "tags": ["STUDENT"],
+    "ingredients": [
+      {"id": "oats", "amount": 90, "unit": "G", "role": "MAIN"},
+      {"id": "milk", "amount": 350, "unit": "ML", "role": "MAIN"},
+      {"id": "carrot", "amount": 1, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "raisins", "amount": 30, "unit": "G", "role": "SECONDARY"},
+      {"id": "walnuts", "amount": 20, "unit": "G", "role": "SECONDARY"},
+      {"id": "cream-cheese", "amount": 40, "unit": "G", "role": "SECONDARY"},
+      {"id": "honey", "amount": 1, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "cinnamon", "amount": 0.5, "unit": "TSP", "role": "SEASONING"},
+      {"id": "nutmeg", "amount": 1, "unit": "PINCH", "role": "SEASONING"},
+      {"id": "salt", "amount": 1, "unit": "PINCH", "role": "SEASONING"}
+    ],
+    "steps": [
+      {"sk": "Mrkvu ošúp a nastrúhaj na jemnom strúhadle. Jemne nastrúhaná sa v kaši rozvarí a osladí ju, hrubé kúsky by zostali tvrdé.", "en": "Peel the carrot and grate it finely. Finely grated, it melts into the porridge and sweetens it; coarse pieces would stay hard."},
+      {"sk": "Do hrnca daj vločky, mlieko, 100 ml vody, mrkvu, hrozienka, škoricu, muškátový oriešok a štipku soli. Priveď do mierneho varu za stáleho miešania.", "en": "Put the oats, milk, 100 ml of water, carrot, raisins, cinnamon, nutmeg and a pinch of salt in a pan. Bring to a gentle simmer, stirring all the time."},
+      {"sk": "Var 5 minút na miernom ohni a mešaj, kým kaša nezhustne a mrkva nezmäkne. Medzitým vymiešaj krémový syr s medom – bude to „poleva“ ako na mrkvovom koláči.", "en": "Simmer over a low heat for 5 minutes, stirring, until the porridge is thick and the carrot is tender. Meanwhile mix the cream cheese with the honey for a 'frosting' like on carrot cake.", "timerSeconds": 300},
+      {"sk": "Orechy nahrubo nasekaj. Kašu rozdeľ do misiek, navrch daj lyžicu syrovej polevy a posyp orechmi. Kaša bez polevy vydrží v chladničke 3 dni; zohrej ju s trochou mlieka.", "en": "Roughly chop the walnuts. Divide the porridge between bowls, add a spoonful of the cheese frosting and scatter over the walnuts. Without the frosting it keeps in the fridge for 3 days; reheat with a little milk."}
+    ]
+  },
+  {
+    "id": "aloo-paratha",
+    "title": {"sk": "Aloo paratha – placky plnené zemiakmi", "en": "Aloo paratha: potato-stuffed flatbreads"},
+    "description": {"sk": "Indické raňajkové placky plnené korenistými zemiakmi, opečené na masle.", "en": "Indian breakfast flatbreads stuffed with spiced potatoes and fried in butter."},
+    "cuisine": "INDIAN",
+    "mealTypes": ["BREAKFAST", "LUNCH"],
+    "totalTimeMin": 60,
+    "activeTimeMin": 40,
+    "difficulty": 3,
+    "servings": 4,
+    "equipment": ["STOVE"],
+    "ingredients": [
+      {"id": "wholewheat-flour", "amount": 250, "unit": "G", "role": "MAIN"},
+      {"id": "potato", "amount": 400, "unit": "G", "role": "MAIN"},
+      {"id": "onion", "amount": 0.5, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "chili-pepper", "amount": 1, "unit": "PCS", "role": "SEASONING"},
+      {"id": "coriander-leaves", "amount": 0.5, "unit": "PCS", "role": "SEASONING"},
+      {"id": "cumin", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "garam-masala", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "salt", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "butter", "amount": 40, "unit": "G", "role": "SECONDARY"},
+      {"id": "yogurt", "amount": 200, "unit": "G", "role": "SECONDARY", "note": {"sk": "na podávanie", "en": "to serve"}}
+    ],
+    "steps": [
+      {"sk": "Zemiaky umy a uvar v šupke doměkka, asi 20 minút. Medzitým zmiešaj múku s polovicou soli a postupne pridávaj asi 160 ml vody, kým nevznikne mäkké hladké cesto. Miesi ho 5 minút, prikry a nechaj odpočívať.", "en": "Wash the potatoes and boil them in their skins until tender, about 20 minutes. Meanwhile mix the flour with half the salt and gradually add about 160 ml of water to make a soft, smooth dough. Knead for 5 minutes, cover and leave to rest.", "timerSeconds": 1200},
+      {"sk": "Uvarené zemiaky ošúp a roztlač ich na hladkú kašu bez hrudiek – hrudky by pri vaľkaní pretrhli cesto. Primiešaj nadrobno nakrájanú cibuľu, čili bez semienok, koriander, rascu, garam masalu a zvyšnú soľ.", "en": "Peel the cooked potatoes and mash them until completely smooth; lumps would tear the dough when rolling. Mix in the finely chopped onion, deseeded chilli, coriander, cumin, garam masala and the remaining salt."},
+      {"sk": "Cesto rozdeľ na 8 guliek a plnku na 8 kôpok. Guľku rozvaľkaj na kruh s priemerom 10 cm, do stredu daj plnku, okraje zober nahor, zlep ich a vytvor guľku. Jemne ju pomúč a rozvaľkaj na placku s priemerom asi 18 cm.", "en": "Divide the dough into 8 balls and the filling into 8 portions. Roll a ball into a 10 cm circle, put the filling in the middle, gather the edges up, pinch them together and shape a ball. Dust lightly with flour and roll into a flatbread about 18 cm across."},
+      {"sk": "Suchú panvicu rozpáľ na strednom ohni a placku peč 1 minútu, kým nenaskočia bublinky, otoč ju a peč ďalšiu minútu. Potom obe strany potri maslom a opekaj ešte po minúte, kým nie sú zlatohnedé so škvrnkami.", "en": "Heat a dry pan over a medium heat and cook the flatbread for 1 minute until bubbles appear, flip and cook for another minute. Then brush both sides with butter and fry for a minute more on each until golden brown in patches.", "timerSeconds": 240},
+      {"sk": "Hotové placky ukladaj pod utierku, aby zostali mäkké. Podávaj teplé s jogurtom. Vychladnuté placky vydržia 2 dni v chladničke, zohrej ich nasucho na panvici.", "en": "Keep the finished flatbreads under a tea towel so they stay soft. Serve warm with yogurt. Cooled ones keep for 2 days in the fridge; reheat them in a dry pan."}
+    ]
+  },
+  {
+    "id": "ranajkove-tacos-s-chorizom-a-vajcom",
+    "title": {"sk": "Raňajkové tacos s chorizom a vajcom", "en": "Breakfast tacos with chorizo and egg"},
+    "description": {"sk": "Mäkké tortilly s praženicou s chorizom, avokádom a paradajkovou salsou.", "en": "Soft tortillas with chorizo scrambled eggs, avocado and tomato salsa."},
+    "cuisine": "MEXICAN",
+    "mealTypes": ["BREAKFAST", "LUNCH"],
+    "totalTimeMin": 20,
+    "activeTimeMin": 20,
+    "difficulty": 1,
+    "servings": 2,
+    "equipment": ["STOVE"],
+    "ingredients": [
+      {"id": "tortilla", "amount": 4, "unit": "PCS", "role": "MAIN"},
+      {"id": "egg", "amount": 4, "unit": "PCS", "role": "MAIN"},
+      {"id": "chorizo", "amount": 40, "unit": "G", "role": "SECONDARY"},
+      {"id": "avocado", "amount": 1, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "tomato", "amount": 1, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "red-onion", "amount": 0.25, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "lime", "amount": 0.5, "unit": "PCS", "role": "SEASONING"},
+      {"id": "coriander-leaves", "amount": 0.25, "unit": "PCS", "role": "SEASONING"},
+      {"id": "salt", "amount": 1, "unit": "PINCH", "role": "SEASONING"}
+    ],
+    "steps": [
+      {"sk": "Paradajku a cibuľu nakrájaj nadrobno, zmiešaj ich s nasekaným koriandrom, trochou limetkovej šťavy a štipkou soli – vznikne rýchla salsa. Avokádo nakrájaj na plátky a pokvapkaj limetkou.", "en": "Finely chop the tomato and onion and mix with chopped coriander, a little lime juice and a pinch of salt for a quick salsa. Slice the avocado and squeeze over some lime."},
+      {"sk": "Chorizo nakrájaj na drobné kocky a opekaj ho na suchej panvici na strednom ohni 3 minúty, kým nepustí červený tuk a nie je chrumkavé.", "en": "Dice the chorizo small and fry it in a dry pan over a medium heat for 3 minutes until it releases its red fat and turns crisp.", "timerSeconds": 180},
+      {"sk": "Vajcia rozšľahaj (soľ netreba, chorizo je slané), vlej ich k chorizu a pomaly miešaj stierkou 2 minúty, kým nestuhnú na mäkkú praženicu. Odstav, kým sú ešte lesklé.", "en": "Beat the eggs (no salt needed, as the chorizo is salty), pour them over the chorizo and stir slowly with a spatula for 2 minutes until softly scrambled. Take off the heat while still glossy.", "timerSeconds": 120},
+      {"sk": "Tortilly zohrej na suchej panvici 20 sekúnd z každej strany, kým nezmäknú. Naplň ich praženicou, avokádom a salsou, preklop napoly a podávaj s mesiačikmi limetky.", "en": "Warm the tortillas in a dry pan for 20 seconds per side until soft. Fill them with the eggs, avocado and salsa, fold in half and serve with lime wedges.", "timerSeconds": 40}
+    ]
+  },
+  {
+    "id": "krupicovy-trhanec-s-jablkovou-omackou",
+    "title": {"sk": "Krupicový trhanec s jablkovou omáčkou", "en": "Semolina schmarrn with apple sauce"},
+    "description": {"sk": "Rakúsky „Grießschmarrn“: krupica namočená v mlieku, opečená na masle a natrhaná.", "en": "Austrian Grießschmarrn: semolina soaked in milk, fried in butter and torn apart."},
+    "cuisine": "CENTRAL_EUROPEAN",
+    "mealTypes": ["BREAKFAST", "DESSERT"],
+    "totalTimeMin": 40,
+    "activeTimeMin": 20,
+    "difficulty": 2,
+    "servings": 2,
+    "equipment": ["STOVE"],
+    "tags": ["COMFORT"],
+    "ingredients": [
+      {"id": "semolina", "amount": 120, "unit": "G", "role": "MAIN"},
+      {"id": "milk", "amount": 300, "unit": "ML", "role": "MAIN"},
+      {"id": "egg", "amount": 2, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "butter", "amount": 30, "unit": "G", "role": "SECONDARY"},
+      {"id": "sugar", "amount": 2, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "raisins", "amount": 30, "unit": "G", "role": "SECONDARY"},
+      {"id": "apple", "amount": 2, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "cinnamon", "amount": 0.5, "unit": "TSP", "role": "SEASONING"},
+      {"id": "lemon", "amount": 0.25, "unit": "PCS", "role": "SEASONING"},
+      {"id": "salt", "amount": 1, "unit": "PINCH", "role": "SEASONING"},
+      {"id": "powdered-sugar", "amount": 1, "unit": "TSP", "role": "SEASONING", "optional": true}
+    ],
+    "steps": [
+      {"sk": "Mlieko zohrej na vlažné, vmiešaj krupicu, cukor, vajcia, hrozienka a štipku soli a nechaj 20 minút postáť. Krupica nasaje mlieko a vznikne husté cesto, ktoré sa dá opekať.", "en": "Warm the milk until lukewarm, stir in the semolina, sugar, eggs, raisins and a pinch of salt and leave to stand for 20 minutes. The semolina soaks up the milk into a thick batter that can be fried.", "timerSeconds": 1200},
+      {"sk": "Medzitým jablká ošúp, nakrájaj na kocky a dus ich s 3 lyžicami vody, škoricou a kvapkou citróna 8 minút pod pokrievkou, kým sa nerozpadnú. Rozmixuj alebo roztlač na omáčku.", "en": "Meanwhile peel and dice the apples and cook them, covered, with 3 tablespoons of water, the cinnamon and a squeeze of lemon for 8 minutes until they fall apart. Blend or mash into a sauce.", "timerSeconds": 480},
+      {"sk": "Na veľkej nepriľnavej panvici rozpusti polovicu masla na strednom ohni a vlej krupicovú zmes. Peč 4 minúty, kým spodok nezozlatne, potom ju obracačkou rozdeľ na štvrtiny a každú otoč.", "en": "Melt half the butter in a large non-stick pan over a medium heat and pour in the semolina mixture. Cook for 4 minutes until the underside is golden, then cut it into quarters with a spatula and turn each one.", "timerSeconds": 240},
+      {"sk": "Pridaj zvyšné maslo a dvoma vidličkami trhaj trhanec na kúsky veľkosti sústa. Opekaj ich ďalších 5 minút za občasného miešania, kým nie sú zo všetkých strán zlatisté a chrumkavé.", "en": "Add the rest of the butter and tear the schmarrn into bite-sized pieces with two forks. Fry for another 5 minutes, stirring now and then, until golden and crisp all over.", "timerSeconds": 300},
+      {"sk": "Trhanec rozdeľ na taniere, posyp práškovým cukrom a podávaj s teplou jablkovou omáčkou. Najlepší je hneď, keď sú kúsky zvonku chrumkavé a vnútri vláčne.", "en": "Divide the schmarrn between plates, dust with icing sugar and serve with the warm apple sauce. It is best straight away, crisp outside and tender within."}
+    ]
+  },
+  {
+    "id": "frittata-zo-zvysnych-cestovin",
+    "title": {"sk": "Frittata zo zvyšných cestovín", "en": "Leftover pasta frittata"},
+    "description": {"sk": "Neapolský spôsob, ako zúžitkovať včerajšie cestoviny: zapečené s vajcami a syrom.", "en": "The Neapolitan way to use up yesterday's pasta: set with eggs and cheese."},
+    "cuisine": "ITALIAN",
+    "mealTypes": ["BREAKFAST", "LUNCH", "DINNER"],
+    "totalTimeMin": 25,
+    "activeTimeMin": 15,
+    "difficulty": 1,
+    "servings": 3,
+    "equipment": ["STOVE", "OVEN"],
+    "tags": ["STUDENT"],
+    "ingredients": [
+      {"id": "pasta", "amount": 200, "unit": "G", "role": "MAIN", "note": {"sk": "uvarené, alebo 90 g suchých", "en": "cooked, or 90 g dry"}},
+      {"id": "egg", "amount": 5, "unit": "PCS", "role": "MAIN"},
+      {"id": "parmesan", "amount": 4, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "cherry-tomato", "amount": 120, "unit": "G", "role": "SECONDARY"},
+      {"id": "spinach", "amount": 60, "unit": "G", "role": "SECONDARY"},
+      {"id": "olive-oil", "amount": 1, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "salt", "amount": 0.25, "unit": "TSP", "role": "SEASONING"},
+      {"id": "black-pepper", "amount": 1, "unit": "PINCH", "role": "SEASONING"},
+      {"id": "basil", "amount": 0.25, "unit": "PCS", "role": "SEASONING"}
+    ],
+    "steps": [
+      {"sk": "Ak nemáš zvyšky, uvar cestoviny podľa návodu, sceď ich a nechaj vychladnúť. Rúru zapni na gril alebo na 220 °C. Cherry paradajky rozpoľ a špenát nahrubo nasekaj.", "en": "If you have no leftovers, cook the pasta according to the packet, drain and let it cool. Turn on the oven grill or heat the oven to 220 °C. Halve the cherry tomatoes and roughly chop the spinach."},
+      {"sk": "Vajcia rozšľahaj s parmezánom, soľou a korením. Primiešaj cestoviny a špenát, aby boli celé obalené vajcom.", "en": "Beat the eggs with the Parmesan, salt and pepper. Stir in the pasta and spinach so everything is coated in egg."},
+      {"sk": "Na panvici s kovovou rúčkou zohrej olej na strednom ohni, vlej zmes a uhlaď ju. Navrch zatlač paradajky. Peč 6 až 8 minút bez miešania, kým okraje a spodok nestuhnú a nie sú zlatisté.", "en": "Heat the oil in an ovenproof pan over a medium heat, pour in the mixture and level it. Press the tomatoes into the top. Cook for 6 to 8 minutes without stirring until the edges and base have set and turned golden.", "timerSeconds": 420},
+      {"sk": "Panvicu prelož do rúry pod gril na 3 až 5 minút, kým vrch nestuhne a nezačne hnednúť. Stred nesmie byť tekutý – po zatlačení nožom nemá vytekať surové vajce.", "en": "Move the pan under the grill for 3 to 5 minutes until the top has set and begins to brown. The centre must not be runny: pressed with a knife, no raw egg should seep out.", "timerSeconds": 240},
+      {"sk": "Frittatu nechaj 2 minúty postáť, vyklop ju na dosku a nakrájaj na trojuholníky. Posyp bazalkou. Je dobrá teplá aj studená a v chladničke vydrží 2 dni.", "en": "Let the frittata stand for 2 minutes, turn it out onto a board and cut into wedges. Scatter with basil. It is good warm or cold and keeps in the fridge for 2 days."}
+    ]
+  },
+  {
+    "id": "veganske-bananove-muffiny",
+    "title": {"sk": "Vegánske banánové muffiny", "en": "Vegan banana muffins"},
+    "description": {"sk": "Vláčne muffiny bez vajec a mlieka, s banánom, ovsenými vločkami a orechmi.", "en": "Moist muffins without eggs or dairy, made with banana, oats and walnuts."},
+    "cuisine": "INTERNATIONAL",
+    "mealTypes": ["BREAKFAST", "SNACK"],
+    "totalTimeMin": 40,
+    "activeTimeMin": 15,
+    "difficulty": 1,
+    "servings": 6,
+    "equipment": ["OVEN"],
+    "tags": ["MEAL_PREP", "FREEZER_FRIENDLY"],
+    "ingredients": [
+      {"id": "banana", "amount": 3, "unit": "PCS", "role": "MAIN"},
+      {"id": "wheat-flour", "amount": 150, "unit": "G", "role": "MAIN"},
+      {"id": "oats", "amount": 60, "unit": "G", "role": "SECONDARY"},
+      {"id": "oat-milk", "amount": 120, "unit": "ML", "role": "SECONDARY"},
+      {"id": "sunflower-oil", "amount": 60, "unit": "ML", "role": "SECONDARY"},
+      {"id": "brown-sugar", "amount": 60, "unit": "G", "role": "SECONDARY"},
+      {"id": "flaxseed", "amount": 1, "unit": "TBSP", "role": "SECONDARY", "note": {"sk": "mleté", "en": "ground"}},
+      {"id": "walnuts", "amount": 40, "unit": "G", "role": "SECONDARY"},
+      {"id": "baking-powder", "amount": 2, "unit": "TSP", "role": "SEASONING"},
+      {"id": "cinnamon", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "salt", "amount": 1, "unit": "PINCH", "role": "SEASONING"}
+    ],
+    "steps": [
+      {"sk": "Rúru predhrej na 180 °C a do formy na 12 muffinov vlož papierové košíčky. Mleté ľanové semienko zmiešaj s 3 lyžicami vody a nechaj 5 minút napučať – nahradí vajce a spojí cesto.", "en": "Preheat the oven to 180 °C and line a 12-hole muffin tin with paper cases. Mix the ground flaxseed with 3 tablespoons of water and leave for 5 minutes to thicken; it replaces the egg and binds the batter.", "timerSeconds": 300},
+      {"sk": "Banány roztlač vidličkou na hladkú kašu. Primiešaj ovsené mlieko, olej, hnedý cukor a ľanový gél a dobre rozšľahaj.", "en": "Mash the bananas with a fork until smooth. Stir in the oat milk, oil, brown sugar and the flax gel and whisk well."},
+      {"sk": "V druhej miske zmiešaj múku, vločky, kypriaci prášok, škoricu a štipku soli. Vsyp ich k mokrej zmesi a premiešaj stierkou len toľko, aby nezostala suchá múka. Nakoniec vmiešaj nasekané orechy.", "en": "In a second bowl mix the flour, oats, baking powder, cinnamon and a pinch of salt. Tip them into the wet mixture and stir with a spatula just until no dry flour remains. Fold in the chopped walnuts last."},
+      {"sk": "Cesto rozdeľ do košíčkov do troch štvrtín výšky. Peč 22 až 25 minút, kým muffiny nie sú zlatohnedé a špajdľa zo stredu nevyjde čistá. Nechaj ich vychladnúť vo forme 10 minút.", "en": "Divide the batter between the cases, filling them three quarters full. Bake for 22 to 25 minutes until golden brown and a skewer from the centre comes out clean. Leave to cool in the tin for 10 minutes.", "timerSeconds": 1440},
+      {"sk": "Muffiny vydržia v uzavretej krabičke 3 dni pri izbovej teplote a zamrazené 2 mesiace. Zamrazené rozmraz cez noc alebo ich zohrej 30 sekúnd v mikrovlnke.", "en": "The muffins keep in a closed box for 3 days at room temperature and frozen for 2 months. Thaw frozen ones overnight or warm them for 30 seconds in the microwave."}
+    ]
+  },
+  {
+    "id": "thajska-chrumkava-omeleta",
+    "title": {"sk": "Thajská chrumkavá omeleta khai jiao", "en": "Thai crispy omelette (khai jiao)"},
+    "description": {"sk": "Vysoká nadýchaná omeleta vyprážaná v horúcom oleji, s rybacou omáčkou a ryžou.", "en": "A tall puffy omelette fried in hot oil, seasoned with fish sauce, served on rice."},
+    "cuisine": "THAI",
+    "mealTypes": ["BREAKFAST", "DINNER"],
+    "totalTimeMin": 20,
+    "activeTimeMin": 10,
+    "difficulty": 1,
+    "servings": 2,
+    "equipment": ["STOVE"],
+    "tags": ["STUDENT"],
+    "ingredients": [
+      {"id": "egg", "amount": 4, "unit": "PCS", "role": "MAIN"},
+      {"id": "rice", "amount": 150, "unit": "G", "role": "MAIN"},
+      {"id": "fish-sauce", "amount": 2, "unit": "TSP", "role": "SEASONING"},
+      {"id": "lime", "amount": 0.5, "unit": "PCS", "role": "SEASONING"},
+      {"id": "sunflower-oil", "amount": 4, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "spring-onion", "amount": 1, "unit": "PCS", "role": "SEASONING"},
+      {"id": "sweet-chili-sauce", "amount": 2, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "cucumber", "amount": 0.25, "unit": "PCS", "role": "SECONDARY"}
+    ],
+    "steps": [
+      {"sk": "Ryžu prepláchni a uvar s 300 ml vody pod pokrievkou na minimálnom ohni 12 minút, potom ju nechaj 5 minút odstáť. Uhorku nakrájaj na plátky.", "en": "Rinse the rice and cook it with 300 ml of water, covered, on the lowest heat for 12 minutes, then let it stand for 5 minutes. Slice the cucumber.", "timerSeconds": 720},
+      {"sk": "Vajcia rozšľahaj s rybacou omáčkou a lyžičkou limetkovej šťavy veľmi intenzívne aspoň minútu, kým nespenia – vzduch v nich je tajomstvo nadýchanej omelety.", "en": "Whisk the eggs with the fish sauce and a teaspoon of lime juice very vigorously for at least a minute until foamy; the air in them is the secret of a puffy omelette."},
+      {"sk": "V malej hlbšej panvici alebo woku rozpáľ olej na vysokom ohni, kým sa nezačne jemne dymiť. Vajcia vlej z výšky asi 20 cm priamo do stredu – prudko zasyčia a nafúknu sa.", "en": "Heat the oil in a small deep pan or wok over a high heat until it just starts to smoke. Pour the eggs from a height of about 20 cm straight into the centre; they sizzle hard and puff up."},
+      {"sk": "Peč 1 až 2 minúty, kým okraje nie sú chrumkavé a zlatohnedé, potom omeletu otoč a peč ešte minútu. Vyber ju na papierovú utierku, aby odkvapkala.", "en": "Fry for 1 to 2 minutes until the edges are crisp and golden brown, then flip and fry for another minute. Lift onto kitchen paper to drain.", "timerSeconds": 150},
+      {"sk": "Ryžu daj do misiek, navrch polož omeletu a posyp jarnou cibuľkou. Podávaj so sladkou čili omáčkou a uhorkou. Jedz hneď, kým je omeleta chrumkavá.", "en": "Spoon the rice into bowls, top with the omelette and sprinkle with spring onion. Serve with sweet chilli sauce and cucumber. Eat straight away while the omelette is crisp."}
+    ]
+  },
+  {
+    "id": "smorrebrod-s-vajcom-a-redkovkou",
+    "title": {"sk": "Smørrebrød s vajcom a reďkovkou", "en": "Smørrebrød with egg and radish"},
+    "description": {"sk": "Dánsky otvorený chlebíček na tmavom chlebe s vajcom, reďkovkou a kôprom.", "en": "A Danish open sandwich on dark bread with egg, radish and dill."},
+    "cuisine": "INTERNATIONAL",
+    "mealTypes": ["BREAKFAST", "SNACK", "LUNCH"],
+    "totalTimeMin": 15,
+    "activeTimeMin": 15,
+    "difficulty": 1,
+    "servings": 2,
+    "equipment": ["STOVE"],
+    "ingredients": [
+      {"id": "wholegrain-bread", "amount": 2, "unit": "PCS", "role": "MAIN", "note": {"sk": "ražný", "en": "rye"}},
+      {"id": "egg", "amount": 3, "unit": "PCS", "role": "MAIN"},
+      {"id": "butter", "amount": 10, "unit": "G", "role": "SECONDARY"},
+      {"id": "radish", "amount": 5, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "cucumber", "amount": 0.25, "unit": "PCS", "role": "SECONDARY"},
+      {"id": "yogurt", "amount": 2, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "mustard", "amount": 1, "unit": "TSP", "role": "SEASONING"},
+      {"id": "dill", "amount": 0.25, "unit": "PCS", "role": "SEASONING"},
+      {"id": "salt", "amount": 1, "unit": "PINCH", "role": "SEASONING"},
+      {"id": "black-pepper", "amount": 1, "unit": "PINCH", "role": "SEASONING"}
+    ],
+    "steps": [
+      {"sk": "Vajcia var 9 minút, aby boli natvrdo, ale žĺtok zostal sýtožltý a jemne krémový. Schlaď ich v studenej vode, ošúp a nakrájaj na plátky.", "en": "Boil the eggs for 9 minutes so they are hard-boiled but the yolks stay bright yellow and slightly creamy. Cool them in cold water, peel and slice.", "timerSeconds": 540},
+      {"sk": "Reďkovky a uhorku nakrájaj na tenučké plátky. Jogurt zmiešaj s horčicou, štipkou soli a polovicou nasekaného kôpru.", "en": "Slice the radishes and cucumber very thinly. Mix the yogurt with the mustard, a pinch of salt and half the chopped dill."},
+      {"sk": "Krajce chleba natri tenko maslom až do okrajov – maslo je v Dánsku základ, chráni chlieb pred navlhnutím. Navrch uprav plátky uhorky a vajca tak, aby sa prekrývali.", "en": "Butter the bread thinly right to the edges; in Denmark butter is the base and keeps the bread from going soggy. Arrange overlapping slices of cucumber and egg on top."},
+      {"sk": "Pokvapkaj jogurtovým dresingom, ozdob reďkovkami a zvyšným kôprom a okoreň. Smørrebrød sa je príborom; pripravuj ho tesne pred jedením.", "en": "Drizzle with the yogurt dressing, decorate with the radishes and remaining dill and season with pepper. Smørrebrød is eaten with a knife and fork; make it just before eating."}
+    ]
+  },
+  {
+    "id": "spenatove-palacinky-s-cottage-syrom",
+    "title": {"sk": "Špenátové palacinky s cottage syrom", "en": "Spinach pancakes with cottage cheese"},
+    "description": {"sk": "Zelené slané palacinky plnené cottage syrom, paradajkami a bylinkami.", "en": "Green savoury crêpes filled with cottage cheese, tomatoes and herbs."},
+    "cuisine": "INTERNATIONAL",
+    "mealTypes": ["BREAKFAST", "DINNER"],
+    "totalTimeMin": 30,
+    "activeTimeMin": 25,
+    "difficulty": 2,
+    "servings": 2,
+    "equipment": ["STOVE", "BLENDER"],
+    "ingredients": [
+      {"id": "spinach", "amount": 100, "unit": "G", "role": "MAIN"},
+      {"id": "egg", "amount": 2, "unit": "PCS", "role": "MAIN"},
+      {"id": "milk", "amount": 200, "unit": "ML", "role": "SECONDARY"},
+      {"id": "wheat-flour", "amount": 100, "unit": "G", "role": "MAIN"},
+      {"id": "cottage-cheese", "amount": 250, "unit": "G", "role": "MAIN"},
+      {"id": "cherry-tomato", "amount": 120, "unit": "G", "role": "SECONDARY"},
+      {"id": "chives", "amount": 0.25, "unit": "PCS", "role": "SEASONING"},
+      {"id": "sunflower-oil", "amount": 1, "unit": "TBSP", "role": "SECONDARY"},
+      {"id": "salt", "amount": 0.25, "unit": "TSP", "role": "SEASONING"},
+      {"id": "black-pepper", "amount": 1, "unit": "PINCH", "role": "SEASONING"}
+    ],
+    "steps": [
+      {"sk": "Špenát daj do mixéra s mliekom, vajcami a soľou a mixuj, kým nie je zmes úplne zelená a hladká. Pridaj múku a premixuj na riedke cesto bez hrudiek. Nechaj ho 10 minút odpočívať.", "en": "Put the spinach in a blender with the milk, eggs and salt and blend until completely green and smooth. Add the flour and blend into a thin, lump-free batter. Leave it to rest for 10 minutes.", "timerSeconds": 600},
+      {"sk": "Cottage syr zmiešaj s nasekanou pažítkou a korením. Cherry paradajky nakrájaj na štvrtiny.", "en": "Mix the cottage cheese with the chopped chives and pepper. Quarter the cherry tomatoes."},
+      {"sk": "Nepriľnavú panvicu potri tenko olejom a zohrej na strednom ohni. Nalej naberačku cesta a krúživým pohybom ho rozlej po dne. Peč 1 a pol minúty, kým okraje nezačnú odstávať, otoč a peč ešte 30 sekúnd.", "en": "Brush a non-stick pan thinly with oil and heat over a medium heat. Pour in a ladle of batter and swirl it over the base. Cook for 1½ minutes until the edges lift, flip and cook for 30 seconds more.", "timerSeconds": 120},
+      {"sk": "Palacinky ukladaj na seba pod utierku, aby zostali vláčne – z cesta ich bude asi 6. Pred každou palacinkou panvicu znovu jemne potri olejom.", "en": "Stack the pancakes under a tea towel so they stay soft; the batter makes about 6. Brush the pan lightly with oil before each one."},
+      {"sk": "Na každú palacinku natri cottage syr, posyp paradajkami, zroluj alebo prelož na štvrtiny a podávaj. Palacinky bez plnky vydržia v chladničke 2 dni.", "en": "Spread each pancake with the cottage cheese, scatter with tomatoes, roll up or fold into quarters and serve. Unfilled pancakes keep in the fridge for 2 days."}
     ]
   }
 ]
