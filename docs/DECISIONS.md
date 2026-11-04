@@ -157,8 +157,10 @@ catalog is read-only and rebuilt from the seed, so it never needs data migration
 ## D15 — A recipe book replaces the weekly meal plan
 - The owner dropped the Plán tab. Its code is gone; `households/{hid}/mealPlans` documents (D13) are
   deleted by the app: once per household on every start, so plans written by a member who has not
-  updated yet go too, and with the household on account deletion. The rules let members only read
-  and delete that subcollection; once no old documents remain, it can leave the rules altogether.
+  updated yet go too, and with the household on account deletion. `firestore.rules` lets members only
+  read and delete that subcollection (published with the next rules deployment; until then the live
+  rules still allow writes, which no current app makes); once no old documents remain, it can leave
+  the rules altogether.
 - The tab's place in the bottom bar goes to "Recepty", a recipe book of the whole catalog plus the
   household's own recipes.
 - Chapters like a cookbook: every recipe has a `course` (`BREAKFAST`, `SOUP`, `SALAD`, `MAIN`, `SIDE`,
