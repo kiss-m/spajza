@@ -28,12 +28,12 @@ import sk.matej.spajza.data.catalog.RoomCatalogRepository
 import sk.matej.spajza.data.firestore.FirestoreCookHistoryRepository
 import sk.matej.spajza.data.firestore.FirestoreCustomIngredientRepository
 import sk.matej.spajza.data.firestore.FirestoreHouseholdRepository
-import sk.matej.spajza.data.firestore.FirestoreMealPlanRepository
 import sk.matej.spajza.data.firestore.FirestoreOwnRecipeRepository
 import sk.matej.spajza.data.firestore.FirestorePantryRepository
 import sk.matej.spajza.data.firestore.FirestoreRatingRepository
 import sk.matej.spajza.data.firestore.FirestoreShoppingRepository
 import sk.matej.spajza.data.firestore.FirestoreUserRepository
+import sk.matej.spajza.data.firestore.MealPlanLeftovers
 import sk.matej.spajza.data.ocr.MlKitTextReader
 import sk.matej.spajza.data.off.OpenFoodFactsClient
 import sk.matej.spajza.data.photos.RecipePhotoStore
@@ -49,7 +49,6 @@ import sk.matej.spajza.domain.repository.CustomIngredientRepository
 import sk.matej.spajza.domain.repository.DeviceSettingsRepository
 import sk.matej.spajza.domain.repository.ExpiryReminderScheduler
 import sk.matej.spajza.domain.repository.HouseholdRepository
-import sk.matej.spajza.domain.repository.MealPlanRepository
 import sk.matej.spajza.domain.repository.OwnRecipeRepository
 import sk.matej.spajza.domain.repository.PantryRepository
 import sk.matej.spajza.domain.repository.ProductLookup
@@ -155,7 +154,7 @@ object AppModule {
 
     @Provides
     @Singleton
-    fun mealPlanRepository(db: FirebaseFirestore): MealPlanRepository = FirestoreMealPlanRepository(db)
+    fun mealPlanLeftovers(db: FirebaseFirestore): MealPlanLeftovers = MealPlanLeftovers(db)
 
     @Provides
     @Singleton
@@ -241,9 +240,8 @@ object AppModule {
         shopping: ShoppingRepository,
         custom: CustomIngredientRepository,
         recipes: OwnRecipeRepository,
-        plans: MealPlanRepository,
         clock: Clock,
-    ): JoinHouseholdUseCase = JoinHouseholdUseCase(users, households, pantry, shopping, custom, recipes, plans, clock)
+    ): JoinHouseholdUseCase = JoinHouseholdUseCase(users, households, pantry, shopping, custom, recipes, clock)
 
     @Provides
     fun leaveHouseholdUseCase(users: UserRepository, households: HouseholdRepository): LeaveHouseholdUseCase =

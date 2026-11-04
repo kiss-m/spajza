@@ -27,7 +27,7 @@ and override the spec where they differ. `docs/CONTENT.md` (coverage) and `docs/
   failures, compiler errors and failed tests into annotations. Fetch them with `curl` from
   `api.github.com/repos/kiss-m/spajza/actions/runs?branch=<branch>` → the run's jobs → each job's
   `check_run_url` + `/annotations`. Pure-Kotlin parts of `:app` (mappers, `CookFeed`, `RecipeDetailBuilder`,
-  `BodyDraft`, `NumberFormat`, `PlanModel`, `RecipePhotoPaths`) can be compiled and tested locally in a scratch JVM project with stub Room
+  `BodyDraft`, `NumberFormat`, `RecipePhotoPaths`) can be compiled and tested locally in a scratch JVM project with stub Room
   annotations, so keep such logic in files without Android or Compose imports.
 - Maven Central sometimes answers 429; rerun the build.
 - `app/google-services.json` and `keystore/` are never committed. `scripts/placeholder-google-services.sh`

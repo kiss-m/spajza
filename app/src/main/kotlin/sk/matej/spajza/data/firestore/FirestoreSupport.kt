@@ -23,6 +23,8 @@ internal object Collections {
     const val INVITES = "invites"
     const val CUSTOM_INGREDIENTS = "customIngredients"
     const val RECIPES = "recipes"
+
+    /** Left from the removed weekly plan (D13, D15); only deleted now. */
     const val MEAL_PLANS = "mealPlans"
 
     /** Every household subcollection the security rules allow, for deleting a household. */

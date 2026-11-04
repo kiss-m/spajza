@@ -10,7 +10,6 @@ import sk.matej.spajza.domain.model.MealType
 import sk.matej.spajza.domain.model.PantryUnit
 import sk.matej.spajza.domain.model.PriceTier
 import sk.matej.spajza.domain.own.PhotoLineKind
-import sk.matej.spajza.domain.plan.PlanMeal
 import sk.matej.spajza.domain.profile.ActivityLevel
 import sk.matej.spajza.domain.profile.CookingSkill
 import sk.matej.spajza.domain.profile.Goal
@@ -63,14 +62,6 @@ fun MealType.labelRes(): Int = when (this) {
     MealType.DINNER -> R.string.meal_dinner
     MealType.SNACK -> R.string.meal_snack
     MealType.DESSERT -> R.string.meal_dessert
-}
-
-@StringRes
-fun PlanMeal.labelRes(): Int = when (this) {
-    PlanMeal.BREAKFAST -> R.string.meal_breakfast
-    PlanMeal.LUNCH -> R.string.meal_lunch
-    PlanMeal.DINNER -> R.string.meal_dinner
-    PlanMeal.SNACK -> R.string.meal_snack
 }
 
 @StringRes

@@ -547,55 +547,6 @@
     <string name="about_icons">Ikony: Material Symbols (Apache 2.0).</string>
     <string name="about_version">Verzia %1$s</string>
 
-    <!-- Plan -->
-    <string name="nav_plan">Plán</string>
-    <string name="plan_to_shopping">Do nákupu</string>
-    <string name="plan_this_week">Tento týždeň</string>
-    <string name="plan_next_week">Budúci týždeň</string>
-    <string name="plan_last_week">Minulý týždeň</string>
-    <string name="plan_week_number">%1$d. týždeň</string>
-    <string name="plan_previous_week_action">Predchádzajúci týždeň</string>
-    <string name="plan_next_week_action">Nasledujúci týždeň</string>
-    <string name="plan_go_this_week">Na tento týždeň</string>
-    <string name="plan_today">Dnes</string>
-    <string name="plan_add_for_day">Pridať</string>
-    <string name="plan_empty_title">Naplánuj si týždeň</string>
-    <string name="plan_empty_body">Ku dňom pridaj jedlá alebo v recepte ťukni na ikonu kalendára. Z plánu potom jedným ťuknutím pripravíš nákup – odpočíta sa, čo už máš v špajzi.</string>
-    <string name="plan_kcal_per_serving" tools:ignore="PluralsCandidate">%1$d kcal na porciu</string>
-    <string name="plan_have_all">Máš všetko</string>
-    <string name="plan_servings">Porcie</string>
-    <string name="plan_recipe_gone">Recept už nie je dostupný</string>
-    <string name="plan_entry_menu">Možnosti</string>
-    <string name="plan_move">Presunúť</string>
-    <string name="plan_move_title">Presunúť jedlo</string>
-    <string name="plan_removed">Odstránené z plánu</string>
-    <plurals name="plan_added_to_shopping">
-        <item quantity="one">Do nákupu pribudla %1$d položka</item>
-        <item quantity="few">Do nákupu pribudli %1$d položky</item>
-        <item quantity="many">Do nákupu pribudlo %1$d položky</item>
-        <item quantity="other">Do nákupu pribudlo %1$d položiek</item>
-    </plurals>
-    <string name="plan_open_shopping">Otvoriť nákup</string>
-    <string name="plan_nothing_to_buy">Na naplánované jedlá už máš všetko v špajzi alebo v nákupe.</string>
-    <string name="plan_add_title">Pridať do plánu</string>
-    <string name="plan_add_days">Dni</string>
-    <string name="plan_add_meal">Jedlo dňa</string>
-    <plurals name="plan_add_action_days">
-        <item quantity="one">Pridať na %1$d deň</item>
-        <item quantity="few">Pridať na %1$d dni</item>
-        <item quantity="many">Pridať na %1$d dňa</item>
-        <item quantity="other">Pridať na %1$d dní</item>
-    </plurals>
-    <plurals name="plan_added">
-        <item quantity="one">Pridané do plánu na %1$d deň</item>
-        <item quantity="few">Pridané do plánu na %1$d dni</item>
-        <item quantity="many">Pridané do plánu na %1$d dňa</item>
-        <item quantity="other">Pridané do plánu na %1$d dní</item>
-    </plurals>
-    <string name="plan_open_plan">Otvoriť plán</string>
-    <string name="plan_pick_title">Vyber recept</string>
-    <string name="plan_pick_for_day">na %1$s</string>
-
     <!-- Own recipe photos (only on this phone) -->
     <string name="detail_add_photo">Pridať fotku</string>
     <string name="detail_photo">Fotka jedla</string>

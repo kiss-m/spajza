@@ -20,9 +20,6 @@ import sk.matej.spajza.domain.own.OwnStep
 import sk.matej.spajza.domain.own.RecipeSource
 import sk.matej.spajza.domain.pantry.IngredientRef
 import sk.matej.spajza.domain.pantry.PantryItem
-import sk.matej.spajza.domain.plan.PlanEntry
-import sk.matej.spajza.domain.plan.PlanMeal
-import sk.matej.spajza.domain.plan.WeekId
 import sk.matej.spajza.domain.profile.ActivityLevel
 import sk.matej.spajza.domain.profile.BodyProfile
 import sk.matej.spajza.domain.profile.CookingSkill
@@ -32,7 +29,6 @@ import sk.matej.spajza.domain.profile.Sex
 import sk.matej.spajza.domain.profile.SpicyTolerance
 import sk.matej.spajza.domain.rating.Verdict
 import sk.matej.spajza.domain.unit.MeasureUnit
-import java.time.Instant
 import java.time.LocalDate
 import kotlin.test.assertEquals
 import kotlin.test.assertNull
@@ -178,31 +174,6 @@ class FirestoreMappersTest {
         val sparse = FirestoreMappers.ownRecipeFrom("y", mapOf("title" to "Rýchlovka", "servings" to 0L, "mealTypes" to listOf("BRUNCH")))!!
         assertEquals(OwnRecipe.DEFAULT_SERVINGS, sparse.servings)
         assertEquals(OwnRecipe.DEFAULT_MEAL_TYPES, sparse.mealTypes, "unknown names from a newer app are skipped")
-    }
-
-    @Test
-    fun `a week of the plan reads its entries and skips broken ones`() {
-        val entry = PlanEntry("a1b2c3d4e5f60718", LocalDate.of(2026, 11, 4), PlanMeal.LUNCH, "own:r1", 3, addedBy = "me")
-        val added = Instant.parse("2026-11-03T08:00:00Z")
-        val data = mapOf(
-            "entries" to mapOf(
-                entry.id to asFirestore(FirestoreMappers.planEntryTo(entry, "me")) + ("addedAt" to added),
-                // Another week's day, no recipe, too many servings and a meal from a newer app.
-                "other-week" to mapOf("date" to "2026-11-10", "recipeId" to "lecso", "servings" to 2L),
-                "no-recipe" to mapOf("date" to "2026-11-05", "servings" to 2L),
-                "big" to mapOf("date" to "2026-11-06", "recipeId" to "lecso", "servings" to 99L, "meal" to "BRUNCH"),
-            ),
-        )
-
-        val plan = FirestoreMappers.weekPlanFrom("2026-W45", data)!!
-
-        assertEquals(WeekId(2026, 45), plan.week)
-        assertEquals(setOf(entry.id, "big"), plan.entries.map { it.id }.toSet())
-        assertEquals(entry.copy(addedAt = added), plan.entries.single { it.id == entry.id })
-        val big = plan.entries.single { it.id == "big" }
-        assertEquals(PlanEntry.MAX_SERVINGS, big.servings)
-        assertEquals(PlanMeal.DINNER, big.meal)
-        assertNull(FirestoreMappers.weekPlanFrom("2026-W99", data), "a document that names no week is skipped")
     }
 
     private fun asFirestore(data: Map<String, Any?>): Map<String, Any?> = data.mapValues { (_, value) -> firestoreValue(value) }

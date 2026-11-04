@@ -83,8 +83,10 @@ service cloud.firestore {
       // Explicit subcollections: a recursive wildcard would also match the household document
       // itself in rules_version 2 and bypass the member-list checks above.
       match /{subcollection}/{docId} {
-        allow read, write: if subcollection in ['pantry', 'shopping', 'recipes', 'customIngredients', 'mealPlans']
+        allow read, write: if subcollection in ['pantry', 'shopping', 'recipes', 'customIngredients']
           && isMemberOf(hid);
+        // Left from the removed weekly meal plan (D15): members may only read and delete it.
+        allow read, delete: if subcollection == 'mealPlans' && isMemberOf(hid);
       }
     }
 

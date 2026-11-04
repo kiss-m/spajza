@@ -20,7 +20,6 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
-import androidx.compose.material.icons.filled.DateRange
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.Edit
 import androidx.compose.material.icons.filled.Favorite
@@ -86,8 +85,6 @@ import sk.matej.spajza.ui.components.SpajzaIcons
 import sk.matej.spajza.ui.components.Stepper
 import sk.matej.spajza.ui.components.rememberPhotoPicker
 import sk.matej.spajza.ui.ownrecipe.hostOf
-import sk.matej.spajza.ui.plan.AddToPlanDraft
-import sk.matej.spajza.ui.plan.AddToPlanSheet
 import java.io.File
 import kotlin.math.roundToInt
 
@@ -97,7 +94,6 @@ fun RecipeDetailRoute(
     onOpenRecipe: (String) -> Unit,
     onStartCooking: (recipeId: String, servings: Int) -> Unit,
     onEdit: (recipeId: String) -> Unit,
-    onOpenPlan: () -> Unit,
     viewModel: RecipeDetailViewModel = hiltViewModel(),
 ) {
     val state by viewModel.state.collectAsStateWithLifecycle()
@@ -105,9 +101,7 @@ fun RecipeDetailRoute(
     val snackbarHostState = remember { SnackbarHostState() }
     val resources by rememberUpdatedState(LocalResources.current)
     val back by rememberUpdatedState(onBack)
-    val openPlan by rememberUpdatedState(onOpenPlan)
     var confirmDelete by remember { mutableStateOf(false) }
-    var planDraft by remember { mutableStateOf<AddToPlanDraft?>(null) }
     var choosePhotoSource by remember { mutableStateOf(false) }
     var shownPhoto by remember { mutableStateOf<File?>(null) }
     var photoToDelete by remember { mutableStateOf<File?>(null) }
@@ -134,13 +128,6 @@ fun RecipeDetailRoute(
                     if (result == SnackbarResult.ActionPerformed) viewModel.onUndoCooked()
                 }
                 DetailEvent.CookUndone -> snackbarHostState.showSnackbar(resources.getString(R.string.detail_cooked_undone))
-                is DetailEvent.AddedToPlan -> {
-                    val result = snackbarHostState.showSnackbar(
-                        message = resources.getQuantityString(R.plurals.plan_added, event.days, event.days),
-                        actionLabel = resources.getString(R.string.plan_open_plan),
-                    )
-                    if (result == SnackbarResult.ActionPerformed) openPlan()
-                }
                 DetailEvent.Deleted -> back()
                 DetailEvent.PhotoSaved -> snackbarHostState.showSnackbar(resources.getString(R.string.detail_photo_saved))
                 DetailEvent.PhotoFailed -> snackbarHostState.showSnackbar(resources.getString(R.string.detail_photo_failed))
@@ -162,25 +149,10 @@ fun RecipeDetailRoute(
             onCooked = viewModel::onCooked,
             onEdit = { state.recipe?.let { onEdit(it.id) } },
             onDelete = { confirmDelete = true },
-            onAddToPlan = { planDraft = viewModel.planDraft() },
             onAddPhoto = { choosePhotoSource = true },
             onOpenPhoto = { shownPhoto = it },
         ),
     )
-    val recipe = state.recipe
-    val draft = planDraft
-    if (recipe != null && draft != null) {
-        AddToPlanSheet(
-            recipeTitle = recipe.title.text(),
-            initial = draft,
-            today = viewModel.today(),
-            onDismiss = { planDraft = null },
-            onAdd = { result ->
-                planDraft = null
-                viewModel.onAddToPlan(result)
-            },
-        )
-    }
     if (choosePhotoSource) {
         PhotoSourceDialog(
             title = stringResource(R.string.detail_add_photo),
@@ -247,7 +219,6 @@ class DetailActions(
     val onCooked: () -> Unit,
     val onEdit: () -> Unit,
     val onDelete: () -> Unit,
-    val onAddToPlan: () -> Unit,
     val onAddPhoto: () -> Unit,
     val onOpenPhoto: (File) -> Unit,
 )
@@ -271,9 +242,6 @@ fun RecipeDetailScreen(state: RecipeDetailUiState, photos: List<File>, snackbarH
                         IconButton(onClick = actions.onDelete) { Icon(Icons.Filled.Delete, contentDescription = stringResource(R.string.action_delete)) }
                     }
                     if (recipe != null) {
-                        IconButton(onClick = actions.onAddToPlan) {
-                            Icon(Icons.Filled.DateRange, contentDescription = stringResource(R.string.plan_add_title))
-                        }
                         IconButton(onClick = actions.onToggleFavorite) {
                             Icon(
                                 if (state.favorite) Icons.Filled.Favorite else Icons.Filled.FavoriteBorder,

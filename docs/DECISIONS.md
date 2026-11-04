@@ -120,7 +120,7 @@ catalog is read-only and rebuilt from the seed, so it never needs data migration
 - A member who was alone when joining a household brings their own recipes along; account
   deletion removes them with the household.
 
-## D13 — Weekly meal plan (Phase 3)
+## D13 — Weekly meal plan (Phase 3; removed, see D15)
 - Shared by the household: `households/{hid}/mealPlans/{weekId}`, one document per ISO week with
   Monday first; `weekId` is the week-based year and week number (`2026-W45`).
 - Field `entries`: a map from entry id (16 random hex characters) to `{date, meal, recipeId,
@@ -153,3 +153,11 @@ catalog is read-only and rebuilt from the seed, so it never needs data migration
 - Other members and devices do not see them. Backup and device transfer stay off (as for all app
   data), so uninstalling removes them. They are deleted with an own recipe on this device and on
   account deletion.
+
+## D15 — A recipe book replaces the weekly meal plan
+- The owner dropped the Plán tab. Its code is gone; `households/{hid}/mealPlans` documents (D13) are
+  deleted by the app: once per household on every start, so plans written by a member who has not
+  updated yet go too, and with the household on account deletion. The rules let members only read
+  and delete that subcollection; once no old documents remain, it can leave the rules altogether.
+- The tab's place in the bottom bar goes to "Recepty", a recipe book of the whole catalog plus the
+  household's own recipes.

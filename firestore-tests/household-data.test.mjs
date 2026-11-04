@@ -1,16 +1,18 @@
 import { assertFails, assertSucceeds } from "@firebase/rules-unit-testing";
-import { arrayRemove, collection, deleteDoc, deleteField, doc, getDoc, getDocs, increment, serverTimestamp, setDoc, updateDoc } from "firebase/firestore";
+import { arrayRemove, collection, deleteDoc, doc, getDoc, getDocs, increment, serverTimestamp, setDoc, updateDoc } from "firebase/firestore";
 import { describe, it } from "node:test";
 import { useRules } from "./support.mjs";
 
-// The household subcollections the app uses (docs/DECISIONS.md D9–D14).
+// The household subcollections the app uses (docs/DECISIONS.md D9–D12).
 const SHARED = {
   pantry: { id: "i_milk", data: { ingredientId: "milk", quantity: 1000 } },
   shopping: { id: "i_eggs", data: { ingredientId: "eggs", amount: 10, checked: false } },
   recipes: { id: "r1", data: { title: "Babičkine halušky", servings: 4 } },
   customIngredients: { id: "c1", data: { name: "Bryndza od suseda" } },
-  mealPlans: { id: "2026-W45", data: { entries: {} } },
 };
+
+// A week of the removed meal plan (D13, D15), which the app now only deletes.
+const OLD_PLAN = "households/h1/mealPlans/2026-W45";
 
 const rules = useRules(async (db) => {
   await setDoc(doc(db, "households/h1"), { name: "Byt", memberUids: ["alice", "bob"] });
@@ -18,6 +20,7 @@ const rules = useRules(async (db) => {
   for (const [name, { id, data }] of Object.entries(SHARED)) {
     await setDoc(doc(db, `households/h1/${name}/${id}`), data);
   }
+  await setDoc(doc(db, OLD_PLAN), { entries: {} });
 });
 
 describe("shared household data", () => {
@@ -57,23 +60,24 @@ describe("shared household data", () => {
   });
 });
 
-describe("meal plan", () => {
-  const week = "households/h1/mealPlans/2026-W46";
+describe("old meal plans", () => {
   const entry = { date: "2026-11-10", meal: "DINNER", recipeId: "garlic-pasta", servings: 2, addedBy: "alice" };
 
-  it("a member plans a meal, changes its servings and removes it", async () => {
+  it("members read and delete what the removed plan left", async () => {
+    const db = rules.as("bob");
+    await assertSucceeds(getDocs(collection(db, "households/h1/mealPlans")));
+    await assertSucceeds(deleteDoc(doc(db, OLD_PLAN)));
+  });
+
+  it("nobody plans meals any more", async () => {
     const db = rules.as("alice");
-    await assertSucceeds(setDoc(doc(db, week), { entries: { a1b2c3d4e5f60708: { ...entry, addedAt: serverTimestamp() } }, updatedAt: serverTimestamp() }, { merge: true }));
-    await assertSucceeds(updateDoc(doc(rules.as("bob"), week), { "entries.a1b2c3d4e5f60708.servings": 4, updatedAt: serverTimestamp() }));
-    await assertSucceeds(updateDoc(doc(db, week), { "entries.a1b2c3d4e5f60708": deleteField(), updatedAt: serverTimestamp() }));
+    await assertFails(setDoc(doc(db, "households/h1/mealPlans/2026-W46"), { entries: { a1b2c3d4e5f60708: { ...entry, addedAt: serverTimestamp() } } }));
+    await assertFails(updateDoc(doc(db, OLD_PLAN), { "entries.a1b2c3d4e5f60708": entry }));
   });
 
-  it("a member reads the plan from a week on", async () => {
-    await assertSucceeds(getDocs(collection(rules.as("bob"), "households/h1/mealPlans")));
-  });
-
-  it("another household cannot see or change the plan", async () => {
-    await assertFails(getDocs(collection(rules.as("dave"), "households/h1/mealPlans")));
-    await assertFails(setDoc(doc(rules.as("dave"), week), { entries: { x: entry } }, { merge: true }));
+  it("another household can neither read nor delete them", async () => {
+    const db = rules.as("dave");
+    await assertFails(getDocs(collection(db, "households/h1/mealPlans")));
+    await assertFails(deleteDoc(doc(db, OLD_PLAN)));
   });
 });
