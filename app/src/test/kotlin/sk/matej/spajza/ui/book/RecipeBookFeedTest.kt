@@ -73,6 +73,28 @@ class RecipeBookFeedTest {
     }
 
     @Test
+    fun `a chapter chip narrows the book to that chapter alone`() {
+        val whole = feed.state(emptyMap(), "", Language.SK)
+        assertEquals(null, whole.selected)
+        assertEquals(6, whole.total)
+        assertEquals(whole.sections.map { it.chapter }, whole.chapters.map { it.chapter })
+        assertEquals(2, whole.chapters.single { it.chapter == BookChapter.POULTRY }.count)
+
+        val poultry = feed.state(emptyMap(), "", Language.SK, BookChapter.POULTRY)
+        assertEquals(BookChapter.POULTRY, poultry.selected)
+        assertEquals(listOf(BookChapter.POULTRY), poultry.sections.map { it.chapter }, "no other chapter follows")
+        assertEquals(whole.chapters, poultry.chapters, "every chip stays to switch chapters")
+    }
+
+    @Test
+    fun `a search that leaves the chosen chapter empty shows the whole result`() {
+        val state = feed.state(emptyMap(), "polievka", Language.SK, BookChapter.POULTRY)
+        assertEquals(null, state.selected)
+        assertEquals(listOf(BookChapter.SOUP), state.sections.map { it.chapter })
+        assertEquals(BookChapter.POULTRY, feed.state(emptyMap(), "kura", Language.SK, BookChapter.POULTRY).selected)
+    }
+
+    @Test
     fun `a search keeps only matching recipes in their chapters`() {
         val state = feed.state(emptyMap(), "kura", Language.SK)
 

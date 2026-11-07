@@ -13,15 +13,15 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
-import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
+import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.Favorite
-import androidx.compose.material3.AssistChip
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.FilterChip
 import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.Icon
 import androidx.compose.material3.ListItem
@@ -79,6 +79,7 @@ fun RecipeBookRoute(
         query = query,
         snackbarHostState = snackbarHostState,
         onQueryChange = viewModel::onQueryChange,
+        onChapter = viewModel::onChapter,
         onOpenRecipe = onOpenRecipe,
         onAdd = addRecipe::open,
     )
@@ -91,7 +92,10 @@ fun RecipeBookRoute(
     )
 }
 
-/** Every recipe by chapter, like a cookbook, with favorites and the household's own recipes first. */
+/**
+ * Every recipe by chapter, like a cookbook, with favorites and the household's own recipes first.
+ * The chips narrow the book to one chapter.
+ */
 @OptIn(ExperimentalMaterial3Api::class, ExperimentalFoundationApi::class)
 @Composable
 fun RecipeBookScreen(
@@ -99,14 +103,14 @@ fun RecipeBookScreen(
     query: String,
     snackbarHostState: SnackbarHostState,
     onQueryChange: (String) -> Unit,
+    onChapter: (BookChapter?) -> Unit,
     onOpenRecipe: (String) -> Unit,
     onAdd: () -> Unit,
 ) {
     val listState = rememberLazyListState()
-    val scope = rememberCoroutineScope()
-    // Each section is a header followed by its recipes, so a header's index is the count of rows before it.
-    val headerIndexes = remember(state.sections) {
-        state.sections.runningFold(0) { index, section -> index + 1 + section.recipes.size }.dropLast(1)
+    // A different chapter or search starts at the top of the list.
+    LaunchedEffect(state.selected, query) {
+        if (listState.firstVisibleItemIndex > 0) listState.scrollToItem(0)
     }
     Scaffold(
         topBar = { TopAppBar(title = { Text(stringResource(R.string.book_title)) }) },
@@ -121,7 +125,7 @@ fun RecipeBookScreen(
             SearchField(query, onQueryChange, stringResource(R.string.book_search_hint), Modifier.padding(horizontal = 16.dp))
             when {
                 state.isLoading -> Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) { CircularProgressIndicator() }
-                state.sections.isEmpty() -> Text(
+                state.chapters.isEmpty() -> Text(
                     stringResource(R.string.book_no_results),
                     style = MaterialTheme.typography.bodyLarge,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
@@ -129,10 +133,15 @@ fun RecipeBookScreen(
                 )
                 else -> {
                     LazyRow(contentPadding = PaddingValues(horizontal = 16.dp), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                        itemsIndexed(state.sections, key = { _, section -> section.chapter.name }) { index, section ->
-                            AssistChip(
-                                onClick = { scope.launch { listState.animateScrollToItem(headerIndexes[index]) } },
-                                label = { Text("${stringResource(section.chapter.labelRes())} ${section.recipes.size}") },
+                        item(key = "all") {
+                            ChapterChip(stringResource(R.string.book_all), state.total, selected = state.selected == null, onClick = { onChapter(null) })
+                        }
+                        items(state.chapters, key = { it.chapter.name }) { chip ->
+                            ChapterChip(
+                                stringResource(chip.chapter.labelRes()),
+                                chip.count,
+                                selected = chip.chapter == state.selected,
+                                onClick = { onChapter(chip.chapter) },
                             )
                         }
                     }
@@ -152,6 +161,20 @@ fun RecipeBookScreen(
             }
         }
     }
+}
+
+@Composable
+private fun ChapterChip(label: String, count: Int, selected: Boolean, onClick: () -> Unit) {
+    FilterChip(
+        selected = selected,
+        onClick = onClick,
+        label = { Text("$label $count") },
+        leadingIcon = if (selected) {
+            { Icon(Icons.Filled.Check, contentDescription = null, modifier = Modifier.size(18.dp)) }
+        } else {
+            null
+        },
+    )
 }
 
 @Composable

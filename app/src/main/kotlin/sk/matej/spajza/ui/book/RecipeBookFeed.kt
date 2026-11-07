@@ -26,8 +26,18 @@ data class BookRecipeModel(
 
 data class BookSectionModel(val chapter: BookChapter, val recipes: List<BookRecipeModel>)
 
+/** A filter chip: a chapter that has recipes for the current search, and how many. */
+data class BookChapterChip(val chapter: BookChapter, val count: Int)
+
 data class BookUiState(
     val isLoading: Boolean = true,
+    /** Chapters with recipes for the current search, in book order. */
+    val chapters: List<BookChapterChip> = emptyList(),
+    /** Recipes for the current search across the whole book. */
+    val total: Int = 0,
+    /** The chapter the book is narrowed to, or null for the whole book. */
+    val selected: BookChapter? = null,
+    /** What the list shows: the selected chapter only, or every chapter. */
     val sections: List<BookSectionModel> = emptyList(),
     /** A search is typed; empty [sections] then mean that nothing matched. */
     val searching: Boolean = false,
@@ -44,14 +54,26 @@ class RecipeBookFeed(private val catalog: Catalog) {
         catalog.recipes.associate { it.id to calculator.perServing(it).kcal.roundToInt() }
     }
 
-    fun state(ratings: Map<String, Rating>, query: String, language: Language): BookUiState {
+    /**
+     * The book for [query]. A [chapter] narrows it to that chapter alone; when the search leaves
+     * that chapter empty, the whole result shows instead and no chapter is selected.
+     */
+    fun state(ratings: Map<String, Rating>, query: String, language: Language, chapter: BookChapter? = null): BookUiState {
         val favorites = ratings.filterValues { it.favorite }.keys
         val searching = query.isNotBlank()
         val shown = if (searching) search.search(query) else catalog.recipes
-        val sections = book.sections(shown, favorites, order(language)).map { section ->
-            BookSectionModel(section.chapter, section.recipes.map { model(it, favorites) })
-        }
-        return BookUiState(isLoading = false, sections = sections, searching = searching)
+        val all = book.sections(shown, favorites, order(language))
+        val selected = all.firstOrNull { it.chapter == chapter }
+        return BookUiState(
+            isLoading = false,
+            chapters = all.map { BookChapterChip(it.chapter, it.recipes.size) },
+            total = shown.size,
+            selected = selected?.chapter,
+            sections = (selected?.let(::listOf) ?: all).map { section ->
+                BookSectionModel(section.chapter, section.recipes.map { model(it, favorites) })
+            },
+            searching = searching,
+        )
     }
 
     private fun model(recipe: Recipe, favorites: Set<String>) = BookRecipeModel(

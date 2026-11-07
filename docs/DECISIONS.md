@@ -178,3 +178,6 @@ catalog is read-only and rebuilt from the seed, so it never needs data migration
   recipes also stay in their chapters. Recipes inside a chapter are sorted by title for the app
   language. The separate "Naše recepty" screen and the matching buttons on "Čo uvariť" go away; the
   book's + button adds own recipes. Searching narrows the book to matching recipes, still by chapter.
+- The chapter chips filter: one chapter shows alone ("Všetko" shows the whole book). Jumping within one
+  long list proved confusing, since the next chapters followed the chosen one. A search combines with
+  the chosen chapter; when it leaves that chapter empty, the whole result shows.

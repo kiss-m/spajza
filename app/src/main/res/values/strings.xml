@@ -567,6 +567,7 @@
     <string name="nav_book">Recepty</string>
     <string name="book_title">Kniha receptov</string>
     <string name="book_search_hint">Hľadaj recept alebo surovinu</string>
+    <string name="book_all">Všetko</string>
     <string name="book_add_recipe">Pridať vlastný recept</string>
     <string name="book_no_results">Nič sme nenašli. Skús iné slovo.</string>
     <string name="book_main_dishes">Hlavné jedlá</string>
